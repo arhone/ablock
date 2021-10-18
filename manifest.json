@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "ABlock - Блокировщик рекламы",
+  "description": "Прицельная блокировка рекламы, подозрительных сайтов и скриптов",
+  "version": "1.3.2",
+  "icons": {
+    "32": "image/ablock-32.png",
+    "128": "image/ablock-128.png",
+    "220": "image/ablock-220-140.jpg",
+    "440": "image/ablock-440-280.jpg"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "js/jquery.min.js",
+        "js/script.js"
+      ],
+      "css": [
+        "css/style.css"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "contextMenus",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_title": "ABlock - Блокировщик рекламы",
+    "default_icon": "image/ablock-32.png",
+    "default_popup": "popup.html"
+  },
+  "options_page": "popup.html"
+}
