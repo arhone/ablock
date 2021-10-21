@@ -680,6 +680,7 @@ $(function() {
             $('.thumb-ad').remove();
             $('#ad-footer').remove();
             $('#video-ad').remove();
+            $('.videoad-base').remove();
             $('.videoad-title').remove();
             $('[id ^= "ad_"]').remove();
         },
