@@ -198,29 +198,29 @@ let aBlockUrls = {
 }
 
 // Блокирование запросов
-chrome.declarativeWebRequest.onBeforeRequest.addListener(function(details) {
-
-    try {
-
-        let hostname = (new URL(details.initiator)).hostname.replace('www.', '');
-        if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-
-            if (typeof aBlockUrls[hostname] !== 'undefined') {
-                if (aBlockUrls[hostname](details.url, details)) {
-                    return {cancel: true};
-                }
-            } else if (aBlockUrls['other'](details.url)) {
-                return {cancel: true};
-            }
-
-        }
-
-    } catch (e) {}
-
-}, {urls: ['<all_urls>']}, ['blocking', 'requestBody']);
+// chrome.declarativeWebRequest.onBeforeRequest.addListener(function(details) {
+//
+//     try {
+//
+//         let hostname = (new URL(details.initiator)).hostname.replace('www.', '');
+//         if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
+//
+//             if (typeof aBlockUrls[hostname] !== 'undefined') {
+//                 if (aBlockUrls[hostname](details.url, details)) {
+//                     return {cancel: true};
+//                 }
+//             } else if (aBlockUrls['other'](details.url)) {
+//                 return {cancel: true};
+//             }
+//
+//         }
+//
+//     } catch (e) {}
+//
+// }, {urls: ['<all_urls>']}, ['blocking', 'requestBody']);
 
 // Слушаем событие смены иконки
-chrome.extension.onMessage.addListener(function(request){
+chrome.runtime.onMessage.addListener(function(request){
     if (typeof request.status !== 'undefined') {
         if (request.status === 'true') {
             chrome.action.setIcon({path:'image/ablock-32.png'});

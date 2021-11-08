@@ -34,7 +34,8 @@
     "storage",
     "contextMenus",
     "webRequest",
-    "declarativeNetRequest"
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
   ],
   "host_permissions": [
     "*://*/*"

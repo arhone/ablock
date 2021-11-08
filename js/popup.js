@@ -33,13 +33,13 @@ $(function() {
 
                 // Отключаем домен
                 if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-                    chrome.extension.sendMessage({status: 'false'});
+                    chrome.runtime.sendMessage({status: 'false'});
                     storage.hosts[hostname] = {};
                     storage.hosts[hostname].status = false;
                     chrome.storage.local.set({'aBlock': storage});
                     $('#aBlock .aBlock-bg').addClass('aBlock-off');
                 } else {
-                    chrome.extension.sendMessage({status: 'true'});
+                    chrome.runtime.sendMessage({status: 'true'});
                     storage.hosts[hostname] = {};
                     storage.hosts[hostname].status = true;
                     chrome.storage.local.set({'aBlock': storage});
