@@ -27,9 +27,9 @@ function aBlockUpdateStatus () {
                     chrome.storage.local.get(['aBlock'], function(localStorage) {
                         storage = localStorage['aBlock'];
                         if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-                            chrome.browserAction.setIcon({path:'image/ablock-32.png'});
+                            chrome.action.setIcon({path:'image/ablock-32.png'});
                         } else {
-                            chrome.browserAction.setIcon({path:'image/ablock-32-black.png'});
+                            chrome.action.setIcon({path:'image/ablock-32-black.png'});
                         }
                     });
 
@@ -198,7 +198,7 @@ let aBlockUrls = {
 }
 
 // Блокирование запросов
-chrome.webRequest.onBeforeRequest.addListener(function(details) {
+chrome.declarativeWebRequest.onBeforeRequest.addListener(function(details) {
 
     try {
 
@@ -223,9 +223,9 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
 chrome.extension.onMessage.addListener(function(request){
     if (typeof request.status !== 'undefined') {
         if (request.status === 'true') {
-            chrome.browserAction.setIcon({path:'image/ablock-32.png'});
+            chrome.action.setIcon({path:'image/ablock-32.png'});
         } else {
-            chrome.browserAction.setIcon({path:'image/ablock-32-black.png'});
+            chrome.action.setIcon({path:'image/ablock-32-black.png'});
         }
         chrome.storage.local.get(['aBlock'], function(localStorage) {
             storage = localStorage['aBlock'];
