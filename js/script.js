@@ -1,4 +1,4 @@
-chrome.extension.sendMessage({update: 'true'});
+chrome.runtime.sendMessage({update: 'true'});
 
 $(function() {
 

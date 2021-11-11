@@ -42,7 +42,9 @@
   ],
   "action": {
     "default_title": "ABlock - Блокировщик рекламы",
-    "default_icon": "image/ablock-32.png",
+    "default_icon": {
+      "32": "image/ablock-32.png"
+    },
     "default_popup": "popup.html"
   },
   "options_page": "popup.html"

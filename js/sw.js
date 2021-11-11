@@ -27,9 +27,17 @@ function aBlockUpdateStatus () {
                     chrome.storage.local.get(['aBlock'], function(localStorage) {
                         storage = localStorage['aBlock'];
                         if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-                            chrome.action.setIcon({path:'image/ablock-32.png'});
+                            chrome.action.setIcon({
+                                path: {
+                                    32: 'image/ablock-32.png'
+                                }
+                            }, function () {});
                         } else {
-                            chrome.action.setIcon({path:'image/ablock-32-black.png'});
+                            chrome.action.setIcon({
+                                path: {
+                                    32: 'image/ablock-32-black.png'
+                                }
+                            }, function () {});
                         }
                     });
 
@@ -198,34 +206,43 @@ let aBlockUrls = {
 }
 
 // Блокирование запросов
-// chrome.declarativeWebRequest.onBeforeRequest.addListener(function(details) {
-//
-//     try {
-//
-//         let hostname = (new URL(details.initiator)).hostname.replace('www.', '');
-//         if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-//
-//             if (typeof aBlockUrls[hostname] !== 'undefined') {
-//                 if (aBlockUrls[hostname](details.url, details)) {
-//                     return {cancel: true};
-//                 }
-//             } else if (aBlockUrls['other'](details.url)) {
-//                 return {cancel: true};
-//             }
-//
-//         }
-//
-//     } catch (e) {}
-//
-// }, {urls: ['<all_urls>']}, ['blocking', 'requestBody']);
+chrome.declarativeWebRequest.onBeforeRequest.addListener(function(details) {
+
+    try {
+
+        let hostname = (new URL(details.initiator)).hostname.replace('www.', '');
+        if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
+
+            if (typeof aBlockUrls[hostname] !== 'undefined') {
+                if (aBlockUrls[hostname](details.url, details)) {
+                    return {cancel: true};
+                }
+            } else if (aBlockUrls['other'](details.url)) {
+                return {cancel: true};
+            }
+
+        }
+
+    } catch (e) {}
+
+}, {urls: ['<all_urls>']}, ['blocking', 'requestBody']);
 
 // Слушаем событие смены иконки
-chrome.runtime.onMessage.addListener(function(request){
+chrome.runtime.onMessage.addListener(function(request) {
     if (typeof request.status !== 'undefined') {
+        console.log(request);
         if (request.status === 'true') {
-            chrome.action.setIcon({path:'image/ablock-32.png'});
+            chrome.action.setIcon({
+                path: {
+                    32: 'image/ablock-32.png'
+                }
+            }, function () {});
         } else {
-            chrome.action.setIcon({path:'image/ablock-32-black.png'});
+            chrome.action.setIcon({
+                path: {
+                    32: 'image/ablock-32-black.png'
+                }
+            }, function () {});
         }
         chrome.storage.local.get(['aBlock'], function(localStorage) {
             storage = localStorage['aBlock'];
