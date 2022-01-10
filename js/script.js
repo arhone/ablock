@@ -573,8 +573,22 @@ $(function() {
                 }
             );
 
+            let block = document.getElementById('hook_Block_ViewportHeightAwareBanner');
+            if (block) {
+                let sBlock = document.getElementById('hook_Block_CompactFooter');
+                if (sBlock) {
+                    block.after(sBlock);
+                }
+                block.remove()
+            }
+
             // Баннеры справа
             Array.from(document.getElementsByClassName("banner_new__loaded")).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+            Array.from(document.getElementsByClassName("mall-products-vertical-portlet")).forEach(
                 function(element) {
                     element.remove();
                 }

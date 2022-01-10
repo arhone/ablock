@@ -52,7 +52,8 @@
       "id": "rules",
       "enabled": true,
       "path": "rules/ok.ru.json"
-    }]
+    }],
+    "displayActionCountAsBadgeText": true
   },
   "options_page": "popup.html"
 }

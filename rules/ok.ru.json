@@ -37,5 +37,122 @@
         "ok.ru"
       ]
     }
+  },
+  {
+    "id": 4,
+    "priority": 4,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": ".imgsmail.ru",
+      "domains": [
+        "ok.ru"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 5,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "res/js/app/AdvSlider",
+      "domains": [
+        "ok.ru"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 6,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "res/js/app/RightColumn",
+      "domains": [
+        "ok.ru"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 7,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "product/getSmallProductsList",
+      "domains": [
+        "ok.ru"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 8,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "portlets_mall-products-vertical",
+      "domains": [
+        "ok.ru"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "priority": 9,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/gwtlog",
+      "domains": [
+        "ok.ru"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "priority": 10,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "tns-counter.ru",
+      "domains": [
+        "ok.ru"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "priority": 11,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": ".yadro.ru",
+      "domains": [
+        "ok.ru"
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "/dk|",
+      "domains": [
+        "ok.ru"
+      ]
+    }
   }
 ]

@@ -27,17 +27,17 @@ function aBlockUpdateStatus () {
                     chrome.storage.local.get(['aBlock'], function(localStorage) {
                         storage = localStorage['aBlock'];
                         if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-                            chrome.action.setIcon({
-                                path: {
-                                    32: 'image/ablock-32.png'
-                                }
-                            }, function () {});
+                            // chrome.action.setIcon({
+                            //     path: {
+                            //         32: 'image/ablock-32.png'
+                            //     }
+                            // }, function () {});
                         } else {
-                            chrome.action.setIcon({
-                                path: {
-                                    32: 'image/ablock-32-black.png'
-                                }
-                            }, function () {});
+                            // chrome.action.setIcon({
+                            //     path: {
+                            //         32: 'image/ablock-32-black.png'
+                            //     }
+                            // }, function () {});
                         }
                     });
 
