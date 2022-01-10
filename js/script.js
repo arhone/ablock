@@ -100,7 +100,7 @@ $(function() {
                     }, 500);
                 },
                 'ok.ru': function () {
-                    $('html').on('click', 'body', function () {
+                    document.body.addEventListener('click', function () {
                         aBlock.okAdBlock();
                     });
                     aBlock.okAdBlock();
@@ -560,7 +560,25 @@ $(function() {
         okAdBlock: function () {
 
             // Баннер ali
-            $('.promo-mall-ali-mod').remove();
+            Array.from(document.getElementsByClassName("promo-mall-ali-mod")).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+
+            // Баннеры слева
+            Array.from(document.getElementsByClassName("trg-b-banner-block")).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+
+            // Баннеры справа
+            Array.from(document.getElementsByClassName("banner_new__loaded")).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
 
             // В ленте
             $('.feed-list .feed-w [data-seen-params]').each(function (key, value) {
