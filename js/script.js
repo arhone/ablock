@@ -11,67 +11,6 @@ let aBlock = {
      */
     init: function (host) {
 
-        let hosts = {
-            'ok.ru': function () {
-
-                // Баннер ali
-                Array.from(document.getElementsByClassName("promo-mall-ali-mod")).forEach(
-                    function(element) {
-                        element.remove();
-                    }
-                );
-
-                // Баннеры слева
-                Array.from(document.getElementsByClassName("trg-b-banner-block")).forEach(
-                    function(element) {
-                        element.remove();
-                    }
-                );
-
-                let block = document.getElementById('hook_Block_ViewportHeightAwareBanner');
-                if (block) {
-                    let sBlock = document.getElementById('hook_Block_CompactFooter');
-                    if (sBlock) {
-                        block.after(sBlock);
-                    }
-                    block.remove()
-                }
-
-                // Баннеры справа
-                Array.from(document.getElementsByClassName("banner_new__loaded")).forEach(
-                    function(element) {
-                        element.remove();
-                    }
-                );
-                Array.from(document.getElementsByClassName("mall-products-vertical-portlet")).forEach(
-                    function(element) {
-                        element.remove();
-                    }
-                );
-
-                // В ленте
-                Array.from(document.querySelectorAll(".feed-list .feed-w [data-seen-params]")).forEach(
-                    function(element) {
-                        let data = JSON.parse(element.getAttribute('data-seen-params') || {});
-                        if (
-                            data && typeof data['options'] !== 'undefined'
-                            && typeof data['options']['onScrollSeen'] !== 'undefined'
-                            && data['options']['onScrollSeen'] === false
-                            && aBlock.methods.searchTextList(element.querySelectorAll('.feed_top span'), 'Р') !== false
-                            && aBlock.methods.searchTextList(element.querySelectorAll('.feed_top span'), 'м') !== false
-                            && aBlock.methods.searchTextList(element.querySelectorAll('.feed_top span'), 'а') !== false
-                        ) {
-                            element.remove();
-                        }
-                    }
-                );
-
-            },
-            other: function () {
-
-            }
-        }
-
         let modules = {
             'yandex.ru': function () {
                 setInterval(function () {
@@ -293,18 +232,73 @@ let aBlock = {
             }
         };
 
-        let current = typeof hosts[host] !== 'undefined' ? hosts[host] : hosts.other;
-        current();
-        setInterval(function () {
-            current();
-        }, 500);
-        document.addEventListener('load', function () {
-            document.body.addEventListener('click', function () {
-                current();
-            });
-        });
-
     },
+    /**
+     * Настройки сайтов
+     */
+    hosts: {
+        'ok.ru': function () {
+
+            // Баннер ali
+            Array.from(document.getElementsByClassName("promo-mall-ali-mod")).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+
+            // Баннеры слева
+            Array.from(document.getElementsByClassName("trg-b-banner-block")).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+
+            let block = document.getElementById('hook_Block_ViewportHeightAwareBanner');
+            if (block) {
+                let sBlock = document.getElementById('hook_Block_CompactFooter');
+                if (sBlock) {
+                    block.after(sBlock);
+                }
+                block.remove()
+            }
+
+            // Баннеры справа
+            Array.from(document.getElementsByClassName("banner_new__loaded")).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+            Array.from(document.getElementsByClassName("mall-products-vertical-portlet")).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+
+            // В ленте
+            Array.from(document.querySelectorAll(".feed-list .feed-w [data-seen-params]")).forEach(
+                function(element) {
+                    let data = JSON.parse(element.getAttribute('data-seen-params') || {});
+                    if (
+                        data && typeof data['options'] !== 'undefined'
+                        && typeof data['options']['onScrollSeen'] !== 'undefined'
+                        && data['options']['onScrollSeen'] === false
+                        && aBlock.methods.searchTextList(element.querySelectorAll('.feed_top span'), 'Р') !== false
+                        && aBlock.methods.searchTextList(element.querySelectorAll('.feed_top span'), 'м') !== false
+                        && aBlock.methods.searchTextList(element.querySelectorAll('.feed_top span'), 'а') !== false
+                    ) {
+                        element.remove();
+                    }
+                }
+            );
+
+        },
+        other: function () {
+
+        }
+    },
+    /**
+     * Вспомогательные методы
+     */
     methods: {
         /**
          * Поиск текста в нескольких элементах
@@ -802,7 +796,14 @@ try {
         let storage = localStorage['aBlock'];
         let hostname = window.location.hostname.replace('www.', '');
         if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-            aBlock.init(hostname);
+            let current = typeof aBlock.hosts[hostname] !== 'undefined' ? aBlock.hosts[hostname] : aBlock.hosts.other;
+            current();
+            setInterval(function () {
+                current();
+            }, 500);
+            document.addEventListener('click', function () {
+                current();
+            });
         }
     });
 
