@@ -57,27 +57,11 @@ let aBlock = {
                             data && typeof data['options'] !== 'undefined'
                             && typeof data['options']['onScrollSeen'] !== 'undefined'
                             && data['options']['onScrollSeen'] === false
-                            && aBlock.methods.searchText(element, '.feed_top span', 'Р') !== false
-                            && aBlock.methods.searchText(element, '.feed_top span', 'м') !== false
-                            && aBlock.methods.searchText(element, '.feed_top span', 'а') !== false
+                            && aBlock.methods.searchTextList(element.querySelectorAll('.feed_top span'), 'Р') !== false
+                            && aBlock.methods.searchTextList(element.querySelectorAll('.feed_top span'), 'м') !== false
+                            && aBlock.methods.searchTextList(element.querySelectorAll('.feed_top span'), 'а') !== false
                         ) {
                             element.remove();
-                        }
-                    }
-                );
-
-                Array.from(document.querySelectorAll(".feed-list .feed-w [data-seen-params]")).forEach(
-                    function(element) {
-                        let data = JSON.parse(element.getAttribute('data-seen-params') || {});
-                        if (
-                            data && typeof data['options'] !== 'undefined'
-                            && typeof data['options']['onScrollSeen'] !== 'undefined'
-                            && data['options']['onScrollSeen'] === false
-                            && searchText(element,'.feed_top span', 'Р') !== false
-                            && searchText(element,'.feed_top span', 'м') !== false
-                            && searchText(element,'.feed_top span', 'а') !== false
-                        ) {
-                            console.log(element.innerText);
                         }
                     }
                 );
@@ -309,27 +293,28 @@ let aBlock = {
             }
         };
 
-        let current = typeof hosts[host] !== 'undefined' ? hosts[host] : hosts.other();
-        document.body.addEventListener('click', function () {
-            current(host);
-        });
-        current(host);
+        let current = typeof hosts[host] !== 'undefined' ? hosts[host] : hosts.other;
+        current();
         setInterval(function () {
-            current(host);
+            current();
         }, 500);
+        document.addEventListener('load', function () {
+            document.body.addEventListener('click', function () {
+                current();
+            });
+        });
 
     },
     methods: {
         /**
-         * Поиск текста
-         * @param element
-         * @param selectors
+         * Поиск текста в нескольких элементах
+         * @param elements
          * @param text
          * @returns {boolean}
          */
-        searchText: function (element, selectors, text) {
+        searchTextList: function (elements, text) {
             let position = false;
-            Array.from(element.querySelectorAll(selectors)).forEach(
+            Array.from(elements).forEach(
                 function(el) {
                     let p;
                     if (el && (p = el.innerText.indexOf(text)) >= 0) {
@@ -817,7 +802,7 @@ try {
         let storage = localStorage['aBlock'];
         let hostname = window.location.hostname.replace('www.', '');
         if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-            aBlock.init(hostname)
+            aBlock.init(hostname);
         }
     });
 
