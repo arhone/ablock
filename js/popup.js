@@ -1,4 +1,4 @@
-$(function() {
+window.addEventListener('load', function () {
 
     // Меняем иконки при открытии окна на подходящую под статус
     chrome.storage.local.get(['aBlock'], function(localStorage) {
@@ -11,9 +11,9 @@ $(function() {
 
             // Включаем кнопку
             if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-                $('#aBlock .aBlock-bg').removeClass('aBlock-off');
+                document.querySelector('#aBlock .aBlock-bg').classList.remove('aBlock-off');
             } else {
-                $('#aBlock .aBlock-bg').addClass('aBlock-off');
+                document.querySelector('#aBlock .aBlock-bg').classList.add('aBlock-off');
             }
 
         });
@@ -21,7 +21,7 @@ $(function() {
     });
 
     // Нажатие на кнопку
-    $('#aBlock').on('click', '.aBlock-logo', function () {
+    document.getElementById('aBlock').addEventListener('click', function () {
 
         chrome.storage.local.get(['aBlock'], function(localStorage) {
 
@@ -36,14 +36,14 @@ $(function() {
                     chrome.runtime.sendMessage({status: 'false'});
                     storage.hosts[hostname] = {};
                     storage.hosts[hostname].status = false;
-                    chrome.storage.local.set({'aBlock': storage});
-                    $('#aBlock .aBlock-bg').addClass('aBlock-off');
+                    let _ = chrome.storage.local.set({'aBlock': storage});
+                    document.querySelector('#aBlock .aBlock-bg').classList.add('aBlock-off');
                 } else {
                     chrome.runtime.sendMessage({status: 'true'});
                     storage.hosts[hostname] = {};
                     storage.hosts[hostname].status = true;
-                    chrome.storage.local.set({'aBlock': storage});
-                    $('#aBlock .aBlock-bg').removeClass('aBlock-off');
+                    let _ = chrome.storage.local.set({'aBlock': storage});
+                    document.querySelector('#aBlock .aBlock-bg').classList.remove('aBlock-off');
                 }
 
             });

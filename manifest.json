@@ -1,59 +1,60 @@
 {
-  "manifest_version": 3,
-  "name": "ABlock - Блокировщик рекламы",
-  "description": "Прицельная блокировка рекламы, подозрительных сайтов и скриптов",
-  "version": "1.3.3",
-  "author" : "Алексей Арх",
-  "icons": {
-    "32": "image/ablock-32.png",
-    "128": "image/ablock-128.png",
-    "220": "image/ablock-220-140.jpg",
-    "440": "image/ablock-440-280.jpg"
-  },
-  "content_scripts": [
-    {
-      "run_at": "document_start",
-      "matches": [
-        "*://*/*"
-      ],
-      "js": [
-        "js/jquery.min.js",
-        "js/script.js"
-      ],
-      "css": [
-        "css/style.css"
-      ]
-    }
-  ],
-  "background": {
-    "service_worker": "js/sw.js"
-  },
-  "permissions": [
-    "scripting",
-    "tabs",
-    "storage",
-    "contextMenus",
-    "webRequest",
-    "declarativeNetRequest",
-    "declarativeNetRequestFeedback"
-  ],
-  "host_permissions": [
-    "*://*/*"
-  ],
-  "action": {
-    "default_title": "ABlock - Блокировщик рекламы",
-    "default_icon": {
-      "32": "image/ablock-32.png"
+    "manifest_version": 3,
+    "name": "ABlock - Блокировщик рекламы",
+    "description": "Прицельная блокировка рекламы, подозрительных сайтов и скриптов",
+    "version": "1.3.3",
+    "author": "Алексей Арх",
+    "icons": {
+        "32": "image/ablock-32.png",
+        "128": "image/ablock-128.png",
+        "220": "image/ablock-220-140.jpg",
+        "440": "image/ablock-440-280.jpg"
     },
-    "default_popup": "popup.html"
-  },
-  "declarative_net_request": {
-    "rule_resources": [{
-      "id": "rules",
-      "enabled": true,
-      "path": "rules/ok.ru.json"
-    }],
-    "displayActionCountAsBadgeText": true
-  },
-  "options_page": "popup.html"
+    "content_scripts": [
+        {
+            "run_at": "document_start",
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "js/script.js"
+            ],
+            "css": [
+                "css/style.css"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "js/sw.js"
+    },
+    "permissions": [
+        "scripting",
+        "tabs",
+        "storage",
+        "contextMenus",
+        "webRequest",
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "action": {
+        "default_title": "ABlock - Блокировщик рекламы",
+        "default_icon": {
+            "32": "image/ablock-32.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ok.ru",
+                "enabled": true,
+                "path": "rules/ok.ru.json"
+            }
+        ],
+        "displayActionCountAsBadgeText": true
+    },
+    "options_page": "popup.html"
 }

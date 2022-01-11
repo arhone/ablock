@@ -1,10 +1,3 @@
-Object.prototype.isset = function (path = '') {
-    if (path === '') {
-        return true;
-    }
-    let keys = path.split('.');
-    return typeof this[keys[0]] === 'undefined' ? false : this[keys[0]].isset(keys.slice(1).join('.'));
-};
 
 let storage = {};
 chrome.storage.local.get(['aBlock'], function(localStorage) {
@@ -147,16 +140,16 @@ let aBlockUrls = {
     },
     'ok.ru': function (url, details) {
 
-        return (
-            url.indexOf('.yandex.ru/') !== -1
-            || url.indexOf('.mail.ru/') !== -1
-            || (
-                url === 'https://ok.ru/dk'
-                && details.isset('requestBody.formData.mt.0')
-                && details.requestBody.formData['mt'][0] === 'page'
-            )
-            || url === 'https://ok.ru/dk?cmd=RecommendedGroupsLoaderBlock'
-        );
+        // return (
+        //     url.indexOf('.yandex.ru/') !== -1
+        //     || url.indexOf('.mail.ru/') !== -1
+        //     || (
+        //         url === 'https://ok.ru/dk'
+        //         && details.isset('requestBody.formData.mt.0')
+        //         && details.requestBody.formData['mt'][0] === 'page'
+        //     )
+        //     || url === 'https://ok.ru/dk?cmd=RecommendedGroupsLoaderBlock'
+        // );
     },
     'rt.pornhub.com': function (url) {
         return (
