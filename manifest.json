@@ -54,6 +54,11 @@
                 "path": "rules/ok.ru.json"
             },
             {
+                "id": "vk.com",
+                "enabled": true,
+                "path": "rules/vk.com.json"
+            },
+            {
                 "id": "youtube.com",
                 "enabled": true,
                 "path": "rules/youtube.com.json"

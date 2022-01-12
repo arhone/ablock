@@ -30,18 +30,6 @@ window.aBlock = {
                     aBlock.zenAdBlock();
                 }, 500);
             },
-            'vk.com': function () {
-                aBlock.vkAdBlock();
-                setInterval(function () {
-                    aBlock.vkAdBlock();
-                }, 500);
-            },
-            'm.vk.com': function () {
-                aBlock.mVkAdBlock();
-                setInterval(function () {
-                    aBlock.mVkAdBlock();
-                }, 500);
-            },
             'pulse.mail.ru': function () {
                 $('html').on('click', 'body', function () {
                     aBlock.mailAdBlock();
@@ -190,6 +178,44 @@ window.aBlock = {
      * Настройки сайтов
      */
     hosts: {
+        'm.vk.com': function () {
+
+            // В ленте
+            Array.from(document.querySelectorAll(".wi_info a")).forEach(
+                function(element) {
+                    if (element.innerText.indexOf('Рекламная запись') > -1) {
+                        element.closest('.wall_item').remove();
+                    }
+                }
+            );
+            Array.from(document.querySelectorAll(".wi_info span")).forEach(
+                function(element) {
+                    if (element.innerText.indexOf('Рекламная запись') > -1) {
+                        element.closest('.wall_item').remove();
+                    }
+                }
+            );
+
+        },
+        'vk.com': function () {
+
+            // В ленте
+            Array.from(document.querySelectorAll(".post_date a")).forEach(
+                function(element) {
+                    if (element.innerText.indexOf('Рекламная запись') > -1) {
+                        element.closest('.feed_row').remove();
+                    }
+                }
+            );
+            Array.from(document.querySelectorAll(".ads_ad_explain")).forEach(
+                function(element) {
+                    if (element.innerText.indexOf('Рекламная запись') > -1) {
+                        element.closest('.feed_row').remove();
+                    }
+                }
+            );
+
+        },
         'ok.ru': function () {
 
             // Баннер ali
@@ -542,37 +568,6 @@ window.aBlock = {
     marketYandexAdBlock: function () {
         // Большой баннер сверху
         $('[data-zone-name="Banner"]').hide();
-    },
-
-    /**
-     * vkAdBlock
-     */
-    vkAdBlock: function () {
-
-        // Рекламные посты
-        $('.wall_marked_as_ads').closest('.post').remove();
-        $('.post_date:contains(Рекламная запись)').closest('.post').remove();
-        $('._ads_block_data_w').parent().remove();
-
-        // Рекламный блок слева
-        $('.ads_label:contains(Реклама)').parent().remove();
-
-        // Рекламный блок справа
-        let right = $('.right_list .apps_feedRightAppsBlock__row');
-        right.parent().hide();
-        right.closest('.apps_feedRightAppsBlock_single_app').hide();
-
-    },
-
-    /**
-     * mVkAdBlock
-     */
-    mVkAdBlock: function () {
-
-        // Рекламные посты
-        $('._ads_block_data_w').remove();
-        $('.ads_mark').closest('.wall_item').remove();
-
     },
 
     /**

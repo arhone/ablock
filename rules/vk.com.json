@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "ads_rotate.php?"
+        },
+        "domains": [
+            "vk.com"
+        ]
+    },
+    {
+        "id": 2,
+        "priority": 2,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": ".mail.ru/js/code.js"
+        },
+        "domains": [
+            "vk.com"
+        ]
+    },
+    {
+        "id": 3,
+        "priority": 3,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "ad.mail.ru"
+        },
+        "domains": [
+            "vk.com"
+        ]
+    },
+    {
+        "id": 4,
+        "priority": 4,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "gstatic.com/"
+        },
+        "domains": [
+            "vk.com"
+        ]
+    },
+    {
+        "id": 5,
+        "priority": 5,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "yandex.ru"
+        },
+        "domains": [
+            "vk.com"
+        ]
+    }
+]
