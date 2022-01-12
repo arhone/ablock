@@ -51,8 +51,8 @@ aBlock = {
     addButtonListener: function () {
 
         chrome.runtime.onMessage.addListener(function(request) {
-            if (typeof request.status !== 'undefined') {
-                if (request.status === 'true') {
+            if (typeof request['status'] !== 'undefined') {
+                if (request['status'] === 'true') {
                     aBlock.changeStatus(true);
                 } else {
                     aBlock.changeStatus(false);
@@ -80,7 +80,6 @@ aBlock = {
      * Смена иконки
      */
     changeIcon: function (status) {
-
         if (status) {
             // @todo смена иконки не работает, временно вместо иконки меняется текст
             // chrome.action.setIcon({

@@ -27,10 +27,10 @@ window.addEventListener('load', function () {
     // Нажатие на кнопку
     document.getElementById('aBlock').addEventListener('click', function () {
 
-        let status = document.querySelector('#aBlock #bg').getAttribute('data-status');
-        let newStatus = status === 'true' ? 'false' : 'true';
+        let oldStatus = document.querySelector('#aBlock #bg').getAttribute('data-status');
+        let newStatus = oldStatus === 'true' ? 'false' : 'true';
 
-        chrome.runtime.sendMessage({status: newStatus});
+        chrome.runtime.sendMessage({'status': newStatus});
         document.querySelector('#aBlock #bg').setAttribute('data-status', newStatus);
 
     });
