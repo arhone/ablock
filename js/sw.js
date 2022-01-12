@@ -29,6 +29,11 @@ aBlock = {
         // Событие смены статуса иконки через popup.js
         aBlock.addButtonListener();
 
+        // Событие смены вкладки
+        chrome.tabs.onActivated.addListener(function (data) {
+            console.log(data);
+        })
+
     },
     /**
      * Установка хранилища
@@ -80,28 +85,28 @@ aBlock = {
      * Смена иконки
      */
     changeIcon: function (status) {
+
         if (status) {
-            // @todo смена иконки не работает, временно вместо иконки меняется текст
-            // chrome.action.setIcon({
-            //     path: {
-            //         32: 'image/ablock-32.png'
-            //     }
-            // }, function () {});
-            chrome.action.setBadgeText({
-                text: ''
-            });
+            chrome.action.setIcon({
+                path: {
+                    32: '/image/ablock-32.png'
+                }
+            }, function () {});
+            // chrome.action.setBadgeText({
+            //     text: ''
+            // });
         } else {
-            // chrome.action.setIcon({
-            //     path: {
-            //         32: 'image/ablock-32-black.png'
-            //     }
-            // }, function () {});
-            chrome.action.setBadgeText({
-                text: 'Выкл'
-            });
-            chrome.action.setBadgeBackgroundColor({
-                color: '#2f2f2f'
-            });
+            chrome.action.setIcon({
+                path: {
+                    32: '/image/ablock-32-black.png'
+                }
+            }, function () {});
+            // chrome.action.setBadgeText({
+            //     text: 'Выкл'
+            // });
+            // chrome.action.setBadgeBackgroundColor({
+            //     color: '#2f2f2f'
+            // });
         }
 
     },

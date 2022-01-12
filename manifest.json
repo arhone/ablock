@@ -85,8 +85,7 @@
                 "enabled": true,
                 "path": "rules/other.json"
             }
-        ],
-        "displayActionCountAsBadgeText": true
+        ]
     },
     "options_page": "popup.html"
 }
