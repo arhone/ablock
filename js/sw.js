@@ -57,6 +57,8 @@ aBlock = {
                 } else {
                     aBlock.changeStatus(false);
                 }
+            } else {
+                console.error(request);
             }
         });
 
@@ -80,6 +82,7 @@ aBlock = {
     changeIcon: function (status) {
 
         if (status) {
+            // @todo смена иконки не работает, временно вместо иконки меняется текст
             // chrome.action.setIcon({
             //     path: {
             //         32: 'image/ablock-32.png'

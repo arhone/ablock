@@ -1,5 +1,3 @@
-chrome.runtime.sendMessage({update: 'true'});
-
 window.aBlock = {
 
     // Хранилище
