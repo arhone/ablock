@@ -35,6 +35,13 @@ window.aBlock = {
         },
         'vk.com': function () {
 
+            // Блоки слева
+            Array.from(document.querySelectorAll(".ads_ads_box")).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+
             // В ленте
             Array.from(document.querySelectorAll(".post_date a")).forEach(
                 function(element) {

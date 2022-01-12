@@ -1,198 +1,126 @@
+/**
+ * @author AlekseyArh
+ * @link https://github.com/arhone/ablock
+ */
+aBlock = {
+    // Хранилище данных
+    storage: {
+        status: true
+    },
+    // Правила
+    rules: [
+        'ok.ru',
+        'vk.com',
+        'youtube.com',
+        'xvideos.com',
+        'rt.pornhub.com',
+        'rambler.ru',
+        'yandex.ru',
+        'other'
+    ],
+    /**
+     * Инициализация
+     */
+    init: function () {
 
-let storage = {};
-chrome.storage.local.get(['aBlock'], function(localStorage) {
-    storage = localStorage['aBlock'];
-});
+        // Установка хранилища
+        aBlock.syncLocalStorage();
 
-function aBlockUpdateStatus () {
+        // Событие смены статуса иконки через popup.js
+        aBlock.addButtonListener();
 
-    try {
+    },
+    /**
+     * Установка хранилища
+     */
+    syncLocalStorage: function () {
 
-        chrome.tabs.query({active: true, currentWindow: true, lastFocusedWindow: true}, function (tabs) {
-
-            if (!chrome.runtime.lastError) {}
-            try {
-
-                if (typeof tabs[0] !== 'undefined' && typeof tabs[0].url !== 'undefined') {
-
-                    let hostname = (new URL(tabs[0].url)).hostname;
-
-                    chrome.storage.local.get(['aBlock'], function(localStorage) {
-                        storage = localStorage['aBlock'];
-                        if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-                            // chrome.action.setIcon({
-                            //     path: {
-                            //         32: 'image/ablock-32.png'
-                            //     }
-                            // }, function () {});
-                        } else {
-                            // chrome.action.setIcon({
-                            //     path: {
-                            //         32: 'image/ablock-32-black.png'
-                            //     }
-                            // }, function () {});
-                        }
-                    });
-
-                } else {
-
-                    setTimeout(function() {
-                        aBlockUpdateStatus();
-                    }, 100);
-
-                }
-
-            } catch (e) {
-                setTimeout(function() {
-                    aBlockUpdateStatus();
-                }, 100);
+        chrome.storage.local.get(['aBlockStorage'], function(localStorage) {
+            if (typeof localStorage['aBlockStorage'] !== 'undefined') {
+                aBlock.storage = localStorage['aBlockStorage'];
+            } else {
+                chrome.storage.local.set({'aBlockStorage': aBlock.storage});
             }
-
+            aBlock.changeStatus(aBlock.storage.status);
         });
 
-    } catch (e) {
-        setTimeout(function() {
-            aBlockUpdateStatus();
-        }, 100);
-    }
+    },
+    /**
+     * Событие смены статуса иконки через popup.js
+     */
+    addButtonListener: function () {
 
-}
-
-// Ссылки для блокировки
-let aBlockUrls = {
-    'yandex.ru': function (url) {
-        return (
-            url.indexOf('://an.yandex.ru/system/video-ads-sdk/adsdk.js') !== -1
-            || url.indexOf('://yastatic.net/awaps-ad-sdk-js-bundles') !== -1
-            || url.indexOf('://yastatic.net/partner-code-bundles') !== -1
-            || url.indexOf('://frontend-test.s3.mds.yandex.net') !== -1
-        );
-    },
-    'radio.yandex.ru': function (url) {
-        return (
-            url.indexOf('://an.yandex.ru/partner-code-bundles/') !== -1
-            || url.indexOf('://yastatic.net/awaps-ad-sdk-js/') !== -1
-        );
-    },
-    'music.yandex.ru': function (url) {
-        return (
-            url.indexOf('://an.yandex.ru/partner-code-bundles/') !== -1
-            || url.indexOf('://yastatic.net/awaps-ad-sdk-js/') !== -1
-        );
-    },
-    'vk.com': function (url) {
-        return (
-            url.indexOf('://ad.mail.ru/') !== -1
-            || url.indexOf('://an.yandex.ru/') !== -1
-            || url.indexOf('://vk.com/ads_rotate.php') !== -1
-        );
-    },
-    'rambler.ru': function (url) {
-        return (
-            url.indexOf('://an.yandex.ru/') !== -1
-            || url.indexOf('://ads.adfox.ru') !== -1
-            || url.indexOf('://mc.yandex.ru/metrika/tag.js') !== -1
-            || url.indexOf('://www.google-analytics.com/analytics.js') !== -1
-            || url.indexOf('ssp.rambler.ru/file.jsp') !== -1
-            || url.indexOf('://prime.rambler.ru/api/v3/prime/getActiveAdblockInfo') !== -1
-            || url.indexOf('.24smi.net') !== -1
-        );
-    },
-    'news.rambler.ru': function (url) {
-        return (
-            url.indexOf('://an.yandex.ru/') !== -1
-            || url.indexOf('://ads.adfox.ru') !== -1
-            || url.indexOf('://mc.yandex.ru/metrika/tag.js') !== -1
-            || url.indexOf('://www.google-analytics.com/analytics.js') !== -1
-            || url.indexOf('ssp.rambler.ru/file.jsp') !== -1
-            || url.indexOf('://prime.rambler.ru/api/v3/prime/getActiveAdblockInfo') !== -1
-        );
-    },
-    'kino.rambler.ru': function (url) {
-        return (
-            url.indexOf('://an.yandex.ru/') !== -1
-            || url.indexOf('://ads.adfox.ru') !== -1
-            || url.indexOf('://mc.yandex.ru/metrika/tag.js') !== -1
-            || url.indexOf('://www.google-analytics.com/analytics.js') !== -1
-            || url.indexOf('ssp.rambler.ru/file.jsp') !== -1
-            || url.indexOf('://prime.rambler.ru/api/v3/prime/getActiveAdblockInfo') !== -1
-        );
-    },
-    'mail.rambler.ru': function (url) {
-        return (
-            url.indexOf('://an.yandex.ru/') !== -1
-            || url.indexOf('://ads.adfox.ru') !== -1
-            || url.indexOf('://mc.yandex.ru/metrika/tag.js') !== -1
-            || url.indexOf('://www.google-analytics.com/analytics.js') !== -1
-        );
-    },
-    'mail.ru': function (url) {
-        return false;
-    },
-    'e.mail.ru': function (url) {
-        return false;
-    }
-}
-
-// Блокирование запросов
-// chrome.declarativeWebRequest.onBeforeRequest.addListener(function(details) {
-//
-//     try {
-//
-//         let hostname = (new URL(details.initiator)).hostname.replace('www.', '');
-//         if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-//
-//             if (typeof aBlockUrls[hostname] !== 'undefined') {
-//                 if (aBlockUrls[hostname](details.url, details)) {
-//                     return {cancel: true};
-//                 }
-//             } else if (aBlockUrls['other'](details.url)) {
-//                 return {cancel: true};
-//             }
-//
-//         }
-//
-//     } catch (e) {}
-//
-// }, {urls: ['<all_urls>']}, ['blocking', 'requestBody']);
-
-// Слушаем событие смены иконки
-chrome.runtime.onMessage.addListener(function(request) {
-    if (typeof request.status !== 'undefined') {
-        console.log(request);
-        if (request.status === 'true') {
-            chrome.action.setIcon({
-                path: {
-                    32: 'image/ablock-32.png'
+        chrome.runtime.onMessage.addListener(function(request) {
+            if (typeof request.status !== 'undefined') {
+                if (request.status === 'true') {
+                    aBlock.changeStatus(true);
+                } else {
+                    aBlock.changeStatus(false);
                 }
-            }, function () {});
+            }
+        });
+
+    },
+    /**
+     * Смена состояния
+     * @param status
+     */
+    changeStatus: function (status) {
+
+        aBlock.storage.status = status;
+        chrome.storage.local.set({'aBlockStorage': aBlock.storage});
+
+        aBlock.changeIcon(status);
+        aBlock.changeRulesStatus(status);
+
+    },
+    /**
+     * Смена иконки
+     */
+    changeIcon: function (status) {
+
+        if (status) {
+            // chrome.action.setIcon({
+            //     path: {
+            //         32: 'image/ablock-32.png'
+            //     }
+            // }, function () {});
+            chrome.action.setBadgeText({
+                text: ''
+            });
         } else {
-            chrome.action.setIcon({
-                path: {
-                    32: 'image/ablock-32-black.png'
-                }
-            }, function () {});
+            // chrome.action.setIcon({
+            //     path: {
+            //         32: 'image/ablock-32-black.png'
+            //     }
+            // }, function () {});
+            chrome.action.setBadgeText({
+                text: 'Выкл'
+            });
+            chrome.action.setBadgeBackgroundColor({
+                color: '#2f2f2f'
+            });
         }
-        chrome.storage.local.get(['aBlock'], function(localStorage) {
-            storage = localStorage['aBlock'];
-        });
-    } else if (typeof request.update !== 'undefined') {
-        aBlockUpdateStatus();
-    }
-});
 
-// Определяем хранилище
-chrome.storage.local.get(['aBlock'], function(localStorage) {
-    let storage = localStorage['aBlock'];
-    if (typeof storage === 'undefined') {
-        storage = {
-            'hosts': {}
+    },
+    /**
+     * Включает или отключает правила
+     * @param status
+     */
+    changeRulesStatus: function (status) {
+
+        let settings = status ? {
+            'enableRulesetIds': aBlock.rules
+        } : {
+            'disableRulesetIds': aBlock.rules
         };
-        chrome.storage.local.set({'aBlock': storage});
-    }
-});
+        chrome.declarativeNetRequest.updateEnabledRulesets(settings);
 
-// Смотрим какая вкладка открыта
-chrome.tabs.onActivated.addListener(function () {
-    aBlockUpdateStatus();
-});
+    }
+}
+
+try {
+    aBlock.init();
+} catch (e) {
+    console.error(e);
+}

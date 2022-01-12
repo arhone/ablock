@@ -1,54 +1,37 @@
 window.addEventListener('load', function () {
 
     // Меняем иконки при открытии окна на подходящую под статус
-    chrome.storage.local.get(['aBlock'], function(localStorage) {
+    chrome.storage.local.get(['aBlockStorage'], function(localStorage) {
 
-        // Получаем домен текущей вкладки
-        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        if (
+            typeof localStorage['aBlockStorage'] !== 'undefined'
+            && typeof localStorage['aBlockStorage'].status !== 'undefined'
+        ) {
 
-            let hostname = (new URL(tabs[0].url)).hostname.replace('www.', '');
-            let storage = localStorage['aBlock'];
+            // Скрыто до загрузки
+            document.getElementById('aBlock').classList.remove('loading');
+
+            let storage = localStorage['aBlockStorage'];
 
             // Включаем кнопку
-            if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-                document.querySelector('#aBlock .aBlock-bg').classList.remove('aBlock-off');
+            if (storage.status) {
+                document.querySelector('#aBlock #bg').setAttribute('data-status', 'true');
             } else {
-                document.querySelector('#aBlock .aBlock-bg').classList.add('aBlock-off');
+                document.querySelector('#aBlock #bg').setAttribute('data-status', 'false');
             }
 
-        });
+        }
 
     });
 
     // Нажатие на кнопку
     document.getElementById('aBlock').addEventListener('click', function () {
 
-        chrome.storage.local.get(['aBlock'], function(localStorage) {
+        let status = document.querySelector('#aBlock #bg').getAttribute('data-status');
+        let newStatus = status === 'true' ? 'false' : 'true';
 
-            // Получаем домен текущей вкладки
-            chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-
-                let hostname = (new URL(tabs[0].url)).hostname.replace('www.', '');
-                let storage = localStorage['aBlock'];
-
-                // Отключаем домен
-                if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-                    chrome.runtime.sendMessage({status: 'false'});
-                    storage.hosts[hostname] = {};
-                    storage.hosts[hostname].status = false;
-                    let _ = chrome.storage.local.set({'aBlock': storage});
-                    document.querySelector('#aBlock .aBlock-bg').classList.add('aBlock-off');
-                } else {
-                    chrome.runtime.sendMessage({status: 'true'});
-                    storage.hosts[hostname] = {};
-                    storage.hosts[hostname].status = true;
-                    let _ = chrome.storage.local.set({'aBlock': storage});
-                    document.querySelector('#aBlock .aBlock-bg').classList.remove('aBlock-off');
-                }
-
-            });
-
-        });
+        chrome.runtime.sendMessage({status: newStatus});
+        document.querySelector('#aBlock #bg').setAttribute('data-status', newStatus);
 
     });
 
