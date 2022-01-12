@@ -335,8 +335,13 @@ window.aBlock = {
             // Баннер на главной под поиском
             let banner = document.querySelector('.container__banner');
             if (banner) {
-                banner.remove();
+                banner.setAttribute('style', 'display: none;');
             }
+            Array.from(document.querySelectorAll('iframe')).forEach(
+                function(element) {
+                    element.setAttribute('style', 'display: none;');
+                }
+            );
 
             // Блоки в ленте
             Array.from(document.querySelectorAll('.feed__row div')).forEach(
@@ -416,30 +421,28 @@ window.aBlock = {
 // Запускаем на включенных сайтах
 try {
 
-    let hostname = window.location.hostname.replace('www.', '');
-    let current = typeof aBlock.hosts[hostname] !== 'undefined' ? aBlock.hosts[hostname] : aBlock.hosts.other;
-    current();
-    setInterval(function () {
-        current();
-    }, 500);
-    document.addEventListener('click', function () {
-        current();
+    chrome.storage.local.get(['aBlockStorage'], function(localStorage) {
+
+        if (
+            typeof localStorage['aBlockStorage'] !== 'undefined'
+            && typeof localStorage['aBlockStorage'].status !== 'undefined'
+            && localStorage['aBlockStorage'].status
+        ) {
+
+            let hostname = window.location.hostname.replace('www.', '');
+            let current = typeof aBlock.hosts[hostname] !== 'undefined' ? aBlock.hosts[hostname] : aBlock.hosts.other;
+            current();
+            setInterval(function () {
+                current();
+            }, 500);
+            document.addEventListener('click', function () {
+                current();
+            });
+
+        }
+
     });
 
-    // chrome.storage.local.get(['aBlock'], function(localStorage) {
-    //     let storage = localStorage['aBlock'];
-    //     let hostname = window.location.hostname.replace('www.', '');
-    //     if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-    //         let current = typeof aBlock.hosts[hostname] !== 'undefined' ? aBlock.hosts[hostname] : aBlock.hosts.other;
-    //         current();
-    //         setInterval(function () {
-    //             current();
-    //         }, 500);
-    //         document.addEventListener('click', function () {
-    //             current();
-    //         });
-    //     }
-    // });
 } catch (e) {
     console.error(e);
 }

@@ -11,10 +11,8 @@ window.addEventListener('load', function () {
             // Скрыто до загрузки
             document.getElementById('aBlock').classList.remove('loading');
 
-            let storage = localStorage['aBlockStorage'];
-
             // Включаем кнопку
-            if (storage.status) {
+            if (localStorage['aBlockStorage'].status) {
                 document.querySelector('#aBlock #bg').setAttribute('data-status', 'true');
             } else {
                 document.querySelector('#aBlock #bg').setAttribute('data-status', 'false');
