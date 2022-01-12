@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": ".trafficfactory.biz",
+            "domains": [
+                "xvideos.com"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 2,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "ad_xv_cams_player_video.mustache",
+            "domains": [
+                "xvideos.com"
+            ]
+        }
+    }
+]

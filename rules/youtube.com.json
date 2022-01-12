@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": ".doubleclick.net",
+            "domains": [
+                "youtube.com"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 2,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "v1/player/ad_break",
+            "domains": [
+                "youtube.com"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "priority": 3,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "tampering.js",
+            "domains": [
+                "youtube.com"
+            ]
+        }
+    }
+]

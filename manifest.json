@@ -52,6 +52,26 @@
                 "id": "ok.ru",
                 "enabled": true,
                 "path": "rules/ok.ru.json"
+            },
+            {
+                "id": "youtube.com",
+                "enabled": true,
+                "path": "rules/youtube.com.json"
+            },
+            {
+                "id": "xvideos.com",
+                "enabled": true,
+                "path": "rules/xvideos.com.json"
+            },
+            {
+                "id": "rt.pornhub.com",
+                "enabled": true,
+                "path": "rules/rt.pornhub.com.json"
+            },
+            {
+                "id": "other",
+                "enabled": true,
+                "path": "rules/other.json"
             }
         ],
         "displayActionCountAsBadgeText": true

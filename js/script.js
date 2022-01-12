@@ -1,6 +1,6 @@
 chrome.runtime.sendMessage({update: 'true'});
 
-let aBlock = {
+window.aBlock = {
 
     // Картинка заглушки рекламного блока
     base64Image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEQAACxEBf2RfkQAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC42/Ixj3wAAAqZJREFUWEfFlz1oFEEYhi8aEBIbFRSxs5CgKFhZiJWFhUrAItgEQSSQxjqdIoJYWIkWgYhYWAhCEOysLFKlMSBYiEaDP1GIJCbxL7nz+WbeO27Z2d2Z8w4feJn9ft5vNpu73b1aCo1Go69IaukdbDJUr9ffovkCjai1N3ACEygIm2+gabX2BjaY0X45qG2iVTSo9u7C4D1oQ/vloFbXOixLd2HwRbdTBfRNydJdGDytPUqh7zNLv2wZqJ1G4wrjYeAAxjW3QwT0HpfVQbwN3UL2ObmmdDyYzmh2FPTfkNW8B0jN+oqrdXQCk/JHQf9Llj7WC2jFZz3JJ4BnK6YP3h4H/cYThRnIp50AhmPyJoEv+JXt5ASuy5sEvqKrdlWjq6HZ/o9z3peH2oIOHcR/0BJ6h14jd3Nq4xHaofHV0Lw/MKQFpVH0W8df0CKaV/wGvUc/0CqpMZT2xMR42YaFoLaObqPmCXxDn0yKm+sLdEgj08D4zIaUQY9darvkdvntUf1LeeMnh/GXvB3MOzWgFHo+omX0Ctn//7tKDuJTGpkGxvOaUQp9K8h94lk3XbINcnc0Mg2MDzWjFPqMZYU5qNmHcovGxoHJHh5LfkQ19H7VYRDqRzU6Dgwn5a2E3sdoN7LHcBBqVzQ6Dgwj8hZCzxoa59B9tzme8pU81O65wbHg6cdUdgecQ4fV7iAeVjkDebtPDKktHoxn/Ygs5O+yDKitBflBlHtpITepljTw2nPguR/jIV5kCb5uGdQzj2Bie0vep3I6mE+g9mfBfZWC0HpJfQ7imyp1DkNafxXH55QOQn0vcjcjVrsr7lKpcxhyBNmvnnXmble6EPqaP14mlPp3GPoAPVVYim1M7wLq3i8khtp7wajCUug7SP+Ywv8DJ5Dw4lGr/QUwdQXkJkgc3wAAAABJRU5ErkJggg==',
@@ -28,11 +28,6 @@ let aBlock = {
             'zen.yandex.ru': function () {
                 setInterval(function () {
                     aBlock.zenAdBlock();
-                }, 500);
-            },
-            'mail.yandex.ru': function () {
-                setInterval(function () {
-                    aBlock.mailYandexAdBlock();
                 }, 500);
             },
             'vk.com': function () {
@@ -96,15 +91,6 @@ let aBlock = {
                 aBlock.otvetMailAdBlock();
                 setInterval(function () {
                     aBlock.otvetMailAdBlock();
-                }, 500);
-            },
-            'ok.ru': function (host) {
-                document.body.addEventListener('click', function () {
-                    aBlock[host]();
-                });
-                aBlock[host]();
-                setInterval(function () {
-                    aBlock[host]();
                 }, 500);
             },
             'mail.rambler.ru': function () {
@@ -179,33 +165,6 @@ let aBlock = {
                     aBlock.pikabuAdBlock();
                 }, 500);
             },
-            'youtube.com': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.youtubeAdBlock();
-                });
-                aBlock.youtubeAdBlock();
-                setInterval(function () {
-                    aBlock.youtubeAdBlock();
-                }, 500);
-            },
-            'xvideos.com': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.xvideosAdBlock();
-                });
-                aBlock.xvideosAdBlock();
-                setInterval(function () {
-                    aBlock.xvideosAdBlock();
-                }, 500);
-            },
-            'rt.pornhub.com': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.pornhubAdBlock();
-                });
-                aBlock.pornhubAdBlock();
-                setInterval(function () {
-                    aBlock.pornhubAdBlock();
-                }, 500);
-            },
             'best.aliexpress.ru': function () {
                 $('html').on('click', 'body', function () {
                     aBlock.bestAliexpressAdBlock();
@@ -222,12 +181,6 @@ let aBlock = {
                 aBlock.aliexpressAdBlock();
                 setInterval(function () {
                     aBlock.aliexpressAdBlock();
-                }, 500);
-            },
-            'other': function () {
-                aBlock.otherAdBlock();
-                setInterval(function () {
-                    aBlock.otherAdBlock();
                 }, 500);
             }
         };
@@ -288,6 +241,129 @@ let aBlock = {
                     ) {
                         element.remove();
                     }
+                }
+            );
+
+        },
+        'youtube.com': function () {
+
+            // Баннер на главной
+            Array.from(document.querySelectorAll('[id="masthead-ad"]')).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+            Array.from(document.querySelectorAll('[layout="display-ad-layout-top-landscape-image"]')).forEach(
+                function(element) {
+                    element.parentElement.setAttribute('style', '' +
+                        'background-image: url(' + aBlock.base64Image + '); ' +
+                        'background-repeat: no-repeat; ' +
+                        'background-position: center center;');
+                    element.remove();
+                }
+            );
+
+            // Баннер в видео
+            Array.from(document.getElementsByClassName('ytp-ad-overlay-slot')).forEach(
+                function(element) {
+                    element.setAttribute('style', 'display: none');
+                }
+            );
+
+            // Показать кнопку "Пропустить"
+            Array.from(document.getElementsByClassName('ytp-ad-skip-button-slot')).forEach(
+                function(element) {
+                    element.removeAttribute('style');
+                }
+            );
+            Array.from(document.getElementsByClassName('ytp-ad-skip-button-container')).forEach(
+                function(element) {
+                    element.removeAttribute('style');
+                }
+            );
+
+        },
+        'xvideos.com': function () {
+
+            // Реклама справа от видео
+            Array.from(document.querySelectorAll('[id="video-ad"]')).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+            let divs = document.querySelectorAll('[id="content"] > div');
+            if (divs.length === 2 && !divs[0].getAttribute('id')) {
+                divs[0].remove();
+            }
+
+        },
+        'rt.pornhub.com': function () {
+
+            // Баннер авторизации
+            Array.from(document.querySelectorAll('[id="age-verification-container"]')).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+            Array.from(document.querySelectorAll('[id="age-verification-wrapper"]')).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+
+            // Баннер на паузе
+            Array.from(document.querySelectorAll('[id="pb_template"]')).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+
+            // Реклама справа от видео
+            Array.from(document.querySelectorAll('[id="player"]')).forEach(
+                function(element) {
+                    element.setAttribute('style', 'z-index: 10;');
+                }
+            );
+            let divs = document.querySelectorAll('[id="hd-rightColVideoPage"] > div');
+            if (divs.length === 3 && !divs[0].getAttribute('id')) {
+                divs[0].remove();
+            }
+            let divsAlt = document.querySelectorAll('[id="vpContentContainer"] > div');
+            if (divsAlt.length > 1 && parseInt(divsAlt[1].getAttribute('id'))) {
+                let div = divsAlt[1].querySelectorAll('div')[0];
+                if (typeof div !== 'undefined' && !div.getAttribute('id')) {
+                    div.remove();
+                }
+            }
+
+        },
+        'mail.yandex.ru': function () {
+
+            // Баннер, который маскируется под новое письмо
+            Array.from(document.querySelectorAll('.mail-Layout-Main > div')).forEach(
+                function(element) {
+                    if (element.getAttribute('data-key')) {
+                        element.remove();
+                    }
+                }
+            );
+
+            // Баннер сверху в мобильной версии
+            Array.from(document.querySelectorAll('.direct')).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+
+            // Баннер слева
+            Array.from(document.querySelectorAll('.b-banner')).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+            Array.from(document.querySelectorAll('.ns-view-mail-pro-left-column-button ~ div')).forEach(
+                function(element) {
+                    element.remove();
                 }
             );
 
@@ -355,45 +431,6 @@ let aBlock = {
             $(this).addClass('ablock-show');
             $(this).find('div').show();
         });
-
-    },
-
-    /**
-     * mailYandexAdBlock
-     */
-    mailYandexAdBlock: function () {
-
-        // Баннер, который маскируется под новое письмо
-        let topBanner = $($('.mail-Layout-Content > div')[3]);
-        if (!topBanner.find('a').length) {
-            topBanner.hide();
-        }
-
-        let topBanner2 = $($('.mail-Layout-Main > div')[1]);
-        console.log(topBanner2)
-        if (!topBanner2.find('a').length) {
-            let a = topBanner2.find('a');
-            if (a.find('contains(Реклама)')) {
-                topBanner2.hide();
-            }
-        }
-
-        let leftBox = $('.mail-Layout-Aside-Inner-Box > div');
-
-        // Кнопка отключить рекламу
-        let adButton= $(leftBox[6]);
-        if (adButton.find('span:contains(Отключить рекламу)').length) {
-            adButton.hide();
-        }
-
-        // Левая панель
-        let leftBanner = $(leftBox[7]);
-        if (!leftBanner.find('a').length) {
-            leftBanner.hide();
-        }
-
-        // Баннер в мобильной сверху
-        $('#js-messages-direct-top').closest('.direct').hide();
 
     },
 
@@ -634,15 +671,6 @@ let aBlock = {
     },
 
     /**
-     * ok.ru
-     */
-    'ok.ru': function () {
-
-
-
-    },
-
-    /**
      * mailRamblerAdBlock
      */
     mailRamblerAdBlock: function () {
@@ -711,61 +739,6 @@ let aBlock = {
     },
 
     /**
-     * youtube
-     */
-    youtubeAdBlock: function () {
-
-        // Баннер на главной
-        $('.ytd-video-masthead-ad-v3-renderer').remove();
-        $('.ytd-video-masthead-ad-primary-video-renderer').remove();
-        $('[layout="display-ad-layout-top-landscape-image"]').remove();
-
-        // Баннер справа
-        $('.ytd-player-legacy-desktop-watch-ads-renderer').remove();
-
-        // Маленький баннер на видео
-        $('.ytp-ad-image-overlay').remove();
-        $('.ytp-ad-overlay-slot').remove();
-
-        // Показывать кнопку пропустить
-        let skipSlot = $('.ytp-ad-skip-button-slot');
-        if (typeof skipSlot !== 'undefined') {
-            skipSlot.show();
-            $('.ytp-ad-skip-button-container').show();
-        }
-
-    },
-
-    /**
-     * xvideosAdBlock
-     */
-    xvideosAdBlock: function () {
-        $('.thumb-ad').remove();
-        $('#ad-footer').remove();
-        $('#video-ad').remove();
-        $('.videoad-base').remove();
-        $('.videoad-title').remove();
-        $('[id ^= "ad_"]').remove();
-    },
-
-    /**
-     * pornhubAdBlock
-     */
-    pornhubAdBlock: function () {
-        $('script[src ^= "https://static.trafficjunky.com"]').remove();
-        $('link[href ^= "https://static.trafficjunky.com"]').remove();
-        $('#hotVideosSection iframe').closest('li').remove();
-        $('a.removeAdLink').closest('div').remove();
-        $('[data-embeddedads]').closest('div').remove();
-        $('.adsbytrafficjunky').closest('div').hide();
-        $('.adLinks').parent('div').hide();
-        $('.sponsor-text').hide();
-        $('#player').css({'z-index':10});
-        $('#age-verification-container').remove();
-        $('#age-verification-wrapper').remove();
-    },
-
-    /**
      * aliexpressAdBlock
      */
     aliexpressAdBlock: function () {
@@ -782,31 +755,35 @@ let aBlock = {
         $('script[src ^= "https://ad.adriver.ru"]');
     },
 
-    /**
-     * other
-     */
-    otherAdBlock: function () {}
-
 }
 
 // Запускаем на включенных сайтах
 try {
 
-    chrome.storage.local.get(['aBlock'], function(localStorage) {
-        let storage = localStorage['aBlock'];
-        let hostname = window.location.hostname.replace('www.', '');
-        if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
-            let current = typeof aBlock.hosts[hostname] !== 'undefined' ? aBlock.hosts[hostname] : aBlock.hosts.other;
-            current();
-            setInterval(function () {
-                current();
-            }, 500);
-            document.addEventListener('click', function () {
-                current();
-            });
-        }
+    let hostname = window.location.hostname.replace('www.', '');
+    let current = typeof aBlock.hosts[hostname] !== 'undefined' ? aBlock.hosts[hostname] : aBlock.hosts.other;
+    current();
+    setInterval(function () {
+        current();
+    }, 500);
+    document.addEventListener('click', function () {
+        current();
     });
 
+    // chrome.storage.local.get(['aBlock'], function(localStorage) {
+    //     let storage = localStorage['aBlock'];
+    //     let hostname = window.location.hostname.replace('www.', '');
+    //     if (typeof storage.hosts[hostname] === 'undefined' || storage.hosts[hostname].status === true) {
+    //         let current = typeof aBlock.hosts[hostname] !== 'undefined' ? aBlock.hosts[hostname] : aBlock.hosts.other;
+    //         current();
+    //         setInterval(function () {
+    //             current();
+    //         }, 500);
+    //         document.addEventListener('click', function () {
+    //             current();
+    //         });
+    //     }
+    // });
 } catch (e) {
     console.error(e);
 }

@@ -1,0 +1,302 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": ".google-analytics.com"
+        }
+    },
+    {
+        "id": 2,
+        "priority": 2,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "ads/system/context.js"
+        }
+    },
+    {
+        "id": 3,
+        "priority": 3,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "partner-code-bundles"
+        }
+    },
+    {
+        "id": 4,
+        "priority": 4,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": ".yandex.ru/metrika/watch.js"
+        }
+    },
+    {
+        "id": 5,
+        "priority": 5,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "pcode/adfox"
+        }
+    },
+    {
+        "id": 6,
+        "priority": 6,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "cotsta.ru"
+        }
+    },
+    {
+        "id": 7,
+        "priority": 7,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "system/video-ads-sdk/adsdk.js"
+        }
+    },
+    {
+        "id": 8,
+        "priority": 8,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "px.moatads.com"
+        }
+    },
+    {
+        "id": 9,
+        "priority": 9,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "bs.direct"
+        }
+    },
+    {
+        "id": 10,
+        "priority": 10,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "trafficbass.com"
+        }
+    },
+    {
+        "id": 11,
+        "priority": 11,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "utarget."
+        }
+    },
+    {
+        "id": 12,
+        "priority": 12,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "admediator.ru/js/rotator.js"
+        }
+    },
+    {
+        "id": 13,
+        "priority": 13,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "boostingads.com/t.js"
+        }
+    },
+    {
+        "id": 14,
+        "priority": 14,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "g.doubleclick.net/dbm/ad"
+        }
+    },
+    {
+        "id": 15,
+        "priority": 15,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "imasdk.googleapis.com/js/"
+        }
+    },
+    {
+        "id": 16,
+        "priority": 16,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "seedr.com/js/advert.js"
+        }
+    },
+    {
+        "id": 17,
+        "priority": 17,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        }
+    },
+    {
+        "id": 18,
+        "priority": 18,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "ads.adfox.ru"
+        }
+    },
+    {
+        "id": 19,
+        "priority": 19,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "nativeroll.tv/js"
+        }
+    },
+    {
+        "id": 20,
+        "priority": 20,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "yastatic.net/s3/zen-lib/widget-loader"
+        }
+    },
+    {
+        "id": 21,
+        "priority": 21,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "smi2.ru/data/js"
+        }
+    },
+    {
+        "id": 22,
+        "priority": 22,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "tag.digitaltarget.ru/adcm.js"
+        }
+    },
+    {
+        "id": 23,
+        "priority": 23,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "jsc.lentainform.com"
+        }
+    },
+    {
+        "id": 24,
+        "priority": 24,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "jsn.24smi.net/smi.j"
+        }
+    },
+    {
+        "id": 25,
+        "priority": 25,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "smi2.ru/data/js"
+        }
+    },
+    {
+        "id": 26,
+        "priority": 26,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "tns-counter.ru/"
+        }
+    },
+    {
+        "id": 27,
+        "priority": 27,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "yandex.ru/metrika/tag.js"
+        }
+    },
+    {
+        "id": 28,
+        "priority": 28,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "counter.yadro.ru"
+        }
+    },
+    {
+        "id": 29,
+        "priority": 29,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "onthe.io/io.js"
+        }
+    },
+    {
+        "id": 30,
+        "priority": 30,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "googletagmanager.com/gtag"
+        }
+    }
+]
