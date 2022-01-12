@@ -2,178 +2,14 @@ chrome.runtime.sendMessage({update: 'true'});
 
 window.aBlock = {
 
-    // Картинка заглушки рекламного блока
-    base64Image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEQAACxEBf2RfkQAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC42/Ixj3wAAAqZJREFUWEfFlz1oFEEYhi8aEBIbFRSxs5CgKFhZiJWFhUrAItgEQSSQxjqdIoJYWIkWgYhYWAhCEOysLFKlMSBYiEaDP1GIJCbxL7nz+WbeO27Z2d2Z8w4feJn9ft5vNpu73b1aCo1Go69IaukdbDJUr9ffovkCjai1N3ACEygIm2+gabX2BjaY0X45qG2iVTSo9u7C4D1oQ/vloFbXOixLd2HwRbdTBfRNydJdGDytPUqh7zNLv2wZqJ1G4wrjYeAAxjW3QwT0HpfVQbwN3UL2ObmmdDyYzmh2FPTfkNW8B0jN+oqrdXQCk/JHQf9Llj7WC2jFZz3JJ4BnK6YP3h4H/cYThRnIp50AhmPyJoEv+JXt5ASuy5sEvqKrdlWjq6HZ/o9z3peH2oIOHcR/0BJ6h14jd3Nq4xHaofHV0Lw/MKQFpVH0W8df0CKaV/wGvUc/0CqpMZT2xMR42YaFoLaObqPmCXxDn0yKm+sLdEgj08D4zIaUQY9darvkdvntUf1LeeMnh/GXvB3MOzWgFHo+omX0Ctn//7tKDuJTGpkGxvOaUQp9K8h94lk3XbINcnc0Mg2MDzWjFPqMZYU5qNmHcovGxoHJHh5LfkQ19H7VYRDqRzU6Dgwn5a2E3sdoN7LHcBBqVzQ6Dgwj8hZCzxoa59B9tzme8pU81O65wbHg6cdUdgecQ4fV7iAeVjkDebtPDKktHoxn/Ygs5O+yDKitBflBlHtpITepljTw2nPguR/jIV5kCb5uGdQzj2Bie0vep3I6mE+g9mfBfZWC0HpJfQ7imyp1DkNafxXH55QOQn0vcjcjVrsr7lKpcxhyBNmvnnXmble6EPqaP14mlPp3GPoAPVVYim1M7wLq3i8khtp7wajCUug7SP+Ywv8DJ5Dw4lGr/QUwdQXkJkgc3wAAAABJRU5ErkJggg==',
-
-    /**
-     * init
-     * @param host
-     */
-    init: function (host) {
-
-        let modules = {
-            'yandex.ru': function () {
-                setInterval(function () {
-                    aBlock.yandexAdBlock();
-                }, 500);
-            },
-            'radio.yandex.ru': function () {
-                aBlock.radioYandexAdBlock();
-            },
-            'market.yandex.ru': function () {
-                setInterval(function () {
-                    aBlock.marketYandexAdBlock();
-                }, 500);
-            },
-            'zen.yandex.ru': function () {
-                setInterval(function () {
-                    aBlock.zenAdBlock();
-                }, 500);
-            },
-            'pulse.mail.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.mailAdBlock();
-                });
-                aBlock.mailAdBlock();
-                setInterval(function () {
-                    aBlock.mailAdBlock();
-                }, 500);
-            },
-            'e.mail.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.eMailAdBlock();
-                });
-                aBlock.eMailAdBlock();
-                setInterval(function () {
-                    aBlock.eMailAdBlock();
-                }, 500);
-            },
-            'mail.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.mailAdBlock();
-                });
-                aBlock.mailAdBlock();
-                setInterval(function () {
-                    aBlock.mailAdBlock();
-                }, 500);
-            },
-            'go.mail.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.goMailAdBlock();
-                });
-                aBlock.goMailAdBlock();
-                setInterval(function () {
-                    aBlock.goMailAdBlock();
-                }, 500);
-            },
-            'touch.mail.ru': function () {
-                aBlock.touchMailAdBlock();
-                setInterval(function () {
-                    aBlock.touchMailAdBlock();
-                }, 500);
-            },
-            'otvet.mail.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.otvetMailAdBlock();
-                });
-                aBlock.otvetMailAdBlock();
-                setInterval(function () {
-                    aBlock.otvetMailAdBlock();
-                }, 500);
-            },
-            'mail.rambler.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.mailRamblerAdBlock();
-                });
-                aBlock.mailRamblerAdBlock();
-                setInterval(function () {
-                    aBlock.mailRamblerAdBlock();
-                }, 500);
-            },
-            'rambler.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.ramblerAdBlock();
-                });
-                aBlock.ramblerAdBlock();
-                setInterval(function () {
-                    aBlock.ramblerAdBlock();
-                }, 500);
-            },
-            'news.rambler.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.newsRamblerAdBlock();
-                });
-                aBlock.newsRamblerAdBlock();
-                setInterval(function () {
-                    aBlock.newsRamblerAdBlock();
-                }, 500);
-            },
-            'sport.rambler.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.newsRamblerAdBlock();
-                });
-                aBlock.newsRamblerAdBlock();
-                setInterval(function () {
-                    aBlock.newsRamblerAdBlock();
-                }, 500);
-            },
-            'kino.rambler.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.kinoRamblerAdBlock();
-                });
-                aBlock.kinoRamblerAdBlock();
-                setInterval(function () {
-                    aBlock.kinoRamblerAdBlock();
-                }, 500);
-            },
-            'lenta.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.lentaAdBlock();
-                });
-                aBlock.lentaAdBlock();
-                setInterval(function () {
-                    aBlock.lentaAdBlock();
-                }, 500);
-            },
-            'rg.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.rgAdBlock();
-                });
-                aBlock.rgAdBlock();
-                setInterval(function () {
-                    aBlock.rgAdBlock();
-                }, 500);
-            },
-            'pikabu.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.pikabuAdBlock();
-                });
-                aBlock.pikabuAdBlock();
-                setInterval(function () {
-                    aBlock.pikabuAdBlock();
-                }, 500);
-            },
-            'best.aliexpress.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.bestAliexpressAdBlock();
-                });
-                aBlock.bestAliexpressAdBlock();
-                setInterval(function () {
-                    aBlock.bestAliexpressAdBlock();
-                }, 500);
-            },
-            'aliexpress.ru': function () {
-                $('html').on('click', 'body', function () {
-                    aBlock.aliexpressAdBlock();
-                });
-                aBlock.aliexpressAdBlock();
-                setInterval(function () {
-                    aBlock.aliexpressAdBlock();
-                }, 500);
-            }
-        };
-
+    // Хранилище
+    storage: {
+        base64Image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEQAACxEBf2RfkQAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC42/Ixj3wAAAqZJREFUWEfFlz1oFEEYhi8aEBIbFRSxs5CgKFhZiJWFhUrAItgEQSSQxjqdIoJYWIkWgYhYWAhCEOysLFKlMSBYiEaDP1GIJCbxL7nz+WbeO27Z2d2Z8w4feJn9ft5vNpu73b1aCo1Go69IaukdbDJUr9ffovkCjai1N3ACEygIm2+gabX2BjaY0X45qG2iVTSo9u7C4D1oQ/vloFbXOixLd2HwRbdTBfRNydJdGDytPUqh7zNLv2wZqJ1G4wrjYeAAxjW3QwT0HpfVQbwN3UL2ObmmdDyYzmh2FPTfkNW8B0jN+oqrdXQCk/JHQf9Llj7WC2jFZz3JJ4BnK6YP3h4H/cYThRnIp50AhmPyJoEv+JXt5ASuy5sEvqKrdlWjq6HZ/o9z3peH2oIOHcR/0BJ6h14jd3Nq4xHaofHV0Lw/MKQFpVH0W8df0CKaV/wGvUc/0CqpMZT2xMR42YaFoLaObqPmCXxDn0yKm+sLdEgj08D4zIaUQY9darvkdvntUf1LeeMnh/GXvB3MOzWgFHo+omX0Ctn//7tKDuJTGpkGxvOaUQp9K8h94lk3XbINcnc0Mg2MDzWjFPqMZYU5qNmHcovGxoHJHh5LfkQ19H7VYRDqRzU6Dgwn5a2E3sdoN7LHcBBqVzQ6Dgwj8hZCzxoa59B9tzme8pU81O65wbHg6cdUdgecQ4fV7iAeVjkDebtPDKktHoxn/Ygs5O+yDKitBflBlHtpITepljTw2nPguR/jIV5kCb5uGdQzj2Bie0vep3I6mE+g9mfBfZWC0HpJfQ7imyp1DkNafxXH55QOQn0vcjcjVrsr7lKpcxhyBNmvnnXmble6EPqaP14mlPp3GPoAPVVYim1M7wLq3i8khtp7wajCUug7SP+Ywv8DJ5Dw4lGr/QUwdQXkJkgc3wAAAABJRU5ErkJggg==',
+        'radio.yandex.ru': {
+            play: false
+        }
     },
+
     /**
      * Настройки сайтов
      */
@@ -282,7 +118,7 @@ window.aBlock = {
             Array.from(document.querySelectorAll('[layout="display-ad-layout-top-landscape-image"]')).forEach(
                 function(element) {
                     element.parentElement.setAttribute('style', '' +
-                        'background-image: url(' + aBlock.base64Image + '); ' +
+                        'background-image: url(' + aBlock.storage.base64Image + '); ' +
                         'background-repeat: no-repeat; ' +
                         'background-position: center center;');
                     element.remove();
@@ -394,9 +230,157 @@ window.aBlock = {
             );
 
         },
-        other: function () {
+        'rambler.ru': function () {
 
-        }
+            // Баннеры begun
+            Array.from(document.querySelectorAll('[id ^= "begun_block"]')).forEach(
+                function(element) {
+                    element.innerHTML = "";
+                }
+            );
+
+        },
+        'mail.rambler.ru': function () {
+
+            // Баннер, который маскируется под новое письмо
+            Array.from(document.querySelectorAll('.Ad-direct-3A')).forEach(
+                function(element) {
+                    element.remove();
+                }
+            );
+
+            // Баннеры begun
+            window.aBlock.hosts['rambler.ru']();
+
+        },
+        'news.rambler.ru': function () {
+
+            // Баннеры begun
+            window.aBlock.hosts['rambler.ru']();
+
+        },
+        'kino.rambler.ru': function () {
+
+            // Баннеры begun
+            window.aBlock.hosts['rambler.ru']();
+
+        },
+        'auto.rambler.ru': function () {
+
+            // Баннеры begun
+            window.aBlock.hosts['rambler.ru']();
+
+        },
+        'sport.rambler.ru': function () {
+
+            // Баннеры begun
+            window.aBlock.hosts['rambler.ru']();
+
+        },
+        'horoscopes.rambler.ru': function () {
+
+            // Баннеры begun
+            window.aBlock.hosts['rambler.ru']();
+
+        },
+        'e.mail.ru': function () {
+
+            // Баннер, который маскируется под новое письмо
+            Array.from(document.querySelectorAll('.letter-list-item-adv__container')).forEach(
+                function(element) {
+                    element.setAttribute('style', 'display: none;');
+                }
+            );
+
+            // Рекламные баннеры справа
+            Array.from(document.querySelectorAll('.advert-column')).forEach(
+                function(element) {
+                    element.setAttribute('style', 'display: none;');
+                }
+            );
+
+        },
+        'pulse.mail.ru': function () {
+
+            // Блоки в ленте
+            Array.from(document.querySelectorAll('[data-testid="pulse-card"] span')).forEach(
+                function(element) {
+                    if (
+                        element.innerText.toLowerCase().indexOf('реклама') > -1
+                        || element.innerText.toLowerCase().indexOf('промо') > -1
+                    ) {
+                        element.closest('[data-testid="pulse-card"]').setAttribute('style', 'display: none;');
+                    }
+                }
+            );
+            Array.from(document.querySelectorAll('[data-testid="pulse-card"] div')).forEach(
+                function(element) {
+                    if (
+                        element.innerText.toLowerCase().indexOf('реклама') > -1
+                        || element.innerText.toLowerCase().indexOf('промо') > -1
+                    ) {
+                        element.closest('[data-testid="pulse-card"]').setAttribute('style', 'display: none;');
+                    }
+                }
+            );
+
+        },
+        'yandex.ru': function () {
+
+            // Баннер на главной под поиском
+            let banner = document.querySelector('.container__banner');
+            if (banner) {
+                banner.remove();
+            }
+
+            // Блоки в ленте
+            Array.from(document.querySelectorAll('.feed__row div')).forEach(
+                function(element) {
+                    if (element.innerText.toLowerCase().indexOf('промо') > -1) {
+                        element.closest('.feed__row').setAttribute('style', 'display: none;');
+                    }
+                }
+            );
+
+            // Блоки в новостях
+            Array.from(document.querySelectorAll('.root123 > div')).forEach(
+                function(element) {
+                    if (element.getAttribute('style') === 'width: 100%;') {
+                        element.setAttribute('style', 'display: none;');
+                    }
+                }
+            );
+
+        },
+        'radio.yandex.ru': function () {
+
+            // Включить проигрывание
+            let playButton = document.querySelector('.player-controls__play');
+            if (playButton && playButton.getAttribute('title') === 'Играть [P]' && !aBlock.storage['radio.yandex.ru'].play) {
+                aBlock.storage['radio.yandex.ru'].play = true;
+                playButton.click();
+            }
+
+            // Обновление страницы на рекламном треке
+            let text = document.querySelector('h2.page-station__title');
+            if (text && text.innerText === 'Реклама') {
+                location.reload();
+            }
+
+        },
+        'zen.yandex.ru': function () {
+
+            // Блоки в ленте
+            Array.from(document.querySelectorAll('.feed__row div')).forEach(
+                function(element) {
+                    if (element.innerText.toLowerCase().indexOf('промо') > -1) {
+                        element.closest('.feed__row').setAttribute('style', 'display: none;');
+                    }
+                }
+            );
+
+        },
+        other: function () {}
     },
     /**
      * Вспомогательные методы
@@ -420,335 +404,7 @@ window.aBlock = {
             );
             return position;
         }
-    },
-
-    /**
-     * zenAdBlock
-     */
-    zenAdBlock: function () {
-
-        // Рекламные баннеры
-        $('.feed__item-wrap').each(function (n, element) {
-            element = $(element);
-            if (
-                !element.find('a').length
-                || element.find('a:contains(Промо)').length
-            ) {
-                if (!element.hasClass('ablock-show')
-                    &&
-                    (
-                        !element.hasClass('ablock')
-                        ||
-                        element.find('div').first().is(":visible")
-                    )
-                ) {
-                    element.addClass('ablock');
-                    element.css({'background-color': '#f3f1ed'});
-                    element.css({'background-image': "url('" + aBlock.base64Image + "')"});
-                    element.css({'background-repeat': 'no-repeat'});
-                    element.css({'background-position': 'center center'});
-                    element.find('div').first().hide();
-                }
-            }
-        })
-
-        // Показывать заблокированные блоки дзена, при нажатии на них
-        $('body').on('click', '.ablock', function () {
-            $(this).addClass('ablock-show');
-            $(this).find('div').show();
-        });
-
-    },
-
-    /**
-     * yandexAdBlock
-     */
-    yandexAdBlock: function () {
-
-        // Баннер под поиском на главной
-        $('iframe [src ^= "/portal/ntp/banner"]').hide();
-        $('.b-inline_banner iframe').hide();
-        $('.b-banner__wrap a.b-banner__link').hide();
-        $('[data-statlog ^= "banner."]').hide();
-
-        // Директ в мобильной
-        $('.block__title a[href="//direct.yandex.ru/?partner"]').closest('[data-bem]').hide();
-        $('[data-statlog="div_direct_tgo_touch.title"]').closest('[data-bem]').hide();
-
-        // Рекламный пост в мобильной
-        $('.zenad-card-rtb__ad').closest('.zenad-scaled-container').hide();
-
-        // Блок авто.ру в мобильной
-        $('[aria-label="Авто.ру"]').hide();
-
-        // Блоки в дзене на главной яндекса
-        $('.zen-page .feed__item-wrap').each(function (n, element) {
-            element = $(element);
-            if (
-                !element.find('a').length
-                ||
-                element.find('div:contains(Промо)').length
-                ||
-                element.find('.zenad-card-rtb__ad').length
-            ) {
-                if (!element.hasClass('ablock-show')
-                    &&
-                    (
-                        !element.hasClass('ablock')
-                        ||
-                        element.find('div').first().is(":visible")
-                    )
-                ) {
-                    element.addClass('ablock');
-                    element.css({'background-color': '#f9f9f9'});
-                    element.css({'background-image': "url('" + aBlock.base64Image + "')"});
-                    element.css({'background-repeat': 'no-repeat'});
-                    element.css({'background-position': 'center center'});
-                    element.find('div').first().hide();
-                }
-            }
-        });
-
-        // Показывать заблокированные блоки дзена, при нажатии на них
-        $('body').on('click', '.ablock', function () {
-            $(this).addClass('ablock-show');
-            $(this).find('div').show();
-        });
-
-        // Блоки в яндекс новостях
-        $('.mg-grid__row').each(function (n, element) {
-            element = $(element);
-            if (!element.find('a').length) {
-                element.hide();
-            }
-        });
-        $('.news-app__heading span:contains(Реклама)').hide();
-
-        // Блоки справа в яндекс новостях
-        $('.mg-grid__col_sm_3').each(function (n, element) {
-            element = $(element);
-            element.find('div').each(function (n, element) {
-                element = $(element);
-                if (!element.find('a').length) {
-                    element.hide();
-                }
-            })
-        });
-        $('.neo-advert').hide();
-        $('.news-advert__column').hide();
-
-        // Блоки под новостью в яндекс новостях
-        $('.news-app__layout > div > div[data-log-id]').hide();
-
-        // Рекламные посты под новостью в яндекс новостях
-        $('.mg-grid__col').each(function (n, element) {
-            element = $(element);
-            if (!element.find('a').length) {
-                element.hide();
-            }
-        });
-
-    },
-
-    /**
-     * radioYandexAdBlock
-     */
-    radioYandexAdBlock: function () {
-
-        let title = $('h2.page-station__title').text();
-        if (title === 'Реклама') {
-            location.reload();
-        }
-
-    },
-
-    /**
-     * marketYandexAdBlock
-     */
-    marketYandexAdBlock: function () {
-        // Большой баннер сверху
-        $('[data-zone-name="Banner"]').hide();
-    },
-
-    /**
-     * mailAdBlock
-     */
-    mailAdBlock: function () {
-
-        // Всплывающий баннер слева сверху
-        $('#bubble-home').hide();
-
-        // Баннер под лентой новостей
-        $('[id ^= "commercial_"]').hide();
-
-        // Баннеры справа
-        $('.rectangle-banner').parent().hide();
-
-        // Блоки в пульсе на главной мейла
-        $('.pl_au').each(function (n, element) {
-            element = $(element);
-            if (
-                element.find('script').length
-                ||
-                element.find('style').length
-                ||
-                element.find('span:contains(Промо)').length
-                ||
-                element.find('span:contains(Реклама)').length
-            ) {
-                if (!element.hasClass('ablock-show')
-                    &&
-                    (
-                        !element.hasClass('ablock')
-                        ||
-                        element.find('div').first().is(":visible")
-                    )
-                    ) {
-                    element.addClass('ablock');
-                    element.css({'background-color': '#f9f9f9'});
-                    element.css({'background-image': "url('" + aBlock.base64Image + "')"});
-                    element.css({'background-repeat': 'no-repeat'});
-                    element.css({'background-position': 'center center'});
-                    element.find('div').first().hide();
-                }
-            }
-        });
-
-        $('[id ^= "yandex_ad_"]').parent().hide();
-
-        // Показывать заблокированные блоки пульса, при нажатии на них
-        $('body').on('click', '.ablock', function () {
-           $(this).addClass('ablock-show');
-           $(this).find('div').show();
-        });
-
-    },
-
-    /**
-     * goMailAdBlock
-     */
-    goMailAdBlock: function () {
-
-        // Баннер снизу справа
-        $('.RightBottomRbBanner-container').hide();
-
-    },
-
-    /**
-     * touchMailAdBlock
-     */
-    touchMailAdBlock: function () {
-        $('.advert-list-item__body').closest('.advert-list-item').hide();
-    },
-
-    /**
-     * otvetMailAdBlock
-     */
-    otvetMailAdBlock: function () {
-
-        $('[class ^= "adv-slot"]').attr('style','display:none !important');
-        $('.banner-mail').attr('style','display:none !important');
-        $('.column_right .fixedsticky').attr('style','display:none !important');
-
-    },
-
-    /**
-     * eMailAdBlock
-     */
-    eMailAdBlock: function () {
-
-        // Баннер, который маскируется под новое письмо
-        $('.letter-list-item-adv__container').hide();
-
-        // Рекламные баннеры справа
-        $('.advert-column').hide();
-
-    },
-
-    /**
-     * mailRamblerAdBlock
-     */
-    mailRamblerAdBlock: function () {
-
-        // Баннер, который маскируется под новое письмо
-        $('.Ad-direct-3A').hide();
-        $('[id ^= "begun_block"]').hide();
-
-        // Рекламные баннеры справа
-        $('.AppContainer-adWrapper-1o').hide();
-
-    },
-
-    /**
-     * ramblerAdBlock
-     */
-    ramblerAdBlock: function () {
-        $('[id ^= "__ban_"]').hide();
-        $('[id ^= "begun_block"]').hide();
-    },
-
-    /**
-     * newsRamblerAdBlock
-     */
-    newsRamblerAdBlock: function () {
-        $('[id ^= "__ban_"]').hide();
-        $('[id ^= "begun_block"]').hide();
-    },
-
-    /**
-     * newsRamblerAdBlock
-     */
-    kinoRamblerAdBlock: function () {
-        $('[id ^= "__ban_"]').hide();
-        $('[id ^= "begun_block"]').hide();
-    },
-
-    /**
-     * lentaAdBlock
-     */
-    lentaAdBlock: function () {
-
-        $('.b-banner').hide();
-        $('[id ^= "begun_block"]').hide();
-
-    },
-
-    /**
-     * rgAdBlock
-     */
-    rgAdBlock: function () {
-
-        $('.b-adfox').remove();
-        $('.b-yadirect').remove();
-        $('.b-yandex-zen-widget').remove();
-        $('.b-relap-widget').remove();
-
-    },
-
-    /**
-     * pikabu
-     */
-    pikabuAdBlock: function () {
-        $('[data-ad-type]').remove();
-        $('[id ^= "adfox_"]').remove();
-    },
-
-    /**
-     * aliexpressAdBlock
-     */
-    aliexpressAdBlock: function () {
-        $('.top-ad-container').remove();
-        $('script[src ^= "https://ad.adriver.ru"]');
-    },
-
-    /**
-     * bestAliexpressAdBlock
-     */
-    bestAliexpressAdBlock: function () {
-        $('.top-banner-container').remove();
-        $('.top-ad-container').remove();
-        $('script[src ^= "https://ad.adriver.ru"]');
-    },
+    }
 
 }
 

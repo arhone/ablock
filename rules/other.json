@@ -298,5 +298,75 @@
         "condition": {
             "urlFilter": "googletagmanager.com/gtag"
         }
+    },
+    {
+        "id": 31,
+        "priority": 31,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": ".g.doubleclick.net/gpt/"
+        }
+    },
+    {
+        "id": 32,
+        "priority": 32,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "hit.gemius.pl"
+        }
+    },
+    {
+        "id": 33,
+        "priority": 33,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": ".google.ru/adsid/integrator.js"
+        }
+    },
+    {
+        "id": 34,
+        "priority": 34,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "pagead2.googlesyndication.com/bg"
+        }
+    },
+    {
+        "id": 35,
+        "priority": 35,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/amp4ads-"
+        }
+    },
+    {
+        "id": 36,
+        "priority": 36,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/amp-ad-exit-"
+        }
+    },
+    {
+        "id": 37,
+        "priority": 37,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "mradx.net"
+        }
     }
 ]

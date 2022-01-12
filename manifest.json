@@ -74,6 +74,16 @@
                 "path": "rules/rt.pornhub.com.json"
             },
             {
+                "id": "rambler.ru",
+                "enabled": true,
+                "path": "rules/rambler.ru.json"
+            },
+            {
+                "id": "yandex.ru",
+                "enabled": true,
+                "path": "rules/yandex.ru.json"
+            },
+            {
                 "id": "other",
                 "enabled": true,
                 "path": "rules/other.json"
