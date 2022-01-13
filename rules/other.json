@@ -368,5 +368,25 @@
         "condition": {
             "urlFilter": "mradx.net"
         }
+    },
+    {
+        "id": 38,
+        "priority": 38,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/ads/system/adsdk.js"
+        }
+    },
+    {
+        "id": 39,
+        "priority": 39,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/awaps-ad-sdk-js-bundles/"
+        }
     }
 ]
