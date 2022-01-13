@@ -23,7 +23,7 @@ aBlock = {
      */
     init: function () {
 
-        // Установка хранилища
+        // Синхронизация с localstorage
         aBlock.syncLocalStorage();
 
         // Событие смены статуса иконки через popup.js
@@ -36,7 +36,7 @@ aBlock = {
 
     },
     /**
-     * Установка хранилища
+     * Синхронизация с localstorage
      */
     syncLocalStorage: function () {
 
@@ -83,6 +83,7 @@ aBlock = {
     },
     /**
      * Смена иконки
+     * @param status
      */
     changeIcon: function (status) {
 
@@ -92,21 +93,12 @@ aBlock = {
                     32: '/image/ablock-32.png'
                 }
             }, function () {});
-            // chrome.action.setBadgeText({
-            //     text: ''
-            // });
         } else {
             chrome.action.setIcon({
                 path: {
                     32: '/image/ablock-32-black.png'
                 }
             }, function () {});
-            // chrome.action.setBadgeText({
-            //     text: 'Выкл'
-            // });
-            // chrome.action.setBadgeBackgroundColor({
-            //     color: '#2f2f2f'
-            // });
         }
 
     },
