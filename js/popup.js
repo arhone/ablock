@@ -23,7 +23,7 @@ window.addEventListener('load', function () {
     });
 
     // Нажатие на кнопку
-    document.getElementById('aBlock').addEventListener('click', function () {
+    document.getElementById('button').addEventListener('click', function () {
 
         let oldStatus = document.querySelector('#aBlock #bg').getAttribute('data-status');
         let newStatus = oldStatus === 'true' ? 'false' : 'true';
