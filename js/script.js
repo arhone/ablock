@@ -93,6 +93,13 @@ window.aBlock = {
                     element.remove();
                 }
             );
+            Array.from(document.querySelectorAll("#hook_Block_FourthCol [id] div")).forEach(
+                function(element) {
+                    if (element.innerText.indexOf('.ru') > 1) {
+                        element.closest('[id]').setAttribute('style', 'display: none;');
+                    }
+                }
+            );
 
             // В ленте
             Array.from(document.querySelectorAll(".feed-list .feed-w [data-seen-params]")).forEach(
