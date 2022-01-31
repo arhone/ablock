@@ -165,10 +165,6 @@ window.aBlock = {
                     element.remove();
                 }
             );
-            let divs = document.querySelectorAll('[id="content"] > div');
-            if (divs.length === 2 && !divs[0].getAttribute('id')) {
-                divs[0].remove();
-            }
 
         },
         'rt.pornhub.com': function () {
