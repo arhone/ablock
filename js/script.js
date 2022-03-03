@@ -93,6 +93,13 @@ window.aBlock = {
                     element.remove();
                 }
             );
+            Array.from(document.querySelectorAll("#hook_Block_FourthCol [id] div")).forEach(
+                function(element) {
+                    if (element.innerText.indexOf('.ru') > 1) {
+                        element.closest('[id]').setAttribute('style', 'display: none;');
+                    }
+                }
+            );
 
             // В ленте
             Array.from(document.querySelectorAll(".feed-list .feed-w [data-seen-params]")).forEach(
@@ -153,15 +160,11 @@ window.aBlock = {
         'xvideos.com': function () {
 
             // Реклама справа от видео
-            Array.from(document.querySelectorAll('[id="video-ad"]')).forEach(
-                function(element) {
-                    element.remove();
-                }
-            );
-            let divs = document.querySelectorAll('[id="content"] > div');
-            if (divs.length === 2 && !divs[0].getAttribute('id')) {
-                divs[0].remove();
-            }
+            // Array.from(document.querySelectorAll('[id="video-ad"]')).forEach(
+            //     function(element) {
+            //         element.remove();
+            //     }
+            // );
 
         },
         'rt.pornhub.com': function () {
@@ -186,22 +189,22 @@ window.aBlock = {
             );
 
             // Реклама справа от видео
-            Array.from(document.querySelectorAll('[id="player"]')).forEach(
-                function(element) {
-                    element.setAttribute('style', 'z-index: 10;');
-                }
-            );
-            let divs = document.querySelectorAll('[id="hd-rightColVideoPage"] > div');
-            if (divs.length === 3 && !divs[0].getAttribute('id')) {
-                divs[0].remove();
-            }
-            let divsAlt = document.querySelectorAll('[id="vpContentContainer"] > div');
-            if (divsAlt.length > 1 && parseInt(divsAlt[1].getAttribute('id'))) {
-                let div = divsAlt[1].querySelectorAll('div')[0];
-                if (typeof div !== 'undefined' && !div.getAttribute('id')) {
-                    div.remove();
-                }
-            }
+            // Array.from(document.querySelectorAll('[id="player"]')).forEach(
+            //     function(element) {
+            //         element.setAttribute('style', 'z-index: 10;');
+            //     }
+            // );
+            // let divs = document.querySelectorAll('[id="hd-rightColVideoPage"] > div');
+            // if (divs.length === 3 && !divs[0].getAttribute('id')) {
+            //     divs[0].remove();
+            // }
+            // let divsAlt = document.querySelectorAll('[id="vpContentContainer"] > div');
+            // if (divsAlt.length > 1 && parseInt(divsAlt[1].getAttribute('id'))) {
+            //     let div = divsAlt[1].querySelectorAll('div')[0];
+            //     if (typeof div !== 'undefined' && !div.getAttribute('id')) {
+            //         div.remove();
+            //     }
+            // }
 
         },
         'mail.yandex.ru': function () {
