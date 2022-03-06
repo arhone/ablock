@@ -401,55 +401,55 @@ window.aBlock = {
      */
     warningHosts: {
         'activisionblizzard.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/activision-blizzard/')
         },
         'atlassian.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/atlassian/')
         },
         'autodesk.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/autodesk/')
         },
         'bbc.co.uk': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/bbc/')
         },
         'btc-alpha.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/btc-alpha/')
         },
         'coursera.org': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/coursera/')
         },
         'dmarket.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/dmarket/')
         },
         'ea.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/electronic-arts/')
         },
         'esputnik.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и пропаганде',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости, дискриминации и пропаганде',
                 'http://www.netynas.ru/esputnik/')
         },
         'eurovision.tv': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/eurovision/')
         },
         'hostinger.ru': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/hostinger/')
         },
         'host-tracker.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/host-tracker/')
         },
         'grammarly.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/grammarly/')
         },
         'serpstat.com': function (hostname) {
@@ -457,15 +457,15 @@ window.aBlock = {
                 'http://www.netynas.ru/serpstat/')
         },
         'qmall.io': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/qmall/')
         },
         'visa.com.ru': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/visa/')
         },
         'visa.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости',
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/visa/')
         },
     },
