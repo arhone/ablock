@@ -18,6 +18,10 @@ window.addEventListener('load', function () {
                 document.querySelector('#aBlock #bg').setAttribute('data-status', 'false');
             }
 
+        } else {
+            chrome.storage.local.set({'aBlockStorage': {
+                status: true
+            }});
         }
 
     });
