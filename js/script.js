@@ -468,6 +468,10 @@ window.aBlock = {
             aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/visa/')
         },
+        'preply.com': function (hostname) {
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
+                'https://pikabu.ru/story/sayt_preply_zablokiroval_vsekh_rossiyskikh_repetitorov_angliyskogo_yazyika_8896399')
+        },
     },
     /**
      * Вспомогательные методы
