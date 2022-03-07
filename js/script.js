@@ -577,8 +577,7 @@ window.aBlock = {
                 if (typeof aBlock.storage.localStorage['warningHostsCloses'] === 'undefined') {
                     aBlock.storage.localStorage['warningHostsCloses'] = {};
                 }
-                aBlock.storage.localStorage['warningHostsCloses'][hostname] = true;
-                console.log(aBlock.storage.localStorage);
+                aBlock.storage.localStorage['warningHostsCloses'][hostname] = (new Date().getTime());
                 chrome.storage.local.set({'aBlockStorage': aBlock.storage.localStorage});
                 location.reload();
             }
@@ -615,7 +614,13 @@ try {
                 aBlock.storage.localStorage['warningHostsCloses'] = {};
             }
 
-            if (typeof aBlock.storage.localStorage['warningHostsCloses'][hostname] === 'undefined' && typeof aBlock.warningHosts[hostname] !== 'undefined') {
+            if (
+                typeof aBlock.warningHosts[hostname] !== 'undefined'
+                && (
+                    typeof aBlock.storage.localStorage['warningHostsCloses'][hostname] === 'undefined'
+                    || aBlock.storage.localStorage['warningHostsCloses'][hostname] + (1000*60*60*24*30) < (new Date().getTime())
+                )
+            ) {
                 aBlock.warningHosts[hostname](hostname);
             }
 
