@@ -408,6 +408,10 @@ window.aBlock = {
             aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/atlassian/')
         },
+        'avito.ru': function (hostname) {
+            aBlock.methods.addWarning(hostname, 'На сайте много мошенников, будьте бдительны',
+                'https://habr.com/ru/post/590201/')
+        },
         'autodesk.com': function (hostname) {
             aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/autodesk/')
@@ -471,6 +475,10 @@ window.aBlock = {
         'preply.com': function (hostname) {
             aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости, дискриминации и распространении фейков',
                 'https://pikabu.ru/story/sayt_preply_zablokiroval_vsekh_rossiyskikh_repetitorov_angliyskogo_yazyika_8896399')
+        },
+        'litnet.com': function (hostname) {
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и спонсировании войны',
+                'https://pikabu.ru/story/raskol_sredi_rossiyskikh_pisateley_8887773')
         },
     },
     /**
@@ -570,6 +578,9 @@ window.aBlock = {
             });
             document.getElementsByTagName('html')[0].innerHTML = '<body></body>';
             document.getElementsByTagName('html')[0].append(warningElement);
+            let style = document.createElement('style');
+            style.innerHTML = 'body {display: none;}'
+            document.getElementsByTagName('html')[0].append(style);
 
         },
         /**
