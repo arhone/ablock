@@ -512,8 +512,8 @@ window.aBlock = {
                 'z-index: 9999;' +
                 'text-align: center;' +
                 'padding-top: 10%;' +
-                'width: 100%;' +
-                'height: 100%;'
+                'width: ' + window.innerWidth + 'px;' +
+                'height: ' + window.innerHeight + 'px;'
             ;
 
             let textElement = document.createElement('div');
@@ -549,7 +549,7 @@ window.aBlock = {
 
             let closeElement = document.createElement('div');
             closeElement.innerText = 'Убрать предупреждение';
-            closeElement.title = 'Мы лишь предупреждаем. Мы не в праве Вас как-то ограничивать';
+            closeElement.title = 'Предупреждение лишь повышает вашу бдительность';
             closeElement.style =
                 'font-size: 12px;' +
                 'margin-top: 10px;' +
@@ -561,9 +561,15 @@ window.aBlock = {
                 aBlock.methods.closeWarning(hostname);
             });
 
-            document.getElementsByTagName('html')[0].innerHTML = '';
+            document.addEventListener('DOMContentLoaded', function () {
+                Array.from(document.getElementsByTagName('body')).forEach(
+                    function(element) {console.log(element);
+                        element.innerHTML = '';
+                    }
+                );
+            });
+            document.getElementsByTagName('html')[0].innerHTML = '<body></body>';
             document.getElementsByTagName('html')[0].append(warningElement);
-            document.getElementsByTagName('body')[0].innerHTML = '';
 
         },
         /**
