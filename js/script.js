@@ -369,6 +369,7 @@ window.aBlock = {
 
             } else if (location.pathname.match(/pogoda/)) {
 
+                // Вырезается в js/injected.js в фильтре eval
 
             } else {
 
