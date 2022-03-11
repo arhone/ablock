@@ -1,3 +1,7 @@
+const injectedScript = document.createElement('script');
+injectedScript.src = chrome.runtime.getURL('js/injected.js');
+(document.head || document.documentElement).appendChild(injectedScript);
+
 window.aBlock = {
 
     // Хранилище
@@ -336,34 +340,60 @@ window.aBlock = {
         },
         'yandex.ru': function () {
 
-            // Баннер на главной под поиском
-            let banner = document.querySelector('.container__banner');
-            if (banner) {
-                banner.setAttribute('style', 'display: none;');
-            }
-            Array.from(document.querySelectorAll('iframe')).forEach(
-                function(element) {
-                    element.setAttribute('style', 'display: none;');
-                }
-            );
+            if (location.pathname.match(/maps/)) {
 
-            // Блоки в ленте
-            Array.from(document.querySelectorAll('.feed__row div')).forEach(
-                function(element) {
-                    if (element.innerText.toLowerCase().indexOf('промо') > -1) {
-                        element.closest('.feed__row').setAttribute('style', 'display: none;');
+                Array.from(document.querySelectorAll('.home-panel-content-view__body div div')).forEach(
+                    function(element) {
+                        Array.from(element.querySelectorAll('a')).forEach(
+                            function(a) {
+                                if (
+                                    a.innerText.toLowerCase().indexOf('реклама') > -1
+                                ) {
+                                    element.remove();
+                                }
+                            }
+                        );
                     }
-                }
-            );
+                );
 
-            // Блоки в новостях
-            Array.from(document.querySelectorAll('.root123 > div')).forEach(
-                function(element) {
-                    if (element.getAttribute('style') === 'width: 100%;') {
+            } else if (location.pathname.match(/news/)) {
+
+                // Блоки в новостях
+                Array.from(document.querySelectorAll('.root123 > div')).forEach(
+                    function(element) {
+                        if (element.getAttribute('style') === 'width: 100%;') {
+                            element.setAttribute('style', 'display: none;');
+                        }
+                    }
+                );
+
+            } else if (location.pathname.match(/pogoda/)) {
+
+
+            } else {
+
+                // Баннер на главной под поиском
+                let banner = document.querySelector('.container__banner');
+                if (banner) {
+                    banner.setAttribute('style', 'display: none;');
+                }
+                Array.from(document.querySelectorAll('iframe')).forEach(
+                    function(element) {
                         element.setAttribute('style', 'display: none;');
                     }
-                }
-            );
+                );
+
+                // Блоки в ленте
+                Array.from(document.querySelectorAll('.feed__row div')).forEach(
+                    function(element) {
+                        if (element.innerText.toLowerCase().indexOf('промо') > -1) {
+                            element.closest('.feed__row').setAttribute('style', 'display: none;');
+                        }
+                    }
+                );
+
+            }
+
 
         },
         'radio.yandex.ru': function () {
@@ -477,8 +507,9 @@ window.aBlock = {
                 'https://pikabu.ru/story/sayt_preply_zablokiroval_vsekh_rossiyskikh_repetitorov_angliyskogo_yazyika_8896399')
         },
         'litnet.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и спонсировании войны',
-                'https://pikabu.ru/story/raskol_sredi_rossiyskikh_pisateley_8887773')
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и спонсировании войны', [
+                'https://pikabu.ru/story/raskol_sredi_rossiyskikh_pisateley_8887773'
+            ])
         },
     },
     /**
@@ -506,7 +537,13 @@ window.aBlock = {
         /**
          * Добавляет предупреждения о ненадежности сайта
          */
-        addWarning: function (hostname, details, proof) {
+        addWarning: function (hostname, details, sources) {
+
+            if (typeof sources === 'string') {
+                let source = sources;
+                sources = [];
+                sources[0] = source;
+            }
 
             let warningElement = document.createElement('div');
             warningElement.id = 'ablock-warning';
@@ -542,18 +579,30 @@ window.aBlock = {
             ;
             warningElement.append(detailsElement);
 
-            let proofElement = document.createElement('a');
-            proofElement.href = proof;
-            proofElement.innerText = 'Подробнее';
-            proofElement.target = '_blank';
-            proofElement.style =
+            let sourcesElement = document.createElement('div');
+            sourcesElement.innerText = 'Источники:';
+            sourcesElement.style =
                 'color: #515f6e;' +
                 'margin-top: 50px;' +
-                'display: block;' +
                 'text-decoration: none !important;' +
                 'border: none !important;'
             ;
-            warningElement.append(proofElement);
+            Array.from(sources).forEach(
+                function(source) {
+                    console.log(sources);
+                    let sourceElement = document.createElement('a');
+                    sourceElement.href = source;
+                    sourceElement.innerText = sourceElement.hostname;
+                    sourceElement.target = '_blank';
+                    sourceElement.style =
+                        'color: #296db6;' +
+                        'text-decoration: none !important;' +
+                        'margin-left: 10px;'
+                    ;
+                    sourcesElement.append(sourceElement);
+                }
+            );
+            warningElement.append(sourcesElement);
 
             let closeElement = document.createElement('div');
             closeElement.innerText = 'Убрать предупреждение';
