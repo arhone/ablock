@@ -444,8 +444,17 @@ window.aBlock = {
                 'https://habr.com/ru/post/590201/')
         },
         'autodesk.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
-                'http://www.netynas.ru/autodesk/')
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации', [
+                'http://www.netynas.ru/autodesk/',
+                'https://leavers.ru/company/23',
+                'https://tass.ru/ekonomika/13959977'
+            ])
+        },
+        'adskeeper.com': function (hostname) {
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости, дискриминации и отказе от выплат', [
+                'https://pikabu.ru/story/adskeeper_otzyiv_8895810',
+                'https://leavers.ru/company/186'
+            ])
         },
         'bbc.co.uk': function (hostname) {
             aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
@@ -456,12 +465,32 @@ window.aBlock = {
                 'http://www.netynas.ru/btc-alpha/')
         },
         'coursera.org': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
-                'http://www.netynas.ru/coursera/')
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации', [
+                'http://www.netynas.ru/coursera/',
+                'https://leavers.ru/company/134'
+            ])
         },
         'dmarket.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
-                'http://www.netynas.ru/dmarket/')
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации', [
+                'http://www.netynas.ru/dmarket/',
+                'https://lolz.guru/threads/3572144/',
+                'https://leavers.ru/company/102'
+            ])
+        },
+        'depositphotos.com': function (hostname) {
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации, а так же заморозке аккаунтов и невыполнении оплаченных услуг', [
+                'https://leavers.ru/company/193',
+                'https://netynas.ru/depositphotos/'
+            ])
+        },
+        'ru.depositphotos.com': function (hostname) {
+            aBlock.warningHosts['depositphotos.com'](hostname);
+        },
+        'restream.io': function (hostname) {
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации', [
+                'https://netynas.ru/restream/',
+                'https://leavers.ru/company/55'
+            ])
         },
         'ea.com': function (hostname) {
             aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
@@ -478,6 +507,15 @@ window.aBlock = {
         'hostinger.ru': function (hostname) {
             aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
                 'http://www.netynas.ru/hostinger/')
+        },
+        'helpcrunch.com': function (hostname) {
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости, дискриминации, краже денег и спонсировании войны', [
+                'https://leavers.ru/company/185',
+                'https://pikabu.ru/story/helpcrunch_otzyiv_8895598'
+            ])
+        },
+        'stopwar.helpcrunch.com': function (hostname) {
+            aBlock.warningHosts['helpcrunch.com'](hostname);
         },
         'host-tracker.com': function (hostname) {
             aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и дискриминации',
@@ -504,12 +542,20 @@ window.aBlock = {
                 'http://www.netynas.ru/visa/')
         },
         'preply.com': function (hostname) {
-            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости, дискриминации и распространении фейков',
-                'https://pikabu.ru/story/sayt_preply_zablokiroval_vsekh_rossiyskikh_repetitorov_angliyskogo_yazyika_8896399')
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости, дискриминации и распространении фейков', [
+                'https://pikabu.ru/story/sayt_preply_zablokiroval_vsekh_rossiyskikh_repetitorov_angliyskogo_yazyika_8896399',
+                'https://leavers.ru/company/42'
+            ])
         },
         'litnet.com': function (hostname) {
             aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости и спонсировании войны', [
                 'https://pikabu.ru/story/raskol_sredi_rossiyskikh_pisateley_8887773'
+            ])
+        },
+        'imageshack.com': function (hostname) {
+            aBlock.methods.addWarning(hostname, 'Сайт был замечен в политической предвзятости, подмене контента и распространении фейков', [
+                'https://leavers.ru/company/43',
+                'https://pikabu.ru/story/fotokhosting_imageshack_podmenyaet_svoi_kartinki_dlya_rossii_8884618'
             ])
         },
     },
@@ -563,7 +609,7 @@ window.aBlock = {
             ;
 
             let textElement = document.createElement('div');
-            textElement.innerHTML = 'Это небезопасный веб-сайт';
+            textElement.innerHTML = 'Внимание! Возможно это небезопасный веб-сайт';
             textElement.style =
                 'color: #b43610;' +
                 'font-size: 2em;'
