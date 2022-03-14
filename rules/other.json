@@ -388,5 +388,15 @@
         "condition": {
             "urlFilter": "/awaps-ad-sdk-js-bundles/"
         }
+    },
+    {
+        "id": 40,
+        "priority": 40,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "ads/system/header-bidding.js"
+        }
     }
 ]
