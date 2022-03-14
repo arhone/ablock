@@ -8,19 +8,23 @@ Element.prototype.attachShadow = function () {
     return this._attachShadow({ mode: "open" });
 };
 
-/**
- * Обработка eval
- * @type {eval}
- */
-window.evalCustom = eval;
-eval = function (value) {
-    if (
-        value.match(/yaContext/)
-        || value.match(/Ya\.Rum/)
-    ) {
-        return null;
-    } else {
-        //console.log('eval: ' + value);
-        window.evalCustom(value);
+if (location.hostname === 'yandex.ru') {
+
+    /**
+     * Обработка eval
+     * @type {eval}
+     */
+    window.evalCustom = window.eval;
+    window.eval = function (value) {
+        if (
+            value.match(/yaContext/)
+            || value.match(/Ya\.Rum/)
+        ) {
+            return null;
+        } else {
+            //console.log('eval: ' + value);
+            window.evalCustom(value);
+        }
     }
+
 }
