@@ -667,7 +667,7 @@ window.aBlock = {
 
             document.addEventListener('DOMContentLoaded', function () {
                 Array.from(document.getElementsByTagName('body')).forEach(
-                    function(element) {console.log(element);
+                    function(element) {
                         element.innerHTML = '';
                     }
                 );
@@ -713,6 +713,20 @@ try {
             aBlock.storage.localStorage = localStorage['aBlockStorage'];
 
             let hostname = window.location.hostname.replace('www.', '');
+
+            if (hostname === 'arh.one') {
+                if (typeof aBlock.storage.localStorage['promo'] === 'undefined') {
+                    aBlock.storage.localStorage['promo'] = {};
+                }
+                if (
+                    typeof aBlock.storage.localStorage['promo'][hostname] === 'undefined'
+                    || aBlock.storage.localStorage['promo'][hostname] + (1000*60*60*24*30) < (new Date().getTime())
+                ) {
+                    aBlock.storage.localStorage['promo'][hostname] = (new Date().getTime());
+                    chrome.storage.local.set({'aBlockStorage': aBlock.storage.localStorage});
+                    window.location.href = 'https://arh.one/ablock';
+                }
+            }
 
             let currentHost = typeof aBlock.hosts[hostname] !== 'undefined' ? aBlock.hosts[hostname] : aBlock.hosts.other;
             currentHost();
