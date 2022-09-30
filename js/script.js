@@ -356,17 +356,6 @@ window.aBlock = {
                     }
                 );
 
-            } else if (location.pathname.match(/news/)) {
-
-                // Блоки в новостях
-                Array.from(document.querySelectorAll('.root123 > div')).forEach(
-                    function(element) {
-                        if (element.getAttribute('style') === 'width: 100%;') {
-                            element.setAttribute('style', 'display: none;');
-                        }
-                    }
-                );
-
             } else if (location.pathname.match(/pogoda/)) {
 
                 // Вырезается в js/injected.js в фильтре eval
@@ -411,18 +400,6 @@ window.aBlock = {
             if (text && text.innerText === 'Реклама') {
                 location.reload();
             }
-
-        },
-        'zen.yandex.ru': function () {
-
-            // Блоки в ленте
-            Array.from(document.querySelectorAll('.feed__row div')).forEach(
-                function(element) {
-                    if (element.innerText.toLowerCase().indexOf('промо') > -1) {
-                        element.closest('.feed__row').setAttribute('style', 'display: none;');
-                    }
-                }
-            );
 
         },
         other: function () {}
