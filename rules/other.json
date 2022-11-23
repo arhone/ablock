@@ -398,5 +398,35 @@
         "condition": {
             "urlFilter": "ads/system/header-bidding.js"
         }
+    },
+    {
+        "id": 41,
+        "priority": 41,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/event/ad?category="
+        }
+    },
+    {
+        "id": 42,
+        "priority": 42,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "adblock.popunder.js"
+        }
+    },
+    {
+        "id": 43,
+        "priority": 43,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/getads/"
+        }
     }
 ]
