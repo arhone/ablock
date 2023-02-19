@@ -428,5 +428,65 @@
         "condition": {
             "urlFilter": "/getads/"
         }
+    },
+    {
+        "id": 44,
+        "priority": 44,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "utraff.com/vpaidp/"
+        }
+    },
+    {
+        "id": 45,
+        "priority": 45,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*.buzzoola.com"
+        }
+    },
+    {
+        "id": 46,
+        "priority": 46,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "top100.ru"
+        }
+    },
+    {
+        "id": 47,
+        "priority": 47,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "yandex.ru/ads"
+        }
+    },
+    {
+        "id": 48,
+        "priority": 48,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "vpaid"
+        }
+    },
+    {
+        "id": 49,
+        "priority": 49,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "vast"
+        }
     }
 ]
