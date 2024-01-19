@@ -48,6 +48,11 @@
     "declarative_net_request": {
         "rule_resources": [
             {
+                "id": "anime",
+                "enabled": true,
+                "path": "rules/anime.json"
+            },
+            {
                 "id": "ok.ru",
                 "enabled": true,
                 "path": "rules/ok.ru.json"

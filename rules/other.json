@@ -508,5 +508,15 @@
         "condition": {
             "urlFilter": "*.traffer.net"
         }
+    },
+    {
+        "id": 52,
+        "priority": 52,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*.kodik.biz"
+        }
     }
 ]
