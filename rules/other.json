@@ -488,5 +488,25 @@
         "condition": {
             "urlFilter": "vast"
         }
+    },
+    {
+        "id": 50,
+        "priority": 50,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/adsbygoogle.js"
+        }
+    },
+    {
+        "id": 51,
+        "priority": 51,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*.traffer.net"
+        }
     }
 ]
