@@ -516,7 +516,17 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*.kodik.biz"
+            "urlFilter": "*.adriver.ru"
+        }
+    },
+    {
+        "id": 53,
+        "priority": 53,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*.utraff.com"
         }
     }
 ]

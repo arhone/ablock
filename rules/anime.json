@@ -26,10 +26,7 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*.aj*.online",
-            "domains": [
-                "animego.org"
-            ]
+            "urlFilter": "*.aj*.online"
         }
     },
     {
@@ -39,10 +36,37 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "aj*.online",
-            "domains": [
-                "animego.org"
-            ]
+            "urlFilter": "aj*.online"
+        }
+    },
+    {
+        "id": 5,
+        "priority": 5,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*.kodik.biz"
+        }
+    },
+    {
+        "id": 6,
+        "priority": 6,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "vak345.com"
+        }
+    },
+    {
+        "id": 7,
+        "priority": 7,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*/v1/cast_sender.js"
         }
     }
 ]
