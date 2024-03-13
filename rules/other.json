@@ -528,5 +528,45 @@
         "condition": {
             "urlFilter": "*.utraff.com"
         }
+    },
+    {
+        "id": 54,
+        "priority": 54,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*.mfcewkrob.com"
+        }
+    },
+    {
+        "id": 55,
+        "priority": 55,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*.disqus.com"
+        }
+    },
+    {
+        "id": 56,
+        "priority": 56,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "asr.openssp.ru"
+        }
+    },
+    {
+        "id": 57,
+        "priority": 57,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "video.onetouch8.info"
+        }
     }
 ]
