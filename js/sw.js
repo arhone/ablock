@@ -9,6 +9,7 @@ aBlock = {
     },
     // Правила
     rules: [
+        'anime',
         'ok.ru',
         'vk.com',
         'youtube.com',
