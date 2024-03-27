@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "ABlock - Блокировщик рекламы",
     "description": "Прицельная блокировка рекламы, подозрительных сайтов и скриптов",
-    "version": "2.1.2",
+    "version": "2.1.3",
     "author": "Алексей Арх",
     "icons": {
         "32": "image/ablock-32.png",
