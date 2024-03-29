@@ -68,5 +68,45 @@
         "condition": {
             "urlFilter": "*/v1/cast_sender.js"
         }
+    },
+    {
+        "id": 8,
+        "priority": 8,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*.jsdelivr.net"
+        }
+    },
+    {
+        "id": 9,
+        "priority": 9,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*.frontend.weborama.fr"
+        }
+    },
+    {
+        "id": 10,
+        "priority": 10,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "programmatica.*"
+        }
+    },
+    {
+        "id": 11,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*.serving-sys.ru"
+        }
     }
 ]
