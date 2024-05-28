@@ -486,7 +486,7 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "vast"
+            "urlFilter": "/vast"
         }
     },
     {
