@@ -6,7 +6,7 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "cp.host=animego.org"
+            "urlFilter": "cp.host=animego"
         }
     },
     {
@@ -16,7 +16,7 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "?subid=animego.org"
+            "urlFilter": "?subid=animego"
         }
     },
     {
@@ -76,7 +76,7 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*.jsdelivr.net"
+            "urlFilter": "*.frontend.weborama.fr"
         }
     },
     {
@@ -86,22 +86,12 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*.frontend.weborama.fr"
+            "urlFilter": "programmatica.*"
         }
     },
     {
         "id": 10,
         "priority": 10,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "programmatica.*"
-        }
-    },
-    {
-        "id": 11,
-        "priority": 1,
         "action": {
             "type": "block"
         },
