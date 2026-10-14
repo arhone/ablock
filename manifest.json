@@ -1,42 +1,26 @@
 {
     "manifest_version": 3,
     "name": "ABlock - Блокировщик рекламы",
-    "description": "Прицельная блокировка рекламы, подозрительных сайтов и скриптов",
-    "version": "2.1.5",
+    "description": "Прицельная блокировка рекламы и трекеров",
+    "version": "3.0.0",
     "author": "Алексей Арх",
+    "minimum_chrome_version": "111",
     "icons": {
         "32": "image/ablock-32.png",
-        "128": "image/ablock-128.png",
-        "220": "image/ablock-220-140.jpg",
-        "440": "image/ablock-440-280.jpg"
+        "128": "image/ablock-128.png"
     },
-    "content_scripts": [
-        {
-            "run_at": "document_start",
-            "matches": [
-                "*://*/*"
-            ],
-            "js": [
-                "js/script.js"
-            ]
-        }
-    ],
-    "web_accessible_resources": [{
-        "resources": ["js/injected.js"],
-        "matches": [
-            "*://*/*"
-        ]
-    }],
     "background": {
         "service_worker": "js/sw.js"
     },
     "permissions": [
         "storage",
-        "declarativeNetRequest",
-        "declarativeNetRequestFeedback"
+        "scripting",
+        "activeTab",
+        "declarativeNetRequest"
     ],
     "host_permissions": [
-        "*://*/*"
+        "*://*.youtube.com/*",
+        "*://*.pornhub.com/*"
     ],
     "action": {
         "default_title": "ABlock - Блокировщик рекламы",
@@ -48,19 +32,24 @@
     "declarative_net_request": {
         "rule_resources": [
             {
-                "id": "anime",
+                "id": "ads",
                 "enabled": true,
-                "path": "rules/anime.json"
+                "path": "rules/ads.json"
             },
             {
-                "id": "ok.ru",
+                "id": "trackers",
                 "enabled": true,
-                "path": "rules/ok.ru.json"
+                "path": "rules/trackers.json"
             },
             {
-                "id": "vk.com",
+                "id": "ru-ads",
                 "enabled": true,
-                "path": "rules/vk.com.json"
+                "path": "rules/ru-ads.json"
+            },
+            {
+                "id": "ru-trackers",
+                "enabled": true,
+                "path": "rules/ru-trackers.json"
             },
             {
                 "id": "youtube.com",
@@ -68,19 +57,24 @@
                 "path": "rules/youtube.com.json"
             },
             {
+                "id": "pornhub.com",
+                "enabled": true,
+                "path": "rules/pornhub.com.json"
+            },
+            {
                 "id": "xvideos.com",
                 "enabled": true,
                 "path": "rules/xvideos.com.json"
             },
             {
-                "id": "rt.pornhub.com",
+                "id": "vk.com",
                 "enabled": true,
-                "path": "rules/rt.pornhub.com.json"
+                "path": "rules/vk.com.json"
             },
             {
-                "id": "rambler.ru",
+                "id": "ok.ru",
                 "enabled": true,
-                "path": "rules/rambler.ru.json"
+                "path": "rules/ok.ru.json"
             },
             {
                 "id": "yandex.ru",
@@ -88,11 +82,55 @@
                 "path": "rules/yandex.ru.json"
             },
             {
+                "id": "rambler.ru",
+                "enabled": true,
+                "path": "rules/rambler.ru.json"
+            },
+            {
+                "id": "anime",
+                "enabled": true,
+                "path": "rules/anime.json"
+            },
+            {
                 "id": "other",
                 "enabled": true,
                 "path": "rules/other.json"
+            },
+            {
+                "id": "easylist",
+                "enabled": true,
+                "path": "rules/lists/easylist.json"
+            },
+            {
+                "id": "easyprivacy",
+                "enabled": true,
+                "path": "rules/lists/easyprivacy.json"
+            },
+            {
+                "id": "ublock-filters",
+                "enabled": true,
+                "path": "rules/lists/ublock-filters.json"
+            },
+            {
+                "id": "pgl",
+                "enabled": true,
+                "path": "rules/lists/pgl.json"
+            },
+            {
+                "id": "ublock-badware",
+                "enabled": true,
+                "path": "rules/lists/ublock-badware.json"
+            },
+            {
+                "id": "rus-0",
+                "enabled": true,
+                "path": "rules/lists/rus-0.json"
+            },
+            {
+                "id": "rus-1",
+                "enabled": true,
+                "path": "rules/lists/rus-1.json"
             }
         ]
-    },
-    "options_page": "popup.html"
+    }
 }

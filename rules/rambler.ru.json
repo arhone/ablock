@@ -1,13 +1,12 @@
 [
     {
         "id": 1,
-        "priority": 1,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "rambler-co.ru/sdk",
-            "domains": [
+            "urlFilter": "||rambler-co.ru/sdk",
+            "initiatorDomains": [
                 "rambler.ru"
             ]
         }

@@ -1,17 +1,6 @@
 [
     {
         "id": 1,
-        "priority": 1,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": ".google-analytics.com"
-        }
-    },
-    {
-        "id": 2,
-        "priority": 2,
         "action": {
             "type": "block"
         },
@@ -20,378 +9,7 @@
         }
     },
     {
-        "id": 3,
-        "priority": 3,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "partner-code-bundles"
-        }
-    },
-    {
-        "id": 4,
-        "priority": 4,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": ".yandex.ru/metrika/watch.js"
-        }
-    },
-    {
-        "id": 5,
-        "priority": 5,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "pcode/adfox"
-        }
-    },
-    {
-        "id": 6,
-        "priority": 6,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "cotsta.ru"
-        }
-    },
-    {
-        "id": 7,
-        "priority": 7,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "system/video-ads-sdk/adsdk.js"
-        }
-    },
-    {
-        "id": 8,
-        "priority": 8,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "px.moatads.com"
-        }
-    },
-    {
-        "id": 9,
-        "priority": 9,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "bs.direct"
-        }
-    },
-    {
-        "id": 10,
-        "priority": 10,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "trafficbass.com"
-        }
-    },
-    {
-        "id": 11,
-        "priority": 11,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "utarget."
-        }
-    },
-    {
-        "id": 12,
-        "priority": 12,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "admediator.ru/js/rotator.js"
-        }
-    },
-    {
-        "id": 13,
-        "priority": 13,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "boostingads.com/t.js"
-        }
-    },
-    {
-        "id": 14,
-        "priority": 14,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "g.doubleclick.net/dbm/ad"
-        }
-    },
-    {
-        "id": 15,
-        "priority": 15,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "imasdk.googleapis.com/js/"
-        }
-    },
-    {
-        "id": 16,
-        "priority": 16,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "seedr.com/js/advert.js"
-        }
-    },
-    {
-        "id": 17,
-        "priority": 17,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        }
-    },
-    {
-        "id": 18,
-        "priority": 18,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "ads.adfox.ru"
-        }
-    },
-    {
-        "id": 19,
-        "priority": 19,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "nativeroll.tv/js"
-        }
-    },
-    {
-        "id": 20,
-        "priority": 20,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "yastatic.net/s3/zen-lib/widget-loader"
-        }
-    },
-    {
-        "id": 21,
-        "priority": 21,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "smi2.ru/data/js"
-        }
-    },
-    {
-        "id": 22,
-        "priority": 22,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "tag.digitaltarget.ru/adcm.js"
-        }
-    },
-    {
-        "id": 23,
-        "priority": 23,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "jsc.lentainform.com"
-        }
-    },
-    {
-        "id": 24,
-        "priority": 24,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "jsn.24smi.net/smi.j"
-        }
-    },
-    {
-        "id": 25,
-        "priority": 25,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "smi2.ru/data/js"
-        }
-    },
-    {
-        "id": 26,
-        "priority": 26,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "tns-counter.ru/"
-        }
-    },
-    {
-        "id": 27,
-        "priority": 27,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "yandex.ru/metrika/tag.js"
-        }
-    },
-    {
-        "id": 28,
-        "priority": 28,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "counter.yadro.ru"
-        }
-    },
-    {
-        "id": 29,
-        "priority": 29,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "onthe.io/io.js"
-        }
-    },
-    {
-        "id": 30,
-        "priority": 30,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "googletagmanager.com/gtag"
-        }
-    },
-    {
-        "id": 31,
-        "priority": 31,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": ".g.doubleclick.net/gpt/"
-        }
-    },
-    {
-        "id": 32,
-        "priority": 32,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "hit.gemius.pl"
-        }
-    },
-    {
-        "id": 33,
-        "priority": 33,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": ".google.ru/adsid/integrator.js"
-        }
-    },
-    {
-        "id": 34,
-        "priority": 34,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "pagead2.googlesyndication.com/bg"
-        }
-    },
-    {
-        "id": 35,
-        "priority": 35,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "/amp4ads-"
-        }
-    },
-    {
-        "id": 36,
-        "priority": 36,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "/amp-ad-exit-"
-        }
-    },
-    {
-        "id": 37,
-        "priority": 37,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "mradx.net"
-        }
-    },
-    {
-        "id": 38,
-        "priority": 38,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "/ads/system/adsdk.js"
-        }
-    },
-    {
-        "id": 39,
-        "priority": 39,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "/awaps-ad-sdk-js-bundles/"
-        }
-    },
-    {
-        "id": 40,
-        "priority": 40,
+        "id": 2,
         "action": {
             "type": "block"
         },
@@ -400,98 +18,61 @@
         }
     },
     {
-        "id": 41,
-        "priority": 41,
+        "id": 3,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "/event/ad?category="
+            "urlFilter": "/ads/system/adsdk.js"
         }
     },
     {
-        "id": 42,
-        "priority": 42,
+        "id": 4,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "adblock.popunder.js"
+            "urlFilter": "system/video-ads-sdk/adsdk.js"
         }
     },
     {
-        "id": 43,
-        "priority": 43,
+        "id": 5,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "/getads/"
+            "urlFilter": "partner-code-bundles"
         }
     },
     {
-        "id": 44,
-        "priority": 44,
+        "id": 6,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "utraff.com/vpaidp/"
+            "urlFilter": "pcode/adfox"
         }
     },
     {
-        "id": 45,
-        "priority": 45,
+        "id": 7,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*.buzzoola.com"
+            "urlFilter": "bs.direct"
         }
     },
     {
-        "id": 46,
-        "priority": 46,
+        "id": 8,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "top100.ru"
+            "urlFilter": "/awaps-ad-sdk-js-bundles/"
         }
     },
     {
-        "id": 47,
-        "priority": 47,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "yandex.ru/ads"
-        }
-    },
-    {
-        "id": 48,
-        "priority": 48,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "vpaid"
-        }
-    },
-    {
-        "id": 49,
-        "priority": 49,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "/vast"
-        }
-    },
-    {
-        "id": 50,
-        "priority": 50,
+        "id": 9,
         "action": {
             "type": "block"
         },
@@ -500,73 +81,75 @@
         }
     },
     {
-        "id": 51,
-        "priority": 51,
+        "id": 10,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*.traffer.net"
+            "urlFilter": "/amp4ads-"
         }
     },
     {
-        "id": 52,
-        "priority": 52,
+        "id": 11,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*.adriver.ru"
+            "urlFilter": "/amp-ad-exit-"
         }
     },
     {
-        "id": 53,
-        "priority": 53,
+        "id": 12,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*.utraff.com"
+            "urlFilter": "/event/ad?category="
         }
     },
     {
-        "id": 54,
-        "priority": 54,
+        "id": 13,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*.mfcewkrob.com"
+            "urlFilter": "adblock.popunder.js"
         }
     },
     {
-        "id": 55,
-        "priority": 55,
+        "id": 14,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*.disqus.com"
+            "urlFilter": "/getads/"
         }
     },
     {
-        "id": 56,
-        "priority": 56,
+        "id": 15,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "asr.openssp.ru"
+            "urlFilter": "/vpaid"
         }
     },
     {
-        "id": 57,
-        "priority": 57,
+        "id": 16,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "video.onetouch8.info"
+            "urlFilter": "/vast/"
+        }
+    },
+    {
+        "id": 17,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/vast?"
         }
     }
 ]

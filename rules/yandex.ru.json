@@ -1,13 +1,12 @@
 [
     {
         "id": 1,
-        "priority": 1,
         "action": {
             "type": "block"
         },
         "condition": {
             "urlFilter": "smart-banner-adaptive_v1_client.js",
-            "domains": [
+            "initiatorDomains": [
                 "yandex.ru"
             ]
         }

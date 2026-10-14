@@ -1,0 +1,55 @@
+[
+    {
+        "id": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "requestDomains": [
+                "mc.yandex.ru",
+                "mc.yandex.com",
+                "mc.yandex.by",
+                "mc.yandex.kz",
+                "mc.yandex.ua",
+                "mc.yandex.com.tr",
+                "mc.webvisor.org",
+                "mc.webvisor.com",
+                "top-fwz1.mail.ru",
+                "counter.yadro.ru",
+                "top100.ru",
+                "tns-counter.ru",
+                "mediametrics.ru",
+                "openstat.net",
+                "hotlog.ru",
+                "segmento.ru"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||yandex.ru/metrika/"
+        }
+    },
+    {
+        "id": 3,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/yandex-metrica-watch/"
+        }
+    },
+    {
+        "id": 4,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||vk.com/rtrg"
+        }
+    }
+]

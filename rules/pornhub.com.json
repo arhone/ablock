@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "ads_batch?",
+            "initiatorDomains": [
+                "pornhub.com"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "ga-audiences?",
+            "initiatorDomains": [
+                "pornhub.com"
+            ]
+        }
+    }
+]

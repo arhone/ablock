@@ -2,125 +2,86 @@
  * @author AlekseyArh
  * @link https://github.com/arhone/ablock
  */
-aBlock = {
-    // Хранилище данных
-    storage: {
-        status: true
+
+// Наборы правил берём из манифеста, чтобы не дублировать список
+const RULESETS = chrome.runtime.getManifest().declarative_net_request.rule_resources.map((r) => r.id);
+
+// Скрытие баннеров (CSS) и вырезание рекламы из плеера YouTube
+const CONTENT_SCRIPTS = [
+    {
+        id: 'youtube',
+        matches: ['*://*.youtube.com/*'],
+        css: ['css/youtube.css'],
+        js: ['js/youtube.js'],
+        world: 'MAIN',
+        allFrames: true,
+        runAt: 'document_start'
     },
-    // Правила
-    rules: [
-        'anime',
-        'ok.ru',
-        'vk.com',
-        'youtube.com',
-        'xvideos.com',
-        'rt.pornhub.com',
-        'rambler.ru',
-        'yandex.ru',
-        'other'
-    ],
-    /**
-     * Инициализация
-     */
-    init: function () {
-
-        // Синхронизация с localstorage
-        aBlock.syncLocalStorage();
-
-        // Событие смены статуса иконки через popup.js
-        aBlock.addButtonListener();
-
-        // Событие смены вкладки
-        chrome.tabs.onActivated.addListener(function (data) {
-            console.log(data);
-        })
-
-    },
-    /**
-     * Синхронизация с localstorage
-     */
-    syncLocalStorage: function () {
-
-        chrome.storage.local.get(['aBlockStorage'], function(localStorage) {
-            if (typeof localStorage['aBlockStorage'] !== 'undefined') {
-                aBlock.storage = localStorage['aBlockStorage'];
-            } else {
-                chrome.storage.local.set({'aBlockStorage': aBlock.storage});
-            }
-            aBlock.changeStatus(aBlock.storage.status);
-        });
-
-    },
-    /**
-     * Событие смены статуса иконки через popup.js
-     */
-    addButtonListener: function () {
-
-        chrome.runtime.onMessage.addListener(function(request) {
-            if (typeof request['status'] !== 'undefined') {
-                if (request['status'] === 'true') {
-                    aBlock.changeStatus(true);
-                } else {
-                    aBlock.changeStatus(false);
-                }
-            } else {
-                console.error(request);
-            }
-        });
-
-    },
-    /**
-     * Смена состояния
-     * @param status
-     */
-    changeStatus: function (status) {
-
-        aBlock.storage.status = status;
-        chrome.storage.local.set({'aBlockStorage': aBlock.storage});
-
-        aBlock.changeIcon(status);
-        aBlock.changeRulesStatus(status);
-
-    },
-    /**
-     * Смена иконки
-     * @param status
-     */
-    changeIcon: function (status) {
-
-        if (status) {
-            chrome.action.setIcon({
-                path: {
-                    32: '/image/ablock-32.png'
-                }
-            }, function () {});
-        } else {
-            chrome.action.setIcon({
-                path: {
-                    32: '/image/ablock-32-black.png'
-                }
-            }, function () {});
-        }
-
-    },
-    /**
-     * Включает или отключает правила
-     * @param status
-     */
-    changeRulesStatus: function (status) {
-
-        let settings = status ? {
-            'enableRulesetIds': aBlock.rules
-        } : {
-            'disableRulesetIds': aBlock.rules
-        };
-        chrome.declarativeNetRequest.updateEnabledRulesets(settings);
-
+    {
+        id: 'pornhub',
+        matches: ['*://*.pornhub.com/*'],
+        css: ['css/pornhub.css'],
+        runAt: 'document_start'
     }
+];
+
+/**
+ * Текущий статус (по умолчанию включено)
+ * @returns {Promise<boolean>}
+ */
+async function getStatus() {
+    const {aBlockStorage} = await chrome.storage.local.get('aBlockStorage');
+    return aBlockStorage?.status ?? true;
 }
 
-try {
-    aBlock.init();
-} catch (e) {
-    console.error(e);
+/**
+ * Применяет статус: правила, скрытие баннеров, иконка
+ * @param {boolean} status
+ */
+async function applyStatus(status) {
+    await chrome.storage.local.set({aBlockStorage: {status}});
+
+    await chrome.declarativeNetRequest.updateEnabledRulesets(
+        status ? {enableRulesetIds: RULESETS} : {disableRulesetIds: RULESETS}
+    );
+
+    const registered = await chrome.scripting.getRegisteredContentScripts();
+    if (registered.length) {
+        await chrome.scripting.unregisterContentScripts({ids: registered.map((s) => s.id)});
+    }
+    if (status) {
+        await chrome.scripting.registerContentScripts(CONTENT_SCRIPTS);
+    }
+
+    // Счётчик заблокированного на иконке
+    await chrome.declarativeNetRequest.setExtensionActionOptions({displayActionCountAsBadgeText: status});
+    await chrome.action.setBadgeBackgroundColor({color: '#16a34a'});
+    await chrome.action.setBadgeTextColor({color: '#ffffff'});
+
+    await chrome.action.setIcon({
+        path: {32: status ? '/image/ablock-32.png' : '/image/ablock-32-black.png'}
+    });
 }
+
+// Последовательное применение, чтобы быстрые переключения не пересекались
+let queue = Promise.resolve();
+function enqueue(task) {
+    queue = queue.then(task).catch(console.error);
+    return queue;
+}
+
+function restore() {
+    enqueue(async () => applyStatus(await getStatus()));
+}
+
+chrome.runtime.onInstalled.addListener(restore);
+chrome.runtime.onStartup.addListener(restore);
+
+// Переключение из popup.js
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (typeof request?.status !== 'boolean') {
+        return;
+    }
+    enqueue(() => applyStatus(request.status)).then(() => sendResponse(true));
+    return true;
+});

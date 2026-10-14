@@ -1,0 +1,6 @@
+/* Окно подтверждения возраста и баннер на паузе */
+#age-verification-container,
+#age-verification-wrapper,
+#pb_template {
+    display: none !important;
+}

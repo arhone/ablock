@@ -1,39 +1,84 @@
 [
     {
         "id": 1,
-        "priority": 1,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": ".doubleclick.net",
-            "domains": [
+            "urlFilter": "||youtube.com/pagead/",
+            "initiatorDomains": [
                 "youtube.com"
             ]
         }
     },
     {
         "id": 2,
-        "priority": 2,
         "action": {
             "type": "block"
         },
         "condition": {
-            "urlFilter": "v1/player/ad_break",
-            "domains": [
+            "urlFilter": "||youtube.com/api/stats/ads",
+            "initiatorDomains": [
                 "youtube.com"
             ]
         }
     },
     {
         "id": 3,
-        "priority": 3,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||youtube.com/ptracking",
+            "initiatorDomains": [
+                "youtube.com"
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||youtube.com/pcs/activeview",
+            "initiatorDomains": [
+                "youtube.com"
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/get_midroll_info",
+            "initiatorDomains": [
+                "youtube.com"
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "v1/player/ad_break",
+            "initiatorDomains": [
+                "youtube.com"
+            ]
+        }
+    },
+    {
+        "id": 7,
         "action": {
             "type": "block"
         },
         "condition": {
             "urlFilter": "tampering.js",
-            "domains": [
+            "initiatorDomains": [
                 "youtube.com"
             ]
         }
