@@ -1,0 +1,15 @@
+/* Рекламные баннеры OK */
+div[adchoicesize],
+#hook_Block_AnonymMainRightColumnAd,
+.dialogWrapperBanner,
+.browser-banner,
+.exit-popup > *,
+iframe[src^="//oktools.ru/page/static/"] {
+    display: none !important;
+}
+
+/* Промо самого OK: баннер над лентой и колонка с рекомендацией игры */
+#hook_Block_CaesarBannerBlock,
+#hook_Block_FrOln4thCol {
+    display: none !important;
+}

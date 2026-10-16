@@ -34,6 +34,9 @@ const UNSUPPORTED_CONDITIONS = ['responseHeaders', 'excludedResponseHeaders', 't
 // Лимит Chrome на regex-правила во всех включённых наборах
 const MAX_REGEX_RULES = 1000;
 
+// Гарантированный лимит Chrome на правила во всех включённых статических наборах
+const MAX_STATIC_RULES = 30000;
+
 /**
  * Скачивает набор правил (404 — набора нет)
  * @param {string} url
@@ -196,21 +199,31 @@ async function main() {
         console.log(`${id.padEnd(16)} ${String(rules.length).padStart(6)} правил (отброшено ${dropped})  ${title}`);
     }
 
-    if (regexTotal > MAX_REGEX_RULES) {
-        throw new Error(`regex-правил ${regexTotal}, лимит Chrome ${MAX_REGEX_RULES}`);
-    }
-
-    // Прописываем наборы в манифест после собственных
+    // Собственные наборы тоже входят в лимиты
     const manifestPath = path.join(ROOT, 'manifest.json');
     const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
     const own = manifest.declarative_net_request.rule_resources.filter((r) => !r.path.startsWith(OUTPUT + '/'));
+    for (const resource of own) {
+        const rules = JSON.parse(fs.readFileSync(path.join(ROOT, resource.path), 'utf8'));
+        total += rules.length;
+        regexTotal += rules.filter((r) => r.condition.regexFilter).length;
+    }
+
+    if (regexTotal > MAX_REGEX_RULES) {
+        throw new Error(`regex-правил ${regexTotal}, лимит Chrome ${MAX_REGEX_RULES}`);
+    }
+    if (total > MAX_STATIC_RULES) {
+        throw new Error(`правил ${total}, лимит Chrome ${MAX_STATIC_RULES}`);
+    }
+
+    // Прописываем наборы в манифест после собственных
     manifest.declarative_net_request.rule_resources = [
         ...own,
         ...Object.keys(LISTS).map((id) => ({id, enabled: true, path: `${OUTPUT}/${id}.json`}))
     ];
     fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 4) + '\n');
 
-    console.log(`Итого: ${total} правил, из них regex: ${regexTotal} (неподдерживаемых отброшено: ${rejected.size})`);
+    console.log(`Итого с собственными: ${total} правил, из них regex: ${regexTotal} (неподдерживаемых отброшено: ${rejected.size})`);
 }
 
 main().catch((e) => {

@@ -6,11 +6,11 @@
 // Наборы правил берём из манифеста, чтобы не дублировать список
 const RULESETS = chrome.runtime.getManifest().declarative_net_request.rule_resources.map((r) => r.id);
 
-// Скрытие баннеров (CSS) и вырезание рекламы из плеера YouTube
+// Скрытие баннеров (CSS) и вырезание рекламы из плеера YouTube и лент VK и OK
 const CONTENT_SCRIPTS = [
     {
         id: 'youtube',
-        matches: ['*://*.youtube.com/*'],
+        matches: ['*://*.youtube.com/*', '*://*.youtube-nocookie.com/*'],
         css: ['css/youtube.css'],
         js: ['js/youtube.js'],
         world: 'MAIN',
@@ -19,8 +19,30 @@ const CONTENT_SCRIPTS = [
     },
     {
         id: 'pornhub',
-        matches: ['*://*.pornhub.com/*'],
+        matches: ['*://*.pornhub.com/*', '*://*.pornhub.org/*'],
         css: ['css/pornhub.css'],
+        runAt: 'document_start'
+    },
+    {
+        id: 'vk',
+        matches: ['*://*.vk.com/*', '*://*.vk.ru/*'],
+        css: ['css/vk.css'],
+        js: ['js/vk.js'],
+        world: 'MAIN',
+        runAt: 'document_start'
+    },
+    {
+        id: 'vkvideo',
+        matches: ['*://*.vkvideo.ru/*'],
+        css: ['css/vk.css'],
+        runAt: 'document_start'
+    },
+    {
+        id: 'ok',
+        matches: ['*://*.ok.ru/*'],
+        css: ['css/ok.css'],
+        js: ['js/ok.js'],
+        world: 'MAIN',
         runAt: 'document_start'
     }
 ];
@@ -35,16 +57,10 @@ async function getStatus() {
 }
 
 /**
- * Применяет статус: правила, скрытие баннеров, иконка
+ * Перерегистрирует скрипты сайтов (при выключенной защите только снимает)
  * @param {boolean} status
  */
-async function applyStatus(status) {
-    await chrome.storage.local.set({aBlockStorage: {status}});
-
-    await chrome.declarativeNetRequest.updateEnabledRulesets(
-        status ? {enableRulesetIds: RULESETS} : {disableRulesetIds: RULESETS}
-    );
-
+async function applyContentScripts(status) {
     const registered = await chrome.scripting.getRegisteredContentScripts();
     if (registered.length) {
         await chrome.scripting.unregisterContentScripts({ids: registered.map((s) => s.id)});
@@ -52,15 +68,40 @@ async function applyStatus(status) {
     if (status) {
         await chrome.scripting.registerContentScripts(CONTENT_SCRIPTS);
     }
+}
 
-    // Счётчик заблокированного на иконке
+/**
+ * Счётчик заблокированного и иконка
+ * @param {boolean} status
+ */
+async function applyAction(status) {
     await chrome.declarativeNetRequest.setExtensionActionOptions({displayActionCountAsBadgeText: status});
     await chrome.action.setBadgeBackgroundColor({color: '#16a34a'});
     await chrome.action.setBadgeTextColor({color: '#ffffff'});
-
     await chrome.action.setIcon({
         path: {32: status ? '/image/ablock-32.png' : '/image/ablock-32-black.png'}
     });
+}
+
+/**
+ * Применяет статус: правила, скрытие баннеров, иконка.
+ * Шаги независимы: сбой одного (например, превышен лимит правил) не отменяет остальные.
+ * @param {boolean} status
+ */
+async function applyStatus(status) {
+    const results = await Promise.allSettled([
+        chrome.storage.local.set({aBlockStorage: {status}}),
+        chrome.declarativeNetRequest.updateEnabledRulesets(
+            status ? {enableRulesetIds: RULESETS} : {disableRulesetIds: RULESETS}
+        ),
+        applyContentScripts(status),
+        applyAction(status)
+    ]);
+    for (const result of results) {
+        if (result.status === 'rejected') {
+            console.error(result.reason);
+        }
+    }
 }
 
 // Последовательное применение, чтобы быстрые переключения не пересекались

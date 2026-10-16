@@ -1,0 +1,27 @@
+/* Рекламные посты в ленте VK */
+div[role="feed"] > article:has(span[aria-label="Реклама"]),
+div[role="feed"] > article:has(span[class^="AdBlockProtector__noVisible--"]),
+#feed_rows > div[class^="feed_row"]:has(> div[class*="ads_block_data"]),
+.post_marked_as_ads,
+._ads_promoted_post,
+div[data-ad],
+div[data-ads] {
+    display: none !important;
+}
+
+/* Баннеры и промо, в том числе игр VK (и на vkvideo.ru) */
+.vkuiBanner__host,
+.vkuiBanner__host + div[style^="--vkit_internal--spacing_gap_size:"],
+section[class^="ImageBanner-module_"],
+#left_ads,
+#apps_ads_wrap,
+#l_invite_promo,
+.apps_feedRightAppsBlock {
+    display: none !important;
+}
+
+/* Блок под левым меню: VK проверяет его видимость, поэтому уводим за экран, а не скрываем */
+#ads_left {
+    position: absolute !important;
+    top: -2500px !important;
+}

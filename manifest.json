@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "ABlock - Блокировщик рекламы",
     "description": "Прицельная блокировка рекламы и трекеров",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "author": "Алексей Арх",
     "minimum_chrome_version": "111",
     "icons": {
@@ -20,7 +20,13 @@
     ],
     "host_permissions": [
         "*://*.youtube.com/*",
-        "*://*.pornhub.com/*"
+        "*://*.youtube-nocookie.com/*",
+        "*://*.pornhub.com/*",
+        "*://*.pornhub.org/*",
+        "*://*.vk.com/*",
+        "*://*.vk.ru/*",
+        "*://*.vkvideo.ru/*",
+        "*://*.ok.ru/*"
     ],
     "action": {
         "default_title": "ABlock - Блокировщик рекламы",

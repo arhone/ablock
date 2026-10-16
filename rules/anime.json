@@ -18,15 +18,6 @@
         }
     },
     {
-        "id": 3,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "*.aj*.online"
-        }
-    },
-    {
         "id": 4,
         "action": {
             "type": "block"

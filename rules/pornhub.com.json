@@ -7,7 +7,8 @@
         "condition": {
             "urlFilter": "ads_batch?",
             "initiatorDomains": [
-                "pornhub.com"
+                "pornhub.com",
+                "pornhub.org"
             ]
         }
     },
@@ -19,7 +20,8 @@
         "condition": {
             "urlFilter": "ga-audiences?",
             "initiatorDomains": [
-                "pornhub.com"
+                "pornhub.com",
+                "pornhub.org"
             ]
         }
     }

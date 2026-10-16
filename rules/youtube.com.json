@@ -7,7 +7,8 @@
         "condition": {
             "urlFilter": "||youtube.com/pagead/",
             "initiatorDomains": [
-                "youtube.com"
+                "youtube.com",
+                "youtube-nocookie.com"
             ]
         }
     },
@@ -19,7 +20,8 @@
         "condition": {
             "urlFilter": "||youtube.com/api/stats/ads",
             "initiatorDomains": [
-                "youtube.com"
+                "youtube.com",
+                "youtube-nocookie.com"
             ]
         }
     },
@@ -31,7 +33,8 @@
         "condition": {
             "urlFilter": "||youtube.com/ptracking",
             "initiatorDomains": [
-                "youtube.com"
+                "youtube.com",
+                "youtube-nocookie.com"
             ]
         }
     },
@@ -43,7 +46,8 @@
         "condition": {
             "urlFilter": "||youtube.com/pcs/activeview",
             "initiatorDomains": [
-                "youtube.com"
+                "youtube.com",
+                "youtube-nocookie.com"
             ]
         }
     },
@@ -55,7 +59,8 @@
         "condition": {
             "urlFilter": "/get_midroll_info",
             "initiatorDomains": [
-                "youtube.com"
+                "youtube.com",
+                "youtube-nocookie.com"
             ]
         }
     },
@@ -67,7 +72,8 @@
         "condition": {
             "urlFilter": "v1/player/ad_break",
             "initiatorDomains": [
-                "youtube.com"
+                "youtube.com",
+                "youtube-nocookie.com"
             ]
         }
     },
@@ -79,7 +85,8 @@
         "condition": {
             "urlFilter": "tampering.js",
             "initiatorDomains": [
-                "youtube.com"
+                "youtube.com",
+                "youtube-nocookie.com"
             ]
         }
     }

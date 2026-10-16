@@ -16,7 +16,8 @@ function collectPageInfo() {
             if (host && host !== base && !host.endsWith('.' + base)) {
                 domains.add(host);
             }
-        } catch (e) {
+        } catch {
+            // Адрес не разбирается (data:, blob:) — пропускаем
         }
     }
     return {
@@ -54,7 +55,7 @@ async function renderSite(tab) {
     let info;
     try {
         [{result: info}] = await chrome.scripting.executeScript({target: {tabId: tab.id}, func: collectPageInfo});
-    } catch (e) {
+    } catch {
         return null; // Страница недоступна для расширений
     }
 
@@ -103,7 +104,7 @@ async function renderBlocked(tab, info, status) {
             tabId: tab.id,
             minTimeStamp: Math.floor(info?.timeOrigin ?? 0)
         }));
-    } catch (e) {
+    } catch {
         return; // Превышен лимит запросов
     }
 
