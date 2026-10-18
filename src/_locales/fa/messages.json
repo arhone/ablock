@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "fa",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - مسدودکننده تبلیغات و بررسی سایت"
+    },
+    "extDescription": {
+        "message": "تبلیغات و ردیاب‌ها را مسدود می‌کند: صفحه‌ها سریع‌تر، مصرف داده کمتر. سرعت، امنیت و ردیابی هر سایت را بررسی می‌کند."
+    },
+    "toggle": {
+        "message": "روشن / خاموش"
+    },
+    "statusOn": {
+        "message": "محافظت روشن است"
+    },
+    "statusOff": {
+        "message": "محافظت خاموش است"
+    },
+    "statusSiteOff": {
+        "message": "محافظت در این سایت خاموش است"
+    },
+    "telegram": {
+        "message": "گروه تلگرام"
+    },
+    "github": {
+        "message": "مشارکت در GitHub"
+    },
+    "httpsOn": {
+        "message": "اتصال رمزگذاری شده است"
+    },
+    "httpsOff": {
+        "message": "اتصال رمزگذاری نشده است"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — سریع‌ترین پروتکل"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — یک پروتکل مدرن"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — یک پروتکل قدیمی",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "پروتکل نامشخص (صفحه از حافظهٔ پنهان بارگیری شد)"
+    },
+    "loading": {
+        "message": "در حال بارگیری…"
+    },
+    "loadingTitle": {
+        "message": "صفحه هنوز در حال بارگیری است"
+    },
+    "seconds": {
+        "message": "$SECONDS$ ث",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "زمان بارگیری صفحه"
+    },
+    "domains": {
+        "message": "دامنه‌ها $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "دامنه‌های شخص ثالث:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…و $COUNT$ مورد دیگر",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "دامنهٔ شخص ثالثی وجود ندارد"
+    },
+    "blocked": {
+        "message": "مسدودشده $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "ردیاب‌ها $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "مسدودشده در این صفحه\nتبلیغات: $ADS$\nردیاب‌ها: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "این سایت شما را ردیابی می‌کند. ردیاب‌های مسدودشده: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "ردیابی پیدا نشد"
+    },
+    "scoreLabel": {
+        "message": "امتیاز سایت"
+    },
+    "serverLabel": {
+        "message": "سرور"
+    },
+    "techLabel": {
+        "message": "ساخته‌شده با"
+    },
+    "companiesLabel": {
+        "message": "ردیابی‌کنندگان"
+    },
+    "extraLabel": {
+        "message": "بیشتر"
+    },
+    "extendedText": {
+        "message": "حالت پیشرفته: میزبانی، IPv6، HSTS، آمار و پنهان کردن جای تبلیغات و پنجره‌های کوکی در همهٔ سایت‌ها. داده‌ها هرگز از مرورگر شما خارج نمی‌شوند."
+    },
+    "extendedButton": {
+        "message": "روشن کردن"
+    },
+    "extendedOff": {
+        "message": "خاموش کردن حالت پیشرفته"
+    },
+    "extendedOffTitle": {
+        "message": "افزونه دیگر IP و سرآیندهای سرورها را نمی‌بیند، آمار نگه نمی‌دارد و جای تبلیغات و پنجره‌های کوکی را در همهٔ سایت‌ها پنهان نمی‌کند؛ دسترسی به همهٔ سایت‌ها لغو می‌شود. هر زمان بخواهید می‌توانید دوباره روشنش کنید"
+    },
+    "share": {
+        "message": "اشتراک‌گذاری"
+    },
+    "copied": {
+        "message": "کپی شد"
+    },
+    "cookiesLabel": {
+        "message": "پنهان کردن پنجره‌های رضایت کوکی"
+    },
+    "cookiesTitle": {
+        "message": "سرویس‌های بنر رضایت کوکی را مسدود می‌کند. در حالت پیشرفته خود بنرها را هم در هر سایتی پنهان می‌کند"
+    },
+    "siteLabel": {
+        "message": "مسدودسازی در $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "اگر سایت درست کار نمی‌کند، تیک را بردارید: تبلیغات و ردیاب‌ها در آن دیگر مسدود نمی‌شوند. صفحه دوباره بارگیری می‌شود"
+    },
+    "guess": {
+        "message": "از روی نشانه‌های غیرمستقیم تشخیص داده شد — ممکن است دقیق نباشد"
+    },
+    "weightTitle": {
+        "message": "حجم صفحه با همهٔ فایل‌ها"
+    },
+    "weightEstimated": {
+        "message": "اندازهٔ دقیق برای $KNOWN$ از $TOTAL$ فایل معلوم است، بقیه تخمینی‌اند: سایت‌های شخص ثالث اندازه را پنهان می‌کنند",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "صفحه فشرده شده است: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "بدون فشرده‌سازی"
+    },
+    "compressionOff": {
+        "message": "صفحه بدون فشرده‌سازی ارسال می‌شود — کندتر بارگیری می‌شود"
+    },
+    "compressionUnknown": {
+        "message": "فشرده‌سازی نامشخص (صفحه از حافظهٔ پنهان بارگیری شد)"
+    },
+    "blockedCookies": {
+        "message": "پنجره‌های کوکی: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "حجم: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "مسدودنشده:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "در سایت پیدا شد:\n$LIST$\nمسدود بودن آن‌ها در حالت پیشرفته نشان داده می‌شود",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "مسدودشده:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "مورد شناخته‌شده‌ای پیدا نشد"
+    },
+    "serverExtended": {
+        "message": "در حالت پیشرفته"
+    },
+    "serverReload": {
+        "message": "صفحه را دوباره بارگیری کنید"
+    },
+    "serverReloadTitle": {
+        "message": "سرور هنگام بارگیری صفحه تشخیص داده می‌شود"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "ارائه‌دهندهٔ دیگر"
+    },
+    "serverProxy": {
+        "message": "سایت پشت $NAME$ (CDN یا محافظت DDoS) کار می‌کند — سرور واقعی پنهان است",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "میزبانی: $NAME$ (از پایگاه دادهٔ نشانی‌های RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "کشور بر اساس ارائه‌دهنده تعیین می‌شود"
+    },
+    "techFound": {
+        "message": "در صفحه پیدا شد"
+    },
+    "techNone": {
+        "message": "تشخیص داده نشد"
+    },
+    "techNoneTitle": {
+        "message": "نشانه‌ای از موتورها یا کتابخانه‌های شناخته‌شده پیدا نشد"
+    },
+    "ipv6": {
+        "message": "اتصال از طریق IPv6"
+    },
+    "ipv4": {
+        "message": "اتصال از طریق IPv4. این نشان نمی‌دهد که سایت از IPv6 پشتیبانی می‌کند یا نه: به شبکهٔ شما هم بستگی دارد"
+    },
+    "hstsOn": {
+        "message": "HSTS: مرورگر همیشه سایت را فقط از طریق HTTPS باز می‌کند"
+    },
+    "hstsOff": {
+        "message": "بدون HSTS: اولین بازدید از سایت ممکن است بدون رمزگذاری انجام شود"
+    },
+    "mixed": {
+        "message": "فایل‌های HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "صفحهٔ HTTPS فایل‌هایی را بدون رمزگذاری بارگیری می‌کند: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "امتیاز $SCORE$ از 10 بر اساس:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "رمزگذاری"
+    },
+    "scoreProtocol": {
+        "message": "پروتکل"
+    },
+    "scoreSpeed": {
+        "message": "سرعت بارگیری"
+    },
+    "scoreWeight": {
+        "message": "حجم صفحه"
+    },
+    "scoreTrackers": {
+        "message": "ردیابی"
+    },
+    "scoreDomains": {
+        "message": "دامنه‌های شخص ثالث"
+    },
+    "scoreCompression": {
+        "message": "فشرده‌سازی"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "محتوای ترکیبی"
+    },
+    "stats": {
+        "message": "مجموع درخواست‌های مسدودشده: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "از $DATE$. حجم بر اساس میانگین اندازهٔ فایل‌های تبلیغاتی تخمین زده شده است",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "گزارش سایت — به‌صورت تصویر یا متن"
+    },
+    "reportTitle": {
+        "message": "امتیاز و جزئیات سایت به‌صورت تصویر یا متن — برای همکاران، پیمانکار یا گفتگو"
+    },
+    "reportDone": {
+        "message": "ذخیره شد"
+    },
+    "copyIp": {
+        "message": "کپی IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "کپی تصویر"
+    },
+    "copyText": {
+        "message": "کپی متن و پیوند"
+    },
+    "shareSystem": {
+        "message": "بیشتر…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — امتیاز $SCORE$ از 10 در ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "سایت خود را بررسی کنید:"
+    },
+    "donate": {
+        "message": "حمایت مالی"
+    },
+    "donateTitle": {
+        "message": "از توسعه در Boosty حمایت کنید"
+    },
+    "askStats": {
+        "message": "درخواست‌های مسدودشده: $COUNT$، صرفه‌جویی ≈ $SIZE$. اگر ABlock برایتان مفید است، از توسعهٔ آن حمایت کنید",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "یک ماه است که از ABlock استفاده می‌کنید. اگر مفید است، از توسعهٔ آن حمایت کنید"
+    },
+    "askClose": {
+        "message": "دیگر نشان نده"
+    },
+    "reportLegendGuess": {
+        "message": "? — از روی نشانه‌های غیرمستقیم تشخیص داده شد"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — تخمین تقریبی"
+    },
+    "companiesNoneTitle": {
+        "message": "در این صفحه شرکتی از فهرست ABlock وجود ندارد. شمارنده‌های خود سایت ممکن است باشند — آن‌ها در نشان «ردیاب‌ها» شمرده می‌شوند"
+    },
+    "compressionFiles": {
+        "message": "فایل‌های متنی: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "فشرده‌نشده: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "حذف داده‌های سایت و بارگیری دوباره: کوکی‌ها، حافظهٔ پنهان و فضای ذخیره‌سازی. نشان‌ها و امتیاز، سایت را همان‌طور که بازدیدکنندهٔ تازه می‌بیند نشان می‌دهند. از حساب خود در این سایت خارج می‌شوید"
+    },
+    "clearConfirm": {
+        "message": "حذف شود؟"
+    },
+    "saveImage": {
+        "message": "ذخیرهٔ تصویر"
+    },
+    "shareSend": {
+        "message": "ارسال با $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "انتشار در $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "به‌صورت متن ارسال می‌شود: تصویر را نمی‌توان بدون بارگذاری روی سرور فرستاد — آن را کپی کنید و در پیام بچسبانید"
+    },
+    "shareLinkOnly": {
+        "message": "فقط پیوند افزونه فرستاده می‌شود — تصویر گزارش را کپی کنید و در پست بچسبانید"
+    },
+    "auditLabel": {
+        "message": "جزئیات"
+    },
+    "auditIssues": {
+        "message": "مشکلات: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "بدون مشکل"
+    },
+    "auditSpeed": {
+        "message": "سرعت"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "نشانه‌گذاری"
+    },
+    "auditA11y": {
+        "message": "دسترس‌پذیری"
+    },
+    "auditSecurity": {
+        "message": "امنیت"
+    },
+    "auditYes": {
+        "message": "بله"
+    },
+    "auditNo": {
+        "message": "خیر"
+    },
+    "auditLength": {
+        "message": "$COUNT$ نویسه",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "دامنهٔ دیگر"
+    },
+    "auditNoImage": {
+        "message": "بدون تصویر"
+    },
+    "auditNoInput": {
+        "message": "بدون تعامل"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ از $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "جابه‌جایی چیدمان"
+    },
+    "auditTtfb": {
+        "message": "پاسخ سرور (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "چه مدت طول کشید تا اولین بایت صفحه از سرور برسد. خوب — کمتر از 0.8 ث"
+    },
+    "auditFcp": {
+        "message": "اولین ترسیم (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "اولین محتوا چه زمانی روی صفحه ظاهر شد. خوب — کمتر از 1.8 ث"
+    },
+    "auditLcp": {
+        "message": "بلوک اصلی (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "بزرگ‌ترین بلوک — تصویر یا متن — چه زمانی ترسیم شد. شاخص اصلی سرعت Google. خوب — کمتر از 2.5 ث"
+    },
+    "auditCls": {
+        "message": "جابه‌جایی چیدمان (CLS)"
+    },
+    "auditClsHint": {
+        "message": "محتوا هنگام بارگیری چقدر جابه‌جا می‌شود. خوب — کمتر از 0.1"
+    },
+    "auditInp": {
+        "message": "پاسخ به تعامل (INP)"
+    },
+    "auditInpHint": {
+        "message": "بیشترین تأخیر در پاسخ به کلیک یا ورودی. خوب — کمتر از 200 میلی‌ثانیه"
+    },
+    "auditBlocking": {
+        "message": "مسدودکنندهٔ نمایش"
+    },
+    "auditBlockingHint": {
+        "message": "فایل‌هایی که مرورگر پیش از شروع ترسیم صفحه منتظرشان می‌ماند. سبک‌ها مشکلی ندارند، اما بهتر است اسکریپت‌ها با async یا defer بارگیری شوند"
+    },
+    "auditStatus": {
+        "message": "کد وضعیت"
+    },
+    "auditStatusHint": {
+        "message": "وضعیت HTTP صفحه: 200 — درست، 4xx و 5xx — خطا"
+    },
+    "auditNoindex": {
+        "message": "نمایه‌سازی ممنوع است"
+    },
+    "auditNoindexHint": {
+        "message": "صفحه با برچسب noindex یا قاعده‌ای در robots.txt از موتورهای جستجو پنهان شده است. برای صفحه‌های ورود و حساب‌های کاربری عادی است"
+    },
+    "auditTitle": {
+        "message": "عنوان (title)"
+    },
+    "auditTitleHint": {
+        "message": "متن پیوند در نتایج جستجو و نام زبانه. بهترین — 10–70 نویسه"
+    },
+    "auditDescription": {
+        "message": "توضیحات (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "متن زیر پیوند در نتایج جستجو. بهترین — 50–170 نویسه"
+    },
+    "auditH1": {
+        "message": "سرتیترهای h1"
+    },
+    "auditH1Hint": {
+        "message": "سرتیتر اصلی صفحه. معمولاً یکی است"
+    },
+    "auditCanonical": {
+        "message": "نشانی canonical"
+    },
+    "auditCanonicalHint": {
+        "message": "اگر صفحه نسخه‌های تکراری داشته باشد، نشانی اصلی را به موتورهای جستجو اعلام می‌کند"
+    },
+    "auditOg": {
+        "message": "پیش‌نمایش پیوند (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "عنوان و تصویری که تلگرام، Slack و سرویس‌های دیگر هنگام اشتراک پیوند نشان می‌دهند"
+    },
+    "auditViewport": {
+        "message": "نسخهٔ موبایل (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "بدون meta viewport، تلفن‌ها صفحه را به‌صورت نسخهٔ کوچک‌شدهٔ دسکتاپ نشان می‌دهند"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "بدون آن، مرورگر به حالت سازگاری با سایت‌های قدیمی می‌رود و چیدمان ممکن است فرق کند"
+    },
+    "auditNoSize": {
+        "message": "تصاویر بدون ابعاد"
+    },
+    "auditNoSizeHint": {
+        "message": "بدون width و height مرورگر نمی‌داند چقدر جا برای تصویر نگه دارد، و هنگام بارگیری آن چیدمان می‌پرد"
+    },
+    "auditLarge": {
+        "message": "تصاویر بیش از حد بزرگ"
+    },
+    "auditLargeHint": {
+        "message": "تصویر به‌طور محسوسی بزرگ‌تر از اندازهٔ نمایشش ارسال می‌شود — وزن اضافی"
+    },
+    "auditModern": {
+        "message": "تصاویر WebP و AVIF"
+    },
+    "auditModernHint": {
+        "message": "این قالب‌ها 25 تا 50٪ از JPEG و PNG سبک‌ترند"
+    },
+    "auditLang": {
+        "message": "زبان صفحه (lang)"
+    },
+    "auditLangHint": {
+        "message": "برای صفحه‌خوان‌ها، مترجم‌ها و موتورهای جستجو لازم است"
+    },
+    "auditAlt": {
+        "message": "تصاویر بدون alt"
+    },
+    "auditAltHint": {
+        "message": "توضیح تصویر برای کاربران نابینا و برای زمانی که تصویر بارگیری نشود"
+    },
+    "auditLabels": {
+        "message": "فیلدهای بدون برچسب"
+    },
+    "auditLabelsHint": {
+        "message": "صفحه‌خوان نمی‌تواند بگوید چه چیزی باید در فیلد وارد شود"
+    },
+    "auditNames": {
+        "message": "دکمه‌ها و پیوندهای بی‌نام"
+    },
+    "auditNamesHint": {
+        "message": "برای نمونه دکمهٔ نمادین بدون aria-label: کاربر نابینا فقط «دکمه» می‌شنود"
+    },
+    "auditMain": {
+        "message": "ناحیهٔ اصلی (main)"
+    },
+    "auditMainHint": {
+        "message": "امکان می‌دهد بدون گذر از منو مستقیم به محتوا بروید"
+    },
+    "auditZoom": {
+        "message": "بزرگ‌نمایی غیرفعال است"
+    },
+    "auditZoomHint": {
+        "message": "مانع می‌شود افراد کم‌بینا صفحه را در تلفن بزرگ کنند"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "محدود می‌کند صفحه از کجا اسکریپت بارگیری کند — محافظت در برابر XSS. اگر 'unsafe-inline' بدون nonce یا hash داشته باشد، تقریباً محافظتی نمی‌کند"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "مانع می‌شود مرورگر نوع فایل را حدس بزند — محافظت در برابر جعل اسکریپت"
+    },
+    "auditFrame": {
+        "message": "محافظت در برابر قاب‌گذاری"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options یا frame-ancestors مانع جاسازی سایت در صفحهٔ دیگران برای فریب کاربران به کلیک می‌شوند"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "چه مقدار از نشانی صفحه هنگام رفتن به سایت‌های دیگر فرستاده شود. بدون این سرآیند، مرورگر از یک مقدار پیش‌فرض امن استفاده می‌کند"
+    },
+    "auditCache": {
+        "message": "حافظهٔ پنهان صفحه"
+    },
+    "auditCacheHint": {
+        "message": "صفحه از کجا آمده: HIT — از حافظهٔ پنهان سرور یا CDN، MISS — از نو ساخته شده. خود صفحه‌ها به‌ندرت در حافظهٔ پنهان می‌مانند؛ معمولاً تصاویر، اسکریپت‌ها و سبک‌ها"
+    },
+    "auditCacheBrowser": {
+        "message": "از حافظهٔ پنهان مرورگر"
+    },
+    "auditBots": {
+        "message": "ربات‌ها و هوش مصنوعی"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "قواعدی برای موتورهای جستجو و ربات‌های دیگر. بدون این فایل ربات‌ها همه چیز را می‌خزند و موتورهای جستجو نمی‌فهمند نقشهٔ سایت کجاست"
+    },
+    "auditSitemap": {
+        "message": "نقشهٔ سایت"
+    },
+    "auditSitemapHint": {
+        "message": "فهرست صفحه‌ها برای موتورهای جستجو. در robots.txt با خط Sitemap: مشخص می‌شود"
+    },
+    "auditAi": {
+        "message": "قواعد ربات‌های هوش مصنوعی"
+    },
+    "auditAiHint": {
+        "message": "آیا ربات‌های هوش مصنوعی مجازند متن‌های سایت را برای شبکه‌های عصبی جمع کنند — بر اساس قواعد robots.txt که ربات را با نام ذکر می‌کنند. افزونه 16 ربات از این دست را می‌شناسد (GPTBot، ClaudeBot، Google-Extended و غیره)؛ ربات‌هایی با نام‌های دیگر شمرده نمی‌شوند. «بسته برای همه» — سایت با User-agent: * به روی همهٔ ربات‌ها بسته است و قاعدهٔ جداگانه‌ای برای هوش مصنوعی ندارد"
+    },
+    "auditAiBlocked": {
+        "message": "مسدود: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "مجاز"
+    },
+    "auditAiNone": {
+        "message": "تعیین نشده"
+    },
+    "auditAiAll": {
+        "message": "بسته برای همه"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "قالبی تازه: توضیح کوتاه سایت به زبان Markdown برای دستیارها و عامل‌های هوش مصنوعی. فعلاً اختیاری است"
+    },
+    "auditCspWeak": {
+        "message": "ضعیف"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "دسترسی صفحه و قاب‌های جاسازی‌شده به دوربین، موقعیت مکانی و دیگر قابلیت‌های مرورگر را ممنوع می‌کند"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "پنجرهٔ سایت را از پنجره‌های دیگری که باز می‌کند جدا می‌کند — محافظت در برابر حمله از طریق window.opener"
+    },
+    "auditVersions": {
+        "message": "نسخه‌های نرم‌افزار در سرآیندها"
+    },
+    "auditVersionsHint": {
+        "message": "سرور نسخه‌های نرم‌افزار را فاش می‌کند — سرنخی برای مهاجمان دربارهٔ اینکه کدام آسیب‌پذیری‌های شناخته‌شده را امتحان کنند. برای پنهان کردن: server_tokens off در nginx و Angie، expose_php = Off در PHP"
+    },
+    "auditHidden": {
+        "message": "پنهان"
+    },
+    "auditSession": {
+        "message": "کوکی‌های نشست خواندنی برای اسکریپت‌ها"
+    },
+    "auditSessionHint": {
+        "message": "به نظر می‌رسد کوکی‌های ورود از JavaScript خواندنی‌اند: با XSS می‌توان آن‌ها را دزدید. پرچم HttpOnly جلوی این کار را می‌گیرد. از روی نام کوکی تشخیص داده شد"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "اطلاعات تماس برای گزارش آسیب‌پذیری در /.well-known/security.txt. کمک می‌کند پژوهشگر مشکل را به شما گزارش دهد نه اینکه آن را بفروشد"
+    },
+    "serverUnknownTitle": {
+        "message": "شبکه‌های این ارائه‌دهنده در پایگاه دادهٔ ABlock نیستند: این پایگاه میزبان‌های بزرگ، ابرها و CDNها را دربرمی‌گیرد"
+    },
+    "protocolH3Later": {
+        "message": "سرور از HTTP/3 پشتیبانی می‌کند. این صفحه از طریق $PROTOCOL$ رسید — در اولین بازدید چنین می‌شود: مرورگر از پاسخ سرور دربارهٔ HTTP/3 باخبر می‌شود و برای درخواست‌های بعدی به آن می‌رود",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "زبان مرورگر"
+    },
+    "langTitle": {
+        "message": "زبان رابط"
+    },
+    "noteTitle": {
+        "message": "یادداشت برای این سایت"
+    },
+    "notePlaceholder": {
+        "message": "یادداشت برای این سایت، فقط برای شما قابل مشاهده است"
+    },
+    "incognitoLabel": {
+        "message": "کار در حالت ناشناس"
+    },
+    "incognitoTitle": {
+        "message": "تنظیمات افزونه‌های مرورگر باز می‌شود؛ آنجا اجازهٔ اجرای ABlock در حالت ناشناس را روشن کنید"
+    }
+}

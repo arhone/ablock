@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "hu",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Reklámblokkoló és webhely-ellenőrzés"
+    },
+    "extDescription": {
+        "message": "Letiltja a reklámokat és követőket: gyorsabb oldalak, kevesebb adatforgalom. Ellenőrzi bármely webhely sebességét, biztonságát."
+    },
+    "toggle": {
+        "message": "Be / ki"
+    },
+    "statusOn": {
+        "message": "A védelem be van kapcsolva"
+    },
+    "statusOff": {
+        "message": "A védelem ki van kapcsolva"
+    },
+    "statusSiteOff": {
+        "message": "A védelem ki van kapcsolva ezen a webhelyen"
+    },
+    "telegram": {
+        "message": "Telegram-csoport"
+    },
+    "github": {
+        "message": "Közreműködés a GitHubon"
+    },
+    "httpsOn": {
+        "message": "A kapcsolat titkosított"
+    },
+    "httpsOff": {
+        "message": "A kapcsolat nem titkosított"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — a leggyorsabb protokoll"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — modern protokoll"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — elavult protokoll",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Ismeretlen protokoll (az oldal a gyorsítótárból töltődött be)"
+    },
+    "loading": {
+        "message": "Betöltés…"
+    },
+    "loadingTitle": {
+        "message": "Az oldal még töltődik"
+    },
+    "seconds": {
+        "message": "$SECONDS$ mp",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Az oldal betöltési ideje"
+    },
+    "domains": {
+        "message": "Domainek $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Külső domainek:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…és még $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Nincsenek külső domainek"
+    },
+    "blocked": {
+        "message": "Blokkolva $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Nyomkövetők $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Ezen az oldalon blokkolva\nHirdetések: $ADS$\nNyomkövetők: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Ez a webhely követi Önt. Blokkolt nyomkövetők: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Nem található nyomkövető"
+    },
+    "scoreLabel": {
+        "message": "Webhely értékelése"
+    },
+    "serverLabel": {
+        "message": "Szerver"
+    },
+    "techLabel": {
+        "message": "Technológia"
+    },
+    "companiesLabel": {
+        "message": "Követik"
+    },
+    "extraLabel": {
+        "message": "Egyéb"
+    },
+    "extendedText": {
+        "message": "Bővített mód: tárhely, IPv6, HSTS, statisztika és a hirdetési helyek és a sütiablakok elrejtése minden webhelyen. Az adatok soha nem hagyják el a böngészőt."
+    },
+    "extendedButton": {
+        "message": "Bekapcsolás"
+    },
+    "extendedOff": {
+        "message": "Bővített mód kikapcsolása"
+    },
+    "extendedOffTitle": {
+        "message": "A bővítmény többé nem látja a szerverek IP-címét és fejléceit, nem vezet statisztikát és nem rejti el a hirdetési helyeket és a sütiablakokat minden webhelyen; a hozzáférés minden webhelyhez visszavonásra kerül. Bármikor újra bekapcsolhatja"
+    },
+    "share": {
+        "message": "Megosztás"
+    },
+    "copied": {
+        "message": "Másolva"
+    },
+    "cookiesLabel": {
+        "message": "Sütihozzájárulási ablakok elrejtése"
+    },
+    "cookiesTitle": {
+        "message": "Blokkolja a sütihozzájárulási szalagok szolgáltatásait. Bővített módban magukat a szalagokat is elrejti bármely webhelyen"
+    },
+    "siteLabel": {
+        "message": "Blokkolás itt: $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Törölje a jelölést, ha a webhely nem működik megfelelően: a hirdetések és nyomkövetők nem lesznek többé blokkolva rajta. Az oldal újratöltődik"
+    },
+    "guess": {
+        "message": "Közvetett jelek alapján észlelve — pontatlan lehet"
+    },
+    "weightTitle": {
+        "message": "Az oldal mérete az összes fájllal"
+    },
+    "weightEstimated": {
+        "message": "A pontos méret $TOTAL$ fájlból $KNOWN$ esetén ismert, a többi becsült: a külső webhelyek elrejtik a méretet",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Az oldal tömörített: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Nincs tömörítés"
+    },
+    "compressionOff": {
+        "message": "Az oldal tömörítés nélkül érkezik — lassabban töltődik be"
+    },
+    "compressionUnknown": {
+        "message": "Ismeretlen tömörítés (az oldal a gyorsítótárból töltődött be)"
+    },
+    "blockedCookies": {
+        "message": "Sütiablakok: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Méret: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Nincs blokkolva:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "A webhelyen található:\n$LIST$\nHogy blokkolva vannak-e, a bővített mód mutatja",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Blokkolva:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "ismert nem található"
+    },
+    "serverExtended": {
+        "message": "bővített módban"
+    },
+    "serverReload": {
+        "message": "töltse újra az oldalt"
+    },
+    "serverReloadTitle": {
+        "message": "A szerver az oldal betöltése közben derül ki"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "más szolgáltató"
+    },
+    "serverProxy": {
+        "message": "A webhely a(z) $NAME$ mögött fut (CDN vagy DDoS-védelem) — a valódi szerver rejtve van",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Tárhely: $NAME$ (a RIPE címadatbázisa alapján)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Az országot a szolgáltató alapján határozzuk meg"
+    },
+    "techFound": {
+        "message": "Az oldalon található"
+    },
+    "techNone": {
+        "message": "nem észlelhető"
+    },
+    "techNoneTitle": {
+        "message": "Nem találhatók ismert motorok vagy könyvtárak jelei"
+    },
+    "ipv6": {
+        "message": "Kapcsolódva IPv6-on keresztül"
+    },
+    "ipv4": {
+        "message": "Kapcsolódva IPv4-en keresztül. Ebből nem derül ki, hogy a webhely támogatja-e az IPv6-ot: ez a hálózatától is függ"
+    },
+    "hstsOn": {
+        "message": "HSTS: a böngésző a webhelyet mindig csak HTTPS-en nyitja meg"
+    },
+    "hstsOff": {
+        "message": "Nincs HSTS: a webhely első meglátogatása titkosítás nélkül történhet"
+    },
+    "mixed": {
+        "message": "HTTP-fájlok $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "A HTTPS-oldal titkosítás nélkül tölt be fájlokat: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Értékelés: $SCORE$/10, a következők alapján:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Titkosítás"
+    },
+    "scoreProtocol": {
+        "message": "Protokoll"
+    },
+    "scoreSpeed": {
+        "message": "Betöltési sebesség"
+    },
+    "scoreWeight": {
+        "message": "Oldalméret"
+    },
+    "scoreTrackers": {
+        "message": "Nyomkövetés"
+    },
+    "scoreDomains": {
+        "message": "Külső domainek"
+    },
+    "scoreCompression": {
+        "message": "Tömörítés"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Vegyes tartalom"
+    },
+    "stats": {
+        "message": "Összes blokkolt kérés: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "$DATE$ óta. A méret a reklámfájlok átlagos mérete alapján becsült",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Jelentés a webhelyről — képként vagy szövegként"
+    },
+    "reportTitle": {
+        "message": "A webhely értékelése és részletei képként vagy szövegként — kollégáknak, alvállalkozónak vagy csevegésbe"
+    },
+    "reportDone": {
+        "message": "Mentve"
+    },
+    "copyIp": {
+        "message": "IP másolása: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Kép másolása"
+    },
+    "copyText": {
+        "message": "Szöveg és hivatkozás másolása"
+    },
+    "shareSystem": {
+        "message": "Továbbiak…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — $SCORE$/10 pont az ABlockban",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Ellenőrizze a saját webhelyét:"
+    },
+    "donate": {
+        "message": "Támogatás"
+    },
+    "donateTitle": {
+        "message": "Támogassa a fejlesztést a Boostyn"
+    },
+    "askStats": {
+        "message": "Letiltott kérések: $COUNT$, megtakarítva ≈ $SIZE$. Ha az ABlock hasznos számodra, támogasd a fejlesztést",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Már egy hónapja használod az ABlockot. Ha hasznos, támogasd a fejlesztést"
+    },
+    "askClose": {
+        "message": "Ne mutasd többé"
+    },
+    "reportLegendGuess": {
+        "message": "? — közvetett jelek alapján észlelve"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — hozzávetőleges becslés"
+    },
+    "companiesNoneTitle": {
+        "message": "Ezen az oldalon nincsenek cégek az ABlock jegyzékéből. A webhely saját számlálói ettől még lehetnek — ezeket a „Nyomkövetők” jelvény számolja"
+    },
+    "compressionFiles": {
+        "message": "Szövegfájlok: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Tömörítetlen: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "A webhely adatainak törlése és újratöltés: sütik, gyorsítótár és tárhely. A jelvények és az értékelés úgy mutatják a webhelyet, ahogy egy új látogató látja. Ki lesz jelentkeztetve erről a webhelyről"
+    },
+    "clearConfirm": {
+        "message": "Törli?"
+    },
+    "saveImage": {
+        "message": "Kép mentése"
+    },
+    "shareSend": {
+        "message": "Küldés: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Közzététel: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Szövegként küldjük: képet nem lehet átadni szerverre való feltöltés nélkül — másolja ki, és illessze be az üzenetbe"
+    },
+    "shareLinkOnly": {
+        "message": "Csak a bővítmény hivatkozása kerül átadásra — másolja ki a jelentés képét, és illessze be a bejegyzésbe"
+    },
+    "auditLabel": {
+        "message": "Részletek"
+    },
+    "auditIssues": {
+        "message": "problémák: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "nincs probléma"
+    },
+    "auditSpeed": {
+        "message": "Sebesség"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Jelölőkód"
+    },
+    "auditA11y": {
+        "message": "Akadálymentesség"
+    },
+    "auditSecurity": {
+        "message": "Biztonság"
+    },
+    "auditYes": {
+        "message": "igen"
+    },
+    "auditNo": {
+        "message": "nem"
+    },
+    "auditLength": {
+        "message": "$COUNT$ karakter",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "másik domain"
+    },
+    "auditNoImage": {
+        "message": "nincs kép"
+    },
+    "auditNoInput": {
+        "message": "nem volt interakció"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$/$TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Elrendezés-eltolódások"
+    },
+    "auditTtfb": {
+        "message": "Szerver válasza (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Mennyi idő alatt érkezett meg az oldal első bájtja a szerverről. Jó — 0,8 mp alatt"
+    },
+    "auditFcp": {
+        "message": "Első megjelenítés (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Mikor jelent meg az első tartalom a képernyőn. Jó — 1,8 mp alatt"
+    },
+    "auditLcp": {
+        "message": "Fő blokk (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Mikor jelent meg a legnagyobb blokk — kép vagy szöveg. A Google fő sebességmutatója. Jó — 2,5 mp alatt"
+    },
+    "auditCls": {
+        "message": "Elrendezés-eltolódások (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Mennyire ugrál a tartalom betöltés közben. Jó — 0,1 alatt"
+    },
+    "auditInp": {
+        "message": "Interakcióra adott válasz (INP)"
+    },
+    "auditInpHint": {
+        "message": "A leghosszabb késleltetés egy kattintásra vagy bevitelre adott válaszban. Jó — 200 ms alatt"
+    },
+    "auditBlocking": {
+        "message": "Megjelenítést blokkolók"
+    },
+    "auditBlockingHint": {
+        "message": "Fájlok, amelyekre a böngésző vár, mielőtt elkezdi megrajzolni az oldalt. A stílusok rendben vannak, de a szkripteket jobb async vagy defer attribútummal betölteni"
+    },
+    "auditStatus": {
+        "message": "Állapotkód"
+    },
+    "auditStatusHint": {
+        "message": "Az oldal HTTP-állapota: 200 — rendben, 4xx és 5xx — hiba"
+    },
+    "auditNoindex": {
+        "message": "Indexelés letiltva"
+    },
+    "auditNoindexHint": {
+        "message": "Az oldal noindex címkével vagy robots.txt szabállyal el van rejtve a keresők elől. Bejelentkezési oldalaknál és felhasználói fiókoknál ez normális"
+    },
+    "auditTitle": {
+        "message": "Cím (title)"
+    },
+    "auditTitleHint": {
+        "message": "A hivatkozás szövege a keresési találatokban és a lap neve. Legjobb — 10–70 karakter"
+    },
+    "auditDescription": {
+        "message": "Leírás (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Szöveg a hivatkozás alatt a keresési találatokban. Legjobb — 50–170 karakter"
+    },
+    "auditH1": {
+        "message": "h1 címsorok"
+    },
+    "auditH1Hint": {
+        "message": "Az oldal fő címsora. Általában egy van belőle"
+    },
+    "auditCanonical": {
+        "message": "Kanonikus URL"
+    },
+    "auditCanonicalHint": {
+        "message": "Megmondja a keresőknek az oldal fő címét, ha vannak másolatai"
+    },
+    "auditOg": {
+        "message": "Hivatkozás-előnézet (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "A cím és a kép, amelyet a Telegram, a Slack és más szolgáltatások mutatnak egy hivatkozás megosztásakor"
+    },
+    "auditViewport": {
+        "message": "Mobilverzió (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Meta viewport nélkül a telefonok az oldalt kicsinyített asztali verzióként jelenítik meg"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Nélküle a böngésző a régi webhelyek kompatibilitási módjára vált, és az elrendezés eltérhet"
+    },
+    "auditNoSize": {
+        "message": "Méret nélküli képek"
+    },
+    "auditNoSizeHint": {
+        "message": "Width és height nélkül a böngésző nem tudja, mennyi helyet hagyjon a képnek, és az elrendezés ugrik, amikor betöltődik"
+    },
+    "auditLarge": {
+        "message": "Túl nagy képek"
+    },
+    "auditLargeHint": {
+        "message": "A kép jóval nagyobb méretben érkezik, mint ahogy megjelenik — felesleges súly"
+    },
+    "auditModern": {
+        "message": "WebP és AVIF képek"
+    },
+    "auditModernHint": {
+        "message": "Ezek a formátumok 25–50%-kal kisebbek a JPEG-nél és a PNG-nél"
+    },
+    "auditLang": {
+        "message": "Az oldal nyelve (lang)"
+    },
+    "auditLangHint": {
+        "message": "Szükséges a képernyőolvasóknak, a fordítóknak és a keresőknek"
+    },
+    "auditAlt": {
+        "message": "Képek alt nélkül"
+    },
+    "auditAltHint": {
+        "message": "A kép leírása vak felhasználóknak, és arra az esetre, ha nem töltődik be"
+    },
+    "auditLabels": {
+        "message": "Címke nélküli mezők"
+    },
+    "auditLabelsHint": {
+        "message": "A képernyőolvasó nem tudja megmondani, mit kell a mezőbe írni"
+    },
+    "auditNames": {
+        "message": "Név nélküli gombok és hivatkozások"
+    },
+    "auditNamesHint": {
+        "message": "Például egy ikongomb aria-label nélkül: a vak felhasználó csak annyit hall, hogy „gomb”"
+    },
+    "auditMain": {
+        "message": "Fő terület (main)"
+    },
+    "auditMainHint": {
+        "message": "Lehetővé teszi, hogy a menüt átugorva egyből a tartalomra ugorjanak"
+    },
+    "auditZoom": {
+        "message": "Nagyítás letiltva"
+    },
+    "auditZoomHint": {
+        "message": "Megakadályozza, hogy a gyengénlátók telefonon felnagyítsák az oldalt"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Korlátozza, honnan tölthet be szkripteket az oldal — védelem az XSS ellen. Ha 'unsafe-inline' van benne nonce vagy hash nélkül, alig véd"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Megakadályozza, hogy a böngésző kitalálja a fájltípusokat — védelem a szkripthamisítás ellen"
+    },
+    "auditFrame": {
+        "message": "Keretbe ágyazás elleni védelem"
+    },
+    "auditFrameHint": {
+        "message": "Az X-Frame-Options vagy a frame-ancestors megakadályozza, hogy a webhelyet egy idegen oldalba ágyazzák, és kattintásra csalják a felhasználókat"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Az oldal címének mekkora része jut el más webhelyekhez navigáláskor. A fejléc nélkül a böngésző biztonságos alapértéket használ"
+    },
+    "auditCache": {
+        "message": "Oldal gyorsítótára"
+    },
+    "auditCacheHint": {
+        "message": "Honnan jött az oldal: HIT — a szerver vagy a CDN gyorsítótárából, MISS — újonnan összeállítva. Magukat az oldalakat ritkán gyorsítótárazzák; általában a képeket, szkripteket és stílusokat"
+    },
+    "auditCacheBrowser": {
+        "message": "a böngésző gyorsítótárából"
+    },
+    "auditBots": {
+        "message": "Robotok és MI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Szabályok a keresők és más robotok számára. A fájl nélkül a robotok mindent bejárnak, és a keresők nem tudják meg, hol az oldaltérkép"
+    },
+    "auditSitemap": {
+        "message": "Oldaltérkép"
+    },
+    "auditSitemapHint": {
+        "message": "Az oldalak listája a keresők számára. A robots.txt-ben egy Sitemap: sorral adható meg"
+    },
+    "auditAi": {
+        "message": "Szabályok MI-robotoknak"
+    },
+    "auditAiHint": {
+        "message": "Gyűjthetik-e az MI-robotok a webhely szövegeit neurális hálózatokhoz — a robots.txt azon szabályai alapján, amelyek néven nevezik a robotot. A bővítmény 16 ilyen robotot ismer (GPTBot, ClaudeBot, Google-Extended stb.); a más nevű robotok nem számítanak bele. „Mindenki elől zárva” — a webhely User-agent: * útján minden robot elől zárva van, külön MI-szabályok nélkül"
+    },
+    "auditAiBlocked": {
+        "message": "tiltva: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "engedélyezve"
+    },
+    "auditAiNone": {
+        "message": "nincs megadva"
+    },
+    "auditAiAll": {
+        "message": "mindenki elől zárva"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Új formátum: a webhely rövid Markdown-leírása MI-asszisztensek és -ügynökök számára. Egyelőre nem kötelező"
+    },
+    "auditCspWeak": {
+        "message": "gyenge"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Megtagadja az oldaltól és a beágyazott keretektől a kamera, a helymeghatározás és más böngészőfunkciók elérését"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Elszigeteli a webhely ablakát az általa megnyitott többi ablaktól — védelem a window.opener-en keresztüli támadások ellen"
+    },
+    "auditVersions": {
+        "message": "Szoftververziók a fejlécekben"
+    },
+    "auditVersionsHint": {
+        "message": "A szerver felfedi a szoftververziókat — tipp a támadóknak, mely ismert sebezhetőségeket próbálják ki. Elrejtés: server_tokens off az nginxben és az Angie-ben, expose_php = Off a PHP-ben"
+    },
+    "auditHidden": {
+        "message": "rejtett"
+    },
+    "auditSession": {
+        "message": "Szkriptek által olvasható munkamenet-sütik"
+    },
+    "auditSessionHint": {
+        "message": "A bejelentkezési sütik láthatóan olvashatók JavaScriptből: XSS esetén ellophatók. A HttpOnly jelző ezt megakadályozza. A süti neve alapján észlelve"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Elérhetőségek a sebezhetőségek bejelentéséhez a /.well-known/security.txt fájlban. Segít, hogy a kutató Önnek jelentse a hibát, ne eladja"
+    },
+    "serverUnknownTitle": {
+        "message": "A szolgáltató hálózatai nincsenek benne az ABlock adatbázisában: ez a nagy tárhelyszolgáltatókat, felhőket és CDN-eket tartalmazza"
+    },
+    "protocolH3Later": {
+        "message": "A szerver támogatja a HTTP/3-at. Ez az oldal $PROTOCOL$ protokollon érkezett — ez az első látogatáskor fordul elő: a böngésző a szerver válaszából értesül a HTTP/3-ról, és a következő kéréseknél arra vált",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "A böngésző nyelve"
+    },
+    "langTitle": {
+        "message": "A felület nyelve"
+    },
+    "noteTitle": {
+        "message": "Megjegyzés a webhelyhez"
+    },
+    "notePlaceholder": {
+        "message": "Megjegyzés a webhelyhez, csak Ön látja"
+    },
+    "incognitoLabel": {
+        "message": "Működés inkognitó módban"
+    },
+    "incognitoTitle": {
+        "message": "Megnyílnak a böngésző bővítménybeállításai – ott kapcsolja be az ABlock engedélyét inkognitó módban"
+    }
+}

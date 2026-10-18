@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "am",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - የማስታወቂያ አጋጅ እና የጣቢያ ፍተሻ"
+    },
+    "extDescription": {
+        "message": "ማስታወቂያዎችን እና መከታተያዎችን ያግዳል፦ ፈጣን ገጾች፣ ያነሰ ዳታ። የማንኛውንም ጣቢያ ፍጥነት፣ ደህንነት እና ክትትል ይፈትሻል።"
+    },
+    "toggle": {
+        "message": "አብራ / አጥፋ"
+    },
+    "statusOn": {
+        "message": "ጥበቃ በርቷል"
+    },
+    "statusOff": {
+        "message": "ጥበቃ ጠፍቷል"
+    },
+    "statusSiteOff": {
+        "message": "በዚህ ጣቢያ ላይ ጥበቃ ጠፍቷል"
+    },
+    "telegram": {
+        "message": "የTelegram ቡድን"
+    },
+    "github": {
+        "message": "በGitHub ላይ ያበርክቱ"
+    },
+    "httpsOn": {
+        "message": "ግንኙነቱ ተመስጥሯል"
+    },
+    "httpsOff": {
+        "message": "ግንኙነቱ አልተመሰጠረም"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — በጣም ፈጣኑ ፕሮቶኮል"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — ዘመናዊ ፕሮቶኮል"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — ጊዜው ያለፈበት ፕሮቶኮል",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "ፕሮቶኮሉ አይታወቅም (ገጹ ከመሸጎጫ ተጭኗል)"
+    },
+    "loading": {
+        "message": "በመጫን ላይ…"
+    },
+    "loadingTitle": {
+        "message": "ገጹ አሁንም በመጫን ላይ ነው"
+    },
+    "seconds": {
+        "message": "$SECONDS$ ሰ",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "የገጹ የመጫኛ ጊዜ"
+    },
+    "domains": {
+        "message": "ጎራዎች $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "የሶስተኛ ወገን ጎራዎች:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…እና ሌሎች $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "የሶስተኛ ወገን ጎራዎች የሉም"
+    },
+    "blocked": {
+        "message": "የታገዱ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "መከታተያዎች $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "በዚህ ገጽ ላይ የታገዱ\nማስታወቂያዎች: $ADS$\nመከታተያዎች: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "ይህ ጣቢያ እርስዎን ይከታተላል። የታገዱ መከታተያዎች: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "ምንም መከታተያ አልተገኘም"
+    },
+    "scoreLabel": {
+        "message": "የጣቢያው ነጥብ"
+    },
+    "serverLabel": {
+        "message": "አገልጋይ"
+    },
+    "techLabel": {
+        "message": "የተገነባበት"
+    },
+    "companiesLabel": {
+        "message": "የሚከታተሉ"
+    },
+    "extraLabel": {
+        "message": "ተጨማሪ"
+    },
+    "extendedText": {
+        "message": "የተራዘመ ሁነታ: በሁሉም ጣቢያዎች ላይ ማስተናገጃ፣ IPv6፣ HSTS፣ ስታቲስቲክስ እና የማስታወቂያ ቦታዎችንና የኩኪ መስኮቶችን መደበቅ። ውሂቡ ከአሳሽዎ ፈጽሞ አይወጣም።"
+    },
+    "extendedButton": {
+        "message": "አብራ"
+    },
+    "extendedOff": {
+        "message": "የተራዘመውን ሁነታ አጥፋ"
+    },
+    "extendedOffTitle": {
+        "message": "ቅጥያው በሁሉም ጣቢያዎች ላይ የአገልጋዮችን IP እና ራስጌዎች ማየት፣ ስታቲስቲክስ መያዝ እና የማስታወቂያ ቦታዎችንና የኩኪ መስኮቶችን መደበቅ ያቆማል፤ የሁሉም ጣቢያዎች መዳረሻ ይሻራል። በማንኛውም ጊዜ እንደገና ማብራት ይችላሉ"
+    },
+    "share": {
+        "message": "አጋራ"
+    },
+    "copied": {
+        "message": "ተቀድቷል"
+    },
+    "cookiesLabel": {
+        "message": "የኩኪ ፈቃድ መስኮቶችን ደብቅ"
+    },
+    "cookiesTitle": {
+        "message": "የኩኪ ፈቃድ ሰንደቅ አገልግሎቶችን ያግዳል። በተራዘመ ሁነታ ደግሞ ሰንደቆቹን ራሳቸውን በማንኛውም ጣቢያ ላይ ይደብቃል"
+    },
+    "siteLabel": {
+        "message": "በ$HOST$ ላይ አግድ",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "ጣቢያው በትክክል ካልሠራ ምልክቱን ያንሱ: በእሱ ላይ ያሉ ማስታወቂያዎች እና መከታተያዎች ከእንግዲህ አይታገዱም። ገጹ እንደገና ይጫናል"
+    },
+    "guess": {
+        "message": "በተዘዋዋሪ ምልክቶች የተገኘ — ትክክል ላይሆን ይችላል"
+    },
+    "weightTitle": {
+        "message": "የገጹ መጠን ከሁሉም ፋይሎች ጋር"
+    },
+    "weightEstimated": {
+        "message": "ትክክለኛ መጠኑ ከ$TOTAL$ ፋይሎች ውስጥ ለ$KNOWN$ ይታወቃል፣ የተቀሩት ግምት ናቸው: የሶስተኛ ወገን ጣቢያዎች መጠኑን ይደብቃሉ",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "ገጹ ተጨምቋል: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "ምንም መጨመቅ የለም"
+    },
+    "compressionOff": {
+        "message": "ገጹ ሳይጨመቅ ይላካል — በዝግታ ይጫናል"
+    },
+    "compressionUnknown": {
+        "message": "መጨመቁ አይታወቅም (ገጹ ከመሸጎጫ ተጭኗል)"
+    },
+    "blockedCookies": {
+        "message": "የኩኪ መስኮቶች: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "መጠን: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "ያልታገዱ:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "በጣቢያው ላይ የተገኙ:\n$LIST$\nመታገዳቸው በተራዘመ ሁነታ ይታያል",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "የታገዱ:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "የሚታወቅ አልተገኘም"
+    },
+    "serverExtended": {
+        "message": "በተራዘመ ሁነታ"
+    },
+    "serverReload": {
+        "message": "ገጹን እንደገና ይጫኑ"
+    },
+    "serverReloadTitle": {
+        "message": "አገልጋዩ ገጹ በሚጫንበት ጊዜ ይገኛል"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "ሌላ አቅራቢ"
+    },
+    "serverProxy": {
+        "message": "ጣቢያው ከ$NAME$ (CDN ወይም የDDoS ጥበቃ) ጀርባ ይሠራል — እውነተኛው አገልጋይ ተደብቋል",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "ማስተናገጃ: $NAME$ (ከRIPE የአድራሻ ውሂብ ጎታ)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "አገሩ የሚወሰነው በአቅራቢው ነው"
+    },
+    "techFound": {
+        "message": "በገጹ ላይ የተገኘ"
+    },
+    "techNone": {
+        "message": "አልተገኘም"
+    },
+    "techNoneTitle": {
+        "message": "የሚታወቁ ሞተሮች ወይም ቤተ-መጻሕፍት ምልክቶች አልተገኙም"
+    },
+    "ipv6": {
+        "message": "በIPv6 ተገናኝቷል"
+    },
+    "ipv4": {
+        "message": "በIPv4 ተገናኝቷል። ይህ ጣቢያው IPv6ን ይደግፍ እንደሆነ አይናገርም: በአውታረ መረብዎም ይወሰናል"
+    },
+    "hstsOn": {
+        "message": "HSTS: አሳሹ ጣቢያውን ሁልጊዜ በHTTPS ብቻ ይከፍታል"
+    },
+    "hstsOff": {
+        "message": "HSTS የለም: ወደ ጣቢያው የመጀመሪያው ጉብኝት ያለ ምስጠራ ሊሆን ይችላል"
+    },
+    "mixed": {
+        "message": "የHTTP ፋይሎች $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "የHTTPS ገጹ ያለ ምስጠራ ፋይሎችን ይጭናል: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "ነጥብ $SCORE$ ከ10 በሚከተሉት መሠረት:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "ምስጠራ"
+    },
+    "scoreProtocol": {
+        "message": "ፕሮቶኮል"
+    },
+    "scoreSpeed": {
+        "message": "የመጫኛ ፍጥነት"
+    },
+    "scoreWeight": {
+        "message": "የገጽ መጠን"
+    },
+    "scoreTrackers": {
+        "message": "ክትትል"
+    },
+    "scoreDomains": {
+        "message": "የሶስተኛ ወገን ጎራዎች"
+    },
+    "scoreCompression": {
+        "message": "መጨመቅ"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "የተቀላቀለ ይዘት"
+    },
+    "stats": {
+        "message": "በአጠቃላይ የታገዱ ጥያቄዎች: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "ከ$DATE$ ጀምሮ። መጠኑ በማስታወቂያ ፋይሎች አማካይ መጠን የተገመተ ነው",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "የጣቢያ ሪፖርት — በምስል ወይም በጽሑፍ"
+    },
+    "reportTitle": {
+        "message": "የጣቢያው ነጥብ እና ዝርዝሮች በምስል ወይም በጽሑፍ — ለሥራ ባልደረቦች፣ ለኮንትራክተር ወይም ለውይይት"
+    },
+    "reportDone": {
+        "message": "ተቀምጧል"
+    },
+    "copyIp": {
+        "message": "IP $IP$ ቅዳ",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "ምስሉን ቅዳ"
+    },
+    "copyText": {
+        "message": "ጽሑፉን እና አገናኙን ቅዳ"
+    },
+    "shareSystem": {
+        "message": "ተጨማሪ…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — በABlock ውስጥ $SCORE$ ከ10 ነጥብ",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "ጣቢያዎን ይፈትሹ:"
+    },
+    "donate": {
+        "message": "ይለግሱ"
+    },
+    "donateTitle": {
+        "message": "ልማቱን በBoosty ላይ ይደግፉ"
+    },
+    "askStats": {
+        "message": "የታገዱ ጥያቄዎች: $COUNT$፣ የተቆጠበ ≈ $SIZE$። ABlock ከጠቀመዎት ልማቱን ይደግፉ",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "ABlockን ለአንድ ወር ተጠቅመዋል። ከጠቀመዎት ልማቱን ይደግፉ"
+    },
+    "askClose": {
+        "message": "ዳግም አታሳይ"
+    },
+    "reportLegendGuess": {
+        "message": "? — በተዘዋዋሪ ምልክቶች የተገኘ"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — ግምታዊ"
+    },
+    "companiesNoneTitle": {
+        "message": "በዚህ ገጽ ላይ ከABlock ማውጫ ኩባንያዎች የሉም። የጣቢያው የራሱ ቆጣሪዎች ግን ሊኖሩ ይችላሉ — እነሱ በ«መከታተያዎች» ባጅ ይቆጠራሉ"
+    },
+    "compressionFiles": {
+        "message": "የጽሑፍ ፋይሎች: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "ያልተጨመቁ: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "የጣቢያውን ውሂብ ሰርዝ እና እንደገና ጫን: ኩኪዎች፣ መሸጎጫ እና ማከማቻ። ባጆቹ እና ነጥቡ ጣቢያውን አዲስ ጎብኚ እንደሚያየው ያሳያሉ። ከዚህ ጣቢያ ይወጣሉ"
+    },
+    "clearConfirm": {
+        "message": "ይሰረዝ?"
+    },
+    "saveImage": {
+        "message": "ምስሉን አስቀምጥ"
+    },
+    "shareSend": {
+        "message": "በ$NAME$ ላክ",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "በ$NAME$ ላይ ለጥፍ",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "በጽሑፍ ይላካል: ምስልን ወደ አገልጋይ ሳይሰቅሉ ማስተላለፍ አይቻልም — ይቅዱት እና በመልእክቱ ውስጥ ይለጥፉት"
+    },
+    "shareLinkOnly": {
+        "message": "የቅጥያው አገናኝ ብቻ ይተላለፋል — የሪፖርቱን ምስል ቀድተው በልጥፉ ውስጥ ይለጥፉት"
+    },
+    "auditLabel": {
+        "message": "ዝርዝሮች"
+    },
+    "auditIssues": {
+        "message": "ችግሮች: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "ምንም ችግር የለም"
+    },
+    "auditSpeed": {
+        "message": "ፍጥነት"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "ማርክአፕ"
+    },
+    "auditA11y": {
+        "message": "ተደራሽነት"
+    },
+    "auditSecurity": {
+        "message": "ደህንነት"
+    },
+    "auditYes": {
+        "message": "አዎ"
+    },
+    "auditNo": {
+        "message": "አይ"
+    },
+    "auditLength": {
+        "message": "$COUNT$ ቁምፊዎች",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "ሌላ ጎራ"
+    },
+    "auditNoImage": {
+        "message": "ምስል የለም"
+    },
+    "auditNoInput": {
+        "message": "ምንም መስተጋብር የለም"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ ከ$TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "የአቀማመጥ ለውጦች"
+    },
+    "auditTtfb": {
+        "message": "የአገልጋይ ምላሽ (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "የገጹን የመጀመሪያ ባይት ከአገልጋዩ ለማግኘት የፈጀው ጊዜ። ጥሩ — ከ0.8 ሰ በታች"
+    },
+    "auditFcp": {
+        "message": "የመጀመሪያ ሥዕል (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "የመጀመሪያው ይዘት በማያ ገጹ ላይ የታየበት ጊዜ። ጥሩ — ከ1.8 ሰ በታች"
+    },
+    "auditLcp": {
+        "message": "ዋና ብሎክ (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "ትልቁ ብሎክ — ምስል ወይም ጽሑፍ — የተሳለበት ጊዜ። የGoogle ዋና የፍጥነት መለኪያ። ጥሩ — ከ2.5 ሰ በታች"
+    },
+    "auditCls": {
+        "message": "የአቀማመጥ ለውጦች (CLS)"
+    },
+    "auditClsHint": {
+        "message": "ይዘቱ በሚጫንበት ጊዜ ምን ያህል እንደሚዘል። ጥሩ — ከ0.1 በታች"
+    },
+    "auditInp": {
+        "message": "ለመስተጋብር ምላሽ (INP)"
+    },
+    "auditInpHint": {
+        "message": "ለጠቅታ ወይም ለግቤት ምላሽ ለመስጠት ረጅሙ መዘግየት። ጥሩ — ከ200 ሚሰ በታች"
+    },
+    "auditBlocking": {
+        "message": "ማሳየትን የሚያግዱ"
+    },
+    "auditBlockingHint": {
+        "message": "አሳሹ ገጹን መሳል ከመጀመሩ በፊት የሚጠብቃቸው ፋይሎች። ቅጦች ችግር የለባቸውም፣ ስክሪፕቶች ግን በasync ወይም defer ቢጫኑ ይሻላል"
+    },
+    "auditStatus": {
+        "message": "የሁኔታ ኮድ"
+    },
+    "auditStatusHint": {
+        "message": "የገጹ HTTP ሁኔታ: 200 — ደህና፣ 4xx እና 5xx — ስህተት"
+    },
+    "auditNoindex": {
+        "message": "መጠቆም ታግዷል"
+    },
+    "auditNoindexHint": {
+        "message": "ገጹ በnoindex መለያ ወይም በrobots.txt ደንብ ከፍለጋ ፕሮግራሞች ተደብቋል። ለመግቢያ ገጾች እና ለተጠቃሚ መለያዎች ይህ የተለመደ ነው"
+    },
+    "auditTitle": {
+        "message": "ርዕስ (title)"
+    },
+    "auditTitleHint": {
+        "message": "በፍለጋ ውጤቶች ውስጥ የአገናኙ ጽሑፍ እና የትሩ ስም። ምርጥ — 10–70 ቁምፊዎች"
+    },
+    "auditDescription": {
+        "message": "መግለጫ (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "በፍለጋ ውጤቶች ውስጥ ከአገናኙ በታች ያለ ጽሑፍ። ምርጥ — 50–170 ቁምፊዎች"
+    },
+    "auditH1": {
+        "message": "የh1 ርዕሶች"
+    },
+    "auditH1Hint": {
+        "message": "የገጹ ዋና ርዕስ። ብዙውን ጊዜ አንድ ነው"
+    },
+    "auditCanonical": {
+        "message": "ቀኖናዊ URL"
+    },
+    "auditCanonicalHint": {
+        "message": "ገጹ ቅጂዎች ካሉት ለፍለጋ ፕሮግራሞች ዋናውን አድራሻ ይነግራል"
+    },
+    "auditOg": {
+        "message": "የአገናኝ ቅድመ እይታ (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "አገናኝ ሲጋራ Telegram፣ Slack እና ሌሎች አገልግሎቶች የሚያሳዩት ርዕስ እና ምስል"
+    },
+    "auditViewport": {
+        "message": "የሞባይል ስሪት (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "ያለ meta viewport ስልኮች ገጹን እንደ የተቀነሰ የኮምፒውተር ስሪት ያሳያሉ"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "ያለሱ አሳሹ ለአሮጌ ጣቢያዎች ወደ ተኳኋኝነት ሁነታ ይቀየራል፣ አቀማመጡም ሊለያይ ይችላል"
+    },
+    "auditNoSize": {
+        "message": "መጠን የሌላቸው ምስሎች"
+    },
+    "auditNoSizeHint": {
+        "message": "ያለ width እና height አሳሹ ለምስሉ ምን ያህል ቦታ እንደሚተው አያውቅም፣ ሲጫንም አቀማመጡ ይዘላል"
+    },
+    "auditLarge": {
+        "message": "በጣም ትላልቅ ምስሎች"
+    },
+    "auditLargeHint": {
+        "message": "ምስሉ ከሚታየው በጉልህ የሚበልጥ ሆኖ ይላካል — አላስፈላጊ ክብደት"
+    },
+    "auditModern": {
+        "message": "የWebP እና AVIF ምስሎች"
+    },
+    "auditModernHint": {
+        "message": "እነዚህ ቅርጸቶች ከJPEG እና PNG በ25–50% ያነሱ ናቸው"
+    },
+    "auditLang": {
+        "message": "የገጽ ቋንቋ (lang)"
+    },
+    "auditLangHint": {
+        "message": "ለማያ ገጽ አንባቢዎች፣ ለተርጓሚዎች እና ለፍለጋ ፕሮግራሞች ያስፈልጋል"
+    },
+    "auditAlt": {
+        "message": "alt የሌላቸው ምስሎች"
+    },
+    "auditAltHint": {
+        "message": "ለዓይነ ስውራን ተጠቃሚዎች እና ምስሉ ካልተጫነ የሚሆን የምስሉ መግለጫ"
+    },
+    "auditLabels": {
+        "message": "መለያ የሌላቸው መስኮች"
+    },
+    "auditLabelsHint": {
+        "message": "የማያ ገጽ አንባቢ በመስኩ ውስጥ ምን መግባት እንዳለበት መናገር አይችልም"
+    },
+    "auditNames": {
+        "message": "ስም የሌላቸው አዝራሮች እና አገናኞች"
+    },
+    "auditNamesHint": {
+        "message": "ለምሳሌ aria-label የሌለው የአዶ አዝራር: ዓይነ ስውር ተጠቃሚ «አዝራር» ብቻ ይሰማል"
+    },
+    "auditMain": {
+        "message": "ዋና ክፍል (main)"
+    },
+    "auditMainHint": {
+        "message": "ምናሌውን አልፎ በቀጥታ ወደ ይዘቱ መሄድ ያስችላል"
+    },
+    "auditZoom": {
+        "message": "ማጉላት ተሰናክሏል"
+    },
+    "auditZoomHint": {
+        "message": "ዝቅተኛ የዕይታ ችሎታ ያላቸው ሰዎች ገጹን በስልክ እንዳያጎሉ ያደርጋል"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "ገጹ ስክሪፕቶችን ከየት መጫን እንደሚችል ይገድባል — ከXSS ጥበቃ። ያለ nonce ወይም hash 'unsafe-inline' ከያዘ በጭንቅ ይጠብቃል"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "አሳሹ የፋይል ዓይነቶችን እንዳይገምት ይከለክላል — ከስክሪፕት ማጭበርበር ጥበቃ"
+    },
+    "auditFrame": {
+        "message": "ከፍሬም ውስጥ መክተት ጥበቃ"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options ወይም frame-ancestors ተጠቃሚዎችን በማታለል ጠቅ እንዲያደርጉ ለማድረግ ጣቢያውን በሌላ ሰው ገጽ ውስጥ መክተትን ይከላከላሉ"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "በሚሸጋገሩበት ጊዜ ከገጹ አድራሻ ምን ያህሉ ለሌሎች ጣቢያዎች እንደሚተላለፍ። ያለ ራስጌው አሳሹ ደህንነቱ የተጠበቀ ነባሪ ይጠቀማል"
+    },
+    "auditCache": {
+        "message": "የገጽ መሸጎጫ"
+    },
+    "auditCacheHint": {
+        "message": "ገጹ ከየት መጣ: HIT — ከአገልጋዩ ወይም ከCDN መሸጎጫ፣ MISS — እንደገና የተገነባ። ገጾች ራሳቸው እምብዛም አይሸጎጡም፤ ብዙውን ጊዜ ምስሎች፣ ስክሪፕቶች እና ቅጦች ናቸው"
+    },
+    "auditCacheBrowser": {
+        "message": "ከአሳሹ መሸጎጫ"
+    },
+    "auditBots": {
+        "message": "ሮቦቶች እና AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "ለፍለጋ ፕሮግራሞች እና ለሌሎች ሮቦቶች ደንቦች። ያለ ፋይሉ ሮቦቶች ሁሉንም ይጎበኛሉ፣ የፍለጋ ፕሮግራሞችም የጣቢያው ካርታ የት እንዳለ አያውቁም"
+    },
+    "auditSitemap": {
+        "message": "የጣቢያ ካርታ"
+    },
+    "auditSitemapHint": {
+        "message": "ለፍለጋ ፕሮግራሞች የገጾች ዝርዝር። በrobots.txt ውስጥ በSitemap: መስመር ይገለጻል"
+    },
+    "auditAi": {
+        "message": "ለAI ቦቶች ደንቦች"
+    },
+    "auditAiHint": {
+        "message": "AI ቦቶች ለነርቭ አውታረ መረቦች የጣቢያውን ጽሑፎች መሰብሰብ ይችሉ እንደሆነ — ቦቱን በስም በሚጠሩ የrobots.txt ደንቦች መሠረት። ቅጥያው 16 እንደዚህ ያሉ ቦቶችን ያውቃል (GPTBot፣ ClaudeBot፣ Google-Extended ወዘተ)፤ ሌላ ስም ያላቸው ቦቶች አይቆጠሩም። «ለሁሉም ዝግ» — ጣቢያው በUser-agent: * ለሁሉም ሮቦቶች ዝግ ነው፣ ለAI የተለየ ደንብ የለውም"
+    },
+    "auditAiBlocked": {
+        "message": "የታገዱ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "ተፈቅዷል"
+    },
+    "auditAiNone": {
+        "message": "አልተዘጋጀም"
+    },
+    "auditAiAll": {
+        "message": "ለሁሉም ዝግ"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "አዲስ ቅርጸት: ለAI ረዳቶች እና ወኪሎች በMarkdown የተጻፈ አጭር የጣቢያ መግለጫ። ለጊዜው አማራጭ ነው"
+    },
+    "auditCspWeak": {
+        "message": "ደካማ"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "ገጹ እና የተከተቱ ፍሬሞች ካሜራ፣ አካባቢ እና ሌሎች የአሳሽ ባህሪያትን እንዳይደርሱ ይከለክላል"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "የጣቢያውን መስኮት እሱ ከሚከፍታቸው ሌሎች መስኮቶች ይለያል — በwindow.opener በኩል ከሚደረጉ ጥቃቶች ጥበቃ"
+    },
+    "auditVersions": {
+        "message": "በራስጌዎች ውስጥ የሶፍትዌር ስሪቶች"
+    },
+    "auditVersionsHint": {
+        "message": "አገልጋዩ የሶፍትዌር ስሪቶችን ይገልጻል — ለአጥቂዎች የትኞቹን የታወቁ ተጋላጭነቶች እንደሚሞክሩ ፍንጭ ነው። ለመደበቅ: በnginx እና Angie ውስጥ server_tokens off፣ በPHP ውስጥ expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "ተደብቀዋል"
+    },
+    "auditSession": {
+        "message": "በስክሪፕቶች የሚነበቡ የክፍለ-ጊዜ ኩኪዎች"
+    },
+    "auditSessionHint": {
+        "message": "የመግቢያ ኩኪዎች ከJavaScript ሊነበቡ የሚችሉ ይመስላሉ: በXSS ሊሰረቁ ይችላሉ። የHttpOnly ምልክት ይህን ይከላከላል። በኩኪው ስም የተገኘ"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "በ/.well-known/security.txt ውስጥ ተጋላጭነቶችን ለማሳወቅ የሚያገለግሉ አድራሻዎች። ተመራማሪው ችግሩን ከመሸጥ ይልቅ ለእርስዎ እንዲያሳውቅ ይረዳል"
+    },
+    "serverUnknownTitle": {
+        "message": "የዚህ አቅራቢ አውታረ መረቦች በABlock ውሂብ ጎታ ውስጥ የሉም: እሱ ትላልቅ ማስተናገጃዎችን፣ ደመናዎችን እና CDNዎችን ይሸፍናል"
+    },
+    "protocolH3Later": {
+        "message": "አገልጋዩ HTTP/3ን ይደግፋል። ይህ ገጽ በ$PROTOCOL$ መጥቷል — ይህ በመጀመሪያው ጉብኝት ይከሰታል: አሳሹ ስለ HTTP/3 ከአገልጋዩ ምላሽ ይማራል፣ ለቀጣይ ጥያቄዎችም ወደ እሱ ይቀየራል",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "የአሳሽ ቋንቋ"
+    },
+    "langTitle": {
+        "message": "የበይነገጽ ቋንቋ"
+    },
+    "noteTitle": {
+        "message": "ለዚህ ጣቢያ ማስታወሻ"
+    },
+    "notePlaceholder": {
+        "message": "ለዚህ ጣቢያ ማስታወሻ፣ ለእርስዎ ብቻ የሚታይ"
+    },
+    "incognitoLabel": {
+        "message": "በማንነት የማያሳውቅ ሁነታ ውስጥ ስራ"
+    },
+    "incognitoTitle": {
+        "message": "የአሳሹ የቅጥያዎች ቅንብሮች ይከፈታሉ፤ እዚያ ለABlock በማንነት የማያሳውቅ ሁነታ መዳረሻን ያብሩ"
+    }
+}

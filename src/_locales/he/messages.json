@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "he",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - חוסם פרסומות ובדיקת אתרים"
+    },
+    "extDescription": {
+        "message": "חוסם פרסומות ורכיבי מעקב: דפים מהירים יותר ופחות נתונים. בודק מהירות, אבטחה ומעקב בכל אתר."
+    },
+    "toggle": {
+        "message": "הפעלה / כיבוי"
+    },
+    "statusOn": {
+        "message": "ההגנה פעילה"
+    },
+    "statusOff": {
+        "message": "ההגנה כבויה"
+    },
+    "statusSiteOff": {
+        "message": "ההגנה כבויה באתר זה"
+    },
+    "telegram": {
+        "message": "קבוצת Telegram"
+    },
+    "github": {
+        "message": "תרמו ב-GitHub"
+    },
+    "httpsOn": {
+        "message": "החיבור מוצפן"
+    },
+    "httpsOff": {
+        "message": "החיבור אינו מוצפן"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — הפרוטוקול המהיר ביותר"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — פרוטוקול מודרני"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — פרוטוקול מיושן",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "פרוטוקול לא ידוע (הדף נטען מהמטמון)"
+    },
+    "loading": {
+        "message": "טוען…"
+    },
+    "loadingTitle": {
+        "message": "הדף עדיין נטען"
+    },
+    "seconds": {
+        "message": "$SECONDS$ שנ׳",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "זמן טעינת הדף"
+    },
+    "domains": {
+        "message": "דומיינים $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "דומיינים של צד שלישי:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…ועוד $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "אין דומיינים של צד שלישי"
+    },
+    "blocked": {
+        "message": "נחסמו $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "רכיבי מעקב $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "נחסם בדף זה\nפרסומות: $ADS$\nרכיבי מעקב: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "האתר הזה עוקב אחריך. רכיבי מעקב שנחסמו: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "לא נמצאו רכיבי מעקב"
+    },
+    "scoreLabel": {
+        "message": "ציון האתר"
+    },
+    "serverLabel": {
+        "message": "שרת"
+    },
+    "techLabel": {
+        "message": "נבנה עם"
+    },
+    "companiesLabel": {
+        "message": "עוקבים"
+    },
+    "extraLabel": {
+        "message": "עוד"
+    },
+    "extendedText": {
+        "message": "מצב מורחב: אחסון, IPv6, HSTS, סטטיסטיקה והסתרת שטחי פרסומות וחלונות עוגיות בכל האתרים. הנתונים לעולם לא יוצאים מהדפדפן."
+    },
+    "extendedButton": {
+        "message": "הפעלה"
+    },
+    "extendedOff": {
+        "message": "כיבוי המצב המורחב"
+    },
+    "extendedOffTitle": {
+        "message": "התוסף יפסיק לראות את כתובות ה-IP והכותרות של השרתים, לנהל סטטיסטיקה ולהסתיר שטחי פרסומות וחלונות עוגיות בכל האתרים; הגישה לכל האתרים תבוטל. אפשר להפעיל אותו מחדש בכל עת"
+    },
+    "share": {
+        "message": "שיתוף"
+    },
+    "copied": {
+        "message": "הועתק"
+    },
+    "cookiesLabel": {
+        "message": "הסתרת חלונות הסכמה לעוגיות"
+    },
+    "cookiesTitle": {
+        "message": "חוסם שירותים של באנרים להסכמה לעוגיות. במצב מורחב מסתיר גם את הבאנרים עצמם בכל אתר"
+    },
+    "siteLabel": {
+        "message": "חסימה ב-$HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "בטלו את הסימון אם האתר לא עובד כראוי: פרסומות ורכיבי מעקב לא ייחסמו בו עוד. הדף ייטען מחדש"
+    },
+    "guess": {
+        "message": "זוהה לפי סימנים עקיפים — ייתכן שאינו מדויק"
+    },
+    "weightTitle": {
+        "message": "גודל הדף כולל כל הקבצים"
+    },
+    "weightEstimated": {
+        "message": "הגודל המדויק ידוע עבור $KNOWN$ מתוך $TOTAL$ קבצים, השאר מוערכים: אתרי צד שלישי מסתירים את הגודל",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "הדף דחוס: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "ללא דחיסה"
+    },
+    "compressionOff": {
+        "message": "הדף נשלח ללא דחיסה — הוא נטען לאט יותר"
+    },
+    "compressionUnknown": {
+        "message": "דחיסה לא ידועה (הדף נטען מהמטמון)"
+    },
+    "blockedCookies": {
+        "message": "חלונות עוגיות: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "גודל: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "לא נחסמו:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "נמצאו באתר:\n$LIST$\nאם הם חסומים — מוצג במצב המורחב",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "נחסמו:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "לא נמצאו מוכרות"
+    },
+    "serverExtended": {
+        "message": "במצב מורחב"
+    },
+    "serverReload": {
+        "message": "טענו את הדף מחדש"
+    },
+    "serverReloadTitle": {
+        "message": "השרת מזוהה בזמן טעינת הדף"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "ספק אחר"
+    },
+    "serverProxy": {
+        "message": "האתר פועל מאחורי $NAME$ (CDN או הגנה מפני DDoS) — השרת האמיתי מוסתר",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "אחסון: $NAME$ (ממאגר הכתובות של RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "המדינה נקבעת לפי הספק"
+    },
+    "techFound": {
+        "message": "נמצא בדף"
+    },
+    "techNone": {
+        "message": "לא זוהה"
+    },
+    "techNoneTitle": {
+        "message": "לא נמצאו סימנים למנועים או לספריות מוכרים"
+    },
+    "ipv6": {
+        "message": "מחובר דרך IPv6"
+    },
+    "ipv4": {
+        "message": "מחובר דרך IPv4. זה לא אומר אם האתר תומך ב-IPv6: זה תלוי גם ברשת שלך"
+    },
+    "hstsOn": {
+        "message": "HSTS: הדפדפן תמיד פותח את האתר רק דרך HTTPS"
+    },
+    "hstsOff": {
+        "message": "אין HSTS: הביקור הראשון באתר עלול להתבצע ללא הצפנה"
+    },
+    "mixed": {
+        "message": "קובצי HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "דף ה-HTTPS טוען קבצים ללא הצפנה: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "ציון $SCORE$ מתוך 10 לפי:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "הצפנה"
+    },
+    "scoreProtocol": {
+        "message": "פרוטוקול"
+    },
+    "scoreSpeed": {
+        "message": "מהירות טעינה"
+    },
+    "scoreWeight": {
+        "message": "גודל הדף"
+    },
+    "scoreTrackers": {
+        "message": "מעקב"
+    },
+    "scoreDomains": {
+        "message": "דומיינים של צד שלישי"
+    },
+    "scoreCompression": {
+        "message": "דחיסה"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "תוכן מעורב"
+    },
+    "stats": {
+        "message": "סה״כ בקשות שנחסמו: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "מאז $DATE$. הגודל מוערך לפי הגודל הממוצע של קובצי פרסומות",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "דוח על האתר — כתמונה או כטקסט"
+    },
+    "reportTitle": {
+        "message": "ציון ופרטי האתר כתמונה או כטקסט — לעמיתים, לקבלן או לצ׳אט"
+    },
+    "reportDone": {
+        "message": "נשמר"
+    },
+    "copyIp": {
+        "message": "העתקת IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "העתקת תמונה"
+    },
+    "copyText": {
+        "message": "העתקת טקסט וקישור"
+    },
+    "shareSystem": {
+        "message": "עוד…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ציון $SCORE$ מתוך 10 ב-ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "בדקו את האתר שלכם:"
+    },
+    "donate": {
+        "message": "תרומה"
+    },
+    "donateTitle": {
+        "message": "תמכו בפיתוח ב-Boosty"
+    },
+    "askStats": {
+        "message": "בקשות שנחסמו: $COUNT$, נחסכו ≈ $SIZE$. אם ABlock מועיל לכם, תמכו בפיתוח",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "אתם משתמשים ב-ABlock כבר חודש. אם הוא מועיל לכם, תמכו בפיתוח"
+    },
+    "askClose": {
+        "message": "אל תציג שוב"
+    },
+    "reportLegendGuess": {
+        "message": "? — זוהה לפי סימנים עקיפים"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — הערכה גסה"
+    },
+    "companiesNoneTitle": {
+        "message": "אין בדף זה חברות מהמדריך של ABlock. ייתכן שעדיין יש מונים של האתר עצמו — הם נספרים בתג „רכיבי מעקב”"
+    },
+    "compressionFiles": {
+        "message": "קובצי טקסט: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "לא דחוסים: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "מחיקת נתוני האתר וטעינה מחדש: עוגיות, מטמון ואחסון. התגים והציון יציגו את האתר כפי שמבקר חדש רואה אותו. תנותקו מהחשבון באתר זה"
+    },
+    "clearConfirm": {
+        "message": "למחוק?"
+    },
+    "saveImage": {
+        "message": "שמירת תמונה"
+    },
+    "shareSend": {
+        "message": "שליחה דרך $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "פרסום ב-$NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "נשלח כטקסט: אי אפשר להעביר תמונה בלי להעלות אותה לשרת — העתיקו אותה והדביקו בהודעה"
+    },
+    "shareLinkOnly": {
+        "message": "מועבר רק הקישור לתוסף — העתיקו את תמונת הדוח והדביקו אותה בפוסט"
+    },
+    "auditLabel": {
+        "message": "פרטים"
+    },
+    "auditIssues": {
+        "message": "בעיות: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "אין בעיות"
+    },
+    "auditSpeed": {
+        "message": "מהירות"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "סימון"
+    },
+    "auditA11y": {
+        "message": "נגישות"
+    },
+    "auditSecurity": {
+        "message": "אבטחה"
+    },
+    "auditYes": {
+        "message": "כן"
+    },
+    "auditNo": {
+        "message": "לא"
+    },
+    "auditLength": {
+        "message": "$COUNT$ תווים",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "דומיין אחר"
+    },
+    "auditNoImage": {
+        "message": "ללא תמונה"
+    },
+    "auditNoInput": {
+        "message": "לא היו פעולות"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ מתוך $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "תזוזות פריסה"
+    },
+    "auditTtfb": {
+        "message": "תגובת השרת (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "כמה זמן לקח לקבל מהשרת את הבייט הראשון של הדף. טוב — פחות מ-0.8 שנ׳"
+    },
+    "auditFcp": {
+        "message": "ציור ראשון (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "מתי הופיע התוכן הראשון על המסך. טוב — פחות מ-1.8 שנ׳"
+    },
+    "auditLcp": {
+        "message": "הבלוק הראשי (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "מתי צויר הבלוק הגדול ביותר — תמונה או טקסט. מדד המהירות העיקרי של Google. טוב — פחות מ-2.5 שנ׳"
+    },
+    "auditCls": {
+        "message": "תזוזות פריסה (CLS)"
+    },
+    "auditClsHint": {
+        "message": "כמה התוכן קופץ בזמן הטעינה. טוב — פחות מ-0.1"
+    },
+    "auditInp": {
+        "message": "תגובה לפעולות (INP)"
+    },
+    "auditInpHint": {
+        "message": "העיכוב הארוך ביותר בתגובה ללחיצה או להקלדה. טוב — פחות מ-200 מ״ש"
+    },
+    "auditBlocking": {
+        "message": "חוסמים רינדור"
+    },
+    "auditBlockingHint": {
+        "message": "קבצים שהדפדפן ממתין להם לפני שהוא מתחיל לצייר את הדף. גיליונות סגנון זה בסדר, אבל עדיף לטעון סקריפטים עם async או defer"
+    },
+    "auditStatus": {
+        "message": "קוד סטטוס"
+    },
+    "auditStatusHint": {
+        "message": "סטטוס ה-HTTP של הדף: 200 — תקין, 4xx ו-5xx — שגיאה"
+    },
+    "auditNoindex": {
+        "message": "האינדוקס חסום"
+    },
+    "auditNoindexHint": {
+        "message": "הדף מוסתר ממנועי חיפוש בתגית noindex או בכלל ב-robots.txt. בדפי התחברות ובחשבונות משתמש זה רגיל"
+    },
+    "auditTitle": {
+        "message": "כותרת (title)"
+    },
+    "auditTitleHint": {
+        "message": "טקסט הקישור בתוצאות החיפוש ושם הכרטיסייה. מיטבי — 10–70 תווים"
+    },
+    "auditDescription": {
+        "message": "תיאור (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "הטקסט שמתחת לקישור בתוצאות החיפוש. מיטבי — 50–170 תווים"
+    },
+    "auditH1": {
+        "message": "כותרות h1"
+    },
+    "auditH1Hint": {
+        "message": "הכותרת הראשית של הדף. בדרך כלל יש אחת"
+    },
+    "auditCanonical": {
+        "message": "כתובת URL קנונית"
+    },
+    "auditCanonicalHint": {
+        "message": "מציינת למנועי החיפוש את הכתובת הראשית של הדף אם יש לו עותקים"
+    },
+    "auditOg": {
+        "message": "תצוגה מקדימה של קישור (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "כותרת ותמונה ש-Telegram,‏ Slack ושירותים אחרים מציגים כשמשתפים קישור"
+    },
+    "auditViewport": {
+        "message": "גרסה לנייד (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "בלי meta viewport הטלפונים מציגים את הדף כגרסת מחשב מוקטנת"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "בלעדיו הדפדפן עובר למצב תאימות לאתרים ישנים והפריסה עלולה להשתנות"
+    },
+    "auditNoSize": {
+        "message": "תמונות בלי מידות"
+    },
+    "auditNoSizeHint": {
+        "message": "בלי width ו-height הדפדפן לא יודע כמה מקום לשמור לתמונה, והפריסה קופצת כשהיא נטענת"
+    },
+    "auditLarge": {
+        "message": "תמונות גדולות מדי"
+    },
+    "auditLargeHint": {
+        "message": "התמונה נשלחת גדולה בהרבה ממה שהיא מוצגת — משקל מיותר"
+    },
+    "auditModern": {
+        "message": "תמונות WebP ו-AVIF"
+    },
+    "auditModernHint": {
+        "message": "פורמטים אלה קטנים ב-25–50% מ-JPEG ו-PNG"
+    },
+    "auditLang": {
+        "message": "שפת הדף (lang)"
+    },
+    "auditLangHint": {
+        "message": "נחוצה לקוראי מסך, למתרגמים ולמנועי חיפוש"
+    },
+    "auditAlt": {
+        "message": "תמונות בלי alt"
+    },
+    "auditAltHint": {
+        "message": "תיאור התמונה למשתמשים עיוורים ולמקרה שהיא לא נטענת"
+    },
+    "auditLabels": {
+        "message": "שדות בלי תוויות"
+    },
+    "auditLabelsHint": {
+        "message": "קורא מסך לא יוכל לומר מה צריך להזין בשדה"
+    },
+    "auditNames": {
+        "message": "כפתורים וקישורים בלי שם"
+    },
+    "auditNamesHint": {
+        "message": "למשל כפתור סמל בלי aria-label: משתמש עיוור ישמע רק „כפתור”"
+    },
+    "auditMain": {
+        "message": "האזור הראשי (main)"
+    },
+    "auditMainHint": {
+        "message": "מאפשר לדלג ישר לתוכן ולעקוף את התפריט"
+    },
+    "auditZoom": {
+        "message": "הגדלה מושבתת"
+    },
+    "auditZoomHint": {
+        "message": "מונע מלקויי ראייה להגדיל את הדף בטלפון"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "מגבילה מאילו מקורות הדף יכול לטעון סקריפטים — הגנה מפני XSS. אם יש בה 'unsafe-inline' בלי nonce או hash, היא כמעט לא מגינה"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "אוסר על הדפדפן לנחש סוגי קבצים — הגנה מפני זיוף סקריפטים"
+    },
+    "auditFrame": {
+        "message": "הגנה מפני הטמעה"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options או frame-ancestors מונעים הטמעה של האתר בדף זר כדי להונות משתמשים ללחוץ"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "כמה מכתובת הדף מועבר לאתרים אחרים במעבר. בלי הכותרת הדפדפן משתמש בערך ברירת מחדל בטוח"
+    },
+    "auditCache": {
+        "message": "מטמון הדף"
+    },
+    "auditCacheHint": {
+        "message": "מאיפה הגיע הדף: HIT — ממטמון השרת או ה-CDN, MISS — נבנה מחדש. דפים עצמם נשמרים במטמון לעיתים רחוקות; בדרך כלל תמונות, סקריפטים וגיליונות סגנון"
+    },
+    "auditCacheBrowser": {
+        "message": "ממטמון הדפדפן"
+    },
+    "auditBots": {
+        "message": "רובוטים ובינה מלאכותית"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "כללים למנועי חיפוש ולרובוטים אחרים. בלי הקובץ רובוטים סורקים הכול, ומנועי החיפוש לא יודעים איפה מפת האתר"
+    },
+    "auditSitemap": {
+        "message": "מפת אתר"
+    },
+    "auditSitemapHint": {
+        "message": "רשימת דפים למנועי חיפוש. מצוינת ב-robots.txt בשורת Sitemap:"
+    },
+    "auditAi": {
+        "message": "כללים לבוטים של בינה מלאכותית"
+    },
+    "auditAiHint": {
+        "message": "האם בוטים של בינה מלאכותית רשאים לאסוף את טקסטי האתר לרשתות נוירונים — לפי כללי robots.txt שמזכירים את הבוט בשמו. התוסף מכיר 16 בוטים כאלה (GPTBot,‏ ClaudeBot,‏ Google-Extended ועוד); בוטים בשמות אחרים לא נספרים. „סגור לכולם” — האתר סגור לכל הרובוטים דרך User-agent: *, בלי כללים נפרדים לבינה מלאכותית"
+    },
+    "auditAiBlocked": {
+        "message": "חסומים: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "מותר"
+    },
+    "auditAiNone": {
+        "message": "לא הוגדר"
+    },
+    "auditAiAll": {
+        "message": "סגור לכולם"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "פורמט חדש: תיאור קצר של האתר ב-Markdown לעוזרים ולסוכנים של בינה מלאכותית. בינתיים אופציונלי"
+    },
+    "auditCspWeak": {
+        "message": "חלשה"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "אוסר על הדף ועל מסגרות מוטמעות גישה למצלמה, למיקום וליכולות אחרות של הדפדפן"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "מבודד את חלון האתר מחלונות אחרים שהוא פותח — הגנה מפני מתקפות דרך window.opener"
+    },
+    "auditVersions": {
+        "message": "גרסאות תוכנה בכותרות"
+    },
+    "auditVersionsHint": {
+        "message": "השרת חושף גרסאות תוכנה — רמז לתוקפים אילו פגיעויות ידועות לנסות. כדי להסתיר: server_tokens off ב-nginx וב-Angie,‏ expose_php = Off ב-PHP"
+    },
+    "auditHidden": {
+        "message": "מוסתרות"
+    },
+    "auditSession": {
+        "message": "עוגיות סשן קריאות לסקריפטים"
+    },
+    "auditSessionHint": {
+        "message": "נראה שאפשר לקרוא את עוגיות ההתחברות מ-JavaScript: עם XSS אפשר לגנוב אותן. הדגל HttpOnly מונע זאת. זוהה לפי שם העוגייה"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "פרטי קשר לדיווח על פגיעויות ב-/.well-known/security.txt. עוזר לחוקר לדווח לכם על הבעיה במקום למכור אותה"
+    },
+    "serverUnknownTitle": {
+        "message": "הרשתות של ספק זה אינן במאגר של ABlock: הוא כולל ספקי אחסון גדולים, עננים ו-CDN"
+    },
+    "protocolH3Later": {
+        "message": "השרת תומך ב-HTTP/3. הדף הזה הגיע דרך $PROTOCOL$ — כך קורה בביקור הראשון: הדפדפן לומד על HTTP/3 מתגובת השרת ועובר אליו בבקשות הבאות",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "שפת הדפדפן"
+    },
+    "langTitle": {
+        "message": "שפת הממשק"
+    },
+    "noteTitle": {
+        "message": "הערה לאתר"
+    },
+    "notePlaceholder": {
+        "message": "הערה לאתר, גלויה רק לך"
+    },
+    "incognitoLabel": {
+        "message": "לפעול גם במצב גלישה בסתר"
+    },
+    "incognitoTitle": {
+        "message": "ייפתחו הגדרות התוספים של הדפדפן — הפעילו שם עבור ABlock את ההרשאה במצב גלישה בסתר"
+    }
+}

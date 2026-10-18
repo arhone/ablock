@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "nl",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Advertentieblokker en sitecheck"
+    },
+    "extDescription": {
+        "message": "Blokkeert advertenties en trackers: snellere pagina's, minder data. Controleert snelheid, beveiliging en tracking van elke site."
+    },
+    "toggle": {
+        "message": "Aan / uit"
+    },
+    "statusOn": {
+        "message": "Bescherming staat aan"
+    },
+    "statusOff": {
+        "message": "Bescherming staat uit"
+    },
+    "statusSiteOff": {
+        "message": "Bescherming staat uit op deze site"
+    },
+    "telegram": {
+        "message": "Telegram-groep"
+    },
+    "github": {
+        "message": "Bijdragen op GitHub"
+    },
+    "httpsOn": {
+        "message": "Verbinding is versleuteld"
+    },
+    "httpsOff": {
+        "message": "Verbinding is niet versleuteld"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — het snelste protocol"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — een modern protocol"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — een verouderd protocol",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protocol onbekend (pagina uit cache geladen)"
+    },
+    "loading": {
+        "message": "Laden…"
+    },
+    "loadingTitle": {
+        "message": "De pagina wordt nog geladen"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Laadtijd van de pagina"
+    },
+    "domains": {
+        "message": "Domeinen $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Domeinen van derden:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…nog $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Geen domeinen van derden"
+    },
+    "blocked": {
+        "message": "Geblokkeerd $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Trackers $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Geblokkeerd op deze pagina\nAdvertenties: $ADS$\nTrackers: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Deze site volgt je. Trackers geblokkeerd: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Geen trackers gevonden"
+    },
+    "scoreLabel": {
+        "message": "Sitescore"
+    },
+    "serverLabel": {
+        "message": "Server"
+    },
+    "techLabel": {
+        "message": "Gebouwd met"
+    },
+    "companiesLabel": {
+        "message": "Gevolgd door"
+    },
+    "extraLabel": {
+        "message": "Meer"
+    },
+    "extendedText": {
+        "message": "Uitgebreide modus: hosting, IPv6, HSTS, statistieken en verbergen van advertentieruimtes en cookiepop-ups op alle sites. Gegevens verlaten je browser nooit."
+    },
+    "extendedButton": {
+        "message": "Aanzetten"
+    },
+    "extendedOff": {
+        "message": "Uitgebreide modus uitzetten"
+    },
+    "extendedOffTitle": {
+        "message": "De extensie ziet dan geen server-IP's en headers meer, houdt geen statistieken meer bij en verbergt geen advertentieruimtes en cookiepop-ups meer op alle sites; de toegang tot alle sites wordt ingetrokken. Je kunt het altijd weer aanzetten"
+    },
+    "share": {
+        "message": "Delen"
+    },
+    "copied": {
+        "message": "Gekopieerd"
+    },
+    "cookiesLabel": {
+        "message": "Cookietoestemmingspop-ups verbergen"
+    },
+    "cookiesTitle": {
+        "message": "Blokkeert diensten voor cookietoestemmingsbanners. In de uitgebreide modus verbergt het ook de banners zelf op elke site"
+    },
+    "siteLabel": {
+        "message": "Blokkeren op $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Vink uit als de site niet goed werkt: advertenties en trackers worden er dan niet meer geblokkeerd. De pagina wordt opnieuw geladen"
+    },
+    "guess": {
+        "message": "Bepaald aan de hand van indirecte aanwijzingen — mogelijk onnauwkeurig"
+    },
+    "weightTitle": {
+        "message": "Paginagrootte met alle bestanden"
+    },
+    "weightEstimated": {
+        "message": "De exacte grootte is bekend voor $KNOWN$ van $TOTAL$ bestanden, de rest is geschat: sites van derden verbergen de grootte",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Pagina is gecomprimeerd: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Geen compressie"
+    },
+    "compressionOff": {
+        "message": "De pagina wordt ongecomprimeerd verstuurd — hij laadt trager"
+    },
+    "compressionUnknown": {
+        "message": "Compressie onbekend (pagina uit cache geladen)"
+    },
+    "blockedCookies": {
+        "message": "Cookiepop-ups: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Grootte: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Niet geblokkeerd:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Gevonden op de site:\n$LIST$\nOf ze geblokkeerd zijn, zie je in de uitgebreide modus",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Geblokkeerd:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "geen bekende gevonden"
+    },
+    "serverExtended": {
+        "message": "in uitgebreide modus"
+    },
+    "serverReload": {
+        "message": "laad de pagina opnieuw"
+    },
+    "serverReloadTitle": {
+        "message": "De server wordt bepaald terwijl de pagina laadt"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "andere provider"
+    },
+    "serverProxy": {
+        "message": "De site draait achter $NAME$ (CDN of DDoS-bescherming) — de echte server is verborgen",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Hosting: $NAME$ (uit de RIPE-adresdatabase)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Het land wordt bepaald aan de hand van de provider"
+    },
+    "techFound": {
+        "message": "Gevonden op de pagina"
+    },
+    "techNone": {
+        "message": "niet gevonden"
+    },
+    "techNoneTitle": {
+        "message": "Geen sporen van bekende engines of bibliotheken gevonden"
+    },
+    "ipv6": {
+        "message": "Verbonden via IPv6"
+    },
+    "ipv4": {
+        "message": "Verbonden via IPv4. Dit zegt niet of de site IPv6 ondersteunt: dat hangt ook af van je netwerk"
+    },
+    "hstsOn": {
+        "message": "HSTS: de browser opent de site altijd alleen via HTTPS"
+    },
+    "hstsOff": {
+        "message": "Geen HSTS: het eerste bezoek aan de site kan zonder versleuteling plaatsvinden"
+    },
+    "mixed": {
+        "message": "HTTP-bestanden $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "De HTTPS-pagina laadt bestanden zonder versleuteling: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Score $SCORE$ van 10 op basis van:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Versleuteling"
+    },
+    "scoreProtocol": {
+        "message": "Protocol"
+    },
+    "scoreSpeed": {
+        "message": "Laadsnelheid"
+    },
+    "scoreWeight": {
+        "message": "Paginagrootte"
+    },
+    "scoreTrackers": {
+        "message": "Tracking"
+    },
+    "scoreDomains": {
+        "message": "Domeinen van derden"
+    },
+    "scoreCompression": {
+        "message": "Compressie"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Gemengde inhoud"
+    },
+    "stats": {
+        "message": "Totaal geblokkeerde verzoeken: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Sinds $DATE$. De grootte is geschat op basis van de gemiddelde grootte van advertentiebestanden",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Sitereport — als afbeelding of tekst"
+    },
+    "reportTitle": {
+        "message": "Sitescore en details als afbeelding of tekst — voor collega's, een opdrachtnemer of een chat"
+    },
+    "reportDone": {
+        "message": "Opgeslagen"
+    },
+    "copyIp": {
+        "message": "IP $IP$ kopiëren",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Afbeelding kopiëren"
+    },
+    "copyText": {
+        "message": "Tekst en link kopiëren"
+    },
+    "shareSystem": {
+        "message": "Meer…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — score $SCORE$ van 10 in ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Controleer je site:"
+    },
+    "donate": {
+        "message": "Doneren"
+    },
+    "donateTitle": {
+        "message": "Steun de ontwikkeling op Boosty"
+    },
+    "askStats": {
+        "message": "Geblokkeerde verzoeken: $COUNT$, bespaard ≈ $SIZE$. Heb je iets aan ABlock? Steun dan de ontwikkeling",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Je gebruikt ABlock al een maand. Heb je er iets aan? Steun dan de ontwikkeling"
+    },
+    "askClose": {
+        "message": "Niet meer tonen"
+    },
+    "reportLegendGuess": {
+        "message": "? — bepaald aan de hand van indirecte aanwijzingen"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — ruwe schatting"
+    },
+    "companiesNoneTitle": {
+        "message": "Geen bedrijven uit de ABlock-lijst op deze pagina. Eigen tellers van de site kunnen er nog steeds zijn — die worden geteld door het label ‘Trackers’"
+    },
+    "compressionFiles": {
+        "message": "Tekstbestanden: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Ongecomprimeerd: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Sitegegevens verwijderen en opnieuw laden: cookies, cache en opslag. Labels en score tonen de site zoals een nieuwe bezoeker hem ziet. Je wordt op deze site uitgelogd"
+    },
+    "clearConfirm": {
+        "message": "Verwijderen?"
+    },
+    "saveImage": {
+        "message": "Afbeelding opslaan"
+    },
+    "shareSend": {
+        "message": "Versturen via $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Plaatsen op $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Wordt als tekst verstuurd: een afbeelding kan niet worden doorgegeven zonder die naar een server te uploaden — kopieer hem en plak hem in het bericht"
+    },
+    "shareLinkOnly": {
+        "message": "Alleen de link naar de extensie wordt doorgegeven — kopieer de reportafbeelding en plak die in het bericht"
+    },
+    "auditLabel": {
+        "message": "Details"
+    },
+    "auditIssues": {
+        "message": "problemen: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "geen problemen"
+    },
+    "auditSpeed": {
+        "message": "Snelheid"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Opmaak"
+    },
+    "auditA11y": {
+        "message": "Toegankelijkheid"
+    },
+    "auditSecurity": {
+        "message": "Beveiliging"
+    },
+    "auditYes": {
+        "message": "ja"
+    },
+    "auditNo": {
+        "message": "nee"
+    },
+    "auditLength": {
+        "message": "$COUNT$ tekens",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "ander domein"
+    },
+    "auditNoImage": {
+        "message": "geen afbeelding"
+    },
+    "auditNoInput": {
+        "message": "geen interactie"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ van $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Indelingsverschuivingen"
+    },
+    "auditTtfb": {
+        "message": "Serverrespons (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Hoe lang het duurde om de eerste byte van de pagina van de server te krijgen. Goed — onder 0,8 s"
+    },
+    "auditFcp": {
+        "message": "Eerste weergave (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Wanneer de eerste inhoud op het scherm verscheen. Goed — onder 1,8 s"
+    },
+    "auditLcp": {
+        "message": "Hoofdblok (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Wanneer het grootste blok — een afbeelding of tekst — werd weergegeven. De belangrijkste snelheidsmaatstaf van Google. Goed — onder 2,5 s"
+    },
+    "auditCls": {
+        "message": "Indelingsverschuivingen (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Hoeveel de inhoud verspringt tijdens het laden. Goed — onder 0,1"
+    },
+    "auditInp": {
+        "message": "Reactie op interactie (INP)"
+    },
+    "auditInpHint": {
+        "message": "De langste vertraging bij het reageren op een klik of invoer. Goed — onder 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Blokkeren weergave"
+    },
+    "auditBlockingHint": {
+        "message": "Bestanden waar de browser op wacht voordat hij de pagina gaat tekenen. Stijlen zijn prima, maar scripts kun je beter laden met async of defer"
+    },
+    "auditStatus": {
+        "message": "Statuscode"
+    },
+    "auditStatusHint": {
+        "message": "HTTP-status van de pagina: 200 — OK, 4xx en 5xx — fout"
+    },
+    "auditNoindex": {
+        "message": "Indexering geblokkeerd"
+    },
+    "auditNoindexHint": {
+        "message": "De pagina is verborgen voor zoekmachines met een noindex-tag of een regel in robots.txt. Dat is normaal voor inlogpagina's en gebruikersaccounts"
+    },
+    "auditTitle": {
+        "message": "Titel (title)"
+    },
+    "auditTitleHint": {
+        "message": "Linktekst in zoekresultaten en de naam van het tabblad. Het best — 10–70 tekens"
+    },
+    "auditDescription": {
+        "message": "Beschrijving (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Tekst onder de link in zoekresultaten. Het best — 50–170 tekens"
+    },
+    "auditH1": {
+        "message": "h1-koppen"
+    },
+    "auditH1Hint": {
+        "message": "De hoofdkop van de pagina. Meestal is er één"
+    },
+    "auditCanonical": {
+        "message": "Canonieke URL"
+    },
+    "auditCanonicalHint": {
+        "message": "Vertelt zoekmachines het hoofdadres van de pagina als die kopieën heeft"
+    },
+    "auditOg": {
+        "message": "Linkvoorbeeld (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Titel en afbeelding die Telegram, Slack en andere diensten tonen wanneer een link wordt gedeeld"
+    },
+    "auditViewport": {
+        "message": "Mobiele versie (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Zonder meta viewport tonen telefoons de pagina als een verkleinde desktopversie"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Zonder DOCTYPE schakelt de browser over naar de compatibiliteitsmodus voor oude sites en kan de indeling afwijken"
+    },
+    "auditNoSize": {
+        "message": "Afbeeldingen zonder afmetingen"
+    },
+    "auditNoSizeHint": {
+        "message": "Zonder width en height weet de browser niet hoeveel ruimte hij voor een afbeelding moet reserveren, en verspringt de indeling bij het laden"
+    },
+    "auditLarge": {
+        "message": "Te grote afbeeldingen"
+    },
+    "auditLargeHint": {
+        "message": "De afbeelding wordt merkbaar groter verstuurd dan ze wordt weergegeven — overbodig gewicht"
+    },
+    "auditModern": {
+        "message": "WebP- en AVIF-afbeeldingen"
+    },
+    "auditModernHint": {
+        "message": "Deze formaten zijn 25–50% kleiner dan JPEG en PNG"
+    },
+    "auditLang": {
+        "message": "Paginataal (lang)"
+    },
+    "auditLangHint": {
+        "message": "Nodig voor schermlezers, vertaalprogramma's en zoekmachines"
+    },
+    "auditAlt": {
+        "message": "Afbeeldingen zonder alt"
+    },
+    "auditAltHint": {
+        "message": "Een beschrijving van de afbeelding voor blinde gebruikers en voor als ze niet laadt"
+    },
+    "auditLabels": {
+        "message": "Velden zonder label"
+    },
+    "auditLabelsHint": {
+        "message": "Een schermlezer kan niet vertellen wat er in het veld moet"
+    },
+    "auditNames": {
+        "message": "Knoppen en links zonder naam"
+    },
+    "auditNamesHint": {
+        "message": "Bijvoorbeeld een pictogramknop zonder aria-label: een blinde gebruiker hoort alleen ‘knop’"
+    },
+    "auditMain": {
+        "message": "Hoofdgebied (main)"
+    },
+    "auditMainHint": {
+        "message": "Laat gebruikers direct naar de inhoud springen en het menu overslaan"
+    },
+    "auditZoom": {
+        "message": "Zoomen uitgeschakeld"
+    },
+    "auditZoomHint": {
+        "message": "Slechtziende gebruikers kunnen de pagina op een telefoon niet vergroten"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Beperkt waar de pagina scripts vandaan mag laden — bescherming tegen XSS. Bevat ze 'unsafe-inline' zonder nonce of hash, dan beschermt ze nauwelijks"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Voorkomt dat de browser bestandstypen raadt — bescherming tegen vervalste scripts"
+    },
+    "auditFrame": {
+        "message": "Bescherming tegen framing"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options of frame-ancestors voorkomen dat de site in een andere pagina wordt ingesloten om gebruikers tot klikken te verleiden"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Hoeveel van het paginaadres bij het navigeren aan andere sites wordt doorgegeven. Zonder de header gebruikt de browser een veilige standaardwaarde"
+    },
+    "auditCache": {
+        "message": "Paginacache"
+    },
+    "auditCacheHint": {
+        "message": "Waar de pagina vandaan kwam: HIT — uit de cache van de server of het CDN, MISS — opnieuw opgebouwd. Pagina's zelf worden zelden gecachet; meestal afbeeldingen, scripts en stijlen"
+    },
+    "auditCacheBrowser": {
+        "message": "uit browsercache"
+    },
+    "auditBots": {
+        "message": "Robots en AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Regels voor zoekmachines en andere robots. Zonder het bestand doorzoeken robots alles en weten zoekmachines niet waar de sitemap staat"
+    },
+    "auditSitemap": {
+        "message": "Sitemap"
+    },
+    "auditSitemapHint": {
+        "message": "Een lijst met pagina's voor zoekmachines. Wordt in robots.txt aangegeven met een regel Sitemap:"
+    },
+    "auditAi": {
+        "message": "Regels voor AI-bots"
+    },
+    "auditAiHint": {
+        "message": "Of AI-bots de teksten van de site mogen verzamelen voor neurale netwerken — op basis van regels in robots.txt die de bot bij naam noemen. De extensie kent 16 zulke bots (GPTBot, ClaudeBot, Google-Extended enz.); bots met andere namen worden niet meegeteld. ‘Gesloten voor iedereen’ — de site is via User-agent: * gesloten voor alle robots, zonder aparte regels voor AI"
+    },
+    "auditAiBlocked": {
+        "message": "geblokkeerd: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "toegestaan"
+    },
+    "auditAiNone": {
+        "message": "niet ingesteld"
+    },
+    "auditAiAll": {
+        "message": "gesloten voor iedereen"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Een nieuw formaat: een korte Markdown-beschrijving van de site voor AI-assistenten en agents. Voorlopig optioneel"
+    },
+    "auditCspWeak": {
+        "message": "zwak"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Ontzegt de pagina en ingesloten frames toegang tot de camera, locatie en andere browserfuncties"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Isoleert het venster van de site van andere vensters die het opent — bescherming tegen aanvallen via window.opener"
+    },
+    "auditVersions": {
+        "message": "Softwareversies in headers"
+    },
+    "auditVersionsHint": {
+        "message": "De server verraadt softwareversies — een hint voor aanvallers welke bekende kwetsbaarheden ze kunnen proberen. Verbergen: server_tokens off in nginx en Angie, expose_php = Off in PHP"
+    },
+    "auditHidden": {
+        "message": "verborgen"
+    },
+    "auditSession": {
+        "message": "Sessiecookies leesbaar voor scripts"
+    },
+    "auditSessionHint": {
+        "message": "Inlogcookies lijken leesbaar vanuit JavaScript: bij XSS kunnen ze gestolen worden. De HttpOnly-vlag voorkomt dit. Bepaald aan de hand van de cookienaam"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Contactgegevens voor het melden van kwetsbaarheden in /.well-known/security.txt. Helpt een onderzoeker het probleem aan jou te melden in plaats van het te verkopen"
+    },
+    "serverUnknownTitle": {
+        "message": "De netwerken van deze provider staan niet in de ABlock-database: die bevat grote hostingproviders, clouds en CDN's"
+    },
+    "protocolH3Later": {
+        "message": "De server ondersteunt HTTP/3. Deze pagina kwam binnen via $PROTOCOL$ — dat gebeurt bij het eerste bezoek: de browser leert HTTP/3 kennen uit het antwoord van de server en schakelt er bij volgende verzoeken op over",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Browsertaal"
+    },
+    "langTitle": {
+        "message": "Interfacetaal"
+    },
+    "noteTitle": {
+        "message": "Notitie bij deze site"
+    },
+    "notePlaceholder": {
+        "message": "Notitie bij deze site, alleen zichtbaar voor jou"
+    },
+    "incognitoLabel": {
+        "message": "Werken in de incognitomodus"
+    },
+    "incognitoTitle": {
+        "message": "De extensie-instellingen van de browser worden geopend — zet daar voor ABlock de toestemming voor de incognitomodus aan"
+    }
+}

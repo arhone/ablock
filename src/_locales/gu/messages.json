@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "gu",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - જાહેરાત બ્લૉકર અને સાઇટ તપાસ"
+    },
+    "extDescription": {
+        "message": "જાહેરાતો અને ટ્રૅકર બ્લૉક કરે છે: પેજ ઝડપી, ડેટા ઓછો. કોઈપણ સાઇટની ઝડપ, સુરક્ષા અને ટ્રૅકિંગ તપાસે છે."
+    },
+    "toggle": {
+        "message": "ચાલુ / બંધ"
+    },
+    "statusOn": {
+        "message": "સુરક્ષા ચાલુ છે"
+    },
+    "statusOff": {
+        "message": "સુરક્ષા બંધ છે"
+    },
+    "statusSiteOff": {
+        "message": "આ સાઇટ પર સુરક્ષા બંધ છે"
+    },
+    "telegram": {
+        "message": "Telegram ગ્રૂપ"
+    },
+    "github": {
+        "message": "GitHub પર યોગદાન આપો"
+    },
+    "httpsOn": {
+        "message": "કનેક્શન એન્ક્રિપ્ટેડ છે"
+    },
+    "httpsOff": {
+        "message": "કનેક્શન એન્ક્રિપ્ટેડ નથી"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — સૌથી ઝડપી પ્રોટોકૉલ"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — આધુનિક પ્રોટોકૉલ"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — જૂનો પ્રોટોકૉલ",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "પ્રોટોકૉલ અજ્ઞાત (પેજ કૅશમાંથી લોડ થયું)"
+    },
+    "loading": {
+        "message": "લોડ થઈ રહ્યું છે…"
+    },
+    "loadingTitle": {
+        "message": "પેજ હજી લોડ થઈ રહ્યું છે"
+    },
+    "seconds": {
+        "message": "$SECONDS$ સે",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "પેજ લોડ થવાનો સમય"
+    },
+    "domains": {
+        "message": "ડોમેન $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "તૃતીય-પક્ષ ડોમેન:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…અને $COUNT$ વધુ",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "કોઈ તૃતીય-પક્ષ ડોમેન નથી"
+    },
+    "blocked": {
+        "message": "બ્લૉક $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "ટ્રેકર્સ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "આ પેજ પર બ્લૉક કર્યું\nજાહેરાતો: $ADS$\nટ્રેકર્સ: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "આ સાઇટ તમને ટ્રૅક કરે છે. બ્લૉક કરેલા ટ્રેકર્સ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "કોઈ ટ્રેકર મળ્યો નથી"
+    },
+    "scoreLabel": {
+        "message": "સાઇટનો સ્કોર"
+    },
+    "serverLabel": {
+        "message": "સર્વર"
+    },
+    "techLabel": {
+        "message": "બનાવેલ છે"
+    },
+    "companiesLabel": {
+        "message": "ટ્રૅક કરનાર"
+    },
+    "extraLabel": {
+        "message": "વધુ"
+    },
+    "extendedText": {
+        "message": "વિસ્તૃત મોડ: બધી સાઇટ્સ પર હોસ્ટિંગ, IPv6, HSTS, આંકડા અને જાહેરાતની જગ્યાઓ અને કૂકી પૉપ-અપ છુપાવવા. ડેટા ક્યારેય તમારા બ્રાઉઝરની બહાર જતો નથી."
+    },
+    "extendedButton": {
+        "message": "ચાલુ કરો"
+    },
+    "extendedOff": {
+        "message": "વિસ્તૃત મોડ બંધ કરો"
+    },
+    "extendedOffTitle": {
+        "message": "એક્સ્ટેંશન બધી સાઇટ્સ પર સર્વરના IP અને હેડર જોવાનું, આંકડા રાખવાનું અને જાહેરાતની જગ્યાઓ અને કૂકી પૉપ-અપ છુપાવવાનું બંધ કરશે; બધી સાઇટ્સની ઍક્સેસ રદ થશે. તમે કોઈપણ સમયે તેને ફરી ચાલુ કરી શકો છો"
+    },
+    "share": {
+        "message": "શેર કરો"
+    },
+    "copied": {
+        "message": "કૉપિ થયું"
+    },
+    "cookiesLabel": {
+        "message": "કૂકી સંમતિ પૉપ-અપ છુપાવો"
+    },
+    "cookiesTitle": {
+        "message": "કૂકી સંમતિ બૅનરની સેવાઓને બ્લૉક કરે છે. વિસ્તૃત મોડમાં કોઈપણ સાઇટ પર બૅનરને પણ છુપાવે છે"
+    },
+    "siteLabel": {
+        "message": "$HOST$ પર બ્લૉક કરો",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "જો સાઇટ બરાબર કામ ન કરે તો ટિક હટાવો: તેના પર જાહેરાતો અને ટ્રેકર્સ હવે બ્લૉક નહીં થાય. પેજ ફરી લોડ થશે"
+    },
+    "guess": {
+        "message": "પરોક્ષ સંકેતો પરથી શોધાયું — ચોક્કસ ન પણ હોય"
+    },
+    "weightTitle": {
+        "message": "બધી ફાઇલો સાથે પેજનું કદ"
+    },
+    "weightEstimated": {
+        "message": "$TOTAL$ માંથી $KNOWN$ ફાઇલોનું ચોક્કસ કદ જાણીતું છે, બાકીનું અંદાજિત છે: તૃતીય-પક્ષ સાઇટ્સ કદ છુપાવે છે",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "પેજ સંકુચિત છે: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "સંકોચન નથી"
+    },
+    "compressionOff": {
+        "message": "પેજ સંકોચન વિના મોકલાય છે — તે ધીમું લોડ થાય છે"
+    },
+    "compressionUnknown": {
+        "message": "સંકોચન અજ્ઞાત (પેજ કૅશમાંથી લોડ થયું)"
+    },
+    "blockedCookies": {
+        "message": "કૂકી પૉપ-અપ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "કદ: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "બ્લૉક નથી:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "સાઇટ પર મળ્યું:\n$LIST$\nતે બ્લૉક છે કે નહીં તે વિસ્તૃત મોડમાં દેખાય છે",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "બ્લૉક કર્યું:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "કોઈ જાણીતી મળી નથી"
+    },
+    "serverExtended": {
+        "message": "વિસ્તૃત મોડમાં"
+    },
+    "serverReload": {
+        "message": "પેજ ફરી લોડ કરો"
+    },
+    "serverReloadTitle": {
+        "message": "પેજ લોડ થતી વખતે સર્વર શોધાય છે"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "અન્ય પ્રદાતા"
+    },
+    "serverProxy": {
+        "message": "સાઇટ $NAME$ (CDN અથવા DDoS સુરક્ષા) પાછળ ચાલે છે — વાસ્તવિક સર્વર છુપાયેલું છે",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "હોસ્ટિંગ: $NAME$ (RIPE સરનામાં ડેટાબેઝમાંથી)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "દેશ પ્રદાતા પરથી નક્કી થાય છે"
+    },
+    "techFound": {
+        "message": "પેજ પર મળ્યું"
+    },
+    "techNone": {
+        "message": "શોધાયું નથી"
+    },
+    "techNoneTitle": {
+        "message": "જાણીતા એન્જિન કે લાઇબ્રેરીના કોઈ સંકેત મળ્યા નથી"
+    },
+    "ipv6": {
+        "message": "IPv6 દ્વારા કનેક્ટ થયેલ"
+    },
+    "ipv4": {
+        "message": "IPv4 દ્વારા કનેક્ટ થયેલ. આનાથી ખબર પડતી નથી કે સાઇટ IPv6 ને સપોર્ટ કરે છે કે નહીં: તે તમારા નેટવર્ક પર પણ આધાર રાખે છે"
+    },
+    "hstsOn": {
+        "message": "HSTS: બ્રાઉઝર હંમેશાં સાઇટ ફક્ત HTTPS દ્વારા ખોલે છે"
+    },
+    "hstsOff": {
+        "message": "HSTS નથી: સાઇટની પહેલી મુલાકાત એન્ક્રિપ્શન વિના થઈ શકે છે"
+    },
+    "mixed": {
+        "message": "HTTP ફાઇલો $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS પેજ એન્ક્રિપ્શન વિના ફાઇલો લોડ કરે છે: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "10 માંથી $SCORE$ સ્કોર, આના આધારે:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "એન્ક્રિપ્શન"
+    },
+    "scoreProtocol": {
+        "message": "પ્રોટોકૉલ"
+    },
+    "scoreSpeed": {
+        "message": "લોડ ઝડપ"
+    },
+    "scoreWeight": {
+        "message": "પેજનું કદ"
+    },
+    "scoreTrackers": {
+        "message": "ટ્રૅકિંગ"
+    },
+    "scoreDomains": {
+        "message": "તૃતીય-પક્ષ ડોમેન"
+    },
+    "scoreCompression": {
+        "message": "સંકોચન"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "મિશ્ર સામગ્રી"
+    },
+    "stats": {
+        "message": "કુલ બ્લૉક કરેલી વિનંતીઓ: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "$DATE$ થી. કદ જાહેરાત ફાઇલોના સરેરાશ કદ પરથી અંદાજવામાં આવ્યું છે",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "સાઇટ રિપોર્ટ — છબી અથવા ટેક્સ્ટ તરીકે"
+    },
+    "reportTitle": {
+        "message": "સાઇટનો સ્કોર અને વિગતો છબી અથવા ટેક્સ્ટ તરીકે — સહકર્મીઓ, કૉન્ટ્રાક્ટર અથવા ચૅટ માટે"
+    },
+    "reportDone": {
+        "message": "સાચવ્યું"
+    },
+    "copyIp": {
+        "message": "IP $IP$ કૉપિ કરો",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "છબી કૉપિ કરો"
+    },
+    "copyText": {
+        "message": "ટેક્સ્ટ અને લિંક કૉપિ કરો"
+    },
+    "shareSystem": {
+        "message": "વધુ…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ABlock માં 10 માંથી $SCORE$ સ્કોર",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "તમારી સાઇટ તપાસો:"
+    },
+    "donate": {
+        "message": "દાન કરો"
+    },
+    "donateTitle": {
+        "message": "Boosty પર વિકાસને સમર્થન આપો"
+    },
+    "askStats": {
+        "message": "બ્લૉક કરેલી વિનંતીઓ: $COUNT$, બચત ≈ $SIZE$. ABlock ઉપયોગી હોય તો તેના વિકાસમાં સહયોગ આપો",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "તમે એક મહિનાથી ABlock વાપરો છો. ઉપયોગી હોય તો તેના વિકાસમાં સહયોગ આપો"
+    },
+    "askClose": {
+        "message": "ફરી બતાવશો નહીં"
+    },
+    "reportLegendGuess": {
+        "message": "? — પરોક્ષ સંકેતો પરથી શોધાયું"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — અંદાજિત મૂલ્ય"
+    },
+    "companiesNoneTitle": {
+        "message": "આ પેજ પર ABlock નિર્દેશિકાની કોઈ કંપની નથી. સાઇટના પોતાના કાઉન્ટર હજી પણ હોઈ શકે છે — તે «ટ્રેકર્સ» બૅજમાં ગણાય છે"
+    },
+    "compressionFiles": {
+        "message": "ટેક્સ્ટ ફાઇલો: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "સંકોચન વિના: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "સાઇટનો ડેટા કાઢી નાખો અને ફરી લોડ કરો: કૂકીઝ, કૅશ અને સ્ટોરેજ. બૅજ અને સ્કોર સાઇટને નવા મુલાકાતીની નજરે બતાવશે. તમે આ સાઇટમાંથી લૉગ આઉટ થઈ જશો"
+    },
+    "clearConfirm": {
+        "message": "કાઢી નાખવું છે?"
+    },
+    "saveImage": {
+        "message": "છબી સાચવો"
+    },
+    "shareSend": {
+        "message": "$NAME$ પર મોકલો",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "$NAME$ પર પોસ્ટ કરો",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "ટેક્સ્ટ તરીકે મોકલાય છે: સર્વર પર અપલોડ કર્યા વિના છબી મોકલી શકાતી નથી — તેને કૉપિ કરો અને સંદેશમાં પેસ્ટ કરો"
+    },
+    "shareLinkOnly": {
+        "message": "ફક્ત એક્સ્ટેંશનની લિંક મોકલાય છે — રિપોર્ટની છબી કૉપિ કરો અને પોસ્ટમાં પેસ્ટ કરો"
+    },
+    "auditLabel": {
+        "message": "વિગતો"
+    },
+    "auditIssues": {
+        "message": "સમસ્યાઓ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "કોઈ સમસ્યા નથી"
+    },
+    "auditSpeed": {
+        "message": "ઝડપ"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "માર્કઅપ"
+    },
+    "auditA11y": {
+        "message": "ઍક્સેસિબિલિટી"
+    },
+    "auditSecurity": {
+        "message": "સુરક્ષા"
+    },
+    "auditYes": {
+        "message": "હા"
+    },
+    "auditNo": {
+        "message": "ના"
+    },
+    "auditLength": {
+        "message": "$COUNT$ અક્ષર",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "અન્ય ડોમેન"
+    },
+    "auditNoImage": {
+        "message": "છબી નથી"
+    },
+    "auditNoInput": {
+        "message": "કોઈ ક્રિયાપ્રતિક્રિયા નથી"
+    },
+    "auditModernValue": {
+        "message": "$TOTAL$ માંથી $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "લેઆઉટ શિફ્ટ"
+    },
+    "auditTtfb": {
+        "message": "સર્વરનો પ્રતિસાદ (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "સર્વર પાસેથી પેજનો પહેલો બાઇટ મેળવવામાં કેટલો સમય લાગ્યો. સારું — 0.8 સે કરતાં ઓછું"
+    },
+    "auditFcp": {
+        "message": "પહેલું રેન્ડર (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "સ્ક્રીન પર પહેલી સામગ્રી ક્યારે દેખાઈ. સારું — 1.8 સે કરતાં ઓછું"
+    },
+    "auditLcp": {
+        "message": "મુખ્ય બ્લૉક (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "સૌથી મોટો બ્લૉક — છબી કે ટેક્સ્ટ — ક્યારે દોરાયો. Google નો મુખ્ય ઝડપ માપદંડ. સારું — 2.5 સે કરતાં ઓછું"
+    },
+    "auditCls": {
+        "message": "લેઆઉટ શિફ્ટ (CLS)"
+    },
+    "auditClsHint": {
+        "message": "લોડ થતી વખતે સામગ્રી કેટલી કૂદે છે. સારું — 0.1 કરતાં ઓછું"
+    },
+    "auditInp": {
+        "message": "ક્રિયાપ્રતિક્રિયાનો પ્રતિસાદ (INP)"
+    },
+    "auditInpHint": {
+        "message": "ક્લિક અથવા ઇનપુટનો પ્રતિસાદ આપવામાં સૌથી લાંબો વિલંબ. સારું — 200 મિલિસેકન્ડ કરતાં ઓછું"
+    },
+    "auditBlocking": {
+        "message": "રેન્ડરિંગ અટકાવે છે"
+    },
+    "auditBlockingHint": {
+        "message": "પેજ દોરવાનું શરૂ કરતાં પહેલાં બ્રાઉઝર જે ફાઇલોની રાહ જુએ છે. સ્ટાઇલ બરાબર છે, પણ સ્ક્રિપ્ટ async અથવા defer સાથે લોડ કરવી વધુ સારી"
+    },
+    "auditStatus": {
+        "message": "સ્ટેટસ કોડ"
+    },
+    "auditStatusHint": {
+        "message": "પેજનો HTTP સ્ટેટસ: 200 — બરાબર, 4xx અને 5xx — ભૂલ"
+    },
+    "auditNoindex": {
+        "message": "ઇન્ડેક્સિંગ પ્રતિબંધિત"
+    },
+    "auditNoindexHint": {
+        "message": "noindex ટૅગ અથવા robots.txt નિયમ વડે પેજ સર્ચ એન્જિનથી છુપાવાયું છે. લૉગિન પેજ અને યુઝર એકાઉન્ટ માટે આ સામાન્ય છે"
+    },
+    "auditTitle": {
+        "message": "શીર્ષક (title)"
+    },
+    "auditTitleHint": {
+        "message": "શોધ પરિણામોમાં લિંકનો ટેક્સ્ટ અને ટૅબનું નામ. શ્રેષ્ઠ — 10–70 અક્ષર"
+    },
+    "auditDescription": {
+        "message": "વર્ણન (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "શોધ પરિણામોમાં લિંક નીચેનો ટેક્સ્ટ. શ્રેષ્ઠ — 50–170 અક્ષર"
+    },
+    "auditH1": {
+        "message": "h1 હેડિંગ"
+    },
+    "auditH1Hint": {
+        "message": "પેજનું મુખ્ય હેડિંગ. સામાન્ય રીતે એક જ હોય છે"
+    },
+    "auditCanonical": {
+        "message": "કૅનોનિકલ URL"
+    },
+    "auditCanonicalHint": {
+        "message": "જો પેજની નકલો હોય તો સર્ચ એન્જિનને મુખ્ય સરનામું જણાવે છે"
+    },
+    "auditOg": {
+        "message": "લિંક પ્રીવ્યૂ (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "લિંક શેર કરતી વખતે Telegram, Slack અને અન્ય સેવાઓ જે શીર્ષક અને છબી બતાવે છે"
+    },
+    "auditViewport": {
+        "message": "મોબાઇલ સંસ્કરણ (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "meta viewport વિના ફોન પેજને નાનું કરેલું ડેસ્કટૉપ સંસ્કરણ તરીકે બતાવે છે"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "તેના વિના બ્રાઉઝર જૂની સાઇટ્સ માટેના સુસંગતતા મોડમાં જાય છે અને લેઆઉટ અલગ હોઈ શકે છે"
+    },
+    "auditNoSize": {
+        "message": "માપ વગરની છબીઓ"
+    },
+    "auditNoSizeHint": {
+        "message": "width અને height વિના બ્રાઉઝરને ખબર નથી કે છબી માટે કેટલી જગ્યા રાખવી, તેથી છબી લોડ થાય ત્યારે લેઆઉટ કૂદે છે"
+    },
+    "auditLarge": {
+        "message": "ખૂબ મોટી છબીઓ"
+    },
+    "auditLargeHint": {
+        "message": "છબી દેખાય છે તેના કરતાં નોંધપાત્ર રીતે મોટી મોકલાય છે — બિનજરૂરી વજન"
+    },
+    "auditModern": {
+        "message": "WebP અને AVIF છબીઓ"
+    },
+    "auditModernHint": {
+        "message": "આ ફૉર્મેટ JPEG અને PNG કરતાં 25–50% નાના છે"
+    },
+    "auditLang": {
+        "message": "પેજની ભાષા (lang)"
+    },
+    "auditLangHint": {
+        "message": "સ્ક્રીન રીડર, અનુવાદકો અને સર્ચ એન્જિન માટે જરૂરી"
+    },
+    "auditAlt": {
+        "message": "alt વગરની છબીઓ"
+    },
+    "auditAltHint": {
+        "message": "દૃષ્ટિહીન વપરાશકર્તાઓ માટે અને છબી લોડ ન થાય તો તે માટે છબીનું વર્ણન"
+    },
+    "auditLabels": {
+        "message": "લેબલ વગરના ફીલ્ડ"
+    },
+    "auditLabelsHint": {
+        "message": "સ્ક્રીન રીડર કહી શકશે નહીં કે ફીલ્ડમાં શું દાખલ કરવું"
+    },
+    "auditNames": {
+        "message": "નામ વગરના બટન અને લિંક"
+    },
+    "auditNamesHint": {
+        "message": "ઉદાહરણ તરીકે aria-label વગરનું આઇકન બટન: દૃષ્ટિહીન વપરાશકર્તાને ફક્ત «બટન» સંભળાશે"
+    },
+    "auditMain": {
+        "message": "મુખ્ય વિસ્તાર (main)"
+    },
+    "auditMainHint": {
+        "message": "મેનુ છોડીને સીધા સામગ્રી પર જવા દે છે"
+    },
+    "auditZoom": {
+        "message": "ઝૂમ બંધ છે"
+    },
+    "auditZoomHint": {
+        "message": "ઓછી દૃષ્ટિવાળા લોકોને ફોન પર પેજ મોટું કરતાં અટકાવે છે"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "પેજ ક્યાંથી સ્ક્રિપ્ટ લોડ કરી શકે તે મર્યાદિત કરે છે — XSS સામે સુરક્ષા. જો તેમાં nonce કે hash વિના 'unsafe-inline' હોય તો તે ભાગ્યે જ સુરક્ષા આપે છે"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "બ્રાઉઝરને ફાઇલનો પ્રકાર અનુમાનવા દેતું નથી — સ્ક્રિપ્ટની બનાવટ સામે સુરક્ષા"
+    },
+    "auditFrame": {
+        "message": "ફ્રેમમાં જડવા સામે સુરક્ષા"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options અથવા frame-ancestors વપરાશકર્તાઓને છેતરીને ક્લિક કરાવવા માટે સાઇટને બીજાના પેજમાં જડવાનું અટકાવે છે"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "બીજી સાઇટ પર જતી વખતે પેજના સરનામાનો કેટલો ભાગ મોકલાય છે. હેડર વિના બ્રાઉઝર સુરક્ષિત ડિફૉલ્ટ વાપરે છે"
+    },
+    "auditCache": {
+        "message": "પેજ કૅશ"
+    },
+    "auditCacheHint": {
+        "message": "પેજ ક્યાંથી આવ્યું: HIT — સર્વર કે CDN કૅશમાંથી, MISS — નવેસરથી બન્યું. પેજ પોતે ભાગ્યે જ કૅશ થાય છે; સામાન્ય રીતે છબીઓ, સ્ક્રિપ્ટ અને સ્ટાઇલ થાય છે"
+    },
+    "auditCacheBrowser": {
+        "message": "બ્રાઉઝર કૅશમાંથી"
+    },
+    "auditBots": {
+        "message": "રોબોટ અને AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "સર્ચ એન્જિન અને અન્ય રોબોટ માટેના નિયમો. આ ફાઇલ વિના રોબોટ બધું ક્રૉલ કરે છે અને સર્ચ એન્જિનને સાઇટમૅપ ક્યાં છે તે ખબર પડતી નથી"
+    },
+    "auditSitemap": {
+        "message": "સાઇટમૅપ"
+    },
+    "auditSitemapHint": {
+        "message": "સર્ચ એન્જિન માટે પેજની યાદી. robots.txt માં Sitemap: લાઇનથી દર્શાવાય છે"
+    },
+    "auditAi": {
+        "message": "AI બૉટ માટેના નિયમો"
+    },
+    "auditAiHint": {
+        "message": "AI બૉટ ન્યુરલ નેટવર્ક માટે સાઇટના ટેક્સ્ટ એકત્ર કરી શકે કે નહીં — બૉટનું નામ લેતા robots.txt નિયમોના આધારે. એક્સ્ટેંશન આવા 16 બૉટ જાણે છે (GPTBot, ClaudeBot, Google-Extended વગેરે); બીજા નામવાળા બૉટ ગણાતા નથી. «બધા માટે બંધ» — સાઇટ User-agent: * દ્વારા બધા રોબોટ માટે બંધ છે, AI માટે અલગ નિયમો નથી"
+    },
+    "auditAiBlocked": {
+        "message": "પ્રતિબંધિત: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "મંજૂર"
+    },
+    "auditAiNone": {
+        "message": "સેટ નથી"
+    },
+    "auditAiAll": {
+        "message": "બધા માટે બંધ"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "નવું ફૉર્મેટ: AI સહાયકો અને એજન્ટો માટે Markdown માં સાઇટનું ટૂંકું વર્ણન. હાલ વૈકલ્પિક"
+    },
+    "auditCspWeak": {
+        "message": "નબળી"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "પેજ અને જડેલા ફ્રેમને કૅમેરા, સ્થાન અને બ્રાઉઝરની અન્ય સુવિધાઓની ઍક્સેસ પર પ્રતિબંધ મૂકે છે"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "સાઇટની વિંડોને તે ખોલે છે તે અન્ય વિંડોથી અલગ રાખે છે — window.opener દ્વારા થતા હુમલા સામે સુરક્ષા"
+    },
+    "auditVersions": {
+        "message": "હેડરમાં સૉફ્ટવેર સંસ્કરણ"
+    },
+    "auditVersionsHint": {
+        "message": "સર્વર સૉફ્ટવેરના સંસ્કરણ જાહેર કરે છે — હુમલાખોરોને કઈ જાણીતી નબળાઈઓ અજમાવવી તેનો સંકેત. છુપાવવા: nginx અને Angie માં server_tokens off, PHP માં expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "છુપાયેલ"
+    },
+    "auditSession": {
+        "message": "સ્ક્રિપ્ટ વાંચી શકે તેવી સેશન કૂકીઝ"
+    },
+    "auditSessionHint": {
+        "message": "લૉગિન કૂકીઝ JavaScript થી વાંચી શકાય તેવી લાગે છે: XSS થી તે ચોરાઈ શકે છે. HttpOnly ફ્લૅગ આને અટકાવે છે. કૂકીના નામ પરથી શોધાયું"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "/.well-known/security.txt માં નબળાઈઓની જાણ કરવા માટેના સંપર્કો. સંશોધકને સમસ્યા વેચવાને બદલે તમને જાણ કરવામાં મદદ કરે છે"
+    },
+    "serverUnknownTitle": {
+        "message": "આ પ્રદાતાના નેટવર્ક ABlock ડેટાબેઝમાં નથી: તેમાં મોટા હોસ્ટિંગ, ક્લાઉડ અને CDN છે"
+    },
+    "protocolH3Later": {
+        "message": "સર્વર HTTP/3 ને સપોર્ટ કરે છે. આ પેજ $PROTOCOL$ દ્વારા આવ્યું — પહેલી મુલાકાતે આવું થાય છે: બ્રાઉઝર સર્વરના પ્રતિસાદ પરથી HTTP/3 વિશે જાણે છે અને પછીની વિનંતીઓ માટે તેના પર જાય છે",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "બ્રાઉઝરની ભાષા"
+    },
+    "langTitle": {
+        "message": "ઇન્ટરફેસની ભાષા"
+    },
+    "noteTitle": {
+        "message": "આ સાઇટ માટે નોંધ"
+    },
+    "notePlaceholder": {
+        "message": "આ સાઇટ માટે નોંધ, ફક્ત તમને દેખાશે"
+    },
+    "incognitoLabel": {
+        "message": "છૂપા મોડમાં પણ કામ કરે"
+    },
+    "incognitoTitle": {
+        "message": "બ્રાઉઝરની એક્સ્ટેન્શન સેટિંગ્સ ખૂલશે — ત્યાં ABlock માટે છૂપા મોડમાં મંજૂરી ચાલુ કરો"
+    }
+}

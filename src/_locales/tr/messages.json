@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "tr",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Reklam Engelleyici ve Site Analizi"
+    },
+    "extDescription": {
+        "message": "Reklamları ve izleyicileri engeller: sayfalar daha hızlı, daha az veri. Her sitenin hızını, güvenliğini ve izlemesini denetler."
+    },
+    "toggle": {
+        "message": "Aç / kapat"
+    },
+    "statusOn": {
+        "message": "Koruma açık"
+    },
+    "statusOff": {
+        "message": "Koruma kapalı"
+    },
+    "statusSiteOff": {
+        "message": "Bu sitede koruma kapalı"
+    },
+    "telegram": {
+        "message": "Telegram grubu"
+    },
+    "github": {
+        "message": "Ortak geliştirme"
+    },
+    "httpsOn": {
+        "message": "Bağlantı şifreli"
+    },
+    "httpsOff": {
+        "message": "Bağlantı şifreli değil"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — en hızlı protokol"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — modern bir protokol"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — eski bir protokol",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protokol bilinmiyor (sayfa önbellekten)"
+    },
+    "loading": {
+        "message": "Yükleniyor…"
+    },
+    "loadingTitle": {
+        "message": "Sayfa hâlâ yükleniyor"
+    },
+    "seconds": {
+        "message": "$SECONDS$ sn",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Sayfa yüklenme süresi"
+    },
+    "domains": {
+        "message": "Alan adı $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Üçüncü taraf alan adları:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…ve $COUNT$ tane daha",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Üçüncü taraf alan adı yok"
+    },
+    "blocked": {
+        "message": "Engel $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "İzleyici $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Bu sayfada engellenenler\nReklam: $ADS$\nİzleyici: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Bu site sizi izliyor, engellenen izleyici: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "İzleyici bulunamadı"
+    },
+    "scoreLabel": {
+        "message": "Site puanı"
+    },
+    "serverLabel": {
+        "message": "Sunucu"
+    },
+    "techLabel": {
+        "message": "Altyapı"
+    },
+    "companiesLabel": {
+        "message": "İzleyenler"
+    },
+    "extraLabel": {
+        "message": "Diğer"
+    },
+    "extendedText": {
+        "message": "Gelişmiş mod: barındırma, IPv6, HSTS, istatistikler ve tüm sitelerde reklam alanlarını ve çerez pencerelerini gizleme. Veriler tarayıcıdan çıkmaz."
+    },
+    "extendedButton": {
+        "message": "Aç"
+    },
+    "extendedOff": {
+        "message": "Genişletilmiş modu kapat"
+    },
+    "extendedOffTitle": {
+        "message": "Uzantı sunucuların IP adresini ve başlıklarını görmeyi, istatistik tutmayı ve tüm sitelerde reklam alanlarını ve çerez pencerelerini gizlemeyi bırakacak; tüm sitelere erişim kaldırılacak. İstediğiniz zaman yeniden açabilirsiniz"
+    },
+    "share": {
+        "message": "Paylaş"
+    },
+    "copied": {
+        "message": "Kopyalandı"
+    },
+    "cookiesLabel": {
+        "message": "Çerez pencerelerini gizle"
+    },
+    "cookiesTitle": {
+        "message": "Çerez onayı afişi hizmetlerini engeller. Gelişmiş modda afişlerin kendisini de her sitede gizler"
+    },
+    "siteLabel": {
+        "message": "$HOST$ üzerinde engelle",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Site düzgün çalışmıyorsa işareti kaldırın: sitedeki reklamlar ve izleyiciler artık engellenmez. Sayfa yeniden yüklenecek"
+    },
+    "guess": {
+        "message": "Dolaylı belirtilerle belirlendi, kesin olmayabilir"
+    },
+    "weightTitle": {
+        "message": "Tüm dosyalarıyla sayfa boyutu"
+    },
+    "weightEstimated": {
+        "message": "Boyut $TOTAL$ dosyanın $KNOWN$ tanesinde kesin, gerisi tahmini: üçüncü taraf siteler boyutu gizliyor",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Sayfa sıkıştırılmış: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Sıkıştırma yok"
+    },
+    "compressionOff": {
+        "message": "Sayfa sıkıştırılmadan gönderiliyor, daha yavaş yüklenir"
+    },
+    "compressionUnknown": {
+        "message": "Sıkıştırma bilinmiyor (sayfa önbellekten)"
+    },
+    "blockedCookies": {
+        "message": "Çerez pencereleri: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Boyut: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Engellenmedi:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Sitede bağlı:\n$LIST$\nEngellenip engellenmediği gelişmiş modda görünür",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Engellendi:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "bilinen bulunamadı"
+    },
+    "serverExtended": {
+        "message": "gelişmiş modda"
+    },
+    "serverReload": {
+        "message": "sayfayı yenileyin"
+    },
+    "serverReloadTitle": {
+        "message": "Sunucu sayfa yüklenirken belirlenir"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "başka sağlayıcı"
+    },
+    "serverProxy": {
+        "message": "Site $NAME$ üzerinden çalışıyor (CDN veya DDoS koruması), gerçek sunucu gizli",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Barındırma: $NAME$ (RIPE adres veritabanına göre)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Ülke sağlayıcıya göre belirlendi"
+    },
+    "techFound": {
+        "message": "Sayfada bulundu"
+    },
+    "techNone": {
+        "message": "belirlenemedi"
+    },
+    "techNoneTitle": {
+        "message": "Bilinen altyapı ve kütüphanelere ait belirti bulunamadı"
+    },
+    "ipv6": {
+        "message": "IPv6 bağlantısı"
+    },
+    "ipv4": {
+        "message": "IPv4 bağlantısı. Sitenin IPv6 desteklediği bu şekilde anlaşılamaz: bu sizin ağınıza da bağlı"
+    },
+    "hstsOn": {
+        "message": "HSTS: tarayıcı siteyi her zaman yalnızca HTTPS ile açar"
+    },
+    "hstsOff": {
+        "message": "HSTS yok: siteye ilk giriş şifrelemesiz olabilir"
+    },
+    "mixed": {
+        "message": "HTTP dosyaları $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS sayfası şifrelemesiz dosya yüklüyor: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Puan: 10 üzerinden $SCORE$, göstergelere göre:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Şifreleme"
+    },
+    "scoreProtocol": {
+        "message": "Protokol"
+    },
+    "scoreSpeed": {
+        "message": "Yükleme hızı"
+    },
+    "scoreWeight": {
+        "message": "Sayfa boyutu"
+    },
+    "scoreTrackers": {
+        "message": "İzleme"
+    },
+    "scoreDomains": {
+        "message": "Üçüncü taraf alan adları"
+    },
+    "scoreCompression": {
+        "message": "Sıkıştırma"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Karışık içerik"
+    },
+    "stats": {
+        "message": "Toplam engellenen istek: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "$DATE$ tarihinden beri. Hacim, reklam dosyalarının ortalama boyutuna göre tahmindir",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Site raporu: görsel veya metin"
+    },
+    "reportTitle": {
+        "message": "Sitenin puanı ve ayrıntıları görsel veya metin olarak — iş arkadaşları, yükleniciler ya da sohbet için"
+    },
+    "reportDone": {
+        "message": "Kaydedildi"
+    },
+    "copyIp": {
+        "message": "IP $IP$ kopyala",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Görseli kopyala"
+    },
+    "copyText": {
+        "message": "Metni ve bağlantıyı kopyala"
+    },
+    "shareSystem": {
+        "message": "Diğer…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ABlock puanı 10 üzerinden $SCORE$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Kendi sitenizi kontrol edin:"
+    },
+    "donate": {
+        "message": "Destekle"
+    },
+    "donateTitle": {
+        "message": "Geliştirmeyi Boosty üzerinden destekleyin"
+    },
+    "askStats": {
+        "message": "Engellenen istek: $COUNT$, tasarruf ≈ $SIZE$. ABlock işinize yarıyorsa geliştirilmesini destekleyin",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "ABlock’u bir aydır kullanıyorsunuz. İşinize yarıyorsa geliştirilmesini destekleyin"
+    },
+    "askClose": {
+        "message": "Bir daha gösterme"
+    },
+    "reportLegendGuess": {
+        "message": "? — dolaylı işaretlerle belirlendi"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — yaklaşık değer"
+    },
+    "companiesNoneTitle": {
+        "message": "Sayfada ABlock rehberindeki şirketlerden hiçbiri yok. Sitenin kendi sayaçları yine de olabilir — bunları «İzleyici» rozeti sayar"
+    },
+    "compressionFiles": {
+        "message": "Metin dosyaları: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Sıkıştırmasız: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Site verilerini silip yeniden yükle: çerezler, önbellek ve depolama. Rozetler ve puan siteyi yeni bir ziyaretçinin gördüğü gibi gösterir. Bu sitedeki hesabınızdan çıkış yapılır"
+    },
+    "clearConfirm": {
+        "message": "Silinsin mi?"
+    },
+    "saveImage": {
+        "message": "Görseli kaydet"
+    },
+    "shareSend": {
+        "message": "$NAME$ ile gönder",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "$NAME$'ta paylaş",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Metin olarak gönderilir: görsel bir sunucuya yüklenmeden aktarılamaz — kopyalayıp mesaja yapıştırın"
+    },
+    "shareLinkOnly": {
+        "message": "Yalnızca uzantı bağlantısı aktarılır — rapor görselini kopyalayıp gönderiye yapıştırın"
+    },
+    "auditLabel": {
+        "message": "Ayrıntılar"
+    },
+    "auditIssues": {
+        "message": "uyarı: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "uyarı yok"
+    },
+    "auditSpeed": {
+        "message": "Hız"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Düzen"
+    },
+    "auditA11y": {
+        "message": "Erişilebilirlik"
+    },
+    "auditSecurity": {
+        "message": "Güvenlik"
+    },
+    "auditYes": {
+        "message": "var"
+    },
+    "auditNo": {
+        "message": "yok"
+    },
+    "auditLength": {
+        "message": "$COUNT$ karakter",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "başka alan adı"
+    },
+    "auditNoImage": {
+        "message": "görselsiz"
+    },
+    "auditNoInput": {
+        "message": "etkileşim olmadı"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ / $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Düzen kaymaları"
+    },
+    "auditTtfb": {
+        "message": "Sunucu yanıtı (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Sayfanın ilk baytı için ne kadar beklendi. İyi: 0,8 sn’ye kadar"
+    },
+    "auditFcp": {
+        "message": "İlk boyama (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Ekranda ilk içeriğin göründüğü an. İyi: 1,8 sn’ye kadar"
+    },
+    "auditLcp": {
+        "message": "Ana blok (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "En büyük bloğun (görsel veya metin) çizildiği an. Google’ın ana hız ölçütü. İyi: 2,5 sn’ye kadar"
+    },
+    "auditCls": {
+        "message": "Düzen kaymaları (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Yükleme sırasında içeriğin ne kadar zıpladığı. İyi: 0,1’e kadar"
+    },
+    "auditInp": {
+        "message": "Etkileşime yanıt (INP)"
+    },
+    "auditInpHint": {
+        "message": "Tıklama veya girişe verilen en uzun tepki gecikmesi. İyi: 200 ms’ye kadar"
+    },
+    "auditBlocking": {
+        "message": "Oluşturmayı engelleyenler"
+    },
+    "auditBlockingHint": {
+        "message": "Tarayıcının bunlar olmadan sayfayı çizmeye başlamadığı dosyalar. Stiller normaldir; betikleri async veya defer ile yüklemek daha iyidir"
+    },
+    "auditStatus": {
+        "message": "Yanıt kodu"
+    },
+    "auditStatusHint": {
+        "message": "Sayfanın HTTP kodu: 200 — sorun yok, 4xx ve 5xx — hata"
+    },
+    "auditNoindex": {
+        "message": "Dizine eklenme yasağı"
+    },
+    "auditNoindexHint": {
+        "message": "Sayfa noindex etiketi veya robots.txt kuralıyla arama motorlarından gizlenmiş. Giriş sayfaları ve kişisel hesaplar için bu normaldir"
+    },
+    "auditTitle": {
+        "message": "Başlık (title)"
+    },
+    "auditTitleHint": {
+        "message": "Arama sonucundaki bağlantı metni ve sekme adı. İdeal: 10–70 karakter"
+    },
+    "auditDescription": {
+        "message": "Açıklama (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Arama sonucunda bağlantının altındaki metin. İdeal: 50–170 karakter"
+    },
+    "auditH1": {
+        "message": "h1 başlıkları"
+    },
+    "auditH1Hint": {
+        "message": "Sayfanın ana başlığı. Genellikle bir tanedir"
+    },
+    "auditCanonical": {
+        "message": "Kanonik adres"
+    },
+    "auditCanonicalHint": {
+        "message": "Sayfanın kopyaları varsa arama motorlarına asıl adresi bildirir"
+    },
+    "auditOg": {
+        "message": "Bağlantı önizlemesi (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Bağlantı gönderildiğinde Telegram, VK ve diğer hizmetlerin gösterdiği başlık ve görsel"
+    },
+    "auditViewport": {
+        "message": "Mobil sürüm (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "meta viewport olmadan telefon sayfayı küçültülmüş masaüstü sürümü olarak gösterir"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Olmadığında tarayıcı eski sitelerle uyumluluk moduna geçer ve düzen farklı olabilir"
+    },
+    "auditNoSize": {
+        "message": "Boyutsuz görseller"
+    },
+    "auditNoSizeHint": {
+        "message": "width ve height olmadan tarayıcı görsel için ne kadar yer ayıracağını bilmez ve görsel yüklenince düzen zıplar"
+    },
+    "auditLarge": {
+        "message": "Gereğinden büyük görseller"
+    },
+    "auditLargeHint": {
+        "message": "Görsel ekranda gösterildiğinden çok daha büyük indiriliyor — gereksiz ağırlık"
+    },
+    "auditModern": {
+        "message": "WebP ve AVIF görseller"
+    },
+    "auditModernHint": {
+        "message": "Bu biçimler JPEG ve PNG’den %25–50 daha hafiftir"
+    },
+    "auditLang": {
+        "message": "Sayfa dili (lang)"
+    },
+    "auditLangHint": {
+        "message": "Ekran okuyucular, çeviri ve arama motorları için gereklidir"
+    },
+    "auditAlt": {
+        "message": "alt içermeyen görseller"
+    },
+    "auditAltHint": {
+        "message": "Görme engelliler için ve görsel yüklenmezse diye görsel açıklaması"
+    },
+    "auditLabels": {
+        "message": "Etiketsiz alanlar"
+    },
+    "auditLabelsHint": {
+        "message": "Ekran okuyucu alana ne girileceğini söyleyemez"
+    },
+    "auditNames": {
+        "message": "Adsız düğme ve bağlantılar"
+    },
+    "auditNamesHint": {
+        "message": "Örneğin aria-label olmayan simge düğmesi: görme engelli kullanıcı yalnızca “düğme” duyar"
+    },
+    "auditMain": {
+        "message": "Ana alan (main)"
+    },
+    "auditMainHint": {
+        "message": "Menüyü atlayıp doğrudan içeriğe geçmeyi sağlar"
+    },
+    "auditZoom": {
+        "message": "Yakınlaştırma yasağı"
+    },
+    "auditZoomHint": {
+        "message": "Az görenlerin sayfayı telefonda büyütmesini engeller"
+    },
+    "auditCsp": {
+        "message": "İçerik politikası (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Sayfanın betikleri nereden yükleyebileceğini sınırlar — XSS’e karşı koruma. nonce veya hash olmadan 'unsafe-inline' içeriyorsa neredeyse korumaz"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Tarayıcının dosya türünü tahmin etmesini yasaklar — betik değiştirmeye karşı koruma"
+    },
+    "auditFrame": {
+        "message": "Gömme koruması"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options veya frame-ancestors, tıklama hilesi için sitenin başka bir sayfaya gömülmesini engeller"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Geçişte adresin ne kadarının diğer sitelere gönderildiği. Başlık yoksa tarayıcı güvenli varsayılan değeri kullanır"
+    },
+    "auditCache": {
+        "message": "Sayfa önbelleği"
+    },
+    "auditCacheHint": {
+        "message": "Sayfanın nereden geldiği: HIT — sunucu veya CDN önbelleğinden, MISS — yeniden oluşturuldu. Sayfaların kendisi nadiren önbelleğe alınır, genellikle görseller, betikler ve stiller alınır"
+    },
+    "auditCacheBrowser": {
+        "message": "tarayıcı önbelleğinden"
+    },
+    "auditBots": {
+        "message": "Robotlar ve YZ"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Arama motorları ve diğer robotlar için kurallar. Dosya yoksa robotlar her şeyi tarar ve arama motorları site haritasının yerini bilmez"
+    },
+    "auditSitemap": {
+        "message": "Site haritası (sitemap)"
+    },
+    "auditSitemapHint": {
+        "message": "Arama motorları için sayfa listesi. robots.txt içinde Sitemap: satırıyla belirtilir"
+    },
+    "auditAi": {
+        "message": "YZ botları için kurallar"
+    },
+    "auditAiHint": {
+        "message": "Yapay zekâ botlarının sitenin metinlerini sinir ağları için toplayıp toplayamayacağı — robots.txt içinde botun adıyla anıldığı kurallara göre. Eklenti bu türden 16 bot tanır (GPTBot, ClaudeBot, Google-Extended vb.); başka adlı botlar sayılmaz. «Herkese kapalı»: site User-agent: * ile tüm robotlara kapalı, yapay zekâ için ayrı kural yok"
+    },
+    "auditAiBlocked": {
+        "message": "engelli: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "izin verilmiş"
+    },
+    "auditAiNone": {
+        "message": "tanımlanmamış"
+    },
+    "auditAiAll": {
+        "message": "herkese kapalı"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Yeni biçim: YZ asistanları ve ajanları için Markdown ile kısa site açıklaması. Şimdilik isteğe bağlı"
+    },
+    "auditCspWeak": {
+        "message": "zayıf"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Sayfanın ve gömülü çerçevelerin kameraya, konuma ve diğer tarayıcı özelliklerine erişimini yasaklar"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Sitenin penceresini açtığı yabancı pencerelerden ayırır — window.opener üzerinden saldırılara karşı koruma"
+    },
+    "auditVersions": {
+        "message": "Başlıklarda yazılım sürümleri"
+    },
+    "auditVersionsHint": {
+        "message": "Sunucu yazılım sürümlerini bildiriyor — saldırgana hangi bilinen açıkları deneyeceğine dair ipucu. Gizlemek için: nginx ve Angie’de server_tokens off, PHP’de expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "gizli"
+    },
+    "auditSession": {
+        "message": "Betiklerin erişebildiği oturum çerezleri"
+    },
+    "auditSessionHint": {
+        "message": "Giriş çerezleri JavaScript’ten okunabiliyor gibi: XSS ile çalınabilirler. HttpOnly işareti bunu engeller. Çerez adına göre belirlendi"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "/.well-known/security.txt içinde güvenlik açığı bildirimi için iletişim bilgileri. Araştırmacının sorunu satmak yerine size bildirmesine yardımcı olur"
+    },
+    "serverUnknownTitle": {
+        "message": "Bu sağlayıcının ağları ABlock veritabanında yok: veritabanında büyük barındırma firmaları, bulutlar ve CDN’ler var"
+    },
+    "protocolH3Later": {
+        "message": "Sunucu HTTP/3’ü destekliyor. Bu sayfa $PROTOCOL$ ile geldi; ilk ziyarette böyle olur: tarayıcı HTTP/3’ü sunucunun yanıtından öğrenir ve sonraki isteklerde ona geçer",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Tarayıcı dili"
+    },
+    "langTitle": {
+        "message": "Arayüz dili"
+    },
+    "noteTitle": {
+        "message": "Site notu"
+    },
+    "notePlaceholder": {
+        "message": "Site notu, yalnızca siz görürsünüz"
+    },
+    "incognitoLabel": {
+        "message": "Gizli modda çalış"
+    },
+    "incognitoTitle": {
+        "message": "Tarayıcının uzantı ayarları açılır — oradan ABlock için gizli modda izin seçeneğini açın"
+    }
+}

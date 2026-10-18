@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "sw",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Kizuia Matangazo na Ukaguzi wa Tovuti"
+    },
+    "extDescription": {
+        "message": "Huzuia matangazo na vifuatiliaji: kurasa za haraka, data kidogo. Hukagua kasi, usalama na ufuatiliaji wa tovuti yoyote."
+    },
+    "toggle": {
+        "message": "Washa / zima"
+    },
+    "statusOn": {
+        "message": "Ulinzi umewashwa"
+    },
+    "statusOff": {
+        "message": "Ulinzi umezimwa"
+    },
+    "statusSiteOff": {
+        "message": "Ulinzi umezimwa kwenye tovuti hii"
+    },
+    "telegram": {
+        "message": "Kikundi cha Telegram"
+    },
+    "github": {
+        "message": "Changia kwenye GitHub"
+    },
+    "httpsOn": {
+        "message": "Muunganisho umesimbwa"
+    },
+    "httpsOff": {
+        "message": "Muunganisho haujasimbwa"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — itifaki ya kasi zaidi"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — itifaki ya kisasa"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — itifaki ya zamani",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Itifaki haijulikani (ukurasa umepakiwa kutoka akiba)"
+    },
+    "loading": {
+        "message": "Inapakia…"
+    },
+    "loadingTitle": {
+        "message": "Ukurasa bado unapakia"
+    },
+    "seconds": {
+        "message": "Sek $SECONDS$",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Muda wa kupakia ukurasa"
+    },
+    "domains": {
+        "message": "Vikoa $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Vikoa vya wahusika wengine:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…na $COUNT$ zaidi",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Hakuna vikoa vya wahusika wengine"
+    },
+    "blocked": {
+        "message": "Vilivyozuiwa $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Vifuatiliaji $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Vilivyozuiwa kwenye ukurasa huu\nMatangazo: $ADS$\nVifuatiliaji: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Tovuti hii inakufuatilia. Vifuatiliaji vilivyozuiwa: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Hakuna vifuatiliaji vilivyopatikana"
+    },
+    "scoreLabel": {
+        "message": "Alama ya tovuti"
+    },
+    "serverLabel": {
+        "message": "Seva"
+    },
+    "techLabel": {
+        "message": "Imejengwa kwa"
+    },
+    "companiesLabel": {
+        "message": "Wanaofuatilia"
+    },
+    "extraLabel": {
+        "message": "Zaidi"
+    },
+    "extendedText": {
+        "message": "Hali iliyopanuliwa: upangishaji, IPv6, HSTS, takwimu na kuficha nafasi za matangazo na madirisha ya vidakuzi kwenye tovuti zote. Data haitoki kamwe kwenye kivinjari chako."
+    },
+    "extendedButton": {
+        "message": "Washa"
+    },
+    "extendedOff": {
+        "message": "Zima hali iliyopanuliwa"
+    },
+    "extendedOffTitle": {
+        "message": "Kiendelezi kitaacha kuona IP na vichwa vya seva, kuweka takwimu na kuficha nafasi za matangazo na madirisha ya vidakuzi kwenye tovuti zote; ruhusa ya kufikia tovuti zote itaondolewa. Unaweza kuiwasha tena wakati wowote"
+    },
+    "share": {
+        "message": "Shiriki"
+    },
+    "copied": {
+        "message": "Imenakiliwa"
+    },
+    "cookiesLabel": {
+        "message": "Ficha madirisha ya idhini ya vidakuzi"
+    },
+    "cookiesTitle": {
+        "message": "Huzuia huduma za mabango ya idhini ya vidakuzi. Katika hali iliyopanuliwa pia huficha mabango yenyewe kwenye tovuti yoyote"
+    },
+    "siteLabel": {
+        "message": "Zuia kwenye $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Ondoa alama ikiwa tovuti haifanyi kazi ipasavyo: matangazo na vifuatiliaji havitazuiwa tena kwenye tovuti hiyo. Ukurasa utapakiwa upya"
+    },
+    "guess": {
+        "message": "Imegunduliwa kwa ishara zisizo za moja kwa moja — huenda isiwe sahihi"
+    },
+    "weightTitle": {
+        "message": "Ukubwa wa ukurasa pamoja na faili zote"
+    },
+    "weightEstimated": {
+        "message": "Ukubwa kamili unajulikana kwa faili $KNOWN$ kati ya $TOTAL$, zilizobaki zimekadiriwa: tovuti za wahusika wengine huficha ukubwa",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Ukurasa umebanwa: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Hakuna mbano"
+    },
+    "compressionOff": {
+        "message": "Ukurasa unatumwa bila kubanwa — unapakia polepole zaidi"
+    },
+    "compressionUnknown": {
+        "message": "Mbano haujulikani (ukurasa umepakiwa kutoka akiba)"
+    },
+    "blockedCookies": {
+        "message": "Madirisha ya vidakuzi: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Ukubwa: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Hazijazuiwa:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Zimepatikana kwenye tovuti:\n$LIST$\nKama zimezuiwa huonyeshwa katika hali iliyopanuliwa",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Zimezuiwa:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "hakuna zinazojulikana"
+    },
+    "serverExtended": {
+        "message": "katika hali iliyopanuliwa"
+    },
+    "serverReload": {
+        "message": "pakia ukurasa upya"
+    },
+    "serverReloadTitle": {
+        "message": "Seva hugunduliwa wakati ukurasa unapakia"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "mtoa huduma mwingine"
+    },
+    "serverProxy": {
+        "message": "Tovuti inaendeshwa nyuma ya $NAME$ (CDN au ulinzi wa DDoS) — seva halisi imefichwa",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Upangishaji: $NAME$ (kutoka hifadhidata ya anwani ya RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Nchi imebainishwa kwa mtoa huduma"
+    },
+    "techFound": {
+        "message": "Imepatikana kwenye ukurasa"
+    },
+    "techNone": {
+        "message": "haijagunduliwa"
+    },
+    "techNoneTitle": {
+        "message": "Hakuna dalili za injini au maktaba zinazojulikana"
+    },
+    "ipv6": {
+        "message": "Imeunganishwa kupitia IPv6"
+    },
+    "ipv4": {
+        "message": "Imeunganishwa kupitia IPv4. Hii haionyeshi kama tovuti inatumia IPv6: inategemea pia mtandao wako"
+    },
+    "hstsOn": {
+        "message": "HSTS: kivinjari hufungua tovuti kupitia HTTPS pekee kila mara"
+    },
+    "hstsOff": {
+        "message": "Hakuna HSTS: ziara ya kwanza kwenye tovuti inaweza kufanyika bila usimbaji"
+    },
+    "mixed": {
+        "message": "Faili za HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "Ukurasa wa HTTPS unapakia faili bila usimbaji: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Alama $SCORE$ kati ya 10 kwa vigezo:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Usimbaji"
+    },
+    "scoreProtocol": {
+        "message": "Itifaki"
+    },
+    "scoreSpeed": {
+        "message": "Kasi ya kupakia"
+    },
+    "scoreWeight": {
+        "message": "Ukubwa wa ukurasa"
+    },
+    "scoreTrackers": {
+        "message": "Ufuatiliaji"
+    },
+    "scoreDomains": {
+        "message": "Vikoa vya wahusika wengine"
+    },
+    "scoreCompression": {
+        "message": "Mbano"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Maudhui mchanganyiko"
+    },
+    "stats": {
+        "message": "Jumla ya maombi yaliyozuiwa: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Tangu $DATE$. Ukubwa umekadiriwa kwa ukubwa wa wastani wa faili za matangazo",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Ripoti ya tovuti — kama picha au maandishi"
+    },
+    "reportTitle": {
+        "message": "Alama na maelezo ya tovuti kama picha au maandishi — kwa wafanyakazi wenzako, mkandarasi au gumzo"
+    },
+    "reportDone": {
+        "message": "Imehifadhiwa"
+    },
+    "copyIp": {
+        "message": "Nakili IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Nakili picha"
+    },
+    "copyText": {
+        "message": "Nakili maandishi na kiungo"
+    },
+    "shareSystem": {
+        "message": "Zaidi…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — alama $SCORE$ kati ya 10 katika ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Kagua tovuti yako:"
+    },
+    "donate": {
+        "message": "Changia"
+    },
+    "donateTitle": {
+        "message": "Saidia uundaji kwenye Boosty"
+    },
+    "askStats": {
+        "message": "Maombi yaliyozuiwa: $COUNT$, imeokolewa ≈ $SIZE$. Ikiwa ABlock inakusaidia, unga mkono uendelezaji wake",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Umetumia ABlock kwa mwezi mmoja. Ikiwa inakusaidia, unga mkono uendelezaji wake"
+    },
+    "askClose": {
+        "message": "Usionyeshe tena"
+    },
+    "reportLegendGuess": {
+        "message": "? — imegunduliwa kwa ishara zisizo za moja kwa moja"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — makadirio ya takriban"
+    },
+    "companiesNoneTitle": {
+        "message": "Hakuna kampuni kutoka orodha ya ABlock kwenye ukurasa huu. Vihesabu vya tovuti yenyewe bado vinaweza kuwepo — vinahesabiwa na beji ya “Vifuatiliaji”"
+    },
+    "compressionFiles": {
+        "message": "Faili za maandishi: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Hazijabanwa: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Futa data ya tovuti na upakie upya: vidakuzi, akiba na hifadhi. Beji na alama zitaonyesha tovuti jinsi mgeni mpya anavyoiona. Utaondolewa kwenye akaunti ya tovuti hii"
+    },
+    "clearConfirm": {
+        "message": "Futa?"
+    },
+    "saveImage": {
+        "message": "Hifadhi picha"
+    },
+    "shareSend": {
+        "message": "Tuma kupitia $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Chapisha kwenye $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Inatumwa kama maandishi: picha haiwezi kupitishwa bila kuipakia kwenye seva — inakili na uibandike kwenye ujumbe"
+    },
+    "shareLinkOnly": {
+        "message": "Kiungo cha kiendelezi pekee ndicho kinapitishwa — nakili picha ya ripoti na uibandike kwenye chapisho"
+    },
+    "auditLabel": {
+        "message": "Maelezo"
+    },
+    "auditIssues": {
+        "message": "matatizo: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "hakuna matatizo"
+    },
+    "auditSpeed": {
+        "message": "Kasi"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Msimbo wa ukurasa"
+    },
+    "auditA11y": {
+        "message": "Ufikivu"
+    },
+    "auditSecurity": {
+        "message": "Usalama"
+    },
+    "auditYes": {
+        "message": "ndiyo"
+    },
+    "auditNo": {
+        "message": "hapana"
+    },
+    "auditLength": {
+        "message": "herufi $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "kikoa kingine"
+    },
+    "auditNoImage": {
+        "message": "hakuna picha"
+    },
+    "auditNoInput": {
+        "message": "hakuna mwingiliano"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ kati ya $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Mihamo ya mpangilio"
+    },
+    "auditTtfb": {
+        "message": "Jibu la seva (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Muda uliochukuliwa kupata baiti ya kwanza ya ukurasa kutoka kwa seva. Nzuri — chini ya sek 0.8"
+    },
+    "auditFcp": {
+        "message": "Uchoraji wa kwanza (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Maudhui ya kwanza yalionekana lini kwenye skrini. Nzuri — chini ya sek 1.8"
+    },
+    "auditLcp": {
+        "message": "Kizuizi kikuu (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Kizuizi kikubwa zaidi — picha au maandishi — kilichorwa lini. Kipimo kikuu cha kasi cha Google. Nzuri — chini ya sek 2.5"
+    },
+    "auditCls": {
+        "message": "Mihamo ya mpangilio (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Kiasi ambacho maudhui yanaruka wakati wa kupakia. Nzuri — chini ya 0.1"
+    },
+    "auditInp": {
+        "message": "Jibu kwa mwingiliano (INP)"
+    },
+    "auditInpHint": {
+        "message": "Ucheleweshaji mrefu zaidi katika kujibu kubofya au kuingiza. Nzuri — chini ya ms 200"
+    },
+    "auditBlocking": {
+        "message": "Huzuia uonyeshaji"
+    },
+    "auditBlockingHint": {
+        "message": "Faili ambazo kivinjari husubiri kabla ya kuanza kuchora ukurasa. Mitindo ni sawa, lakini hati ni bora zipakiwe kwa async au defer"
+    },
+    "auditStatus": {
+        "message": "Msimbo wa hali"
+    },
+    "auditStatusHint": {
+        "message": "Hali ya HTTP ya ukurasa: 200 — sawa, 4xx na 5xx — hitilafu"
+    },
+    "auditNoindex": {
+        "message": "Uorodheshaji umezuiwa"
+    },
+    "auditNoindexHint": {
+        "message": "Ukurasa umefichwa kwa injini za utafutaji kwa lebo ya noindex au kanuni ya robots.txt. Hii ni kawaida kwa kurasa za kuingia na akaunti za watumiaji"
+    },
+    "auditTitle": {
+        "message": "Kichwa (title)"
+    },
+    "auditTitleHint": {
+        "message": "Maandishi ya kiungo katika matokeo ya utafutaji na jina la kichupo. Bora — herufi 10–70"
+    },
+    "auditDescription": {
+        "message": "Maelezo (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Maandishi chini ya kiungo katika matokeo ya utafutaji. Bora — herufi 50–170"
+    },
+    "auditH1": {
+        "message": "Vichwa vya h1"
+    },
+    "auditH1Hint": {
+        "message": "Kichwa kikuu cha ukurasa. Kwa kawaida kipo kimoja"
+    },
+    "auditCanonical": {
+        "message": "URL ya msingi"
+    },
+    "auditCanonicalHint": {
+        "message": "Huambia injini za utafutaji anwani kuu ya ukurasa ikiwa una nakala"
+    },
+    "auditOg": {
+        "message": "Onyesho la kiungo (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Kichwa na picha ambazo Telegram, Slack na huduma nyingine huonyesha kiungo kinaposhirikiwa"
+    },
+    "auditViewport": {
+        "message": "Toleo la simu (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Bila meta viewport, simu huonyesha ukurasa kama toleo dogo la kompyuta"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Bila hiyo, kivinjari hubadilika kwenda hali ya uoanifu wa tovuti za zamani, na mpangilio unaweza kutofautiana"
+    },
+    "auditNoSize": {
+        "message": "Picha zisizo na vipimo"
+    },
+    "auditNoSizeHint": {
+        "message": "Bila width na height, kivinjari hakijui nafasi ya kuacha kwa picha, na mpangilio huruka inapopakia"
+    },
+    "auditLarge": {
+        "message": "Picha kubwa mno"
+    },
+    "auditLargeHint": {
+        "message": "Picha inatumwa kubwa zaidi kwa kiasi kinachoonekana kuliko inavyoonyeshwa — uzito usio wa lazima"
+    },
+    "auditModern": {
+        "message": "Picha za WebP na AVIF"
+    },
+    "auditModernHint": {
+        "message": "Miundo hii ni midogo kwa 25–50% kuliko JPEG na PNG"
+    },
+    "auditLang": {
+        "message": "Lugha ya ukurasa (lang)"
+    },
+    "auditLangHint": {
+        "message": "Inahitajika na visoma skrini, watafsiri na injini za utafutaji"
+    },
+    "auditAlt": {
+        "message": "Picha zisizo na alt"
+    },
+    "auditAltHint": {
+        "message": "Maelezo ya picha kwa watumiaji wasioona na endapo picha haitapakia"
+    },
+    "auditLabels": {
+        "message": "Sehemu zisizo na lebo"
+    },
+    "auditLabelsHint": {
+        "message": "Kisoma skrini hakitaweza kusema nini cha kuingiza kwenye sehemu"
+    },
+    "auditNames": {
+        "message": "Vitufe na viungo visivyo na majina"
+    },
+    "auditNamesHint": {
+        "message": "Kwa mfano, kitufe cha ikoni bila aria-label: mtumiaji asiyeona atasikia tu “kitufe”"
+    },
+    "auditMain": {
+        "message": "Eneo kuu (main)"
+    },
+    "auditMainHint": {
+        "message": "Huruhusu kwenda moja kwa moja kwenye maudhui, ukiruka menyu"
+    },
+    "auditZoom": {
+        "message": "Kukuza kumezimwa"
+    },
+    "auditZoomHint": {
+        "message": "Huzuia watu wenye uoni hafifu kukuza ukurasa kwenye simu"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Huzuia mahali ukurasa unapoweza kupakia hati — ulinzi dhidi ya XSS. Ikiwa ina 'unsafe-inline' bila nonce au hash, karibu hailindi"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Huzuia kivinjari kubahatisha aina za faili — ulinzi dhidi ya kughushi hati"
+    },
+    "auditFrame": {
+        "message": "Ulinzi dhidi ya kupachikwa"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options au frame-ancestors huzuia tovuti kupachikwa kwenye ukurasa wa mtu mwingine ili kuwahadaa watumiaji kubofya"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Kiasi cha anwani ya ukurasa kinachopitishwa kwa tovuti nyingine wakati wa kuhamia. Bila kichwa hiki, kivinjari hutumia thamani chaguomsingi salama"
+    },
+    "auditCache": {
+        "message": "Akiba ya ukurasa"
+    },
+    "auditCacheHint": {
+        "message": "Ukurasa ulitoka wapi: HIT — kutoka akiba ya seva au CDN, MISS — umeundwa upya. Kurasa zenyewe huwekwa akibani mara chache; kwa kawaida picha, hati na mitindo"
+    },
+    "auditCacheBrowser": {
+        "message": "kutoka akiba ya kivinjari"
+    },
+    "auditBots": {
+        "message": "Roboti na AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Kanuni za injini za utafutaji na roboti nyingine. Bila faili hii, roboti hupitia kila kitu, na injini za utafutaji hazijui ramani ya tovuti iko wapi"
+    },
+    "auditSitemap": {
+        "message": "Ramani ya tovuti"
+    },
+    "auditSitemapHint": {
+        "message": "Orodha ya kurasa kwa injini za utafutaji. Hutajwa kwenye robots.txt kwa mstari wa Sitemap:"
+    },
+    "auditAi": {
+        "message": "Kanuni za boti za AI"
+    },
+    "auditAiHint": {
+        "message": "Kama boti za AI zinaruhusiwa kukusanya maandishi ya tovuti kwa mitandao ya neva — kulingana na kanuni za robots.txt zinazotaja boti kwa jina. Kiendelezi kinajua boti 16 kama hizo (GPTBot, ClaudeBot, Google-Extended n.k.); boti zenye majina mengine hazihesabiwi. “Imefungwa kwa wote” — tovuti imefungwa kwa roboti zote kupitia User-agent: *, bila kanuni maalum za AI"
+    },
+    "auditAiBlocked": {
+        "message": "zimezuiwa: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "zinaruhusiwa"
+    },
+    "auditAiNone": {
+        "message": "haijawekwa"
+    },
+    "auditAiAll": {
+        "message": "imefungwa kwa wote"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Muundo mpya: maelezo mafupi ya tovuti kwa Markdown kwa wasaidizi na mawakala wa AI. Kwa sasa si lazima"
+    },
+    "auditCspWeak": {
+        "message": "dhaifu"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Huzuia ukurasa na fremu zilizopachikwa kufikia kamera, mahali na vipengele vingine vya kivinjari"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Hutenganisha dirisha la tovuti na madirisha mengine inayofungua — ulinzi dhidi ya mashambulizi kupitia window.opener"
+    },
+    "auditVersions": {
+        "message": "Matoleo ya programu kwenye vichwa"
+    },
+    "auditVersionsHint": {
+        "message": "Seva inafichua matoleo ya programu — kidokezo kwa washambuliaji kuhusu udhaifu unaojulikana wa kujaribu. Kuficha: server_tokens off katika nginx na Angie, expose_php = Off katika PHP"
+    },
+    "auditHidden": {
+        "message": "yamefichwa"
+    },
+    "auditSession": {
+        "message": "Vidakuzi vya kipindi vinavyosomeka na hati"
+    },
+    "auditSessionHint": {
+        "message": "Vidakuzi vya kuingia vinaonekana kusomeka kutoka JavaScript: kupitia XSS vinaweza kuibwa. Alama ya HttpOnly huzuia hili. Imegunduliwa kwa jina la kidakuzi"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Mawasiliano ya kuripoti udhaifu katika /.well-known/security.txt. Husaidia mtafiti kukuripotia tatizo badala ya kuliuza"
+    },
+    "serverUnknownTitle": {
+        "message": "Mitandao ya mtoa huduma huyu haipo kwenye hifadhidata ya ABlock: inajumuisha wapangishaji wakubwa, mawingu na CDN"
+    },
+    "protocolH3Later": {
+        "message": "Seva inatumia HTTP/3. Ukurasa huu ulifika kupitia $PROTOCOL$ — hutokea kwenye ziara ya kwanza: kivinjari hujua kuhusu HTTP/3 kutoka kwa jibu la seva na kuhamia huko kwa maombi yanayofuata",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Lugha ya kivinjari"
+    },
+    "langTitle": {
+        "message": "Lugha ya kiolesura"
+    },
+    "noteTitle": {
+        "message": "Dokezo la tovuti hii"
+    },
+    "notePlaceholder": {
+        "message": "Dokezo la tovuti hii, linaonekana kwako tu"
+    },
+    "incognitoLabel": {
+        "message": "Ifanye kazi katika hali fiche"
+    },
+    "incognitoTitle": {
+        "message": "Mipangilio ya viendelezi vya kivinjari itafunguka — washa huko ruhusa ya ABlock katika hali fiche"
+    }
+}

@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "pt-BR",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Bloqueador de anúncios e análise de sites"
+    },
+    "extDescription": {
+        "message": "Bloqueia anúncios e rastreadores: páginas mais rápidas e menos dados. Analisa velocidade, segurança e rastreamento de qualquer site."
+    },
+    "toggle": {
+        "message": "Ativar / desativar"
+    },
+    "statusOn": {
+        "message": "Proteção ativada"
+    },
+    "statusOff": {
+        "message": "Proteção desativada"
+    },
+    "statusSiteOff": {
+        "message": "Proteção desativada neste site"
+    },
+    "telegram": {
+        "message": "Grupo no Telegram"
+    },
+    "github": {
+        "message": "Desenvolvimento colaborativo"
+    },
+    "httpsOn": {
+        "message": "A conexão é criptografada"
+    },
+    "httpsOff": {
+        "message": "A conexão não é criptografada"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — o protocolo mais rápido"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — um protocolo moderno"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — um protocolo obsoleto",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protocolo desconhecido (página do cache)"
+    },
+    "loading": {
+        "message": "Carregando…"
+    },
+    "loadingTitle": {
+        "message": "A página ainda está carregando"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Tempo de carregamento da página"
+    },
+    "domains": {
+        "message": "Domínios $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Domínios de terceiros:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…e mais $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Nenhum domínio de terceiros"
+    },
+    "blocked": {
+        "message": "Bloqueios $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Rastreio $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Bloqueado nesta página\nAnúncios: $ADS$\nRastreadores: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Este site rastreia você, rastreadores bloqueados: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Nenhum rastreador encontrado"
+    },
+    "scoreLabel": {
+        "message": "Nota do site"
+    },
+    "serverLabel": {
+        "message": "Servidor"
+    },
+    "techLabel": {
+        "message": "Feito com"
+    },
+    "companiesLabel": {
+        "message": "Rastreiam"
+    },
+    "extraLabel": {
+        "message": "Mais"
+    },
+    "extendedText": {
+        "message": "Modo avançado: hospedagem, IPv6, HSTS, estatísticas e ocultar espaços de anúncios e avisos de cookies em todos os sites. Os dados não saem do navegador."
+    },
+    "extendedButton": {
+        "message": "Ativar"
+    },
+    "extendedOff": {
+        "message": "Desativar o modo avançado"
+    },
+    "extendedOffTitle": {
+        "message": "A extensão deixará de ver o IP e os cabeçalhos dos servidores, de manter estatísticas e de ocultar espaços de anúncios e avisos de cookies em todos os sites; o acesso a todos os sites será removido. Você pode reativá-lo a qualquer momento"
+    },
+    "share": {
+        "message": "Compartilhar"
+    },
+    "copied": {
+        "message": "Copiado"
+    },
+    "cookiesLabel": {
+        "message": "Ocultar avisos de cookies"
+    },
+    "cookiesTitle": {
+        "message": "Bloqueia os serviços de banners de consentimento de cookies. No modo avançado também oculta os próprios banners em qualquer site"
+    },
+    "siteLabel": {
+        "message": "Bloquear em $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Desmarque se o site não funcionar direito: anúncios e rastreadores deixarão de ser bloqueados nele. A página será recarregada"
+    },
+    "guess": {
+        "message": "Detectado por sinais indiretos: pode não ser exato"
+    },
+    "weightTitle": {
+        "message": "Peso da página com todos os arquivos"
+    },
+    "weightEstimated": {
+        "message": "O tamanho exato é conhecido em $KNOWN$ de $TOTAL$ arquivos, o resto é estimado: sites externos ocultam o tamanho",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Página comprimida: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Sem compressão"
+    },
+    "compressionOff": {
+        "message": "A página é enviada sem compressão e demora mais para carregar"
+    },
+    "compressionUnknown": {
+        "message": "Compressão desconhecida (página do cache)"
+    },
+    "blockedCookies": {
+        "message": "Avisos de cookies: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Tamanho: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Não bloqueado:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Conectado no site:\n$LIST$\nSe foi bloqueado aparece no modo avançado",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Bloqueado:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "nenhuma conhecida"
+    },
+    "serverExtended": {
+        "message": "no modo avançado"
+    },
+    "serverReload": {
+        "message": "recarregue a página"
+    },
+    "serverReloadTitle": {
+        "message": "O servidor é detectado ao carregar a página"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "outro provedor"
+    },
+    "serverProxy": {
+        "message": "O site funciona por meio de $NAME$ (CDN ou proteção DDoS): o servidor real está oculto",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Hospedagem: $NAME$ (pela base de endereços do RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "País deduzido pelo provedor"
+    },
+    "techFound": {
+        "message": "Encontrado na página"
+    },
+    "techNone": {
+        "message": "não detectado"
+    },
+    "techNoneTitle": {
+        "message": "Nenhum sinal de plataformas ou bibliotecas conhecidas"
+    },
+    "ipv6": {
+        "message": "Conexão por IPv6"
+    },
+    "ipv4": {
+        "message": "Conexão por IPv4. Assim não dá para saber se o site suporta IPv6: depende também da sua rede"
+    },
+    "hstsOn": {
+        "message": "HSTS: o navegador sempre abre o site somente por HTTPS"
+    },
+    "hstsOff": {
+        "message": "Sem HSTS: a primeira visita pode acontecer sem criptografia"
+    },
+    "mixed": {
+        "message": "Arquivos HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "A página HTTPS carrega arquivos sem criptografia: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Nota $SCORE$ de 10 pelos indicadores:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Criptografia"
+    },
+    "scoreProtocol": {
+        "message": "Protocolo"
+    },
+    "scoreSpeed": {
+        "message": "Velocidade de carregamento"
+    },
+    "scoreWeight": {
+        "message": "Peso da página"
+    },
+    "scoreTrackers": {
+        "message": "Rastreamento"
+    },
+    "scoreDomains": {
+        "message": "Domínios externos"
+    },
+    "scoreCompression": {
+        "message": "Compressão"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Conteúdo misto"
+    },
+    "stats": {
+        "message": "Total de solicitações bloqueadas: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Desde $DATE$. O volume é uma estimativa pelo tamanho médio dos arquivos de anúncios",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Relatório do site, em imagem ou texto"
+    },
+    "reportTitle": {
+        "message": "Nota e detalhes do site em imagem ou texto, para colegas, prestadores ou um chat"
+    },
+    "reportDone": {
+        "message": "Salvo"
+    },
+    "copyIp": {
+        "message": "Copiar IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Copiar imagem"
+    },
+    "copyText": {
+        "message": "Copiar texto e link"
+    },
+    "shareSystem": {
+        "message": "Mais…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$: nota $SCORE$ de 10 no ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Verifique seu site:"
+    },
+    "donate": {
+        "message": "Apoiar"
+    },
+    "donateTitle": {
+        "message": "Apoie o desenvolvimento no Boosty"
+    },
+    "askStats": {
+        "message": "Solicitações bloqueadas: $COUNT$, economizado ≈ $SIZE$. Se o ABlock é útil para você, apoie o desenvolvimento",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Você usa o ABlock há um mês. Se ele é útil, apoie o desenvolvimento"
+    },
+    "askClose": {
+        "message": "Não mostrar novamente"
+    },
+    "reportLegendGuess": {
+        "message": "? — detectado por sinais indiretos"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — valor aproximado"
+    },
+    "companiesNoneTitle": {
+        "message": "Não há empresas do catálogo do ABlock na página. O site ainda pode ter contadores próprios — o selo «Rastreio» os conta"
+    },
+    "compressionFiles": {
+        "message": "Arquivos de texto: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Sem compressão: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Apagar os dados do site e recarregar: cookies, cache e armazenamento. Os selos e a nota mostrarão o site como um visitante novo o vê. Você sairá da sua conta neste site"
+    },
+    "clearConfirm": {
+        "message": "Apagar?"
+    },
+    "saveImage": {
+        "message": "Salvar imagem"
+    },
+    "shareSend": {
+        "message": "Enviar pelo $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Publicar no $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Enviado como texto: uma imagem não pode ser passada sem enviá-la a um servidor — copie-a e cole na mensagem"
+    },
+    "shareLinkOnly": {
+        "message": "Só o link da extensão é passado — copie a imagem do relatório e cole na publicação"
+    },
+    "auditLabel": {
+        "message": "Detalhes"
+    },
+    "auditIssues": {
+        "message": "avisos: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "sem avisos"
+    },
+    "auditSpeed": {
+        "message": "Velocidade"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Layout"
+    },
+    "auditA11y": {
+        "message": "Acessibilidade"
+    },
+    "auditSecurity": {
+        "message": "Segurança"
+    },
+    "auditYes": {
+        "message": "sim"
+    },
+    "auditNo": {
+        "message": "não"
+    },
+    "auditLength": {
+        "message": "$COUNT$ caract.",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "outro domínio"
+    },
+    "auditNoImage": {
+        "message": "sem imagem"
+    },
+    "auditNoInput": {
+        "message": "sem interações"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ de $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Mudanças de layout"
+    },
+    "auditTtfb": {
+        "message": "Resposta do servidor (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Quanto se esperou pelo primeiro byte da página. Bom: até 0,8 s"
+    },
+    "auditFcp": {
+        "message": "Primeiro conteúdo (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Quando o primeiro conteúdo apareceu na tela. Bom: até 1,8 s"
+    },
+    "auditLcp": {
+        "message": "Bloco principal (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Quando o maior bloco, imagem ou texto, foi exibido. A principal métrica de velocidade do Google. Bom: até 2,5 s"
+    },
+    "auditCls": {
+        "message": "Mudanças de layout (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Quanto o conteúdo pula durante o carregamento. Bom: até 0,1"
+    },
+    "auditInp": {
+        "message": "Resposta a ações (INP)"
+    },
+    "auditInpHint": {
+        "message": "O maior atraso na reação a um clique ou digitação. Bom: até 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Bloqueiam a renderização"
+    },
+    "auditBlockingHint": {
+        "message": "Arquivos sem os quais o navegador não começa a desenhar a página. Estilos são normais; scripts devem ser carregados com async ou defer"
+    },
+    "auditStatus": {
+        "message": "Código de resposta"
+    },
+    "auditStatusHint": {
+        "message": "Código HTTP da página: 200 — tudo certo, 4xx e 5xx — erro"
+    },
+    "auditNoindex": {
+        "message": "Indexação bloqueada"
+    },
+    "auditNoindexHint": {
+        "message": "A página está oculta dos buscadores por noindex ou por uma regra do robots.txt. Em páginas de login e áreas pessoais isso é normal"
+    },
+    "auditTitle": {
+        "message": "Título (title)"
+    },
+    "auditTitleHint": {
+        "message": "Texto do link nos buscadores e nome da aba. Ideal: 10–70 caracteres"
+    },
+    "auditDescription": {
+        "message": "Descrição (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Texto abaixo do link nos buscadores. Ideal: 50–170 caracteres"
+    },
+    "auditH1": {
+        "message": "Títulos h1"
+    },
+    "auditH1Hint": {
+        "message": "O título principal da página. Normalmente há um só"
+    },
+    "auditCanonical": {
+        "message": "URL canônica"
+    },
+    "auditCanonicalHint": {
+        "message": "Indica aos buscadores o endereço principal da página se ela tiver cópias"
+    },
+    "auditOg": {
+        "message": "Prévia do link (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Título e imagem que Telegram, VK e outros serviços mostram ao compartilhar o link"
+    },
+    "auditViewport": {
+        "message": "Versão móvel (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Sem meta viewport o celular mostra a página como uma versão reduzida para computador"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Sem ele o navegador ativa o modo de compatibilidade com sites antigos e o layout pode mudar"
+    },
+    "auditNoSize": {
+        "message": "Imagens sem tamanho"
+    },
+    "auditNoSizeHint": {
+        "message": "Sem width e height o navegador não sabe quanto espaço reservar e o layout pula quando a imagem carrega"
+    },
+    "auditLarge": {
+        "message": "Imagens maiores que o necessário"
+    },
+    "auditLargeHint": {
+        "message": "A imagem é baixada bem maior do que aparece na tela: peso desnecessário"
+    },
+    "auditModern": {
+        "message": "Imagens WebP e AVIF"
+    },
+    "auditModernHint": {
+        "message": "Esses formatos são 25–50% mais leves que JPEG e PNG"
+    },
+    "auditLang": {
+        "message": "Idioma da página (lang)"
+    },
+    "auditLangHint": {
+        "message": "Necessário para leitores de tela, tradutor e buscadores"
+    },
+    "auditAlt": {
+        "message": "Imagens sem alt"
+    },
+    "auditAltHint": {
+        "message": "Descrição da imagem para pessoas cegas e caso ela não carregue"
+    },
+    "auditLabels": {
+        "message": "Campos sem rótulo"
+    },
+    "auditLabelsHint": {
+        "message": "O leitor de tela não conseguirá dizer o que digitar no campo"
+    },
+    "auditNames": {
+        "message": "Botões e links sem nome"
+    },
+    "auditNamesHint": {
+        "message": "Por exemplo, um botão de ícone sem aria-label: a pessoa cega ouvirá apenas «botão»"
+    },
+    "auditMain": {
+        "message": "Área principal (main)"
+    },
+    "auditMainHint": {
+        "message": "Permite ir direto ao conteúdo, pulando o menu"
+    },
+    "auditZoom": {
+        "message": "Zoom bloqueado"
+    },
+    "auditZoomHint": {
+        "message": "Impede que pessoas com baixa visão ampliem a página no celular"
+    },
+    "auditCsp": {
+        "message": "Política de conteúdo (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Limita de onde a página pode carregar scripts: proteção contra XSS. Se tiver 'unsafe-inline' sem nonce ou hash, quase não protege"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Impede o navegador de adivinhar o tipo do arquivo: proteção contra troca de scripts"
+    },
+    "auditFrame": {
+        "message": "Proteção contra incorporação"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options ou frame-ancestors impedem incorporar o site em outra página para enganar com cliques"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Quanto do endereço é enviado a outros sites ao navegar. Sem o cabeçalho o navegador usa um valor seguro padrão"
+    },
+    "auditCache": {
+        "message": "Cache da página"
+    },
+    "auditCacheHint": {
+        "message": "De onde veio a página: HIT — do cache do servidor ou CDN, MISS — gerada de novo. Páginas raramente ficam em cache; normalmente imagens, scripts e estilos"
+    },
+    "auditCacheBrowser": {
+        "message": "do cache do navegador"
+    },
+    "auditBots": {
+        "message": "Robôs e IA"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Regras para buscadores e outros robôs. Sem o arquivo os robôs rastreiam tudo e os buscadores não sabem onde está o mapa do site"
+    },
+    "auditSitemap": {
+        "message": "Mapa do site (sitemap)"
+    },
+    "auditSitemapHint": {
+        "message": "Lista de páginas para os buscadores. Indicada no robots.txt com a linha Sitemap:"
+    },
+    "auditAi": {
+        "message": "Regras para bots de IA"
+    },
+    "auditAiHint": {
+        "message": "Se bots de IA podem coletar os textos do site para redes neurais, pelas regras do robots.txt que citam o bot pelo nome. A extensão conhece 16 desses bots (GPTBot, ClaudeBot, Google-Extended e outros); bots com outros nomes não são contados. «Fechado para todos»: o site está fechado para todos os robôs via User-agent: *, sem regras próprias para IA"
+    },
+    "auditAiBlocked": {
+        "message": "bloqueados: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "permitido"
+    },
+    "auditAiNone": {
+        "message": "sem regras"
+    },
+    "auditAiAll": {
+        "message": "fechado para todos"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Formato novo: uma breve descrição do site em Markdown para assistentes e agentes de IA. Por enquanto é opcional"
+    },
+    "auditCspWeak": {
+        "message": "fraca"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Proíbe a página e os frames incorporados de acessar câmera, localização e outros recursos do navegador"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Separa a janela do site das janelas alheias que ele abre: proteção contra ataques via window.opener"
+    },
+    "auditVersions": {
+        "message": "Versões nos cabeçalhos"
+    },
+    "auditVersionsHint": {
+        "message": "O servidor informa versões de software: uma dica para o atacante sobre quais vulnerabilidades testar. Para ocultar: server_tokens off no nginx e no Angie, expose_php = Off no PHP"
+    },
+    "auditHidden": {
+        "message": "ocultas"
+    },
+    "auditSession": {
+        "message": "Cookies de sessão acessíveis a scripts"
+    },
+    "auditSessionHint": {
+        "message": "Parece que os cookies de login podem ser lidos pelo JavaScript: com um XSS podem ser roubados. A flag HttpOnly impede isso. Detectado pelo nome do cookie"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Contatos para relatar vulnerabilidades em /.well-known/security.txt. Ajuda o pesquisador a avisar você em vez de vender a falha"
+    },
+    "serverUnknownTitle": {
+        "message": "As redes deste provedor não estão na base do ABlock, que inclui grandes hospedagens, nuvens e CDNs"
+    },
+    "protocolH3Later": {
+        "message": "O servidor suporta HTTP/3. Esta página veio por $PROTOCOL$, o que é normal na primeira visita: o navegador descobre o HTTP/3 pela resposta do servidor e passa a usá-lo nas próximas requisições",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Idioma do navegador"
+    },
+    "langTitle": {
+        "message": "Idioma da interface"
+    },
+    "noteTitle": {
+        "message": "Nota sobre este site"
+    },
+    "notePlaceholder": {
+        "message": "Nota sobre este site, visível só para você"
+    },
+    "incognitoLabel": {
+        "message": "Funcionar no modo anônimo"
+    },
+    "incognitoTitle": {
+        "message": "As configurações de extensões do navegador serão abertas — ative lá a permissão do ABlock no modo anônimo"
+    }
+}

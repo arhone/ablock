@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "id",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Pemblokir Iklan & Cek Situs"
+    },
+    "extDescription": {
+        "message": "Memblokir iklan dan pelacak: halaman lebih cepat, kuota lebih hemat. Memeriksa kecepatan, keamanan, dan pelacakan situs mana pun."
+    },
+    "toggle": {
+        "message": "Aktifkan / nonaktifkan"
+    },
+    "statusOn": {
+        "message": "Perlindungan aktif"
+    },
+    "statusOff": {
+        "message": "Perlindungan nonaktif"
+    },
+    "statusSiteOff": {
+        "message": "Perlindungan nonaktif di situs ini"
+    },
+    "telegram": {
+        "message": "Grup Telegram"
+    },
+    "github": {
+        "message": "Berkontribusi di GitHub"
+    },
+    "httpsOn": {
+        "message": "Koneksi terenkripsi"
+    },
+    "httpsOff": {
+        "message": "Koneksi tidak terenkripsi"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — protokol tercepat"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — protokol modern"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — protokol usang",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protokol tidak diketahui (halaman dari cache)"
+    },
+    "loading": {
+        "message": "Memuat…"
+    },
+    "loadingTitle": {
+        "message": "Halaman masih dimuat"
+    },
+    "seconds": {
+        "message": "$SECONDS$ dtk",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Waktu muat halaman"
+    },
+    "domains": {
+        "message": "Domain $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Domain pihak ketiga:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…dan $COUNT$ lainnya",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Tidak ada domain pihak ketiga"
+    },
+    "blocked": {
+        "message": "Diblokir $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Pelacak $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Diblokir di halaman ini\nIklan: $ADS$\nPelacak: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Situs ini melacak Anda, pelacak diblokir: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Tidak ada pelacak"
+    },
+    "scoreLabel": {
+        "message": "Nilai situs"
+    },
+    "serverLabel": {
+        "message": "Server"
+    },
+    "techLabel": {
+        "message": "Dibuat dengan"
+    },
+    "companiesLabel": {
+        "message": "Pelacak"
+    },
+    "extraLabel": {
+        "message": "Lainnya"
+    },
+    "extendedText": {
+        "message": "Mode lanjutan: hosting, IPv6, HSTS, statistik, dan menyembunyikan ruang iklan dan jendela cookie di semua situs. Data tidak keluar dari browser."
+    },
+    "extendedButton": {
+        "message": "Aktifkan"
+    },
+    "extendedOff": {
+        "message": "Nonaktifkan mode lanjutan"
+    },
+    "extendedOffTitle": {
+        "message": "Ekstensi tidak akan lagi melihat IP dan header server, mencatat statistik, atau menyembunyikan ruang iklan dan jendela cookie di semua situs; akses ke semua situs akan dicabut. Anda dapat mengaktifkannya kembali kapan saja"
+    },
+    "share": {
+        "message": "Bagikan"
+    },
+    "copied": {
+        "message": "Disalin"
+    },
+    "cookiesLabel": {
+        "message": "Sembunyikan jendela persetujuan cookie"
+    },
+    "cookiesTitle": {
+        "message": "Memblokir layanan banner persetujuan cookie. Dalam mode lanjutan juga menyembunyikan banner itu sendiri di situs mana pun"
+    },
+    "siteLabel": {
+        "message": "Blokir di $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Hapus centang jika situs tidak berfungsi dengan benar: iklan dan pelacak di situs ini tidak akan diblokir lagi. Halaman akan dimuat ulang"
+    },
+    "guess": {
+        "message": "Terdeteksi dari tanda tidak langsung — mungkin tidak akurat"
+    },
+    "weightTitle": {
+        "message": "Ukuran halaman beserta semua file"
+    },
+    "weightEstimated": {
+        "message": "Ukuran pasti diketahui untuk $KNOWN$ dari $TOTAL$ file, sisanya diperkirakan: situs pihak ketiga menyembunyikan ukurannya",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Halaman dikompresi: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Tanpa kompresi"
+    },
+    "compressionOff": {
+        "message": "Halaman dikirim tanpa kompresi — dimuat lebih lambat"
+    },
+    "compressionUnknown": {
+        "message": "Kompresi tidak diketahui (halaman dari cache)"
+    },
+    "blockedCookies": {
+        "message": "Jendela cookie: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Ukuran: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Tidak diblokir:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Terpasang di situs:\n$LIST$\nApakah diblokir — terlihat dalam mode lanjutan",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Diblokir:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "tidak ada yang dikenal"
+    },
+    "serverExtended": {
+        "message": "dalam mode lanjutan"
+    },
+    "serverReload": {
+        "message": "muat ulang halaman"
+    },
+    "serverReloadTitle": {
+        "message": "Server dideteksi saat halaman dimuat"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "penyedia lain"
+    },
+    "serverProxy": {
+        "message": "Situs berjalan melalui $NAME$ (CDN atau perlindungan DDoS) — server aslinya tersembunyi",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Hosting: $NAME$ (menurut basis data alamat RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Negara ditentukan berdasarkan penyedia"
+    },
+    "techFound": {
+        "message": "Ditemukan di halaman"
+    },
+    "techNone": {
+        "message": "tidak terdeteksi"
+    },
+    "techNoneTitle": {
+        "message": "Tidak ada tanda mesin atau pustaka yang dikenal"
+    },
+    "ipv6": {
+        "message": "Terhubung melalui IPv6"
+    },
+    "ipv4": {
+        "message": "Terhubung melalui IPv4. Ini tidak menunjukkan apakah situs mendukung IPv6: itu juga bergantung pada jaringan Anda"
+    },
+    "hstsOn": {
+        "message": "HSTS: browser selalu membuka situs hanya melalui HTTPS"
+    },
+    "hstsOff": {
+        "message": "Tanpa HSTS: kunjungan pertama ke situs bisa terjadi tanpa enkripsi"
+    },
+    "mixed": {
+        "message": "File HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "Halaman HTTPS memuat file tanpa enkripsi: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Nilai $SCORE$ dari 10 berdasarkan:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Enkripsi"
+    },
+    "scoreProtocol": {
+        "message": "Protokol"
+    },
+    "scoreSpeed": {
+        "message": "Kecepatan muat"
+    },
+    "scoreWeight": {
+        "message": "Ukuran halaman"
+    },
+    "scoreTrackers": {
+        "message": "Pelacakan"
+    },
+    "scoreDomains": {
+        "message": "Domain pihak ketiga"
+    },
+    "scoreCompression": {
+        "message": "Kompresi"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Konten campuran"
+    },
+    "stats": {
+        "message": "Total permintaan diblokir: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Sejak $DATE$. Volume diperkirakan dari ukuran rata-rata file iklan",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Laporan situs — sebagai gambar atau teks"
+    },
+    "reportTitle": {
+        "message": "Nilai dan detail situs sebagai gambar atau teks — untuk rekan kerja, kontraktor, atau obrolan"
+    },
+    "reportDone": {
+        "message": "Tersimpan"
+    },
+    "copyIp": {
+        "message": "Salin IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Salin gambar"
+    },
+    "copyText": {
+        "message": "Salin teks dan tautan"
+    },
+    "shareSystem": {
+        "message": "Lainnya…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — nilai $SCORE$ dari 10 di ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Periksa situs Anda:"
+    },
+    "donate": {
+        "message": "Dukung"
+    },
+    "donateTitle": {
+        "message": "Dukung pengembangan di Boosty"
+    },
+    "askStats": {
+        "message": "Permintaan diblokir: $COUNT$, hemat ≈ $SIZE$. Jika ABlock bermanfaat, dukung pengembangannya",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Anda sudah sebulan memakai ABlock. Jika bermanfaat, dukung pengembangannya"
+    },
+    "askClose": {
+        "message": "Jangan tampilkan lagi"
+    },
+    "reportLegendGuess": {
+        "message": "? — terdeteksi dari tanda tidak langsung"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — perkiraan"
+    },
+    "companiesNoneTitle": {
+        "message": "Tidak ada perusahaan dari direktori ABlock di halaman ini. Situs tetap bisa punya penghitung sendiri — dihitung oleh lencana “Pelacak”"
+    },
+    "compressionFiles": {
+        "message": "File teks: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Tanpa kompresi: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Hapus data situs dan muat ulang: cookie, cache, dan penyimpanan. Lencana dan nilai akan menampilkan situs seperti bagi pengunjung baru. Anda akan keluar dari akun di situs ini"
+    },
+    "clearConfirm": {
+        "message": "Hapus?"
+    },
+    "saveImage": {
+        "message": "Simpan gambar"
+    },
+    "shareSend": {
+        "message": "Kirim ke $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Posting di $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Dikirim sebagai teks: gambar tidak bisa diteruskan tanpa mengunggahnya ke server — salin lalu tempel ke pesan"
+    },
+    "shareLinkOnly": {
+        "message": "Hanya tautan ekstensi yang diteruskan — salin gambar laporan lalu tempel ke postingan"
+    },
+    "auditLabel": {
+        "message": "Detail"
+    },
+    "auditIssues": {
+        "message": "catatan: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "tidak ada catatan"
+    },
+    "auditSpeed": {
+        "message": "Kecepatan"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Markup"
+    },
+    "auditA11y": {
+        "message": "Aksesibilitas"
+    },
+    "auditSecurity": {
+        "message": "Keamanan"
+    },
+    "auditYes": {
+        "message": "ada"
+    },
+    "auditNo": {
+        "message": "tidak"
+    },
+    "auditLength": {
+        "message": "$COUNT$ karakter",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "domain lain"
+    },
+    "auditNoImage": {
+        "message": "tanpa gambar"
+    },
+    "auditNoInput": {
+        "message": "belum ada interaksi"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ dari $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Pergeseran tata letak"
+    },
+    "auditTtfb": {
+        "message": "Respons server (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Berapa lama menunggu byte pertama halaman dari server. Baik — hingga 0,8 dtk"
+    },
+    "auditFcp": {
+        "message": "Tampilan pertama (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Kapan konten pertama muncul di layar. Baik — hingga 1,8 dtk"
+    },
+    "auditLcp": {
+        "message": "Elemen utama (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Kapan elemen terbesar — gambar atau teks — ditampilkan. Metrik kecepatan utama Google. Baik — hingga 2,5 dtk"
+    },
+    "auditCls": {
+        "message": "Pergeseran tata letak (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Seberapa banyak konten melompat saat dimuat. Baik — hingga 0,1"
+    },
+    "auditInp": {
+        "message": "Respons interaksi (INP)"
+    },
+    "auditInpHint": {
+        "message": "Penundaan terlama dalam merespons klik atau input. Baik — hingga 200 md"
+    },
+    "auditBlocking": {
+        "message": "Memblokir render"
+    },
+    "auditBlockingHint": {
+        "message": "File yang harus ditunggu browser sebelum mulai menggambar halaman. Gaya itu wajar, tetapi skrip sebaiknya dimuat dengan async atau defer"
+    },
+    "auditStatus": {
+        "message": "Kode respons"
+    },
+    "auditStatusHint": {
+        "message": "Kode HTTP halaman: 200 — baik, 4xx dan 5xx — galat"
+    },
+    "auditNoindex": {
+        "message": "Pengindeksan dilarang"
+    },
+    "auditNoindexHint": {
+        "message": "Halaman ditutup dari mesin pencari dengan tag noindex atau aturan di robots.txt. Untuk halaman login dan akun pribadi ini wajar"
+    },
+    "auditTitle": {
+        "message": "Judul (title)"
+    },
+    "auditTitleHint": {
+        "message": "Teks tautan di hasil pencarian dan nama tab. Ideal — 10–70 karakter"
+    },
+    "auditDescription": {
+        "message": "Deskripsi (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Teks di bawah tautan di hasil pencarian. Ideal — 50–170 karakter"
+    },
+    "auditH1": {
+        "message": "Judul h1"
+    },
+    "auditH1Hint": {
+        "message": "Judul utama halaman. Biasanya hanya satu"
+    },
+    "auditCanonical": {
+        "message": "URL kanonis"
+    },
+    "auditCanonicalHint": {
+        "message": "Memberi tahu mesin pencari alamat utama halaman jika ada salinannya"
+    },
+    "auditOg": {
+        "message": "Pratinjau tautan (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Judul dan gambar yang ditampilkan Telegram, WhatsApp, dan layanan lain saat tautan dibagikan"
+    },
+    "auditViewport": {
+        "message": "Versi seluler (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Tanpa meta viewport, ponsel menampilkan halaman sebagai versi desktop yang diperkecil"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Tanpanya browser beralih ke mode kompatibilitas untuk situs lama, dan tata letak bisa berbeda"
+    },
+    "auditNoSize": {
+        "message": "Gambar tanpa ukuran"
+    },
+    "auditNoSizeHint": {
+        "message": "Tanpa width dan height, browser tidak tahu berapa ruang yang disiapkan untuk gambar, dan tata letak melompat saat gambar dimuat"
+    },
+    "auditLarge": {
+        "message": "Gambar terlalu besar"
+    },
+    "auditLargeHint": {
+        "message": "Gambar dikirim jauh lebih besar daripada yang ditampilkan — beban berlebih"
+    },
+    "auditModern": {
+        "message": "Gambar WebP dan AVIF"
+    },
+    "auditModernHint": {
+        "message": "Format ini 25–50% lebih kecil daripada JPEG dan PNG"
+    },
+    "auditLang": {
+        "message": "Bahasa halaman (lang)"
+    },
+    "auditLangHint": {
+        "message": "Diperlukan pembaca layar, penerjemah, dan mesin pencari"
+    },
+    "auditAlt": {
+        "message": "Gambar tanpa alt"
+    },
+    "auditAltHint": {
+        "message": "Deskripsi gambar untuk tunanetra dan jika gambar gagal dimuat"
+    },
+    "auditLabels": {
+        "message": "Kolom tanpa label"
+    },
+    "auditLabelsHint": {
+        "message": "Pembaca layar tidak bisa memberi tahu apa yang harus diisi di kolom"
+    },
+    "auditNames": {
+        "message": "Tombol dan tautan tanpa nama"
+    },
+    "auditNamesHint": {
+        "message": "Misalnya, tombol ikon tanpa aria-label: pengguna tunanetra hanya akan mendengar “tombol”"
+    },
+    "auditMain": {
+        "message": "Area utama (main)"
+    },
+    "auditMainHint": {
+        "message": "Memungkinkan langsung ke konten tanpa melewati menu"
+    },
+    "auditZoom": {
+        "message": "Zoom dilarang"
+    },
+    "auditZoomHint": {
+        "message": "Menghalangi pengguna dengan penglihatan lemah memperbesar halaman di ponsel"
+    },
+    "auditCsp": {
+        "message": "Kebijakan Keamanan Konten (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Membatasi dari mana halaman boleh memuat skrip — perlindungan dari XSS. Jika berisi 'unsafe-inline' tanpa nonce atau hash, hampir tidak melindungi"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Melarang browser menebak jenis file — perlindungan dari penggantian skrip"
+    },
+    "auditFrame": {
+        "message": "Perlindungan dari penyematan"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options atau frame-ancestors mencegah situs disematkan di halaman lain untuk menipu agar diklik"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Seberapa banyak alamat halaman yang diteruskan ke situs lain saat berpindah. Tanpa header, browser memakai nilai bawaan yang aman"
+    },
+    "auditCache": {
+        "message": "Cache halaman"
+    },
+    "auditCacheHint": {
+        "message": "Dari mana halaman berasal: HIT — dari cache server atau CDN, MISS — dibuat ulang. Halaman itu sendiri jarang di-cache; biasanya gambar, skrip, dan gaya"
+    },
+    "auditCacheBrowser": {
+        "message": "dari cache browser"
+    },
+    "auditBots": {
+        "message": "Robot dan AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Aturan untuk mesin pencari dan robot lain. Tanpa file ini robot menjelajahi semuanya, dan mesin pencari tidak tahu letak peta situs"
+    },
+    "auditSitemap": {
+        "message": "Peta situs (sitemap)"
+    },
+    "auditSitemapHint": {
+        "message": "Daftar halaman untuk mesin pencari. Ditulis di robots.txt dengan baris Sitemap:"
+    },
+    "auditAi": {
+        "message": "Aturan untuk bot AI"
+    },
+    "auditAiHint": {
+        "message": "Apakah bot AI boleh mengumpulkan teks situs untuk jaringan saraf — menurut aturan di robots.txt yang menyebut nama bot. Ekstensi mengenal 16 bot seperti itu (GPTBot, ClaudeBot, Google-Extended, dll.); bot dengan nama lain tidak dihitung. “Tertutup untuk semua” — situs tertutup bagi semua robot melalui User-agent: *, tanpa aturan khusus untuk AI"
+    },
+    "auditAiBlocked": {
+        "message": "dilarang: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "diizinkan"
+    },
+    "auditAiNone": {
+        "message": "tidak diatur"
+    },
+    "auditAiAll": {
+        "message": "tertutup untuk semua"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Format baru: deskripsi singkat situs dalam Markdown untuk asisten dan agen AI. Untuk saat ini opsional"
+    },
+    "auditCspWeak": {
+        "message": "lemah"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Melarang halaman dan frame tersemat mengakses kamera, lokasi, dan fitur browser lainnya"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Memisahkan jendela situs dari jendela lain yang dibukanya — perlindungan dari serangan lewat window.opener"
+    },
+    "auditVersions": {
+        "message": "Versi perangkat lunak di header"
+    },
+    "auditVersionsHint": {
+        "message": "Server menyebutkan versi perangkat lunak — petunjuk bagi penyerang kerentanan apa yang bisa dicoba. Cara menyembunyikan: server_tokens off di nginx dan Angie, expose_php = Off di PHP"
+    },
+    "auditHidden": {
+        "message": "tersembunyi"
+    },
+    "auditSession": {
+        "message": "Cookie sesi bisa dibaca skrip"
+    },
+    "auditSessionHint": {
+        "message": "Cookie login tampaknya bisa dibaca dari JavaScript: lewat XSS cookie itu bisa dicuri. Flag HttpOnly mencegahnya. Terdeteksi dari nama cookie"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Kontak untuk melaporkan kerentanan di /.well-known/security.txt. Membantu peneliti melaporkan masalah kepada Anda alih-alih menjualnya"
+    },
+    "serverUnknownTitle": {
+        "message": "Jaringan penyedia ini tidak ada di basis data ABlock: isinya penyedia hosting besar, cloud, dan CDN"
+    },
+    "protocolH3Later": {
+        "message": "Server mendukung HTTP/3. Halaman ini datang melalui $PROTOCOL$ — ini biasa pada kunjungan pertama: browser mengetahui HTTP/3 dari respons server dan beralih ke sana untuk permintaan berikutnya",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Bahasa browser"
+    },
+    "langTitle": {
+        "message": "Bahasa antarmuka"
+    },
+    "noteTitle": {
+        "message": "Catatan untuk situs ini"
+    },
+    "notePlaceholder": {
+        "message": "Catatan untuk situs ini, hanya terlihat oleh Anda"
+    },
+    "incognitoLabel": {
+        "message": "Berfungsi di mode Samaran"
+    },
+    "incognitoTitle": {
+        "message": "Setelan ekstensi browser akan terbuka — aktifkan izin ABlock di mode Samaran di sana"
+    }
+}

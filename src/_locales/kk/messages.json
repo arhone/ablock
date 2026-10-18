@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "kk",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Жарнама бұғаттаушы және сайт тексеру"
+    },
+    "extDescription": {
+        "message": "Жарнама мен трекерлерді бұғаттайды: сайттар жылдам, трафик аз. Кез келген сайттың жылдамдығы мен қауіпсіздігін тексереді."
+    },
+    "toggle": {
+        "message": "Қосу / өшіру"
+    },
+    "statusOn": {
+        "message": "Қорғаныс қосулы"
+    },
+    "statusOff": {
+        "message": "Қорғаныс өшірулі"
+    },
+    "statusSiteOff": {
+        "message": "Бұл сайтта қорғаныс өшірулі"
+    },
+    "telegram": {
+        "message": "Telegram тобы"
+    },
+    "github": {
+        "message": "Бірлескен әзірлеу"
+    },
+    "httpsOn": {
+        "message": "Байланыс шифрланған"
+    },
+    "httpsOff": {
+        "message": "Байланыс шифрланбаған"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — ең жылдам хаттама"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — заманауи хаттама"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — ескірген хаттама",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Хаттама белгісіз (бет кэштен алынды)"
+    },
+    "loading": {
+        "message": "Жүктелуде…"
+    },
+    "loadingTitle": {
+        "message": "Бет әлі жүктелуде"
+    },
+    "seconds": {
+        "message": "$SECONDS$ с",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Беттің жүктелу уақыты"
+    },
+    "domains": {
+        "message": "Домендер $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Бөгде домендер:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…тағы $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Бөгде домендер жоқ"
+    },
+    "blocked": {
+        "message": "Блок $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Трекерлер $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Бетте бұғатталды\nЖарнама: $ADS$\nТрекерлер: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Сайт сізді бақылайды, бұғатталған трекерлер: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Трекерлер табылмады"
+    },
+    "scoreLabel": {
+        "message": "Сайт бағасы"
+    },
+    "serverLabel": {
+        "message": "Сервер"
+    },
+    "techLabel": {
+        "message": "Негізі"
+    },
+    "companiesLabel": {
+        "message": "Бақылайды"
+    },
+    "extraLabel": {
+        "message": "Тағы"
+    },
+    "extendedText": {
+        "message": "Кеңейтілген режим: хостинг, IPv6, HSTS, статистика және барлық сайттарда жарнама орындары мен cookie терезелерін жасыру. Деректер браузерден шықпайды."
+    },
+    "extendedButton": {
+        "message": "Қосу"
+    },
+    "extendedOff": {
+        "message": "Кеңейтілген режимді өшіру"
+    },
+    "extendedOffTitle": {
+        "message": "Кеңейтім серверлердің IP мен тақырыптарын көрмейді, статистика жүргізбейді және барлық сайттарда жарнама орындары мен cookie терезелерін жасырмайды; барлық сайттарға қолжетімділік алынады. Қайта кез келген уақытта қосуға болады"
+    },
+    "share": {
+        "message": "Бөлісу"
+    },
+    "copied": {
+        "message": "Көшірілді"
+    },
+    "cookiesLabel": {
+        "message": "Cookie терезелерін жасыру"
+    },
+    "cookiesTitle": {
+        "message": "Cookie келісім баннерлерінің қызметтерін бұғаттайды. Кеңейтілген режимде баннерлердің өзін кез келген сайтта жасырады"
+    },
+    "siteLabel": {
+        "message": "$HOST$ сайтында бұғаттау",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Сайт дұрыс жұмыс істемесе, белгіні алып тастаңыз: ондағы жарнама мен трекерлер бұғатталмайды. Бет қайта жүктеледі"
+    },
+    "guess": {
+        "message": "Жанама белгілер бойынша анықталды — дәл болмауы мүмкін"
+    },
+    "weightTitle": {
+        "message": "Барлық файлдарымен бірге бет салмағы"
+    },
+    "weightEstimated": {
+        "message": "Өлшемі $TOTAL$ файлдың $KNOWN$ үшін нақты белгілі, қалғаны бағаланды: бөгде сайттар өлшемді жасырады",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Бет сығылған: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Сығусыз"
+    },
+    "compressionOff": {
+        "message": "Бет сығусыз жіберіледі — ұзағырақ жүктеледі"
+    },
+    "compressionUnknown": {
+        "message": "Сығу белгісіз (бет кэштен)"
+    },
+    "blockedCookies": {
+        "message": "Cookie терезелері: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Көлемі: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Бұғатталмаған:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Сайтта қосылған:\n$LIST$\nБұғатталғаны кеңейтілген режимде көрінеді",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Бұғатталды:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "белгілілері табылмады"
+    },
+    "serverExtended": {
+        "message": "кеңейтілген режимде"
+    },
+    "serverReload": {
+        "message": "бетті жаңартыңыз"
+    },
+    "serverReloadTitle": {
+        "message": "Сервер бет жүктелгенде анықталады"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "басқа провайдер"
+    },
+    "serverProxy": {
+        "message": "Сайт $NAME$ арқылы жұмыс істейді (CDN немесе DDoS қорғанысы) — нақты сервер жасырын",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Хостинг: $NAME$ (RIPE мекенжай базасы бойынша)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Ел провайдер бойынша анықталды"
+    },
+    "techFound": {
+        "message": "Бетте табылды"
+    },
+    "techNone": {
+        "message": "анықталмады"
+    },
+    "techNoneTitle": {
+        "message": "Белгілі қозғалтқыштар мен кітапханалардың белгілері табылмады"
+    },
+    "ipv6": {
+        "message": "IPv6 арқылы қосылым"
+    },
+    "ipv4": {
+        "message": "IPv4 арқылы қосылым. Сайттың IPv6 қолдайтынын бұлай білу мүмкін емес: бұл сіздің желіңізге де байланысты"
+    },
+    "hstsOn": {
+        "message": "HSTS: браузер сайтты әрқашан тек HTTPS арқылы ашады"
+    },
+    "hstsOff": {
+        "message": "HSTS жоқ: сайтқа алғашқы кіру шифрлаусыз өтуі мүмкін"
+    },
+    "mixed": {
+        "message": "HTTP-файлдар $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS беті шифрлаусыз файлдар жүктейді: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Баға: 10-нан $SCORE$, көрсеткіштер бойынша:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Шифрлау"
+    },
+    "scoreProtocol": {
+        "message": "Хаттама"
+    },
+    "scoreSpeed": {
+        "message": "Жүктелу жылдамдығы"
+    },
+    "scoreWeight": {
+        "message": "Бет салмағы"
+    },
+    "scoreTrackers": {
+        "message": "Бақылау"
+    },
+    "scoreDomains": {
+        "message": "Бөгде домендер"
+    },
+    "scoreCompression": {
+        "message": "Сығу"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Аралас контент"
+    },
+    "stats": {
+        "message": "Барлығы бұғатталған сұраулар: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "$DATE$ бастап. Көлемі — жарнама файлдарының орташа өлшемі бойынша бағалау",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Сайт туралы есеп — сурет немесе мәтін"
+    },
+    "reportTitle": {
+        "message": "Сайттың бағасы мен толық мәліметі сурет немесе мәтін түрінде — әріптестерге, мердігерге немесе чатқа"
+    },
+    "reportDone": {
+        "message": "Сақталды"
+    },
+    "copyIp": {
+        "message": "IP $IP$ көшіру",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Суретті көшіру"
+    },
+    "copyText": {
+        "message": "Мәтін мен сілтемені көшіру"
+    },
+    "shareSystem": {
+        "message": "Тағы…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ABlock бағасы: 10-нан $SCORE$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Өз сайтыңызды тексеріңіз:"
+    },
+    "donate": {
+        "message": "Қолдау"
+    },
+    "donateTitle": {
+        "message": "Boosty-де әзірлеуді қолдау"
+    },
+    "askStats": {
+        "message": "Бұғатталған сұраулар: $COUNT$, үнемделді ≈ $SIZE$. ABlock пайдалы болса, әзірлеуді қолдаңыз",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Сіз ABlock-ты бір ай бойы қолданып келесіз. Пайдалы болса, әзірлеуді қолдаңыз"
+    },
+    "askClose": {
+        "message": "Қайта көрсетпеу"
+    },
+    "reportLegendGuess": {
+        "message": "? — жанама белгілер бойынша анықталған"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — шамамен алынған баға"
+    },
+    "companiesNoneTitle": {
+        "message": "Бетте ABlock анықтамалығындағы компаниялар жоқ. Сайттың өз есептегіштері бәрібір болуы мүмкін — оларды «Трекерлер» белгісі санайды"
+    },
+    "compressionFiles": {
+        "message": "Мәтіндік файлдар: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Сығусыз: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Сайт деректерін жойып, қайта жүктеу: cookie, кэш және қоймалар. Белгілер мен баға сайтты жаңа келушіге көрінетіндей көрсетеді. Осы сайттағы аккаунттан шығасыз"
+    },
+    "clearConfirm": {
+        "message": "Жою?"
+    },
+    "saveImage": {
+        "message": "Суретті сақтау"
+    },
+    "shareSend": {
+        "message": "$NAME$ арқылы жіберу",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "$NAME$ желісінде жариялау",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Мәтін ретінде жіберіледі: суретті серверге жүктемей жіберу мүмкін емес — оны көшіріп, хабарламаға қойыңыз"
+    },
+    "shareLinkOnly": {
+        "message": "Тек кеңейтімге сілтеме беріледі — есеп суретін көшіріп, жазбаға қойыңыз"
+    },
+    "auditLabel": {
+        "message": "Толығырақ"
+    },
+    "auditIssues": {
+        "message": "ескертулер: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "ескерту жоқ"
+    },
+    "auditSpeed": {
+        "message": "Жылдамдық"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Беттеу"
+    },
+    "auditA11y": {
+        "message": "Қолжетімділік"
+    },
+    "auditSecurity": {
+        "message": "Қауіпсіздік"
+    },
+    "auditYes": {
+        "message": "бар"
+    },
+    "auditNo": {
+        "message": "жоқ"
+    },
+    "auditLength": {
+        "message": "$COUNT$ таңба",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "басқа домен"
+    },
+    "auditNoImage": {
+        "message": "суретсіз"
+    },
+    "auditNoInput": {
+        "message": "әрекет болмады"
+    },
+    "auditModernValue": {
+        "message": "$TOTAL$ ішінен $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Беттеу ығысуы"
+    },
+    "auditTtfb": {
+        "message": "Сервер жауабы (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Беттің алғашқы байтын серверден қанша күттік. Жақсы — 0,8 с дейін"
+    },
+    "auditFcp": {
+        "message": "Алғашқы сызылу (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Экранда алғашқы мазмұн қашан пайда болды. Жақсы — 1,8 с дейін"
+    },
+    "auditLcp": {
+        "message": "Негізгі блок (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Ең үлкен блок — сурет немесе мәтін — қашан сызылды. Google жылдамдығының басты метрикасы. Жақсы — 2,5 с дейін"
+    },
+    "auditCls": {
+        "message": "Беттеу ығысуы (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Жүктелу кезінде мазмұн қаншалықты секіреді. Жақсы — 0,1 дейін"
+    },
+    "auditInp": {
+        "message": "Әрекетке жауап (INP)"
+    },
+    "auditInpHint": {
+        "message": "Шертуге немесе енгізуге ең ұзақ кідіріс. Жақсы — 200 мс дейін"
+    },
+    "auditBlocking": {
+        "message": "Сызуды бөгейді"
+    },
+    "auditBlockingHint": {
+        "message": "Браузер бетті сызуды бастамайтын файлдар. Стильдер қалыпты, ал скрипттерді async немесе defer арқылы қосқан дұрыс"
+    },
+    "auditStatus": {
+        "message": "Жауап коды"
+    },
+    "auditStatusHint": {
+        "message": "Беттің HTTP коды: 200 — бәрі дұрыс, 4xx және 5xx — қате"
+    },
+    "auditNoindex": {
+        "message": "Индекстеуге тыйым"
+    },
+    "auditNoindexHint": {
+        "message": "Бет іздеу жүйелерінен noindex белгісімен немесе robots.txt ережесімен жабылған. Кіру беттері мен жеке кабинеттер үшін бұл қалыпты"
+    },
+    "auditTitle": {
+        "message": "Тақырып (title)"
+    },
+    "auditTitleHint": {
+        "message": "Іздеу нәтижесіндегі сілтеме мәтіні және қойынды атауы. Оңтайлы — 10–70 таңба"
+    },
+    "auditDescription": {
+        "message": "Сипаттама (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Іздеу нәтижесінде сілтеме астындағы мәтін. Оңтайлы — 50–170 таңба"
+    },
+    "auditH1": {
+        "message": "h1 тақырыптары"
+    },
+    "auditH1Hint": {
+        "message": "Беттің басты тақырыбы. Әдетте біреу болады"
+    },
+    "auditCanonical": {
+        "message": "Канондық мекенжай"
+    },
+    "auditCanonicalHint": {
+        "message": "Беттің көшірмелері болса, іздеу жүйелеріне негізгі мекенжайды көрсетеді"
+    },
+    "auditOg": {
+        "message": "Сілтеме алдын ала көрінісі (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Сілтеме жіберілгенде Telegram, VK және басқа сервистер көрсететін тақырып пен сурет"
+    },
+    "auditViewport": {
+        "message": "Мобильді нұсқа (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "meta viewport болмаса, телефон бетті компьютерге арналған кішірейтілген нұсқа ретінде көрсетеді"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Онсыз браузер ескі сайттармен үйлесімділік режимін қосады, беттеу өзгеше болуы мүмкін"
+    },
+    "auditNoSize": {
+        "message": "Өлшемсіз суреттер"
+    },
+    "auditNoSizeHint": {
+        "message": "width пен height болмаса, браузер суретке қанша орын қалдыру керегін білмейді, ал сурет жүктелгенде беттеу секіреді"
+    },
+    "auditLarge": {
+        "message": "Қажетінен үлкен суреттер"
+    },
+    "auditLargeHint": {
+        "message": "Сурет экранда көрсетілгеннен әлдеқайда үлкен жүктеледі — артық салмақ"
+    },
+    "auditModern": {
+        "message": "WebP және AVIF суреттері"
+    },
+    "auditModernHint": {
+        "message": "Бұл форматтар JPEG пен PNG-ден 25–50% жеңіл"
+    },
+    "auditLang": {
+        "message": "Бет тілі (lang)"
+    },
+    "auditLangHint": {
+        "message": "Экраннан оқу бағдарламаларына, аудармашыға және іздеу жүйелеріне қажет"
+    },
+    "auditAlt": {
+        "message": "alt жоқ суреттер"
+    },
+    "auditAltHint": {
+        "message": "Көру қабілеті жоқ адамдарға және сурет жүктелмеген жағдайға арналған сипаттама"
+    },
+    "auditLabels": {
+        "message": "Белгісіз өрістер"
+    },
+    "auditLabelsHint": {
+        "message": "Экраннан оқу бағдарламасы өріске не енгізу керегін айта алмайды"
+    },
+    "auditNames": {
+        "message": "Атауы жоқ батырмалар мен сілтемелер"
+    },
+    "auditNamesHint": {
+        "message": "Мысалы, aria-label жоқ белгіше-батырма: көзі көрмейтін пайдаланушы тек «батырма» дегенді естиді"
+    },
+    "auditMain": {
+        "message": "Негізгі аймақ (main)"
+    },
+    "auditMainHint": {
+        "message": "Мәзірді өткізіп, бірден мазмұнға өтуге мүмкіндік береді"
+    },
+    "auditZoom": {
+        "message": "Масштабтауға тыйым"
+    },
+    "auditZoomHint": {
+        "message": "Көруі нашар адамдарға телефонда бетті үлкейтуге кедергі жасайды"
+    },
+    "auditCsp": {
+        "message": "Мазмұн саясаты (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Бет скрипттерді қайдан жүктей алатынын шектейді — XSS-тен қорғаныс. Онда nonce не hash жоқ 'unsafe-inline' болса, қорғаныс дерлік жұмыс істемейді"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Браузерге файл түрін болжауға тыйым салады — скрипттерді алмастырудан қорғаныс"
+    },
+    "auditFrame": {
+        "message": "Ендіруден қорғаныс"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options немесе frame-ancestors сайтты алдап шерттіру үшін бөгде бетке ендіруге жол бермейді"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Өткен кезде басқа сайттарға мекенжайдың қанша бөлігі беріледі. Тақырыпша болмаса, браузер қауіпсіз әдепкі мәнді қолданады"
+    },
+    "auditCache": {
+        "message": "Бет кэші"
+    },
+    "auditCacheHint": {
+        "message": "Бет қайдан келді: HIT — сервер не CDN кэшінен, MISS — қайта құрастырылды. Беттердің өзі сирек кэштеледі, әдетте кэште суреттер, скрипттер мен стильдер болады"
+    },
+    "auditCacheBrowser": {
+        "message": "браузер кэшінен"
+    },
+    "auditBots": {
+        "message": "Роботтар және ЖИ"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Іздеу және басқа роботтарға арналған ережелер. Файл болмаса, роботтар бәрін аралайды, ал іздеу жүйелері сайт картасы қайда екенін білмейді"
+    },
+    "auditSitemap": {
+        "message": "Сайт картасы (sitemap)"
+    },
+    "auditSitemapHint": {
+        "message": "Іздеу жүйелеріне арналған беттер тізімі. robots.txt ішінде Sitemap: жолымен көрсетіледі"
+    },
+    "auditAi": {
+        "message": "ЖИ боттарына арналған ережелер"
+    },
+    "auditAiHint": {
+        "message": "ЖИ-боттар сайт мәтіндерін нейрожелілер үшін жинай ала ма — robots.txt ішінде бот атымен аталған ережелер бойынша. Кеңейтпе мұндай 16 ботты біледі (GPTBot, ClaudeBot, Google-Extended т.б.); басқа атаулы боттар есептелмейді. «Барлығына жабық» — сайт User-agent: * арқылы барлық роботтарға жабық, ЖИ үшін бөлек ереже жоқ"
+    },
+    "auditAiBlocked": {
+        "message": "тыйым салынған: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "рұқсат"
+    },
+    "auditAiNone": {
+        "message": "берілмеген"
+    },
+    "auditAiAll": {
+        "message": "барлығына жабық"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Жаңа формат: ЖИ көмекшілері мен агенттерге арналған Markdown тіліндегі қысқа сайт сипаттамасы. Әзірге міндетті емес"
+    },
+    "auditCspWeak": {
+        "message": "әлсіз"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Бет пен ендірілген фреймдерге камераға, орналасуға және браузердің басқа мүмкіндіктеріне қол жеткізуге тыйым салады"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Сайт терезесін ол ашатын бөгде терезелерден бөледі — window.opener арқылы шабуылдардан қорғаныс"
+    },
+    "auditVersions": {
+        "message": "Тақырыпшалардағы БЖ нұсқалары"
+    },
+    "auditVersionsHint": {
+        "message": "Сервер БЖ нұсқаларын хабарлайды — шабуылдаушыға қай белгілі осалдықтарды байқап көру керектігін көрсетеді. Жасыру: nginx пен Angie-де server_tokens off, PHP-де expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "жасырылған"
+    },
+    "auditSession": {
+        "message": "Сессия cookie файлдары скрипттерге қолжетімді"
+    },
+    "auditSessionHint": {
+        "message": "Кіру cookie файлдары JavaScript арқылы оқылатын сияқты: XSS кезінде оларды ұрлауға болады. HttpOnly жалаушасы бұған тыйым салады. Cookie атауы бойынша анықталды"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "/.well-known/security.txt ішіндегі осалдықтар туралы хабарлауға арналған байланыс. Зерттеушіге мәселені сатудың орнына сізге хабарлауға көмектеседі"
+    },
+    "serverUnknownTitle": {
+        "message": "Бұл провайдердің желілері ABlock базасында жоқ: онда ірі хостингтер, бұлттар мен CDN бар"
+    },
+    "protocolH3Later": {
+        "message": "Сервер HTTP/3 қолдайды. Бұл бет $PROTOCOL$ арқылы келді — алғаш кіргенде солай болады: браузер HTTP/3 туралы сервер жауабынан біліп, келесі сұрауларда соған көшеді",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Браузер тілі"
+    },
+    "langTitle": {
+        "message": "Интерфейс тілі"
+    },
+    "noteTitle": {
+        "message": "Сайтқа жазба"
+    },
+    "notePlaceholder": {
+        "message": "Сайтқа жазба, тек сізге көрінеді"
+    },
+    "incognitoLabel": {
+        "message": "Инкогнито режимінде жұмыс істеу"
+    },
+    "incognitoTitle": {
+        "message": "Браузердің кеңейтімдер параметрлері ашылады — сол жерде ABlock үшін инкогнито режиміне рұқсатты қосыңыз"
+    }
+}

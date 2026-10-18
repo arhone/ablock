@@ -1,0 +1,393 @@
+[
+    {
+        "name": "Yandex",
+        "domains": [
+            "mc.yandex.ru",
+            "mc.yandex.com",
+            "mc.yandex.by",
+            "mc.yandex.kz",
+            "mc.yandex.uz",
+            "mc.webvisor.org",
+            "mc.webvisor.com",
+            "mc.admetrica.ru",
+            "an.yandex.ru",
+            "yabs.yandex.ru",
+            "bs.yandex.ru",
+            "adstat.yandex.ru",
+            "awaps.yandex.net",
+            "yandexadexchange.net",
+            "adfox.ru",
+            "adfox.yandex.ru",
+            "yandex.ru/ads/",
+            "yandex.ru/an/"
+        ]
+    },
+    {
+        "name": "VK",
+        "domains": [
+            "top-fwz1.mail.ru",
+            "top.mail.ru",
+            "ad.mail.ru",
+            "r.mail.ru",
+            "rs.mail.ru",
+            "target.my.com",
+            "ads.vk.com",
+            "vk.com/rtrg",
+            "vk.ru/rtrg"
+        ]
+    },
+    {
+        "name": "Google",
+        "domains": [
+            "google-analytics.com",
+            "analytics.google.com",
+            "googletagmanager.com",
+            "googletagservices.com",
+            "doubleclick.net",
+            "googlesyndication.com",
+            "googleadservices.com",
+            "adservice.google.com",
+            "youtube.com/api/stats/",
+            "youtube.com/ptracking",
+            "youtube.com/pagead/",
+            "youtube.com/youtubei/v1/log_event",
+            "google.com/pagead/"
+        ]
+    },
+    {
+        "name": "Meta",
+        "domains": [
+            "connect.facebook.net",
+            "pixel.facebook.com",
+            "facebook.com/tr"
+        ]
+    },
+    {
+        "name": "Microsoft",
+        "domains": [
+            "clarity.ms",
+            "bat.bing.com",
+            "c.bing.com",
+            "browser.events.data.microsoft.com",
+            "js.monitor.azure.com",
+            "dc.services.visualstudio.com"
+        ]
+    },
+    {
+        "name": "Rambler&Co",
+        "domains": [
+            "top100.ru",
+            "counter.rambler.ru",
+            "kraken.rambler.ru",
+            "ssp.rambler.ru",
+            "ad.rambler.ru"
+        ]
+    },
+    {
+        "name": "Mediascope",
+        "domains": [
+            "tns-counter.ru",
+            "mediascope.net"
+        ]
+    },
+    {
+        "name": "LiveInternet",
+        "domains": [
+            "counter.yadro.ru",
+            "yadro.ru"
+        ]
+    },
+    {
+        "name": "Weborama",
+        "domains": [
+            "weborama-tech.ru",
+            "weborama.com",
+            "weborama.fr"
+        ]
+    },
+    {
+        "name": "Mindbox",
+        "domains": [
+            "mindbox.ru"
+        ]
+    },
+    {
+        "name": "Roistat",
+        "domains": [
+            "roistat.com"
+        ]
+    },
+    {
+        "name": "Calltouch",
+        "domains": [
+            "calltouch.ru"
+        ]
+    },
+    {
+        "name": "UIS",
+        "domains": [
+            "comagic.ru",
+            "uiscom.ru"
+        ]
+    },
+    {
+        "name": "AdRiver",
+        "domains": [
+            "adriver.ru"
+        ]
+    },
+    {
+        "name": "Between",
+        "domains": [
+            "betweendigital.com"
+        ]
+    },
+    {
+        "name": "Buzzoola",
+        "domains": [
+            "buzzoola.com"
+        ]
+    },
+    {
+        "name": "OTM",
+        "domains": [
+            "otm-r.com"
+        ]
+    },
+    {
+        "name": "Segmento",
+        "domains": [
+            "segmento.ru"
+        ]
+    },
+    {
+        "name": "Retail Rocket",
+        "domains": [
+            "retailrocket.ru",
+            "retailrocket.net"
+        ]
+    },
+    {
+        "name": "Roxot",
+        "domains": [
+            "skcrtxr.com"
+        ]
+    },
+    {
+        "name": "Openstat",
+        "domains": [
+            "openstat.net"
+        ]
+    },
+    {
+        "name": "TikTok",
+        "domains": [
+            "analytics.tiktok.com"
+        ]
+    },
+    {
+        "name": "X (Twitter)",
+        "domains": [
+            "static.ads-twitter.com",
+            "analytics.twitter.com",
+            "ads-api.twitter.com"
+        ]
+    },
+    {
+        "name": "LinkedIn",
+        "domains": [
+            "snap.licdn.com",
+            "px.ads.linkedin.com"
+        ]
+    },
+    {
+        "name": "Pinterest",
+        "domains": [
+            "ct.pinterest.com"
+        ]
+    },
+    {
+        "name": "Snapchat",
+        "domains": [
+            "sc-static.net",
+            "tr.snapchat.com"
+        ]
+    },
+    {
+        "name": "Amazon",
+        "domains": [
+            "amazon-adsystem.com"
+        ]
+    },
+    {
+        "name": "Criteo",
+        "domains": [
+            "criteo.com",
+            "criteo.net"
+        ]
+    },
+    {
+        "name": "Xandr",
+        "domains": [
+            "adnxs.com"
+        ]
+    },
+    {
+        "name": "Taboola",
+        "domains": [
+            "taboola.com"
+        ]
+    },
+    {
+        "name": "Outbrain",
+        "domains": [
+            "outbrain.com"
+        ]
+    },
+    {
+        "name": "Comscore",
+        "domains": [
+            "scorecardresearch.com"
+        ]
+    },
+    {
+        "name": "Quantcast",
+        "domains": [
+            "quantserve.com",
+            "quantcount.com"
+        ]
+    },
+    {
+        "name": "Gemius",
+        "domains": [
+            "gemius.pl"
+        ]
+    },
+    {
+        "name": "Hotjar",
+        "domains": [
+            "hotjar.com",
+            "hotjar.io"
+        ]
+    },
+    {
+        "name": "Mixpanel",
+        "domains": [
+            "mixpanel.com",
+            "mxpnl.com"
+        ]
+    },
+    {
+        "name": "Amplitude",
+        "domains": [
+            "amplitude.com"
+        ]
+    },
+    {
+        "name": "Segment",
+        "domains": [
+            "segment.io",
+            "segment.com"
+        ]
+    },
+    {
+        "name": "Heap",
+        "domains": [
+            "heapanalytics.com"
+        ]
+    },
+    {
+        "name": "FullStory",
+        "domains": [
+            "fullstory.com"
+        ]
+    },
+    {
+        "name": "Smartlook",
+        "domains": [
+            "smartlook.com"
+        ]
+    },
+    {
+        "name": "New Relic",
+        "domains": [
+            "nr-data.net",
+            "js-agent.newrelic.com"
+        ]
+    },
+    {
+        "name": "Cloudflare Insights",
+        "domains": [
+            "cloudflareinsights.com"
+        ]
+    },
+    {
+        "name": "GitHub",
+        "domains": [
+            "collector.github.com",
+            "api.github.com/_private/browser/stats"
+        ]
+    },
+    {
+        "name": "Adobe",
+        "domains": [
+            "omtrdc.net",
+            "demdex.net",
+            "2o7.net",
+            "everesttech.net",
+            "adobedtm.com"
+        ]
+    },
+    {
+        "name": "Oracle",
+        "domains": [
+            "bluekai.com",
+            "addthis.com",
+            "moatads.com"
+        ]
+    },
+    {
+        "name": "Salesforce",
+        "domains": [
+            "krxd.net",
+            "exacttarget.com",
+            "cdn.evgnet.com"
+        ]
+    },
+    {
+        "name": "HubSpot",
+        "domains": [
+            "hs-analytics.net",
+            "hs-scripts.com",
+            "hs-banner.com",
+            "track.hubspot.com"
+        ]
+    },
+    {
+        "name": "Yahoo",
+        "domains": [
+            "analytics.yahoo.com",
+            "ads.yahoo.com",
+            "sp.analytics.yahoo.com"
+        ]
+    },
+    {
+        "name": "Sentry",
+        "domains": [
+            "sentry.io",
+            "sentry-cdn.com"
+        ]
+    },
+    {
+        "name": "Matomo Cloud",
+        "domains": [
+            "matomo.cloud"
+        ]
+    },
+    {
+        "name": "Plausible",
+        "domains": [
+            "plausible.io"
+        ]
+    }
+]

@@ -5,8 +5,8 @@
     "scripts": {
         "lint": "npm run lint:js && npm run lint:css",
         "lint:js": "eslint .",
-        "lint:css": "stylelint \"css/**/*.css\"",
-        "lint:fix": "eslint . --fix && stylelint \"css/**/*.css\" --fix"
+        "lint:css": "stylelint \"src/**/*.css\"",
+        "lint:fix": "eslint . --fix && stylelint \"src/**/*.css\" --fix"
     },
     "devDependencies": {
         "@eslint/js": "^9.39.5",

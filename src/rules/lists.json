@@ -1,0 +1,460 @@
+{
+    "base": {
+        "rules": 16410,
+        "regex": 138
+    },
+    "regions": {
+        "alb-0": {
+            "name": "🇦🇱al 🇽🇰xk: Adblock List for Albania",
+            "url": "https://github.com/AnXh3L0/blocklist",
+            "lang": [
+                "sq"
+            ],
+            "rules": 27,
+            "regex": 0
+        },
+        "ara-0": {
+            "name": "🇪🇬eg 🇸🇦sa 🇲🇦ma 🇩🇿dz: Liste AR",
+            "url": "https://forums.lanik.us/viewforum.php?f=98",
+            "lang": [
+                "ar",
+                "kab"
+            ],
+            "rules": 862,
+            "regex": 0
+        },
+        "bgr-0": {
+            "name": "🇧🇬bg: Bulgarian Adblock list",
+            "url": "https://stanev.org/abp/",
+            "lang": [
+                "bg",
+                "mk"
+            ],
+            "rules": 682,
+            "regex": 0
+        },
+        "chn-0": {
+            "name": "🇨🇳cn 🇹🇼tw: AdGuard Chinese (中文)",
+            "url": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+            "lang": [
+                "ug",
+                "zh"
+            ],
+            "rules": 5438,
+            "regex": 24
+        },
+        "cze-0": {
+            "name": "🇨🇿cz 🇸🇰sk: EasyList Czech and Slovak",
+            "url": "https://github.com/tomasko126/easylistczechandslovak",
+            "lang": [
+                "cs",
+                "sk"
+            ],
+            "rules": 116,
+            "regex": 1
+        },
+        "deu-0": {
+            "name": "🇩🇪de 🇨🇭ch 🇦🇹at: EasyList Germany",
+            "url": "https://forums.lanik.us/viewforum.php?f=90",
+            "lang": [
+                "de",
+                "dsb",
+                "hsb",
+                "lb",
+                "rm"
+            ],
+            "rules": 1720,
+            "regex": 3
+        },
+        "est-0": {
+            "name": "🇪🇪ee: Eesti saitidele kohandatud filter",
+            "url": "https://github.com/sander85/uBO-et",
+            "lang": [
+                "et"
+            ],
+            "rules": 53,
+            "regex": 0
+        },
+        "fin-0": {
+            "name": "🇫🇮fi: Adblock List for Finland",
+            "url": "https://github.com/finnish-easylist-addition/finnish-easylist-addition",
+            "lang": [
+                "fi"
+            ],
+            "rules": 150,
+            "regex": 1
+        },
+        "fra-0": {
+            "name": "🇫🇷fr 🇧🇪be 🇨🇦ca: AdGuard Français",
+            "url": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+            "lang": [
+                "ar",
+                "br",
+                "ff",
+                "fr",
+                "lb",
+                "oc",
+                "son"
+            ],
+            "rules": 3528,
+            "regex": 0
+        },
+        "grc-0": {
+            "name": "🇬🇷gr 🇨🇾cy: Greek AdBlock Filter",
+            "url": "https://github.com/kargig/greek-adblockplus-filter",
+            "lang": [
+                "el"
+            ],
+            "rules": 426,
+            "regex": 0
+        },
+        "hrv-0": {
+            "name": "🇭🇷hr 🇷🇸rs: Dandelion Sprout's Serbo-Croatian filters",
+            "url": "https://github.com/DandelionSprout/adfilt#readme",
+            "lang": [
+                "bs",
+                "hr",
+                "sr"
+            ],
+            "rules": 81,
+            "regex": 2
+        },
+        "hun-0": {
+            "name": "🇭🇺hu: hufilter",
+            "url": "https://github.com/hufilter/hufilter",
+            "lang": [
+                "hu"
+            ],
+            "rules": 220,
+            "regex": 1
+        },
+        "idn-0": {
+            "name": "🇮🇩id 🇲🇾my: ABPindo",
+            "url": "https://github.com/ABPindo/indonesianadblockrules",
+            "lang": [
+                "id",
+                "ms"
+            ],
+            "rules": 3176,
+            "regex": 0
+        },
+        "ind-0": {
+            "name": "🇮🇳in 🇱🇰lk 🇳🇵np: IndianList",
+            "url": "https://github.com/mediumkreation/IndianList",
+            "lang": [
+                "as",
+                "bn",
+                "gu",
+                "hi",
+                "kn",
+                "ml",
+                "mr",
+                "ne",
+                "pa",
+                "si",
+                "ta",
+                "te"
+            ],
+            "rules": 5258,
+            "regex": 0
+        },
+        "irn-0": {
+            "name": "🇮🇷ir: PersianBlocker",
+            "url": "https://github.com/MasterKia/PersianBlocker",
+            "lang": [
+                "fa",
+                "ps",
+                "tg"
+            ],
+            "rules": 592,
+            "regex": 1
+        },
+        "isl-0": {
+            "name": "🇮🇸is: Icelandic ABP List",
+            "url": "https://github.com/brave/adblock-lists/issues",
+            "lang": [
+                "is"
+            ],
+            "rules": 11,
+            "regex": 0
+        },
+        "isr-0": {
+            "name": "🇮🇱il: EasyList Hebrew",
+            "url": "https://github.com/easylist/EasyListHebrew",
+            "lang": [
+                "he"
+            ],
+            "rules": 108,
+            "regex": 1
+        },
+        "ita-0": {
+            "name": "🇮🇹it: EasyList Italy",
+            "url": "https://forums.lanik.us/viewforum.php?f=96",
+            "lang": [
+                "it",
+                "lij"
+            ],
+            "rules": 969,
+            "regex": 2
+        },
+        "jpn-1": {
+            "name": "🇯🇵jp: AdGuard Japanese",
+            "url": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+            "lang": [
+                "ja"
+            ],
+            "rules": 1275,
+            "regex": 6
+        },
+        "kor-1": {
+            "name": "🇰🇷kr: 한국어 (Korean)",
+            "url": "https://github.com/FilteringDev/filterslists-KO#filteringdevfilterslists-ko",
+            "lang": [
+                "ko"
+            ],
+            "rules": 1048,
+            "regex": 142
+        },
+        "ltu-0": {
+            "name": "🇱🇹lt: EasyList Lithuania",
+            "url": "https://github.com/EasyList-Lithuania/easylist_lithuania",
+            "lang": [
+                "lt"
+            ],
+            "rules": 468,
+            "regex": 2
+        },
+        "lva-0": {
+            "name": "🇱🇻lv: Latvian List",
+            "url": "https://github.com/Latvian-List/adblock-latvian",
+            "lang": [
+                "lv"
+            ],
+            "rules": 140,
+            "regex": 0
+        },
+        "mkd-0": {
+            "name": "🇲🇰mk: Macedonian adBlock Filters",
+            "url": "https://github.com/DeepSpaceHarbor/Macedonian-adBlock-Filters",
+            "lang": [
+                "mk"
+            ],
+            "rules": 160,
+            "regex": 0
+        },
+        "nld-0": {
+            "name": "🇳🇱nl 🇧🇪be: AdGuard Dutch",
+            "url": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+            "lang": [
+                "af",
+                "fy",
+                "nl"
+            ],
+            "rules": 435,
+            "regex": 0
+        },
+        "nor-0": {
+            "name": "🇳🇴no 🇩🇰dk 🇮🇸is: Dandelion Sprouts nordiske filtre",
+            "url": "https://github.com/DandelionSprout/adfilt",
+            "lang": [
+                "nb",
+                "nn",
+                "no",
+                "da",
+                "is"
+            ],
+            "rules": 589,
+            "regex": 3
+        },
+        "pol-0": {
+            "name": "🇵🇱pl: Oficjalne Polskie Filtry do uBlocka Origin",
+            "url": "https://github.com/MajkiIT/polish-ads-filter",
+            "lang": [
+                "szl",
+                "pl"
+            ],
+            "rules": 667,
+            "regex": 16
+        },
+        "pol-3": {
+            "name": "🇵🇱pl: CERT.PL's Warning List",
+            "url": "https://cert.pl/lista-ostrzezen/",
+            "lang": [
+                "szl",
+                "pl"
+            ],
+            "rules": 1,
+            "regex": 0
+        },
+        "rou-1": {
+            "name": "🇷🇴ro 🇲🇩md: Romanian Ad (ROad) Block List Light",
+            "url": "https://github.com/tcptomato/ROad-Block",
+            "lang": [
+                "ro"
+            ],
+            "rules": 405,
+            "regex": 4
+        },
+        "rus-0": {
+            "name": "🇷🇺ru 🇺🇦ua 🇺🇿uz 🇰🇿kz: RU AdList",
+            "url": "https://forums.lanik.us/viewforum.php?f=102",
+            "lang": [
+                "be",
+                "kk",
+                "tt",
+                "ru",
+                "uz"
+            ],
+            "rules": 5120,
+            "regex": 12
+        },
+        "rus-1": {
+            "name": "🇷🇺ru 🇺🇦ua 🇺🇿uz 🇰🇿kz: RU AdList: Counters",
+            "url": "https://forums.lanik.us/viewforum.php?f=102",
+            "lang": [
+                "be",
+                "kk",
+                "tt",
+                "ru",
+                "uz"
+            ],
+            "rules": 510,
+            "regex": 0
+        },
+        "spa-0": {
+            "name": "🇪🇸es 🇦🇷ar 🇲🇽mx 🇨🇴co: EasyList Spanish",
+            "url": "https://forums.lanik.us/viewforum.php?f=103",
+            "lang": [
+                "an",
+                "ast",
+                "ca",
+                "cak",
+                "es",
+                "eu",
+                "gl",
+                "gn",
+                "trs",
+                "quz"
+            ],
+            "rules": 529,
+            "regex": 6
+        },
+        "spa-1": {
+            "name": "🇪🇸es 🇦🇷ar 🇧🇷br 🇵🇹pt: AdGuard Spanish/Portuguese",
+            "url": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+            "lang": [
+                "an",
+                "ast",
+                "ca",
+                "cak",
+                "es",
+                "eu",
+                "gl",
+                "gn",
+                "trs",
+                "pt",
+                "quz"
+            ],
+            "rules": 663,
+            "regex": 7
+        },
+        "svn-0": {
+            "name": "🇸🇮si: Slovenian List",
+            "url": "https://github.com/betterwebleon/slovenian-list",
+            "lang": [
+                "sl"
+            ],
+            "rules": 66,
+            "regex": 0
+        },
+        "swe-1": {
+            "name": "🇸🇪se: Frellwit's Swedish Filter",
+            "url": "https://github.com/lassekongo83/Frellwits-filter-lists",
+            "lang": [
+                "sv"
+            ],
+            "rules": 1410,
+            "regex": 1
+        },
+        "tha-0": {
+            "name": "🇹🇭th: EasyList Thailand",
+            "url": "https://github.com/easylist-thailand/easylist-thailand",
+            "lang": [
+                "th"
+            ],
+            "rules": 756,
+            "regex": 2
+        },
+        "tur-0": {
+            "name": "🇹🇷tr: AdGuard Turkish",
+            "url": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+            "lang": [
+                "tr"
+            ],
+            "rules": 1252,
+            "regex": 17
+        },
+        "ukr-0": {
+            "name": "🇺🇦ua: AdGuard Ukrainian",
+            "url": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+            "lang": [
+                "uk"
+            ],
+            "rules": 1386,
+            "regex": 16
+        },
+        "vie-1": {
+            "name": "🇻🇳vn: ABPVN List",
+            "url": "https://abpvn.com/",
+            "lang": [
+                "vi"
+            ],
+            "rules": 264,
+            "regex": 2
+        }
+    },
+    "cosmetic": [
+        "easylist",
+        "easyprivacy",
+        "ublock-filters",
+        "ublock-badware",
+        "annoyances-cookies",
+        "alb-0",
+        "ara-0",
+        "bgr-0",
+        "chn-0",
+        "cze-0",
+        "deu-0",
+        "est-0",
+        "fin-0",
+        "fra-0",
+        "grc-0",
+        "hrv-0",
+        "hun-0",
+        "idn-0",
+        "ind-0",
+        "irn-0",
+        "isl-0",
+        "isr-0",
+        "ita-0",
+        "jpn-1",
+        "kor-1",
+        "ltu-0",
+        "lva-0",
+        "mkd-0",
+        "nld-0",
+        "nor-0",
+        "pol-0",
+        "rou-1",
+        "rus-0",
+        "rus-1",
+        "spa-0",
+        "spa-1",
+        "svn-0",
+        "swe-1",
+        "tha-0",
+        "tur-0",
+        "ukr-0",
+        "vie-1"
+    ]
+}

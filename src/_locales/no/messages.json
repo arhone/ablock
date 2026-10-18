@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "no",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Reklameblokkering og nettstedsjekk"
+    },
+    "extDescription": {
+        "message": "Blokkerer reklame og sporere: raskere sider, mindre data. Sjekker hastighet, sikkerhet og sporing på alle nettsteder."
+    },
+    "toggle": {
+        "message": "Slå på / av"
+    },
+    "statusOn": {
+        "message": "Beskyttelsen er på"
+    },
+    "statusOff": {
+        "message": "Beskyttelsen er av"
+    },
+    "statusSiteOff": {
+        "message": "Beskyttelsen er av på dette nettstedet"
+    },
+    "telegram": {
+        "message": "Telegram-gruppe"
+    },
+    "github": {
+        "message": "Bidra på GitHub"
+    },
+    "httpsOn": {
+        "message": "Tilkoblingen er kryptert"
+    },
+    "httpsOff": {
+        "message": "Tilkoblingen er ikke kryptert"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — den raskeste protokollen"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — en moderne protokoll"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — en utdatert protokoll",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Ukjent protokoll (siden ble lastet fra hurtigbufferen)"
+    },
+    "loading": {
+        "message": "Laster inn…"
+    },
+    "loadingTitle": {
+        "message": "Siden lastes fortsatt inn"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Sidens innlastingstid"
+    },
+    "domains": {
+        "message": "Domener $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Tredjepartsdomener:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…$COUNT$ til",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Ingen tredjepartsdomener"
+    },
+    "blocked": {
+        "message": "Blokkert $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Sporere $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Blokkert på denne siden\nReklame: $ADS$\nSporere: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Dette nettstedet sporer deg. Blokkerte sporere: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Ingen sporere funnet"
+    },
+    "scoreLabel": {
+        "message": "Nettstedets karakter"
+    },
+    "serverLabel": {
+        "message": "Server"
+    },
+    "techLabel": {
+        "message": "Laget med"
+    },
+    "companiesLabel": {
+        "message": "Spores av"
+    },
+    "extraLabel": {
+        "message": "Mer"
+    },
+    "extendedText": {
+        "message": "Utvidet modus: vertstjeneste, IPv6, HSTS, statistikk og skjuling av annonseplasser og informasjonskapsel-vinduer på alle nettsteder. Data forlater aldri nettleseren din."
+    },
+    "extendedButton": {
+        "message": "Slå på"
+    },
+    "extendedOff": {
+        "message": "Slå av utvidet modus"
+    },
+    "extendedOffTitle": {
+        "message": "Utvidelsen slutter å se serverens IP og hoder, føre statistikk og skjule annonseplasser og informasjonskapsel-vinduer på alle nettsteder; tilgangen til alle nettsteder trekkes tilbake. Du kan slå den på igjen når som helst"
+    },
+    "share": {
+        "message": "Del"
+    },
+    "copied": {
+        "message": "Kopiert"
+    },
+    "cookiesLabel": {
+        "message": "Skjul vinduer om samtykke til informasjonskapsler"
+    },
+    "cookiesTitle": {
+        "message": "Blokkerer tjenester for bannere om samtykke til informasjonskapsler. I utvidet modus skjules også selve bannerne på alle nettsteder"
+    },
+    "siteLabel": {
+        "message": "Blokker på $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Fjern avmerkingen hvis nettstedet ikke fungerer som det skal: reklame og sporere blir ikke lenger blokkert der. Siden lastes inn på nytt"
+    },
+    "guess": {
+        "message": "Funnet ut fra indirekte tegn — kan være unøyaktig"
+    },
+    "weightTitle": {
+        "message": "Sidestørrelse med alle filer"
+    },
+    "weightEstimated": {
+        "message": "Nøyaktig størrelse er kjent for $KNOWN$ av $TOTAL$ filer, resten er anslått: tredjepartsnettsteder skjuler størrelsen",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Siden er komprimert: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Ingen komprimering"
+    },
+    "compressionOff": {
+        "message": "Siden sendes ukomprimert — den lastes saktere"
+    },
+    "compressionUnknown": {
+        "message": "Ukjent komprimering (siden ble lastet fra hurtigbufferen)"
+    },
+    "blockedCookies": {
+        "message": "Informasjonskapsel-vinduer: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Størrelse: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Ikke blokkert:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Funnet på nettstedet:\n$LIST$\nOm de er blokkert, vises i utvidet modus",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Blokkert:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "ingen kjente funnet"
+    },
+    "serverExtended": {
+        "message": "i utvidet modus"
+    },
+    "serverReload": {
+        "message": "last inn siden på nytt"
+    },
+    "serverReloadTitle": {
+        "message": "Serveren oppdages mens siden lastes inn"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "annen leverandør"
+    },
+    "serverProxy": {
+        "message": "Nettstedet kjører bak $NAME$ (CDN eller DDoS-beskyttelse) — den egentlige serveren er skjult",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Vertstjeneste: $NAME$ (fra RIPEs adressedatabase)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Landet bestemmes ut fra leverandøren"
+    },
+    "techFound": {
+        "message": "Funnet på siden"
+    },
+    "techNone": {
+        "message": "ikke funnet"
+    },
+    "techNoneTitle": {
+        "message": "Ingen tegn til kjente motorer eller biblioteker"
+    },
+    "ipv6": {
+        "message": "Koblet til via IPv6"
+    },
+    "ipv4": {
+        "message": "Koblet til via IPv4. Det sier ikke om nettstedet støtter IPv6: det avhenger også av nettverket ditt"
+    },
+    "hstsOn": {
+        "message": "HSTS: nettleseren åpner alltid nettstedet bare via HTTPS"
+    },
+    "hstsOff": {
+        "message": "Ingen HSTS: det første besøket på nettstedet kan skje uten kryptering"
+    },
+    "mixed": {
+        "message": "HTTP-filer $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS-siden laster inn filer uten kryptering: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Karakter $SCORE$ av 10 basert på:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Kryptering"
+    },
+    "scoreProtocol": {
+        "message": "Protokoll"
+    },
+    "scoreSpeed": {
+        "message": "Innlastingshastighet"
+    },
+    "scoreWeight": {
+        "message": "Sidestørrelse"
+    },
+    "scoreTrackers": {
+        "message": "Sporing"
+    },
+    "scoreDomains": {
+        "message": "Tredjepartsdomener"
+    },
+    "scoreCompression": {
+        "message": "Komprimering"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Blandet innhold"
+    },
+    "stats": {
+        "message": "Blokkerte forespørsler totalt: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Siden $DATE$. Størrelsen er anslått ut fra gjennomsnittlig størrelse på reklamefiler",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Rapport om nettstedet — som bilde eller tekst"
+    },
+    "reportTitle": {
+        "message": "Nettstedets karakter og detaljer som bilde eller tekst — til kolleger, en leverandør eller en chat"
+    },
+    "reportDone": {
+        "message": "Lagret"
+    },
+    "copyIp": {
+        "message": "Kopier IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Kopier bilde"
+    },
+    "copyText": {
+        "message": "Kopier tekst og lenke"
+    },
+    "shareSystem": {
+        "message": "Mer…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — karakter $SCORE$ av 10 i ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Sjekk nettstedet ditt:"
+    },
+    "donate": {
+        "message": "Doner"
+    },
+    "donateTitle": {
+        "message": "Støtt utviklingen på Boosty"
+    },
+    "askStats": {
+        "message": "Blokkerte forespørsler: $COUNT$, spart ≈ $SIZE$. Hvis ABlock er nyttig for deg, støtt utviklingen",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Du har brukt ABlock i en måned. Hvis den er nyttig, støtt utviklingen"
+    },
+    "askClose": {
+        "message": "Ikke vis igjen"
+    },
+    "reportLegendGuess": {
+        "message": "? — funnet ut fra indirekte tegn"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — omtrentlig anslag"
+    },
+    "companiesNoneTitle": {
+        "message": "Ingen selskaper fra ABlocks katalog på denne siden. Nettstedets egne tellere kan likevel finnes — de telles av merket «Sporere»"
+    },
+    "compressionFiles": {
+        "message": "Tekstfiler: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Ukomprimert: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Slett nettstedsdata og last inn på nytt: informasjonskapsler, hurtigbuffer og lagring. Merker og karakter viser nettstedet slik en ny besøkende ser det. Du blir logget ut av nettstedet"
+    },
+    "clearConfirm": {
+        "message": "Slette?"
+    },
+    "saveImage": {
+        "message": "Lagre bilde"
+    },
+    "shareSend": {
+        "message": "Send via $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Publiser på $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Sendes som tekst: et bilde kan ikke overføres uten å lastes opp til en server — kopier det og lim det inn i meldingen"
+    },
+    "shareLinkOnly": {
+        "message": "Bare lenken til utvidelsen overføres — kopier rapportbildet og lim det inn i innlegget"
+    },
+    "auditLabel": {
+        "message": "Detaljer"
+    },
+    "auditIssues": {
+        "message": "problemer: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "ingen problemer"
+    },
+    "auditSpeed": {
+        "message": "Hastighet"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Markering"
+    },
+    "auditA11y": {
+        "message": "Tilgjengelighet"
+    },
+    "auditSecurity": {
+        "message": "Sikkerhet"
+    },
+    "auditYes": {
+        "message": "ja"
+    },
+    "auditNo": {
+        "message": "nei"
+    },
+    "auditLength": {
+        "message": "$COUNT$ tegn",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "annet domene"
+    },
+    "auditNoImage": {
+        "message": "uten bilde"
+    },
+    "auditNoInput": {
+        "message": "ingen interaksjon"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ av $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Oppsettforskyvninger"
+    },
+    "auditTtfb": {
+        "message": "Serverrespons (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Hvor lang tid det tok å få sidens første byte fra serveren. Bra — under 0,8 s"
+    },
+    "auditFcp": {
+        "message": "Første visning (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Når det første innholdet dukket opp på skjermen. Bra — under 1,8 s"
+    },
+    "auditLcp": {
+        "message": "Hovedblokk (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Når den største blokken — et bilde eller tekst — ble vist. Googles viktigste hastighetsmål. Bra — under 2,5 s"
+    },
+    "auditCls": {
+        "message": "Oppsettforskyvninger (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Hvor mye innholdet hopper under innlasting. Bra — under 0,1"
+    },
+    "auditInp": {
+        "message": "Respons på interaksjon (INP)"
+    },
+    "auditInpHint": {
+        "message": "Den lengste forsinkelsen i responsen på et klikk eller en inndata. Bra — under 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Blokkerer gjengivelse"
+    },
+    "auditBlockingHint": {
+        "message": "Filer nettleseren venter på før den begynner å tegne siden. Stilark er greit, men skript bør lastes med async eller defer"
+    },
+    "auditStatus": {
+        "message": "Statuskode"
+    },
+    "auditStatusHint": {
+        "message": "Sidens HTTP-status: 200 — OK, 4xx og 5xx — feil"
+    },
+    "auditNoindex": {
+        "message": "Indeksering blokkert"
+    },
+    "auditNoindexHint": {
+        "message": "Siden er skjult for søkemotorer med en noindex-tagg eller en regel i robots.txt. Det er normalt for påloggingssider og brukerkontoer"
+    },
+    "auditTitle": {
+        "message": "Tittel (title)"
+    },
+    "auditTitleHint": {
+        "message": "Lenketekst i søkeresultater og fanens navn. Best — 10–70 tegn"
+    },
+    "auditDescription": {
+        "message": "Beskrivelse (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Tekst under lenken i søkeresultater. Best — 50–170 tegn"
+    },
+    "auditH1": {
+        "message": "h1-overskrifter"
+    },
+    "auditH1Hint": {
+        "message": "Sidens hovedoverskrift. Vanligvis er det én"
+    },
+    "auditCanonical": {
+        "message": "Kanonisk URL"
+    },
+    "auditCanonicalHint": {
+        "message": "Forteller søkemotorer sidens hovedadresse hvis den har kopier"
+    },
+    "auditOg": {
+        "message": "Lenkeforhåndsvisning (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Tittel og bilde som Telegram, Slack og andre tjenester viser når en lenke deles"
+    },
+    "auditViewport": {
+        "message": "Mobilversjon (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Uten meta viewport viser telefoner siden som en forminsket datamaskinversjon"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Uten den bytter nettleseren til kompatibilitetsmodus for gamle nettsteder, og oppsettet kan bli annerledes"
+    },
+    "auditNoSize": {
+        "message": "Bilder uten dimensjoner"
+    },
+    "auditNoSizeHint": {
+        "message": "Uten width og height vet ikke nettleseren hvor mye plass bildet trenger, og oppsettet hopper når det lastes inn"
+    },
+    "auditLarge": {
+        "message": "For store bilder"
+    },
+    "auditLargeHint": {
+        "message": "Bildet sendes merkbart større enn det vises — unødvendig vekt"
+    },
+    "auditModern": {
+        "message": "WebP- og AVIF-bilder"
+    },
+    "auditModernHint": {
+        "message": "Disse formatene er 25–50 % mindre enn JPEG og PNG"
+    },
+    "auditLang": {
+        "message": "Sidens språk (lang)"
+    },
+    "auditLangHint": {
+        "message": "Trengs av skjermlesere, oversettere og søkemotorer"
+    },
+    "auditAlt": {
+        "message": "Bilder uten alt"
+    },
+    "auditAltHint": {
+        "message": "En beskrivelse av bildet for blinde brukere og i tilfelle det ikke lastes inn"
+    },
+    "auditLabels": {
+        "message": "Felt uten etiketter"
+    },
+    "auditLabelsHint": {
+        "message": "En skjermleser kan ikke si hva som skal skrives i feltet"
+    },
+    "auditNames": {
+        "message": "Knapper og lenker uten navn"
+    },
+    "auditNamesHint": {
+        "message": "For eksempel en ikonknapp uten aria-label: en blind bruker hører bare «knapp»"
+    },
+    "auditMain": {
+        "message": "Hovedområde (main)"
+    },
+    "auditMainHint": {
+        "message": "Lar brukere hoppe rett til innholdet forbi menyen"
+    },
+    "auditZoom": {
+        "message": "Zoom deaktivert"
+    },
+    "auditZoomHint": {
+        "message": "Hindrer svaksynte brukere i å forstørre siden på en telefon"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Begrenser hvor siden kan laste inn skript fra — beskyttelse mot XSS. Hvis den inneholder 'unsafe-inline' uten nonce eller hash, beskytter den knapt"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Hindrer nettleseren i å gjette filtyper — beskyttelse mot forfalskede skript"
+    },
+    "auditFrame": {
+        "message": "Beskyttelse mot innramming"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options eller frame-ancestors hindrer at nettstedet bygges inn i en annens side for å lure brukere til å klikke"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Hvor mye av sidens adresse som sendes til andre nettsteder ved navigering. Uten hodet bruker nettleseren en trygg standardverdi"
+    },
+    "auditCache": {
+        "message": "Sidehurtigbuffer"
+    },
+    "auditCacheHint": {
+        "message": "Hvor siden kom fra: HIT — fra hurtigbufferen til serveren eller CDN-et, MISS — bygget på nytt. Selve sidene bufres sjelden; vanligvis bilder, skript og stilark"
+    },
+    "auditCacheBrowser": {
+        "message": "fra nettleserens hurtigbuffer"
+    },
+    "auditBots": {
+        "message": "Roboter og KI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Regler for søkemotorer og andre roboter. Uten filen gjennomsøker robotene alt, og søkemotorer får ikke vite hvor nettstedskartet er"
+    },
+    "auditSitemap": {
+        "message": "Nettstedskart"
+    },
+    "auditSitemapHint": {
+        "message": "En liste over sider for søkemotorer. Angis i robots.txt med en Sitemap:-linje"
+    },
+    "auditAi": {
+        "message": "Regler for KI-roboter"
+    },
+    "auditAiHint": {
+        "message": "Om KI-roboter får samle inn nettstedets tekster til nevrale nettverk — ut fra regler i robots.txt som nevner roboten ved navn. Utvidelsen kjenner 16 slike roboter (GPTBot, ClaudeBot, Google-Extended osv.); roboter med andre navn telles ikke. «Stengt for alle» — nettstedet er stengt for alle roboter via User-agent: *, uten egne regler for KI"
+    },
+    "auditAiBlocked": {
+        "message": "blokkert: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "tillatt"
+    },
+    "auditAiNone": {
+        "message": "ikke angitt"
+    },
+    "auditAiAll": {
+        "message": "stengt for alle"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Et nytt format: en kort Markdown-beskrivelse av nettstedet for KI-assistenter og agenter. Valgfritt foreløpig"
+    },
+    "auditCspWeak": {
+        "message": "svak"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Nekter siden og innebygde rammer tilgang til kamera, posisjon og andre nettleserfunksjoner"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Isolerer nettstedets vindu fra andre vinduer det åpner — beskyttelse mot angrep via window.opener"
+    },
+    "auditVersions": {
+        "message": "Programvareversjoner i hoder"
+    },
+    "auditVersionsHint": {
+        "message": "Serveren avslører programvareversjoner — et hint til angripere om hvilke kjente sårbarheter de kan prøve. Slik skjuler du dem: server_tokens off i nginx og Angie, expose_php = Off i PHP"
+    },
+    "auditHidden": {
+        "message": "skjult"
+    },
+    "auditSession": {
+        "message": "Øktinformasjonskapsler lesbare for skript"
+    },
+    "auditSessionHint": {
+        "message": "Påloggingsinformasjonskapsler ser ut til å kunne leses fra JavaScript: ved XSS kan de stjeles. HttpOnly-flagget hindrer dette. Funnet ut fra navnet på informasjonskapselen"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Kontakter for å rapportere sårbarheter i /.well-known/security.txt. Hjelper en forsker med å rapportere problemet til deg i stedet for å selge det"
+    },
+    "serverUnknownTitle": {
+        "message": "Leverandørens nettverk er ikke i ABlocks database: den dekker store vertstjenester, skyer og CDN-er"
+    },
+    "protocolH3Later": {
+        "message": "Serveren støtter HTTP/3. Denne siden kom via $PROTOCOL$ — det skjer ved første besøk: nettleseren får vite om HTTP/3 fra serverens svar og bytter til det for de neste forespørslene",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Nettleserens språk"
+    },
+    "langTitle": {
+        "message": "Grensesnittspråk"
+    },
+    "noteTitle": {
+        "message": "Notat om nettstedet"
+    },
+    "notePlaceholder": {
+        "message": "Notat om nettstedet, synlig bare for deg"
+    },
+    "incognitoLabel": {
+        "message": "Fungere i inkognitomodus"
+    },
+    "incognitoTitle": {
+        "message": "Nettleserens innstillinger for utvidelser åpnes – slå på tillatelse i inkognitomodus for ABlock der"
+    }
+}

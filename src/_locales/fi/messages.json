@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "fi",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Mainosten esto ja sivustotarkistus"
+    },
+    "extDescription": {
+        "message": "Estää mainokset ja seurannan: sivut latautuvat nopeammin ja kuluttavat vähemmän dataa. Tarkistaa sivuston nopeuden ja tietoturvan."
+    },
+    "toggle": {
+        "message": "Päälle / pois"
+    },
+    "statusOn": {
+        "message": "Suojaus on päällä"
+    },
+    "statusOff": {
+        "message": "Suojaus on pois päältä"
+    },
+    "statusSiteOff": {
+        "message": "Suojaus on pois päältä tällä sivustolla"
+    },
+    "telegram": {
+        "message": "Telegram-ryhmä"
+    },
+    "github": {
+        "message": "Osallistu GitHubissa"
+    },
+    "httpsOn": {
+        "message": "Yhteys on salattu"
+    },
+    "httpsOff": {
+        "message": "Yhteys ei ole salattu"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — nopein protokolla"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — moderni protokolla"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — vanhentunut protokolla",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protokolla tuntematon (sivu ladattu välimuistista)"
+    },
+    "loading": {
+        "message": "Ladataan…"
+    },
+    "loadingTitle": {
+        "message": "Sivu latautuu vielä"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Sivun latausaika"
+    },
+    "domains": {
+        "message": "Verkkotunnukset $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Kolmansien osapuolten verkkotunnukset:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…ja $COUNT$ muuta",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Ei kolmansien osapuolten verkkotunnuksia"
+    },
+    "blocked": {
+        "message": "Estetty $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Seurannat $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Estetty tällä sivulla\nMainokset: $ADS$\nSeurannat: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Tämä sivusto seuraa sinua. Estettyjä seurantoja: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Seurantoja ei löytynyt"
+    },
+    "scoreLabel": {
+        "message": "Sivuston arvosana"
+    },
+    "serverLabel": {
+        "message": "Palvelin"
+    },
+    "techLabel": {
+        "message": "Tekniikka"
+    },
+    "companiesLabel": {
+        "message": "Seuraajat"
+    },
+    "extraLabel": {
+        "message": "Lisää"
+    },
+    "extendedText": {
+        "message": "Laajennettu tila: palveluntarjoaja, IPv6, HSTS, tilastot ja mainospaikkojen ja evästeikkunoiden piilotus kaikilla sivustoilla. Tiedot eivät koskaan poistu selaimestasi."
+    },
+    "extendedButton": {
+        "message": "Ota käyttöön"
+    },
+    "extendedOff": {
+        "message": "Poista laajennettu tila käytöstä"
+    },
+    "extendedOffTitle": {
+        "message": "Laajennus lakkaa näkemästä palvelimien IP-osoitteita ja otsakkeita, pitämästä tilastoja ja piilottamasta mainospaikkoja ja evästeikkunoita kaikilla sivustoilla; pääsy kaikille sivustoille perutaan. Voit ottaa sen uudelleen käyttöön milloin tahansa"
+    },
+    "share": {
+        "message": "Jaa"
+    },
+    "copied": {
+        "message": "Kopioitu"
+    },
+    "cookiesLabel": {
+        "message": "Piilota evästesuostumusikkunat"
+    },
+    "cookiesTitle": {
+        "message": "Estää evästesuostumusbannereiden palvelut. Laajennetussa tilassa piilottaa myös itse bannerit millä tahansa sivustolla"
+    },
+    "siteLabel": {
+        "message": "Estä sivustolla $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Poista valinta, jos sivusto ei toimi oikein: sen mainoksia ja seurantoja ei enää estetä. Sivu ladataan uudelleen"
+    },
+    "guess": {
+        "message": "Tunnistettu epäsuorista merkeistä — voi olla epätarkka"
+    },
+    "weightTitle": {
+        "message": "Sivun koko kaikkine tiedostoineen"
+    },
+    "weightEstimated": {
+        "message": "Tarkka koko tiedetään $KNOWN$/$TOTAL$ tiedostolle, loput on arvioitu: kolmansien osapuolten sivustot piilottavat koon",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Sivu on pakattu: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Ei pakkausta"
+    },
+    "compressionOff": {
+        "message": "Sivu lähetetään pakkaamattomana — se latautuu hitaammin"
+    },
+    "compressionUnknown": {
+        "message": "Pakkaus tuntematon (sivu ladattu välimuistista)"
+    },
+    "blockedCookies": {
+        "message": "Evästeikkunat: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Koko: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Ei estetty:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Löytyi sivustolta:\n$LIST$\nOnko ne estetty, näkyy laajennetussa tilassa",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Estetty:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "tunnettuja ei löytynyt"
+    },
+    "serverExtended": {
+        "message": "laajennetussa tilassa"
+    },
+    "serverReload": {
+        "message": "lataa sivu uudelleen"
+    },
+    "serverReloadTitle": {
+        "message": "Palvelin tunnistetaan sivun latautuessa"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "muu palveluntarjoaja"
+    },
+    "serverProxy": {
+        "message": "Sivusto toimii palvelun $NAME$ takana (CDN tai DDoS-suojaus) — todellinen palvelin on piilossa",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Palveluntarjoaja: $NAME$ (RIPE-osoitetietokannasta)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Maa määritetään palveluntarjoajan perusteella"
+    },
+    "techFound": {
+        "message": "Löytyi sivulta"
+    },
+    "techNone": {
+        "message": "ei tunnistettu"
+    },
+    "techNoneTitle": {
+        "message": "Tunnettujen alustojen tai kirjastojen merkkejä ei löytynyt"
+    },
+    "ipv6": {
+        "message": "Yhdistetty IPv6:n kautta"
+    },
+    "ipv4": {
+        "message": "Yhdistetty IPv4:n kautta. Tästä ei voi päätellä, tukeeko sivusto IPv6:ta: se riippuu myös verkostasi"
+    },
+    "hstsOn": {
+        "message": "HSTS: selain avaa sivuston aina vain HTTPS:n kautta"
+    },
+    "hstsOff": {
+        "message": "Ei HSTS:ää: ensimmäinen käynti sivustolla voi tapahtua ilman salausta"
+    },
+    "mixed": {
+        "message": "HTTP-tiedostot $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS-sivu lataa tiedostoja ilman salausta: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Arvosana $SCORE$/10 seuraavien perusteella:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Salaus"
+    },
+    "scoreProtocol": {
+        "message": "Protokolla"
+    },
+    "scoreSpeed": {
+        "message": "Latausnopeus"
+    },
+    "scoreWeight": {
+        "message": "Sivun koko"
+    },
+    "scoreTrackers": {
+        "message": "Seuranta"
+    },
+    "scoreDomains": {
+        "message": "Kolmansien osapuolten verkkotunnukset"
+    },
+    "scoreCompression": {
+        "message": "Pakkaus"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Sekasisältö"
+    },
+    "stats": {
+        "message": "Estettyjä pyyntöjä yhteensä: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Alkaen $DATE$. Koko on arvioitu mainostiedostojen keskikoon perusteella",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Sivustoraportti — kuvana tai tekstinä"
+    },
+    "reportTitle": {
+        "message": "Sivuston arvosana ja tiedot kuvana tai tekstinä — kollegoille, alihankkijalle tai keskusteluun"
+    },
+    "reportDone": {
+        "message": "Tallennettu"
+    },
+    "copyIp": {
+        "message": "Kopioi IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Kopioi kuva"
+    },
+    "copyText": {
+        "message": "Kopioi teksti ja linkki"
+    },
+    "shareSystem": {
+        "message": "Lisää…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — arvosana $SCORE$/10 ABlockissa",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Tarkista oma sivustosi:"
+    },
+    "donate": {
+        "message": "Lahjoita"
+    },
+    "donateTitle": {
+        "message": "Tue kehitystä Boostyssa"
+    },
+    "askStats": {
+        "message": "Estettyjä pyyntöjä: $COUNT$, säästetty ≈ $SIZE$. Jos ABlock on sinulle hyödyllinen, tue kehitystä",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Olet käyttänyt ABlockia jo kuukauden. Jos se on hyödyllinen, tue kehitystä"
+    },
+    "askClose": {
+        "message": "Älä näytä uudelleen"
+    },
+    "reportLegendGuess": {
+        "message": "? — tunnistettu epäsuorista merkeistä"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — likimääräinen arvio"
+    },
+    "companiesNoneTitle": {
+        "message": "Tällä sivulla ei ole ABlockin hakemiston yrityksiä. Sivuston omia laskureita voi silti olla — ne lasketaan Seurannat-merkkiin"
+    },
+    "compressionFiles": {
+        "message": "Tekstitiedostot: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Pakkaamattomat: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Poista sivuston tiedot ja lataa uudelleen: evästeet, välimuisti ja tallennustila. Merkit ja arvosana näyttävät sivuston sellaisena kuin uusi kävijä sen näkee. Sinut kirjataan ulos tältä sivustolta"
+    },
+    "clearConfirm": {
+        "message": "Poistetaanko?"
+    },
+    "saveImage": {
+        "message": "Tallenna kuva"
+    },
+    "shareSend": {
+        "message": "Lähetä: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Julkaise: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Lähetetään tekstinä: kuvaa ei voi välittää lataamatta sitä palvelimelle — kopioi se ja liitä viestiin"
+    },
+    "shareLinkOnly": {
+        "message": "Vain laajennuksen linkki välitetään — kopioi raportin kuva ja liitä se julkaisuun"
+    },
+    "auditLabel": {
+        "message": "Tiedot"
+    },
+    "auditIssues": {
+        "message": "ongelmia: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "ei ongelmia"
+    },
+    "auditSpeed": {
+        "message": "Nopeus"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Merkintä"
+    },
+    "auditA11y": {
+        "message": "Saavutettavuus"
+    },
+    "auditSecurity": {
+        "message": "Tietoturva"
+    },
+    "auditYes": {
+        "message": "kyllä"
+    },
+    "auditNo": {
+        "message": "ei"
+    },
+    "auditLength": {
+        "message": "$COUNT$ merkkiä",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "eri verkkotunnus"
+    },
+    "auditNoImage": {
+        "message": "ei kuvaa"
+    },
+    "auditNoInput": {
+        "message": "ei vuorovaikutusta"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$/$TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Asettelun siirtymät"
+    },
+    "auditTtfb": {
+        "message": "Palvelimen vastaus (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Kuinka kauan sivun ensimmäisen tavun saaminen palvelimelta kesti. Hyvä — alle 0,8 s"
+    },
+    "auditFcp": {
+        "message": "Ensimmäinen piirto (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Milloin ensimmäinen sisältö ilmestyi näytölle. Hyvä — alle 1,8 s"
+    },
+    "auditLcp": {
+        "message": "Pääosa (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Milloin suurin lohko — kuva tai teksti — piirrettiin. Googlen tärkein nopeusmittari. Hyvä — alle 2,5 s"
+    },
+    "auditCls": {
+        "message": "Asettelun siirtymät (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Kuinka paljon sisältö hyppii latauksen aikana. Hyvä — alle 0,1"
+    },
+    "auditInp": {
+        "message": "Vaste vuorovaikutukseen (INP)"
+    },
+    "auditInpHint": {
+        "message": "Pisin viive napsautukseen tai syötteeseen vastaamisessa. Hyvä — alle 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Estävät hahmonnuksen"
+    },
+    "auditBlockingHint": {
+        "message": "Tiedostot, joita selain odottaa ennen kuin alkaa piirtää sivua. Tyylit ovat kunnossa, mutta skriptit kannattaa ladata async- tai defer-määritteellä"
+    },
+    "auditStatus": {
+        "message": "Tilakoodi"
+    },
+    "auditStatusHint": {
+        "message": "Sivun HTTP-tila: 200 — OK, 4xx ja 5xx — virhe"
+    },
+    "auditNoindex": {
+        "message": "Indeksointi estetty"
+    },
+    "auditNoindexHint": {
+        "message": "Sivu on piilotettu hakukoneilta noindex-tagilla tai robots.txt-säännöllä. Kirjautumissivuilla ja käyttäjätileillä tämä on normaalia"
+    },
+    "auditTitle": {
+        "message": "Otsikko (title)"
+    },
+    "auditTitleHint": {
+        "message": "Linkin teksti hakutuloksissa ja välilehden nimi. Paras — 10–70 merkkiä"
+    },
+    "auditDescription": {
+        "message": "Kuvaus (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Teksti linkin alla hakutuloksissa. Paras — 50–170 merkkiä"
+    },
+    "auditH1": {
+        "message": "h1-otsikot"
+    },
+    "auditH1Hint": {
+        "message": "Sivun pääotsikko. Yleensä niitä on yksi"
+    },
+    "auditCanonical": {
+        "message": "Kanoninen URL"
+    },
+    "auditCanonicalHint": {
+        "message": "Kertoo hakukoneille sivun pääosoitteen, jos sivulla on kopioita"
+    },
+    "auditOg": {
+        "message": "Linkin esikatselu (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Otsikko ja kuva, jotka Telegram, Slack ja muut palvelut näyttävät, kun linkki jaetaan"
+    },
+    "auditViewport": {
+        "message": "Mobiiliversio (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Ilman meta viewport -tagia puhelimet näyttävät sivun pienennettynä tietokoneversiona"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Ilman sitä selain siirtyy vanhojen sivustojen yhteensopivuustilaan, ja asettelu voi poiketa"
+    },
+    "auditNoSize": {
+        "message": "Kuvat ilman mittoja"
+    },
+    "auditNoSizeHint": {
+        "message": "Ilman width- ja height-määritteitä selain ei tiedä, paljonko tilaa kuvalle varataan, ja asettelu hyppää kuvan latautuessa"
+    },
+    "auditLarge": {
+        "message": "Liian suuret kuvat"
+    },
+    "auditLargeHint": {
+        "message": "Kuva lähetetään selvästi suurempana kuin se näytetään — turhaa painoa"
+    },
+    "auditModern": {
+        "message": "WebP- ja AVIF-kuvat"
+    },
+    "auditModernHint": {
+        "message": "Nämä muodot ovat 25–50 % pienempiä kuin JPEG ja PNG"
+    },
+    "auditLang": {
+        "message": "Sivun kieli (lang)"
+    },
+    "auditLangHint": {
+        "message": "Tarvitaan ruudunlukijoille, kääntäjille ja hakukoneille"
+    },
+    "auditAlt": {
+        "message": "Kuvat ilman alt-tekstiä"
+    },
+    "auditAltHint": {
+        "message": "Kuvan kuvaus sokeille käyttäjille ja siltä varalta, ettei kuva lataudu"
+    },
+    "auditLabels": {
+        "message": "Kentät ilman nimiöitä"
+    },
+    "auditLabelsHint": {
+        "message": "Ruudunlukija ei pysty kertomaan, mitä kenttään syötetään"
+    },
+    "auditNames": {
+        "message": "Painikkeet ja linkit ilman nimeä"
+    },
+    "auditNamesHint": {
+        "message": "Esimerkiksi kuvakepainike ilman aria-labelia: sokea käyttäjä kuulee vain ”painike”"
+    },
+    "auditMain": {
+        "message": "Pääalue (main)"
+    },
+    "auditMainHint": {
+        "message": "Antaa siirtyä suoraan sisältöön valikon ohi"
+    },
+    "auditZoom": {
+        "message": "Zoomaus estetty"
+    },
+    "auditZoomHint": {
+        "message": "Estää heikkonäköisiä suurentamasta sivua puhelimessa"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Rajoittaa, mistä sivu voi ladata skriptejä — suojaus XSS:ää vastaan. Jos siinä on 'unsafe-inline' ilman noncea tai hashia, se tuskin suojaa"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Estää selainta arvaamasta tiedostotyyppejä — suojaus skriptien väärentämistä vastaan"
+    },
+    "auditFrame": {
+        "message": "Kehystyssuojaus"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options tai frame-ancestors estää upottamasta sivustoa toisen sivulle käyttäjien huijaamiseksi napsauttamaan"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Kuinka suuri osa sivun osoitteesta välitetään muille sivustoille siirryttäessä. Ilman otsaketta selain käyttää turvallista oletusarvoa"
+    },
+    "auditCache": {
+        "message": "Sivun välimuisti"
+    },
+    "auditCacheHint": {
+        "message": "Mistä sivu tuli: HIT — palvelimen tai CDN:n välimuistista, MISS — koottu uudelleen. Itse sivuja tallennetaan välimuistiin harvoin; yleensä kuvat, skriptit ja tyylit"
+    },
+    "auditCacheBrowser": {
+        "message": "selaimen välimuistista"
+    },
+    "auditBots": {
+        "message": "Robotit ja tekoäly"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Säännöt hakukoneille ja muille roboteille. Ilman tiedostoa robotit indeksoivat kaiken, eivätkä hakukoneet saa tietää, missä sivustokartta on"
+    },
+    "auditSitemap": {
+        "message": "Sivustokartta"
+    },
+    "auditSitemapHint": {
+        "message": "Luettelo sivuista hakukoneille. Ilmoitetaan robots.txt-tiedostossa Sitemap:-rivillä"
+    },
+    "auditAi": {
+        "message": "Säännöt tekoälyboteille"
+    },
+    "auditAiHint": {
+        "message": "Saavatko tekoälybotit kerätä sivuston tekstejä neuroverkoille — robots.txt-sääntöjen perusteella, joissa botti mainitaan nimeltä. Laajennus tuntee 16 tällaista bottia (GPTBot, ClaudeBot, Google-Extended jne.); muita nimiä käyttäviä botteja ei lasketa. ”Suljettu kaikilta” — sivusto on suljettu kaikilta roboteilta User-agent: * -säännöllä, ilman erillisiä sääntöjä tekoälylle"
+    },
+    "auditAiBlocked": {
+        "message": "estetty: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "sallittu"
+    },
+    "auditAiNone": {
+        "message": "ei määritetty"
+    },
+    "auditAiAll": {
+        "message": "suljettu kaikilta"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Uusi muoto: lyhyt Markdown-kuvaus sivustosta tekoälyavustajille ja -agenteille. Toistaiseksi vapaaehtoinen"
+    },
+    "auditCspWeak": {
+        "message": "heikko"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Estää sivua ja upotettuja kehyksiä käyttämästä kameraa, sijaintia ja muita selaimen ominaisuuksia"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Eristää sivuston ikkunan muista sen avaamista ikkunoista — suojaus window.opener-hyökkäyksiä vastaan"
+    },
+    "auditVersions": {
+        "message": "Ohjelmistoversiot otsakkeissa"
+    },
+    "auditVersionsHint": {
+        "message": "Palvelin paljastaa ohjelmistoversiot — vihje hyökkääjille siitä, mitä tunnettuja haavoittuvuuksia kokeilla. Piilottaminen: server_tokens off nginxissä ja Angiessa, expose_php = Off PHP:ssä"
+    },
+    "auditHidden": {
+        "message": "piilotettu"
+    },
+    "auditSession": {
+        "message": "Istuntoevästeet skriptien luettavissa"
+    },
+    "auditSessionHint": {
+        "message": "Kirjautumisevästeet näyttävät olevan luettavissa JavaScriptillä: XSS:n avulla ne voidaan varastaa. HttpOnly-lippu estää tämän. Tunnistettu evästeen nimestä"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Yhteystiedot haavoittuvuuksien ilmoittamiseen tiedostossa /.well-known/security.txt. Auttaa tutkijaa ilmoittamaan ongelmasta sinulle sen myymisen sijaan"
+    },
+    "serverUnknownTitle": {
+        "message": "Tämän palveluntarjoajan verkot eivät ole ABlockin tietokannassa: siinä ovat suuret palveluntarjoajat, pilvet ja CDN:t"
+    },
+    "protocolH3Later": {
+        "message": "Palvelin tukee HTTP/3:a. Tämä sivu tuli $PROTOCOL$-yhteydellä — näin käy ensimmäisellä käynnillä: selain saa tietää HTTP/3:sta palvelimen vastauksesta ja siirtyy käyttämään sitä seuraavissa pyynnöissä",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Selaimen kieli"
+    },
+    "langTitle": {
+        "message": "Käyttöliittymän kieli"
+    },
+    "noteTitle": {
+        "message": "Muistiinpano sivustosta"
+    },
+    "notePlaceholder": {
+        "message": "Muistiinpano sivustosta, näkyy vain sinulle"
+    },
+    "incognitoLabel": {
+        "message": "Toimi incognito-tilassa"
+    },
+    "incognitoTitle": {
+        "message": "Selaimen laajennusasetukset avautuvat – ota siellä ABlockille käyttöön lupa incognito-tilassa"
+    }
+}

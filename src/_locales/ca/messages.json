@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "ca",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Bloquejador d'anuncis i anàlisi de webs"
+    },
+    "extDescription": {
+        "message": "Bloqueja anuncis i rastrejadors: pàgines més ràpides i menys dades. Analitza velocitat, seguretat i rastreig de qualsevol web."
+    },
+    "toggle": {
+        "message": "Activa / desactiva"
+    },
+    "statusOn": {
+        "message": "La protecció està activada"
+    },
+    "statusOff": {
+        "message": "La protecció està desactivada"
+    },
+    "statusSiteOff": {
+        "message": "La protecció està desactivada en aquest lloc"
+    },
+    "telegram": {
+        "message": "Grup de Telegram"
+    },
+    "github": {
+        "message": "Col·labora a GitHub"
+    },
+    "httpsOn": {
+        "message": "La connexió està xifrada"
+    },
+    "httpsOff": {
+        "message": "La connexió no està xifrada"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — el protocol més ràpid"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — un protocol modern"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — un protocol obsolet",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protocol desconegut (pàgina carregada de la memòria cau)"
+    },
+    "loading": {
+        "message": "S'està carregant…"
+    },
+    "loadingTitle": {
+        "message": "La pàgina encara s'està carregant"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Temps de càrrega de la pàgina"
+    },
+    "domains": {
+        "message": "Dominis $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Dominis de tercers:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…i $COUNT$ més",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "No hi ha dominis de tercers"
+    },
+    "blocked": {
+        "message": "Bloquejats $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Rastreig $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Bloquejat en aquesta pàgina\nAnuncis: $ADS$\nRastrejadors: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Aquest lloc et rastreja. Rastrejadors bloquejats: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "No s'han trobat rastrejadors"
+    },
+    "scoreLabel": {
+        "message": "Nota del lloc"
+    },
+    "serverLabel": {
+        "message": "Servidor"
+    },
+    "techLabel": {
+        "message": "Fet amb"
+    },
+    "companiesLabel": {
+        "message": "Et rastregen"
+    },
+    "extraLabel": {
+        "message": "Més"
+    },
+    "extendedText": {
+        "message": "Mode ampliat: allotjament, IPv6, HSTS, estadístiques i amagar els espais publicitaris i els avisos de galetes a tots els llocs. Les dades mai surten del navegador."
+    },
+    "extendedButton": {
+        "message": "Activa"
+    },
+    "extendedOff": {
+        "message": "Desactiva el mode ampliat"
+    },
+    "extendedOffTitle": {
+        "message": "L'extensió deixarà de veure les IP i les capçaleres dels servidors, de portar estadístiques i d'amagar els espais publicitaris i els avisos de galetes a tots els llocs; es retirarà l'accés a tots els llocs. Pots tornar-lo a activar en qualsevol moment"
+    },
+    "share": {
+        "message": "Comparteix"
+    },
+    "copied": {
+        "message": "Copiat"
+    },
+    "cookiesLabel": {
+        "message": "Amaga els avisos de consentiment de galetes"
+    },
+    "cookiesTitle": {
+        "message": "Bloqueja els serveis de bàners de consentiment de galetes. En mode ampliat també amaga els bàners mateixos a qualsevol lloc"
+    },
+    "siteLabel": {
+        "message": "Bloqueja a $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Desmarca-ho si el lloc no funciona bé: els anuncis i els rastrejadors deixaran de bloquejar-s'hi. La pàgina es tornarà a carregar"
+    },
+    "guess": {
+        "message": "Detectat per indicis indirectes — pot no ser exacte"
+    },
+    "weightTitle": {
+        "message": "Mida de la pàgina amb tots els fitxers"
+    },
+    "weightEstimated": {
+        "message": "La mida exacta es coneix en $KNOWN$ de $TOTAL$ fitxers, la resta és una estimació: els llocs de tercers amaguen la mida",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "La pàgina està comprimida: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Sense compressió"
+    },
+    "compressionOff": {
+        "message": "La pàgina s'envia sense comprimir — es carrega més a poc a poc"
+    },
+    "compressionUnknown": {
+        "message": "Compressió desconeguda (pàgina carregada de la memòria cau)"
+    },
+    "blockedCookies": {
+        "message": "Avisos de galetes: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Mida: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "No bloquejats:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Trobats al lloc:\n$LIST$\nSi estan bloquejats es mostra en el mode ampliat",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Bloquejats:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "no se n'han trobat de coneguts"
+    },
+    "serverExtended": {
+        "message": "en mode ampliat"
+    },
+    "serverReload": {
+        "message": "torna a carregar la pàgina"
+    },
+    "serverReloadTitle": {
+        "message": "El servidor es detecta mentre es carrega la pàgina"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "un altre proveïdor"
+    },
+    "serverProxy": {
+        "message": "El lloc funciona darrere de $NAME$ (CDN o protecció DDoS) — el servidor real està amagat",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Allotjament: $NAME$ (segons la base d'adreces RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "El país es determina pel proveïdor"
+    },
+    "techFound": {
+        "message": "Trobat a la pàgina"
+    },
+    "techNone": {
+        "message": "no detectat"
+    },
+    "techNoneTitle": {
+        "message": "No s'han trobat indicis de motors ni biblioteques coneguts"
+    },
+    "ipv6": {
+        "message": "Connectat per IPv6"
+    },
+    "ipv4": {
+        "message": "Connectat per IPv4. Això no indica si el lloc admet IPv6: també depèn de la teva xarxa"
+    },
+    "hstsOn": {
+        "message": "HSTS: el navegador sempre obre el lloc només per HTTPS"
+    },
+    "hstsOff": {
+        "message": "Sense HSTS: la primera visita al lloc pot fer-se sense xifratge"
+    },
+    "mixed": {
+        "message": "Fitxers HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "La pàgina HTTPS carrega fitxers sense xifrar: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Nota $SCORE$ de 10 segons:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Xifratge"
+    },
+    "scoreProtocol": {
+        "message": "Protocol"
+    },
+    "scoreSpeed": {
+        "message": "Velocitat de càrrega"
+    },
+    "scoreWeight": {
+        "message": "Mida de la pàgina"
+    },
+    "scoreTrackers": {
+        "message": "Rastreig"
+    },
+    "scoreDomains": {
+        "message": "Dominis de tercers"
+    },
+    "scoreCompression": {
+        "message": "Compressió"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Contingut mixt"
+    },
+    "stats": {
+        "message": "Total de sol·licituds bloquejades: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Des del $DATE$. La mida s'estima segons la mida mitjana dels fitxers publicitaris",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Informe del lloc — com a imatge o text"
+    },
+    "reportTitle": {
+        "message": "Nota i detalls del lloc com a imatge o text — per a companys, un proveïdor o un xat"
+    },
+    "reportDone": {
+        "message": "Desat"
+    },
+    "copyIp": {
+        "message": "Copia la IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Copia la imatge"
+    },
+    "copyText": {
+        "message": "Copia el text i l'enllaç"
+    },
+    "shareSystem": {
+        "message": "Més…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — nota $SCORE$ de 10 a ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Comprova el teu lloc:"
+    },
+    "donate": {
+        "message": "Fes una donació"
+    },
+    "donateTitle": {
+        "message": "Dona suport al desenvolupament a Boosty"
+    },
+    "askStats": {
+        "message": "Sol·licituds bloquejades: $COUNT$, estalviat ≈ $SIZE$. Si ABlock et resulta útil, dona suport al desenvolupament",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Fa un mes que utilitzes ABlock. Si et resulta útil, dona suport al desenvolupament"
+    },
+    "askClose": {
+        "message": "No ho tornis a mostrar"
+    },
+    "reportLegendGuess": {
+        "message": "? — detectat per indicis indirectes"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — estimació aproximada"
+    },
+    "companiesNoneTitle": {
+        "message": "No hi ha empreses del directori d'ABlock en aquesta pàgina. Els comptadors propis del lloc encara hi poden ser — els compta la insígnia «Rastreig»"
+    },
+    "compressionFiles": {
+        "message": "Fitxers de text: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Sense comprimir: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Esborra les dades del lloc i torna a carregar: galetes, memòria cau i emmagatzematge. Les insígnies i la nota mostraran el lloc tal com el veu un visitant nou. Tancaràs la sessió en aquest lloc"
+    },
+    "clearConfirm": {
+        "message": "Vols esborrar-ho?"
+    },
+    "saveImage": {
+        "message": "Desa la imatge"
+    },
+    "shareSend": {
+        "message": "Envia per $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Publica a $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "S'envia com a text: una imatge no es pot passar sense pujar-la a un servidor — copia-la i enganxa-la al missatge"
+    },
+    "shareLinkOnly": {
+        "message": "Només es passa l'enllaç de l'extensió — copia la imatge de l'informe i enganxa-la a la publicació"
+    },
+    "auditLabel": {
+        "message": "Detalls"
+    },
+    "auditIssues": {
+        "message": "problemes: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "sense problemes"
+    },
+    "auditSpeed": {
+        "message": "Velocitat"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Marcatge"
+    },
+    "auditA11y": {
+        "message": "Accessibilitat"
+    },
+    "auditSecurity": {
+        "message": "Seguretat"
+    },
+    "auditYes": {
+        "message": "sí"
+    },
+    "auditNo": {
+        "message": "no"
+    },
+    "auditLength": {
+        "message": "$COUNT$ caràcters",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "un altre domini"
+    },
+    "auditNoImage": {
+        "message": "sense imatge"
+    },
+    "auditNoInput": {
+        "message": "sense interaccions"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ de $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Desplaçaments del disseny"
+    },
+    "auditTtfb": {
+        "message": "Resposta del servidor (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Quant ha trigat a arribar el primer byte de la pàgina des del servidor. Bé — menys de 0,8 s"
+    },
+    "auditFcp": {
+        "message": "Primera pintura (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Quan ha aparegut el primer contingut a la pantalla. Bé — menys d'1,8 s"
+    },
+    "auditLcp": {
+        "message": "Bloc principal (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Quan s'ha pintat el bloc més gran — una imatge o un text. La mètrica de velocitat principal de Google. Bé — menys de 2,5 s"
+    },
+    "auditCls": {
+        "message": "Desplaçaments del disseny (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Quant salta el contingut mentre es carrega. Bé — menys de 0,1"
+    },
+    "auditInp": {
+        "message": "Resposta a la interacció (INP)"
+    },
+    "auditInpHint": {
+        "message": "El retard més llarg en respondre a un clic o una entrada. Bé — menys de 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Bloquegen la renderització"
+    },
+    "auditBlockingHint": {
+        "message": "Fitxers que el navegador espera abans de començar a dibuixar la pàgina. Els estils són normals, però els scripts és millor carregar-los amb async o defer"
+    },
+    "auditStatus": {
+        "message": "Codi d'estat"
+    },
+    "auditStatusHint": {
+        "message": "Estat HTTP de la pàgina: 200 — correcte, 4xx i 5xx — error"
+    },
+    "auditNoindex": {
+        "message": "Indexació bloquejada"
+    },
+    "auditNoindexHint": {
+        "message": "La pàgina està amagada als cercadors amb una etiqueta noindex o una regla de robots.txt. És normal en pàgines d'inici de sessió i comptes d'usuari"
+    },
+    "auditTitle": {
+        "message": "Títol (title)"
+    },
+    "auditTitleHint": {
+        "message": "Text de l'enllaç als resultats de cerca i nom de la pestanya. Ideal — 10–70 caràcters"
+    },
+    "auditDescription": {
+        "message": "Descripció (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Text sota l'enllaç als resultats de cerca. Ideal — 50–170 caràcters"
+    },
+    "auditH1": {
+        "message": "Encapçalaments h1"
+    },
+    "auditH1Hint": {
+        "message": "L'encapçalament principal de la pàgina. Normalment n'hi ha un"
+    },
+    "auditCanonical": {
+        "message": "URL canònic"
+    },
+    "auditCanonicalHint": {
+        "message": "Indica als cercadors l'adreça principal de la pàgina si en té còpies"
+    },
+    "auditOg": {
+        "message": "Previsualització de l'enllaç (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Títol i imatge que mostren Telegram, Slack i altres serveis quan es comparteix un enllaç"
+    },
+    "auditViewport": {
+        "message": "Versió mòbil (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Sense meta viewport, els telèfons mostren la pàgina com una versió d'escriptori reduïda"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Sense ell, el navegador passa al mode de compatibilitat amb llocs antics i el disseny pot variar"
+    },
+    "auditNoSize": {
+        "message": "Imatges sense mides"
+    },
+    "auditNoSizeHint": {
+        "message": "Sense width i height, el navegador no sap quant d'espai reservar per a la imatge i el disseny salta quan es carrega"
+    },
+    "auditLarge": {
+        "message": "Imatges massa grans"
+    },
+    "auditLargeHint": {
+        "message": "La imatge s'envia força més gran del que es mostra — pes innecessari"
+    },
+    "auditModern": {
+        "message": "Imatges WebP i AVIF"
+    },
+    "auditModernHint": {
+        "message": "Aquests formats ocupen un 25–50% menys que JPEG i PNG"
+    },
+    "auditLang": {
+        "message": "Idioma de la pàgina (lang)"
+    },
+    "auditLangHint": {
+        "message": "El necessiten els lectors de pantalla, els traductors i els cercadors"
+    },
+    "auditAlt": {
+        "message": "Imatges sense alt"
+    },
+    "auditAltHint": {
+        "message": "Una descripció de la imatge per a persones cegues i per si no es carrega"
+    },
+    "auditLabels": {
+        "message": "Camps sense etiqueta"
+    },
+    "auditLabelsHint": {
+        "message": "Un lector de pantalla no podrà dir què cal escriure al camp"
+    },
+    "auditNames": {
+        "message": "Botons i enllaços sense nom"
+    },
+    "auditNamesHint": {
+        "message": "Per exemple, un botó d'icona sense aria-label: una persona cega només sentirà «botó»"
+    },
+    "auditMain": {
+        "message": "Àrea principal (main)"
+    },
+    "auditMainHint": {
+        "message": "Permet anar directament al contingut, saltant-se el menú"
+    },
+    "auditZoom": {
+        "message": "Zoom desactivat"
+    },
+    "auditZoomHint": {
+        "message": "Impedeix a les persones amb baixa visió ampliar la pàgina al telèfon"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Limita des d'on pot carregar scripts la pàgina — protecció contra XSS. Si conté 'unsafe-inline' sense nonce ni hash, gairebé no protegeix"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Impedeix que el navegador endevini el tipus de fitxer — protecció contra la suplantació de scripts"
+    },
+    "auditFrame": {
+        "message": "Protecció contra la incrustació"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options o frame-ancestors impedeixen incrustar el lloc en una pàgina aliena per enganyar els usuaris perquè facin clic"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Quina part de l'adreça de la pàgina s'envia a altres llocs en navegar. Sense la capçalera, el navegador fa servir un valor segur per defecte"
+    },
+    "auditCache": {
+        "message": "Memòria cau de la pàgina"
+    },
+    "auditCacheHint": {
+        "message": "D'on ha vingut la pàgina: HIT — de la memòria cau del servidor o del CDN, MISS — generada de nou. Les pàgines mateixes rarament es desen a la memòria cau; normalment les imatges, els scripts i els estils"
+    },
+    "auditCacheBrowser": {
+        "message": "de la memòria cau del navegador"
+    },
+    "auditBots": {
+        "message": "Robots i IA"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Regles per als cercadors i altres robots. Sense el fitxer, els robots ho rastregen tot i els cercadors no saben on és el mapa del lloc"
+    },
+    "auditSitemap": {
+        "message": "Mapa del lloc"
+    },
+    "auditSitemapHint": {
+        "message": "Una llista de pàgines per als cercadors. S'indica a robots.txt amb una línia Sitemap:"
+    },
+    "auditAi": {
+        "message": "Regles per a bots d'IA"
+    },
+    "auditAiHint": {
+        "message": "Si els bots d'IA poden recollir els textos del lloc per a xarxes neuronals — segons les regles de robots.txt que anomenen el bot. L'extensió coneix 16 bots d'aquest tipus (GPTBot, ClaudeBot, Google-Extended, etc.); els bots amb altres noms no es compten. «Tancat per a tothom» — el lloc està tancat a tots els robots amb User-agent: *, sense regles pròpies per a la IA"
+    },
+    "auditAiBlocked": {
+        "message": "bloquejats: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "permès"
+    },
+    "auditAiNone": {
+        "message": "sense definir"
+    },
+    "auditAiAll": {
+        "message": "tancat per a tothom"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Un format nou: una breu descripció del lloc en Markdown per a assistents i agents d'IA. De moment és opcional"
+    },
+    "auditCspWeak": {
+        "message": "feble"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Prohibeix a la pàgina i als marcs incrustats l'accés a la càmera, la ubicació i altres funcions del navegador"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Aïlla la finestra del lloc de les altres finestres que obre — protecció contra atacs via window.opener"
+    },
+    "auditVersions": {
+        "message": "Versions de programari a les capçaleres"
+    },
+    "auditVersionsHint": {
+        "message": "El servidor revela versions de programari — una pista per als atacants sobre quines vulnerabilitats conegudes provar. Per amagar-les: server_tokens off a nginx i Angie, expose_php = Off a PHP"
+    },
+    "auditHidden": {
+        "message": "amagades"
+    },
+    "auditSession": {
+        "message": "Galetes de sessió llegibles per scripts"
+    },
+    "auditSessionHint": {
+        "message": "Sembla que les galetes d'inici de sessió es poden llegir des de JavaScript: amb un XSS es poden robar. L'indicador HttpOnly ho impedeix. Detectat pel nom de la galeta"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Contactes per informar de vulnerabilitats a /.well-known/security.txt. Ajuda que un investigador t'avisi del problema en lloc de vendre'l"
+    },
+    "serverUnknownTitle": {
+        "message": "Les xarxes d'aquest proveïdor no són a la base d'ABlock: inclou els grans proveïdors d'allotjament, núvols i CDN"
+    },
+    "protocolH3Later": {
+        "message": "El servidor admet HTTP/3. Aquesta pàgina ha arribat per $PROTOCOL$ — passa a la primera visita: el navegador descobreix HTTP/3 per la resposta del servidor i hi passa per a les sol·licituds següents",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Idioma del navegador"
+    },
+    "langTitle": {
+        "message": "Idioma de la interfície"
+    },
+    "noteTitle": {
+        "message": "Nota sobre aquest lloc"
+    },
+    "notePlaceholder": {
+        "message": "Nota sobre aquest lloc, només la veus tu"
+    },
+    "incognitoLabel": {
+        "message": "Funcionar en mode d'incògnit"
+    },
+    "incognitoTitle": {
+        "message": "S'obrirà la configuració d'extensions del navegador: activa-hi el permís en mode d'incògnit per a ABlock"
+    }
+}

@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "ml",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - ആഡ് ബ്ലോക്കറും സൈറ്റ് പരിശോധനയും"
+    },
+    "extDescription": {
+        "message": "പരസ്യങ്ങളും ട്രാക്കറുകളും തടയുന്നു: പേജുകൾ വേഗത്തിൽ, ഡാറ്റ കുറവ്. ഏത് സൈറ്റിന്റെയും വേഗവും സുരക്ഷയും പരിശോധിക്കുന്നു."
+    },
+    "toggle": {
+        "message": "ഓൺ / ഓഫ്"
+    },
+    "statusOn": {
+        "message": "സംരക്ഷണം ഓണാണ്"
+    },
+    "statusOff": {
+        "message": "സംരക്ഷണം ഓഫാണ്"
+    },
+    "statusSiteOff": {
+        "message": "ഈ സൈറ്റിൽ സംരക്ഷണം ഓഫാണ്"
+    },
+    "telegram": {
+        "message": "Telegram ഗ്രൂപ്പ്"
+    },
+    "github": {
+        "message": "GitHub-ൽ സംഭാവന ചെയ്യുക"
+    },
+    "httpsOn": {
+        "message": "കണക്ഷൻ എൻക്രിപ്റ്റ് ചെയ്തിരിക്കുന്നു"
+    },
+    "httpsOff": {
+        "message": "കണക്ഷൻ എൻക്രിപ്റ്റ് ചെയ്തിട്ടില്ല"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — ഏറ്റവും വേഗമേറിയ പ്രോട്ടോക്കോൾ"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — ആധുനിക പ്രോട്ടോക്കോൾ"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — പഴയ പ്രോട്ടോക്കോൾ",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "പ്രോട്ടോക്കോൾ അജ്ഞാതം (പേജ് കാഷിൽ നിന്ന് ലോഡ് ചെയ്തു)"
+    },
+    "loading": {
+        "message": "ലോഡ് ചെയ്യുന്നു…"
+    },
+    "loadingTitle": {
+        "message": "പേജ് ഇപ്പോഴും ലോഡ് ചെയ്യുകയാണ്"
+    },
+    "seconds": {
+        "message": "$SECONDS$ സെ",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "പേജ് ലോഡ് സമയം"
+    },
+    "domains": {
+        "message": "ഡൊമെയ്‌നുകൾ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "മൂന്നാം കക്ഷി ഡൊമെയ്‌നുകൾ:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…കൂടാതെ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "മൂന്നാം കക്ഷി ഡൊമെയ്‌നുകളില്ല"
+    },
+    "blocked": {
+        "message": "തടഞ്ഞത് $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "ട്രാക്കറുകൾ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "ഈ പേജിൽ തടഞ്ഞത്\nപരസ്യങ്ങൾ: $ADS$\nട്രാക്കറുകൾ: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "ഈ സൈറ്റ് നിങ്ങളെ ട്രാക്ക് ചെയ്യുന്നു. തടഞ്ഞ ട്രാക്കറുകൾ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "ട്രാക്കറുകളൊന്നും കണ്ടെത്തിയില്ല"
+    },
+    "scoreLabel": {
+        "message": "സൈറ്റ് സ്കോർ"
+    },
+    "serverLabel": {
+        "message": "സെർവർ"
+    },
+    "techLabel": {
+        "message": "നിർമ്മിച്ചത്"
+    },
+    "companiesLabel": {
+        "message": "ട്രാക്ക് ചെയ്യുന്നവർ"
+    },
+    "extraLabel": {
+        "message": "കൂടുതൽ"
+    },
+    "extendedText": {
+        "message": "വിപുലീകൃത മോഡ്: എല്ലാ സൈറ്റുകളിലും ഹോസ്റ്റിംഗ്, IPv6, HSTS, സ്ഥിതിവിവരക്കണക്കുകൾ, പരസ്യ ഇടങ്ങളും കുക്കി പോപ്പ്-അപ്പുകളും മറയ്ക്കൽ. ഡാറ്റ ഒരിക്കലും നിങ്ങളുടെ ബ്രൗസർ വിട്ടുപോകില്ല."
+    },
+    "extendedButton": {
+        "message": "ഓൺ ചെയ്യുക"
+    },
+    "extendedOff": {
+        "message": "വിപുലീകൃത മോഡ് ഓഫ് ചെയ്യുക"
+    },
+    "extendedOffTitle": {
+        "message": "എല്ലാ സൈറ്റുകളിലും സെർവറുകളുടെ IP-യും ഹെഡറുകളും കാണുന്നതും സ്ഥിതിവിവരക്കണക്കുകൾ സൂക്ഷിക്കുന്നതും പരസ്യ ഇടങ്ങളും കുക്കി പോപ്പ്-അപ്പുകളും മറയ്ക്കുന്നതും എക്സ്റ്റൻഷൻ നിർത്തും; എല്ലാ സൈറ്റുകളിലേക്കുമുള്ള ആക്സസ് പിൻവലിക്കും. എപ്പോൾ വേണമെങ്കിലും വീണ്ടും ഓൺ ചെയ്യാം"
+    },
+    "share": {
+        "message": "പങ്കിടുക"
+    },
+    "copied": {
+        "message": "പകർത്തി"
+    },
+    "cookiesLabel": {
+        "message": "കുക്കി സമ്മത പോപ്പ്-അപ്പുകൾ മറയ്ക്കുക"
+    },
+    "cookiesTitle": {
+        "message": "കുക്കി സമ്മത ബാനർ സേവനങ്ങൾ തടയുന്നു. വിപുലീകൃത മോഡിൽ ഏത് സൈറ്റിലും ബാനറുകളും മറയ്ക്കുന്നു"
+    },
+    "siteLabel": {
+        "message": "$HOST$-ൽ തടയുക",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "സൈറ്റ് ശരിയായി പ്രവർത്തിക്കുന്നില്ലെങ്കിൽ ടിക്ക് മാറ്റുക: അതിലെ പരസ്യങ്ങളും ട്രാക്കറുകളും ഇനി തടയില്ല. പേജ് വീണ്ടും ലോഡ് ചെയ്യും"
+    },
+    "guess": {
+        "message": "പരോക്ഷ സൂചനകളിലൂടെ കണ്ടെത്തിയത് — കൃത്യമല്ലായിരിക്കാം"
+    },
+    "weightTitle": {
+        "message": "എല്ലാ ഫയലുകളും ഉൾപ്പെടെ പേജിന്റെ വലുപ്പം"
+    },
+    "weightEstimated": {
+        "message": "$TOTAL$ ഫയലുകളിൽ $KNOWN$ എണ്ണത്തിന്റെ കൃത്യമായ വലുപ്പം അറിയാം, ബാക്കി ഏകദേശം: മൂന്നാം കക്ഷി സൈറ്റുകൾ വലുപ്പം മറയ്ക്കുന്നു",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "പേജ് കംപ്രസ് ചെയ്തിരിക്കുന്നു: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "കംപ്രഷൻ ഇല്ല"
+    },
+    "compressionOff": {
+        "message": "പേജ് കംപ്രഷൻ ഇല്ലാതെ അയയ്ക്കുന്നു — അത് പതുക്കെ ലോഡ് ചെയ്യുന്നു"
+    },
+    "compressionUnknown": {
+        "message": "കംപ്രഷൻ അജ്ഞാതം (പേജ് കാഷിൽ നിന്ന് ലോഡ് ചെയ്തു)"
+    },
+    "blockedCookies": {
+        "message": "കുക്കി പോപ്പ്-അപ്പുകൾ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "വലുപ്പം: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "തടഞ്ഞിട്ടില്ല:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "സൈറ്റിൽ കണ്ടെത്തിയത്:\n$LIST$\nഅവ തടഞ്ഞോ എന്ന് വിപുലീകൃത മോഡിൽ കാണാം",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "തടഞ്ഞത്:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "അറിയപ്പെടുന്നവ ഒന്നും കണ്ടെത്തിയില്ല"
+    },
+    "serverExtended": {
+        "message": "വിപുലീകൃത മോഡിൽ"
+    },
+    "serverReload": {
+        "message": "പേജ് വീണ്ടും ലോഡ് ചെയ്യുക"
+    },
+    "serverReloadTitle": {
+        "message": "പേജ് ലോഡ് ചെയ്യുമ്പോൾ സെർവർ കണ്ടെത്തുന്നു"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "മറ്റൊരു ദാതാവ്"
+    },
+    "serverProxy": {
+        "message": "സൈറ്റ് $NAME$ (CDN അല്ലെങ്കിൽ DDoS സംരക്ഷണം) പിന്നിൽ പ്രവർത്തിക്കുന്നു — യഥാർത്ഥ സെർവർ മറഞ്ഞിരിക്കുന്നു",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "ഹോസ്റ്റിംഗ്: $NAME$ (RIPE വിലാസ ഡാറ്റാബേസിൽ നിന്ന്)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "ദാതാവിനെ അടിസ്ഥാനമാക്കി രാജ്യം നിർണ്ണയിക്കുന്നു"
+    },
+    "techFound": {
+        "message": "പേജിൽ കണ്ടെത്തി"
+    },
+    "techNone": {
+        "message": "കണ്ടെത്തിയില്ല"
+    },
+    "techNoneTitle": {
+        "message": "അറിയപ്പെടുന്ന എഞ്ചിനുകളുടെയോ ലൈബ്രറികളുടെയോ സൂചനകളൊന്നുമില്ല"
+    },
+    "ipv6": {
+        "message": "IPv6 വഴി കണക്റ്റ് ചെയ്തു"
+    },
+    "ipv4": {
+        "message": "IPv4 വഴി കണക്റ്റ് ചെയ്തു. സൈറ്റ് IPv6 പിന്തുണയ്ക്കുന്നുണ്ടോ എന്ന് ഇതിൽ നിന്ന് അറിയാനാവില്ല: അത് നിങ്ങളുടെ നെറ്റ്‌വർക്കിനെയും ആശ്രയിച്ചിരിക്കുന്നു"
+    },
+    "hstsOn": {
+        "message": "HSTS: ബ്രൗസർ എപ്പോഴും HTTPS വഴി മാത്രം സൈറ്റ് തുറക്കുന്നു"
+    },
+    "hstsOff": {
+        "message": "HSTS ഇല്ല: സൈറ്റിലേക്കുള്ള ആദ്യ സന്ദർശനം എൻക്രിപ്ഷൻ ഇല്ലാതെ നടക്കാം"
+    },
+    "mixed": {
+        "message": "HTTP ഫയലുകൾ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS പേജ് എൻക്രിപ്ഷൻ ഇല്ലാതെ ഫയലുകൾ ലോഡ് ചെയ്യുന്നു: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "10-ൽ $SCORE$ സ്കോർ, ഇവയുടെ അടിസ്ഥാനത്തിൽ:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "എൻക്രിപ്ഷൻ"
+    },
+    "scoreProtocol": {
+        "message": "പ്രോട്ടോക്കോൾ"
+    },
+    "scoreSpeed": {
+        "message": "ലോഡ് വേഗത"
+    },
+    "scoreWeight": {
+        "message": "പേജ് വലുപ്പം"
+    },
+    "scoreTrackers": {
+        "message": "ട്രാക്കിംഗ്"
+    },
+    "scoreDomains": {
+        "message": "മൂന്നാം കക്ഷി ഡൊമെയ്‌നുകൾ"
+    },
+    "scoreCompression": {
+        "message": "കംപ്രഷൻ"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "മിശ്ര ഉള്ളടക്കം"
+    },
+    "stats": {
+        "message": "ആകെ തടഞ്ഞ അഭ്യർത്ഥനകൾ: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "$DATE$ മുതൽ. പരസ്യ ഫയലുകളുടെ ശരാശരി വലുപ്പത്തിൽ നിന്ന് വലുപ്പം കണക്കാക്കുന്നു",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "സൈറ്റ് റിപ്പോർട്ട് — ചിത്രമായോ ടെക്സ്റ്റായോ"
+    },
+    "reportTitle": {
+        "message": "സൈറ്റ് സ്കോറും വിശദാംശങ്ങളും ചിത്രമായോ ടെക്സ്റ്റായോ — സഹപ്രവർത്തകർക്കോ കരാറുകാരനോ ചാറ്റിനോ"
+    },
+    "reportDone": {
+        "message": "സംരക്ഷിച്ചു"
+    },
+    "copyIp": {
+        "message": "IP $IP$ പകർത്തുക",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "ചിത്രം പകർത്തുക"
+    },
+    "copyText": {
+        "message": "ടെക്സ്റ്റും ലിങ്കും പകർത്തുക"
+    },
+    "shareSystem": {
+        "message": "കൂടുതൽ…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ABlock-ൽ 10-ൽ $SCORE$ സ്കോർ",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "നിങ്ങളുടെ സൈറ്റ് പരിശോധിക്കുക:"
+    },
+    "donate": {
+        "message": "സംഭാവന"
+    },
+    "donateTitle": {
+        "message": "Boosty-ൽ വികസനത്തെ പിന്തുണയ്ക്കുക"
+    },
+    "askStats": {
+        "message": "തടഞ്ഞ അഭ്യർത്ഥനകൾ: $COUNT$, ലാഭിച്ചത് ≈ $SIZE$. ABlock ഉപകാരപ്പെടുന്നുണ്ടെങ്കിൽ, അതിന്റെ വികസനത്തെ പിന്തുണയ്ക്കൂ",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "നിങ്ങൾ ഒരു മാസമായി ABlock ഉപയോഗിക്കുന്നു. ഉപകാരപ്പെടുന്നുണ്ടെങ്കിൽ, അതിന്റെ വികസനത്തെ പിന്തുണയ്ക്കൂ"
+    },
+    "askClose": {
+        "message": "വീണ്ടും കാണിക്കരുത്"
+    },
+    "reportLegendGuess": {
+        "message": "? — പരോക്ഷ സൂചനകളിലൂടെ കണ്ടെത്തിയത്"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — ഏകദേശ കണക്ക്"
+    },
+    "companiesNoneTitle": {
+        "message": "ഈ പേജിൽ ABlock പട്ടികയിലെ കമ്പനികളൊന്നുമില്ല. സൈറ്റിന്റെ സ്വന്തം കൗണ്ടറുകൾ ഉണ്ടാകാം — അവ «ട്രാക്കറുകൾ» ബാഡ്ജിൽ എണ്ണുന്നു"
+    },
+    "compressionFiles": {
+        "message": "ടെക്സ്റ്റ് ഫയലുകൾ: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "കംപ്രസ് ചെയ്യാത്തവ: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "സൈറ്റ് ഡാറ്റ ഇല്ലാതാക്കി വീണ്ടും ലോഡ് ചെയ്യുക: കുക്കികൾ, കാഷ്, സ്റ്റോറേജ്. ബാഡ്ജുകളും സ്കോറും ഒരു പുതിയ സന്ദർശകൻ കാണുന്നതുപോലെ സൈറ്റ് കാണിക്കും. ഈ സൈറ്റിൽ നിന്ന് നിങ്ങൾ ലോഗ് ഔട്ട് ആകും"
+    },
+    "clearConfirm": {
+        "message": "ഇല്ലാതാക്കണോ?"
+    },
+    "saveImage": {
+        "message": "ചിത്രം സംരക്ഷിക്കുക"
+    },
+    "shareSend": {
+        "message": "$NAME$-ൽ അയയ്ക്കുക",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "$NAME$-ൽ പോസ്റ്റ് ചെയ്യുക",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "ടെക്സ്റ്റായി അയയ്ക്കുന്നു: സെർവറിലേക്ക് അപ്‌ലോഡ് ചെയ്യാതെ ചിത്രം കൈമാറാനാവില്ല — അത് പകർത്തി സന്ദേശത്തിൽ ഒട്ടിക്കുക"
+    },
+    "shareLinkOnly": {
+        "message": "എക്സ്റ്റൻഷന്റെ ലിങ്ക് മാത്രമേ കൈമാറൂ — റിപ്പോർട്ട് ചിത്രം പകർത്തി പോസ്റ്റിൽ ഒട്ടിക്കുക"
+    },
+    "auditLabel": {
+        "message": "വിശദാംശങ്ങൾ"
+    },
+    "auditIssues": {
+        "message": "പ്രശ്നങ്ങൾ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "പ്രശ്നങ്ങളില്ല"
+    },
+    "auditSpeed": {
+        "message": "വേഗത"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "മാർക്കപ്പ്"
+    },
+    "auditA11y": {
+        "message": "പ്രവേശനക്ഷമത"
+    },
+    "auditSecurity": {
+        "message": "സുരക്ഷ"
+    },
+    "auditYes": {
+        "message": "അതെ"
+    },
+    "auditNo": {
+        "message": "ഇല്ല"
+    },
+    "auditLength": {
+        "message": "$COUNT$ അക്ഷരങ്ങൾ",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "മറ്റൊരു ഡൊമെയ്ൻ"
+    },
+    "auditNoImage": {
+        "message": "ചിത്രമില്ല"
+    },
+    "auditNoInput": {
+        "message": "പ്രവർത്തനങ്ങളില്ല"
+    },
+    "auditModernValue": {
+        "message": "$TOTAL$-ൽ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "ലേഔട്ട് നീക്കങ്ങൾ"
+    },
+    "auditTtfb": {
+        "message": "സെർവർ പ്രതികരണം (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "സെർവറിൽ നിന്ന് പേജിന്റെ ആദ്യ ബൈറ്റ് ലഭിക്കാൻ എടുത്ത സമയം. നല്ലത് — 0.8 സെ-യിൽ താഴെ"
+    },
+    "auditFcp": {
+        "message": "ആദ്യ റെൻഡർ (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "ആദ്യ ഉള്ളടക്കം സ്ക്രീനിൽ എപ്പോൾ പ്രത്യക്ഷപ്പെട്ടു. നല്ലത് — 1.8 സെ-യിൽ താഴെ"
+    },
+    "auditLcp": {
+        "message": "പ്രധാന ബ്ലോക്ക് (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "ഏറ്റവും വലിയ ബ്ലോക്ക് — ചിത്രമോ ടെക്സ്റ്റോ — എപ്പോൾ വരച്ചു. Google-ന്റെ പ്രധാന വേഗത അളവുകോൽ. നല്ലത് — 2.5 സെ-യിൽ താഴെ"
+    },
+    "auditCls": {
+        "message": "ലേഔട്ട് നീക്കങ്ങൾ (CLS)"
+    },
+    "auditClsHint": {
+        "message": "ലോഡ് ചെയ്യുമ്പോൾ ഉള്ളടക്കം എത്ര ചാടുന്നു. നല്ലത് — 0.1-ൽ താഴെ"
+    },
+    "auditInp": {
+        "message": "പ്രവർത്തനത്തോടുള്ള പ്രതികരണം (INP)"
+    },
+    "auditInpHint": {
+        "message": "ക്ലിക്കിനോ ഇൻപുട്ടിനോ പ്രതികരിക്കുന്നതിലെ ഏറ്റവും വലിയ കാലതാമസം. നല്ലത് — 200 മി.സെ-യിൽ താഴെ"
+    },
+    "auditBlocking": {
+        "message": "റെൻഡറിംഗ് തടയുന്നവ"
+    },
+    "auditBlockingHint": {
+        "message": "പേജ് വരയ്ക്കാൻ തുടങ്ങുന്നതിന് മുമ്പ് ബ്രൗസർ കാത്തിരിക്കുന്ന ഫയലുകൾ. സ്റ്റൈലുകൾ കുഴപ്പമില്ല, പക്ഷേ സ്ക്രിപ്റ്റുകൾ async അല്ലെങ്കിൽ defer ഉപയോഗിച്ച് ലോഡ് ചെയ്യുന്നതാണ് നല്ലത്"
+    },
+    "auditStatus": {
+        "message": "സ്റ്റാറ്റസ് കോഡ്"
+    },
+    "auditStatusHint": {
+        "message": "പേജിന്റെ HTTP സ്റ്റാറ്റസ്: 200 — ശരി, 4xx, 5xx — പിശക്"
+    },
+    "auditNoindex": {
+        "message": "ഇൻഡെക്സിംഗ് നിരോധിച്ചു"
+    },
+    "auditNoindexHint": {
+        "message": "noindex ടാഗ് അല്ലെങ്കിൽ robots.txt നിയമം വഴി പേജ് സെർച്ച് എഞ്ചിനുകളിൽ നിന്ന് മറച്ചിരിക്കുന്നു. ലോഗിൻ പേജുകൾക്കും ഉപയോക്തൃ അക്കൗണ്ടുകൾക്കും ഇത് സാധാരണമാണ്"
+    },
+    "auditTitle": {
+        "message": "ശീർഷകം (title)"
+    },
+    "auditTitleHint": {
+        "message": "തിരയൽ ഫലങ്ങളിലെ ലിങ്ക് ടെക്സ്റ്റും ടാബിന്റെ പേരും. മികച്ചത് — 10–70 അക്ഷരങ്ങൾ"
+    },
+    "auditDescription": {
+        "message": "വിവരണം (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "തിരയൽ ഫലങ്ങളിൽ ലിങ്കിന് താഴെയുള്ള ടെക്സ്റ്റ്. മികച്ചത് — 50–170 അക്ഷരങ്ങൾ"
+    },
+    "auditH1": {
+        "message": "h1 തലക്കെട്ടുകൾ"
+    },
+    "auditH1Hint": {
+        "message": "പേജിന്റെ പ്രധാന തലക്കെട്ട്. സാധാരണയായി ഒന്നേ ഉണ്ടാകൂ"
+    },
+    "auditCanonical": {
+        "message": "കാനോനിക്കൽ URL"
+    },
+    "auditCanonicalHint": {
+        "message": "പേജിന് പകർപ്പുകൾ ഉണ്ടെങ്കിൽ സെർച്ച് എഞ്ചിനുകളോട് പ്രധാന വിലാസം പറയുന്നു"
+    },
+    "auditOg": {
+        "message": "ലിങ്ക് പ്രിവ്യൂ (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "ലിങ്ക് പങ്കിടുമ്പോൾ Telegram, Slack, മറ്റ് സേവനങ്ങൾ കാണിക്കുന്ന ശീർഷകവും ചിത്രവും"
+    },
+    "auditViewport": {
+        "message": "മൊബൈൽ പതിപ്പ് (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "meta viewport ഇല്ലെങ്കിൽ ഫോണുകൾ പേജിനെ ചെറുതാക്കിയ ഡെസ്ക്ടോപ്പ് പതിപ്പായി കാണിക്കും"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "ഇതില്ലെങ്കിൽ ബ്രൗസർ പഴയ സൈറ്റുകൾക്കുള്ള അനുയോജ്യതാ മോഡിലേക്ക് മാറും, ലേഔട്ട് വ്യത്യസ്തമാകാം"
+    },
+    "auditNoSize": {
+        "message": "അളവുകളില്ലാത്ത ചിത്രങ്ങൾ"
+    },
+    "auditNoSizeHint": {
+        "message": "width, height ഇല്ലെങ്കിൽ ചിത്രത്തിന് എത്ര സ്ഥലം വയ്ക്കണമെന്ന് ബ്രൗസറിന് അറിയില്ല, ചിത്രം ലോഡ് ചെയ്യുമ്പോൾ ലേഔട്ട് ചാടും"
+    },
+    "auditLarge": {
+        "message": "വളരെ വലിയ ചിത്രങ്ങൾ"
+    },
+    "auditLargeHint": {
+        "message": "ചിത്രം കാണിക്കുന്നതിനേക്കാൾ ഗണ്യമായി വലുതായി അയയ്ക്കുന്നു — അനാവശ്യ ഭാരം"
+    },
+    "auditModern": {
+        "message": "WebP, AVIF ചിത്രങ്ങൾ"
+    },
+    "auditModernHint": {
+        "message": "ഈ ഫോർമാറ്റുകൾ JPEG, PNG എന്നിവയേക്കാൾ 25–50% ചെറുതാണ്"
+    },
+    "auditLang": {
+        "message": "പേജിന്റെ ഭാഷ (lang)"
+    },
+    "auditLangHint": {
+        "message": "സ്ക്രീൻ റീഡറുകൾക്കും വിവർത്തകർക്കും സെർച്ച് എഞ്ചിനുകൾക്കും ആവശ്യമാണ്"
+    },
+    "auditAlt": {
+        "message": "alt ഇല്ലാത്ത ചിത്രങ്ങൾ"
+    },
+    "auditAltHint": {
+        "message": "അന്ധരായ ഉപയോക്താക്കൾക്കും ചിത്രം ലോഡ് ആകാത്ത സാഹചര്യത്തിനുമുള്ള ചിത്രത്തിന്റെ വിവരണം"
+    },
+    "auditLabels": {
+        "message": "ലേബലില്ലാത്ത ഫീൽഡുകൾ"
+    },
+    "auditLabelsHint": {
+        "message": "ഫീൽഡിൽ എന്താണ് നൽകേണ്ടതെന്ന് സ്ക്രീൻ റീഡറിന് പറയാനാവില്ല"
+    },
+    "auditNames": {
+        "message": "പേരില്ലാത്ത ബട്ടണുകളും ലിങ്കുകളും"
+    },
+    "auditNamesHint": {
+        "message": "ഉദാ. aria-label ഇല്ലാത്ത ഐക്കൺ ബട്ടൺ: അന്ധനായ ഉപയോക്താവ് «ബട്ടൺ» എന്ന് മാത്രം കേൾക്കും"
+    },
+    "auditMain": {
+        "message": "പ്രധാന ഭാഗം (main)"
+    },
+    "auditMainHint": {
+        "message": "മെനു ഒഴിവാക്കി നേരിട്ട് ഉള്ളടക്കത്തിലേക്ക് പോകാൻ അനുവദിക്കുന്നു"
+    },
+    "auditZoom": {
+        "message": "സൂം പ്രവർത്തനരഹിതം"
+    },
+    "auditZoomHint": {
+        "message": "കാഴ്ചക്കുറവുള്ളവർക്ക് ഫോണിൽ പേജ് വലുതാക്കാനാവില്ല"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "പേജിന് എവിടെ നിന്ന് സ്ക്രിപ്റ്റുകൾ ലോഡ് ചെയ്യാമെന്ന് പരിമിതപ്പെടുത്തുന്നു — XSS-ൽ നിന്നുള്ള സംരക്ഷണം. nonce അല്ലെങ്കിൽ hash ഇല്ലാതെ 'unsafe-inline' ഉണ്ടെങ്കിൽ അത് കാര്യമായി സംരക്ഷിക്കില്ല"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "ഫയൽ തരം ഊഹിക്കുന്നതിൽ നിന്ന് ബ്രൗസറിനെ തടയുന്നു — വ്യാജ സ്ക്രിപ്റ്റുകളിൽ നിന്നുള്ള സംരക്ഷണം"
+    },
+    "auditFrame": {
+        "message": "ഫ്രെയിമിൽ ഉൾച്ചേർക്കലിൽ നിന്നുള്ള സംരക്ഷണം"
+    },
+    "auditFrameHint": {
+        "message": "ഉപയോക്താക്കളെ കബളിപ്പിച്ച് ക്ലിക്ക് ചെയ്യിക്കാൻ സൈറ്റ് മറ്റൊരാളുടെ പേജിൽ ഉൾച്ചേർക്കുന്നത് X-Frame-Options അല്ലെങ്കിൽ frame-ancestors തടയുന്നു"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "മറ്റ് സൈറ്റുകളിലേക്ക് പോകുമ്പോൾ പേജ് വിലാസത്തിന്റെ എത്ര ഭാഗം കൈമാറുന്നു. ഹെഡർ ഇല്ലെങ്കിൽ ബ്രൗസർ സുരക്ഷിതമായ ഡിഫോൾട്ട് ഉപയോഗിക്കും"
+    },
+    "auditCache": {
+        "message": "പേജ് കാഷ്"
+    },
+    "auditCacheHint": {
+        "message": "പേജ് എവിടെ നിന്ന് വന്നു: HIT — സെർവർ അല്ലെങ്കിൽ CDN കാഷിൽ നിന്ന്, MISS — പുതുതായി നിർമ്മിച്ചത്. പേജുകൾ തന്നെ അപൂർവമായേ കാഷ് ചെയ്യൂ; സാധാരണയായി ചിത്രങ്ങൾ, സ്ക്രിപ്റ്റുകൾ, സ്റ്റൈലുകൾ"
+    },
+    "auditCacheBrowser": {
+        "message": "ബ്രൗസർ കാഷിൽ നിന്ന്"
+    },
+    "auditBots": {
+        "message": "റോബോട്ടുകളും AI-യും"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "സെർച്ച് എഞ്ചിനുകൾക്കും മറ്റ് റോബോട്ടുകൾക്കുമുള്ള നിയമങ്ങൾ. ഈ ഫയൽ ഇല്ലെങ്കിൽ റോബോട്ടുകൾ എല്ലാം ക്രോൾ ചെയ്യും, സൈറ്റ്മാപ്പ് എവിടെയാണെന്ന് സെർച്ച് എഞ്ചിനുകൾ അറിയില്ല"
+    },
+    "auditSitemap": {
+        "message": "സൈറ്റ്മാപ്പ്"
+    },
+    "auditSitemapHint": {
+        "message": "സെർച്ച് എഞ്ചിനുകൾക്കുള്ള പേജുകളുടെ പട്ടിക. robots.txt-ൽ Sitemap: വരി വഴി സൂചിപ്പിക്കുന്നു"
+    },
+    "auditAi": {
+        "message": "AI ബോട്ടുകൾക്കുള്ള നിയമങ്ങൾ"
+    },
+    "auditAiHint": {
+        "message": "ന്യൂറൽ നെറ്റ്‌വർക്കുകൾക്കായി സൈറ്റിന്റെ ടെക്സ്റ്റുകൾ AI ബോട്ടുകൾക്ക് ശേഖരിക്കാമോ — ബോട്ടിന്റെ പേര് പറയുന്ന robots.txt നിയമങ്ങളുടെ അടിസ്ഥാനത്തിൽ. എക്സ്റ്റൻഷന് ഇത്തരം 16 ബോട്ടുകളെ അറിയാം (GPTBot, ClaudeBot, Google-Extended തുടങ്ങിയവ); മറ്റ് പേരുകളുള്ള ബോട്ടുകൾ കണക്കാക്കില്ല. «എല്ലാവർക്കും അടച്ചു» — User-agent: * വഴി സൈറ്റ് എല്ലാ റോബോട്ടുകൾക്കും അടച്ചിരിക്കുന്നു, AI-ക്ക് പ്രത്യേക നിയമങ്ങളില്ല"
+    },
+    "auditAiBlocked": {
+        "message": "നിരോധിച്ചത്: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "അനുവദിച്ചു"
+    },
+    "auditAiNone": {
+        "message": "സജ്ജമാക്കിയിട്ടില്ല"
+    },
+    "auditAiAll": {
+        "message": "എല്ലാവർക്കും അടച്ചു"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "പുതിയ ഫോർമാറ്റ്: AI സഹായികൾക്കും ഏജന്റുകൾക്കുമായി Markdown-ൽ സൈറ്റിന്റെ ഹ്രസ്വ വിവരണം. നിലവിൽ ഓപ്ഷണൽ"
+    },
+    "auditCspWeak": {
+        "message": "ദുർബലം"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "പേജും ഉൾച്ചേർത്ത ഫ്രെയിമുകളും ക്യാമറ, ലൊക്കേഷൻ, മറ്റ് ബ്രൗസർ സവിശേഷതകൾ എന്നിവ ആക്സസ് ചെയ്യുന്നത് നിരോധിക്കുന്നു"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "സൈറ്റ് തുറക്കുന്ന മറ്റ് വിൻഡോകളിൽ നിന്ന് സൈറ്റിന്റെ വിൻഡോയെ വേർതിരിക്കുന്നു — window.opener വഴിയുള്ള ആക്രമണങ്ങളിൽ നിന്നുള്ള സംരക്ഷണം"
+    },
+    "auditVersions": {
+        "message": "ഹെഡറുകളിലെ സോഫ്റ്റ്‌വെയർ പതിപ്പുകൾ"
+    },
+    "auditVersionsHint": {
+        "message": "സെർവർ സോഫ്റ്റ്‌വെയർ പതിപ്പുകൾ വെളിപ്പെടുത്തുന്നു — ഏത് അറിയപ്പെടുന്ന ദൗർബല്യങ്ങൾ പരീക്ഷിക്കണമെന്ന് ആക്രമണകാരികൾക്കുള്ള സൂചന. മറയ്ക്കാൻ: nginx, Angie എന്നിവയിൽ server_tokens off, PHP-ൽ expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "മറച്ചിരിക്കുന്നു"
+    },
+    "auditSession": {
+        "message": "സ്ക്രിപ്റ്റുകൾക്ക് വായിക്കാവുന്ന സെഷൻ കുക്കികൾ"
+    },
+    "auditSessionHint": {
+        "message": "ലോഗിൻ കുക്കികൾ JavaScript-ൽ നിന്ന് വായിക്കാനാകുമെന്ന് തോന്നുന്നു: XSS ഉണ്ടായാൽ അവ മോഷ്ടിക്കപ്പെടാം. HttpOnly ഫ്ലാഗ് ഇത് തടയുന്നു. കുക്കിയുടെ പേരിൽ നിന്ന് കണ്ടെത്തിയത്"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "/.well-known/security.txt-ലെ ദൗർബല്യങ്ങൾ റിപ്പോർട്ട് ചെയ്യാനുള്ള ബന്ധപ്പെടലുകൾ. ഗവേഷകൻ പ്രശ്നം വിൽക്കുന്നതിന് പകരം നിങ്ങളെ അറിയിക്കാൻ സഹായിക്കുന്നു"
+    },
+    "serverUnknownTitle": {
+        "message": "ഈ ദാതാവിന്റെ നെറ്റ്‌വർക്കുകൾ ABlock ഡാറ്റാബേസിൽ ഇല്ല: അതിൽ വലിയ ഹോസ്റ്റിംഗുകൾ, ക്ലൗഡുകൾ, CDN-കൾ ഉൾപ്പെടുന്നു"
+    },
+    "protocolH3Later": {
+        "message": "സെർവർ HTTP/3 പിന്തുണയ്ക്കുന്നു. ഈ പേജ് $PROTOCOL$ വഴി വന്നു — ആദ്യ സന്ദർശനത്തിൽ ഇത് സംഭവിക്കുന്നു: സെർവറിന്റെ പ്രതികരണത്തിൽ നിന്ന് ബ്രൗസർ HTTP/3-നെക്കുറിച്ച് അറിഞ്ഞ് തുടർന്നുള്ള അഭ്യർത്ഥനകൾക്ക് അതിലേക്ക് മാറുന്നു",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "ബ്രൗസർ ഭാഷ"
+    },
+    "langTitle": {
+        "message": "ഇന്റർഫേസ് ഭാഷ"
+    },
+    "noteTitle": {
+        "message": "ഈ സൈറ്റിനുള്ള കുറിപ്പ്"
+    },
+    "notePlaceholder": {
+        "message": "ഈ സൈറ്റിനുള്ള കുറിപ്പ്, നിങ്ങൾക്ക് മാത്രം കാണാം"
+    },
+    "incognitoLabel": {
+        "message": "ആൾമാറാട്ട മോഡിലും പ്രവർത്തിക്കുക"
+    },
+    "incognitoTitle": {
+        "message": "ബ്രൗസറിന്റെ എക്സ്റ്റൻഷൻ ക്രമീകരണങ്ങൾ തുറക്കും — അവിടെ ABlock-ന് ആൾമാറാട്ട മോഡിലെ അനുമതി ഓണാക്കുക"
+    }
+}

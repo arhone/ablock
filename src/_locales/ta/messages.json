@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "ta",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - விளம்பரத் தடுப்பான், தளச் சோதனை"
+    },
+    "extDescription": {
+        "message": "விளம்பரங்களையும் டிராக்கர்களையும் தடுக்கிறது: பக்கங்கள் வேகம், டேட்டா குறைவு. எந்தத் தளத்தின் வேகம், பாதுகாப்பையும் சோதிக்கும்."
+    },
+    "toggle": {
+        "message": "இயக்கு / நிறுத்து"
+    },
+    "statusOn": {
+        "message": "பாதுகாப்பு இயக்கத்தில் உள்ளது"
+    },
+    "statusOff": {
+        "message": "பாதுகாப்பு நிறுத்தப்பட்டுள்ளது"
+    },
+    "statusSiteOff": {
+        "message": "இந்தத் தளத்தில் பாதுகாப்பு நிறுத்தப்பட்டுள்ளது"
+    },
+    "telegram": {
+        "message": "Telegram குழு"
+    },
+    "github": {
+        "message": "GitHub-இல் பங்களியுங்கள்"
+    },
+    "httpsOn": {
+        "message": "இணைப்பு மறைகுறியாக்கப்பட்டுள்ளது"
+    },
+    "httpsOff": {
+        "message": "இணைப்பு மறைகுறியாக்கப்படவில்லை"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — மிக வேகமான நெறிமுறை"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — நவீன நெறிமுறை"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — காலாவதியான நெறிமுறை",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "நெறிமுறை தெரியவில்லை (பக்கம் தற்காலிக சேமிப்பிலிருந்து ஏற்றப்பட்டது)"
+    },
+    "loading": {
+        "message": "ஏற்றுகிறது…"
+    },
+    "loadingTitle": {
+        "message": "பக்கம் இன்னும் ஏற்றப்படுகிறது"
+    },
+    "seconds": {
+        "message": "$SECONDS$ வி",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "பக்கம் ஏற்றும் நேரம்"
+    },
+    "domains": {
+        "message": "டொமைன்கள் $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "மூன்றாம் தரப்பு டொமைன்கள்:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…மேலும் $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "மூன்றாம் தரப்பு டொமைன்கள் இல்லை"
+    },
+    "blocked": {
+        "message": "தடுக்கப்பட்டவை $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "டிராக்கர்கள் $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "இந்தப் பக்கத்தில் தடுக்கப்பட்டவை\nவிளம்பரங்கள்: $ADS$\nடிராக்கர்கள்: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "இந்தத் தளம் உங்களைக் கண்காணிக்கிறது. தடுக்கப்பட்ட டிராக்கர்கள்: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "டிராக்கர்கள் எதுவும் காணப்படவில்லை"
+    },
+    "scoreLabel": {
+        "message": "தள மதிப்பெண்"
+    },
+    "serverLabel": {
+        "message": "சர்வர்"
+    },
+    "techLabel": {
+        "message": "உருவாக்கப்பட்டது"
+    },
+    "companiesLabel": {
+        "message": "கண்காணிப்பவை"
+    },
+    "extraLabel": {
+        "message": "மேலும்"
+    },
+    "extendedText": {
+        "message": "நீட்டிக்கப்பட்ட பயன்முறை: எல்லாத் தளங்களிலும் ஹோஸ்டிங், IPv6, HSTS, புள்ளிவிவரம் மற்றும் விளம்பர இடங்களையும் குக்கீ சாளரங்களையும் மறைத்தல். தரவு உங்கள் உலாவியை விட்டு ஒருபோதும் வெளியேறாது."
+    },
+    "extendedButton": {
+        "message": "இயக்கு"
+    },
+    "extendedOff": {
+        "message": "நீட்டிக்கப்பட்ட பயன்முறையை நிறுத்து"
+    },
+    "extendedOffTitle": {
+        "message": "நீட்டிப்பு எல்லாத் தளங்களிலும் சர்வர்களின் IP மற்றும் தலைப்புகளைப் பார்ப்பது, புள்ளிவிவரம் வைப்பது, விளம்பர இடங்களையும் குக்கீ சாளரங்களையும் மறைப்பது ஆகியவற்றை நிறுத்தும்; எல்லாத் தளங்களுக்குமான அணுகல் திரும்பப் பெறப்படும். எப்போது வேண்டுமானாலும் மீண்டும் இயக்கலாம்"
+    },
+    "share": {
+        "message": "பகிர்"
+    },
+    "copied": {
+        "message": "நகலெடுக்கப்பட்டது"
+    },
+    "cookiesLabel": {
+        "message": "குக்கீ ஒப்புதல் சாளரங்களை மறை"
+    },
+    "cookiesTitle": {
+        "message": "குக்கீ ஒப்புதல் பேனர் சேவைகளைத் தடுக்கிறது. நீட்டிக்கப்பட்ட பயன்முறையில் எந்தத் தளத்திலும் பேனர்களையும் மறைக்கிறது"
+    },
+    "siteLabel": {
+        "message": "$HOST$-இல் தடு",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "தளம் சரியாக இயங்கவில்லை என்றால் தேர்வை நீக்குங்கள்: அதில் விளம்பரங்களும் டிராக்கர்களும் இனி தடுக்கப்படாது. பக்கம் மீண்டும் ஏற்றப்படும்"
+    },
+    "guess": {
+        "message": "மறைமுக அறிகுறிகளால் கண்டறியப்பட்டது — துல்லியமாக இல்லாமல் இருக்கலாம்"
+    },
+    "weightTitle": {
+        "message": "எல்லாக் கோப்புகளுடன் பக்கத்தின் அளவு"
+    },
+    "weightEstimated": {
+        "message": "$TOTAL$ கோப்புகளில் $KNOWN$ கோப்புகளின் துல்லிய அளவு தெரியும், மீதி மதிப்பீடு: மூன்றாம் தரப்புத் தளங்கள் அளவை மறைக்கின்றன",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "பக்கம் சுருக்கப்பட்டுள்ளது: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "சுருக்கம் இல்லை"
+    },
+    "compressionOff": {
+        "message": "பக்கம் சுருக்கமின்றி அனுப்பப்படுகிறது — மெதுவாக ஏற்றப்படுகிறது"
+    },
+    "compressionUnknown": {
+        "message": "சுருக்கம் தெரியவில்லை (பக்கம் தற்காலிக சேமிப்பிலிருந்து ஏற்றப்பட்டது)"
+    },
+    "blockedCookies": {
+        "message": "குக்கீ சாளரங்கள்: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "அளவு: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "தடுக்கப்படாதவை:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "தளத்தில் கண்டறியப்பட்டவை:\n$LIST$\nஅவை தடுக்கப்பட்டனவா என்பது நீட்டிக்கப்பட்ட பயன்முறையில் காட்டப்படும்",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "தடுக்கப்பட்டவை:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "அறியப்பட்டவை எதுவும் இல்லை"
+    },
+    "serverExtended": {
+        "message": "நீட்டிக்கப்பட்ட பயன்முறையில்"
+    },
+    "serverReload": {
+        "message": "பக்கத்தை மீண்டும் ஏற்றுங்கள்"
+    },
+    "serverReloadTitle": {
+        "message": "பக்கம் ஏற்றப்படும்போது சர்வர் கண்டறியப்படுகிறது"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "வேறு வழங்குநர்"
+    },
+    "serverProxy": {
+        "message": "தளம் $NAME$ (CDN அல்லது DDoS பாதுகாப்பு) பின்னால் இயங்குகிறது — உண்மையான சர்வர் மறைக்கப்பட்டுள்ளது",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "ஹோஸ்டிங்: $NAME$ (RIPE முகவரித் தரவுத்தளத்திலிருந்து)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "நாடு வழங்குநரைக் கொண்டு தீர்மானிக்கப்படுகிறது"
+    },
+    "techFound": {
+        "message": "பக்கத்தில் கண்டறியப்பட்டது"
+    },
+    "techNone": {
+        "message": "கண்டறியப்படவில்லை"
+    },
+    "techNoneTitle": {
+        "message": "அறியப்பட்ட இன்ஜின்கள் அல்லது நூலகங்களின் அறிகுறிகள் இல்லை"
+    },
+    "ipv6": {
+        "message": "IPv6 வழியாக இணைக்கப்பட்டது"
+    },
+    "ipv4": {
+        "message": "IPv4 வழியாக இணைக்கப்பட்டது. தளம் IPv6-ஐ ஆதரிக்கிறதா என்பதை இது சொல்லாது: அது உங்கள் நெட்வொர்க்கையும் சார்ந்தது"
+    },
+    "hstsOn": {
+        "message": "HSTS: உலாவி எப்போதும் HTTPS வழியாக மட்டுமே தளத்தைத் திறக்கிறது"
+    },
+    "hstsOff": {
+        "message": "HSTS இல்லை: தளத்துக்கான முதல் வருகை மறைகுறியாக்கமின்றி நடக்கலாம்"
+    },
+    "mixed": {
+        "message": "HTTP கோப்புகள் $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS பக்கம் மறைகுறியாக்கமின்றி கோப்புகளை ஏற்றுகிறது: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "10-க்கு $SCORE$ மதிப்பெண், இவற்றின் அடிப்படையில்:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "மறைகுறியாக்கம்"
+    },
+    "scoreProtocol": {
+        "message": "நெறிமுறை"
+    },
+    "scoreSpeed": {
+        "message": "ஏற்றும் வேகம்"
+    },
+    "scoreWeight": {
+        "message": "பக்க அளவு"
+    },
+    "scoreTrackers": {
+        "message": "கண்காணிப்பு"
+    },
+    "scoreDomains": {
+        "message": "மூன்றாம் தரப்பு டொமைன்கள்"
+    },
+    "scoreCompression": {
+        "message": "சுருக்கம்"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "கலப்பு உள்ளடக்கம்"
+    },
+    "stats": {
+        "message": "மொத்தம் தடுக்கப்பட்ட கோரிக்கைகள்: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "$DATE$ முதல். விளம்பரக் கோப்புகளின் சராசரி அளவைக் கொண்டு அளவு மதிப்பிடப்படுகிறது",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "தள அறிக்கை — படமாக அல்லது உரையாக"
+    },
+    "reportTitle": {
+        "message": "தள மதிப்பெண்ணும் விவரங்களும் படமாக அல்லது உரையாக — சக ஊழியர்கள், ஒப்பந்ததாரர் அல்லது அரட்டைக்கு"
+    },
+    "reportDone": {
+        "message": "சேமிக்கப்பட்டது"
+    },
+    "copyIp": {
+        "message": "IP $IP$ நகலெடு",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "படத்தை நகலெடு"
+    },
+    "copyText": {
+        "message": "உரையையும் இணைப்பையும் நகலெடு"
+    },
+    "shareSystem": {
+        "message": "மேலும்…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ABlock-இல் 10-க்கு $SCORE$ மதிப்பெண்",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "உங்கள் தளத்தைச் சரிபாருங்கள்:"
+    },
+    "donate": {
+        "message": "நன்கொடை"
+    },
+    "donateTitle": {
+        "message": "Boosty-இல் மேம்பாட்டுக்கு ஆதரவளியுங்கள்"
+    },
+    "askStats": {
+        "message": "தடுக்கப்பட்ட கோரிக்கைகள்: $COUNT$, சேமிப்பு ≈ $SIZE$. ABlock உதவியாக இருந்தால், அதன் மேம்பாட்டை ஆதரியுங்கள்",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "நீங்கள் ஒரு மாதமாக ABlock-ஐப் பயன்படுத்துகிறீர்கள். உதவியாக இருந்தால், அதன் மேம்பாட்டை ஆதரியுங்கள்"
+    },
+    "askClose": {
+        "message": "மீண்டும் காட்ட வேண்டாம்"
+    },
+    "reportLegendGuess": {
+        "message": "? — மறைமுக அறிகுறிகளால் கண்டறியப்பட்டது"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — தோராயமான மதிப்பீடு"
+    },
+    "companiesNoneTitle": {
+        "message": "இந்தப் பக்கத்தில் ABlock பட்டியலில் உள்ள நிறுவனங்கள் இல்லை. தளத்தின் சொந்தக் கவுண்டர்கள் இருக்கலாம் — அவை «டிராக்கர்கள்» பேட்ஜில் எண்ணப்படுகின்றன"
+    },
+    "compressionFiles": {
+        "message": "உரைக் கோப்புகள்: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "சுருக்கப்படாதவை: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "தளத் தரவை நீக்கி மீண்டும் ஏற்று: குக்கீகள், தற்காலிக சேமிப்பு மற்றும் சேமிப்பகம். பேட்ஜ்களும் மதிப்பெண்ணும் புதிய பார்வையாளர் பார்ப்பது போல் தளத்தைக் காட்டும். இந்தத் தளத்திலிருந்து நீங்கள் வெளியேற்றப்படுவீர்கள்"
+    },
+    "clearConfirm": {
+        "message": "நீக்கவா?"
+    },
+    "saveImage": {
+        "message": "படத்தைச் சேமி"
+    },
+    "shareSend": {
+        "message": "$NAME$-இல் அனுப்பு",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "$NAME$-இல் இடுகையிடு",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "உரையாக அனுப்பப்படுகிறது: சர்வரில் பதிவேற்றாமல் படத்தை அனுப்ப முடியாது — அதை நகலெடுத்துச் செய்தியில் ஒட்டுங்கள்"
+    },
+    "shareLinkOnly": {
+        "message": "நீட்டிப்பின் இணைப்பு மட்டுமே அனுப்பப்படுகிறது — அறிக்கைப் படத்தை நகலெடுத்து இடுகையில் ஒட்டுங்கள்"
+    },
+    "auditLabel": {
+        "message": "விவரங்கள்"
+    },
+    "auditIssues": {
+        "message": "சிக்கல்கள்: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "சிக்கல்கள் இல்லை"
+    },
+    "auditSpeed": {
+        "message": "வேகம்"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "மார்க்அப்"
+    },
+    "auditA11y": {
+        "message": "அணுகல்தன்மை"
+    },
+    "auditSecurity": {
+        "message": "பாதுகாப்பு"
+    },
+    "auditYes": {
+        "message": "ஆம்"
+    },
+    "auditNo": {
+        "message": "இல்லை"
+    },
+    "auditLength": {
+        "message": "$COUNT$ எழுத்துகள்",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "வேறு டொமைன்"
+    },
+    "auditNoImage": {
+        "message": "படம் இல்லை"
+    },
+    "auditNoInput": {
+        "message": "செயல்கள் இல்லை"
+    },
+    "auditModernValue": {
+        "message": "$TOTAL$-இல் $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "தளவமைப்பு நகர்வுகள்"
+    },
+    "auditTtfb": {
+        "message": "சர்வர் பதில் (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "சர்வரிடமிருந்து பக்கத்தின் முதல் பைட்டைப் பெற எவ்வளவு நேரம் ஆனது. நன்று — 0.8 வி-க்குக் குறைவு"
+    },
+    "auditFcp": {
+        "message": "முதல் வரைதல் (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "முதல் உள்ளடக்கம் திரையில் எப்போது தோன்றியது. நன்று — 1.8 வி-க்குக் குறைவு"
+    },
+    "auditLcp": {
+        "message": "முதன்மைத் தொகுதி (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "மிகப் பெரிய தொகுதி — படம் அல்லது உரை — எப்போது வரையப்பட்டது. Google-இன் முக்கிய வேக அளவீடு. நன்று — 2.5 வி-க்குக் குறைவு"
+    },
+    "auditCls": {
+        "message": "தளவமைப்பு நகர்வுகள் (CLS)"
+    },
+    "auditClsHint": {
+        "message": "ஏற்றும்போது உள்ளடக்கம் எவ்வளவு குதிக்கிறது. நன்று — 0.1-க்குக் குறைவு"
+    },
+    "auditInp": {
+        "message": "செயலுக்கான பதில் (INP)"
+    },
+    "auditInpHint": {
+        "message": "கிளிக் அல்லது உள்ளீட்டுக்குப் பதிலளிப்பதில் அதிகபட்ச தாமதம். நன்று — 200 மி.வி-க்குக் குறைவு"
+    },
+    "auditBlocking": {
+        "message": "வரைதலைத் தடுப்பவை"
+    },
+    "auditBlockingHint": {
+        "message": "பக்கத்தை வரையத் தொடங்கும் முன் உலாவி காத்திருக்கும் கோப்புகள். ஸ்டைல்கள் பரவாயில்லை, ஆனால் ஸ்கிரிப்ட்களை async அல்லது defer உடன் ஏற்றுவது நல்லது"
+    },
+    "auditStatus": {
+        "message": "நிலைக் குறியீடு"
+    },
+    "auditStatusHint": {
+        "message": "பக்கத்தின் HTTP நிலை: 200 — சரி, 4xx மற்றும் 5xx — பிழை"
+    },
+    "auditNoindex": {
+        "message": "அட்டவணைப்படுத்தல் தடுக்கப்பட்டது"
+    },
+    "auditNoindexHint": {
+        "message": "noindex குறிச்சொல் அல்லது robots.txt விதியால் பக்கம் தேடுபொறிகளிடமிருந்து மறைக்கப்பட்டுள்ளது. உள்நுழைவுப் பக்கங்களுக்கும் பயனர் கணக்குகளுக்கும் இது இயல்பானது"
+    },
+    "auditTitle": {
+        "message": "தலைப்பு (title)"
+    },
+    "auditTitleHint": {
+        "message": "தேடல் முடிவுகளில் இணைப்பின் உரையும் தாவலின் பெயரும். சிறந்தது — 10–70 எழுத்துகள்"
+    },
+    "auditDescription": {
+        "message": "விளக்கம் (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "தேடல் முடிவுகளில் இணைப்புக்குக் கீழே உள்ள உரை. சிறந்தது — 50–170 எழுத்துகள்"
+    },
+    "auditH1": {
+        "message": "h1 தலைப்புகள்"
+    },
+    "auditH1Hint": {
+        "message": "பக்கத்தின் முதன்மைத் தலைப்பு. பொதுவாக ஒன்றுதான்"
+    },
+    "auditCanonical": {
+        "message": "கேனானிகல் URL"
+    },
+    "auditCanonicalHint": {
+        "message": "பக்கத்துக்கு நகல்கள் இருந்தால் தேடுபொறிகளுக்கு முதன்மை முகவரியைச் சொல்கிறது"
+    },
+    "auditOg": {
+        "message": "இணைப்பு முன்னோட்டம் (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "இணைப்பைப் பகிரும்போது Telegram, Slack மற்றும் பிற சேவைகள் காட்டும் தலைப்பும் படமும்"
+    },
+    "auditViewport": {
+        "message": "மொபைல் பதிப்பு (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "meta viewport இல்லாமல் தொலைபேசிகள் பக்கத்தைச் சிறிதாக்கிய கணினிப் பதிப்பாகக் காட்டும்"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "இது இல்லாவிட்டால் உலாவி பழைய தளங்களுக்கான இணக்கப் பயன்முறைக்கு மாறும், தளவமைப்பு மாறுபடலாம்"
+    },
+    "auditNoSize": {
+        "message": "அளவுகள் இல்லாத படங்கள்"
+    },
+    "auditNoSizeHint": {
+        "message": "width மற்றும் height இல்லாமல் படத்துக்கு எவ்வளவு இடம் ஒதுக்க வேண்டும் என்பது உலாவிக்குத் தெரியாது, படம் ஏற்றப்படும்போது தளவமைப்பு குதிக்கும்"
+    },
+    "auditLarge": {
+        "message": "மிகப் பெரிய படங்கள்"
+    },
+    "auditLargeHint": {
+        "message": "படம் காட்டப்படுவதைவிடக் கணிசமாகப் பெரியதாக அனுப்பப்படுகிறது — தேவையற்ற எடை"
+    },
+    "auditModern": {
+        "message": "WebP மற்றும் AVIF படங்கள்"
+    },
+    "auditModernHint": {
+        "message": "இந்த வடிவங்கள் JPEG, PNG-ஐ விட 25–50% சிறியவை"
+    },
+    "auditLang": {
+        "message": "பக்க மொழி (lang)"
+    },
+    "auditLangHint": {
+        "message": "திரை வாசிப்பான்கள், மொழிபெயர்ப்பாளர்கள், தேடுபொறிகளுக்குத் தேவை"
+    },
+    "auditAlt": {
+        "message": "alt இல்லாத படங்கள்"
+    },
+    "auditAltHint": {
+        "message": "பார்வையற்ற பயனர்களுக்கும் படம் ஏற்றப்படாத நிலைக்கும் படத்தின் விளக்கம்"
+    },
+    "auditLabels": {
+        "message": "லேபிள் இல்லாத புலங்கள்"
+    },
+    "auditLabelsHint": {
+        "message": "புலத்தில் என்ன உள்ளிட வேண்டும் என்பதைத் திரை வாசிப்பானால் சொல்ல முடியாது"
+    },
+    "auditNames": {
+        "message": "பெயரில்லாத பொத்தான்களும் இணைப்புகளும்"
+    },
+    "auditNamesHint": {
+        "message": "எ.கா. aria-label இல்லாத ஐகான் பொத்தான்: பார்வையற்ற பயனர் «பொத்தான்» என்று மட்டுமே கேட்பார்"
+    },
+    "auditMain": {
+        "message": "முதன்மைப் பகுதி (main)"
+    },
+    "auditMainHint": {
+        "message": "மெனுவைத் தவிர்த்து நேரடியாக உள்ளடக்கத்துக்குச் செல்ல உதவுகிறது"
+    },
+    "auditZoom": {
+        "message": "பெரிதாக்கல் முடக்கப்பட்டது"
+    },
+    "auditZoomHint": {
+        "message": "பார்வைக் குறைபாடு உள்ளவர்கள் தொலைபேசியில் பக்கத்தைப் பெரிதாக்க முடியாது"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "பக்கம் எங்கிருந்து ஸ்கிரிப்ட்களை ஏற்றலாம் என்பதைக் கட்டுப்படுத்துகிறது — XSS-இலிருந்து பாதுகாப்பு. nonce அல்லது hash இன்றி 'unsafe-inline' இருந்தால் அது பெரிதாகப் பாதுகாக்காது"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "கோப்பு வகையை உலாவி ஊகிப்பதைத் தடுக்கிறது — போலி ஸ்கிரிப்ட்களிலிருந்து பாதுகாப்பு"
+    },
+    "auditFrame": {
+        "message": "ஃபிரேமில் பதிப்பதிலிருந்து பாதுகாப்பு"
+    },
+    "auditFrameHint": {
+        "message": "பயனர்களை ஏமாற்றிக் கிளிக் செய்ய வைக்கத் தளத்தை வேறொருவரின் பக்கத்தில் பதிப்பதை X-Frame-Options அல்லது frame-ancestors தடுக்கின்றன"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "வேறு தளத்துக்குச் செல்லும்போது பக்க முகவரியில் எவ்வளவு அனுப்பப்படுகிறது. இந்தத் தலைப்பு இல்லாவிட்டால் உலாவி பாதுகாப்பான இயல்பு மதிப்பைப் பயன்படுத்தும்"
+    },
+    "auditCache": {
+        "message": "பக்கத் தற்காலிக சேமிப்பு"
+    },
+    "auditCacheHint": {
+        "message": "பக்கம் எங்கிருந்து வந்தது: HIT — சர்வர் அல்லது CDN தற்காலிக சேமிப்பிலிருந்து, MISS — புதிதாக உருவாக்கப்பட்டது. பக்கங்கள் அரிதாகவே சேமிக்கப்படுகின்றன; பொதுவாகப் படங்கள், ஸ்கிரிப்ட்கள், ஸ்டைல்கள்"
+    },
+    "auditCacheBrowser": {
+        "message": "உலாவி தற்காலிக சேமிப்பிலிருந்து"
+    },
+    "auditBots": {
+        "message": "ரோபோக்களும் AI-யும்"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "தேடுபொறிகளுக்கும் பிற ரோபோக்களுக்குமான விதிகள். இந்தக் கோப்பு இல்லாவிட்டால் ரோபோக்கள் எல்லாவற்றையும் வலம் வரும், தளவரைபடம் எங்கே என்பது தேடுபொறிகளுக்குத் தெரியாது"
+    },
+    "auditSitemap": {
+        "message": "தளவரைபடம்"
+    },
+    "auditSitemapHint": {
+        "message": "தேடுபொறிகளுக்கான பக்கங்களின் பட்டியல். robots.txt-இல் Sitemap: வரியால் குறிப்பிடப்படுகிறது"
+    },
+    "auditAi": {
+        "message": "AI பாட்களுக்கான விதிகள்"
+    },
+    "auditAiHint": {
+        "message": "நரம்பியல் வலைப்பின்னல்களுக்காகத் தளத்தின் உரைகளை AI பாட்கள் சேகரிக்கலாமா — பாட்டைப் பெயரிட்டுக் குறிப்பிடும் robots.txt விதிகளின் அடிப்படையில். நீட்டிப்புக்கு இதுபோன்ற 16 பாட்கள் தெரியும் (GPTBot, ClaudeBot, Google-Extended முதலியன); வேறு பெயருள்ள பாட்கள் கணக்கில் கொள்ளப்படாது. «அனைவருக்கும் மூடப்பட்டது» — User-agent: * மூலம் தளம் எல்லா ரோபோக்களுக்கும் மூடப்பட்டுள்ளது, AI-க்கென்று தனி விதிகள் இல்லை"
+    },
+    "auditAiBlocked": {
+        "message": "தடுக்கப்பட்டவை: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "அனுமதிக்கப்பட்டது"
+    },
+    "auditAiNone": {
+        "message": "அமைக்கப்படவில்லை"
+    },
+    "auditAiAll": {
+        "message": "அனைவருக்கும் மூடப்பட்டது"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "புதிய வடிவம்: AI உதவியாளர்களுக்கும் முகவர்களுக்கும் Markdown-இல் தளத்தின் சுருக்கமான விளக்கம். தற்போது விருப்பத்தேர்வு"
+    },
+    "auditCspWeak": {
+        "message": "பலவீனம்"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "பக்கமும் பதிக்கப்பட்ட ஃபிரேம்களும் கேமரா, இருப்பிடம் மற்றும் பிற உலாவி அம்சங்களை அணுகுவதைத் தடுக்கிறது"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "தளம் திறக்கும் பிற சாளரங்களிலிருந்து தளத்தின் சாளரத்தைப் பிரிக்கிறது — window.opener வழியான தாக்குதல்களிலிருந்து பாதுகாப்பு"
+    },
+    "auditVersions": {
+        "message": "தலைப்புகளில் மென்பொருள் பதிப்புகள்"
+    },
+    "auditVersionsHint": {
+        "message": "சர்வர் மென்பொருள் பதிப்புகளை வெளிப்படுத்துகிறது — எந்த அறியப்பட்ட பாதிப்புகளை முயலலாம் என்று தாக்குபவர்களுக்குக் குறிப்பு. மறைக்க: nginx, Angie-இல் server_tokens off, PHP-இல் expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "மறைக்கப்பட்டது"
+    },
+    "auditSession": {
+        "message": "ஸ்கிரிப்ட்கள் படிக்கக்கூடிய அமர்வு குக்கீகள்"
+    },
+    "auditSessionHint": {
+        "message": "உள்நுழைவு குக்கீகளை JavaScript-இலிருந்து படிக்க முடியும் எனத் தெரிகிறது: XSS இருந்தால் அவை திருடப்படலாம். HttpOnly கொடி இதைத் தடுக்கும். குக்கீயின் பெயரைக் கொண்டு கண்டறியப்பட்டது"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "/.well-known/security.txt-இல் பாதிப்புகளைப் புகாரளிப்பதற்கான தொடர்புகள். ஆய்வாளர் சிக்கலை விற்காமல் உங்களிடம் தெரிவிக்க உதவுகிறது"
+    },
+    "serverUnknownTitle": {
+        "message": "இந்த வழங்குநரின் நெட்வொர்க்குகள் ABlock தரவுத்தளத்தில் இல்லை: அதில் பெரிய ஹோஸ்டிங், கிளவுட், CDN உள்ளன"
+    },
+    "protocolH3Later": {
+        "message": "சர்வர் HTTP/3-ஐ ஆதரிக்கிறது. இந்தப் பக்கம் $PROTOCOL$ வழியாக வந்தது — முதல் வருகையில் இது நடக்கும்: சர்வரின் பதிலிலிருந்து உலாவி HTTP/3 பற்றி அறிந்து, அடுத்த கோரிக்கைகளுக்கு அதற்கு மாறும்",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "உலாவியின் மொழி"
+    },
+    "langTitle": {
+        "message": "இடைமுக மொழி"
+    },
+    "noteTitle": {
+        "message": "இந்தத் தளத்துக்கான குறிப்பு"
+    },
+    "notePlaceholder": {
+        "message": "இந்தத் தளத்துக்கான குறிப்பு, உங்களுக்கு மட்டும் தெரியும்"
+    },
+    "incognitoLabel": {
+        "message": "மறைநிலையிலும் இயங்கட்டும்"
+    },
+    "incognitoTitle": {
+        "message": "உலாவியின் நீட்டிப்பு அமைப்புகள் திறக்கும் — அங்கே ABlock-க்கு மறைநிலைக்கான அனுமதியை இயக்கவும்"
+    }
+}

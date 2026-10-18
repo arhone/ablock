@@ -1,0 +1,354 @@
+[
+    {
+        "id": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "requestDomains": [
+                "zergnet.com",
+                "yabs.yandex.ru",
+                "mradx.net",
+                "utarget.ru",
+                "utarget.pro"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||google.com/pagead/"
+        }
+    },
+    {
+        "id": 3,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||google.ru/adsid/"
+        }
+    },
+    {
+        "id": 4,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||yastatic.net/pcode/"
+        }
+    },
+    {
+        "id": 5,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||yastatic.net/s3/zen-lib/widget-loader"
+        }
+    },
+    {
+        "id": 6,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "://bs.direct"
+        }
+    },
+    {
+        "id": 7,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/amp4ads-"
+        }
+    },
+    {
+        "id": 8,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/event/ad?category="
+        }
+    },
+    {
+        "id": 9,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "adblock.popunder.js"
+        }
+    },
+    {
+        "id": 10,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/getads/"
+        }
+    },
+    {
+        "id": 11,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/vpaid"
+        }
+    },
+    {
+        "id": 12,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/vast/"
+        }
+    },
+    {
+        "id": 13,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/vast?"
+        }
+    },
+    {
+        "id": 14,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "cp.host=animego"
+        }
+    },
+    {
+        "id": 15,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "smart-banner-adaptive_v1_client.js",
+            "initiatorDomains": [
+                "yandex.ru"
+            ]
+        }
+    },
+    {
+        "id": 16,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||rambler-co.ru/sdk",
+            "initiatorDomains": [
+                "rambler.ru"
+            ]
+        }
+    },
+    {
+        "id": 17,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/get_midroll_info",
+            "initiatorDomains": [
+                "youtube.com",
+                "youtube-nocookie.com"
+            ]
+        }
+    },
+    {
+        "id": 18,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "tampering.js",
+            "initiatorDomains": [
+                "youtube.com",
+                "youtube-nocookie.com"
+            ]
+        }
+    },
+    {
+        "id": 19,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||yandex.ru^",
+            "initiatorDomains": [
+                "vk.com",
+                "vk.ru"
+            ]
+        }
+    },
+    {
+        "id": 20,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "dk?cmd=RecommendedGroupsLoaderBlock",
+            "initiatorDomains": [
+                "ok.ru"
+            ]
+        }
+    },
+    {
+        "id": 21,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||yandex.ru^",
+            "initiatorDomains": [
+                "ok.ru"
+            ]
+        }
+    },
+    {
+        "id": 22,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||mail.ru^",
+            "initiatorDomains": [
+                "ok.ru"
+            ]
+        }
+    },
+    {
+        "id": 23,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||imgsmail.ru^",
+            "initiatorDomains": [
+                "ok.ru"
+            ]
+        }
+    },
+    {
+        "id": 24,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "product/getSmallProductsList",
+            "initiatorDomains": [
+                "ok.ru"
+            ]
+        }
+    },
+    {
+        "id": 25,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "portlets_mall-products-vertical",
+            "initiatorDomains": [
+                "ok.ru"
+            ]
+        }
+    },
+    {
+        "id": 26,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||novosti.rs/files/img/meridian",
+            "resourceTypes": [
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 27,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "requestDomains": [
+                "defractal.com",
+                "wrappio.dev",
+                "pubjelly.nxjmp.com",
+                "reklamup.com",
+                "alma-amr.net",
+                "adwebcode.gr",
+                "strike.fox",
+                "wootwhenonly.com",
+                "evenyippee.com",
+                "bagave.com",
+                "pub.web.sapo.io",
+                "loftilywhup.com"
+            ]
+        }
+    },
+    {
+        "id": 28,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||d82w3kwqtb025.cloudfront.net/sdk.js"
+        }
+    },
+    {
+        "id": 29,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||alteregomedia.org/files/js/gtags.js"
+        }
+    },
+    {
+        "id": 30,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/bundles/smeadvertmanager",
+            "initiatorDomains": [
+                "sme.sk"
+            ]
+        }
+    },
+    {
+        "id": 31,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||flavii.ru/api/v1/banners"
+        }
+    },
+    {
+        "id": 32,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "|https://mail.ru/apic/",
+            "initiatorDomains": [
+                "mail.ru"
+            ]
+        }
+    }
+]

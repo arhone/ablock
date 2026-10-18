@@ -1,0 +1,12 @@
+/*
+ * Собственные правила ABlock: окна про cookie, которых нет в сторонних списках (cookies.css
+ * и набор annoyances-cookies в rules/cosmetic). Правится вручную, tools/update-rules.js этот файл не трогает.
+ * Действует на всех сайтах, поэтому селекторы — только такие, что не встретятся у обычных блоков страницы.
+ */
+
+/* iz.ru */
+#cookies-panel,
+/* pikabu.ru: классы генерируются при сборке, узнаём по ссылке на правила cookie */
+[class*="PopoverBase__popover"]:has(a[href="/go/cookie"]) {
+    display: none !important;
+}

@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "et",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Reklaamiblokeerija ja saidikontroll"
+    },
+    "extDescription": {
+        "message": "Blokeerib reklaamid ja jälgijad: kiiremad lehed, vähem andmesidet. Kontrollib iga saidi kiirust, turvalisust ja jälgimist."
+    },
+    "toggle": {
+        "message": "Sisse / välja"
+    },
+    "statusOn": {
+        "message": "Kaitse on sees"
+    },
+    "statusOff": {
+        "message": "Kaitse on väljas"
+    },
+    "statusSiteOff": {
+        "message": "Kaitse on sellel saidil väljas"
+    },
+    "telegram": {
+        "message": "Telegrami grupp"
+    },
+    "github": {
+        "message": "Panusta GitHubis"
+    },
+    "httpsOn": {
+        "message": "Ühendus on krüpteeritud"
+    },
+    "httpsOff": {
+        "message": "Ühendus ei ole krüpteeritud"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — kiireim protokoll"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — kaasaegne protokoll"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — aegunud protokoll",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protokoll teadmata (leht laaditi vahemälust)"
+    },
+    "loading": {
+        "message": "Laadimine…"
+    },
+    "loadingTitle": {
+        "message": "Leht alles laadib"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Lehe laadimisaeg"
+    },
+    "domains": {
+        "message": "Domeenid $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Kolmandate osapoolte domeenid:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…ja veel $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Kolmandate osapoolte domeene pole"
+    },
+    "blocked": {
+        "message": "Blokeeritud $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Jälgijad $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Sellel lehel blokeeritud\nReklaamid: $ADS$\nJälgijad: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "See sait jälgib teid. Blokeeritud jälgijaid: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Jälgijaid ei leitud"
+    },
+    "scoreLabel": {
+        "message": "Saidi hinne"
+    },
+    "serverLabel": {
+        "message": "Server"
+    },
+    "techLabel": {
+        "message": "Tehnoloogia"
+    },
+    "companiesLabel": {
+        "message": "Jälgivad"
+    },
+    "extraLabel": {
+        "message": "Veel"
+    },
+    "extendedText": {
+        "message": "Laiendatud režiim: majutus, IPv6, HSTS, statistika ja reklaamikohtade ja küpsiseakende peitmine kõigil saitidel. Andmed ei lahku kunagi teie brauserist."
+    },
+    "extendedButton": {
+        "message": "Lülita sisse"
+    },
+    "extendedOff": {
+        "message": "Lülita laiendatud režiim välja"
+    },
+    "extendedOffTitle": {
+        "message": "Laiendus lõpetab serverite IP-de ja päiste nägemise, statistika pidamise ning reklaamikohtade ja küpsiseakende peitmise kõigil saitidel; juurdepääs kõigile saitidele tühistatakse. Saate selle igal ajal uuesti sisse lülitada"
+    },
+    "share": {
+        "message": "Jaga"
+    },
+    "copied": {
+        "message": "Kopeeritud"
+    },
+    "cookiesLabel": {
+        "message": "Peida küpsiste nõusoleku aknad"
+    },
+    "cookiesTitle": {
+        "message": "Blokeerib küpsiste nõusoleku bännerite teenused. Laiendatud režiimis peidab ka bännerid ise igal saidil"
+    },
+    "siteLabel": {
+        "message": "Blokeeri saidil $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Tühjendage märkeruut, kui sait ei tööta korralikult: reklaame ja jälgijaid seal enam ei blokeerita. Leht laaditakse uuesti"
+    },
+    "guess": {
+        "message": "Tuvastatud kaudsete tunnuste järgi — võib olla ebatäpne"
+    },
+    "weightTitle": {
+        "message": "Lehe suurus koos kõigi failidega"
+    },
+    "weightEstimated": {
+        "message": "Täpne suurus on teada $KNOWN$ failil $TOTAL$-st, ülejäänud on hinnatud: kolmandate osapoolte saidid peidavad suuruse",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Leht on tihendatud: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Tihendamata"
+    },
+    "compressionOff": {
+        "message": "Leht saadetakse tihendamata — see laadib aeglasemalt"
+    },
+    "compressionUnknown": {
+        "message": "Tihendus teadmata (leht laaditi vahemälust)"
+    },
+    "blockedCookies": {
+        "message": "Küpsiseaknad: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Suurus: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Blokeerimata:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Saidilt leitud:\n$LIST$\nKas need on blokeeritud, näitab laiendatud režiim",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Blokeeritud:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "tuntuid ei leitud"
+    },
+    "serverExtended": {
+        "message": "laiendatud režiimis"
+    },
+    "serverReload": {
+        "message": "laadige leht uuesti"
+    },
+    "serverReloadTitle": {
+        "message": "Server tuvastatakse lehe laadimise ajal"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "muu teenusepakkuja"
+    },
+    "serverProxy": {
+        "message": "Sait töötab teenuse $NAME$ taga (CDN või DDoS-kaitse) — tegelik server on peidetud",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Majutus: $NAME$ (RIPE aadresside andmebaasist)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Riik on määratud teenusepakkuja järgi"
+    },
+    "techFound": {
+        "message": "Leitud lehelt"
+    },
+    "techNone": {
+        "message": "ei tuvastatud"
+    },
+    "techNoneTitle": {
+        "message": "Tuntud mootorite või teekide tunnuseid ei leitud"
+    },
+    "ipv6": {
+        "message": "Ühendatud IPv6 kaudu"
+    },
+    "ipv4": {
+        "message": "Ühendatud IPv4 kaudu. See ei näita, kas sait toetab IPv6-t: see oleneb ka teie võrgust"
+    },
+    "hstsOn": {
+        "message": "HSTS: brauser avab saidi alati ainult HTTPS-i kaudu"
+    },
+    "hstsOff": {
+        "message": "HSTS puudub: esimene külastus saidile võib toimuda krüpteerimata"
+    },
+    "mixed": {
+        "message": "HTTP-failid $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS-leht laadib faile krüpteerimata: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Hinne $SCORE$/10 järgmiste näitajate põhjal:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Krüpteerimine"
+    },
+    "scoreProtocol": {
+        "message": "Protokoll"
+    },
+    "scoreSpeed": {
+        "message": "Laadimiskiirus"
+    },
+    "scoreWeight": {
+        "message": "Lehe suurus"
+    },
+    "scoreTrackers": {
+        "message": "Jälgimine"
+    },
+    "scoreDomains": {
+        "message": "Kolmandate osapoolte domeenid"
+    },
+    "scoreCompression": {
+        "message": "Tihendamine"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Segasisu"
+    },
+    "stats": {
+        "message": "Blokeeritud päringuid kokku: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Alates $DATE$. Suurus on hinnatud reklaamifailide keskmise suuruse järgi",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Saidi aruanne — pildi või tekstina"
+    },
+    "reportTitle": {
+        "message": "Saidi hinne ja üksikasjad pildi või tekstina — kolleegidele, töövõtjale või vestlusse"
+    },
+    "reportDone": {
+        "message": "Salvestatud"
+    },
+    "copyIp": {
+        "message": "Kopeeri IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Kopeeri pilt"
+    },
+    "copyText": {
+        "message": "Kopeeri tekst ja link"
+    },
+    "shareSystem": {
+        "message": "Veel…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — hinne $SCORE$/10 ABlockis",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Kontrollige oma saiti:"
+    },
+    "donate": {
+        "message": "Toeta"
+    },
+    "donateTitle": {
+        "message": "Toeta arendust Boostys"
+    },
+    "askStats": {
+        "message": "Blokeeritud päringuid: $COUNT$, säästetud ≈ $SIZE$. Kui ABlock on sulle kasulik, toeta arendust",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Oled ABlocki kasutanud juba kuu aega. Kui see on kasulik, toeta arendust"
+    },
+    "askClose": {
+        "message": "Ära enam näita"
+    },
+    "reportLegendGuess": {
+        "message": "? — tuvastatud kaudsete tunnuste järgi"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — ligikaudne hinnang"
+    },
+    "companiesNoneTitle": {
+        "message": "Sellel lehel pole ABlocki kataloogi ettevõtteid. Saidi enda loendurid võivad siiski olemas olla — neid loeb märk „Jälgijad”"
+    },
+    "compressionFiles": {
+        "message": "Tekstifailid: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Tihendamata: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Kustuta saidi andmed ja laadi uuesti: küpsised, vahemälu ja salvestusruum. Märgid ja hinne näitavad saiti nii, nagu uus külastaja seda näeb. Teid logitakse sellelt saidilt välja"
+    },
+    "clearConfirm": {
+        "message": "Kas kustutada?"
+    },
+    "saveImage": {
+        "message": "Salvesta pilt"
+    },
+    "shareSend": {
+        "message": "Saada: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Postita: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Saadetakse tekstina: pilti ei saa edastada ilma serverisse üles laadimata — kopeerige see ja kleepige sõnumisse"
+    },
+    "shareLinkOnly": {
+        "message": "Edastatakse ainult laienduse link — kopeerige aruande pilt ja kleepige see postitusse"
+    },
+    "auditLabel": {
+        "message": "Üksikasjad"
+    },
+    "auditIssues": {
+        "message": "probleeme: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "probleeme pole"
+    },
+    "auditSpeed": {
+        "message": "Kiirus"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Märgistus"
+    },
+    "auditA11y": {
+        "message": "Ligipääsetavus"
+    },
+    "auditSecurity": {
+        "message": "Turvalisus"
+    },
+    "auditYes": {
+        "message": "jah"
+    },
+    "auditNo": {
+        "message": "ei"
+    },
+    "auditLength": {
+        "message": "$COUNT$ märki",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "muu domeen"
+    },
+    "auditNoImage": {
+        "message": "pildita"
+    },
+    "auditNoInput": {
+        "message": "interaktsioone polnud"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$/$TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Paigutuse nihked"
+    },
+    "auditTtfb": {
+        "message": "Serveri vastus (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Kui kaua kulus lehe esimese baidi saamiseks serverist. Hea — alla 0,8 s"
+    },
+    "auditFcp": {
+        "message": "Esimene joonistus (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Millal ilmus ekraanile esimene sisu. Hea — alla 1,8 s"
+    },
+    "auditLcp": {
+        "message": "Põhiplokk (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Millal joonistati suurim plokk — pilt või tekst. Google'i peamine kiirusnäitaja. Hea — alla 2,5 s"
+    },
+    "auditCls": {
+        "message": "Paigutuse nihked (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Kui palju sisu laadimise ajal hüppab. Hea — alla 0,1"
+    },
+    "auditInp": {
+        "message": "Reageerimine tegevustele (INP)"
+    },
+    "auditInpHint": {
+        "message": "Pikim viivitus klõpsule või sisestusele reageerimisel. Hea — alla 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Blokeerivad renderdamist"
+    },
+    "auditBlockingHint": {
+        "message": "Failid, mida brauser ootab enne lehe joonistamise alustamist. Stiilid on korras, kuid skriptid on parem laadida async või defer abil"
+    },
+    "auditStatus": {
+        "message": "Olekukood"
+    },
+    "auditStatusHint": {
+        "message": "Lehe HTTP olek: 200 — korras, 4xx ja 5xx — viga"
+    },
+    "auditNoindex": {
+        "message": "Indekseerimine keelatud"
+    },
+    "auditNoindexHint": {
+        "message": "Leht on otsingumootorite eest peidetud noindex-sildi või robots.txt reegliga. Sisselogimislehtedel ja kasutajakontodel on see tavaline"
+    },
+    "auditTitle": {
+        "message": "Pealkiri (title)"
+    },
+    "auditTitleHint": {
+        "message": "Lingi tekst otsingutulemustes ja vahekaardi nimi. Parim — 10–70 märki"
+    },
+    "auditDescription": {
+        "message": "Kirjeldus (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Tekst lingi all otsingutulemustes. Parim — 50–170 märki"
+    },
+    "auditH1": {
+        "message": "h1-pealkirjad"
+    },
+    "auditH1Hint": {
+        "message": "Lehe peapealkiri. Tavaliselt on neid üks"
+    },
+    "auditCanonical": {
+        "message": "Kanooniline URL"
+    },
+    "auditCanonicalHint": {
+        "message": "Annab otsingumootoritele teada lehe põhiaadressi, kui lehel on koopiaid"
+    },
+    "auditOg": {
+        "message": "Lingi eelvaade (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Pealkiri ja pilt, mida Telegram, Slack ja teised teenused lingi jagamisel näitavad"
+    },
+    "auditViewport": {
+        "message": "Mobiiliversioon (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Ilma meta viewport'ita näitavad telefonid lehte vähendatud arvutiversioonina"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Ilma selleta lülitub brauser vanade saitide ühilduvusrežiimi ja paigutus võib erineda"
+    },
+    "auditNoSize": {
+        "message": "Mõõtmeteta pildid"
+    },
+    "auditNoSizeHint": {
+        "message": "Ilma width- ja height-atribuudita ei tea brauser, kui palju ruumi pildile jätta, ja paigutus hüppab pildi laadimisel"
+    },
+    "auditLarge": {
+        "message": "Liiga suured pildid"
+    },
+    "auditLargeHint": {
+        "message": "Pilt saadetakse märgatavalt suuremana, kui seda kuvatakse — liigne kaal"
+    },
+    "auditModern": {
+        "message": "WebP- ja AVIF-pildid"
+    },
+    "auditModernHint": {
+        "message": "Need vormingud on 25–50% väiksemad kui JPEG ja PNG"
+    },
+    "auditLang": {
+        "message": "Lehe keel (lang)"
+    },
+    "auditLangHint": {
+        "message": "Vajalik ekraanilugejatele, tõlkijatele ja otsingumootoritele"
+    },
+    "auditAlt": {
+        "message": "Pildid ilma alt-tekstita"
+    },
+    "auditAltHint": {
+        "message": "Pildi kirjeldus pimedatele kasutajatele ja juhuks, kui pilt ei laadi"
+    },
+    "auditLabels": {
+        "message": "Sildita väljad"
+    },
+    "auditLabelsHint": {
+        "message": "Ekraanilugeja ei oska öelda, mida väljale sisestada"
+    },
+    "auditNames": {
+        "message": "Nimetud nupud ja lingid"
+    },
+    "auditNamesHint": {
+        "message": "Näiteks ikooninupp ilma aria-label'ita: pime kasutaja kuuleb lihtsalt „nupp”"
+    },
+    "auditMain": {
+        "message": "Põhiala (main)"
+    },
+    "auditMainHint": {
+        "message": "Võimaldab menüüst mööda minnes otse sisu juurde liikuda"
+    },
+    "auditZoom": {
+        "message": "Suumimine keelatud"
+    },
+    "auditZoomHint": {
+        "message": "Takistab nõrgenenud nägemisega inimestel lehte telefonis suurendamast"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Piirab, kust leht võib skripte laadida — kaitse XSS-i vastu. Kui selles on 'unsafe-inline' ilma nonce'i või räsita, kaitseb see vaevu"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Keelab brauseril failitüüpe ära arvata — kaitse skriptide võltsimise vastu"
+    },
+    "auditFrame": {
+        "message": "Raamimiskaitse"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options või frame-ancestors takistavad saidi manustamist võõrale lehele, et kasutajaid pettusega klõpsama panna"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Kui suur osa lehe aadressist edastatakse liikumisel teistele saitidele. Ilma päiseta kasutab brauser turvalist vaikeväärtust"
+    },
+    "auditCache": {
+        "message": "Lehe vahemälu"
+    },
+    "auditCacheHint": {
+        "message": "Kust leht tuli: HIT — serveri või CDN-i vahemälust, MISS — koostatud uuesti. Lehti endid salvestatakse vahemällu harva; tavaliselt pilte, skripte ja stiile"
+    },
+    "auditCacheBrowser": {
+        "message": "brauseri vahemälust"
+    },
+    "auditBots": {
+        "message": "Robotid ja tehisintellekt"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Reeglid otsingumootoritele ja teistele robotitele. Ilma failita roomavad robotid kõike läbi ja otsingumootorid ei saa teada, kus on saidikaart"
+    },
+    "auditSitemap": {
+        "message": "Saidikaart"
+    },
+    "auditSitemapHint": {
+        "message": "Lehtede loend otsingumootoritele. Märgitakse robots.txt-s reaga Sitemap:"
+    },
+    "auditAi": {
+        "message": "Reeglid TI-robotitele"
+    },
+    "auditAiHint": {
+        "message": "Kas TI-robotid tohivad saidi tekste närvivõrkude jaoks koguda — robots.txt reeglite järgi, mis nimetavad robotit nimepidi. Laiendus tunneb 16 sellist robotit (GPTBot, ClaudeBot, Google-Extended jt); teiste nimedega roboteid ei arvestata. „Kõigile suletud” — sait on kõigile robotitele suletud User-agent: * kaudu, eraldi TI-reegliteta"
+    },
+    "auditAiBlocked": {
+        "message": "keelatud: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "lubatud"
+    },
+    "auditAiNone": {
+        "message": "määramata"
+    },
+    "auditAiAll": {
+        "message": "kõigile suletud"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Uus vorming: lühike Markdown-kirjeldus saidist TI-assistentidele ja agentidele. Praegu valikuline"
+    },
+    "auditCspWeak": {
+        "message": "nõrk"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Keelab lehel ja manustatud raamidel juurdepääsu kaamerale, asukohale ja muudele brauseri funktsioonidele"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Isoleerib saidi akna teistest akendest, mida see avab — kaitse window.opener rünnakute vastu"
+    },
+    "auditVersions": {
+        "message": "Tarkvaraversioonid päistes"
+    },
+    "auditVersionsHint": {
+        "message": "Server avaldab tarkvaraversioone — vihje ründajatele, milliseid teadaolevaid haavatavusi proovida. Peitmiseks: server_tokens off nginxis ja Angie's, expose_php = Off PHP-s"
+    },
+    "auditHidden": {
+        "message": "peidetud"
+    },
+    "auditSession": {
+        "message": "Seansiküpsised skriptidele loetavad"
+    },
+    "auditSessionHint": {
+        "message": "Sisselogimisküpsised näivad olevat JavaScriptist loetavad: XSS-i korral saab need varastada. Seda takistab lipp HttpOnly. Tuvastatud küpsise nime järgi"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Kontaktid haavatavustest teatamiseks failis /.well-known/security.txt. Aitab uurijal probleemist teile teatada, selle müümise asemel"
+    },
+    "serverUnknownTitle": {
+        "message": "Selle teenusepakkuja võrke pole ABlocki andmebaasis: see hõlmab suuri majutusi, pilvi ja CDN-e"
+    },
+    "protocolH3Later": {
+        "message": "Server toetab HTTP/3-t. See leht saabus $PROTOCOL$ kaudu — nii juhtub esimesel külastusel: brauser saab HTTP/3-st teada serveri vastusest ja lülitub sellele järgmiste päringute jaoks",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Brauseri keel"
+    },
+    "langTitle": {
+        "message": "Liidese keel"
+    },
+    "noteTitle": {
+        "message": "Märkus saidi kohta"
+    },
+    "notePlaceholder": {
+        "message": "Märkus saidi kohta, näete ainult teie"
+    },
+    "incognitoLabel": {
+        "message": "Tööta inkognito režiimis"
+    },
+    "incognitoTitle": {
+        "message": "Avanevad brauseri laienduste seaded – lülitage seal ABlocki jaoks sisse luba inkognito režiimis"
+    }
+}

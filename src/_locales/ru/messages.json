@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "ru",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Блокировщик рекламы и проверка сайтов"
+    },
+    "extDescription": {
+        "message": "Блокирует рекламу и трекеры: сайты быстрее, трафика меньше. Проверка скорости, безопасности и слежки на любом сайте."
+    },
+    "toggle": {
+        "message": "Включить / выключить"
+    },
+    "statusOn": {
+        "message": "Защита включена"
+    },
+    "statusOff": {
+        "message": "Защита выключена"
+    },
+    "statusSiteOff": {
+        "message": "Защита выключена на этом сайте"
+    },
+    "telegram": {
+        "message": "Группа в Telegram"
+    },
+    "github": {
+        "message": "Совместная разработка"
+    },
+    "httpsOn": {
+        "message": "Соединение зашифровано"
+    },
+    "httpsOff": {
+        "message": "Соединение не зашифровано"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — самый быстрый протокол"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — современный протокол"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — устаревший протокол",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Протокол неизвестен (страница из кэша)"
+    },
+    "loading": {
+        "message": "Загрузка…"
+    },
+    "loadingTitle": {
+        "message": "Страница ещё загружается"
+    },
+    "seconds": {
+        "message": "$SECONDS$ с",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Время загрузки страницы"
+    },
+    "domains": {
+        "message": "Домены $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Сторонние домены:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…ещё $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Сторонних доменов нет"
+    },
+    "blocked": {
+        "message": "Блок $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Трекеры $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Заблокировано на странице\nРеклама: $ADS$\nТрекеры: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Сайт следит за вами, заблокировано трекеров: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Трекеров не найдено"
+    },
+    "scoreLabel": {
+        "message": "Оценка сайта"
+    },
+    "serverLabel": {
+        "message": "Сервер"
+    },
+    "techLabel": {
+        "message": "Сделан на"
+    },
+    "companiesLabel": {
+        "message": "Следят"
+    },
+    "extraLabel": {
+        "message": "Ещё"
+    },
+    "extendedText": {
+        "message": "Расширенный режим: хостинг, IPv6, HSTS, статистика, скрытие рекламных блоков и окон про cookie на всех сайтах. Данные не покидают браузер."
+    },
+    "extendedButton": {
+        "message": "Включить"
+    },
+    "extendedOff": {
+        "message": "Выключить расширенный режим"
+    },
+    "extendedOffTitle": {
+        "message": "Расширение перестанет видеть IP и заголовки серверов, вести статистику, скрывать рекламные блоки и окна про cookie на всех сайтах; доступ ко всем сайтам будет снят. Включить снова можно в любой момент"
+    },
+    "share": {
+        "message": "Поделиться"
+    },
+    "copied": {
+        "message": "Скопировано"
+    },
+    "cookiesLabel": {
+        "message": "Скрывать окна согласия на cookie"
+    },
+    "cookiesTitle": {
+        "message": "Блокирует сервисы баннеров согласия на cookie. В расширенном режиме ещё и прячет сами баннеры на любом сайте"
+    },
+    "siteLabel": {
+        "message": "Блокировать на $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Снимите галочку, если сайт работает неправильно: реклама и трекеры на нём перестанут блокироваться. Страница перезагрузится"
+    },
+    "guess": {
+        "message": "Определено по косвенным признакам — может быть неточно"
+    },
+    "weightTitle": {
+        "message": "Вес страницы со всеми файлами"
+    },
+    "weightEstimated": {
+        "message": "Размер точно известен у $KNOWN$ из $TOTAL$ файлов, остальные оценены: сторонние сайты скрывают размер",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Страница сжата: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Без сжатия"
+    },
+    "compressionOff": {
+        "message": "Страница передаётся без сжатия — грузится дольше"
+    },
+    "compressionUnknown": {
+        "message": "Сжатие неизвестно (страница из кэша)"
+    },
+    "blockedCookies": {
+        "message": "Окна про cookie: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Объём: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Не заблокировано:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Подключено на сайте:\n$LIST$\nЗаблокировано ли — видно в расширенном режиме",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Заблокировано:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "известных не найдено"
+    },
+    "serverExtended": {
+        "message": "в расширенном режиме"
+    },
+    "serverReload": {
+        "message": "обновите страницу"
+    },
+    "serverReloadTitle": {
+        "message": "Сервер определяется при загрузке страницы"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "другой провайдер"
+    },
+    "serverProxy": {
+        "message": "Сайт работает через $NAME$ (CDN или защита от DDoS) — настоящий сервер скрыт",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Хостинг: $NAME$ (по базе адресов RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Страна определена по провайдеру"
+    },
+    "techFound": {
+        "message": "Найдено на странице"
+    },
+    "techNone": {
+        "message": "не определено"
+    },
+    "techNoneTitle": {
+        "message": "Признаков известных движков и библиотек не найдено"
+    },
+    "ipv6": {
+        "message": "Соединение по IPv6"
+    },
+    "ipv4": {
+        "message": "Соединение по IPv4. Поддерживает ли сайт IPv6, так не узнать: это зависит и от вашей сети"
+    },
+    "hstsOn": {
+        "message": "HSTS: браузер всегда открывает сайт только по HTTPS"
+    },
+    "hstsOff": {
+        "message": "Нет HSTS: первый заход на сайт может пройти без шифрования"
+    },
+    "mixed": {
+        "message": "HTTP-файлы $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "Страница по HTTPS подгружает файлы без шифрования: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Оценка $SCORE$ из 10 по показателям:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Шифрование"
+    },
+    "scoreProtocol": {
+        "message": "Протокол"
+    },
+    "scoreSpeed": {
+        "message": "Скорость загрузки"
+    },
+    "scoreWeight": {
+        "message": "Вес страницы"
+    },
+    "scoreTrackers": {
+        "message": "Слежка"
+    },
+    "scoreDomains": {
+        "message": "Сторонние домены"
+    },
+    "scoreCompression": {
+        "message": "Сжатие"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Смешанный контент"
+    },
+    "stats": {
+        "message": "Всего заблокировано запросов: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "С $DATE$. Объём — оценка по среднему размеру рекламных файлов",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Отчёт о сайте — картинкой или текстом"
+    },
+    "reportTitle": {
+        "message": "Оценка и подробности о сайте картинкой или текстом — для коллег, подрядчика или чата"
+    },
+    "reportDone": {
+        "message": "Сохранено"
+    },
+    "copyIp": {
+        "message": "Копировать IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Копировать картинку"
+    },
+    "copyText": {
+        "message": "Копировать текст и ссылку"
+    },
+    "shareSystem": {
+        "message": "Ещё…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — оценка $SCORE$ из 10 в ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Проверить свой сайт:"
+    },
+    "donate": {
+        "message": "Поддержать"
+    },
+    "donateTitle": {
+        "message": "Поддержать разработку на Boosty"
+    },
+    "askStats": {
+        "message": "Заблокировано запросов: $COUNT$, сэкономлено ≈ $SIZE$. Если ABlock полезен — поддержите разработку",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Вы пользуетесь ABlock уже месяц. Если он полезен — поддержите разработку"
+    },
+    "askClose": {
+        "message": "Больше не показывать"
+    },
+    "reportLegendGuess": {
+        "message": "? — определено по косвенным признакам"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — примерная оценка"
+    },
+    "companiesNoneTitle": {
+        "message": "Компаний из справочника ABlock на странице нет. Собственные счётчики сайта всё равно могут быть — их считает значок «Трекеры»"
+    },
+    "compressionFiles": {
+        "message": "Текстовые файлы: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Без сжатия: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Удалить данные сайта и перезагрузить: cookie, кэш и хранилища. Значки и оценка покажут сайт как для нового посетителя. Вы выйдете из аккаунта на этом сайте"
+    },
+    "clearConfirm": {
+        "message": "Удалить?"
+    },
+    "saveImage": {
+        "message": "Сохранить картинку"
+    },
+    "shareSend": {
+        "message": "Отправить в $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Опубликовать в $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Отправляется текстом: картинку без загрузки на сервер не передать — скопируйте её и вставьте в сообщение"
+    },
+    "shareLinkOnly": {
+        "message": "Передаётся только ссылка на расширение — картинку отчёта скопируйте и вставьте в пост"
+    },
+    "auditLabel": {
+        "message": "Подробнее"
+    },
+    "auditIssues": {
+        "message": "замечаний: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "замечаний нет"
+    },
+    "auditSpeed": {
+        "message": "Скорость"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Вёрстка"
+    },
+    "auditA11y": {
+        "message": "Доступность"
+    },
+    "auditSecurity": {
+        "message": "Безопасность"
+    },
+    "auditYes": {
+        "message": "есть"
+    },
+    "auditNo": {
+        "message": "нет"
+    },
+    "auditLength": {
+        "message": "$COUNT$ симв.",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "другой домен"
+    },
+    "auditNoImage": {
+        "message": "без картинки"
+    },
+    "auditNoInput": {
+        "message": "не было действий"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ из $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Сдвиги вёрстки"
+    },
+    "auditTtfb": {
+        "message": "Ответ сервера (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Сколько ждали первого байта страницы от сервера. Хорошо — до 0,8 с"
+    },
+    "auditFcp": {
+        "message": "Первая отрисовка (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Когда на экране появилось первое содержимое. Хорошо — до 1,8 с"
+    },
+    "auditLcp": {
+        "message": "Главный блок (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Когда отрисовался самый крупный блок — картинка или текст. Главная метрика скорости у Google. Хорошо — до 2,5 с"
+    },
+    "auditCls": {
+        "message": "Сдвиги вёрстки (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Насколько прыгает содержимое при загрузке. Хорошо — до 0,1"
+    },
+    "auditInp": {
+        "message": "Отклик на действия (INP)"
+    },
+    "auditInpHint": {
+        "message": "Самая долгая задержка реакции на клик или ввод. Хорошо — до 200 мс"
+    },
+    "auditBlocking": {
+        "message": "Блокируют отрисовку"
+    },
+    "auditBlockingHint": {
+        "message": "Файлы, без которых браузер не начинает рисовать страницу. Стили — это нормально, а скрипты лучше подключать с async или defer"
+    },
+    "auditStatus": {
+        "message": "Код ответа"
+    },
+    "auditStatusHint": {
+        "message": "HTTP-код страницы: 200 — всё в порядке, 4xx и 5xx — ошибка"
+    },
+    "auditNoindex": {
+        "message": "Запрет индексации"
+    },
+    "auditNoindexHint": {
+        "message": "Страница закрыта от поисковиков меткой noindex или правилом в robots.txt. Для страниц входа и личных кабинетов это нормально"
+    },
+    "auditTitle": {
+        "message": "Заголовок (title)"
+    },
+    "auditTitleHint": {
+        "message": "Текст ссылки в поисковой выдаче и название вкладки. Оптимально — 10–70 знаков"
+    },
+    "auditDescription": {
+        "message": "Описание (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Текст под ссылкой в поисковой выдаче. Оптимально — 50–170 знаков"
+    },
+    "auditH1": {
+        "message": "Заголовки h1"
+    },
+    "auditH1Hint": {
+        "message": "Главный заголовок страницы. Обычно он один"
+    },
+    "auditCanonical": {
+        "message": "Канонический адрес"
+    },
+    "auditCanonicalHint": {
+        "message": "Подсказывает поисковикам основной адрес страницы, если у неё есть копии"
+    },
+    "auditOg": {
+        "message": "Превью ссылки (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Заголовок и картинка, которые показывают Telegram, VK и другие сервисы, когда присылают ссылку"
+    },
+    "auditViewport": {
+        "message": "Мобильная версия (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Без meta viewport телефон показывает страницу как уменьшенную версию для компьютера"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Без него браузер включает режим совместимости со старыми сайтами, и вёрстка может отличаться"
+    },
+    "auditNoSize": {
+        "message": "Картинки без размеров"
+    },
+    "auditNoSizeHint": {
+        "message": "Без width и height браузер не знает, сколько места оставить под картинку, и вёрстка прыгает, когда она загрузится"
+    },
+    "auditLarge": {
+        "message": "Картинки крупнее нужного"
+    },
+    "auditLargeHint": {
+        "message": "Картинка передаётся заметно больше, чем показывается на экране, — лишний вес"
+    },
+    "auditModern": {
+        "message": "Картинки WebP и AVIF"
+    },
+    "auditModernHint": {
+        "message": "Эти форматы весят на 25–50% меньше JPEG и PNG"
+    },
+    "auditLang": {
+        "message": "Язык страницы (lang)"
+    },
+    "auditLangHint": {
+        "message": "Нужен программам чтения с экрана, переводчику и поисковикам"
+    },
+    "auditAlt": {
+        "message": "Картинки без alt"
+    },
+    "auditAltHint": {
+        "message": "Описание картинки для незрячих и на случай, если она не загрузится"
+    },
+    "auditLabels": {
+        "message": "Поля без подписи"
+    },
+    "auditLabelsHint": {
+        "message": "Программа чтения с экрана не сможет сказать, что вводить в поле"
+    },
+    "auditNames": {
+        "message": "Кнопки и ссылки без названия"
+    },
+    "auditNamesHint": {
+        "message": "Например, кнопка-иконка без aria-label: незрячий пользователь услышит просто «кнопка»"
+    },
+    "auditMain": {
+        "message": "Основная область (main)"
+    },
+    "auditMainHint": {
+        "message": "Позволяет сразу перейти к содержимому, пропустив меню"
+    },
+    "auditZoom": {
+        "message": "Запрет масштабирования"
+    },
+    "auditZoomHint": {
+        "message": "Мешает слабовидящим увеличить страницу на телефоне"
+    },
+    "auditCsp": {
+        "message": "Политика контента (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Ограничивает, откуда странице можно загружать скрипты, — защита от XSS. Если в ней есть 'unsafe-inline' без nonce или hash, защита почти не работает"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Запрещает браузеру угадывать тип файла — защита от подмены скриптов"
+    },
+    "auditFrame": {
+        "message": "Защита от встраивания"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options или frame-ancestors не дают встроить сайт в чужую страницу, чтобы обманом получить клики"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Сколько адреса страницы передаётся другим сайтам при переходе. Без заголовка браузер использует безопасное значение по умолчанию"
+    },
+    "auditCache": {
+        "message": "Кэш страницы"
+    },
+    "auditCacheHint": {
+        "message": "Откуда пришла страница: HIT — из кэша сервера или CDN, MISS — собрана заново. Сами страницы кэшируют редко, обычно в кэше лежат картинки, скрипты и стили"
+    },
+    "auditCacheBrowser": {
+        "message": "из кэша браузера"
+    },
+    "auditBots": {
+        "message": "Роботы и ИИ"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Правила для поисковых и других роботов. Без файла роботы обходят всё подряд, а поисковики не узнают, где карта сайта"
+    },
+    "auditSitemap": {
+        "message": "Карта сайта (sitemap)"
+    },
+    "auditSitemapHint": {
+        "message": "Список страниц для поисковиков. Указывается в robots.txt строкой Sitemap:"
+    },
+    "auditAi": {
+        "message": "Правила для ИИ-ботов"
+    },
+    "auditAiHint": {
+        "message": "Можно ли ИИ-ботам собирать тексты сайта для нейросетей — по правилам в robots.txt, где бот назван по имени. Расширение знает 16 таких ботов (GPTBot, ClaudeBot, Google-Extended и др.); боты с другими именами не учитываются. «Закрыто всем» — сайт закрыт для всех роботов через User-agent: *, отдельных правил для ИИ нет"
+    },
+    "auditAiBlocked": {
+        "message": "запрещено: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "разрешено"
+    },
+    "auditAiNone": {
+        "message": "не заданы"
+    },
+    "auditAiAll": {
+        "message": "закрыто всем"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Новый формат: краткое описание сайта в Markdown для ИИ-ассистентов и агентов. Пока необязателен"
+    },
+    "auditCspWeak": {
+        "message": "слабая"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Запрещает странице и встроенным фреймам доступ к камере, геолокации и другим функциям браузера"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Отделяет окно сайта от чужих окон, которые оно открывает, — защита от атак через window.opener"
+    },
+    "auditVersions": {
+        "message": "Версии ПО в заголовках"
+    },
+    "auditVersionsHint": {
+        "message": "Сервер сообщает версии ПО — подсказка атакующему, какие известные уязвимости пробовать. Скрыть: server_tokens off в nginx и Angie, expose_php = Off в PHP"
+    },
+    "auditHidden": {
+        "message": "скрыты"
+    },
+    "auditSession": {
+        "message": "Cookie сессии доступны скриптам"
+    },
+    "auditSessionHint": {
+        "message": "Похоже, cookie входа читаются из JavaScript: при XSS их можно украть. Флаг HttpOnly это запрещает. Определено по названию cookie"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Контакты для сообщений об уязвимостях в /.well-known/security.txt. Помогает исследователю сообщить о проблеме вам, а не продать её"
+    },
+    "serverUnknownTitle": {
+        "message": "Сети этого провайдера нет в базе ABlock: в ней крупные хостинги, облака и CDN"
+    },
+    "protocolH3Later": {
+        "message": "Сервер поддерживает HTTP/3. Эта страница пришла по $PROTOCOL$ — так бывает при первом заходе: браузер узнаёт о HTTP/3 из ответа сервера и переходит на него в следующих запросах",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Язык браузера"
+    },
+    "langTitle": {
+        "message": "Язык интерфейса"
+    },
+    "noteTitle": {
+        "message": "Заметка к сайту"
+    },
+    "notePlaceholder": {
+        "message": "Заметка к сайту, видна только вам"
+    },
+    "incognitoLabel": {
+        "message": "Работать в режиме инкогнито"
+    },
+    "incognitoTitle": {
+        "message": "Откроются настройки расширений браузера — включите там для ABlock разрешение в режиме инкогнито"
+    }
+}

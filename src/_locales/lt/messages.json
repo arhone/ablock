@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "lt",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Reklamų blokatorius ir svetainių patikra"
+    },
+    "extDescription": {
+        "message": "Blokuoja reklamas ir sekiklius: greitesni puslapiai, mažiau duomenų. Tikrina bet kurios svetainės greitį, saugumą ir sekimą."
+    },
+    "toggle": {
+        "message": "Įjungti / išjungti"
+    },
+    "statusOn": {
+        "message": "Apsauga įjungta"
+    },
+    "statusOff": {
+        "message": "Apsauga išjungta"
+    },
+    "statusSiteOff": {
+        "message": "Apsauga šioje svetainėje išjungta"
+    },
+    "telegram": {
+        "message": "Telegram grupė"
+    },
+    "github": {
+        "message": "Prisidėkite GitHub"
+    },
+    "httpsOn": {
+        "message": "Ryšys šifruotas"
+    },
+    "httpsOff": {
+        "message": "Ryšys nešifruotas"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — sparčiausias protokolas"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — modernus protokolas"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — pasenęs protokolas",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protokolas nežinomas (puslapis įkeltas iš talpyklos)"
+    },
+    "loading": {
+        "message": "Įkeliama…"
+    },
+    "loadingTitle": {
+        "message": "Puslapis dar įkeliamas"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Puslapio įkėlimo laikas"
+    },
+    "domains": {
+        "message": "Domenai $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Trečiųjų šalių domenai:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…ir dar $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Trečiųjų šalių domenų nėra"
+    },
+    "blocked": {
+        "message": "Užblokuota $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Sekikliai $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Užblokuota šiame puslapyje\nReklamos: $ADS$\nSekikliai: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Ši svetainė jus seka. Užblokuota sekiklių: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Sekiklių nerasta"
+    },
+    "scoreLabel": {
+        "message": "Svetainės įvertinimas"
+    },
+    "serverLabel": {
+        "message": "Serveris"
+    },
+    "techLabel": {
+        "message": "Technologijos"
+    },
+    "companiesLabel": {
+        "message": "Seka"
+    },
+    "extraLabel": {
+        "message": "Daugiau"
+    },
+    "extendedText": {
+        "message": "Išplėstinis režimas: prieglobos teikėjas, IPv6, HSTS, statistika ir reklamos vietų ir slapukų langų slėpimas visose svetainėse. Duomenys niekada nepalieka jūsų naršyklės."
+    },
+    "extendedButton": {
+        "message": "Įjungti"
+    },
+    "extendedOff": {
+        "message": "Išjungti išplėstinį režimą"
+    },
+    "extendedOffTitle": {
+        "message": "Plėtinys nebematys serverių IP ir antraščių, nebevykdys statistikos ir neslėps reklamos vietų ir slapukų langų visose svetainėse; prieiga prie visų svetainių bus atšaukta. Bet kada galėsite vėl įjungti"
+    },
+    "share": {
+        "message": "Bendrinti"
+    },
+    "copied": {
+        "message": "Nukopijuota"
+    },
+    "cookiesLabel": {
+        "message": "Slėpti sutikimo su slapukais langus"
+    },
+    "cookiesTitle": {
+        "message": "Blokuoja sutikimo su slapukais reklamjuosčių paslaugas. Išplėstiniame režime slepia ir pačias reklamjuostes bet kurioje svetainėje"
+    },
+    "siteLabel": {
+        "message": "Blokuoti svetainėje $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Panaikinkite žymėjimą, jei svetainė veikia netinkamai: reklamos ir sekikliai joje nebebus blokuojami. Puslapis bus įkeltas iš naujo"
+    },
+    "guess": {
+        "message": "Nustatyta pagal netiesioginius požymius — gali būti netikslu"
+    },
+    "weightTitle": {
+        "message": "Puslapio dydis su visais failais"
+    },
+    "weightEstimated": {
+        "message": "Tikslus dydis žinomas $KNOWN$ iš $TOTAL$ failų, kiti įvertinti apytiksliai: trečiųjų šalių svetainės slepia dydį",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Puslapis suglaudintas: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Be glaudinimo"
+    },
+    "compressionOff": {
+        "message": "Puslapis siunčiamas nesuglaudintas — įkeliamas lėčiau"
+    },
+    "compressionUnknown": {
+        "message": "Glaudinimas nežinomas (puslapis įkeltas iš talpyklos)"
+    },
+    "blockedCookies": {
+        "message": "Slapukų langai: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Dydis: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Neužblokuota:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Rasta svetainėje:\n$LIST$\nAr jie užblokuoti, rodoma išplėstiniame režime",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Užblokuota:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "žinomų nerasta"
+    },
+    "serverExtended": {
+        "message": "išplėstiniame režime"
+    },
+    "serverReload": {
+        "message": "įkelkite puslapį iš naujo"
+    },
+    "serverReloadTitle": {
+        "message": "Serveris nustatomas įkeliant puslapį"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "kitas teikėjas"
+    },
+    "serverProxy": {
+        "message": "Svetainė veikia per $NAME$ (CDN arba DDoS apsauga) — tikrasis serveris paslėptas",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Priegloba: $NAME$ (pagal RIPE adresų duomenų bazę)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Šalis nustatyta pagal teikėją"
+    },
+    "techFound": {
+        "message": "Rasta puslapyje"
+    },
+    "techNone": {
+        "message": "nenustatyta"
+    },
+    "techNoneTitle": {
+        "message": "Žinomų variklių ar bibliotekų požymių nerasta"
+    },
+    "ipv6": {
+        "message": "Prisijungta per IPv6"
+    },
+    "ipv4": {
+        "message": "Prisijungta per IPv4. Tai nerodo, ar svetainė palaiko IPv6: tai priklauso ir nuo jūsų tinklo"
+    },
+    "hstsOn": {
+        "message": "HSTS: naršyklė visada atidaro svetainę tik per HTTPS"
+    },
+    "hstsOff": {
+        "message": "Nėra HSTS: pirmasis apsilankymas svetainėje gali vykti be šifravimo"
+    },
+    "mixed": {
+        "message": "HTTP failai $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS puslapis įkelia failus be šifravimo: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Įvertinimas $SCORE$ iš 10 pagal:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Šifravimas"
+    },
+    "scoreProtocol": {
+        "message": "Protokolas"
+    },
+    "scoreSpeed": {
+        "message": "Įkėlimo greitis"
+    },
+    "scoreWeight": {
+        "message": "Puslapio dydis"
+    },
+    "scoreTrackers": {
+        "message": "Sekimas"
+    },
+    "scoreDomains": {
+        "message": "Trečiųjų šalių domenai"
+    },
+    "scoreCompression": {
+        "message": "Glaudinimas"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Mišrus turinys"
+    },
+    "stats": {
+        "message": "Iš viso užblokuota užklausų: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Nuo $DATE$. Dydis įvertintas pagal vidutinį reklamos failų dydį",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Svetainės ataskaita — paveikslėliu arba tekstu"
+    },
+    "reportTitle": {
+        "message": "Svetainės įvertinimas ir išsami informacija paveikslėliu arba tekstu — kolegoms, rangovui ar pokalbiui"
+    },
+    "reportDone": {
+        "message": "Išsaugota"
+    },
+    "copyIp": {
+        "message": "Kopijuoti IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Kopijuoti paveikslėlį"
+    },
+    "copyText": {
+        "message": "Kopijuoti tekstą ir nuorodą"
+    },
+    "shareSystem": {
+        "message": "Daugiau…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — įvertinimas $SCORE$ iš 10 ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Patikrinkite savo svetainę:"
+    },
+    "donate": {
+        "message": "Paremti"
+    },
+    "donateTitle": {
+        "message": "Paremkite kūrimą Boosty"
+    },
+    "askStats": {
+        "message": "Užblokuota užklausų: $COUNT$, sutaupyta ≈ $SIZE$. Jei ABlock jums naudingas, paremkite kūrimą",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "ABlock naudojatės jau mėnesį. Jei jis naudingas, paremkite kūrimą"
+    },
+    "askClose": {
+        "message": "Daugiau nerodyti"
+    },
+    "reportLegendGuess": {
+        "message": "? — nustatyta pagal netiesioginius požymius"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — apytikslis įvertinimas"
+    },
+    "companiesNoneTitle": {
+        "message": "Šiame puslapyje nėra įmonių iš ABlock katalogo. Svetainės savi skaitikliai vis tiek gali būti — juos skaičiuoja ženklelis „Sekikliai“"
+    },
+    "compressionFiles": {
+        "message": "Tekstiniai failai: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Nesuglaudinti: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Ištrinti svetainės duomenis ir įkelti iš naujo: slapukus, talpyklą ir saugyklą. Ženkleliai ir įvertinimas parodys svetainę taip, kaip ją mato naujas lankytojas. Būsite atjungti nuo šios svetainės"
+    },
+    "clearConfirm": {
+        "message": "Ištrinti?"
+    },
+    "saveImage": {
+        "message": "Išsaugoti paveikslėlį"
+    },
+    "shareSend": {
+        "message": "Siųsti per $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Paskelbti $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Siunčiama tekstu: paveikslėlio negalima perduoti neįkėlus į serverį — nukopijuokite jį ir įklijuokite į žinutę"
+    },
+    "shareLinkOnly": {
+        "message": "Perduodama tik plėtinio nuoroda — nukopijuokite ataskaitos paveikslėlį ir įklijuokite jį į įrašą"
+    },
+    "auditLabel": {
+        "message": "Išsamiau"
+    },
+    "auditIssues": {
+        "message": "problemos: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "be problemų"
+    },
+    "auditSpeed": {
+        "message": "Greitis"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Žymėjimas"
+    },
+    "auditA11y": {
+        "message": "Prieinamumas"
+    },
+    "auditSecurity": {
+        "message": "Saugumas"
+    },
+    "auditYes": {
+        "message": "taip"
+    },
+    "auditNo": {
+        "message": "ne"
+    },
+    "auditLength": {
+        "message": "$COUNT$ simb.",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "kitas domenas"
+    },
+    "auditNoImage": {
+        "message": "be paveikslėlio"
+    },
+    "auditNoInput": {
+        "message": "veiksmų nebuvo"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ iš $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Išdėstymo poslinkiai"
+    },
+    "auditTtfb": {
+        "message": "Serverio atsakas (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Kiek laiko užtruko gauti pirmąjį puslapio baitą iš serverio. Gerai — iki 0,8 s"
+    },
+    "auditFcp": {
+        "message": "Pirmasis atvaizdavimas (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Kada ekrane pasirodė pirmasis turinys. Gerai — iki 1,8 s"
+    },
+    "auditLcp": {
+        "message": "Pagrindinis blokas (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Kada buvo atvaizduotas didžiausias blokas — paveikslėlis ar tekstas. Pagrindinis Google greičio rodiklis. Gerai — iki 2,5 s"
+    },
+    "auditCls": {
+        "message": "Išdėstymo poslinkiai (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Kiek turinys šokinėja įkeliant. Gerai — iki 0,1"
+    },
+    "auditInp": {
+        "message": "Reakcija į veiksmus (INP)"
+    },
+    "auditInpHint": {
+        "message": "Ilgiausias delsimas reaguojant į spustelėjimą ar įvestį. Gerai — iki 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Blokuoja atvaizdavimą"
+    },
+    "auditBlockingHint": {
+        "message": "Failai, kurių naršyklė laukia prieš pradėdama piešti puslapį. Stiliai — normalu, o scenarijus geriau įkelti su async arba defer"
+    },
+    "auditStatus": {
+        "message": "Būsenos kodas"
+    },
+    "auditStatusHint": {
+        "message": "Puslapio HTTP būsena: 200 — gerai, 4xx ir 5xx — klaida"
+    },
+    "auditNoindex": {
+        "message": "Indeksavimas uždraustas"
+    },
+    "auditNoindexHint": {
+        "message": "Puslapis paslėptas nuo paieškos sistemų noindex žyma arba robots.txt taisykle. Prisijungimo puslapiams ir paskyroms tai normalu"
+    },
+    "auditTitle": {
+        "message": "Pavadinimas (title)"
+    },
+    "auditTitleHint": {
+        "message": "Nuorodos tekstas paieškos rezultatuose ir skirtuko pavadinimas. Geriausia — 10–70 simbolių"
+    },
+    "auditDescription": {
+        "message": "Aprašas (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Tekstas po nuoroda paieškos rezultatuose. Geriausia — 50–170 simbolių"
+    },
+    "auditH1": {
+        "message": "h1 antraštės"
+    },
+    "auditH1Hint": {
+        "message": "Pagrindinė puslapio antraštė. Paprastai ji viena"
+    },
+    "auditCanonical": {
+        "message": "Kanoninis URL"
+    },
+    "auditCanonicalHint": {
+        "message": "Nurodo paieškos sistemoms pagrindinį puslapio adresą, jei jis turi kopijų"
+    },
+    "auditOg": {
+        "message": "Nuorodos peržiūra (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Pavadinimas ir paveikslėlis, kuriuos rodo Telegram, Slack ir kitos paslaugos, kai bendrinama nuoroda"
+    },
+    "auditViewport": {
+        "message": "Mobilioji versija (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Be meta viewport telefonai rodo puslapį kaip sumažintą kompiuterio versiją"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Be jo naršyklė persijungia į senų svetainių suderinamumo režimą, ir išdėstymas gali skirtis"
+    },
+    "auditNoSize": {
+        "message": "Paveikslėliai be matmenų"
+    },
+    "auditNoSizeHint": {
+        "message": "Be width ir height naršyklė nežino, kiek vietos palikti paveikslėliui, ir išdėstymas šokteli jam įsikėlus"
+    },
+    "auditLarge": {
+        "message": "Per dideli paveikslėliai"
+    },
+    "auditLargeHint": {
+        "message": "Paveikslėlis siunčiamas pastebimai didesnis, nei rodomas — perteklinis svoris"
+    },
+    "auditModern": {
+        "message": "WebP ir AVIF paveikslėliai"
+    },
+    "auditModernHint": {
+        "message": "Šie formatai 25–50 % mažesni nei JPEG ir PNG"
+    },
+    "auditLang": {
+        "message": "Puslapio kalba (lang)"
+    },
+    "auditLangHint": {
+        "message": "Reikalinga ekrano skaitytuvams, vertėjams ir paieškos sistemoms"
+    },
+    "auditAlt": {
+        "message": "Paveikslėliai be alt"
+    },
+    "auditAltHint": {
+        "message": "Paveikslėlio aprašas akliesiems ir tuo atveju, jei jis neįsikels"
+    },
+    "auditLabels": {
+        "message": "Laukai be etikečių"
+    },
+    "auditLabelsHint": {
+        "message": "Ekrano skaitytuvas negalės pasakyti, ką įvesti į lauką"
+    },
+    "auditNames": {
+        "message": "Mygtukai ir nuorodos be pavadinimų"
+    },
+    "auditNamesHint": {
+        "message": "Pavyzdžiui, piktogramos mygtukas be aria-label: aklasis išgirs tik „mygtukas“"
+    },
+    "auditMain": {
+        "message": "Pagrindinė sritis (main)"
+    },
+    "auditMainHint": {
+        "message": "Leidžia iškart pereiti prie turinio, aplenkiant meniu"
+    },
+    "auditZoom": {
+        "message": "Mastelio keitimas uždraustas"
+    },
+    "auditZoomHint": {
+        "message": "Neleidžia silpnaregiams padidinti puslapio telefone"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Riboja, iš kur puslapis gali įkelti scenarijus — apsauga nuo XSS. Jei joje yra 'unsafe-inline' be nonce ar hash, ji beveik neapsaugo"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Draudžia naršyklei spėlioti failų tipus — apsauga nuo scenarijų klastojimo"
+    },
+    "auditFrame": {
+        "message": "Apsauga nuo įterpimo"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options arba frame-ancestors neleidžia įterpti svetainės į svetimą puslapį, kad apgaule priverstų spustelėti"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Kiek puslapio adreso perduodama kitoms svetainėms pereinant. Be antraštės naršyklė naudoja saugią numatytąją reikšmę"
+    },
+    "auditCache": {
+        "message": "Puslapio talpykla"
+    },
+    "auditCacheHint": {
+        "message": "Iš kur atkeliavo puslapis: HIT — iš serverio ar CDN talpyklos, MISS — sukurtas iš naujo. Patys puslapiai talpinami retai; dažniausiai paveikslėliai, scenarijai ir stiliai"
+    },
+    "auditCacheBrowser": {
+        "message": "iš naršyklės talpyklos"
+    },
+    "auditBots": {
+        "message": "Robotai ir DI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Taisyklės paieškos sistemoms ir kitiems robotams. Be failo robotai naršo viską, o paieškos sistemos nesužino, kur svetainės žemėlapis"
+    },
+    "auditSitemap": {
+        "message": "Svetainės žemėlapis"
+    },
+    "auditSitemapHint": {
+        "message": "Puslapių sąrašas paieškos sistemoms. Nurodomas robots.txt eilute Sitemap:"
+    },
+    "auditAi": {
+        "message": "Taisyklės DI robotams"
+    },
+    "auditAiHint": {
+        "message": "Ar DI robotams leidžiama rinkti svetainės tekstus neuroniniams tinklams — pagal robots.txt taisykles, kuriose robotas įvardytas. Plėtinys žino 16 tokių robotų (GPTBot, ClaudeBot, Google-Extended ir kt.); kitais vardais vadinami robotai neskaičiuojami. „Uždaryta visiems“ — svetainė uždaryta visiems robotams per User-agent: *, be atskirų taisyklių DI"
+    },
+    "auditAiBlocked": {
+        "message": "uždrausta: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "leidžiama"
+    },
+    "auditAiNone": {
+        "message": "nenurodyta"
+    },
+    "auditAiAll": {
+        "message": "uždaryta visiems"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Naujas formatas: trumpas svetainės aprašas Markdown formatu DI asistentams ir agentams. Kol kas neprivalomas"
+    },
+    "auditCspWeak": {
+        "message": "silpna"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Draudžia puslapiui ir įterptiems rėmeliams prieigą prie kameros, vietovės ir kitų naršyklės funkcijų"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Izoliuoja svetainės langą nuo kitų jos atidaromų langų — apsauga nuo atakų per window.opener"
+    },
+    "auditVersions": {
+        "message": "Programinės įrangos versijos antraštėse"
+    },
+    "auditVersionsHint": {
+        "message": "Serveris atskleidžia programinės įrangos versijas — užuomina įsilaužėliams, kokias žinomas spragas išbandyti. Kaip paslėpti: server_tokens off nginx ir Angie, expose_php = Off PHP"
+    },
+    "auditHidden": {
+        "message": "paslėptos"
+    },
+    "auditSession": {
+        "message": "Seanso slapukai prieinami scenarijams"
+    },
+    "auditSessionHint": {
+        "message": "Panašu, kad prisijungimo slapukus galima perskaityti iš JavaScript: per XSS juos gali pavogti. Tai neleidžia HttpOnly vėliavėlė. Nustatyta pagal slapuko pavadinimą"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Kontaktai pranešti apie pažeidžiamumus faile /.well-known/security.txt. Padeda tyrėjui pranešti apie problemą jums, o ne ją parduoti"
+    },
+    "serverUnknownTitle": {
+        "message": "Šio teikėjo tinklų nėra ABlock duomenų bazėje: joje — didieji prieglobos teikėjai, debesys ir CDN"
+    },
+    "protocolH3Later": {
+        "message": "Serveris palaiko HTTP/3. Šis puslapis atėjo per $PROTOCOL$ — taip būna pirmojo apsilankymo metu: naršyklė sužino apie HTTP/3 iš serverio atsako ir pereina prie jo kitoms užklausoms",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Naršyklės kalba"
+    },
+    "langTitle": {
+        "message": "Sąsajos kalba"
+    },
+    "noteTitle": {
+        "message": "Pastaba apie svetainę"
+    },
+    "notePlaceholder": {
+        "message": "Pastaba apie svetainę, matoma tik jums"
+    },
+    "incognitoLabel": {
+        "message": "Veikti inkognito režimu"
+    },
+    "incognitoTitle": {
+        "message": "Atsidarys naršyklės plėtinių nustatymai – ten įjunkite ABlock leidimą inkognito režimu"
+    }
+}

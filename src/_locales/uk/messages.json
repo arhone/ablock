@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "uk",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Блокувальник реклами й перевірка сайтів"
+    },
+    "extDescription": {
+        "message": "Блокує рекламу й трекери: сайти швидші, трафіку менше. Перевірка швидкості, безпеки та стеження на будь-якому сайті."
+    },
+    "toggle": {
+        "message": "Увімкнути / вимкнути"
+    },
+    "statusOn": {
+        "message": "Захист увімкнено"
+    },
+    "statusOff": {
+        "message": "Захист вимкнено"
+    },
+    "statusSiteOff": {
+        "message": "Захист вимкнено на цьому сайті"
+    },
+    "telegram": {
+        "message": "Група в Telegram"
+    },
+    "github": {
+        "message": "Долучитися на GitHub"
+    },
+    "httpsOn": {
+        "message": "З’єднання зашифроване"
+    },
+    "httpsOff": {
+        "message": "З’єднання не зашифроване"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — найшвидший протокол"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — сучасний протокол"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — застарілий протокол",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Протокол невідомий (сторінку завантажено з кешу)"
+    },
+    "loading": {
+        "message": "Завантаження…"
+    },
+    "loadingTitle": {
+        "message": "Сторінка ще завантажується"
+    },
+    "seconds": {
+        "message": "$SECONDS$ с",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Час завантаження сторінки"
+    },
+    "domains": {
+        "message": "Домени $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Сторонні домени:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…і ще $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Сторонніх доменів немає"
+    },
+    "blocked": {
+        "message": "Заблоковано $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Трекери $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Заблоковано на цій сторінці\nРеклама: $ADS$\nТрекери: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Сайт стежить за вами. Заблоковано трекерів: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Трекерів не знайдено"
+    },
+    "scoreLabel": {
+        "message": "Оцінка сайту"
+    },
+    "serverLabel": {
+        "message": "Сервер"
+    },
+    "techLabel": {
+        "message": "Зроблено на"
+    },
+    "companiesLabel": {
+        "message": "Стежать"
+    },
+    "extraLabel": {
+        "message": "Ще"
+    },
+    "extendedText": {
+        "message": "Розширений режим: хостинг, IPv6, HSTS, статистика та приховування рекламних блоків і вікон про cookie на всіх сайтах. Дані не залишають браузер."
+    },
+    "extendedButton": {
+        "message": "Увімкнути"
+    },
+    "extendedOff": {
+        "message": "Вимкнути розширений режим"
+    },
+    "extendedOffTitle": {
+        "message": "Розширення перестане бачити IP і заголовки серверів, вести статистику та приховувати рекламні блоки та вікна про cookie на всіх сайтах; доступ до всіх сайтів буде відкликано. Увімкнути знову можна будь-коли"
+    },
+    "share": {
+        "message": "Поділитися"
+    },
+    "copied": {
+        "message": "Скопійовано"
+    },
+    "cookiesLabel": {
+        "message": "Приховувати вікна згоди на cookie"
+    },
+    "cookiesTitle": {
+        "message": "Блокує сервіси банерів згоди на cookie. У розширеному режимі також приховує самі банери на будь-якому сайті"
+    },
+    "siteLabel": {
+        "message": "Блокувати на $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Зніміть позначку, якщо сайт працює неправильно: реклама й трекери на ньому більше не блокуватимуться. Сторінку буде перезавантажено"
+    },
+    "guess": {
+        "message": "Визначено за непрямими ознаками — може бути неточно"
+    },
+    "weightTitle": {
+        "message": "Вага сторінки з усіма файлами"
+    },
+    "weightEstimated": {
+        "message": "Точний розмір відомий для $KNOWN$ з $TOTAL$ файлів, решта оцінені: сторонні сайти приховують розмір",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Сторінку стиснуто: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Без стиснення"
+    },
+    "compressionOff": {
+        "message": "Сторінка передається без стиснення — завантажується повільніше"
+    },
+    "compressionUnknown": {
+        "message": "Стиснення невідоме (сторінку завантажено з кешу)"
+    },
+    "blockedCookies": {
+        "message": "Вікна про cookie: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Обсяг: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Не заблоковано:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Знайдено на сайті:\n$LIST$\nЧи заблоковані вони, видно в розширеному режимі",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Заблоковано:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "відомих не знайдено"
+    },
+    "serverExtended": {
+        "message": "у розширеному режимі"
+    },
+    "serverReload": {
+        "message": "перезавантажте сторінку"
+    },
+    "serverReloadTitle": {
+        "message": "Сервер визначається під час завантаження сторінки"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "інший провайдер"
+    },
+    "serverProxy": {
+        "message": "Сайт працює через $NAME$ (CDN або захист від DDoS) — справжній сервер прихований",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Хостинг: $NAME$ (за базою адрес RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Країну визначено за провайдером"
+    },
+    "techFound": {
+        "message": "Знайдено на сторінці"
+    },
+    "techNone": {
+        "message": "не визначено"
+    },
+    "techNoneTitle": {
+        "message": "Ознак відомих рушіїв і бібліотек не знайдено"
+    },
+    "ipv6": {
+        "message": "З’єднання через IPv6"
+    },
+    "ipv4": {
+        "message": "З’єднання через IPv4. Це не означає, що сайт не підтримує IPv6: залежить і від вашої мережі"
+    },
+    "hstsOn": {
+        "message": "HSTS: браузер завжди відкриває сайт лише через HTTPS"
+    },
+    "hstsOff": {
+        "message": "Немає HSTS: перший вхід на сайт може пройти без шифрування"
+    },
+    "mixed": {
+        "message": "HTTP-файли $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "Сторінка HTTPS завантажує файли без шифрування: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Оцінка $SCORE$ з 10 за параметрами:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Шифрування"
+    },
+    "scoreProtocol": {
+        "message": "Протокол"
+    },
+    "scoreSpeed": {
+        "message": "Швидкість завантаження"
+    },
+    "scoreWeight": {
+        "message": "Вага сторінки"
+    },
+    "scoreTrackers": {
+        "message": "Стеження"
+    },
+    "scoreDomains": {
+        "message": "Сторонні домени"
+    },
+    "scoreCompression": {
+        "message": "Стиснення"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Змішаний вміст"
+    },
+    "stats": {
+        "message": "Усього заблоковано запитів: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "З $DATE$. Обсяг оцінено за середнім розміром рекламних файлів",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Звіт про сайт — картинкою або текстом"
+    },
+    "reportTitle": {
+        "message": "Оцінка та подробиці про сайт картинкою або текстом — для колег, підрядника чи чату"
+    },
+    "reportDone": {
+        "message": "Збережено"
+    },
+    "copyIp": {
+        "message": "Скопіювати IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Скопіювати картинку"
+    },
+    "copyText": {
+        "message": "Скопіювати текст і посилання"
+    },
+    "shareSystem": {
+        "message": "Ще…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — оцінка $SCORE$ з 10 в ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Перевірте свій сайт:"
+    },
+    "donate": {
+        "message": "Підтримати"
+    },
+    "donateTitle": {
+        "message": "Підтримати розробку на Boosty"
+    },
+    "askStats": {
+        "message": "Заблоковано запитів: $COUNT$, заощаджено ≈ $SIZE$. Якщо ABlock корисний — підтримайте розробку",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Ви користуєтеся ABlock уже місяць. Якщо він корисний — підтримайте розробку"
+    },
+    "askClose": {
+        "message": "Більше не показувати"
+    },
+    "reportLegendGuess": {
+        "message": "? — визначено за непрямими ознаками"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — приблизна оцінка"
+    },
+    "companiesNoneTitle": {
+        "message": "На сторінці немає компаній із довідника ABlock. Власні лічильники сайту можуть бути — їх рахує значок «Трекери»"
+    },
+    "compressionFiles": {
+        "message": "Текстові файли: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Без стиснення: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Видалити дані сайту й перезавантажити: cookie, кеш і сховище. Значки та оцінка покажуть сайт таким, яким його бачить новий відвідувач. Ви вийдете з облікового запису на цьому сайті"
+    },
+    "clearConfirm": {
+        "message": "Видалити?"
+    },
+    "saveImage": {
+        "message": "Зберегти картинку"
+    },
+    "shareSend": {
+        "message": "Надіслати в $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Опублікувати в $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Надсилається текстом: картинку не передати без завантаження на сервер — скопіюйте її та вставте в повідомлення"
+    },
+    "shareLinkOnly": {
+        "message": "Передається лише посилання на розширення — скопіюйте картинку звіту та вставте її в допис"
+    },
+    "auditLabel": {
+        "message": "Подробиці"
+    },
+    "auditIssues": {
+        "message": "проблем: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "без проблем"
+    },
+    "auditSpeed": {
+        "message": "Швидкість"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Верстка"
+    },
+    "auditA11y": {
+        "message": "Доступність"
+    },
+    "auditSecurity": {
+        "message": "Безпека"
+    },
+    "auditYes": {
+        "message": "так"
+    },
+    "auditNo": {
+        "message": "ні"
+    },
+    "auditLength": {
+        "message": "$COUNT$ симв.",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "інший домен"
+    },
+    "auditNoImage": {
+        "message": "без картинки"
+    },
+    "auditNoInput": {
+        "message": "не було дій"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ з $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Зсуви макета"
+    },
+    "auditTtfb": {
+        "message": "Відповідь сервера (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Скільки часу минуло до першого байта сторінки від сервера. Добре — до 0,8 с"
+    },
+    "auditFcp": {
+        "message": "Перша відмальовка (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Коли на екрані з’явився перший вміст. Добре — до 1,8 с"
+    },
+    "auditLcp": {
+        "message": "Головний блок (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Коли відмалювався найбільший блок — картинка чи текст. Головний показник швидкості в Google. Добре — до 2,5 с"
+    },
+    "auditCls": {
+        "message": "Зсуви макета (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Наскільки вміст стрибає під час завантаження. Добре — до 0,1"
+    },
+    "auditInp": {
+        "message": "Відгук на дії (INP)"
+    },
+    "auditInpHint": {
+        "message": "Найбільша затримка реакції на натискання чи введення. Добре — до 200 мс"
+    },
+    "auditBlocking": {
+        "message": "Блокують відмальовку"
+    },
+    "auditBlockingHint": {
+        "message": "Файли, на які браузер чекає, перш ніж почати малювати сторінку. Стилі — нормально, а скрипти краще підключати з async або defer"
+    },
+    "auditStatus": {
+        "message": "Код відповіді"
+    },
+    "auditStatusHint": {
+        "message": "HTTP-статус сторінки: 200 — гаразд, 4xx і 5xx — помилка"
+    },
+    "auditNoindex": {
+        "message": "Індексацію заборонено"
+    },
+    "auditNoindexHint": {
+        "message": "Сторінку приховано від пошукових систем тегом noindex або правилом robots.txt. Для сторінок входу й особистих кабінетів це нормально"
+    },
+    "auditTitle": {
+        "message": "Заголовок (title)"
+    },
+    "auditTitleHint": {
+        "message": "Текст посилання в пошуку та назва вкладки. Найкраще — 10–70 символів"
+    },
+    "auditDescription": {
+        "message": "Опис (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Текст під посиланням у пошуку. Найкраще — 50–170 символів"
+    },
+    "auditH1": {
+        "message": "Заголовки h1"
+    },
+    "auditH1Hint": {
+        "message": "Головний заголовок сторінки. Зазвичай він один"
+    },
+    "auditCanonical": {
+        "message": "Канонічна адреса"
+    },
+    "auditCanonicalHint": {
+        "message": "Підказує пошуковим системам головну адресу сторінки, якщо в неї є копії"
+    },
+    "auditOg": {
+        "message": "Прев’ю посилання (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Заголовок і картинка, які показують Telegram, Slack та інші сервіси, коли діляться посиланням"
+    },
+    "auditViewport": {
+        "message": "Мобільна версія (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Без meta viewport телефони показують сторінку як зменшену версію для комп’ютера"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Без нього браузер вмикає режим сумісності зі старими сайтами, і верстка може відрізнятися"
+    },
+    "auditNoSize": {
+        "message": "Картинки без розмірів"
+    },
+    "auditNoSizeHint": {
+        "message": "Без width і height браузер не знає, скільки місця залишити під картинку, і верстка стрибає під час її завантаження"
+    },
+    "auditLarge": {
+        "message": "Завеликі картинки"
+    },
+    "auditLargeHint": {
+        "message": "Картинка передається помітно більшою, ніж показується, — зайва вага"
+    },
+    "auditModern": {
+        "message": "Картинки WebP і AVIF"
+    },
+    "auditModernHint": {
+        "message": "Ці формати на 25–50% легші за JPEG і PNG"
+    },
+    "auditLang": {
+        "message": "Мова сторінки (lang)"
+    },
+    "auditLangHint": {
+        "message": "Потрібна екранним дикторам, перекладачам і пошуковим системам"
+    },
+    "auditAlt": {
+        "message": "Картинки без alt"
+    },
+    "auditAltHint": {
+        "message": "Опис картинки для незрячих і на випадок, якщо вона не завантажиться"
+    },
+    "auditLabels": {
+        "message": "Поля без підписів"
+    },
+    "auditLabelsHint": {
+        "message": "Екранний диктор не зможе сказати, що вводити в поле"
+    },
+    "auditNames": {
+        "message": "Кнопки й посилання без назв"
+    },
+    "auditNamesHint": {
+        "message": "Наприклад, кнопка-іконка без aria-label: незрячий почує просто «кнопка»"
+    },
+    "auditMain": {
+        "message": "Основна область (main)"
+    },
+    "auditMainHint": {
+        "message": "Дає змогу одразу перейти до вмісту, оминаючи меню"
+    },
+    "auditZoom": {
+        "message": "Масштабування заборонено"
+    },
+    "auditZoomHint": {
+        "message": "Людям зі слабким зором не вдасться збільшити сторінку на телефоні"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Обмежує, звідки сторінка може завантажувати скрипти, — захист від XSS. Якщо в ній є 'unsafe-inline' без nonce чи hash, вона майже не захищає"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Забороняє браузеру вгадувати тип файлів — захист від підміни скриптів"
+    },
+    "auditFrame": {
+        "message": "Захист від вбудовування"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options або frame-ancestors не дають вбудувати сайт у чужу сторінку, щоб обманом змусити натискати"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Яку частину адреси сторінки передавати іншим сайтам під час переходу. Без заголовка браузер бере безпечне значення за замовчуванням"
+    },
+    "auditCache": {
+        "message": "Кеш сторінки"
+    },
+    "auditCacheHint": {
+        "message": "Звідки взялася сторінка: HIT — з кешу сервера чи CDN, MISS — зібрана заново. Самі сторінки кешують рідко, зазвичай — картинки, скрипти та стилі"
+    },
+    "auditCacheBrowser": {
+        "message": "з кешу браузера"
+    },
+    "auditBots": {
+        "message": "Роботи та ШІ"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Правила для пошукових систем та інших роботів. Без файлу роботи обходять усе, а пошукові системи не дізнаються, де карта сайту"
+    },
+    "auditSitemap": {
+        "message": "Карта сайту"
+    },
+    "auditSitemapHint": {
+        "message": "Список сторінок для пошукових систем. Вказується в robots.txt рядком Sitemap:"
+    },
+    "auditAi": {
+        "message": "Правила для ШІ-ботів"
+    },
+    "auditAiHint": {
+        "message": "Чи можна ШІ-ботам збирати тексти сайту для нейромереж — за правилами robots.txt, де бот названо на ім’я. Розширення знає 16 таких ботів (GPTBot, ClaudeBot, Google-Extended та інші); боти з іншими іменами не враховуються. «Закрито для всіх» — сайт закритий для всіх роботів через User-agent: *, окремих правил для ШІ немає"
+    },
+    "auditAiBlocked": {
+        "message": "заборонено: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "дозволено"
+    },
+    "auditAiNone": {
+        "message": "не задано"
+    },
+    "auditAiAll": {
+        "message": "закрито для всіх"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Новий формат: короткий опис сайту в Markdown для ШІ-асистентів та агентів. Поки необов’язковий"
+    },
+    "auditCspWeak": {
+        "message": "слабка"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Забороняє сторінці та вбудованим фреймам доступ до камери, геолокації та інших можливостей браузера"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Ізолює вікно сайту від вікон, які він відкриває, — захист від атак через window.opener"
+    },
+    "auditVersions": {
+        "message": "Версії ПЗ у заголовках"
+    },
+    "auditVersionsHint": {
+        "message": "Сервер розкриває версії програм — підказка зловмисникам, які відомі вразливості пробувати. Як приховати: server_tokens off у nginx і Angie, expose_php = Off у PHP"
+    },
+    "auditHidden": {
+        "message": "приховано"
+    },
+    "auditSession": {
+        "message": "Cookie сесії доступні скриптам"
+    },
+    "auditSessionHint": {
+        "message": "Cookie входу, схоже, можна прочитати з JavaScript: при XSS їх украдуть. Це забороняє прапорець HttpOnly. Визначено за назвою cookie"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Контакти для повідомлень про вразливості в /.well-known/security.txt. Допомагає досліднику повідомити про проблему вам, а не продати її"
+    },
+    "serverUnknownTitle": {
+        "message": "Мереж цього провайдера немає в базі ABlock: у ній великі хостинги, хмари та CDN"
+    },
+    "protocolH3Later": {
+        "message": "Сервер підтримує HTTP/3. Ця сторінка прийшла через $PROTOCOL$ — так буває під час першого візиту: браузер дізнається про HTTP/3 з відповіді сервера й переходить на нього для наступних запитів",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Мова браузера"
+    },
+    "langTitle": {
+        "message": "Мова інтерфейсу"
+    },
+    "noteTitle": {
+        "message": "Нотатка до сайту"
+    },
+    "notePlaceholder": {
+        "message": "Нотатка до сайту, видна лише вам"
+    },
+    "incognitoLabel": {
+        "message": "Працювати в режимі анонімного перегляду"
+    },
+    "incognitoTitle": {
+        "message": "Відкриються налаштування розширень браузера — увімкніть там для ABlock дозвіл у режимі анонімного перегляду"
+    }
+}

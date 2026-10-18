@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "vi",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Chặn quảng cáo và kiểm tra trang web"
+    },
+    "extDescription": {
+        "message": "Chặn quảng cáo và trình theo dõi: trang tải nhanh hơn, tốn ít dữ liệu hơn. Kiểm tra tốc độ, bảo mật và theo dõi của mọi trang."
+    },
+    "toggle": {
+        "message": "Bật / tắt"
+    },
+    "statusOn": {
+        "message": "Đang bảo vệ"
+    },
+    "statusOff": {
+        "message": "Đã tắt bảo vệ"
+    },
+    "statusSiteOff": {
+        "message": "Đã tắt bảo vệ trên trang này"
+    },
+    "telegram": {
+        "message": "Nhóm Telegram"
+    },
+    "github": {
+        "message": "Đóng góp trên GitHub"
+    },
+    "httpsOn": {
+        "message": "Kết nối được mã hóa"
+    },
+    "httpsOff": {
+        "message": "Kết nối không được mã hóa"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — giao thức nhanh nhất"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — giao thức hiện đại"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — giao thức lỗi thời",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Không rõ giao thức (trang từ bộ nhớ đệm)"
+    },
+    "loading": {
+        "message": "Đang tải…"
+    },
+    "loadingTitle": {
+        "message": "Trang vẫn đang tải"
+    },
+    "seconds": {
+        "message": "$SECONDS$ giây",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Thời gian tải trang"
+    },
+    "domains": {
+        "message": "Tên miền $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Tên miền bên thứ ba:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…và $COUNT$ tên miền khác",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Không có tên miền bên thứ ba"
+    },
+    "blocked": {
+        "message": "Đã chặn $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Theo dõi $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Đã chặn trên trang\nQuảng cáo: $ADS$\nTrình theo dõi: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Trang này theo dõi bạn, đã chặn trình theo dõi: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Không tìm thấy trình theo dõi"
+    },
+    "scoreLabel": {
+        "message": "Điểm trang web"
+    },
+    "serverLabel": {
+        "message": "Máy chủ"
+    },
+    "techLabel": {
+        "message": "Xây dựng bằng"
+    },
+    "companiesLabel": {
+        "message": "Theo dõi"
+    },
+    "extraLabel": {
+        "message": "Thêm"
+    },
+    "extendedText": {
+        "message": "Chế độ mở rộng: hosting, IPv6, HSTS, thống kê và ẩn vùng quảng cáo và cửa sổ cookie trên mọi trang. Dữ liệu không rời khỏi trình duyệt."
+    },
+    "extendedButton": {
+        "message": "Bật"
+    },
+    "extendedOff": {
+        "message": "Tắt chế độ mở rộng"
+    },
+    "extendedOffTitle": {
+        "message": "Tiện ích sẽ không còn thấy IP và tiêu đề máy chủ, không ghi thống kê và không ẩn vùng quảng cáo và cửa sổ cookie trên mọi trang; quyền truy cập vào mọi trang sẽ bị thu hồi. Bạn có thể bật lại bất cứ lúc nào"
+    },
+    "share": {
+        "message": "Chia sẻ"
+    },
+    "copied": {
+        "message": "Đã sao chép"
+    },
+    "cookiesLabel": {
+        "message": "Ẩn cửa sổ đồng ý cookie"
+    },
+    "cookiesTitle": {
+        "message": "Chặn các dịch vụ banner đồng ý cookie. Ở chế độ mở rộng còn ẩn chính các banner trên mọi trang"
+    },
+    "siteLabel": {
+        "message": "Chặn trên $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Bỏ chọn nếu trang hoạt động không đúng: quảng cáo và trình theo dõi trên trang sẽ không bị chặn nữa. Trang sẽ được tải lại"
+    },
+    "guess": {
+        "message": "Xác định qua dấu hiệu gián tiếp — có thể không chính xác"
+    },
+    "weightTitle": {
+        "message": "Dung lượng trang cùng mọi tệp"
+    },
+    "weightEstimated": {
+        "message": "Biết chính xác dung lượng của $KNOWN$ trên $TOTAL$ tệp, phần còn lại là ước tính: các trang bên thứ ba ẩn dung lượng",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Trang được nén: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Không nén"
+    },
+    "compressionOff": {
+        "message": "Trang được truyền không nén — tải chậm hơn"
+    },
+    "compressionUnknown": {
+        "message": "Không rõ nén (trang từ bộ nhớ đệm)"
+    },
+    "blockedCookies": {
+        "message": "Cửa sổ cookie: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Dung lượng: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Chưa chặn:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Có trên trang:\n$LIST$\nĐã bị chặn hay chưa — xem trong chế độ mở rộng",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Đã chặn:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "không tìm thấy công ty đã biết"
+    },
+    "serverExtended": {
+        "message": "trong chế độ mở rộng"
+    },
+    "serverReload": {
+        "message": "tải lại trang"
+    },
+    "serverReloadTitle": {
+        "message": "Máy chủ được xác định khi trang tải"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "nhà cung cấp khác"
+    },
+    "serverProxy": {
+        "message": "Trang chạy qua $NAME$ (CDN hoặc chống DDoS) — máy chủ thật bị ẩn",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Hosting: $NAME$ (theo cơ sở dữ liệu địa chỉ RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Quốc gia xác định theo nhà cung cấp"
+    },
+    "techFound": {
+        "message": "Tìm thấy trên trang"
+    },
+    "techNone": {
+        "message": "không xác định"
+    },
+    "techNoneTitle": {
+        "message": "Không tìm thấy dấu hiệu của nền tảng hay thư viện đã biết"
+    },
+    "ipv6": {
+        "message": "Kết nối qua IPv6"
+    },
+    "ipv4": {
+        "message": "Kết nối qua IPv4. Điều này không cho biết trang có hỗ trợ IPv6 hay không: còn tùy vào mạng của bạn"
+    },
+    "hstsOn": {
+        "message": "HSTS: trình duyệt luôn mở trang chỉ qua HTTPS"
+    },
+    "hstsOff": {
+        "message": "Không có HSTS: lần truy cập đầu tiên có thể không được mã hóa"
+    },
+    "mixed": {
+        "message": "Tệp HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "Trang HTTPS tải tệp không mã hóa: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Điểm $SCORE$/10 theo các tiêu chí:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Mã hóa"
+    },
+    "scoreProtocol": {
+        "message": "Giao thức"
+    },
+    "scoreSpeed": {
+        "message": "Tốc độ tải"
+    },
+    "scoreWeight": {
+        "message": "Dung lượng trang"
+    },
+    "scoreTrackers": {
+        "message": "Theo dõi"
+    },
+    "scoreDomains": {
+        "message": "Tên miền bên thứ ba"
+    },
+    "scoreCompression": {
+        "message": "Nén"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Nội dung hỗn hợp"
+    },
+    "stats": {
+        "message": "Tổng số yêu cầu đã chặn: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Từ $DATE$. Dung lượng ước tính theo kích thước trung bình của tệp quảng cáo",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Báo cáo trang web — dạng ảnh hoặc văn bản"
+    },
+    "reportTitle": {
+        "message": "Điểm và chi tiết trang web dạng ảnh hoặc văn bản — cho đồng nghiệp, nhà thầu hoặc nhóm chat"
+    },
+    "reportDone": {
+        "message": "Đã lưu"
+    },
+    "copyIp": {
+        "message": "Sao chép IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Sao chép ảnh"
+    },
+    "copyText": {
+        "message": "Sao chép văn bản và liên kết"
+    },
+    "shareSystem": {
+        "message": "Thêm…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — điểm $SCORE$/10 trong ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Kiểm tra trang của bạn:"
+    },
+    "donate": {
+        "message": "Ủng hộ"
+    },
+    "donateTitle": {
+        "message": "Ủng hộ phát triển trên Boosty"
+    },
+    "askStats": {
+        "message": "Yêu cầu đã chặn: $COUNT$, tiết kiệm ≈ $SIZE$. Nếu ABlock hữu ích với bạn, hãy ủng hộ việc phát triển",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Bạn đã dùng ABlock được một tháng. Nếu nó hữu ích, hãy ủng hộ việc phát triển"
+    },
+    "askClose": {
+        "message": "Không hiển thị lại"
+    },
+    "reportLegendGuess": {
+        "message": "? — xác định qua dấu hiệu gián tiếp"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — ước tính gần đúng"
+    },
+    "companiesNoneTitle": {
+        "message": "Không có công ty nào trong danh mục ABlock trên trang. Trang vẫn có thể có bộ đếm riêng — chúng được tính ở huy hiệu “Theo dõi”"
+    },
+    "compressionFiles": {
+        "message": "Tệp văn bản: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Không nén: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Xóa dữ liệu trang và tải lại: cookie, bộ nhớ đệm và kho lưu trữ. Huy hiệu và điểm sẽ hiển thị trang như với khách mới. Bạn sẽ bị đăng xuất khỏi trang này"
+    },
+    "clearConfirm": {
+        "message": "Xóa?"
+    },
+    "saveImage": {
+        "message": "Lưu ảnh"
+    },
+    "shareSend": {
+        "message": "Gửi qua $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Đăng lên $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Gửi dưới dạng văn bản: không thể chuyển hình ảnh nếu không tải lên máy chủ — hãy sao chép rồi dán vào tin nhắn"
+    },
+    "shareLinkOnly": {
+        "message": "Chỉ chuyển liên kết tới tiện ích — hãy sao chép hình báo cáo rồi dán vào bài đăng"
+    },
+    "auditLabel": {
+        "message": "Chi tiết"
+    },
+    "auditIssues": {
+        "message": "lưu ý: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "không có lưu ý"
+    },
+    "auditSpeed": {
+        "message": "Tốc độ"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Mã trang"
+    },
+    "auditA11y": {
+        "message": "Khả năng tiếp cận"
+    },
+    "auditSecurity": {
+        "message": "Bảo mật"
+    },
+    "auditYes": {
+        "message": "có"
+    },
+    "auditNo": {
+        "message": "không"
+    },
+    "auditLength": {
+        "message": "$COUNT$ ký tự",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "tên miền khác"
+    },
+    "auditNoImage": {
+        "message": "không có ảnh"
+    },
+    "auditNoInput": {
+        "message": "chưa có thao tác"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$/$TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Dịch chuyển bố cục"
+    },
+    "auditTtfb": {
+        "message": "Phản hồi máy chủ (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Thời gian chờ byte đầu tiên của trang từ máy chủ. Tốt — dưới 0,8 giây"
+    },
+    "auditFcp": {
+        "message": "Hiển thị đầu tiên (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Khi nội dung đầu tiên xuất hiện trên màn hình. Tốt — dưới 1,8 giây"
+    },
+    "auditLcp": {
+        "message": "Phần tử chính (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Khi phần tử lớn nhất — ảnh hoặc văn bản — được hiển thị. Chỉ số tốc độ chính của Google. Tốt — dưới 2,5 giây"
+    },
+    "auditCls": {
+        "message": "Dịch chuyển bố cục (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Nội dung nhảy nhiều đến mức nào khi tải. Tốt — dưới 0,1"
+    },
+    "auditInp": {
+        "message": "Phản hồi thao tác (INP)"
+    },
+    "auditInpHint": {
+        "message": "Độ trễ lâu nhất khi phản hồi cú nhấp hoặc nhập liệu. Tốt — dưới 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Chặn hiển thị"
+    },
+    "auditBlockingHint": {
+        "message": "Các tệp mà thiếu chúng trình duyệt không bắt đầu vẽ trang. Tệp CSS là bình thường, còn script nên tải với async hoặc defer"
+    },
+    "auditStatus": {
+        "message": "Mã phản hồi"
+    },
+    "auditStatusHint": {
+        "message": "Mã HTTP của trang: 200 — bình thường, 4xx và 5xx — lỗi"
+    },
+    "auditNoindex": {
+        "message": "Cấm lập chỉ mục"
+    },
+    "auditNoindexHint": {
+        "message": "Trang bị chặn khỏi công cụ tìm kiếm bằng thẻ noindex hoặc quy tắc trong robots.txt. Với trang đăng nhập và tài khoản cá nhân, điều này là bình thường"
+    },
+    "auditTitle": {
+        "message": "Tiêu đề (title)"
+    },
+    "auditTitleHint": {
+        "message": "Văn bản liên kết trong kết quả tìm kiếm và tên thẻ. Tối ưu — 10–70 ký tự"
+    },
+    "auditDescription": {
+        "message": "Mô tả (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Văn bản dưới liên kết trong kết quả tìm kiếm. Tối ưu — 50–170 ký tự"
+    },
+    "auditH1": {
+        "message": "Tiêu đề h1"
+    },
+    "auditH1Hint": {
+        "message": "Tiêu đề chính của trang. Thường chỉ có một"
+    },
+    "auditCanonical": {
+        "message": "URL chuẩn"
+    },
+    "auditCanonicalHint": {
+        "message": "Cho công cụ tìm kiếm biết địa chỉ chính của trang nếu trang có bản sao"
+    },
+    "auditOg": {
+        "message": "Xem trước liên kết (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Tiêu đề và ảnh mà Telegram, Zalo và các dịch vụ khác hiển thị khi chia sẻ liên kết"
+    },
+    "auditViewport": {
+        "message": "Phiên bản di động (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Không có meta viewport, điện thoại hiển thị trang như bản máy tính thu nhỏ"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Thiếu nó, trình duyệt chuyển sang chế độ tương thích với trang cũ và bố cục có thể khác"
+    },
+    "auditNoSize": {
+        "message": "Ảnh không có kích thước"
+    },
+    "auditNoSizeHint": {
+        "message": "Không có width và height, trình duyệt không biết chừa bao nhiêu chỗ cho ảnh, và bố cục nhảy khi ảnh tải xong"
+    },
+    "auditLarge": {
+        "message": "Ảnh lớn hơn cần thiết"
+    },
+    "auditLargeHint": {
+        "message": "Ảnh được truyền lớn hơn nhiều so với kích thước hiển thị — thừa dung lượng"
+    },
+    "auditModern": {
+        "message": "Ảnh WebP và AVIF"
+    },
+    "auditModernHint": {
+        "message": "Các định dạng này nhẹ hơn JPEG và PNG 25–50%"
+    },
+    "auditLang": {
+        "message": "Ngôn ngữ trang (lang)"
+    },
+    "auditLangHint": {
+        "message": "Cần cho trình đọc màn hình, công cụ dịch và công cụ tìm kiếm"
+    },
+    "auditAlt": {
+        "message": "Ảnh không có alt"
+    },
+    "auditAltHint": {
+        "message": "Mô tả ảnh cho người khiếm thị và khi ảnh không tải được"
+    },
+    "auditLabels": {
+        "message": "Trường không có nhãn"
+    },
+    "auditLabelsHint": {
+        "message": "Trình đọc màn hình sẽ không biết nói cần nhập gì vào trường"
+    },
+    "auditNames": {
+        "message": "Nút và liên kết không có tên"
+    },
+    "auditNamesHint": {
+        "message": "Ví dụ, nút biểu tượng không có aria-label: người khiếm thị chỉ nghe thấy “nút”"
+    },
+    "auditMain": {
+        "message": "Vùng chính (main)"
+    },
+    "auditMainHint": {
+        "message": "Cho phép chuyển thẳng đến nội dung, bỏ qua menu"
+    },
+    "auditZoom": {
+        "message": "Cấm phóng to"
+    },
+    "auditZoomHint": {
+        "message": "Cản trở người thị lực kém phóng to trang trên điện thoại"
+    },
+    "auditCsp": {
+        "message": "Chính sách bảo mật nội dung (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Giới hạn nơi trang được tải script — bảo vệ khỏi XSS. Nếu có 'unsafe-inline' mà không có nonce hoặc hash thì gần như không bảo vệ"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Cấm trình duyệt đoán loại tệp — bảo vệ khỏi giả mạo script"
+    },
+    "auditFrame": {
+        "message": "Chống nhúng trang"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options hoặc frame-ancestors ngăn nhúng trang vào trang khác để lừa người dùng nhấp chuột"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Bao nhiêu phần địa chỉ trang được gửi cho trang khác khi chuyển trang. Không có tiêu đề này, trình duyệt dùng giá trị mặc định an toàn"
+    },
+    "auditCache": {
+        "message": "Bộ nhớ đệm trang"
+    },
+    "auditCacheHint": {
+        "message": "Trang đến từ đâu: HIT — từ bộ nhớ đệm của máy chủ hoặc CDN, MISS — được tạo mới. Bản thân trang hiếm khi được lưu đệm, thường là ảnh, script và CSS"
+    },
+    "auditCacheBrowser": {
+        "message": "từ bộ nhớ đệm trình duyệt"
+    },
+    "auditBots": {
+        "message": "Robot và AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Quy tắc cho công cụ tìm kiếm và robot khác. Không có tệp này, robot quét mọi thứ và công cụ tìm kiếm không biết sơ đồ trang ở đâu"
+    },
+    "auditSitemap": {
+        "message": "Sơ đồ trang (sitemap)"
+    },
+    "auditSitemapHint": {
+        "message": "Danh sách trang cho công cụ tìm kiếm. Khai báo trong robots.txt bằng dòng Sitemap:"
+    },
+    "auditAi": {
+        "message": "Quy tắc cho bot AI"
+    },
+    "auditAiHint": {
+        "message": "Bot AI có được thu thập văn bản của trang cho mạng nơ-ron hay không — theo quy tắc trong robots.txt có nêu tên bot. Tiện ích biết 16 bot như vậy (GPTBot, ClaudeBot, Google-Extended…); bot có tên khác không được tính. “Đóng với tất cả” — trang đóng với mọi robot qua User-agent: *, không có quy tắc riêng cho AI"
+    },
+    "auditAiBlocked": {
+        "message": "bị cấm: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "được phép"
+    },
+    "auditAiNone": {
+        "message": "chưa đặt"
+    },
+    "auditAiAll": {
+        "message": "đóng với tất cả"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Định dạng mới: mô tả ngắn về trang bằng Markdown cho trợ lý và tác nhân AI. Hiện chưa bắt buộc"
+    },
+    "auditCspWeak": {
+        "message": "yếu"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Cấm trang và các khung nhúng truy cập camera, vị trí và các tính năng khác của trình duyệt"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Tách cửa sổ của trang khỏi các cửa sổ khác mà nó mở — bảo vệ khỏi tấn công qua window.opener"
+    },
+    "auditVersions": {
+        "message": "Phiên bản phần mềm trong tiêu đề"
+    },
+    "auditVersionsHint": {
+        "message": "Máy chủ tiết lộ phiên bản phần mềm — gợi ý cho kẻ tấn công nên thử lỗ hổng đã biết nào. Cách ẩn: server_tokens off trong nginx và Angie, expose_php = Off trong PHP"
+    },
+    "auditHidden": {
+        "message": "đã ẩn"
+    },
+    "auditSession": {
+        "message": "Cookie phiên đọc được bằng script"
+    },
+    "auditSessionHint": {
+        "message": "Cookie đăng nhập có vẻ đọc được từ JavaScript: khi bị XSS chúng có thể bị đánh cắp. Cờ HttpOnly ngăn điều này. Xác định theo tên cookie"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Thông tin liên hệ để báo lỗ hổng trong /.well-known/security.txt. Giúp nhà nghiên cứu báo vấn đề cho bạn thay vì bán nó"
+    },
+    "serverUnknownTitle": {
+        "message": "Mạng của nhà cung cấp này không có trong cơ sở dữ liệu ABlock: trong đó có các nhà cung cấp hosting, đám mây và CDN lớn"
+    },
+    "protocolH3Later": {
+        "message": "Máy chủ hỗ trợ HTTP/3. Trang này đến qua $PROTOCOL$ — thường gặp ở lần truy cập đầu: trình duyệt biết về HTTP/3 từ phản hồi của máy chủ và chuyển sang dùng cho các yêu cầu tiếp theo",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Ngôn ngữ của trình duyệt"
+    },
+    "langTitle": {
+        "message": "Ngôn ngữ giao diện"
+    },
+    "noteTitle": {
+        "message": "Ghi chú cho trang này"
+    },
+    "notePlaceholder": {
+        "message": "Ghi chú cho trang này, chỉ bạn nhìn thấy"
+    },
+    "incognitoLabel": {
+        "message": "Hoạt động ở chế độ ẩn danh"
+    },
+    "incognitoTitle": {
+        "message": "Phần cài đặt tiện ích của trình duyệt sẽ mở ra — hãy bật quyền ở chế độ ẩn danh cho ABlock tại đó"
+    }
+}

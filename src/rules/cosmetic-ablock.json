@@ -1,0 +1,13 @@
+{
+    "20minutes.fr": [
+        "#dfp_native_web",
+        "#dfp_pave_atf",
+        "#dfp_pave_btf"
+    ],
+    "novosti.rs": [
+        ".meridian-widget"
+    ],
+    "sapo.pt": [
+        "section.block-pub"
+    ]
+}

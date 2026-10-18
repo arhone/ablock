@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "th",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - บล็อกโฆษณาและตรวจเว็บไซต์"
+    },
+    "extDescription": {
+        "message": "บล็อกโฆษณาและตัวติดตาม หน้าเว็บโหลดเร็วขึ้นและใช้เน็ตน้อยลง ตรวจความเร็ว ความปลอดภัย และการติดตามของทุกเว็บไซต์"
+    },
+    "toggle": {
+        "message": "เปิด / ปิด"
+    },
+    "statusOn": {
+        "message": "การป้องกันเปิดอยู่"
+    },
+    "statusOff": {
+        "message": "การป้องกันปิดอยู่"
+    },
+    "statusSiteOff": {
+        "message": "การป้องกันปิดอยู่ในเว็บไซต์นี้"
+    },
+    "telegram": {
+        "message": "กลุ่ม Telegram"
+    },
+    "github": {
+        "message": "ร่วมพัฒนาบน GitHub"
+    },
+    "httpsOn": {
+        "message": "การเชื่อมต่อถูกเข้ารหัส"
+    },
+    "httpsOff": {
+        "message": "การเชื่อมต่อไม่ได้เข้ารหัส"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — โปรโตคอลที่เร็วที่สุด"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — โปรโตคอลสมัยใหม่"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — โปรโตคอลที่ล้าสมัย",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "ไม่ทราบโปรโตคอล (โหลดหน้าจากแคช)"
+    },
+    "loading": {
+        "message": "กำลังโหลด…"
+    },
+    "loadingTitle": {
+        "message": "หน้ายังโหลดไม่เสร็จ"
+    },
+    "seconds": {
+        "message": "$SECONDS$ วิ",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "เวลาโหลดหน้า"
+    },
+    "domains": {
+        "message": "โดเมน $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "โดเมนของบุคคลที่สาม:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…และอีก $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "ไม่มีโดเมนของบุคคลที่สาม"
+    },
+    "blocked": {
+        "message": "บล็อกแล้ว $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "ตัวติดตาม $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "บล็อกในหน้านี้\nโฆษณา: $ADS$\nตัวติดตาม: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "เว็บไซต์นี้ติดตามคุณ บล็อกตัวติดตามแล้ว: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "ไม่พบตัวติดตาม"
+    },
+    "scoreLabel": {
+        "message": "คะแนนเว็บไซต์"
+    },
+    "serverLabel": {
+        "message": "เซิร์ฟเวอร์"
+    },
+    "techLabel": {
+        "message": "สร้างด้วย"
+    },
+    "companiesLabel": {
+        "message": "ผู้ติดตาม"
+    },
+    "extraLabel": {
+        "message": "เพิ่มเติม"
+    },
+    "extendedText": {
+        "message": "โหมดขยาย: แสดงโฮสติ้ง, IPv6, HSTS, สถิติ และซ่อนพื้นที่โฆษณาและหน้าต่างคุกกี้ในทุกเว็บไซต์ ข้อมูลไม่ออกจากเบราว์เซอร์ของคุณ"
+    },
+    "extendedButton": {
+        "message": "เปิด"
+    },
+    "extendedOff": {
+        "message": "ปิดโหมดขยาย"
+    },
+    "extendedOffTitle": {
+        "message": "ส่วนขยายจะหยุดดู IP และส่วนหัวของเซิร์ฟเวอร์ หยุดเก็บสถิติ และหยุดซ่อนพื้นที่โฆษณาและหน้าต่างคุกกี้ในทุกเว็บไซต์ สิทธิ์เข้าถึงทุกเว็บไซต์จะถูกเพิกถอน คุณเปิดใหม่ได้ทุกเมื่อ"
+    },
+    "share": {
+        "message": "แชร์"
+    },
+    "copied": {
+        "message": "คัดลอกแล้ว"
+    },
+    "cookiesLabel": {
+        "message": "ซ่อนหน้าต่างขอความยินยอมคุกกี้"
+    },
+    "cookiesTitle": {
+        "message": "บล็อกบริการแบนเนอร์ขอความยินยอมคุกกี้ ในโหมดขยายจะซ่อนแบนเนอร์เองในทุกเว็บไซต์ด้วย"
+    },
+    "siteLabel": {
+        "message": "บล็อกใน $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "ยกเลิกการเลือกหากเว็บไซต์ทำงานไม่ถูกต้อง: โฆษณาและตัวติดตามในเว็บไซต์นั้นจะไม่ถูกบล็อกอีก หน้าจะโหลดใหม่"
+    },
+    "guess": {
+        "message": "ตรวจพบจากสัญญาณทางอ้อม — อาจไม่แม่นยำ"
+    },
+    "weightTitle": {
+        "message": "ขนาดหน้ารวมไฟล์ทั้งหมด"
+    },
+    "weightEstimated": {
+        "message": "ทราบขนาดที่แน่นอนของ $KNOWN$ จาก $TOTAL$ ไฟล์ ที่เหลือเป็นค่าประมาณ: เว็บไซต์บุคคลที่สามซ่อนขนาดไว้",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "หน้าถูกบีบอัด: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "ไม่บีบอัด"
+    },
+    "compressionOff": {
+        "message": "หน้าถูกส่งโดยไม่บีบอัด — โหลดช้าลง"
+    },
+    "compressionUnknown": {
+        "message": "ไม่ทราบการบีบอัด (โหลดหน้าจากแคช)"
+    },
+    "blockedCookies": {
+        "message": "หน้าต่างคุกกี้: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "ขนาด: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "ไม่ถูกบล็อก:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "พบในเว็บไซต์:\n$LIST$\nถูกบล็อกหรือไม่ แสดงในโหมดขยาย",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "บล็อกแล้ว:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "ไม่พบบริษัทที่รู้จัก"
+    },
+    "serverExtended": {
+        "message": "ในโหมดขยาย"
+    },
+    "serverReload": {
+        "message": "โหลดหน้าใหม่"
+    },
+    "serverReloadTitle": {
+        "message": "ตรวจหาเซิร์ฟเวอร์ระหว่างที่หน้ากำลังโหลด"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "ผู้ให้บริการอื่น"
+    },
+    "serverProxy": {
+        "message": "เว็บไซต์ทำงานผ่าน $NAME$ (CDN หรือการป้องกัน DDoS) — เซิร์ฟเวอร์จริงถูกซ่อนไว้",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "โฮสติ้ง: $NAME$ (จากฐานข้อมูลที่อยู่ RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "ระบุประเทศตามผู้ให้บริการ"
+    },
+    "techFound": {
+        "message": "พบในหน้า"
+    },
+    "techNone": {
+        "message": "ตรวจไม่พบ"
+    },
+    "techNoneTitle": {
+        "message": "ไม่พบสัญญาณของเอนจินหรือไลบรารีที่รู้จัก"
+    },
+    "ipv6": {
+        "message": "เชื่อมต่อผ่าน IPv6"
+    },
+    "ipv4": {
+        "message": "เชื่อมต่อผ่าน IPv4 สิ่งนี้ไม่ได้บอกว่าเว็บไซต์รองรับ IPv6 หรือไม่: ขึ้นอยู่กับเครือข่ายของคุณด้วย"
+    },
+    "hstsOn": {
+        "message": "HSTS: เบราว์เซอร์เปิดเว็บไซต์ผ่าน HTTPS เท่านั้นเสมอ"
+    },
+    "hstsOff": {
+        "message": "ไม่มี HSTS: การเข้าเว็บไซต์ครั้งแรกอาจไม่มีการเข้ารหัส"
+    },
+    "mixed": {
+        "message": "ไฟล์ HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "หน้า HTTPS โหลดไฟล์โดยไม่เข้ารหัส: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "คะแนน $SCORE$ จาก 10 ตามเกณฑ์:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "การเข้ารหัส"
+    },
+    "scoreProtocol": {
+        "message": "โปรโตคอล"
+    },
+    "scoreSpeed": {
+        "message": "ความเร็วในการโหลด"
+    },
+    "scoreWeight": {
+        "message": "ขนาดหน้า"
+    },
+    "scoreTrackers": {
+        "message": "การติดตาม"
+    },
+    "scoreDomains": {
+        "message": "โดเมนของบุคคลที่สาม"
+    },
+    "scoreCompression": {
+        "message": "การบีบอัด"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "เนื้อหาผสม"
+    },
+    "stats": {
+        "message": "คำขอที่บล็อกทั้งหมด: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "ตั้งแต่ $DATE$ ขนาดประมาณจากขนาดเฉลี่ยของไฟล์โฆษณา",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "รายงานเว็บไซต์ — เป็นรูปภาพหรือข้อความ"
+    },
+    "reportTitle": {
+        "message": "คะแนนและรายละเอียดของเว็บไซต์เป็นรูปภาพหรือข้อความ — สำหรับเพื่อนร่วมงาน ผู้รับจ้าง หรือแชต"
+    },
+    "reportDone": {
+        "message": "บันทึกแล้ว"
+    },
+    "copyIp": {
+        "message": "คัดลอก IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "คัดลอกรูปภาพ"
+    },
+    "copyText": {
+        "message": "คัดลอกข้อความและลิงก์"
+    },
+    "shareSystem": {
+        "message": "เพิ่มเติม…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ได้คะแนน $SCORE$ จาก 10 ใน ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "ตรวจเว็บไซต์ของคุณ:"
+    },
+    "donate": {
+        "message": "บริจาค"
+    },
+    "donateTitle": {
+        "message": "สนับสนุนการพัฒนาบน Boosty"
+    },
+    "askStats": {
+        "message": "คำขอที่ถูกบล็อก: $COUNT$ ประหยัดได้ ≈ $SIZE$ หาก ABlock มีประโยชน์ โปรดสนับสนุนการพัฒนา",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "คุณใช้ ABlock มาหนึ่งเดือนแล้ว หากมีประโยชน์ โปรดสนับสนุนการพัฒนา"
+    },
+    "askClose": {
+        "message": "ไม่ต้องแสดงอีก"
+    },
+    "reportLegendGuess": {
+        "message": "? — ตรวจพบจากสัญญาณทางอ้อม"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — ค่าประมาณคร่าว ๆ"
+    },
+    "companiesNoneTitle": {
+        "message": "ไม่มีบริษัทจากรายชื่อของ ABlock ในหน้านี้ แต่อาจมีตัวนับของเว็บไซต์เอง — ซึ่งนับรวมในป้าย “ตัวติดตาม”"
+    },
+    "compressionFiles": {
+        "message": "ไฟล์ข้อความ: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "ไม่บีบอัด: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "ลบข้อมูลเว็บไซต์และโหลดใหม่: คุกกี้ แคช และพื้นที่เก็บข้อมูล ป้ายและคะแนนจะแสดงเว็บไซต์ตามที่ผู้เข้าชมใหม่เห็น คุณจะถูกออกจากระบบของเว็บไซต์นี้"
+    },
+    "clearConfirm": {
+        "message": "ลบไหม?"
+    },
+    "saveImage": {
+        "message": "บันทึกรูปภาพ"
+    },
+    "shareSend": {
+        "message": "ส่งทาง $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "โพสต์บน $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "ส่งเป็นข้อความ: ส่งรูปภาพไม่ได้หากไม่อัปโหลดไปยังเซิร์ฟเวอร์ — คัดลอกรูปภาพแล้ววางในข้อความ"
+    },
+    "shareLinkOnly": {
+        "message": "ส่งเฉพาะลิงก์ของส่วนขยาย — คัดลอกรูปภาพรายงานแล้ววางในโพสต์"
+    },
+    "auditLabel": {
+        "message": "รายละเอียด"
+    },
+    "auditIssues": {
+        "message": "ปัญหา: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "ไม่มีปัญหา"
+    },
+    "auditSpeed": {
+        "message": "ความเร็ว"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "มาร์กอัป"
+    },
+    "auditA11y": {
+        "message": "การเข้าถึง"
+    },
+    "auditSecurity": {
+        "message": "ความปลอดภัย"
+    },
+    "auditYes": {
+        "message": "ใช่"
+    },
+    "auditNo": {
+        "message": "ไม่"
+    },
+    "auditLength": {
+        "message": "$COUNT$ อักขระ",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "โดเมนอื่น"
+    },
+    "auditNoImage": {
+        "message": "ไม่มีรูปภาพ"
+    },
+    "auditNoInput": {
+        "message": "ไม่มีการโต้ตอบ"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ จาก $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "การเลื่อนของเลย์เอาต์"
+    },
+    "auditTtfb": {
+        "message": "การตอบสนองของเซิร์ฟเวอร์ (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "ใช้เวลานานเท่าใดกว่าจะได้รับไบต์แรกของหน้าจากเซิร์ฟเวอร์ ดี — ต่ำกว่า 0.8 วิ"
+    },
+    "auditFcp": {
+        "message": "การแสดงผลครั้งแรก (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "เนื้อหาแรกปรากฏบนหน้าจอเมื่อใด ดี — ต่ำกว่า 1.8 วิ"
+    },
+    "auditLcp": {
+        "message": "บล็อกหลัก (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "บล็อกที่ใหญ่ที่สุด — รูปภาพหรือข้อความ — ถูกวาดเมื่อใด ตัวชี้วัดความเร็วหลักของ Google ดี — ต่ำกว่า 2.5 วิ"
+    },
+    "auditCls": {
+        "message": "การเลื่อนของเลย์เอาต์ (CLS)"
+    },
+    "auditClsHint": {
+        "message": "เนื้อหากระโดดมากแค่ไหนระหว่างโหลด ดี — ต่ำกว่า 0.1"
+    },
+    "auditInp": {
+        "message": "การตอบสนองต่อการโต้ตอบ (INP)"
+    },
+    "auditInpHint": {
+        "message": "ความล่าช้าสูงสุดในการตอบสนองต่อการคลิกหรือการป้อนข้อมูล ดี — ต่ำกว่า 200 มิลลิวินาที"
+    },
+    "auditBlocking": {
+        "message": "บล็อกการแสดงผล"
+    },
+    "auditBlockingHint": {
+        "message": "ไฟล์ที่เบราว์เซอร์ต้องรอก่อนเริ่มวาดหน้า สไตล์ไม่เป็นไร แต่สคริปต์ควรโหลดด้วย async หรือ defer"
+    },
+    "auditStatus": {
+        "message": "รหัสสถานะ"
+    },
+    "auditStatusHint": {
+        "message": "สถานะ HTTP ของหน้า: 200 — ปกติ, 4xx และ 5xx — ข้อผิดพลาด"
+    },
+    "auditNoindex": {
+        "message": "ห้ามจัดทำดัชนี"
+    },
+    "auditNoindexHint": {
+        "message": "หน้านี้ถูกซ่อนจากเครื่องมือค้นหาด้วยแท็ก noindex หรือกฎใน robots.txt เป็นเรื่องปกติสำหรับหน้าเข้าสู่ระบบและบัญชีผู้ใช้"
+    },
+    "auditTitle": {
+        "message": "ชื่อเรื่อง (title)"
+    },
+    "auditTitleHint": {
+        "message": "ข้อความลิงก์ในผลการค้นหาและชื่อแท็บ ดีที่สุด — 10–70 อักขระ"
+    },
+    "auditDescription": {
+        "message": "คำอธิบาย (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "ข้อความใต้ลิงก์ในผลการค้นหา ดีที่สุด — 50–170 อักขระ"
+    },
+    "auditH1": {
+        "message": "หัวเรื่อง h1"
+    },
+    "auditH1Hint": {
+        "message": "หัวเรื่องหลักของหน้า โดยปกติมีหนึ่งรายการ"
+    },
+    "auditCanonical": {
+        "message": "URL หลัก (canonical)"
+    },
+    "auditCanonicalHint": {
+        "message": "บอกเครื่องมือค้นหาว่าที่อยู่หลักของหน้าคืออะไร หากหน้ามีสำเนา"
+    },
+    "auditOg": {
+        "message": "ตัวอย่างลิงก์ (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "ชื่อเรื่องและรูปภาพที่ Telegram, Slack และบริการอื่น ๆ แสดงเมื่อแชร์ลิงก์"
+    },
+    "auditViewport": {
+        "message": "เวอร์ชันมือถือ (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "หากไม่มี meta viewport โทรศัพท์จะแสดงหน้าเป็นเวอร์ชันเดสก์ท็อปที่ย่อลง"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "หากไม่มี เบราว์เซอร์จะเปลี่ยนเป็นโหมดความเข้ากันได้สำหรับเว็บไซต์เก่า และเลย์เอาต์อาจแตกต่างไป"
+    },
+    "auditNoSize": {
+        "message": "รูปภาพที่ไม่ระบุขนาด"
+    },
+    "auditNoSizeHint": {
+        "message": "หากไม่มี width และ height เบราว์เซอร์จะไม่รู้ว่าต้องเว้นที่ให้รูปภาพเท่าใด และเลย์เอาต์จะกระโดดเมื่อรูปภาพโหลด"
+    },
+    "auditLarge": {
+        "message": "รูปภาพใหญ่เกินไป"
+    },
+    "auditLargeHint": {
+        "message": "รูปภาพถูกส่งมาใหญ่กว่าขนาดที่แสดงอย่างเห็นได้ชัด — น้ำหนักเกินจำเป็น"
+    },
+    "auditModern": {
+        "message": "รูปภาพ WebP และ AVIF"
+    },
+    "auditModernHint": {
+        "message": "รูปแบบเหล่านี้เล็กกว่า JPEG และ PNG 25–50%"
+    },
+    "auditLang": {
+        "message": "ภาษาของหน้า (lang)"
+    },
+    "auditLangHint": {
+        "message": "จำเป็นสำหรับโปรแกรมอ่านหน้าจอ เครื่องมือแปล และเครื่องมือค้นหา"
+    },
+    "auditAlt": {
+        "message": "รูปภาพที่ไม่มี alt"
+    },
+    "auditAltHint": {
+        "message": "คำอธิบายรูปภาพสำหรับผู้พิการทางสายตาและกรณีที่รูปภาพโหลดไม่ขึ้น"
+    },
+    "auditLabels": {
+        "message": "ช่องที่ไม่มีป้ายกำกับ"
+    },
+    "auditLabelsHint": {
+        "message": "โปรแกรมอ่านหน้าจอจะบอกไม่ได้ว่าต้องป้อนอะไรในช่อง"
+    },
+    "auditNames": {
+        "message": "ปุ่มและลิงก์ที่ไม่มีชื่อ"
+    },
+    "auditNamesHint": {
+        "message": "เช่น ปุ่มไอคอนที่ไม่มี aria-label: ผู้พิการทางสายตาจะได้ยินแค่ “ปุ่ม”"
+    },
+    "auditMain": {
+        "message": "พื้นที่หลัก (main)"
+    },
+    "auditMainHint": {
+        "message": "ช่วยให้ข้ามเมนูไปยังเนื้อหาได้ทันที"
+    },
+    "auditZoom": {
+        "message": "ปิดการซูม"
+    },
+    "auditZoomHint": {
+        "message": "ผู้ที่มีสายตาเลือนรางจะขยายหน้าบนโทรศัพท์ไม่ได้"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "จำกัดแหล่งที่หน้าสามารถโหลดสคริปต์ได้ — ป้องกัน XSS หากมี 'unsafe-inline' โดยไม่มี nonce หรือ hash แทบจะไม่ได้ป้องกัน"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "ห้ามเบราว์เซอร์เดาประเภทไฟล์ — ป้องกันการปลอมสคริปต์"
+    },
+    "auditFrame": {
+        "message": "การป้องกันการฝังในเฟรม"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options หรือ frame-ancestors ป้องกันไม่ให้นำเว็บไซต์ไปฝังในหน้าของผู้อื่นเพื่อหลอกให้ผู้ใช้คลิก"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "ส่งที่อยู่หน้าให้เว็บไซต์อื่นมากแค่ไหนเมื่อเปลี่ยนหน้า หากไม่มีส่วนหัวนี้ เบราว์เซอร์จะใช้ค่าเริ่มต้นที่ปลอดภัย"
+    },
+    "auditCache": {
+        "message": "แคชของหน้า"
+    },
+    "auditCacheHint": {
+        "message": "หน้ามาจากไหน: HIT — จากแคชของเซิร์ฟเวอร์หรือ CDN, MISS — สร้างใหม่ ตัวหน้าเองไม่ค่อยถูกแคช มักเป็นรูปภาพ สคริปต์ และสไตล์"
+    },
+    "auditCacheBrowser": {
+        "message": "จากแคชของเบราว์เซอร์"
+    },
+    "auditBots": {
+        "message": "โรบอตและ AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "กฎสำหรับเครื่องมือค้นหาและโรบอตอื่น ๆ หากไม่มีไฟล์นี้ โรบอตจะรวบรวมข้อมูลทุกอย่าง และเครื่องมือค้นหาจะไม่รู้ว่าแผนผังเว็บไซต์อยู่ที่ไหน"
+    },
+    "auditSitemap": {
+        "message": "แผนผังเว็บไซต์"
+    },
+    "auditSitemapHint": {
+        "message": "รายการหน้าสำหรับเครื่องมือค้นหา ระบุใน robots.txt ด้วยบรรทัด Sitemap:"
+    },
+    "auditAi": {
+        "message": "กฎสำหรับบอต AI"
+    },
+    "auditAiHint": {
+        "message": "บอต AI เก็บข้อความของเว็บไซต์ไปใช้กับโครงข่ายประสาทได้หรือไม่ — ตามกฎใน robots.txt ที่ระบุชื่อบอต ส่วนขยายรู้จักบอตแบบนี้ 16 ตัว (GPTBot, ClaudeBot, Google-Extended ฯลฯ) บอตที่ใช้ชื่ออื่นจะไม่นับ “ปิดสำหรับทุกตัว” — เว็บไซต์ปิดกั้นโรบอตทั้งหมดด้วย User-agent: * โดยไม่มีกฎเฉพาะสำหรับ AI"
+    },
+    "auditAiBlocked": {
+        "message": "ห้าม: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "อนุญาต"
+    },
+    "auditAiNone": {
+        "message": "ไม่ได้ตั้งค่า"
+    },
+    "auditAiAll": {
+        "message": "ปิดสำหรับทุกตัว"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "รูปแบบใหม่: คำอธิบายเว็บไซต์สั้น ๆ เป็น Markdown สำหรับผู้ช่วยและเอเจนต์ AI ตอนนี้ยังไม่บังคับ"
+    },
+    "auditCspWeak": {
+        "message": "อ่อน"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "ห้ามหน้าและเฟรมที่ฝังไว้เข้าถึงกล้อง ตำแหน่ง และความสามารถอื่น ๆ ของเบราว์เซอร์"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "แยกหน้าต่างของเว็บไซต์ออกจากหน้าต่างอื่นที่เว็บไซต์เปิด — ป้องกันการโจมตีผ่าน window.opener"
+    },
+    "auditVersions": {
+        "message": "เวอร์ชันซอฟต์แวร์ในส่วนหัว"
+    },
+    "auditVersionsHint": {
+        "message": "เซิร์ฟเวอร์เปิดเผยเวอร์ชันซอฟต์แวร์ — เป็นเบาะแสให้ผู้โจมตีรู้ว่าควรลองช่องโหว่ใดที่รู้จัก วิธีซ่อน: server_tokens off ใน nginx และ Angie, expose_php = Off ใน PHP"
+    },
+    "auditHidden": {
+        "message": "ซ่อนอยู่"
+    },
+    "auditSession": {
+        "message": "คุกกี้เซสชันที่สคริปต์อ่านได้"
+    },
+    "auditSessionHint": {
+        "message": "ดูเหมือนว่า JavaScript อ่านคุกกี้การเข้าสู่ระบบได้: หากมี XSS คุกกี้อาจถูกขโมย แฟล็ก HttpOnly ช่วยป้องกันได้ ตรวจพบจากชื่อคุกกี้"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "ช่องทางติดต่อสำหรับรายงานช่องโหว่ใน /.well-known/security.txt ช่วยให้นักวิจัยแจ้งปัญหาให้คุณแทนที่จะนำไปขาย"
+    },
+    "serverUnknownTitle": {
+        "message": "เครือข่ายของผู้ให้บริการรายนี้ไม่อยู่ในฐานข้อมูลของ ABlock ซึ่งครอบคลุมโฮสติ้งรายใหญ่ คลาวด์ และ CDN"
+    },
+    "protocolH3Later": {
+        "message": "เซิร์ฟเวอร์รองรับ HTTP/3 หน้านี้มาทาง $PROTOCOL$ — เกิดขึ้นในการเข้าชมครั้งแรก: เบราว์เซอร์รู้เรื่อง HTTP/3 จากการตอบกลับของเซิร์ฟเวอร์ และเปลี่ยนไปใช้กับคำขอถัดไป",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "ภาษาของเบราว์เซอร์"
+    },
+    "langTitle": {
+        "message": "ภาษาของอินเทอร์เฟซ"
+    },
+    "noteTitle": {
+        "message": "บันทึกสำหรับเว็บไซต์นี้"
+    },
+    "notePlaceholder": {
+        "message": "บันทึกสำหรับเว็บไซต์นี้ เห็นได้เฉพาะคุณ"
+    },
+    "incognitoLabel": {
+        "message": "ทำงานในโหมดไม่ระบุตัวตน"
+    },
+    "incognitoTitle": {
+        "message": "การตั้งค่าส่วนขยายของเบราว์เซอร์จะเปิดขึ้น เปิดสิทธิ์ในโหมดไม่ระบุตัวตนสำหรับ ABlock ที่นั่น"
+    }
+}

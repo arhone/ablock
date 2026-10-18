@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "ar",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - مانع الإعلانات وفحص المواقع"
+    },
+    "extDescription": {
+        "message": "يحظر الإعلانات وأدوات التتبع: صفحات أسرع واستهلاك أقل للبيانات. يفحص سرعة أي موقع وأمانه والتتبع فيه."
+    },
+    "toggle": {
+        "message": "تشغيل / إيقاف"
+    },
+    "statusOn": {
+        "message": "الحماية مفعّلة"
+    },
+    "statusOff": {
+        "message": "الحماية متوقفة"
+    },
+    "statusSiteOff": {
+        "message": "الحماية متوقفة على هذا الموقع"
+    },
+    "telegram": {
+        "message": "مجموعة Telegram"
+    },
+    "github": {
+        "message": "ساهم على GitHub"
+    },
+    "httpsOn": {
+        "message": "الاتصال مشفّر"
+    },
+    "httpsOff": {
+        "message": "الاتصال غير مشفّر"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — أسرع بروتوكول"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — بروتوكول حديث"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — بروتوكول قديم",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "البروتوكول غير معروف (حُمّلت الصفحة من ذاكرة التخزين المؤقت)"
+    },
+    "loading": {
+        "message": "جارٍ التحميل…"
+    },
+    "loadingTitle": {
+        "message": "لا تزال الصفحة قيد التحميل"
+    },
+    "seconds": {
+        "message": "$SECONDS$ ث",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "وقت تحميل الصفحة"
+    },
+    "domains": {
+        "message": "النطاقات $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "نطاقات الجهات الخارجية:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…و$COUNT$ أخرى",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "لا توجد نطاقات لجهات خارجية"
+    },
+    "blocked": {
+        "message": "المحظور $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "أدوات التتبع $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "المحظور في هذه الصفحة\nالإعلانات: $ADS$\nأدوات التتبع: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "هذا الموقع يتتبعك. أدوات التتبع المحظورة: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "لم يُعثر على أدوات تتبع"
+    },
+    "scoreLabel": {
+        "message": "تقييم الموقع"
+    },
+    "serverLabel": {
+        "message": "الخادم"
+    },
+    "techLabel": {
+        "message": "مبني باستخدام"
+    },
+    "companiesLabel": {
+        "message": "يتتبعك"
+    },
+    "extraLabel": {
+        "message": "المزيد"
+    },
+    "extendedText": {
+        "message": "الوضع الموسّع: الاستضافة وIPv6 وHSTS والإحصاءات وإخفاء أماكن الإعلانات ونوافذ ملفات تعريف الارتباط على جميع المواقع. لا تغادر البيانات متصفحك أبدًا."
+    },
+    "extendedButton": {
+        "message": "تشغيل"
+    },
+    "extendedOff": {
+        "message": "إيقاف الوضع الموسّع"
+    },
+    "extendedOffTitle": {
+        "message": "ستتوقف الإضافة عن رؤية عناوين IP للخوادم وترويساتها، وعن حفظ الإحصاءات وإخفاء أماكن الإعلانات ونوافذ ملفات تعريف الارتباط على جميع المواقع؛ وسيُلغى الوصول إلى جميع المواقع. يمكنك تشغيله مجددًا في أي وقت"
+    },
+    "share": {
+        "message": "مشاركة"
+    },
+    "copied": {
+        "message": "تم النسخ"
+    },
+    "cookiesLabel": {
+        "message": "إخفاء نوافذ الموافقة على ملفات تعريف الارتباط"
+    },
+    "cookiesTitle": {
+        "message": "يحظر خدمات لافتات الموافقة على ملفات تعريف الارتباط. وفي الوضع الموسّع يخفي اللافتات نفسها على أي موقع"
+    },
+    "siteLabel": {
+        "message": "الحظر على $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "ألغِ التحديد إذا كان الموقع لا يعمل بشكل صحيح: لن تُحظر الإعلانات وأدوات التتبع عليه بعد الآن. ستُعاد تحميل الصفحة"
+    },
+    "guess": {
+        "message": "اكتُشف بعلامات غير مباشرة — قد لا يكون دقيقًا"
+    },
+    "weightTitle": {
+        "message": "حجم الصفحة مع جميع الملفات"
+    },
+    "weightEstimated": {
+        "message": "الحجم الدقيق معروف لـ $KNOWN$ من $TOTAL$ ملفًا، والباقي تقديري: المواقع الخارجية تخفي الحجم",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "الصفحة مضغوطة: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "بلا ضغط"
+    },
+    "compressionOff": {
+        "message": "تُرسل الصفحة دون ضغط — فتُحمّل أبطأ"
+    },
+    "compressionUnknown": {
+        "message": "الضغط غير معروف (حُمّلت الصفحة من ذاكرة التخزين المؤقت)"
+    },
+    "blockedCookies": {
+        "message": "نوافذ ملفات تعريف الارتباط: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "الحجم: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "غير محظورة:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "عُثر عليها في الموقع:\n$LIST$\nيظهر ما إذا كانت محظورة في الوضع الموسّع",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "محظورة:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "لم يُعثر على شركات معروفة"
+    },
+    "serverExtended": {
+        "message": "في الوضع الموسّع"
+    },
+    "serverReload": {
+        "message": "أعد تحميل الصفحة"
+    },
+    "serverReloadTitle": {
+        "message": "يُكتشف الخادم أثناء تحميل الصفحة"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "مزوّد آخر"
+    },
+    "serverProxy": {
+        "message": "يعمل الموقع خلف $NAME$ (شبكة CDN أو حماية من DDoS) — الخادم الحقيقي مخفي",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "الاستضافة: $NAME$ (من قاعدة عناوين RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "تُحدَّد الدولة حسب المزوّد"
+    },
+    "techFound": {
+        "message": "عُثر عليه في الصفحة"
+    },
+    "techNone": {
+        "message": "لم يُكتشف"
+    },
+    "techNoneTitle": {
+        "message": "لم يُعثر على علامات لمحركات أو مكتبات معروفة"
+    },
+    "ipv6": {
+        "message": "متصل عبر IPv6"
+    },
+    "ipv4": {
+        "message": "متصل عبر IPv4. هذا لا يدل على ما إذا كان الموقع يدعم IPv6: فذلك يعتمد أيضًا على شبكتك"
+    },
+    "hstsOn": {
+        "message": "HSTS: يفتح المتصفح الموقع دائمًا عبر HTTPS فقط"
+    },
+    "hstsOff": {
+        "message": "لا يوجد HSTS: قد تتم الزيارة الأولى للموقع دون تشفير"
+    },
+    "mixed": {
+        "message": "ملفات HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "تحمّل صفحة HTTPS ملفات دون تشفير: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "التقييم $SCORE$ من 10 حسب:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "التشفير"
+    },
+    "scoreProtocol": {
+        "message": "البروتوكول"
+    },
+    "scoreSpeed": {
+        "message": "سرعة التحميل"
+    },
+    "scoreWeight": {
+        "message": "حجم الصفحة"
+    },
+    "scoreTrackers": {
+        "message": "التتبع"
+    },
+    "scoreDomains": {
+        "message": "نطاقات الجهات الخارجية"
+    },
+    "scoreCompression": {
+        "message": "الضغط"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "محتوى مختلط"
+    },
+    "stats": {
+        "message": "إجمالي الطلبات المحظورة: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "منذ $DATE$. الحجم مقدّر بمتوسط حجم ملفات الإعلانات",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "تقرير الموقع — كصورة أو نص"
+    },
+    "reportTitle": {
+        "message": "تقييم الموقع وتفاصيله كصورة أو نص — للزملاء أو للمقاول أو للمحادثة"
+    },
+    "reportDone": {
+        "message": "تم الحفظ"
+    },
+    "copyIp": {
+        "message": "نسخ IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "نسخ الصورة"
+    },
+    "copyText": {
+        "message": "نسخ النص والرابط"
+    },
+    "shareSystem": {
+        "message": "المزيد…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — التقييم $SCORE$ من 10 في ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "افحص موقعك:"
+    },
+    "donate": {
+        "message": "تبرّع"
+    },
+    "donateTitle": {
+        "message": "ادعم التطوير على Boosty"
+    },
+    "askStats": {
+        "message": "الطلبات المحظورة: $COUNT$، تم توفير ≈ $SIZE$. إذا كان ABlock مفيدًا لك، فادعم تطويره",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "أنت تستخدم ABlock منذ شهر. إذا كان مفيدًا لك، فادعم تطويره"
+    },
+    "askClose": {
+        "message": "عدم الإظهار مرة أخرى"
+    },
+    "reportLegendGuess": {
+        "message": "? — اكتُشف بعلامات غير مباشرة"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — تقدير تقريبي"
+    },
+    "companiesNoneTitle": {
+        "message": "لا توجد في هذه الصفحة شركات من دليل ABlock. قد تبقى عدادات الموقع الخاصة — وتحسبها شارة «أدوات التتبع»"
+    },
+    "compressionFiles": {
+        "message": "الملفات النصية: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "غير مضغوطة: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "حذف بيانات الموقع وإعادة التحميل: ملفات تعريف الارتباط وذاكرة التخزين المؤقت والتخزين. ستعرض الشارات والتقييم الموقع كما يراه زائر جديد. سيتم تسجيل خروجك من هذا الموقع"
+    },
+    "clearConfirm": {
+        "message": "حذف؟"
+    },
+    "saveImage": {
+        "message": "حفظ الصورة"
+    },
+    "shareSend": {
+        "message": "إرسال عبر $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "النشر على $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "يُرسل كنص: لا يمكن تمرير صورة دون رفعها إلى خادم — انسخها والصقها في الرسالة"
+    },
+    "shareLinkOnly": {
+        "message": "يُمرَّر رابط الإضافة فقط — انسخ صورة التقرير والصقها في المنشور"
+    },
+    "auditLabel": {
+        "message": "التفاصيل"
+    },
+    "auditIssues": {
+        "message": "المشكلات: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "لا مشكلات"
+    },
+    "auditSpeed": {
+        "message": "السرعة"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "الترميز"
+    },
+    "auditA11y": {
+        "message": "إمكانية الوصول"
+    },
+    "auditSecurity": {
+        "message": "الأمان"
+    },
+    "auditYes": {
+        "message": "نعم"
+    },
+    "auditNo": {
+        "message": "لا"
+    },
+    "auditLength": {
+        "message": "$COUNT$ حرف",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "نطاق آخر"
+    },
+    "auditNoImage": {
+        "message": "بلا صورة"
+    },
+    "auditNoInput": {
+        "message": "لا تفاعلات"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ من $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "إزاحات التخطيط"
+    },
+    "auditTtfb": {
+        "message": "استجابة الخادم (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "الوقت المستغرق لتلقي أول بايت من الصفحة من الخادم. جيد — أقل من 0.8 ث"
+    },
+    "auditFcp": {
+        "message": "أول رسم (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "متى ظهر أول محتوى على الشاشة. جيد — أقل من 1.8 ث"
+    },
+    "auditLcp": {
+        "message": "الكتلة الرئيسية (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "متى رُسمت أكبر كتلة — صورة أو نص. مقياس السرعة الرئيسي لدى Google. جيد — أقل من 2.5 ث"
+    },
+    "auditCls": {
+        "message": "إزاحات التخطيط (CLS)"
+    },
+    "auditClsHint": {
+        "message": "مقدار قفز المحتوى أثناء التحميل. جيد — أقل من 0.1"
+    },
+    "auditInp": {
+        "message": "الاستجابة للتفاعل (INP)"
+    },
+    "auditInpHint": {
+        "message": "أطول تأخير في الاستجابة لنقرة أو إدخال. جيد — أقل من 200 مللي ثانية"
+    },
+    "auditBlocking": {
+        "message": "تعيق العرض"
+    },
+    "auditBlockingHint": {
+        "message": "ملفات ينتظرها المتصفح قبل أن يبدأ رسم الصفحة. الأنماط لا بأس بها، لكن يُفضّل تحميل النصوص البرمجية باستخدام async أو defer"
+    },
+    "auditStatus": {
+        "message": "رمز الحالة"
+    },
+    "auditStatusHint": {
+        "message": "حالة HTTP للصفحة: 200 — سليمة، 4xx و5xx — خطأ"
+    },
+    "auditNoindex": {
+        "message": "الفهرسة محظورة"
+    },
+    "auditNoindexHint": {
+        "message": "الصفحة مخفية عن محركات البحث بوسم noindex أو بقاعدة في robots.txt. هذا طبيعي لصفحات تسجيل الدخول وحسابات المستخدمين"
+    },
+    "auditTitle": {
+        "message": "العنوان (title)"
+    },
+    "auditTitleHint": {
+        "message": "نص الرابط في نتائج البحث واسم علامة التبويب. الأفضل — 10–70 حرفًا"
+    },
+    "auditDescription": {
+        "message": "الوصف (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "النص أسفل الرابط في نتائج البحث. الأفضل — 50–170 حرفًا"
+    },
+    "auditH1": {
+        "message": "عناوين h1"
+    },
+    "auditH1Hint": {
+        "message": "العنوان الرئيسي للصفحة. عادةً يوجد واحد"
+    },
+    "auditCanonical": {
+        "message": "عنوان URL الأساسي"
+    },
+    "auditCanonicalHint": {
+        "message": "يُعلم محركات البحث بالعنوان الرئيسي للصفحة إن كانت لها نسخ"
+    },
+    "auditOg": {
+        "message": "معاينة الرابط (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "العنوان والصورة اللذان يعرضهما Telegram وSlack وخدمات أخرى عند مشاركة رابط"
+    },
+    "auditViewport": {
+        "message": "نسخة الجوال (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "بدون meta viewport تعرض الهواتف الصفحة كنسخة مصغّرة لسطح المكتب"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "بدونه ينتقل المتصفح إلى وضع التوافق مع المواقع القديمة وقد يختلف التخطيط"
+    },
+    "auditNoSize": {
+        "message": "صور بلا أبعاد"
+    },
+    "auditNoSizeHint": {
+        "message": "بدون width وheight لا يعرف المتصفح المساحة التي يحجزها للصورة، فيقفز التخطيط عند تحميلها"
+    },
+    "auditLarge": {
+        "message": "صور كبيرة جدًا"
+    },
+    "auditLargeHint": {
+        "message": "تُرسل الصورة أكبر بكثير مما تُعرض — وزن زائد"
+    },
+    "auditModern": {
+        "message": "صور WebP وAVIF"
+    },
+    "auditModernHint": {
+        "message": "هذه الصيغ أصغر بنسبة 25–50% من JPEG وPNG"
+    },
+    "auditLang": {
+        "message": "لغة الصفحة (lang)"
+    },
+    "auditLangHint": {
+        "message": "تحتاجها قارئات الشاشة وأدوات الترجمة ومحركات البحث"
+    },
+    "auditAlt": {
+        "message": "صور بلا alt"
+    },
+    "auditAltHint": {
+        "message": "وصف للصورة للمستخدمين المكفوفين وفي حال تعذّر تحميلها"
+    },
+    "auditLabels": {
+        "message": "حقول بلا تسميات"
+    },
+    "auditLabelsHint": {
+        "message": "لن يتمكن قارئ الشاشة من إخبار المستخدم بما يجب إدخاله في الحقل"
+    },
+    "auditNames": {
+        "message": "أزرار وروابط بلا أسماء"
+    },
+    "auditNamesHint": {
+        "message": "مثلًا زر أيقونة بلا aria-label: سيسمع المستخدم الكفيف كلمة «زر» فقط"
+    },
+    "auditMain": {
+        "message": "المنطقة الرئيسية (main)"
+    },
+    "auditMainHint": {
+        "message": "تتيح الانتقال مباشرة إلى المحتوى متجاوزًا القائمة"
+    },
+    "auditZoom": {
+        "message": "التكبير معطّل"
+    },
+    "auditZoomHint": {
+        "message": "يمنع ضعاف البصر من تكبير الصفحة على الهاتف"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "تقيّد المصادر التي يمكن للصفحة تحميل النصوص البرمجية منها — حماية من XSS. إن احتوت على 'unsafe-inline' دون nonce أو hash فهي بالكاد تحمي"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "يمنع المتصفح من تخمين أنواع الملفات — حماية من انتحال النصوص البرمجية"
+    },
+    "auditFrame": {
+        "message": "الحماية من التضمين"
+    },
+    "auditFrameHint": {
+        "message": "يمنع X-Frame-Options أو frame-ancestors تضمين الموقع في صفحة غريبة لخداع المستخدمين ودفعهم إلى النقر"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "مقدار ما يُمرَّر من عنوان الصفحة إلى المواقع الأخرى عند الانتقال. بدون هذه الترويسة يستخدم المتصفح قيمة افتراضية آمنة"
+    },
+    "auditCache": {
+        "message": "ذاكرة التخزين المؤقت للصفحة"
+    },
+    "auditCacheHint": {
+        "message": "من أين جاءت الصفحة: HIT — من ذاكرة الخادم أو CDN، وMISS — أُنشئت من جديد. نادرًا ما تُخزَّن الصفحات نفسها مؤقتًا؛ عادةً الصور والنصوص البرمجية والأنماط"
+    },
+    "auditCacheBrowser": {
+        "message": "من ذاكرة المتصفح المؤقتة"
+    },
+    "auditBots": {
+        "message": "الروبوتات والذكاء الاصطناعي"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "قواعد لمحركات البحث والروبوتات الأخرى. بدون الملف تزحف الروبوتات إلى كل شيء، ولا تعرف محركات البحث مكان خريطة الموقع"
+    },
+    "auditSitemap": {
+        "message": "خريطة الموقع"
+    },
+    "auditSitemapHint": {
+        "message": "قائمة الصفحات لمحركات البحث. تُحدَّد في robots.txt بسطر Sitemap:"
+    },
+    "auditAi": {
+        "message": "قواعد روبوتات الذكاء الاصطناعي"
+    },
+    "auditAiHint": {
+        "message": "ما إذا كان يُسمح لروبوتات الذكاء الاصطناعي بجمع نصوص الموقع للشبكات العصبية — وفقًا لقواعد robots.txt التي تسمّي الروبوت. تعرف الإضافة 16 روبوتًا من هذا النوع (GPTBot وClaudeBot وGoogle-Extended وغيرها)؛ ولا تُحتسب الروبوتات بأسماء أخرى. «مغلق أمام الجميع» — الموقع مغلق أمام كل الروبوتات عبر User-agent: * دون قواعد خاصة بالذكاء الاصطناعي"
+    },
+    "auditAiBlocked": {
+        "message": "محظورة: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "مسموح"
+    },
+    "auditAiNone": {
+        "message": "غير محدد"
+    },
+    "auditAiAll": {
+        "message": "مغلق أمام الجميع"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "صيغة جديدة: وصف موجز للموقع بلغة Markdown لمساعدي ووكلاء الذكاء الاصطناعي. اختياري حتى الآن"
+    },
+    "auditCspWeak": {
+        "message": "ضعيفة"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "يمنع الصفحة والإطارات المضمّنة من الوصول إلى الكاميرا والموقع الجغرافي وميزات المتصفح الأخرى"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "يعزل نافذة الموقع عن النوافذ الأخرى التي يفتحها — حماية من الهجمات عبر window.opener"
+    },
+    "auditVersions": {
+        "message": "إصدارات البرامج في الترويسات"
+    },
+    "auditVersionsHint": {
+        "message": "يكشف الخادم إصدارات البرامج — تلميح للمهاجمين بشأن الثغرات المعروفة التي يمكن تجربتها. لإخفائها: server_tokens off في nginx وAngie، وexpose_php = Off في PHP"
+    },
+    "auditHidden": {
+        "message": "مخفية"
+    },
+    "auditSession": {
+        "message": "ملفات تعريف ارتباط الجلسة مقروءة للنصوص البرمجية"
+    },
+    "auditSessionHint": {
+        "message": "يبدو أن ملفات تعريف ارتباط تسجيل الدخول قابلة للقراءة من JavaScript: ومع XSS يمكن سرقتها. تمنع علامة HttpOnly ذلك. اكتُشف من اسم ملف تعريف الارتباط"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "جهات الاتصال للإبلاغ عن الثغرات في /.well-known/security.txt. يساعد الباحث على إبلاغك بالمشكلة بدلًا من بيعها"
+    },
+    "serverUnknownTitle": {
+        "message": "شبكات هذا المزوّد ليست في قاعدة بيانات ABlock: فهي تضم كبرى شركات الاستضافة والسحابات وشبكات CDN"
+    },
+    "protocolH3Later": {
+        "message": "يدعم الخادم HTTP/3. وصلت هذه الصفحة عبر $PROTOCOL$ — يحدث ذلك في الزيارة الأولى: يعرف المتصفح بوجود HTTP/3 من استجابة الخادم وينتقل إليه في الطلبات التالية",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "لغة المتصفح"
+    },
+    "langTitle": {
+        "message": "لغة الواجهة"
+    },
+    "noteTitle": {
+        "message": "ملاحظة عن الموقع"
+    },
+    "notePlaceholder": {
+        "message": "ملاحظة عن الموقع، تظهر لك فقط"
+    },
+    "incognitoLabel": {
+        "message": "العمل في وضع التصفح المتخفي"
+    },
+    "incognitoTitle": {
+        "message": "ستُفتح إعدادات الإضافات في المتصفح؛ فعِّل هناك السماح لـ ABlock في وضع التصفح المتخفي"
+    }
+}

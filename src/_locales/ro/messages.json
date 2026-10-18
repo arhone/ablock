@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "ro",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Blocare reclame și analiză site-uri"
+    },
+    "extDescription": {
+        "message": "Blochează reclamele și trackerele: pagini mai rapide, mai puține date. Verifică viteza, securitatea și urmărirea pe orice site."
+    },
+    "toggle": {
+        "message": "Activează / dezactivează"
+    },
+    "statusOn": {
+        "message": "Protecția este activată"
+    },
+    "statusOff": {
+        "message": "Protecția este dezactivată"
+    },
+    "statusSiteOff": {
+        "message": "Protecția este dezactivată pe acest site"
+    },
+    "telegram": {
+        "message": "Grup Telegram"
+    },
+    "github": {
+        "message": "Contribuie pe GitHub"
+    },
+    "httpsOn": {
+        "message": "Conexiunea este criptată"
+    },
+    "httpsOff": {
+        "message": "Conexiunea nu este criptată"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — cel mai rapid protocol"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — un protocol modern"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — un protocol învechit",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protocol necunoscut (pagina a fost încărcată din cache)"
+    },
+    "loading": {
+        "message": "Se încarcă…"
+    },
+    "loadingTitle": {
+        "message": "Pagina încă se încarcă"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Timpul de încărcare al paginii"
+    },
+    "domains": {
+        "message": "Domenii $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Domenii terțe:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…încă $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Niciun domeniu terț"
+    },
+    "blocked": {
+        "message": "Blocate $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Urmăritori $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Blocate pe această pagină\nReclame: $ADS$\nUrmăritori: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Acest site vă urmărește. Urmăritori blocați: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Nu s-au găsit urmăritori"
+    },
+    "scoreLabel": {
+        "message": "Nota site-ului"
+    },
+    "serverLabel": {
+        "message": "Server"
+    },
+    "techLabel": {
+        "message": "Construit cu"
+    },
+    "companiesLabel": {
+        "message": "Urmărit de"
+    },
+    "extraLabel": {
+        "message": "Altele"
+    },
+    "extendedText": {
+        "message": "Mod extins: găzduire, IPv6, HSTS, statistici și ascunderea spațiilor publicitare și a ferestrelor despre cookie-uri pe toate site-urile. Datele nu părăsesc niciodată browserul."
+    },
+    "extendedButton": {
+        "message": "Activează"
+    },
+    "extendedOff": {
+        "message": "Dezactivează modul extins"
+    },
+    "extendedOffTitle": {
+        "message": "Extensia nu va mai vedea IP-urile și antetele serverelor, nu va mai ține statistici și nu va mai ascunde spațiile publicitare și ferestrele despre cookie-uri pe toate site-urile; accesul la toate site-urile va fi revocat. Îl puteți reactiva oricând"
+    },
+    "share": {
+        "message": "Distribuie"
+    },
+    "copied": {
+        "message": "Copiat"
+    },
+    "cookiesLabel": {
+        "message": "Ascunde ferestrele de consimțământ pentru cookie-uri"
+    },
+    "cookiesTitle": {
+        "message": "Blochează serviciile de bannere de consimțământ pentru cookie-uri. În modul extins ascunde și bannerele în sine pe orice site"
+    },
+    "siteLabel": {
+        "message": "Blochează pe $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Debifați dacă site-ul nu funcționează corect: reclamele și urmăritorii nu vor mai fi blocați pe el. Pagina se va reîncărca"
+    },
+    "guess": {
+        "message": "Detectat după semne indirecte — poate fi inexact"
+    },
+    "weightTitle": {
+        "message": "Dimensiunea paginii cu toate fișierele"
+    },
+    "weightEstimated": {
+        "message": "Dimensiunea exactă este cunoscută pentru $KNOWN$ din $TOTAL$ fișiere, restul sunt estimate: site-urile terțe ascund dimensiunea",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Pagina este comprimată: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Fără compresie"
+    },
+    "compressionOff": {
+        "message": "Pagina este trimisă necomprimată — se încarcă mai încet"
+    },
+    "compressionUnknown": {
+        "message": "Compresie necunoscută (pagina a fost încărcată din cache)"
+    },
+    "blockedCookies": {
+        "message": "Ferestre despre cookie-uri: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Dimensiune: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Neblocate:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Găsite pe site:\n$LIST$\nDacă sunt blocate se vede în modul extins",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Blocate:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "nu s-au găsit cunoscute"
+    },
+    "serverExtended": {
+        "message": "în modul extins"
+    },
+    "serverReload": {
+        "message": "reîncărcați pagina"
+    },
+    "serverReloadTitle": {
+        "message": "Serverul este detectat în timpul încărcării paginii"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "alt furnizor"
+    },
+    "serverProxy": {
+        "message": "Site-ul funcționează prin $NAME$ (CDN sau protecție DDoS) — serverul real este ascuns",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Găzduire: $NAME$ (din baza de adrese RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Țara este determinată după furnizor"
+    },
+    "techFound": {
+        "message": "Găsit pe pagină"
+    },
+    "techNone": {
+        "message": "nedetectat"
+    },
+    "techNoneTitle": {
+        "message": "Nu s-au găsit semne ale unor motoare sau biblioteci cunoscute"
+    },
+    "ipv6": {
+        "message": "Conectat prin IPv6"
+    },
+    "ipv4": {
+        "message": "Conectat prin IPv4. Asta nu arată dacă site-ul acceptă IPv6: depinde și de rețeaua dvs."
+    },
+    "hstsOn": {
+        "message": "HSTS: browserul deschide site-ul întotdeauna doar prin HTTPS"
+    },
+    "hstsOff": {
+        "message": "Fără HSTS: prima vizită pe site poate avea loc fără criptare"
+    },
+    "mixed": {
+        "message": "Fișiere HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "Pagina HTTPS încarcă fișiere fără criptare: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Nota $SCORE$ din 10 după:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Criptare"
+    },
+    "scoreProtocol": {
+        "message": "Protocol"
+    },
+    "scoreSpeed": {
+        "message": "Viteza de încărcare"
+    },
+    "scoreWeight": {
+        "message": "Dimensiunea paginii"
+    },
+    "scoreTrackers": {
+        "message": "Urmărire"
+    },
+    "scoreDomains": {
+        "message": "Domenii terțe"
+    },
+    "scoreCompression": {
+        "message": "Compresie"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Conținut mixt"
+    },
+    "stats": {
+        "message": "Total cereri blocate: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Din $DATE$. Dimensiunea este estimată după dimensiunea medie a fișierelor publicitare",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Raport despre site — ca imagine sau text"
+    },
+    "reportTitle": {
+        "message": "Nota și detaliile site-ului ca imagine sau text — pentru colegi, un contractant sau un chat"
+    },
+    "reportDone": {
+        "message": "Salvat"
+    },
+    "copyIp": {
+        "message": "Copiază IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Copiază imaginea"
+    },
+    "copyText": {
+        "message": "Copiază textul și linkul"
+    },
+    "shareSystem": {
+        "message": "Mai multe…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — nota $SCORE$ din 10 în ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Verificați-vă site-ul:"
+    },
+    "donate": {
+        "message": "Donează"
+    },
+    "donateTitle": {
+        "message": "Susțineți dezvoltarea pe Boosty"
+    },
+    "askStats": {
+        "message": "Solicitări blocate: $COUNT$, economisit ≈ $SIZE$. Dacă ABlock îți este util, susține dezvoltarea",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Folosești ABlock de o lună. Dacă îți este util, susține dezvoltarea"
+    },
+    "askClose": {
+        "message": "Nu mai afișa"
+    },
+    "reportLegendGuess": {
+        "message": "? — detectat după semne indirecte"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — estimare aproximativă"
+    },
+    "companiesNoneTitle": {
+        "message": "Pe această pagină nu există companii din catalogul ABlock. Contoarele proprii ale site-ului pot exista totuși — sunt numărate de insigna „Urmăritori”"
+    },
+    "compressionFiles": {
+        "message": "Fișiere text: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Necomprimate: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Șterge datele site-ului și reîncarcă: cookie-uri, cache și stocare. Insignele și nota vor arăta site-ul așa cum îl vede un vizitator nou. Veți fi deconectat de pe acest site"
+    },
+    "clearConfirm": {
+        "message": "Ștergeți?"
+    },
+    "saveImage": {
+        "message": "Salvează imaginea"
+    },
+    "shareSend": {
+        "message": "Trimite prin $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Publică pe $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Se trimite ca text: o imagine nu poate fi transmisă fără a fi încărcată pe un server — copiați-o și lipiți-o în mesaj"
+    },
+    "shareLinkOnly": {
+        "message": "Se transmite doar linkul extensiei — copiați imaginea raportului și lipiți-o în postare"
+    },
+    "auditLabel": {
+        "message": "Detalii"
+    },
+    "auditIssues": {
+        "message": "probleme: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "fără probleme"
+    },
+    "auditSpeed": {
+        "message": "Viteză"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Marcaj"
+    },
+    "auditA11y": {
+        "message": "Accesibilitate"
+    },
+    "auditSecurity": {
+        "message": "Securitate"
+    },
+    "auditYes": {
+        "message": "da"
+    },
+    "auditNo": {
+        "message": "nu"
+    },
+    "auditLength": {
+        "message": "$COUNT$ caractere",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "alt domeniu"
+    },
+    "auditNoImage": {
+        "message": "fără imagine"
+    },
+    "auditNoInput": {
+        "message": "fără interacțiuni"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ din $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Deplasări ale aspectului"
+    },
+    "auditTtfb": {
+        "message": "Răspunsul serverului (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Cât a durat primirea primului octet al paginii de la server. Bine — sub 0,8 s"
+    },
+    "auditFcp": {
+        "message": "Prima redare (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Când a apărut primul conținut pe ecran. Bine — sub 1,8 s"
+    },
+    "auditLcp": {
+        "message": "Blocul principal (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Când a fost redat cel mai mare bloc — o imagine sau un text. Principalul indicator de viteză al Google. Bine — sub 2,5 s"
+    },
+    "auditCls": {
+        "message": "Deplasări ale aspectului (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Cât de mult sare conținutul în timpul încărcării. Bine — sub 0,1"
+    },
+    "auditInp": {
+        "message": "Răspuns la interacțiune (INP)"
+    },
+    "auditInpHint": {
+        "message": "Cea mai mare întârziere de reacție la un clic sau la o introducere de text. Bine — sub 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Blochează redarea"
+    },
+    "auditBlockingHint": {
+        "message": "Fișiere pe care browserul le așteaptă înainte de a începe să deseneze pagina. Stilurile sunt în regulă, dar scripturile e mai bine să fie încărcate cu async sau defer"
+    },
+    "auditStatus": {
+        "message": "Cod de stare"
+    },
+    "auditStatusHint": {
+        "message": "Starea HTTP a paginii: 200 — OK, 4xx și 5xx — eroare"
+    },
+    "auditNoindex": {
+        "message": "Indexare blocată"
+    },
+    "auditNoindexHint": {
+        "message": "Pagina este ascunsă de motoarele de căutare printr-o etichetă noindex sau o regulă din robots.txt. Pentru paginile de autentificare și conturile de utilizator este normal"
+    },
+    "auditTitle": {
+        "message": "Titlu (title)"
+    },
+    "auditTitleHint": {
+        "message": "Textul linkului în rezultatele căutării și numele filei. Ideal — 10–70 de caractere"
+    },
+    "auditDescription": {
+        "message": "Descriere (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Textul de sub link în rezultatele căutării. Ideal — 50–170 de caractere"
+    },
+    "auditH1": {
+        "message": "Titluri h1"
+    },
+    "auditH1Hint": {
+        "message": "Titlul principal al paginii. De obicei există unul singur"
+    },
+    "auditCanonical": {
+        "message": "URL canonic"
+    },
+    "auditCanonicalHint": {
+        "message": "Indică motoarelor de căutare adresa principală a paginii, dacă are copii"
+    },
+    "auditOg": {
+        "message": "Previzualizare link (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Titlul și imaginea afișate de Telegram, Slack și alte servicii când este distribuit un link"
+    },
+    "auditViewport": {
+        "message": "Versiune mobilă (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Fără meta viewport, telefoanele afișează pagina ca pe o versiune micșorată pentru desktop"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Fără el, browserul trece în modul de compatibilitate pentru site-uri vechi, iar aspectul poate diferi"
+    },
+    "auditNoSize": {
+        "message": "Imagini fără dimensiuni"
+    },
+    "auditNoSizeHint": {
+        "message": "Fără width și height, browserul nu știe cât spațiu să rezerve pentru imagine, iar aspectul sare când aceasta se încarcă"
+    },
+    "auditLarge": {
+        "message": "Imagini prea mari"
+    },
+    "auditLargeHint": {
+        "message": "Imaginea este trimisă vizibil mai mare decât este afișată — greutate inutilă"
+    },
+    "auditModern": {
+        "message": "Imagini WebP și AVIF"
+    },
+    "auditModernHint": {
+        "message": "Aceste formate sunt cu 25–50% mai mici decât JPEG și PNG"
+    },
+    "auditLang": {
+        "message": "Limba paginii (lang)"
+    },
+    "auditLangHint": {
+        "message": "Necesară cititoarelor de ecran, traducătoarelor și motoarelor de căutare"
+    },
+    "auditAlt": {
+        "message": "Imagini fără alt"
+    },
+    "auditAltHint": {
+        "message": "O descriere a imaginii pentru persoanele nevăzătoare și pentru cazul în care nu se încarcă"
+    },
+    "auditLabels": {
+        "message": "Câmpuri fără etichete"
+    },
+    "auditLabelsHint": {
+        "message": "Un cititor de ecran nu va putea spune ce trebuie introdus în câmp"
+    },
+    "auditNames": {
+        "message": "Butoane și linkuri fără nume"
+    },
+    "auditNamesHint": {
+        "message": "De exemplu, un buton-pictogramă fără aria-label: o persoană nevăzătoare va auzi doar „buton”"
+    },
+    "auditMain": {
+        "message": "Zona principală (main)"
+    },
+    "auditMainHint": {
+        "message": "Permite saltul direct la conținut, ocolind meniul"
+    },
+    "auditZoom": {
+        "message": "Mărire dezactivată"
+    },
+    "auditZoomHint": {
+        "message": "Împiedică persoanele cu vedere slabă să mărească pagina pe telefon"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Limitează locurile din care pagina poate încărca scripturi — protecție împotriva XSS. Dacă conține 'unsafe-inline' fără nonce sau hash, abia protejează"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Împiedică browserul să ghicească tipurile de fișiere — protecție împotriva falsificării scripturilor"
+    },
+    "auditFrame": {
+        "message": "Protecție la încadrare"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options sau frame-ancestors împiedică încorporarea site-ului în pagina altcuiva pentru a păcăli utilizatorii să dea clic"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Cât din adresa paginii este transmis altor site-uri la navigare. Fără antet, browserul folosește o valoare implicită sigură"
+    },
+    "auditCache": {
+        "message": "Cache-ul paginii"
+    },
+    "auditCacheHint": {
+        "message": "De unde a venit pagina: HIT — din cache-ul serverului sau al CDN-ului, MISS — generată din nou. Paginile în sine sunt rar puse în cache; de obicei imaginile, scripturile și stilurile"
+    },
+    "auditCacheBrowser": {
+        "message": "din cache-ul browserului"
+    },
+    "auditBots": {
+        "message": "Roboți și IA"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Reguli pentru motoarele de căutare și alți roboți. Fără fișier, roboții parcurg totul, iar motoarele de căutare nu află unde este harta site-ului"
+    },
+    "auditSitemap": {
+        "message": "Harta site-ului"
+    },
+    "auditSitemapHint": {
+        "message": "O listă de pagini pentru motoarele de căutare. Se indică în robots.txt cu o linie Sitemap:"
+    },
+    "auditAi": {
+        "message": "Reguli pentru boții IA"
+    },
+    "auditAiHint": {
+        "message": "Dacă boții IA pot colecta textele site-ului pentru rețele neuronale — după regulile din robots.txt care numesc botul. Extensia cunoaște 16 astfel de boți (GPTBot, ClaudeBot, Google-Extended etc.); boții cu alte nume nu sunt luați în calcul. „Închis pentru toți” — site-ul este închis pentru toți roboții prin User-agent: *, fără reguli separate pentru IA"
+    },
+    "auditAiBlocked": {
+        "message": "blocați: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "permis"
+    },
+    "auditAiNone": {
+        "message": "nespecificat"
+    },
+    "auditAiAll": {
+        "message": "închis pentru toți"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Un format nou: o scurtă descriere a site-ului în Markdown pentru asistenții și agenții IA. Deocamdată opțional"
+    },
+    "auditCspWeak": {
+        "message": "slabă"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Interzice paginii și cadrelor încorporate accesul la cameră, la locație și la alte funcții ale browserului"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Izolează fereastra site-ului de alte ferestre pe care le deschide — protecție împotriva atacurilor prin window.opener"
+    },
+    "auditVersions": {
+        "message": "Versiuni de software în antete"
+    },
+    "auditVersionsHint": {
+        "message": "Serverul dezvăluie versiunile de software — un indiciu pentru atacatori despre ce vulnerabilități cunoscute să încerce. Cum le ascundeți: server_tokens off în nginx și Angie, expose_php = Off în PHP"
+    },
+    "auditHidden": {
+        "message": "ascunse"
+    },
+    "auditSession": {
+        "message": "Cookie-uri de sesiune accesibile scripturilor"
+    },
+    "auditSessionHint": {
+        "message": "Cookie-urile de autentificare par să poată fi citite din JavaScript: printr-un XSS pot fi furate. Indicatorul HttpOnly previne acest lucru. Detectat după numele cookie-ului"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Date de contact pentru raportarea vulnerabilităților în /.well-known/security.txt. Ajută un cercetător să vă raporteze problema în loc să o vândă"
+    },
+    "serverUnknownTitle": {
+        "message": "Rețelele acestui furnizor nu sunt în baza ABlock: aceasta cuprinde marii furnizori de găzduire, cloud-uri și CDN-uri"
+    },
+    "protocolH3Later": {
+        "message": "Serverul acceptă HTTP/3. Această pagină a venit prin $PROTOCOL$ — se întâmplă la prima vizită: browserul află de HTTP/3 din răspunsul serverului și trece la el pentru cererile următoare",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Limba browserului"
+    },
+    "langTitle": {
+        "message": "Limba interfeței"
+    },
+    "noteTitle": {
+        "message": "Notă pentru acest site"
+    },
+    "notePlaceholder": {
+        "message": "Notă pentru acest site, vizibilă doar pentru tine"
+    },
+    "incognitoLabel": {
+        "message": "Funcționează în modul incognito"
+    },
+    "incognitoTitle": {
+        "message": "Se vor deschide setările pentru extensii ale browserului — activați acolo permisiunea ABlock în modul incognito"
+    }
+}

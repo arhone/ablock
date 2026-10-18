@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "uz",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Reklama bloklovchi va sayt tekshiruvi"
+    },
+    "extDescription": {
+        "message": "Reklama va trekerlarni bloklaydi: saytlar tezroq, trafik kamroq. Istalgan saytning tezligi, xavfsizligi va kuzatuvini tekshiradi."
+    },
+    "toggle": {
+        "message": "Yoqish / oʻchirish"
+    },
+    "statusOn": {
+        "message": "Himoya yoqilgan"
+    },
+    "statusOff": {
+        "message": "Himoya oʻchirilgan"
+    },
+    "statusSiteOff": {
+        "message": "Bu saytda himoya oʻchirilgan"
+    },
+    "telegram": {
+        "message": "Telegram guruhi"
+    },
+    "github": {
+        "message": "GitHub’da hissa qoʻshing"
+    },
+    "httpsOn": {
+        "message": "Ulanish shifrlangan"
+    },
+    "httpsOff": {
+        "message": "Ulanish shifrlanmagan"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — eng tez protokol"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — zamonaviy protokol"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — eskirgan protokol",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protokol nomaʼlum (sahifa keshdan)"
+    },
+    "loading": {
+        "message": "Yuklanmoqda…"
+    },
+    "loadingTitle": {
+        "message": "Sahifa hali yuklanmoqda"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Sahifa yuklanish vaqti"
+    },
+    "domains": {
+        "message": "Domenlar $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Tashqi domenlar:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…yana $COUNT$ ta",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Tashqi domenlar yoʻq"
+    },
+    "blocked": {
+        "message": "Blok $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Kuzatuv $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Sahifada blokirovka qilindi\nReklama: $ADS$\nKuzatuvchilar: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Sayt sizni kuzatmoqda, blokirovka qilingan kuzatuvchilar: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Kuzatuvchilar topilmadi"
+    },
+    "scoreLabel": {
+        "message": "Sayt bahosi"
+    },
+    "serverLabel": {
+        "message": "Server"
+    },
+    "techLabel": {
+        "message": "Asosida"
+    },
+    "companiesLabel": {
+        "message": "Kuzatadi"
+    },
+    "extraLabel": {
+        "message": "Yana"
+    },
+    "extendedText": {
+        "message": "Kengaytirilgan rejim: xosting, IPv6, HSTS, statistika va barcha saytlarda reklama joylari va cookie oynalarini yashirish. Maʼlumotlar brauzerdan chiqmaydi."
+    },
+    "extendedButton": {
+        "message": "Yoqish"
+    },
+    "extendedOff": {
+        "message": "Kengaytirilgan rejimni oʻchirish"
+    },
+    "extendedOffTitle": {
+        "message": "Kengaytma server IP manzili va sarlavhalarini koʻrmaydi, statistika yuritmaydi va barcha saytlarda reklama joylari va cookie oynalarini yashirmaydi; barcha saytlarga ruxsat bekor qilinadi. Istalgan vaqtda qayta yoqish mumkin"
+    },
+    "share": {
+        "message": "Ulashish"
+    },
+    "copied": {
+        "message": "Nusxa olindi"
+    },
+    "cookiesLabel": {
+        "message": "Cookie roziligi oynalarini yashirish"
+    },
+    "cookiesTitle": {
+        "message": "Cookie roziligi bannerlari xizmatlarini blokirovka qiladi. Kengaytirilgan rejimda bannerlarning oʻzini ham istalgan saytda yashiradi"
+    },
+    "siteLabel": {
+        "message": "$HOST$ saytida blokirovka qilish",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Sayt notoʻgʻri ishlasa, belgini olib tashlang: undagi reklama va kuzatuvchilar blokirovka qilinmaydi. Sahifa qayta yuklanadi"
+    },
+    "guess": {
+        "message": "Bilvosita belgilar boʻyicha aniqlangan — notoʻgʻri boʻlishi mumkin"
+    },
+    "weightTitle": {
+        "message": "Barcha fayllari bilan sahifa hajmi"
+    },
+    "weightEstimated": {
+        "message": "Aniq hajm $TOTAL$ ta fayldan $KNOWN$ tasi uchun maʼlum, qolganlari taxminiy: tashqi saytlar hajmni yashiradi",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Sahifa siqilgan: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Siqilmagan"
+    },
+    "compressionOff": {
+        "message": "Sahifa siqilmasdan uzatiladi — sekinroq yuklanadi"
+    },
+    "compressionUnknown": {
+        "message": "Siqish nomaʼlum (sahifa keshdan)"
+    },
+    "blockedCookies": {
+        "message": "Cookie oynalari: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Hajmi: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Blokirovka qilinmagan:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Saytga ulangan:\n$LIST$\nBlokirovka qilinganmi — kengaytirilgan rejimda koʻrinadi",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Blokirovka qilingan:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "maʼlumlari topilmadi"
+    },
+    "serverExtended": {
+        "message": "kengaytirilgan rejimda"
+    },
+    "serverReload": {
+        "message": "sahifani yangilang"
+    },
+    "serverReloadTitle": {
+        "message": "Server sahifa yuklanayotganda aniqlanadi"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "boshqa provayder"
+    },
+    "serverProxy": {
+        "message": "Sayt $NAME$ orqali ishlaydi (CDN yoki DDoS himoyasi) — haqiqiy server yashirin",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Xosting: $NAME$ (RIPE manzillar bazasi boʻyicha)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Mamlakat provayder boʻyicha aniqlangan"
+    },
+    "techFound": {
+        "message": "Sahifada topildi"
+    },
+    "techNone": {
+        "message": "aniqlanmadi"
+    },
+    "techNoneTitle": {
+        "message": "Maʼlum dvijok va kutubxonalar belgilari topilmadi"
+    },
+    "ipv6": {
+        "message": "IPv6 orqali ulanish"
+    },
+    "ipv4": {
+        "message": "IPv4 orqali ulanish. Sayt IPv6 ni qoʻllab-quvvatlashini bundan bilib boʻlmaydi: bu sizning tarmogʻingizga ham bogʻliq"
+    },
+    "hstsOn": {
+        "message": "HSTS: brauzer saytni doim faqat HTTPS orqali ochadi"
+    },
+    "hstsOff": {
+        "message": "HSTS yoʻq: saytga birinchi kirish shifrlashsiz boʻlishi mumkin"
+    },
+    "mixed": {
+        "message": "HTTP fayllar $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS sahifa shifrlanmagan fayllarni yuklaydi: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Koʻrsatkichlar boʻyicha baho $SCORE$/10:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Shifrlash"
+    },
+    "scoreProtocol": {
+        "message": "Protokol"
+    },
+    "scoreSpeed": {
+        "message": "Yuklanish tezligi"
+    },
+    "scoreWeight": {
+        "message": "Sahifa hajmi"
+    },
+    "scoreTrackers": {
+        "message": "Kuzatuv"
+    },
+    "scoreDomains": {
+        "message": "Tashqi domenlar"
+    },
+    "scoreCompression": {
+        "message": "Siqish"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Aralash kontent"
+    },
+    "stats": {
+        "message": "Jami blokirovka qilingan soʻrovlar: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "$DATE$ dan beri. Hajm reklama fayllarining oʻrtacha hajmi boʻyicha taxminiy",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Sayt hisoboti — rasm yoki matn sifatida"
+    },
+    "reportTitle": {
+        "message": "Sayt bahosi va tafsilotlari rasm yoki matn sifatida — hamkasblar, pudratchi yoki chat uchun"
+    },
+    "reportDone": {
+        "message": "Saqlandi"
+    },
+    "copyIp": {
+        "message": "IP $IP$ nusxasini olish",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Rasm nusxasini olish"
+    },
+    "copyText": {
+        "message": "Matn va havola nusxasini olish"
+    },
+    "shareSystem": {
+        "message": "Yana…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ABlock’da baho $SCORE$/10",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Saytingizni tekshiring:"
+    },
+    "donate": {
+        "message": "Qoʻllab-quvvatlash"
+    },
+    "donateTitle": {
+        "message": "Boosty’da ishlab chiqishni qoʻllab-quvvatlash"
+    },
+    "askStats": {
+        "message": "Bloklangan soʻrovlar: $COUNT$, tejaldi ≈ $SIZE$. ABlock foydali boʻlsa, ishlab chiqishni qoʻllab-quvvatlang",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Siz ABlock’dan bir oydan beri foydalanyapsiz. Foydali boʻlsa, ishlab chiqishni qoʻllab-quvvatlang"
+    },
+    "askClose": {
+        "message": "Boshqa koʻrsatilmasin"
+    },
+    "reportLegendGuess": {
+        "message": "? — bilvosita belgilar boʻyicha aniqlangan"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — taxminiy baho"
+    },
+    "companiesNoneTitle": {
+        "message": "Sahifada ABlock maʼlumotnomasidagi kompaniyalar yoʻq. Saytning oʻz hisoblagichlari baribir boʻlishi mumkin — ularni «Kuzatuvchilar» belgisi sanaydi"
+    },
+    "compressionFiles": {
+        "message": "Matnli fayllar: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Siqilmagan: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Sayt maʼlumotlarini oʻchirib, qayta yuklash: cookie, kesh va xotiralar. Belgilar va baho saytni yangi tashrif buyuruvchi koʻrganidek koʻrsatadi. Bu saytdagi akkauntingizdan chiqasiz"
+    },
+    "clearConfirm": {
+        "message": "Oʻchirilsinmi?"
+    },
+    "saveImage": {
+        "message": "Rasmni saqlash"
+    },
+    "shareSend": {
+        "message": "$NAME$ orqali yuborish",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "$NAME$da eʼlon qilish",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Matn sifatida yuboriladi: rasmni serverga yuklamasdan uzatib boʻlmaydi — uni nusxalab, xabarga qoʻying"
+    },
+    "shareLinkOnly": {
+        "message": "Faqat kengaytma havolasi uzatiladi — hisobot rasmini nusxalab, postga qoʻying"
+    },
+    "auditLabel": {
+        "message": "Batafsil"
+    },
+    "auditIssues": {
+        "message": "eslatmalar: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "eslatmalar yoʻq"
+    },
+    "auditSpeed": {
+        "message": "Tezlik"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Maket"
+    },
+    "auditA11y": {
+        "message": "Qulaylik"
+    },
+    "auditSecurity": {
+        "message": "Xavfsizlik"
+    },
+    "auditYes": {
+        "message": "bor"
+    },
+    "auditNo": {
+        "message": "yoʻq"
+    },
+    "auditLength": {
+        "message": "$COUNT$ belgi",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "boshqa domen"
+    },
+    "auditNoImage": {
+        "message": "rasmsiz"
+    },
+    "auditNoInput": {
+        "message": "harakatlar boʻlmadi"
+    },
+    "auditModernValue": {
+        "message": "$TOTAL$ tadan $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Maket siljishlari"
+    },
+    "auditTtfb": {
+        "message": "Server javobi (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Serverdan sahifaning birinchi baytini qancha kutildi. Yaxshi — 0,8 s gacha"
+    },
+    "auditFcp": {
+        "message": "Birinchi chizish (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Ekranda birinchi kontent qachon paydo boʻldi. Yaxshi — 1,8 s gacha"
+    },
+    "auditLcp": {
+        "message": "Asosiy blok (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Eng katta blok — rasm yoki matn — qachon chizildi. Google’ning asosiy tezlik koʻrsatkichi. Yaxshi — 2,5 s gacha"
+    },
+    "auditCls": {
+        "message": "Maket siljishlari (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Yuklanishda kontent qanchalik sakraydi. Yaxshi — 0,1 gacha"
+    },
+    "auditInp": {
+        "message": "Harakatlarga javob (INP)"
+    },
+    "auditInpHint": {
+        "message": "Bosish yoki kiritishga eng uzoq javob kechikishi. Yaxshi — 200 ms gacha"
+    },
+    "auditBlocking": {
+        "message": "Chizishni bloklaydi"
+    },
+    "auditBlockingHint": {
+        "message": "Brauzer ularsiz sahifani chiza boshlamaydigan fayllar. Uslublar — bu normal, skriptlarni esa async yoki defer bilan ulash yaxshiroq"
+    },
+    "auditStatus": {
+        "message": "Javob kodi"
+    },
+    "auditStatusHint": {
+        "message": "Sahifaning HTTP kodi: 200 — hammasi joyida, 4xx va 5xx — xato"
+    },
+    "auditNoindex": {
+        "message": "Indekslash taqiqlangan"
+    },
+    "auditNoindexHint": {
+        "message": "Sahifa qidiruv tizimlaridan noindex belgisi yoki robots.txt qoidasi bilan yopilgan. Kirish sahifalari va shaxsiy kabinetlar uchun bu normal"
+    },
+    "auditTitle": {
+        "message": "Sarlavha (title)"
+    },
+    "auditTitleHint": {
+        "message": "Qidiruv natijalaridagi havola matni va vkladka nomi. Optimal — 10–70 belgi"
+    },
+    "auditDescription": {
+        "message": "Tavsif (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Qidiruv natijalarida havola ostidagi matn. Optimal — 50–170 belgi"
+    },
+    "auditH1": {
+        "message": "h1 sarlavhalari"
+    },
+    "auditH1Hint": {
+        "message": "Sahifaning asosiy sarlavhasi. Odatda bitta boʻladi"
+    },
+    "auditCanonical": {
+        "message": "Kanonik manzil"
+    },
+    "auditCanonicalHint": {
+        "message": "Sahifaning nusxalari boʻlsa, qidiruv tizimlariga asosiy manzilni koʻrsatadi"
+    },
+    "auditOg": {
+        "message": "Havola koʻrinishi (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Havola yuborilganda Telegram va boshqa xizmatlar koʻrsatadigan sarlavha va rasm"
+    },
+    "auditViewport": {
+        "message": "Mobil versiya (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "meta viewport boʻlmasa, telefon sahifani kichraytirilgan kompyuter versiyasi sifatida koʻrsatadi"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Usiz brauzer eski saytlar bilan moslik rejimiga oʻtadi va maket farq qilishi mumkin"
+    },
+    "auditNoSize": {
+        "message": "Oʻlchamsiz rasmlar"
+    },
+    "auditNoSizeHint": {
+        "message": "width va height boʻlmasa, brauzer rasm uchun qancha joy qoldirishni bilmaydi va rasm yuklanganda maket sakraydi"
+    },
+    "auditLarge": {
+        "message": "Keragidan katta rasmlar"
+    },
+    "auditLargeHint": {
+        "message": "Rasm ekranda koʻrsatilganidan ancha katta uzatiladi — ortiqcha hajm"
+    },
+    "auditModern": {
+        "message": "WebP va AVIF rasmlar"
+    },
+    "auditModernHint": {
+        "message": "Bu formatlar JPEG va PNG dan 25–50% yengilroq"
+    },
+    "auditLang": {
+        "message": "Sahifa tili (lang)"
+    },
+    "auditLangHint": {
+        "message": "Ekrandan oʻqish dasturlari, tarjimon va qidiruv tizimlari uchun kerak"
+    },
+    "auditAlt": {
+        "message": "alt siz rasmlar"
+    },
+    "auditAltHint": {
+        "message": "Koʻzi ojizlar uchun va rasm yuklanmasa, rasm tavsifi"
+    },
+    "auditLabels": {
+        "message": "Yozuvsiz maydonlar"
+    },
+    "auditLabelsHint": {
+        "message": "Ekrandan oʻqish dasturi maydonga nima kiritishni ayta olmaydi"
+    },
+    "auditNames": {
+        "message": "Nomsiz tugma va havolalar"
+    },
+    "auditNamesHint": {
+        "message": "Masalan, aria-label siz ikonka-tugma: koʻzi ojiz foydalanuvchi shunchaki «tugma» ni eshitadi"
+    },
+    "auditMain": {
+        "message": "Asosiy hudud (main)"
+    },
+    "auditMainHint": {
+        "message": "Menyuni oʻtkazib, darhol kontentga oʻtish imkonini beradi"
+    },
+    "auditZoom": {
+        "message": "Kattalashtirish taqiqlangan"
+    },
+    "auditZoomHint": {
+        "message": "Koʻrish qobiliyati past odamlarga telefonda sahifani kattalashtirishga xalaqit beradi"
+    },
+    "auditCsp": {
+        "message": "Kontent siyosati (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Sahifa skriptlarni qayerdan yuklashi mumkinligini cheklaydi — XSS dan himoya. Unda nonce yoki hash siz 'unsafe-inline' boʻlsa, himoya deyarli ishlamaydi"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Brauzerga fayl turini taxmin qilishni taqiqlaydi — skriptlarni almashtirishdan himoya"
+    },
+    "auditFrame": {
+        "message": "Joylashtirishdan himoya"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options yoki frame-ancestors aldov bilan bosishlar olish uchun saytni begona sahifaga joylashtirishga yoʻl qoʻymaydi"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Oʻtishda sahifa manzilining qancha qismi boshqa saytlarga uzatiladi. Sarlavha boʻlmasa, brauzer xavfsiz standart qiymatdan foydalanadi"
+    },
+    "auditCache": {
+        "message": "Sahifa keshi"
+    },
+    "auditCacheHint": {
+        "message": "Sahifa qayerdan keldi: HIT — server yoki CDN keshidan, MISS — qaytadan yigʻilgan. Sahifalarning oʻzi kamdan-kam keshlanadi, odatda keshda rasmlar, skriptlar va uslublar boʻladi"
+    },
+    "auditCacheBrowser": {
+        "message": "brauzer keshidan"
+    },
+    "auditBots": {
+        "message": "Robotlar va SI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Qidiruv va boshqa robotlar uchun qoidalar. Fayl boʻlmasa, robotlar hamma narsani aylanib chiqadi, qidiruv tizimlari esa sayt xaritasi qayerdaligini bilmaydi"
+    },
+    "auditSitemap": {
+        "message": "Sayt xaritasi (sitemap)"
+    },
+    "auditSitemapHint": {
+        "message": "Qidiruv tizimlari uchun sahifalar roʻyxati. robots.txt da Sitemap: qatori bilan koʻrsatiladi"
+    },
+    "auditAi": {
+        "message": "SI botlari uchun qoidalar"
+    },
+    "auditAiHint": {
+        "message": "SI botlari sayt matnlarini neyron tarmoqlar uchun yigʻishi mumkinmi — robots.txt dagi bot nomi koʻrsatilgan qoidalar boʻyicha. Kengaytma 16 ta shunday botni biladi (GPTBot, ClaudeBot, Google-Extended va boshq.); boshqa nomli botlar hisobga olinmaydi. «Hammaga yopiq» — sayt User-agent: * orqali barcha robotlarga yopiq, SI uchun alohida qoidalar yoʻq"
+    },
+    "auditAiBlocked": {
+        "message": "taqiqlangan: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "ruxsat berilgan"
+    },
+    "auditAiNone": {
+        "message": "belgilanmagan"
+    },
+    "auditAiAll": {
+        "message": "hammaga yopiq"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Yangi format: SI yordamchilari va agentlari uchun Markdown’dagi qisqa sayt tavsifi. Hozircha majburiy emas"
+    },
+    "auditCspWeak": {
+        "message": "zaif"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Sahifa va joylashtirilgan freymlarga kamera, geolokatsiya va boshqa brauzer funksiyalaridan foydalanishni taqiqlaydi"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Sayt oynasini u ochadigan begona oynalardan ajratadi — window.opener orqali hujumlardan himoya"
+    },
+    "auditVersions": {
+        "message": "Sarlavhalardagi dastur versiyalari"
+    },
+    "auditVersionsHint": {
+        "message": "Server dastur versiyalarini maʼlum qiladi — hujumchiga qaysi maʼlum zaifliklarni sinab koʻrish haqida ishora. Yashirish: nginx va Angie’da server_tokens off, PHP’da expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "yashirilgan"
+    },
+    "auditSession": {
+        "message": "Sessiya cookie’lari skriptlarga ochiq"
+    },
+    "auditSessionHint": {
+        "message": "Kirish cookie’lari JavaScript’dan oʻqilayotganga oʻxshaydi: XSS boʻlsa, ularni oʻgʻirlash mumkin. HttpOnly bayrogʻi buni taqiqlaydi. Cookie nomi boʻyicha aniqlangan"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "/.well-known/security.txt dagi zaifliklar haqida xabar berish uchun kontaktlar. Tadqiqotchiga muammoni sotish oʻrniga sizga xabar berishga yordam beradi"
+    },
+    "serverUnknownTitle": {
+        "message": "Bu provayder tarmoqlari ABlock bazasida yoʻq: unda yirik xostinglar, bulutlar va CDN lar bor"
+    },
+    "protocolH3Later": {
+        "message": "Server HTTP/3 ni qoʻllab-quvvatlaydi. Bu sahifa $PROTOCOL$ orqali keldi — birinchi kirishda shunday boʻladi: brauzer HTTP/3 haqida server javobidan bilib oladi va keyingi soʻrovlarda unga oʻtadi",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Brauzer tili"
+    },
+    "langTitle": {
+        "message": "Interfeys tili"
+    },
+    "noteTitle": {
+        "message": "Sayt uchun eslatma"
+    },
+    "notePlaceholder": {
+        "message": "Sayt uchun eslatma, faqat sizga koʻrinadi"
+    },
+    "incognitoLabel": {
+        "message": "Inkognito rejimida ishlash"
+    },
+    "incognitoTitle": {
+        "message": "Brauzer kengaytmalari sozlamalari ochiladi — u yerda ABlock uchun inkognito rejimi ruxsatini yoqing"
+    }
+}

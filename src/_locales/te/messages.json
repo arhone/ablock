@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "te",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - యాడ్ బ్లాకర్, సైట్ తనిఖీ"
+    },
+    "extDescription": {
+        "message": "ప్రకటనలు, ట్రాకర్‌లను బ్లాక్ చేస్తుంది: పేజీలు వేగంగా, డేటా తక్కువ. ఏ సైట్ వేగం, భద్రత, ట్రాకింగ్‌నైనా తనిఖీ చేస్తుంది."
+    },
+    "toggle": {
+        "message": "ఆన్ / ఆఫ్"
+    },
+    "statusOn": {
+        "message": "రక్షణ ఆన్‌లో ఉంది"
+    },
+    "statusOff": {
+        "message": "రక్షణ ఆఫ్‌లో ఉంది"
+    },
+    "statusSiteOff": {
+        "message": "ఈ సైట్‌లో రక్షణ ఆఫ్‌లో ఉంది"
+    },
+    "telegram": {
+        "message": "Telegram గ్రూప్"
+    },
+    "github": {
+        "message": "GitHub‌లో సహకరించండి"
+    },
+    "httpsOn": {
+        "message": "కనెక్షన్ ఎన్‌క్రిప్ట్ చేయబడింది"
+    },
+    "httpsOff": {
+        "message": "కనెక్షన్ ఎన్‌క్రిప్ట్ చేయబడలేదు"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — అత్యంత వేగవంతమైన ప్రోటోకాల్"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — ఆధునిక ప్రోటోకాల్"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — పాత ప్రోటోకాల్",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "ప్రోటోకాల్ తెలియదు (పేజీ కాష్ నుండి లోడ్ అయింది)"
+    },
+    "loading": {
+        "message": "లోడ్ అవుతోంది…"
+    },
+    "loadingTitle": {
+        "message": "పేజీ ఇంకా లోడ్ అవుతోంది"
+    },
+    "seconds": {
+        "message": "$SECONDS$ సె",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "పేజీ లోడ్ సమయం"
+    },
+    "domains": {
+        "message": "డొమైన్‌లు $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "థర్డ్-పార్టీ డొమైన్‌లు:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…మరో $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "థర్డ్-పార్టీ డొమైన్‌లు లేవు"
+    },
+    "blocked": {
+        "message": "బ్లాక్ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "ట్రాకర్లు $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "ఈ పేజీలో బ్లాక్ చేసినవి\nప్రకటనలు: $ADS$\nట్రాకర్లు: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "ఈ సైట్ మిమ్మల్ని ట్రాక్ చేస్తోంది. బ్లాక్ చేసిన ట్రాకర్లు: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "ట్రాకర్లు ఏవీ కనిపించలేదు"
+    },
+    "scoreLabel": {
+        "message": "సైట్ స్కోర్"
+    },
+    "serverLabel": {
+        "message": "సర్వర్"
+    },
+    "techLabel": {
+        "message": "దీనితో నిర్మించబడింది"
+    },
+    "companiesLabel": {
+        "message": "ట్రాక్ చేస్తున్నవి"
+    },
+    "extraLabel": {
+        "message": "మరిన్ని"
+    },
+    "extendedText": {
+        "message": "విస్తరించిన మోడ్: అన్ని సైట్‌లలో హోస్టింగ్, IPv6, HSTS, గణాంకాలు, ప్రకటనల స్థలాలను, కుకీ పాప్-అప్‌లను దాచడం. డేటా మీ బ్రౌజర్ నుండి ఎప్పుడూ బయటకు వెళ్లదు."
+    },
+    "extendedButton": {
+        "message": "ఆన్ చేయండి"
+    },
+    "extendedOff": {
+        "message": "విస్తరించిన మోడ్‌ను ఆఫ్ చేయండి"
+    },
+    "extendedOffTitle": {
+        "message": "ఎక్స్‌టెన్షన్ అన్ని సైట్‌లలో సర్వర్ల IP, హెడర్లను చూడటం, గణాంకాలు ఉంచడం, ప్రకటనల స్థలాలను, కుకీ పాప్-అప్‌లను దాచడం ఆపేస్తుంది; అన్ని సైట్‌లకు యాక్సెస్ ఉపసంహరించబడుతుంది. మీరు ఎప్పుడైనా మళ్లీ ఆన్ చేయవచ్చు"
+    },
+    "share": {
+        "message": "షేర్ చేయండి"
+    },
+    "copied": {
+        "message": "కాపీ అయింది"
+    },
+    "cookiesLabel": {
+        "message": "కుకీ సమ్మతి పాప్-అప్‌లను దాచండి"
+    },
+    "cookiesTitle": {
+        "message": "కుకీ సమ్మతి బ్యానర్ సేవలను బ్లాక్ చేస్తుంది. విస్తరించిన మోడ్‌లో ఏ సైట్‌లోనైనా బ్యానర్లను కూడా దాచేస్తుంది"
+    },
+    "siteLabel": {
+        "message": "$HOST$‌లో బ్లాక్ చేయండి",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "సైట్ సరిగ్గా పనిచేయకపోతే టిక్ తీసేయండి: దానిలో ప్రకటనలు, ట్రాకర్లు ఇకపై బ్లాక్ కావు. పేజీ మళ్లీ లోడ్ అవుతుంది"
+    },
+    "guess": {
+        "message": "పరోక్ష సంకేతాల ద్వారా గుర్తించబడింది — కచ్చితంగా ఉండకపోవచ్చు"
+    },
+    "weightTitle": {
+        "message": "అన్ని ఫైళ్లతో కలిపి పేజీ పరిమాణం"
+    },
+    "weightEstimated": {
+        "message": "$TOTAL$ ఫైళ్లలో $KNOWN$ ఫైళ్ల కచ్చితమైన పరిమాణం తెలుసు, మిగతావి అంచనా: థర్డ్-పార్టీ సైట్‌లు పరిమాణాన్ని దాచేస్తాయి",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "పేజీ కంప్రెస్ చేయబడింది: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "కంప్రెషన్ లేదు"
+    },
+    "compressionOff": {
+        "message": "పేజీ కంప్రెషన్ లేకుండా పంపబడుతుంది — నెమ్మదిగా లోడ్ అవుతుంది"
+    },
+    "compressionUnknown": {
+        "message": "కంప్రెషన్ తెలియదు (పేజీ కాష్ నుండి లోడ్ అయింది)"
+    },
+    "blockedCookies": {
+        "message": "కుకీ పాప్-అప్‌లు: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "పరిమాణం: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "బ్లాక్ కానివి:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "సైట్‌లో కనిపించినవి:\n$LIST$\nఅవి బ్లాక్ అయ్యాయో లేదో విస్తరించిన మోడ్‌లో చూపబడుతుంది",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "బ్లాక్ చేసినవి:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "తెలిసినవి ఏవీ కనిపించలేదు"
+    },
+    "serverExtended": {
+        "message": "విస్తరించిన మోడ్‌లో"
+    },
+    "serverReload": {
+        "message": "పేజీని మళ్లీ లోడ్ చేయండి"
+    },
+    "serverReloadTitle": {
+        "message": "పేజీ లోడ్ అవుతున్నప్పుడు సర్వర్ గుర్తించబడుతుంది"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "ఇతర ప్రొవైడర్"
+    },
+    "serverProxy": {
+        "message": "సైట్ $NAME$ (CDN లేదా DDoS రక్షణ) వెనుక నడుస్తోంది — అసలు సర్వర్ దాచబడింది",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "హోస్టింగ్: $NAME$ (RIPE చిరునామా డేటాబేస్ నుండి)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "దేశం ప్రొవైడర్ ఆధారంగా నిర్ణయించబడుతుంది"
+    },
+    "techFound": {
+        "message": "పేజీలో కనిపించింది"
+    },
+    "techNone": {
+        "message": "గుర్తించబడలేదు"
+    },
+    "techNoneTitle": {
+        "message": "తెలిసిన ఇంజిన్‌లు లేదా లైబ్రరీల సంకేతాలు కనిపించలేదు"
+    },
+    "ipv6": {
+        "message": "IPv6 ద్వారా కనెక్ట్ అయింది"
+    },
+    "ipv4": {
+        "message": "IPv4 ద్వారా కనెక్ట్ అయింది. సైట్ IPv6‌కు మద్దతిస్తుందో లేదో దీని ద్వారా తెలియదు: అది మీ నెట్‌వర్క్‌పై కూడా ఆధారపడుతుంది"
+    },
+    "hstsOn": {
+        "message": "HSTS: బ్రౌజర్ ఎల్లప్పుడూ సైట్‌ను HTTPS ద్వారా మాత్రమే తెరుస్తుంది"
+    },
+    "hstsOff": {
+        "message": "HSTS లేదు: సైట్‌కు మొదటి సందర్శన ఎన్‌క్రిప్షన్ లేకుండా జరగవచ్చు"
+    },
+    "mixed": {
+        "message": "HTTP ఫైళ్లు $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS పేజీ ఎన్‌క్రిప్షన్ లేకుండా ఫైళ్లను లోడ్ చేస్తోంది: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "10కి $SCORE$ స్కోర్, వీటి ఆధారంగా:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "ఎన్‌క్రిప్షన్"
+    },
+    "scoreProtocol": {
+        "message": "ప్రోటోకాల్"
+    },
+    "scoreSpeed": {
+        "message": "లోడ్ వేగం"
+    },
+    "scoreWeight": {
+        "message": "పేజీ పరిమాణం"
+    },
+    "scoreTrackers": {
+        "message": "ట్రాకింగ్"
+    },
+    "scoreDomains": {
+        "message": "థర్డ్-పార్టీ డొమైన్‌లు"
+    },
+    "scoreCompression": {
+        "message": "కంప్రెషన్"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "మిశ్రమ కంటెంట్"
+    },
+    "stats": {
+        "message": "మొత్తం బ్లాక్ చేసిన అభ్యర్థనలు: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "$DATE$ నుండి. ప్రకటన ఫైళ్ల సగటు పరిమాణం ఆధారంగా పరిమాణం అంచనా వేయబడింది",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "సైట్ నివేదిక — చిత్రంగా లేదా టెక్స్ట్‌గా"
+    },
+    "reportTitle": {
+        "message": "సైట్ స్కోర్, వివరాలు చిత్రంగా లేదా టెక్స్ట్‌గా — సహోద్యోగులు, కాంట్రాక్టర్ లేదా చాట్ కోసం"
+    },
+    "reportDone": {
+        "message": "సేవ్ అయింది"
+    },
+    "copyIp": {
+        "message": "IP $IP$ కాపీ చేయండి",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "చిత్రాన్ని కాపీ చేయండి"
+    },
+    "copyText": {
+        "message": "టెక్స్ట్, లింక్‌ను కాపీ చేయండి"
+    },
+    "shareSystem": {
+        "message": "మరిన్ని…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ABlock‌లో 10కి $SCORE$ స్కోర్",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "మీ సైట్‌ను తనిఖీ చేయండి:"
+    },
+    "donate": {
+        "message": "విరాళం"
+    },
+    "donateTitle": {
+        "message": "Boosty‌లో అభివృద్ధికి మద్దతు ఇవ్వండి"
+    },
+    "askStats": {
+        "message": "బ్లాక్ చేసిన అభ్యర్థనలు: $COUNT$, ఆదా ≈ $SIZE$. ABlock ఉపయోగపడితే, దాని అభివృద్ధికి మద్దతు ఇవ్వండి",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "మీరు నెల రోజులుగా ABlock వాడుతున్నారు. ఉపయోగపడితే, దాని అభివృద్ధికి మద్దతు ఇవ్వండి"
+    },
+    "askClose": {
+        "message": "మళ్లీ చూపవద్దు"
+    },
+    "reportLegendGuess": {
+        "message": "? — పరోక్ష సంకేతాల ద్వారా గుర్తించబడింది"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — సుమారు అంచనా"
+    },
+    "companiesNoneTitle": {
+        "message": "ఈ పేజీలో ABlock జాబితాలోని కంపెనీలు లేవు. సైట్ స్వంత కౌంటర్లు ఉండవచ్చు — వాటిని «ట్రాకర్లు» బ్యాడ్జ్ లెక్కిస్తుంది"
+    },
+    "compressionFiles": {
+        "message": "టెక్స్ట్ ఫైళ్లు: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "కంప్రెస్ కానివి: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "సైట్ డేటాను తొలగించి మళ్లీ లోడ్ చేయండి: కుకీలు, కాష్, స్టోరేజ్. బ్యాడ్జ్‌లు, స్కోర్ కొత్త సందర్శకుడికి కనిపించే విధంగా సైట్‌ను చూపుతాయి. మీరు ఈ సైట్ నుండి లాగ్ అవుట్ అవుతారు"
+    },
+    "clearConfirm": {
+        "message": "తొలగించాలా?"
+    },
+    "saveImage": {
+        "message": "చిత్రాన్ని సేవ్ చేయండి"
+    },
+    "shareSend": {
+        "message": "$NAME$‌లో పంపండి",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "$NAME$‌లో పోస్ట్ చేయండి",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "టెక్స్ట్‌గా పంపబడుతుంది: సర్వర్‌కు అప్‌లోడ్ చేయకుండా చిత్రాన్ని పంపలేము — దాన్ని కాపీ చేసి సందేశంలో అతికించండి"
+    },
+    "shareLinkOnly": {
+        "message": "ఎక్స్‌టెన్షన్ లింక్ మాత్రమే పంపబడుతుంది — నివేదిక చిత్రాన్ని కాపీ చేసి పోస్ట్‌లో అతికించండి"
+    },
+    "auditLabel": {
+        "message": "వివరాలు"
+    },
+    "auditIssues": {
+        "message": "సమస్యలు: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "సమస్యలు లేవు"
+    },
+    "auditSpeed": {
+        "message": "వేగం"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "మార్కప్"
+    },
+    "auditA11y": {
+        "message": "యాక్సెసిబిలిటీ"
+    },
+    "auditSecurity": {
+        "message": "భద్రత"
+    },
+    "auditYes": {
+        "message": "అవును"
+    },
+    "auditNo": {
+        "message": "కాదు"
+    },
+    "auditLength": {
+        "message": "$COUNT$ అక్షరాలు",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "వేరే డొమైన్"
+    },
+    "auditNoImage": {
+        "message": "చిత్రం లేదు"
+    },
+    "auditNoInput": {
+        "message": "చర్యలు లేవు"
+    },
+    "auditModernValue": {
+        "message": "$TOTAL$లో $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "లేఅవుట్ కదలికలు"
+    },
+    "auditTtfb": {
+        "message": "సర్వర్ స్పందన (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "సర్వర్ నుండి పేజీ మొదటి బైట్ అందడానికి ఎంత సమయం పట్టింది. మంచిది — 0.8 సె కంటే తక్కువ"
+    },
+    "auditFcp": {
+        "message": "మొదటి రెండర్ (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "మొదటి కంటెంట్ తెరపై ఎప్పుడు కనిపించింది. మంచిది — 1.8 సె కంటే తక్కువ"
+    },
+    "auditLcp": {
+        "message": "ప్రధాన బ్లాక్ (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "అతిపెద్ద బ్లాక్ — చిత్రం లేదా టెక్స్ట్ — ఎప్పుడు గీయబడింది. Google ప్రధాన వేగ కొలమానం. మంచిది — 2.5 సె కంటే తక్కువ"
+    },
+    "auditCls": {
+        "message": "లేఅవుట్ కదలికలు (CLS)"
+    },
+    "auditClsHint": {
+        "message": "లోడ్ అవుతున్నప్పుడు కంటెంట్ ఎంత ఎగురుతుంది. మంచిది — 0.1 కంటే తక్కువ"
+    },
+    "auditInp": {
+        "message": "చర్యకు స్పందన (INP)"
+    },
+    "auditInpHint": {
+        "message": "క్లిక్ లేదా ఇన్‌పుట్‌కు స్పందించడంలో అత్యధిక ఆలస్యం. మంచిది — 200 మి.సె కంటే తక్కువ"
+    },
+    "auditBlocking": {
+        "message": "రెండరింగ్‌ను అడ్డుకునేవి"
+    },
+    "auditBlockingHint": {
+        "message": "పేజీని గీయడం మొదలుపెట్టే ముందు బ్రౌజర్ వేచి ఉండే ఫైళ్లు. స్టైల్స్ పర్వాలేదు, కానీ స్క్రిప్ట్‌లను async లేదా defer‌తో లోడ్ చేయడం మంచిది"
+    },
+    "auditStatus": {
+        "message": "స్థితి కోడ్"
+    },
+    "auditStatusHint": {
+        "message": "పేజీ HTTP స్థితి: 200 — సరే, 4xx మరియు 5xx — లోపం"
+    },
+    "auditNoindex": {
+        "message": "ఇండెక్సింగ్ నిషేధించబడింది"
+    },
+    "auditNoindexHint": {
+        "message": "noindex ట్యాగ్ లేదా robots.txt నియమం ద్వారా పేజీ సెర్చ్ ఇంజిన్‌ల నుండి దాచబడింది. లాగిన్ పేజీలు, యూజర్ ఖాతాలకు ఇది సహజం"
+    },
+    "auditTitle": {
+        "message": "శీర్షిక (title)"
+    },
+    "auditTitleHint": {
+        "message": "శోధన ఫలితాల్లో లింక్ టెక్స్ట్, ట్యాబ్ పేరు. ఉత్తమం — 10–70 అక్షరాలు"
+    },
+    "auditDescription": {
+        "message": "వివరణ (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "శోధన ఫలితాల్లో లింక్ కింద ఉండే టెక్స్ట్. ఉత్తమం — 50–170 అక్షరాలు"
+    },
+    "auditH1": {
+        "message": "h1 శీర్షికలు"
+    },
+    "auditH1Hint": {
+        "message": "పేజీ ప్రధాన శీర్షిక. సాధారణంగా ఒక్కటే ఉంటుంది"
+    },
+    "auditCanonical": {
+        "message": "కానానికల్ URL"
+    },
+    "auditCanonicalHint": {
+        "message": "పేజీకి కాపీలు ఉంటే సెర్చ్ ఇంజిన్‌లకు ప్రధాన చిరునామాను తెలియజేస్తుంది"
+    },
+    "auditOg": {
+        "message": "లింక్ ప్రివ్యూ (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "లింక్ షేర్ చేసినప్పుడు Telegram, Slack మరియు ఇతర సేవలు చూపే శీర్షిక, చిత్రం"
+    },
+    "auditViewport": {
+        "message": "మొబైల్ వెర్షన్ (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "meta viewport లేకపోతే ఫోన్‌లు పేజీని చిన్నదిగా చేసిన డెస్క్‌టాప్ వెర్షన్‌గా చూపుతాయి"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "ఇది లేకపోతే బ్రౌజర్ పాత సైట్‌ల అనుకూలత మోడ్‌కు మారుతుంది, లేఅవుట్ వేరుగా ఉండవచ్చు"
+    },
+    "auditNoSize": {
+        "message": "కొలతలు లేని చిత్రాలు"
+    },
+    "auditNoSizeHint": {
+        "message": "width, height లేకపోతే చిత్రానికి ఎంత స్థలం ఉంచాలో బ్రౌజర్‌కు తెలియదు, చిత్రం లోడ్ అయినప్పుడు లేఅవుట్ ఎగురుతుంది"
+    },
+    "auditLarge": {
+        "message": "మరీ పెద్ద చిత్రాలు"
+    },
+    "auditLargeHint": {
+        "message": "చిత్రం చూపే పరిమాణం కంటే గణనీయంగా పెద్దదిగా పంపబడుతుంది — అనవసరమైన బరువు"
+    },
+    "auditModern": {
+        "message": "WebP, AVIF చిత్రాలు"
+    },
+    "auditModernHint": {
+        "message": "ఈ ఫార్మాట్‌లు JPEG, PNG కంటే 25–50% చిన్నవి"
+    },
+    "auditLang": {
+        "message": "పేజీ భాష (lang)"
+    },
+    "auditLangHint": {
+        "message": "స్క్రీన్ రీడర్‌లు, అనువాదకులు, సెర్చ్ ఇంజిన్‌లకు అవసరం"
+    },
+    "auditAlt": {
+        "message": "alt లేని చిత్రాలు"
+    },
+    "auditAltHint": {
+        "message": "అంధ వినియోగదారుల కోసం, చిత్రం లోడ్ కాకపోతే ఉపయోగపడే చిత్ర వివరణ"
+    },
+    "auditLabels": {
+        "message": "లేబుల్ లేని ఫీల్డ్‌లు"
+    },
+    "auditLabelsHint": {
+        "message": "ఫీల్డ్‌లో ఏమి నమోదు చేయాలో స్క్రీన్ రీడర్ చెప్పలేదు"
+    },
+    "auditNames": {
+        "message": "పేరు లేని బటన్‌లు, లింక్‌లు"
+    },
+    "auditNamesHint": {
+        "message": "ఉదా. aria-label లేని ఐకాన్ బటన్: అంధ వినియోగదారుకు «బటన్» అని మాత్రమే వినిపిస్తుంది"
+    },
+    "auditMain": {
+        "message": "ప్రధాన భాగం (main)"
+    },
+    "auditMainHint": {
+        "message": "మెనూను దాటి నేరుగా కంటెంట్‌కు వెళ్లడానికి వీలు కల్పిస్తుంది"
+    },
+    "auditZoom": {
+        "message": "జూమ్ నిలిపివేయబడింది"
+    },
+    "auditZoomHint": {
+        "message": "తక్కువ దృష్టి ఉన్నవారు ఫోన్‌లో పేజీని పెద్దది చేయలేరు"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "పేజీ ఎక్కడి నుండి స్క్రిప్ట్‌లను లోడ్ చేయగలదో పరిమితం చేస్తుంది — XSS నుండి రక్షణ. nonce లేదా hash లేకుండా 'unsafe-inline' ఉంటే దాదాపు రక్షించదు"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "ఫైల్ రకాన్ని బ్రౌజర్ ఊహించకుండా నిరోధిస్తుంది — నకిలీ స్క్రిప్ట్‌ల నుండి రక్షణ"
+    },
+    "auditFrame": {
+        "message": "ఫ్రేమ్‌లో పొందుపరచడం నుండి రక్షణ"
+    },
+    "auditFrameHint": {
+        "message": "వినియోగదారులను మోసగించి క్లిక్ చేయించేందుకు సైట్‌ను వేరొకరి పేజీలో పొందుపరచడాన్ని X-Frame-Options లేదా frame-ancestors నిరోధిస్తాయి"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "వేరే సైట్‌కు వెళ్లినప్పుడు పేజీ చిరునామాలో ఎంత భాగం పంపబడుతుంది. ఈ హెడర్ లేకపోతే బ్రౌజర్ సురక్షితమైన డిఫాల్ట్‌ను ఉపయోగిస్తుంది"
+    },
+    "auditCache": {
+        "message": "పేజీ కాష్"
+    },
+    "auditCacheHint": {
+        "message": "పేజీ ఎక్కడి నుండి వచ్చింది: HIT — సర్వర్ లేదా CDN కాష్ నుండి, MISS — కొత్తగా రూపొందించబడింది. పేజీలు చాలా అరుదుగా కాష్ అవుతాయి; సాధారణంగా చిత్రాలు, స్క్రిప్ట్‌లు, స్టైల్స్"
+    },
+    "auditCacheBrowser": {
+        "message": "బ్రౌజర్ కాష్ నుండి"
+    },
+    "auditBots": {
+        "message": "రోబోట్‌లు, AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "సెర్చ్ ఇంజిన్‌లు, ఇతర రోబోట్‌ల కోసం నియమాలు. ఈ ఫైల్ లేకపోతే రోబోట్‌లు అన్నింటినీ క్రాల్ చేస్తాయి, సైట్‌మ్యాప్ ఎక్కడ ఉందో సెర్చ్ ఇంజిన్‌లకు తెలియదు"
+    },
+    "auditSitemap": {
+        "message": "సైట్‌మ్యాప్"
+    },
+    "auditSitemapHint": {
+        "message": "సెర్చ్ ఇంజిన్‌ల కోసం పేజీల జాబితా. robots.txt‌లో Sitemap: పంక్తితో పేర్కొనబడుతుంది"
+    },
+    "auditAi": {
+        "message": "AI బాట్‌ల కోసం నియమాలు"
+    },
+    "auditAiHint": {
+        "message": "న్యూరల్ నెట్‌వర్క్‌ల కోసం సైట్ టెక్స్ట్‌లను AI బాట్‌లు సేకరించవచ్చా — బాట్ పేరు పేర్కొన్న robots.txt నియమాల ఆధారంగా. ఎక్స్‌టెన్షన్‌కు ఇలాంటి 16 బాట్‌లు తెలుసు (GPTBot, ClaudeBot, Google-Extended మొదలైనవి); ఇతర పేర్ల బాట్‌లు లెక్కలోకి రావు. «అందరికీ మూసివేయబడింది» — User-agent: * ద్వారా సైట్ అన్ని రోబోట్‌లకు మూసివేయబడింది, AI కోసం ప్రత్యేక నియమాలు లేవు"
+    },
+    "auditAiBlocked": {
+        "message": "నిషేధించబడినవి: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "అనుమతించబడింది"
+    },
+    "auditAiNone": {
+        "message": "సెట్ చేయలేదు"
+    },
+    "auditAiAll": {
+        "message": "అందరికీ మూసివేయబడింది"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "కొత్త ఫార్మాట్: AI సహాయకులు, ఏజెంట్‌ల కోసం Markdown‌లో సైట్ సంక్షిప్త వివరణ. ప్రస్తుతానికి ఐచ్ఛికం"
+    },
+    "auditCspWeak": {
+        "message": "బలహీనం"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "పేజీ, పొందుపరచిన ఫ్రేమ్‌లు కెమెరా, స్థానం, ఇతర బ్రౌజర్ ఫీచర్‌లను యాక్సెస్ చేయకుండా నిషేధిస్తుంది"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "సైట్ తెరిచే ఇతర విండోల నుండి సైట్ విండోను వేరు చేస్తుంది — window.opener ద్వారా జరిగే దాడుల నుండి రక్షణ"
+    },
+    "auditVersions": {
+        "message": "హెడర్‌లలో సాఫ్ట్‌వేర్ వెర్షన్‌లు"
+    },
+    "auditVersionsHint": {
+        "message": "సర్వర్ సాఫ్ట్‌వేర్ వెర్షన్‌లను వెల్లడిస్తోంది — ఏ తెలిసిన లోపాలను ప్రయత్నించాలో దాడి చేసేవారికి సూచన. దాచడానికి: nginx, Angie‌లో server_tokens off, PHP‌లో expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "దాచబడింది"
+    },
+    "auditSession": {
+        "message": "స్క్రిప్ట్‌లు చదవగల సెషన్ కుకీలు"
+    },
+    "auditSessionHint": {
+        "message": "లాగిన్ కుకీలను JavaScript నుండి చదవగలిగేలా ఉన్నట్లు కనిపిస్తోంది: XSS ఉంటే అవి దొంగిలించబడవచ్చు. HttpOnly ఫ్లాగ్ దీన్ని నిరోధిస్తుంది. కుకీ పేరు ఆధారంగా గుర్తించబడింది"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "/.well-known/security.txt‌లో లోపాలను నివేదించడానికి సంప్రదింపులు. పరిశోధకుడు సమస్యను అమ్మకుండా మీకు తెలియజేయడానికి సహాయపడుతుంది"
+    },
+    "serverUnknownTitle": {
+        "message": "ఈ ప్రొవైడర్ నెట్‌వర్క్‌లు ABlock డేటాబేస్‌లో లేవు: అందులో పెద్ద హోస్టింగ్‌లు, క్లౌడ్‌లు, CDNలు ఉన్నాయి"
+    },
+    "protocolH3Later": {
+        "message": "సర్వర్ HTTP/3‌కు మద్దతిస్తుంది. ఈ పేజీ $PROTOCOL$ ద్వారా వచ్చింది — మొదటి సందర్శనలో ఇలా జరుగుతుంది: సర్వర్ స్పందన ద్వారా బ్రౌజర్ HTTP/3 గురించి తెలుసుకుని, తదుపరి అభ్యర్థనలకు దానికి మారుతుంది",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "బ్రౌజర్ భాష"
+    },
+    "langTitle": {
+        "message": "ఇంటర్‌ఫేస్ భాష"
+    },
+    "noteTitle": {
+        "message": "ఈ సైట్ కోసం గమనిక"
+    },
+    "notePlaceholder": {
+        "message": "ఈ సైట్ కోసం గమనిక, మీకు మాత్రమే కనిపిస్తుంది"
+    },
+    "incognitoLabel": {
+        "message": "అజ్ఞాత మోడ్‌లోనూ పని చేయాలి"
+    },
+    "incognitoTitle": {
+        "message": "బ్రౌజర్ ఎక్స్‌టెన్షన్ సెట్టింగ్‌లు తెరుచుకుంటాయి — అక్కడ ABlock కోసం అజ్ఞాత మోడ్‌లో అనుమతిని ఆన్ చేయండి"
+    }
+}

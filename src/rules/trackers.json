@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "requestDomains": [
+                "analytics.twitter.com",
+                "q.quora.com",
+                "mc.yandex.by",
+                "mc.yandex.kz",
+                "mc.yandex.com.tr",
+                "segmento.ru"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/gwtlog",
+            "initiatorDomains": [
+                "ok.ru"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "/dktest|",
+            "initiatorDomains": [
+                "ok.ru"
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "requestDomains": [
+                "monfri.net",
+                "clickstream.sbrf.ru",
+                "idgraph.dt.fox"
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||sw.flavii.ru/hit"
+        }
+    }
+]

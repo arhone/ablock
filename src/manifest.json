@@ -1,0 +1,280 @@
+{
+    "manifest_version": 3,
+    "name": "__MSG_extName__",
+    "description": "__MSG_extDescription__",
+    "default_locale": "en",
+    "version": "4.0.0",
+    "author": "Алексей Арх",
+    "minimum_chrome_version": "111",
+    "icons": {
+        "32": "images/ablock-32.png",
+        "128": "images/ablock-128.png"
+    },
+    "background": {
+        "service_worker": "background/sw.js"
+    },
+    "permissions": [
+        "storage",
+        "scripting",
+        "activeTab",
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "*://*.youtube.com/*",
+        "*://*.youtube-nocookie.com/*",
+        "*://*.pornhub.com/*",
+        "*://*.pornhub.org/*",
+        "*://*.vk.com/*",
+        "*://*.vk.ru/*",
+        "*://*.vkvideo.ru/*",
+        "*://*.ok.ru/*"
+    ],
+    "optional_permissions": [
+        "webRequest",
+        "browsingData"
+    ],
+    "optional_host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_title": "__MSG_extName__",
+        "default_icon": {
+            "32": "images/ablock-32.png"
+        },
+        "default_popup": "popup/popup.html"
+    },
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ads",
+                "enabled": true,
+                "path": "rules/ads.json"
+            },
+            {
+                "id": "trackers",
+                "enabled": true,
+                "path": "rules/trackers.json"
+            },
+            {
+                "id": "easylist",
+                "enabled": true,
+                "path": "rules/lists/easylist.json"
+            },
+            {
+                "id": "easyprivacy",
+                "enabled": true,
+                "path": "rules/lists/easyprivacy.json"
+            },
+            {
+                "id": "ublock-filters",
+                "enabled": true,
+                "path": "rules/lists/ublock-filters.json"
+            },
+            {
+                "id": "pgl",
+                "enabled": true,
+                "path": "rules/lists/pgl.json"
+            },
+            {
+                "id": "ublock-badware",
+                "enabled": true,
+                "path": "rules/lists/ublock-badware.json"
+            },
+            {
+                "id": "annoyances-cookies",
+                "enabled": true,
+                "path": "rules/lists/annoyances-cookies.json"
+            },
+            {
+                "id": "alb-0",
+                "enabled": false,
+                "path": "rules/lists/alb-0.json"
+            },
+            {
+                "id": "ara-0",
+                "enabled": false,
+                "path": "rules/lists/ara-0.json"
+            },
+            {
+                "id": "bgr-0",
+                "enabled": false,
+                "path": "rules/lists/bgr-0.json"
+            },
+            {
+                "id": "chn-0",
+                "enabled": false,
+                "path": "rules/lists/chn-0.json"
+            },
+            {
+                "id": "cze-0",
+                "enabled": false,
+                "path": "rules/lists/cze-0.json"
+            },
+            {
+                "id": "deu-0",
+                "enabled": false,
+                "path": "rules/lists/deu-0.json"
+            },
+            {
+                "id": "est-0",
+                "enabled": false,
+                "path": "rules/lists/est-0.json"
+            },
+            {
+                "id": "fin-0",
+                "enabled": false,
+                "path": "rules/lists/fin-0.json"
+            },
+            {
+                "id": "fra-0",
+                "enabled": false,
+                "path": "rules/lists/fra-0.json"
+            },
+            {
+                "id": "grc-0",
+                "enabled": false,
+                "path": "rules/lists/grc-0.json"
+            },
+            {
+                "id": "hrv-0",
+                "enabled": false,
+                "path": "rules/lists/hrv-0.json"
+            },
+            {
+                "id": "hun-0",
+                "enabled": false,
+                "path": "rules/lists/hun-0.json"
+            },
+            {
+                "id": "idn-0",
+                "enabled": false,
+                "path": "rules/lists/idn-0.json"
+            },
+            {
+                "id": "ind-0",
+                "enabled": false,
+                "path": "rules/lists/ind-0.json"
+            },
+            {
+                "id": "irn-0",
+                "enabled": false,
+                "path": "rules/lists/irn-0.json"
+            },
+            {
+                "id": "isl-0",
+                "enabled": false,
+                "path": "rules/lists/isl-0.json"
+            },
+            {
+                "id": "isr-0",
+                "enabled": false,
+                "path": "rules/lists/isr-0.json"
+            },
+            {
+                "id": "ita-0",
+                "enabled": false,
+                "path": "rules/lists/ita-0.json"
+            },
+            {
+                "id": "jpn-1",
+                "enabled": false,
+                "path": "rules/lists/jpn-1.json"
+            },
+            {
+                "id": "kor-1",
+                "enabled": false,
+                "path": "rules/lists/kor-1.json"
+            },
+            {
+                "id": "ltu-0",
+                "enabled": false,
+                "path": "rules/lists/ltu-0.json"
+            },
+            {
+                "id": "lva-0",
+                "enabled": false,
+                "path": "rules/lists/lva-0.json"
+            },
+            {
+                "id": "mkd-0",
+                "enabled": false,
+                "path": "rules/lists/mkd-0.json"
+            },
+            {
+                "id": "nld-0",
+                "enabled": false,
+                "path": "rules/lists/nld-0.json"
+            },
+            {
+                "id": "nor-0",
+                "enabled": false,
+                "path": "rules/lists/nor-0.json"
+            },
+            {
+                "id": "pol-0",
+                "enabled": false,
+                "path": "rules/lists/pol-0.json"
+            },
+            {
+                "id": "pol-3",
+                "enabled": false,
+                "path": "rules/lists/pol-3.json"
+            },
+            {
+                "id": "rou-1",
+                "enabled": false,
+                "path": "rules/lists/rou-1.json"
+            },
+            {
+                "id": "rus-0",
+                "enabled": false,
+                "path": "rules/lists/rus-0.json"
+            },
+            {
+                "id": "rus-1",
+                "enabled": false,
+                "path": "rules/lists/rus-1.json"
+            },
+            {
+                "id": "spa-0",
+                "enabled": false,
+                "path": "rules/lists/spa-0.json"
+            },
+            {
+                "id": "spa-1",
+                "enabled": false,
+                "path": "rules/lists/spa-1.json"
+            },
+            {
+                "id": "svn-0",
+                "enabled": false,
+                "path": "rules/lists/svn-0.json"
+            },
+            {
+                "id": "swe-1",
+                "enabled": false,
+                "path": "rules/lists/swe-1.json"
+            },
+            {
+                "id": "tha-0",
+                "enabled": false,
+                "path": "rules/lists/tha-0.json"
+            },
+            {
+                "id": "tur-0",
+                "enabled": false,
+                "path": "rules/lists/tur-0.json"
+            },
+            {
+                "id": "ukr-0",
+                "enabled": false,
+                "path": "rules/lists/ukr-0.json"
+            },
+            {
+                "id": "vie-1",
+                "enabled": false,
+                "path": "rules/lists/vie-1.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "ko",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - 광고 차단 및 사이트 점검"
+    },
+    "extDescription": {
+        "message": "광고와 추적기를 차단해 페이지를 더 빠르고 가볍게 합니다. 모든 사이트의 속도, 보안, 추적을 점검합니다."
+    },
+    "toggle": {
+        "message": "켜기 / 끄기"
+    },
+    "statusOn": {
+        "message": "보호가 켜져 있습니다"
+    },
+    "statusOff": {
+        "message": "보호가 꺼져 있습니다"
+    },
+    "statusSiteOff": {
+        "message": "이 사이트에서 보호가 꺼져 있습니다"
+    },
+    "telegram": {
+        "message": "텔레그램 그룹"
+    },
+    "github": {
+        "message": "GitHub에서 기여하기"
+    },
+    "httpsOn": {
+        "message": "연결이 암호화되어 있습니다"
+    },
+    "httpsOff": {
+        "message": "연결이 암호화되어 있지 않습니다"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — 가장 빠른 프로토콜"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — 최신 프로토콜"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — 오래된 프로토콜",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "프로토콜 알 수 없음(캐시에서 불러온 페이지)"
+    },
+    "loading": {
+        "message": "불러오는 중…"
+    },
+    "loadingTitle": {
+        "message": "페이지를 아직 불러오는 중입니다"
+    },
+    "seconds": {
+        "message": "$SECONDS$초",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "페이지 로드 시간"
+    },
+    "domains": {
+        "message": "도메인 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "서드파티 도메인:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…외 $COUNT$개",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "서드파티 도메인 없음"
+    },
+    "blocked": {
+        "message": "차단 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "추적기 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "이 페이지에서 차단됨\n광고: $ADS$\n추적기: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "이 사이트는 사용자를 추적합니다. 차단된 추적기: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "추적기를 찾지 못했습니다"
+    },
+    "scoreLabel": {
+        "message": "사이트 점수"
+    },
+    "serverLabel": {
+        "message": "서버"
+    },
+    "techLabel": {
+        "message": "사용 기술"
+    },
+    "companiesLabel": {
+        "message": "추적 업체"
+    },
+    "extraLabel": {
+        "message": "기타"
+    },
+    "extendedText": {
+        "message": "확장 모드: 모든 사이트에서 호스팅, IPv6, HSTS, 통계를 보여 주고 광고 영역과 쿠키 팝업을 숨깁니다. 데이터는 브라우저 밖으로 나가지 않습니다."
+    },
+    "extendedButton": {
+        "message": "켜기"
+    },
+    "extendedOff": {
+        "message": "확장 모드 끄기"
+    },
+    "extendedOffTitle": {
+        "message": "확장 프로그램이 모든 사이트에서 서버 IP와 헤더 확인, 통계 기록, 광고 영역과 쿠키 팝업 숨기기를 중단하고 모든 사이트에 대한 접근 권한이 취소됩니다. 언제든지 다시 켤 수 있습니다"
+    },
+    "share": {
+        "message": "공유"
+    },
+    "copied": {
+        "message": "복사됨"
+    },
+    "cookiesLabel": {
+        "message": "쿠키 동의 팝업 숨기기"
+    },
+    "cookiesTitle": {
+        "message": "쿠키 동의 배너 서비스를 차단합니다. 확장 모드에서는 모든 사이트에서 배너 자체도 숨깁니다"
+    },
+    "siteLabel": {
+        "message": "$HOST$에서 차단",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "사이트가 제대로 작동하지 않으면 선택을 해제하세요. 해당 사이트의 광고와 추적기가 더 이상 차단되지 않습니다. 페이지가 새로고침됩니다"
+    },
+    "guess": {
+        "message": "간접적인 징후로 감지됨 — 정확하지 않을 수 있음"
+    },
+    "weightTitle": {
+        "message": "모든 파일을 포함한 페이지 크기"
+    },
+    "weightEstimated": {
+        "message": "$TOTAL$개 파일 중 $KNOWN$개의 정확한 크기를 알고 있으며, 나머지는 추정값입니다: 서드파티 사이트는 크기를 숨깁니다",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "페이지가 압축됨: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "압축 없음"
+    },
+    "compressionOff": {
+        "message": "페이지가 압축 없이 전송됩니다 — 로드가 느려집니다"
+    },
+    "compressionUnknown": {
+        "message": "압축 방식 알 수 없음(캐시에서 불러온 페이지)"
+    },
+    "blockedCookies": {
+        "message": "쿠키 팝업: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "크기: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "차단되지 않음:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "사이트에서 발견됨:\n$LIST$\n차단 여부는 확장 모드에서 표시됩니다",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "차단됨:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "알려진 업체 없음"
+    },
+    "serverExtended": {
+        "message": "확장 모드에서 표시"
+    },
+    "serverReload": {
+        "message": "페이지를 새로고침하세요"
+    },
+    "serverReloadTitle": {
+        "message": "서버는 페이지를 불러오는 동안 감지됩니다"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "기타 제공업체"
+    },
+    "serverProxy": {
+        "message": "사이트가 $NAME$(CDN 또는 DDoS 방어) 뒤에서 작동합니다 — 실제 서버는 숨겨져 있습니다",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "호스팅: $NAME$(RIPE 주소 데이터베이스 기준)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "국가는 제공업체를 기준으로 판단합니다"
+    },
+    "techFound": {
+        "message": "페이지에서 발견됨"
+    },
+    "techNone": {
+        "message": "감지되지 않음"
+    },
+    "techNoneTitle": {
+        "message": "알려진 엔진이나 라이브러리의 흔적을 찾지 못했습니다"
+    },
+    "ipv6": {
+        "message": "IPv6로 연결됨"
+    },
+    "ipv4": {
+        "message": "IPv4로 연결됨. 이것만으로는 사이트가 IPv6를 지원하는지 알 수 없습니다: 사용 중인 네트워크에 따라서도 달라집니다"
+    },
+    "hstsOn": {
+        "message": "HSTS: 브라우저가 항상 HTTPS로만 사이트를 엽니다"
+    },
+    "hstsOff": {
+        "message": "HSTS 없음: 사이트 첫 방문이 암호화 없이 이루어질 수 있습니다"
+    },
+    "mixed": {
+        "message": "HTTP 파일 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS 페이지가 암호화 없이 파일을 불러옵니다: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "점수 $SCORE$/10, 평가 기준:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "암호화"
+    },
+    "scoreProtocol": {
+        "message": "프로토콜"
+    },
+    "scoreSpeed": {
+        "message": "로드 속도"
+    },
+    "scoreWeight": {
+        "message": "페이지 크기"
+    },
+    "scoreTrackers": {
+        "message": "추적"
+    },
+    "scoreDomains": {
+        "message": "서드파티 도메인"
+    },
+    "scoreCompression": {
+        "message": "압축"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "혼합 콘텐츠"
+    },
+    "stats": {
+        "message": "차단된 요청 합계: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "$DATE$부터. 크기는 광고 파일의 평균 크기로 추정합니다",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "사이트 보고서 — 이미지 또는 텍스트로"
+    },
+    "reportTitle": {
+        "message": "사이트 점수와 세부 정보를 이미지 또는 텍스트로 — 동료, 외주 업체, 채팅방에 공유"
+    },
+    "reportDone": {
+        "message": "저장됨"
+    },
+    "copyIp": {
+        "message": "IP $IP$ 복사",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "이미지 복사"
+    },
+    "copyText": {
+        "message": "텍스트와 링크 복사"
+    },
+    "shareSystem": {
+        "message": "더 보기…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ABlock에서 $SCORE$/10점",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "내 사이트도 확인해 보세요:"
+    },
+    "donate": {
+        "message": "후원"
+    },
+    "donateTitle": {
+        "message": "Boosty에서 개발 후원하기"
+    },
+    "askStats": {
+        "message": "차단한 요청: $COUNT$, 절약 ≈ $SIZE$. ABlock이 도움이 된다면 개발을 후원해 주세요",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "ABlock을 사용한 지 한 달이 되었습니다. 도움이 된다면 개발을 후원해 주세요"
+    },
+    "askClose": {
+        "message": "다시 표시 안 함"
+    },
+    "reportLegendGuess": {
+        "message": "? — 간접적인 징후로 감지됨"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — 대략적인 추정"
+    },
+    "companiesNoneTitle": {
+        "message": "이 페이지에는 ABlock 목록에 있는 업체가 없습니다. 사이트 자체 카운터는 있을 수 있습니다 — 이는 '추적기' 배지에서 집계됩니다"
+    },
+    "compressionFiles": {
+        "message": "텍스트 파일: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "압축 안 됨: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "사이트 데이터를 삭제하고 새로고침: 쿠키, 캐시, 저장소. 배지와 점수가 새 방문자가 보는 사이트를 보여 줍니다. 이 사이트에서 로그아웃됩니다"
+    },
+    "clearConfirm": {
+        "message": "삭제할까요?"
+    },
+    "saveImage": {
+        "message": "이미지 저장"
+    },
+    "shareSend": {
+        "message": "$NAME$(으)로 보내기",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "$NAME$에 게시",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "텍스트로 전송됩니다: 이미지는 서버에 업로드하지 않으면 전달할 수 없습니다 — 이미지를 복사해 메시지에 붙여 넣으세요"
+    },
+    "shareLinkOnly": {
+        "message": "확장 프로그램 링크만 전달됩니다 — 보고서 이미지를 복사해 게시물에 붙여 넣으세요"
+    },
+    "auditLabel": {
+        "message": "세부 정보"
+    },
+    "auditIssues": {
+        "message": "문제: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "문제 없음"
+    },
+    "auditSpeed": {
+        "message": "속도"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "마크업"
+    },
+    "auditA11y": {
+        "message": "접근성"
+    },
+    "auditSecurity": {
+        "message": "보안"
+    },
+    "auditYes": {
+        "message": "예"
+    },
+    "auditNo": {
+        "message": "아니요"
+    },
+    "auditLength": {
+        "message": "$COUNT$자",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "다른 도메인"
+    },
+    "auditNoImage": {
+        "message": "이미지 없음"
+    },
+    "auditNoInput": {
+        "message": "상호작용 없음"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$/$TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "레이아웃 이동"
+    },
+    "auditTtfb": {
+        "message": "서버 응답(TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "서버에서 페이지의 첫 바이트를 받기까지 걸린 시간. 좋음 — 0.8초 미만"
+    },
+    "auditFcp": {
+        "message": "첫 콘텐츠 표시(FCP)"
+    },
+    "auditFcpHint": {
+        "message": "첫 콘텐츠가 화면에 나타난 시점. 좋음 — 1.8초 미만"
+    },
+    "auditLcp": {
+        "message": "주요 블록(LCP)"
+    },
+    "auditLcpHint": {
+        "message": "가장 큰 블록(이미지 또는 텍스트)이 그려진 시점. Google의 주요 속도 지표. 좋음 — 2.5초 미만"
+    },
+    "auditCls": {
+        "message": "레이아웃 이동(CLS)"
+    },
+    "auditClsHint": {
+        "message": "로드 중에 콘텐츠가 얼마나 움직이는지. 좋음 — 0.1 미만"
+    },
+    "auditInp": {
+        "message": "상호작용 응답(INP)"
+    },
+    "auditInpHint": {
+        "message": "클릭이나 입력에 대한 응답의 최대 지연. 좋음 — 200ms 미만"
+    },
+    "auditBlocking": {
+        "message": "렌더링 차단"
+    },
+    "auditBlockingHint": {
+        "message": "브라우저가 페이지를 그리기 시작하기 전에 기다리는 파일. 스타일은 괜찮지만 스크립트는 async나 defer로 불러오는 것이 좋습니다"
+    },
+    "auditStatus": {
+        "message": "상태 코드"
+    },
+    "auditStatusHint": {
+        "message": "페이지의 HTTP 상태: 200 — 정상, 4xx와 5xx — 오류"
+    },
+    "auditNoindex": {
+        "message": "색인 차단됨"
+    },
+    "auditNoindexHint": {
+        "message": "페이지가 noindex 태그나 robots.txt 규칙으로 검색 엔진에서 숨겨져 있습니다. 로그인 페이지나 사용자 계정 페이지에서는 정상입니다"
+    },
+    "auditTitle": {
+        "message": "제목(title)"
+    },
+    "auditTitleHint": {
+        "message": "검색 결과의 링크 텍스트이자 탭 이름. 권장 — 10–70자"
+    },
+    "auditDescription": {
+        "message": "설명(description)"
+    },
+    "auditDescriptionHint": {
+        "message": "검색 결과에서 링크 아래에 표시되는 텍스트. 권장 — 50–170자"
+    },
+    "auditH1": {
+        "message": "h1 제목"
+    },
+    "auditH1Hint": {
+        "message": "페이지의 주 제목. 보통 하나입니다"
+    },
+    "auditCanonical": {
+        "message": "표준 URL"
+    },
+    "auditCanonicalHint": {
+        "message": "페이지에 사본이 있을 때 검색 엔진에 대표 주소를 알려 줍니다"
+    },
+    "auditOg": {
+        "message": "링크 미리보기(Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "링크를 공유할 때 Telegram, Slack 등 서비스가 보여 주는 제목과 이미지"
+    },
+    "auditViewport": {
+        "message": "모바일 버전(viewport)"
+    },
+    "auditViewportHint": {
+        "message": "meta viewport가 없으면 휴대폰은 페이지를 축소된 데스크톱 버전으로 표시합니다"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "없으면 브라우저가 오래된 사이트용 호환 모드로 전환되어 레이아웃이 달라질 수 있습니다"
+    },
+    "auditNoSize": {
+        "message": "크기가 지정되지 않은 이미지"
+    },
+    "auditNoSizeHint": {
+        "message": "width와 height가 없으면 브라우저가 이미지 자리를 얼마나 확보할지 몰라 이미지가 로드될 때 레이아웃이 움직입니다"
+    },
+    "auditLarge": {
+        "message": "너무 큰 이미지"
+    },
+    "auditLargeHint": {
+        "message": "이미지가 표시되는 크기보다 눈에 띄게 크게 전송됩니다 — 불필요한 용량"
+    },
+    "auditModern": {
+        "message": "WebP 및 AVIF 이미지"
+    },
+    "auditModernHint": {
+        "message": "이 형식은 JPEG와 PNG보다 25–50% 작습니다"
+    },
+    "auditLang": {
+        "message": "페이지 언어(lang)"
+    },
+    "auditLangHint": {
+        "message": "스크린 리더, 번역기, 검색 엔진에 필요합니다"
+    },
+    "auditAlt": {
+        "message": "alt가 없는 이미지"
+    },
+    "auditAltHint": {
+        "message": "시각 장애인과 이미지가 로드되지 않을 경우를 위한 이미지 설명"
+    },
+    "auditLabels": {
+        "message": "레이블이 없는 입력란"
+    },
+    "auditLabelsHint": {
+        "message": "스크린 리더가 입력란에 무엇을 입력해야 하는지 알려 줄 수 없습니다"
+    },
+    "auditNames": {
+        "message": "이름이 없는 버튼과 링크"
+    },
+    "auditNamesHint": {
+        "message": "예: aria-label이 없는 아이콘 버튼 — 시각 장애인에게는 '버튼'이라고만 들립니다"
+    },
+    "auditMain": {
+        "message": "주요 영역(main)"
+    },
+    "auditMainHint": {
+        "message": "메뉴를 건너뛰고 바로 콘텐츠로 이동할 수 있게 합니다"
+    },
+    "auditZoom": {
+        "message": "확대 비활성화"
+    },
+    "auditZoomHint": {
+        "message": "저시력 사용자가 휴대폰에서 페이지를 확대할 수 없습니다"
+    },
+    "auditCsp": {
+        "message": "콘텐츠 보안 정책(CSP)"
+    },
+    "auditCspHint": {
+        "message": "페이지가 스크립트를 불러올 수 있는 위치를 제한합니다 — XSS 방어. nonce나 해시 없이 'unsafe-inline'이 있으면 거의 보호하지 못합니다"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "브라우저가 파일 형식을 추측하지 못하게 합니다 — 스크립트 위조 방어"
+    },
+    "auditFrame": {
+        "message": "프레임 삽입 방지"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options나 frame-ancestors는 사용자를 속여 클릭하게 하려고 사이트를 다른 페이지에 삽입하는 것을 막습니다"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "이동할 때 페이지 주소를 다른 사이트에 얼마나 전달할지. 이 헤더가 없으면 브라우저는 안전한 기본값을 사용합니다"
+    },
+    "auditCache": {
+        "message": "페이지 캐시"
+    },
+    "auditCacheHint": {
+        "message": "페이지의 출처: HIT — 서버나 CDN 캐시에서, MISS — 새로 생성됨. 페이지 자체는 거의 캐시되지 않으며 보통 이미지, 스크립트, 스타일이 캐시됩니다"
+    },
+    "auditCacheBrowser": {
+        "message": "브라우저 캐시에서"
+    },
+    "auditBots": {
+        "message": "로봇과 AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "검색 엔진과 기타 로봇을 위한 규칙. 이 파일이 없으면 로봇이 모든 것을 크롤링하고 검색 엔진은 사이트맵 위치를 알 수 없습니다"
+    },
+    "auditSitemap": {
+        "message": "사이트맵"
+    },
+    "auditSitemapHint": {
+        "message": "검색 엔진을 위한 페이지 목록. robots.txt에 Sitemap: 줄로 지정합니다"
+    },
+    "auditAi": {
+        "message": "AI 봇 규칙"
+    },
+    "auditAiHint": {
+        "message": "AI 봇이 신경망 학습을 위해 사이트의 텍스트를 수집해도 되는지 — 봇 이름을 지정한 robots.txt 규칙을 기준으로 합니다. 확장 프로그램은 이런 봇 16개(GPTBot, ClaudeBot, Google-Extended 등)를 알고 있으며, 다른 이름의 봇은 집계하지 않습니다. '모두 차단' — 사이트가 User-agent: *로 모든 로봇을 차단하며 AI 전용 규칙은 없습니다"
+    },
+    "auditAiBlocked": {
+        "message": "차단: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "허용"
+    },
+    "auditAiNone": {
+        "message": "설정 안 됨"
+    },
+    "auditAiAll": {
+        "message": "모두 차단"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "새로운 형식: AI 어시스턴트와 에이전트를 위해 Markdown으로 작성한 짧은 사이트 설명. 아직은 선택 사항입니다"
+    },
+    "auditCspWeak": {
+        "message": "약함"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "페이지와 삽입된 프레임이 카메라, 위치 정보 등 브라우저 기능에 접근하지 못하게 합니다"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "사이트 창을 사이트가 여는 다른 창과 분리합니다 — window.opener를 통한 공격 방어"
+    },
+    "auditVersions": {
+        "message": "헤더의 소프트웨어 버전"
+    },
+    "auditVersionsHint": {
+        "message": "서버가 소프트웨어 버전을 노출합니다 — 공격자에게 어떤 알려진 취약점을 시도할지 알려 주는 셈입니다. 숨기는 방법: nginx와 Angie에서 server_tokens off, PHP에서 expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "숨김"
+    },
+    "auditSession": {
+        "message": "스크립트가 읽을 수 있는 세션 쿠키"
+    },
+    "auditSessionHint": {
+        "message": "로그인 쿠키를 JavaScript에서 읽을 수 있는 것으로 보입니다: XSS가 있으면 탈취될 수 있습니다. HttpOnly 플래그로 막을 수 있습니다. 쿠키 이름으로 감지했습니다"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "/.well-known/security.txt에 있는 취약점 신고 연락처. 연구자가 문제를 팔지 않고 사이트 운영자에게 알릴 수 있게 돕습니다"
+    },
+    "serverUnknownTitle": {
+        "message": "이 제공업체의 네트워크는 ABlock 데이터베이스에 없습니다: 데이터베이스에는 대형 호스팅, 클라우드, CDN이 포함됩니다"
+    },
+    "protocolH3Later": {
+        "message": "서버가 HTTP/3를 지원합니다. 이 페이지는 $PROTOCOL$(으)로 전송되었습니다 — 첫 방문 시 흔한 일입니다: 브라우저는 서버 응답에서 HTTP/3를 알게 되고 다음 요청부터 전환합니다",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "브라우저 언어"
+    },
+    "langTitle": {
+        "message": "인터페이스 언어"
+    },
+    "noteTitle": {
+        "message": "이 사이트 메모"
+    },
+    "notePlaceholder": {
+        "message": "이 사이트 메모, 나에게만 표시됨"
+    },
+    "incognitoLabel": {
+        "message": "시크릿 모드에서도 작동"
+    },
+    "incognitoTitle": {
+        "message": "브라우저의 확장 프로그램 설정이 열립니다. 그곳에서 ABlock의 시크릿 모드 허용을 켜세요"
+    }
+}

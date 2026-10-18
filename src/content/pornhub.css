@@ -1,0 +1,15 @@
+/* Баннер на паузе */
+#pb_template {
+    display: none !important;
+}
+
+/* Реклама TrafficJunky в сетке видео: нативные плитки и то, что сайт вставляет в обход блокировщика,
+   — элементы со случайным именем тега. В сетке законно лежат только <li> с роликами */
+li.tjListItem,
+ins.adsbytrafficjunky,
+#popsByTrafficJunky,
+#singleFeedSection > :not(li),
+/* Строка-анонс над роликами: реклама мерча и сервисов владельца сайта */
+#welcome {
+    display: none !important;
+}

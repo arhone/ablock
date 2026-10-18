@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "el",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Αποκλεισμός διαφημίσεων και έλεγχος σελίδων"
+    },
+    "extDescription": {
+        "message": "Αποκλείει διαφημίσεις και ιχνηλάτες: ταχύτερες σελίδες, λιγότερα δεδομένα. Ελέγχει ταχύτητα, ασφάλεια και παρακολούθηση."
+    },
+    "toggle": {
+        "message": "Ενεργοποίηση / απενεργοποίηση"
+    },
+    "statusOn": {
+        "message": "Η προστασία είναι ενεργή"
+    },
+    "statusOff": {
+        "message": "Η προστασία είναι ανενεργή"
+    },
+    "statusSiteOff": {
+        "message": "Η προστασία είναι ανενεργή σε αυτόν τον ιστότοπο"
+    },
+    "telegram": {
+        "message": "Ομάδα στο Telegram"
+    },
+    "github": {
+        "message": "Συνεισφέρετε στο GitHub"
+    },
+    "httpsOn": {
+        "message": "Η σύνδεση είναι κρυπτογραφημένη"
+    },
+    "httpsOff": {
+        "message": "Η σύνδεση δεν είναι κρυπτογραφημένη"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — το ταχύτερο πρωτόκολλο"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — ένα σύγχρονο πρωτόκολλο"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — ένα παρωχημένο πρωτόκολλο",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Άγνωστο πρωτόκολλο (η σελίδα φορτώθηκε από την κρυφή μνήμη)"
+    },
+    "loading": {
+        "message": "Φόρτωση…"
+    },
+    "loadingTitle": {
+        "message": "Η σελίδα φορτώνεται ακόμα"
+    },
+    "seconds": {
+        "message": "$SECONDS$ δευτ.",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Χρόνος φόρτωσης σελίδας"
+    },
+    "domains": {
+        "message": "Τομείς $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Τομείς τρίτων:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…και άλλοι $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Κανένας τομέας τρίτων"
+    },
+    "blocked": {
+        "message": "Αποκλείστηκαν $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Ιχνηλάτες $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Αποκλείστηκαν σε αυτή τη σελίδα\nΔιαφημίσεις: $ADS$\nΙχνηλάτες: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Αυτός ο ιστότοπος σας παρακολουθεί. Ιχνηλάτες που αποκλείστηκαν: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Δεν βρέθηκαν ιχνηλάτες"
+    },
+    "scoreLabel": {
+        "message": "Βαθμολογία ιστότοπου"
+    },
+    "serverLabel": {
+        "message": "Διακομιστής"
+    },
+    "techLabel": {
+        "message": "Κατασκευή με"
+    },
+    "companiesLabel": {
+        "message": "Παρακολουθούν"
+    },
+    "extraLabel": {
+        "message": "Περισσότερα"
+    },
+    "extendedText": {
+        "message": "Εκτεταμένη λειτουργία: φιλοξενία, IPv6, HSTS, στατιστικά και απόκρυψη διαφημιστικών χώρων και αναδυόμενων παραθύρων cookie σε όλους τους ιστότοπους. Τα δεδομένα δεν φεύγουν ποτέ από το πρόγραμμα περιήγησής σας."
+    },
+    "extendedButton": {
+        "message": "Ενεργοποίηση"
+    },
+    "extendedOff": {
+        "message": "Απενεργοποίηση εκτεταμένης λειτουργίας"
+    },
+    "extendedOffTitle": {
+        "message": "Η επέκταση θα σταματήσει να βλέπει τις IP και τις κεφαλίδες των διακομιστών, να τηρεί στατιστικά και να κρύβει τους διαφημιστικούς χώρους και τα παράθυρα cookie σε όλους τους ιστότοπους· η πρόσβαση σε όλους τους ιστότοπους θα ανακληθεί. Μπορείτε να την ενεργοποιήσετε ξανά οποιαδήποτε στιγμή"
+    },
+    "share": {
+        "message": "Κοινοποίηση"
+    },
+    "copied": {
+        "message": "Αντιγράφηκε"
+    },
+    "cookiesLabel": {
+        "message": "Απόκρυψη παραθύρων συναίνεσης για cookie"
+    },
+    "cookiesTitle": {
+        "message": "Αποκλείει υπηρεσίες banner συναίνεσης για cookie. Στην εκτεταμένη λειτουργία κρύβει και τα ίδια τα banner σε οποιονδήποτε ιστότοπο"
+    },
+    "siteLabel": {
+        "message": "Αποκλεισμός στο $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Καταργήστε την επιλογή αν ο ιστότοπος δεν λειτουργεί σωστά: οι διαφημίσεις και οι ιχνηλάτες δεν θα αποκλείονται πλέον σε αυτόν. Η σελίδα θα φορτωθεί ξανά"
+    },
+    "guess": {
+        "message": "Εντοπίστηκε από έμμεσες ενδείξεις — μπορεί να μην είναι ακριβές"
+    },
+    "weightTitle": {
+        "message": "Μέγεθος σελίδας με όλα τα αρχεία"
+    },
+    "weightEstimated": {
+        "message": "Το ακριβές μέγεθος είναι γνωστό για $KNOWN$ από $TOTAL$ αρχεία, τα υπόλοιπα είναι εκτιμήσεις: οι ιστότοποι τρίτων κρύβουν το μέγεθος",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Η σελίδα είναι συμπιεσμένη: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Χωρίς συμπίεση"
+    },
+    "compressionOff": {
+        "message": "Η σελίδα αποστέλλεται χωρίς συμπίεση — φορτώνει πιο αργά"
+    },
+    "compressionUnknown": {
+        "message": "Άγνωστη συμπίεση (η σελίδα φορτώθηκε από την κρυφή μνήμη)"
+    },
+    "blockedCookies": {
+        "message": "Παράθυρα cookie: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Μέγεθος: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Δεν αποκλείστηκαν:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Βρέθηκαν στον ιστότοπο:\n$LIST$\nΑν αποκλείονται φαίνεται στην εκτεταμένη λειτουργία",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Αποκλείστηκαν:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "δεν βρέθηκαν γνωστές"
+    },
+    "serverExtended": {
+        "message": "στην εκτεταμένη λειτουργία"
+    },
+    "serverReload": {
+        "message": "φορτώστε ξανά τη σελίδα"
+    },
+    "serverReloadTitle": {
+        "message": "Ο διακομιστής εντοπίζεται κατά τη φόρτωση της σελίδας"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "άλλος πάροχος"
+    },
+    "serverProxy": {
+        "message": "Ο ιστότοπος λειτουργεί πίσω από $NAME$ (CDN ή προστασία DDoS) — ο πραγματικός διακομιστής είναι κρυφός",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Φιλοξενία: $NAME$ (από τη βάση διευθύνσεων RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Η χώρα προσδιορίζεται από τον πάροχο"
+    },
+    "techFound": {
+        "message": "Βρέθηκε στη σελίδα"
+    },
+    "techNone": {
+        "message": "δεν εντοπίστηκε"
+    },
+    "techNoneTitle": {
+        "message": "Δεν βρέθηκαν ενδείξεις γνωστών μηχανών ή βιβλιοθηκών"
+    },
+    "ipv6": {
+        "message": "Σύνδεση μέσω IPv6"
+    },
+    "ipv4": {
+        "message": "Σύνδεση μέσω IPv4. Αυτό δεν δείχνει αν ο ιστότοπος υποστηρίζει IPv6: εξαρτάται και από το δίκτυό σας"
+    },
+    "hstsOn": {
+        "message": "HSTS: το πρόγραμμα περιήγησης ανοίγει πάντα τον ιστότοπο μόνο μέσω HTTPS"
+    },
+    "hstsOff": {
+        "message": "Χωρίς HSTS: η πρώτη επίσκεψη στον ιστότοπο μπορεί να γίνει χωρίς κρυπτογράφηση"
+    },
+    "mixed": {
+        "message": "Αρχεία HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "Η σελίδα HTTPS φορτώνει αρχεία χωρίς κρυπτογράφηση: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Βαθμολογία $SCORE$ στα 10 με βάση:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Κρυπτογράφηση"
+    },
+    "scoreProtocol": {
+        "message": "Πρωτόκολλο"
+    },
+    "scoreSpeed": {
+        "message": "Ταχύτητα φόρτωσης"
+    },
+    "scoreWeight": {
+        "message": "Μέγεθος σελίδας"
+    },
+    "scoreTrackers": {
+        "message": "Παρακολούθηση"
+    },
+    "scoreDomains": {
+        "message": "Τομείς τρίτων"
+    },
+    "scoreCompression": {
+        "message": "Συμπίεση"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Μικτό περιεχόμενο"
+    },
+    "stats": {
+        "message": "Σύνολο αιτημάτων που αποκλείστηκαν: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Από $DATE$. Το μέγεθος εκτιμάται από το μέσο μέγεθος των διαφημιστικών αρχείων",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Αναφορά ιστότοπου — ως εικόνα ή κείμενο"
+    },
+    "reportTitle": {
+        "message": "Βαθμολογία και λεπτομέρειες του ιστότοπου ως εικόνα ή κείμενο — για συναδέλφους, έναν ανάδοχο ή μια συνομιλία"
+    },
+    "reportDone": {
+        "message": "Αποθηκεύτηκε"
+    },
+    "copyIp": {
+        "message": "Αντιγραφή IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Αντιγραφή εικόνας"
+    },
+    "copyText": {
+        "message": "Αντιγραφή κειμένου και συνδέσμου"
+    },
+    "shareSystem": {
+        "message": "Περισσότερα…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — βαθμολογία $SCORE$ στα 10 στο ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Ελέγξτε τον ιστότοπό σας:"
+    },
+    "donate": {
+        "message": "Δωρεά"
+    },
+    "donateTitle": {
+        "message": "Υποστηρίξτε την ανάπτυξη στο Boosty"
+    },
+    "askStats": {
+        "message": "Αποκλεισμένα αιτήματα: $COUNT$, εξοικονομήθηκαν ≈ $SIZE$. Αν το ABlock σάς είναι χρήσιμο, στηρίξτε την ανάπτυξή του",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Χρησιμοποιείτε το ABlock εδώ και έναν μήνα. Αν σάς είναι χρήσιμο, στηρίξτε την ανάπτυξή του"
+    },
+    "askClose": {
+        "message": "Να μην εμφανιστεί ξανά"
+    },
+    "reportLegendGuess": {
+        "message": "? — εντοπίστηκε από έμμεσες ενδείξεις"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — κατά προσέγγιση εκτίμηση"
+    },
+    "companiesNoneTitle": {
+        "message": "Δεν υπάρχουν εταιρείες από τον κατάλογο του ABlock σε αυτή τη σελίδα. Οι δικοί μετρητές του ιστότοπου μπορεί να υπάρχουν — τους μετρά η ένδειξη «Ιχνηλάτες»"
+    },
+    "compressionFiles": {
+        "message": "Αρχεία κειμένου: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Χωρίς συμπίεση: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Διαγραφή δεδομένων ιστότοπου και επαναφόρτωση: cookie, κρυφή μνήμη και αποθήκευση. Οι ενδείξεις και η βαθμολογία θα δείξουν τον ιστότοπο όπως τον βλέπει ένας νέος επισκέπτης. Θα αποσυνδεθείτε από αυτόν τον ιστότοπο"
+    },
+    "clearConfirm": {
+        "message": "Διαγραφή;"
+    },
+    "saveImage": {
+        "message": "Αποθήκευση εικόνας"
+    },
+    "shareSend": {
+        "message": "Αποστολή μέσω $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Δημοσίευση στο $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Αποστέλλεται ως κείμενο: μια εικόνα δεν μπορεί να μεταβιβαστεί χωρίς μεταφόρτωση σε διακομιστή — αντιγράψτε την και επικολλήστε την στο μήνυμα"
+    },
+    "shareLinkOnly": {
+        "message": "Μεταβιβάζεται μόνο ο σύνδεσμος της επέκτασης — αντιγράψτε την εικόνα της αναφοράς και επικολλήστε την στην ανάρτηση"
+    },
+    "auditLabel": {
+        "message": "Λεπτομέρειες"
+    },
+    "auditIssues": {
+        "message": "προβλήματα: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "χωρίς προβλήματα"
+    },
+    "auditSpeed": {
+        "message": "Ταχύτητα"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Σήμανση"
+    },
+    "auditA11y": {
+        "message": "Προσβασιμότητα"
+    },
+    "auditSecurity": {
+        "message": "Ασφάλεια"
+    },
+    "auditYes": {
+        "message": "ναι"
+    },
+    "auditNo": {
+        "message": "όχι"
+    },
+    "auditLength": {
+        "message": "$COUNT$ χαρακτήρες",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "άλλος τομέας"
+    },
+    "auditNoImage": {
+        "message": "χωρίς εικόνα"
+    },
+    "auditNoInput": {
+        "message": "χωρίς αλληλεπίδραση"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ από $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Μετατοπίσεις διάταξης"
+    },
+    "auditTtfb": {
+        "message": "Απόκριση διακομιστή (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Πόσος χρόνος χρειάστηκε για να έρθει το πρώτο byte της σελίδας από τον διακομιστή. Καλό — κάτω από 0,8 δευτ."
+    },
+    "auditFcp": {
+        "message": "Πρώτη απόδοση (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Πότε εμφανίστηκε το πρώτο περιεχόμενο στην οθόνη. Καλό — κάτω από 1,8 δευτ."
+    },
+    "auditLcp": {
+        "message": "Κύριο μπλοκ (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Πότε αποδόθηκε το μεγαλύτερο μπλοκ — εικόνα ή κείμενο. Η κύρια μέτρηση ταχύτητας της Google. Καλό — κάτω από 2,5 δευτ."
+    },
+    "auditCls": {
+        "message": "Μετατοπίσεις διάταξης (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Πόσο πηδάει το περιεχόμενο κατά τη φόρτωση. Καλό — κάτω από 0,1"
+    },
+    "auditInp": {
+        "message": "Απόκριση σε αλληλεπίδραση (INP)"
+    },
+    "auditInpHint": {
+        "message": "Η μεγαλύτερη καθυστέρηση απόκρισης σε κλικ ή πληκτρολόγηση. Καλό — κάτω από 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Εμποδίζουν την απόδοση"
+    },
+    "auditBlockingHint": {
+        "message": "Αρχεία που περιμένει το πρόγραμμα περιήγησης πριν αρχίσει να σχεδιάζει τη σελίδα. Τα στιλ είναι εντάξει, αλλά τα σενάρια καλύτερα να φορτώνονται με async ή defer"
+    },
+    "auditStatus": {
+        "message": "Κωδικός κατάστασης"
+    },
+    "auditStatusHint": {
+        "message": "Κατάσταση HTTP της σελίδας: 200 — εντάξει, 4xx και 5xx — σφάλμα"
+    },
+    "auditNoindex": {
+        "message": "Η ευρετηρίαση απαγορεύεται"
+    },
+    "auditNoindexHint": {
+        "message": "Η σελίδα είναι κρυφή από τις μηχανές αναζήτησης με ετικέτα noindex ή κανόνα του robots.txt. Για σελίδες σύνδεσης και λογαριασμούς χρηστών αυτό είναι φυσιολογικό"
+    },
+    "auditTitle": {
+        "message": "Τίτλος (title)"
+    },
+    "auditTitleHint": {
+        "message": "Κείμενο συνδέσμου στα αποτελέσματα αναζήτησης και όνομα καρτέλας. Ιδανικά — 10–70 χαρακτήρες"
+    },
+    "auditDescription": {
+        "message": "Περιγραφή (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Κείμενο κάτω από τον σύνδεσμο στα αποτελέσματα αναζήτησης. Ιδανικά — 50–170 χαρακτήρες"
+    },
+    "auditH1": {
+        "message": "Επικεφαλίδες h1"
+    },
+    "auditH1Hint": {
+        "message": "Η κύρια επικεφαλίδα της σελίδας. Συνήθως υπάρχει μία"
+    },
+    "auditCanonical": {
+        "message": "Κανονική διεύθυνση URL"
+    },
+    "auditCanonicalHint": {
+        "message": "Υποδεικνύει στις μηχανές αναζήτησης την κύρια διεύθυνση της σελίδας, αν έχει αντίγραφα"
+    },
+    "auditOg": {
+        "message": "Προεπισκόπηση συνδέσμου (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Τίτλος και εικόνα που εμφανίζουν το Telegram, το Slack και άλλες υπηρεσίες όταν κοινοποιείται ένας σύνδεσμος"
+    },
+    "auditViewport": {
+        "message": "Έκδοση για κινητά (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Χωρίς meta viewport, τα τηλέφωνα εμφανίζουν τη σελίδα ως σμικρυμένη έκδοση υπολογιστή"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Χωρίς αυτό, το πρόγραμμα περιήγησης περνά σε λειτουργία συμβατότητας για παλιούς ιστότοπους και η διάταξη μπορεί να διαφέρει"
+    },
+    "auditNoSize": {
+        "message": "Εικόνες χωρίς διαστάσεις"
+    },
+    "auditNoSizeHint": {
+        "message": "Χωρίς width και height, το πρόγραμμα περιήγησης δεν ξέρει πόσο χώρο να κρατήσει για την εικόνα, και η διάταξη πηδάει όταν φορτώνει"
+    },
+    "auditLarge": {
+        "message": "Υπερμεγέθεις εικόνες"
+    },
+    "auditLargeHint": {
+        "message": "Η εικόνα αποστέλλεται αισθητά μεγαλύτερη από όσο εμφανίζεται — περιττό βάρος"
+    },
+    "auditModern": {
+        "message": "Εικόνες WebP και AVIF"
+    },
+    "auditModernHint": {
+        "message": "Αυτές οι μορφές είναι 25–50% μικρότερες από JPEG και PNG"
+    },
+    "auditLang": {
+        "message": "Γλώσσα σελίδας (lang)"
+    },
+    "auditLangHint": {
+        "message": "Απαιτείται από αναγνώστες οθόνης, μεταφραστές και μηχανές αναζήτησης"
+    },
+    "auditAlt": {
+        "message": "Εικόνες χωρίς alt"
+    },
+    "auditAltHint": {
+        "message": "Περιγραφή της εικόνας για τυφλούς χρήστες και για την περίπτωση που δεν φορτώσει"
+    },
+    "auditLabels": {
+        "message": "Πεδία χωρίς ετικέτες"
+    },
+    "auditLabelsHint": {
+        "message": "Ο αναγνώστης οθόνης δεν θα μπορεί να πει τι πρέπει να εισαχθεί στο πεδίο"
+    },
+    "auditNames": {
+        "message": "Κουμπιά και σύνδεσμοι χωρίς όνομα"
+    },
+    "auditNamesHint": {
+        "message": "Για παράδειγμα, κουμπί-εικονίδιο χωρίς aria-label: ο τυφλός χρήστης θα ακούσει μόνο «κουμπί»"
+    },
+    "auditMain": {
+        "message": "Κύρια περιοχή (main)"
+    },
+    "auditMainHint": {
+        "message": "Επιτρέπει τη μετάβαση κατευθείαν στο περιεχόμενο, παρακάμπτοντας το μενού"
+    },
+    "auditZoom": {
+        "message": "Η μεγέθυνση απενεργοποιήθηκε"
+    },
+    "auditZoomHint": {
+        "message": "Εμποδίζει τους χρήστες με χαμηλή όραση να μεγεθύνουν τη σελίδα στο τηλέφωνο"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Περιορίζει από πού μπορεί η σελίδα να φορτώνει σενάρια — προστασία από XSS. Αν περιέχει 'unsafe-inline' χωρίς nonce ή hash, σχεδόν δεν προστατεύει"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Απαγορεύει στο πρόγραμμα περιήγησης να μαντεύει τύπους αρχείων — προστασία από πλαστογράφηση σεναρίων"
+    },
+    "auditFrame": {
+        "message": "Προστασία από ενσωμάτωση"
+    },
+    "auditFrameHint": {
+        "message": "Το X-Frame-Options ή το frame-ancestors εμποδίζουν την ενσωμάτωση του ιστότοπου σε ξένη σελίδα για να εξαπατηθούν οι χρήστες σε κλικ"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Πόσο από τη διεύθυνση της σελίδας μεταβιβάζεται σε άλλους ιστότοπους κατά την πλοήγηση. Χωρίς την κεφαλίδα, το πρόγραμμα περιήγησης χρησιμοποιεί μια ασφαλή προεπιλογή"
+    },
+    "auditCache": {
+        "message": "Κρυφή μνήμη σελίδας"
+    },
+    "auditCacheHint": {
+        "message": "Από πού ήρθε η σελίδα: HIT — από την κρυφή μνήμη του διακομιστή ή του CDN, MISS — δημιουργήθηκε εκ νέου. Οι ίδιες οι σελίδες σπάνια αποθηκεύονται στην κρυφή μνήμη· συνήθως οι εικόνες, τα σενάρια και τα στιλ"
+    },
+    "auditCacheBrowser": {
+        "message": "από την κρυφή μνήμη του προγράμματος περιήγησης"
+    },
+    "auditBots": {
+        "message": "Ρομπότ και ΤΝ"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Κανόνες για μηχανές αναζήτησης και άλλα ρομπότ. Χωρίς το αρχείο, τα ρομπότ ανιχνεύουν τα πάντα και οι μηχανές αναζήτησης δεν μαθαίνουν πού είναι ο χάρτης του ιστότοπου"
+    },
+    "auditSitemap": {
+        "message": "Χάρτης ιστότοπου"
+    },
+    "auditSitemapHint": {
+        "message": "Λίστα σελίδων για τις μηχανές αναζήτησης. Ορίζεται στο robots.txt με μια γραμμή Sitemap:"
+    },
+    "auditAi": {
+        "message": "Κανόνες για ρομπότ ΤΝ"
+    },
+    "auditAiHint": {
+        "message": "Αν τα ρομπότ ΤΝ μπορούν να συλλέγουν τα κείμενα του ιστότοπου για νευρωνικά δίκτυα — με βάση κανόνες του robots.txt που κατονομάζουν το ρομπότ. Η επέκταση γνωρίζει 16 τέτοια ρομπότ (GPTBot, ClaudeBot, Google-Extended κ.ά.)· ρομπότ με άλλα ονόματα δεν μετρώνται. «Κλειστό για όλους» — ο ιστότοπος είναι κλειστός για όλα τα ρομπότ μέσω User-agent: *, χωρίς ξεχωριστούς κανόνες για την ΤΝ"
+    },
+    "auditAiBlocked": {
+        "message": "απαγορεύονται: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "επιτρέπεται"
+    },
+    "auditAiNone": {
+        "message": "δεν ορίστηκε"
+    },
+    "auditAiAll": {
+        "message": "κλειστό για όλους"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Νέα μορφή: σύντομη περιγραφή του ιστότοπου σε Markdown για βοηθούς και πράκτορες ΤΝ. Προς το παρόν προαιρετική"
+    },
+    "auditCspWeak": {
+        "message": "αδύναμη"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Απαγορεύει στη σελίδα και στα ενσωματωμένα πλαίσια την πρόσβαση στην κάμερα, στην τοποθεσία και σε άλλες λειτουργίες του προγράμματος περιήγησης"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Απομονώνει το παράθυρο του ιστότοπου από άλλα παράθυρα που ανοίγει — προστασία από επιθέσεις μέσω window.opener"
+    },
+    "auditVersions": {
+        "message": "Εκδόσεις λογισμικού στις κεφαλίδες"
+    },
+    "auditVersionsHint": {
+        "message": "Ο διακομιστής αποκαλύπτει εκδόσεις λογισμικού — νύξη για τους επιτιθέμενους για το ποιες γνωστές ευπάθειες να δοκιμάσουν. Απόκρυψη: server_tokens off στο nginx και στο Angie, expose_php = Off στην PHP"
+    },
+    "auditHidden": {
+        "message": "κρυφές"
+    },
+    "auditSession": {
+        "message": "Cookie συνεδρίας αναγνώσιμα από σενάρια"
+    },
+    "auditSessionHint": {
+        "message": "Τα cookie σύνδεσης φαίνεται να διαβάζονται από JavaScript: με XSS μπορούν να κλαπούν. Η σημαία HttpOnly το αποτρέπει. Εντοπίστηκε από το όνομα του cookie"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Στοιχεία επικοινωνίας για αναφορά ευπαθειών στο /.well-known/security.txt. Βοηθά έναν ερευνητή να σας αναφέρει το πρόβλημα αντί να το πουλήσει"
+    },
+    "serverUnknownTitle": {
+        "message": "Τα δίκτυα αυτού του παρόχου δεν υπάρχουν στη βάση του ABlock: περιλαμβάνει μεγάλους παρόχους φιλοξενίας, νέφη και CDN"
+    },
+    "protocolH3Later": {
+        "message": "Ο διακομιστής υποστηρίζει HTTP/3. Αυτή η σελίδα ήρθε μέσω $PROTOCOL$ — συμβαίνει στην πρώτη επίσκεψη: το πρόγραμμα περιήγησης μαθαίνει για το HTTP/3 από την απόκριση του διακομιστή και περνά σε αυτό για τα επόμενα αιτήματα",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Γλώσσα προγράμματος περιήγησης"
+    },
+    "langTitle": {
+        "message": "Γλώσσα διεπαφής"
+    },
+    "noteTitle": {
+        "message": "Σημείωση για τον ιστότοπο"
+    },
+    "notePlaceholder": {
+        "message": "Σημείωση για τον ιστότοπο, ορατή μόνο σε εσάς"
+    },
+    "incognitoLabel": {
+        "message": "Λειτουργία σε κατάσταση ανώνυμης περιήγησης"
+    },
+    "incognitoTitle": {
+        "message": "Θα ανοίξουν οι ρυθμίσεις επεκτάσεων του προγράμματος περιήγησης — ενεργοποιήστε εκεί για το ABlock την άδεια για ανώνυμη περιήγηση"
+    }
+}

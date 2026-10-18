@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "zh-CN",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - 广告拦截与网站检测"
+    },
+    "extDescription": {
+        "message": "拦截广告和跟踪器，网页加载更快、更省流量。检测任意网站的速度、安全性和跟踪情况。"
+    },
+    "toggle": {
+        "message": "开启 / 关闭"
+    },
+    "statusOn": {
+        "message": "保护已开启"
+    },
+    "statusOff": {
+        "message": "保护已关闭"
+    },
+    "statusSiteOff": {
+        "message": "此网站已关闭保护"
+    },
+    "telegram": {
+        "message": "Telegram 群组"
+    },
+    "github": {
+        "message": "协作开发"
+    },
+    "httpsOn": {
+        "message": "连接已加密"
+    },
+    "httpsOff": {
+        "message": "连接未加密"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — 最快的协议"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — 现代协议"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — 过时的协议",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "协议未知（页面来自缓存）"
+    },
+    "loading": {
+        "message": "加载中…"
+    },
+    "loadingTitle": {
+        "message": "页面仍在加载"
+    },
+    "seconds": {
+        "message": "$SECONDS$ 秒",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "页面加载时间"
+    },
+    "domains": {
+        "message": "域名 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "第三方域名：\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…还有 $COUNT$ 个",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "没有第三方域名"
+    },
+    "blocked": {
+        "message": "已拦截 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "跟踪器 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "本页已拦截\n广告：$ADS$\n跟踪器：$TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "此网站在跟踪您，已拦截跟踪器：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "未发现跟踪器"
+    },
+    "scoreLabel": {
+        "message": "网站评分"
+    },
+    "serverLabel": {
+        "message": "服务器"
+    },
+    "techLabel": {
+        "message": "技术栈"
+    },
+    "companiesLabel": {
+        "message": "跟踪方"
+    },
+    "extraLabel": {
+        "message": "其他"
+    },
+    "extendedText": {
+        "message": "扩展模式：托管商、IPv6、HSTS、统计数据，并在所有网站上隐藏广告位和 Cookie 弹窗。数据不会离开浏览器。"
+    },
+    "extendedButton": {
+        "message": "开启"
+    },
+    "extendedOff": {
+        "message": "关闭扩展模式"
+    },
+    "extendedOffTitle": {
+        "message": "扩展将不再查看服务器的 IP 和响应头、不再记录统计数据，也不再在所有网站上隐藏广告位和 Cookie 弹窗；对所有网站的访问权限将被撤销。可随时重新开启"
+    },
+    "share": {
+        "message": "分享"
+    },
+    "copied": {
+        "message": "已复制"
+    },
+    "cookiesLabel": {
+        "message": "隐藏 Cookie 弹窗"
+    },
+    "cookiesTitle": {
+        "message": "拦截 Cookie 同意横幅服务。扩展模式下还会在任意网站上隐藏横幅本身"
+    },
+    "siteLabel": {
+        "message": "在 $HOST$ 上拦截",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "如果网站无法正常运行，请取消勾选：该网站上的广告和跟踪器将不再被拦截。页面会重新加载"
+    },
+    "guess": {
+        "message": "根据间接特征判断，可能不准确"
+    },
+    "weightTitle": {
+        "message": "页面及其所有文件的大小"
+    },
+    "weightEstimated": {
+        "message": "$TOTAL$ 个文件中有 $KNOWN$ 个大小确切，其余为估算：第三方网站隐藏了大小",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "页面已压缩：$NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "未压缩"
+    },
+    "compressionOff": {
+        "message": "页面未经压缩传输，加载更慢"
+    },
+    "compressionUnknown": {
+        "message": "压缩情况未知（页面来自缓存）"
+    },
+    "blockedCookies": {
+        "message": "Cookie 弹窗：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "大小：≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "未拦截：\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "网站已接入：\n$LIST$\n是否已拦截可在扩展模式中查看",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "已拦截：\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "未发现已知公司"
+    },
+    "serverExtended": {
+        "message": "扩展模式中可见"
+    },
+    "serverReload": {
+        "message": "请刷新页面"
+    },
+    "serverReloadTitle": {
+        "message": "服务器在页面加载时识别"
+    },
+    "serverIp": {
+        "message": "IP：$IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "其他服务商"
+    },
+    "serverProxy": {
+        "message": "网站通过 $NAME$ 运行（CDN 或 DDoS 防护），真实服务器被隐藏",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "托管商：$NAME$（依据 RIPE 地址库）",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "国家根据服务商推断"
+    },
+    "techFound": {
+        "message": "在页面中发现"
+    },
+    "techNone": {
+        "message": "未识别"
+    },
+    "techNoneTitle": {
+        "message": "未发现已知引擎和库的特征"
+    },
+    "ipv6": {
+        "message": "通过 IPv6 连接"
+    },
+    "ipv4": {
+        "message": "通过 IPv4 连接。无法由此判断网站是否支持 IPv6：这也取决于您的网络"
+    },
+    "hstsOn": {
+        "message": "HSTS：浏览器始终只通过 HTTPS 打开该网站"
+    },
+    "hstsOff": {
+        "message": "无 HSTS：首次访问可能未加密"
+    },
+    "mixed": {
+        "message": "HTTP 文件 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS 页面加载了未加密的文件：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "评分 $SCORE$ / 10，各项指标：",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "加密"
+    },
+    "scoreProtocol": {
+        "message": "协议"
+    },
+    "scoreSpeed": {
+        "message": "加载速度"
+    },
+    "scoreWeight": {
+        "message": "页面大小"
+    },
+    "scoreTrackers": {
+        "message": "跟踪"
+    },
+    "scoreDomains": {
+        "message": "第三方域名"
+    },
+    "scoreCompression": {
+        "message": "压缩"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "混合内容"
+    },
+    "stats": {
+        "message": "累计已拦截请求：$COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "自 $DATE$ 起。流量按广告文件的平均大小估算",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "网站报告：图片或文字"
+    },
+    "reportTitle": {
+        "message": "以图片或文字形式分享网站评分和详情，方便发给同事、承包方或聊天群"
+    },
+    "reportDone": {
+        "message": "已保存"
+    },
+    "copyIp": {
+        "message": "复制 IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "复制图片"
+    },
+    "copyText": {
+        "message": "复制文字和链接"
+    },
+    "shareSystem": {
+        "message": "更多…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ABlock 评分 $SCORE$/10",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "检查你的网站："
+    },
+    "donate": {
+        "message": "赞助"
+    },
+    "donateTitle": {
+        "message": "在 Boosty 上赞助开发"
+    },
+    "askStats": {
+        "message": "已拦截请求：$COUNT$，节省 ≈ $SIZE$。如果 ABlock 对你有帮助，欢迎支持开发",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "你已经使用 ABlock 一个月了。如果它对你有帮助，欢迎支持开发"
+    },
+    "askClose": {
+        "message": "不再显示"
+    },
+    "reportLegendGuess": {
+        "message": "? — 根据间接迹象判断"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — 估算值"
+    },
+    "companiesNoneTitle": {
+        "message": "页面上没有 ABlock 名录中的公司。网站仍可能有自己的统计代码——由“跟踪器”徽章计数"
+    },
+    "compressionFiles": {
+        "message": "文本文件：$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "未压缩：$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "删除网站数据并重新加载：Cookie、缓存和存储。徽章和评分将按新访客的视角显示网站。你将退出此网站的账号"
+    },
+    "clearConfirm": {
+        "message": "删除？"
+    },
+    "saveImage": {
+        "message": "保存图片"
+    },
+    "shareSend": {
+        "message": "发送到 $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "发布到 $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "以文字形式发送：不上传到服务器就无法发送图片，请复制图片后粘贴到消息中"
+    },
+    "shareLinkOnly": {
+        "message": "只会传递扩展的链接，请复制报告图片后粘贴到帖子中"
+    },
+    "auditLabel": {
+        "message": "详细信息"
+    },
+    "auditIssues": {
+        "message": "问题：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "没有问题"
+    },
+    "auditSpeed": {
+        "message": "速度"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "页面布局"
+    },
+    "auditA11y": {
+        "message": "无障碍"
+    },
+    "auditSecurity": {
+        "message": "安全"
+    },
+    "auditYes": {
+        "message": "有"
+    },
+    "auditNo": {
+        "message": "无"
+    },
+    "auditLength": {
+        "message": "$COUNT$ 个字符",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "其他域名"
+    },
+    "auditNoImage": {
+        "message": "无图片"
+    },
+    "auditNoInput": {
+        "message": "没有操作"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ / $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "布局偏移"
+    },
+    "auditTtfb": {
+        "message": "服务器响应 (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "等待服务器返回页面第一个字节的时间。良好：0.8 秒以内"
+    },
+    "auditFcp": {
+        "message": "首次内容绘制 (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "屏幕上首次出现内容的时间。良好：1.8 秒以内"
+    },
+    "auditLcp": {
+        "message": "最大内容绘制 (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "最大的图片或文字块绘制完成的时间，Google 的核心速度指标。良好：2.5 秒以内"
+    },
+    "auditCls": {
+        "message": "布局偏移 (CLS)"
+    },
+    "auditClsHint": {
+        "message": "加载时内容跳动的程度。良好：0.1 以内"
+    },
+    "auditInp": {
+        "message": "交互响应 (INP)"
+    },
+    "auditInpHint": {
+        "message": "点击或输入后最长的响应延迟。良好：200 毫秒以内"
+    },
+    "auditBlocking": {
+        "message": "阻塞渲染的文件"
+    },
+    "auditBlockingHint": {
+        "message": "浏览器必须等这些文件才开始绘制页面。样式表属正常，脚本最好使用 async 或 defer 加载"
+    },
+    "auditStatus": {
+        "message": "响应代码"
+    },
+    "auditStatusHint": {
+        "message": "页面的 HTTP 状态码：200 表示正常，4xx 和 5xx 表示错误"
+    },
+    "auditNoindex": {
+        "message": "禁止索引"
+    },
+    "auditNoindexHint": {
+        "message": "页面通过 noindex 或 robots.txt 规则对搜索引擎隐藏。登录页和个人中心这样做是正常的"
+    },
+    "auditTitle": {
+        "message": "标题 (title)"
+    },
+    "auditTitleHint": {
+        "message": "搜索结果中的链接文字和标签页名称。建议 10–70 个字符"
+    },
+    "auditDescription": {
+        "message": "描述 (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "搜索结果中链接下方的文字。建议 50–170 个字符"
+    },
+    "auditH1": {
+        "message": "h1 标题"
+    },
+    "auditH1Hint": {
+        "message": "页面的主标题，通常只有一个"
+    },
+    "auditCanonical": {
+        "message": "规范网址"
+    },
+    "auditCanonicalHint": {
+        "message": "页面有副本时，告诉搜索引擎哪个是主网址"
+    },
+    "auditOg": {
+        "message": "链接预览 (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "在 Telegram、VK 等服务中发送链接时显示的标题和图片"
+    },
+    "auditViewport": {
+        "message": "移动版 (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "没有 meta viewport，手机会把页面显示为缩小的桌面版"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "缺少它时浏览器会进入兼容旧网站的模式，布局可能不同"
+    },
+    "auditNoSize": {
+        "message": "未设尺寸的图片"
+    },
+    "auditNoSizeHint": {
+        "message": "没有 width 和 height，浏览器不知道要预留多少空间，图片加载后布局会跳动"
+    },
+    "auditLarge": {
+        "message": "过大的图片"
+    },
+    "auditLargeHint": {
+        "message": "下载的图片明显大于显示尺寸，增加了多余体积"
+    },
+    "auditModern": {
+        "message": "WebP 和 AVIF 图片"
+    },
+    "auditModernHint": {
+        "message": "这些格式比 JPEG 和 PNG 小 25–50%"
+    },
+    "auditLang": {
+        "message": "页面语言 (lang)"
+    },
+    "auditLangHint": {
+        "message": "屏幕阅读器、翻译和搜索引擎都需要它"
+    },
+    "auditAlt": {
+        "message": "缺少 alt 的图片"
+    },
+    "auditAltHint": {
+        "message": "为视障用户提供图片描述，图片无法加载时也能显示"
+    },
+    "auditLabels": {
+        "message": "没有标签的输入框"
+    },
+    "auditLabelsHint": {
+        "message": "屏幕阅读器无法说明该输入什么"
+    },
+    "auditNames": {
+        "message": "没有名称的按钮和链接"
+    },
+    "auditNamesHint": {
+        "message": "例如没有 aria-label 的图标按钮：视障用户只会听到“按钮”"
+    },
+    "auditMain": {
+        "message": "主要区域 (main)"
+    },
+    "auditMainHint": {
+        "message": "可以跳过菜单直接进入正文"
+    },
+    "auditZoom": {
+        "message": "禁止缩放"
+    },
+    "auditZoomHint": {
+        "message": "妨碍视力不佳的用户在手机上放大页面"
+    },
+    "auditCsp": {
+        "message": "内容安全策略 (CSP)"
+    },
+    "auditCspHint": {
+        "message": "限制页面可以从哪里加载脚本，防御 XSS。如果包含 'unsafe-inline' 而没有 nonce 或 hash，几乎起不到保护作用"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "禁止浏览器猜测文件类型，防止脚本被替换"
+    },
+    "auditFrame": {
+        "message": "防嵌入保护"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options 或 frame-ancestors 防止网站被嵌入他人页面骗取点击"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "跳转时向其他网站发送多少网址信息。没有此标头时浏览器使用安全的默认值"
+    },
+    "auditCache": {
+        "message": "页面缓存"
+    },
+    "auditCacheHint": {
+        "message": "页面从哪里来：HIT 表示来自服务器或 CDN 缓存，MISS 表示重新生成。页面本身很少被缓存，通常缓存的是图片、脚本和样式"
+    },
+    "auditCacheBrowser": {
+        "message": "来自浏览器缓存"
+    },
+    "auditBots": {
+        "message": "爬虫与 AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "给搜索引擎和其他爬虫的规则。没有此文件，爬虫会抓取所有内容，搜索引擎也找不到站点地图"
+    },
+    "auditSitemap": {
+        "message": "站点地图 (sitemap)"
+    },
+    "auditSitemapHint": {
+        "message": "给搜索引擎的页面列表，在 robots.txt 中用 Sitemap: 行指定"
+    },
+    "auditAi": {
+        "message": "AI 爬虫规则"
+    },
+    "auditAiHint": {
+        "message": "根据 robots.txt 中点名的规则，判断 AI 爬虫能否为神经网络收集网站文本。扩展认识 16 个此类爬虫（GPTBot、ClaudeBot、Google-Extended 等），其他名称的爬虫不计入。“对所有爬虫关闭”表示网站通过 User-agent: * 对所有爬虫关闭，没有专门针对 AI 的规则"
+    },
+    "auditAiBlocked": {
+        "message": "已禁止：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "已允许"
+    },
+    "auditAiNone": {
+        "message": "未设置"
+    },
+    "auditAiAll": {
+        "message": "对所有爬虫关闭"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "新格式：用 Markdown 为 AI 助手和智能体写的网站简介，目前不是必需的"
+    },
+    "auditCspWeak": {
+        "message": "较弱"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "禁止页面和嵌入的框架访问摄像头、位置等浏览器功能"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "将网站窗口与它打开的外部窗口隔离，防御通过 window.opener 发起的攻击"
+    },
+    "auditVersions": {
+        "message": "标头中的软件版本"
+    },
+    "auditVersionsHint": {
+        "message": "服务器公开了软件版本，这会提示攻击者尝试哪些已知漏洞。隐藏方法：nginx 和 Angie 中设置 server_tokens off，PHP 中设置 expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "已隐藏"
+    },
+    "auditSession": {
+        "message": "脚本可读取的会话 Cookie"
+    },
+    "auditSessionHint": {
+        "message": "登录 Cookie 似乎可被 JavaScript 读取：一旦出现 XSS 就可能被盗。HttpOnly 标志可以禁止这一点。根据 Cookie 名称判断"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "位于 /.well-known/security.txt 的漏洞报告联系方式。帮助研究人员把问题告诉你，而不是卖掉它"
+    },
+    "serverUnknownTitle": {
+        "message": "该服务商的网络不在 ABlock 数据库中：数据库包含大型主机商、云服务和 CDN"
+    },
+    "protocolH3Later": {
+        "message": "服务器支持 HTTP/3。此页面通过 $PROTOCOL$ 传输，首次访问时常见：浏览器从服务器响应中得知 HTTP/3，之后的请求会改用它",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "浏览器语言"
+    },
+    "langTitle": {
+        "message": "界面语言"
+    },
+    "noteTitle": {
+        "message": "此网站的备注"
+    },
+    "notePlaceholder": {
+        "message": "此网站的备注，仅您可见"
+    },
+    "incognitoLabel": {
+        "message": "在无痕模式下运行"
+    },
+    "incognitoTitle": {
+        "message": "将打开浏览器的扩展程序设置，请在那里为 ABlock 开启无痕模式下的权限"
+    }
+}

@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "sl",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Blokator oglasov in pregled strani"
+    },
+    "extDescription": {
+        "message": "Blokira oglase in sledilnike: hitrejše strani, manj prenosa podatkov. Preveri hitrost, varnost in sledenje na kateri koli strani."
+    },
+    "toggle": {
+        "message": "Vklopi / izklopi"
+    },
+    "statusOn": {
+        "message": "Zaščita je vklopljena"
+    },
+    "statusOff": {
+        "message": "Zaščita je izklopljena"
+    },
+    "statusSiteOff": {
+        "message": "Zaščita je na tem spletnem mestu izklopljena"
+    },
+    "telegram": {
+        "message": "Skupina na Telegramu"
+    },
+    "github": {
+        "message": "Prispevajte na GitHubu"
+    },
+    "httpsOn": {
+        "message": "Povezava je šifrirana"
+    },
+    "httpsOff": {
+        "message": "Povezava ni šifrirana"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — najhitrejši protokol"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — sodoben protokol"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — zastarel protokol",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protokol neznan (stran naložena iz predpomnilnika)"
+    },
+    "loading": {
+        "message": "Nalaganje …"
+    },
+    "loadingTitle": {
+        "message": "Stran se še nalaga"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Čas nalaganja strani"
+    },
+    "domains": {
+        "message": "Domene $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Domene tretjih oseb:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "… in še $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Ni domen tretjih oseb"
+    },
+    "blocked": {
+        "message": "Blokirano $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Sledilniki $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Blokirano na tej strani\nOglasi: $ADS$\nSledilniki: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "To spletno mesto vam sledi. Blokiranih sledilnikov: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Ni najdenih sledilnikov"
+    },
+    "scoreLabel": {
+        "message": "Ocena spletnega mesta"
+    },
+    "serverLabel": {
+        "message": "Strežnik"
+    },
+    "techLabel": {
+        "message": "Izdelano z"
+    },
+    "companiesLabel": {
+        "message": "Sledijo"
+    },
+    "extraLabel": {
+        "message": "Več"
+    },
+    "extendedText": {
+        "message": "Razširjeni način: gostovanje, IPv6, HSTS, statistika in skrivanje oglasnih mest in oken o piškotkih na vseh spletnih mestih. Podatki nikoli ne zapustijo brskalnika."
+    },
+    "extendedButton": {
+        "message": "Vklopi"
+    },
+    "extendedOff": {
+        "message": "Izklopi razširjeni način"
+    },
+    "extendedOffTitle": {
+        "message": "Razširitev ne bo več videla IP-naslovov in glav strežnikov, vodila statistike in skrivala oglasnih mest in oken o piškotkih na vseh spletnih mestih; dostop do vseh spletnih mest bo preklican. Kadar koli ga lahko znova vklopite"
+    },
+    "share": {
+        "message": "Deli"
+    },
+    "copied": {
+        "message": "Kopirano"
+    },
+    "cookiesLabel": {
+        "message": "Skrij okna za privolitev v piškotke"
+    },
+    "cookiesTitle": {
+        "message": "Blokira storitve pasic za privolitev v piškotke. V razširjenem načinu skrije tudi same pasice na katerem koli spletnem mestu"
+    },
+    "siteLabel": {
+        "message": "Blokiraj na $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Počistite potrditveno polje, če spletno mesto ne deluje pravilno: oglasi in sledilniki na njem ne bodo več blokirani. Stran se bo znova naložila"
+    },
+    "guess": {
+        "message": "Zaznano po posrednih znakih — morda ni natančno"
+    },
+    "weightTitle": {
+        "message": "Velikost strani z vsemi datotekami"
+    },
+    "weightEstimated": {
+        "message": "Natančna velikost je znana za $KNOWN$ od $TOTAL$ datotek, ostale so ocenjene: spletna mesta tretjih oseb skrivajo velikost",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Stran je stisnjena: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Brez stiskanja"
+    },
+    "compressionOff": {
+        "message": "Stran se pošilja nestisnjena — nalaga se počasneje"
+    },
+    "compressionUnknown": {
+        "message": "Stiskanje neznano (stran naložena iz predpomnilnika)"
+    },
+    "blockedCookies": {
+        "message": "Okna o piškotkih: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Velikost: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Ni blokirano:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Najdeno na spletnem mestu:\n$LIST$\nAli so blokirani, prikaže razširjeni način",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Blokirano:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "znanih ni najdenih"
+    },
+    "serverExtended": {
+        "message": "v razširjenem načinu"
+    },
+    "serverReload": {
+        "message": "znova naložite stran"
+    },
+    "serverReloadTitle": {
+        "message": "Strežnik se zazna med nalaganjem strani"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "drug ponudnik"
+    },
+    "serverProxy": {
+        "message": "Spletno mesto deluje za $NAME$ (CDN ali zaščita pred DDoS) — pravi strežnik je skrit",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Gostovanje: $NAME$ (iz baze naslovov RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Država je določena po ponudniku"
+    },
+    "techFound": {
+        "message": "Najdeno na strani"
+    },
+    "techNone": {
+        "message": "ni zaznano"
+    },
+    "techNoneTitle": {
+        "message": "Ni znakov znanih sistemov ali knjižnic"
+    },
+    "ipv6": {
+        "message": "Povezano prek IPv6"
+    },
+    "ipv4": {
+        "message": "Povezano prek IPv4. To ne pove, ali spletno mesto podpira IPv6: odvisno je tudi od vašega omrežja"
+    },
+    "hstsOn": {
+        "message": "HSTS: brskalnik spletno mesto vedno odpre samo prek HTTPS"
+    },
+    "hstsOff": {
+        "message": "Brez HSTS: prvi obisk spletnega mesta lahko poteka brez šifriranja"
+    },
+    "mixed": {
+        "message": "Datoteke HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "Stran HTTPS nalaga datoteke brez šifriranja: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Ocena $SCORE$ od 10 glede na:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Šifriranje"
+    },
+    "scoreProtocol": {
+        "message": "Protokol"
+    },
+    "scoreSpeed": {
+        "message": "Hitrost nalaganja"
+    },
+    "scoreWeight": {
+        "message": "Velikost strani"
+    },
+    "scoreTrackers": {
+        "message": "Sledenje"
+    },
+    "scoreDomains": {
+        "message": "Domene tretjih oseb"
+    },
+    "scoreCompression": {
+        "message": "Stiskanje"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Mešana vsebina"
+    },
+    "stats": {
+        "message": "Skupaj blokiranih zahtev: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Od $DATE$. Velikost je ocenjena po povprečni velikosti oglasnih datotek",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Poročilo o spletnem mestu — kot slika ali besedilo"
+    },
+    "reportTitle": {
+        "message": "Ocena in podrobnosti spletnega mesta kot slika ali besedilo — za sodelavce, izvajalca ali klepet"
+    },
+    "reportDone": {
+        "message": "Shranjeno"
+    },
+    "copyIp": {
+        "message": "Kopiraj IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Kopiraj sliko"
+    },
+    "copyText": {
+        "message": "Kopiraj besedilo in povezavo"
+    },
+    "shareSystem": {
+        "message": "Več …"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ocena $SCORE$ od 10 v ABlocku",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Preverite svoje spletno mesto:"
+    },
+    "donate": {
+        "message": "Podpri"
+    },
+    "donateTitle": {
+        "message": "Podprite razvoj na Boostyju"
+    },
+    "askStats": {
+        "message": "Blokirane zahteve: $COUNT$, prihranjeno ≈ $SIZE$. Če vam ABlock koristi, podprite razvoj",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "ABlock uporabljate že mesec dni. Če vam koristi, podprite razvoj"
+    },
+    "askClose": {
+        "message": "Ne prikaži več"
+    },
+    "reportLegendGuess": {
+        "message": "? — zaznano po posrednih znakih"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — približna ocena"
+    },
+    "companiesNoneTitle": {
+        "message": "Na tej strani ni podjetij iz imenika ABlock. Lastni števci spletnega mesta so morda vseeno prisotni — šteje jih značka »Sledilniki«"
+    },
+    "compressionFiles": {
+        "message": "Besedilne datoteke: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Nestisnjeno: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Izbriši podatke spletnega mesta in znova naloži: piškotke, predpomnilnik in shrambo. Značke in ocena bodo prikazale spletno mesto, kot ga vidi nov obiskovalec. S tega spletnega mesta boste odjavljeni"
+    },
+    "clearConfirm": {
+        "message": "Izbrišem?"
+    },
+    "saveImage": {
+        "message": "Shrani sliko"
+    },
+    "shareSend": {
+        "message": "Pošlji prek $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Objavi na $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Pošlje se kot besedilo: slike ni mogoče posredovati brez nalaganja na strežnik — kopirajte jo in prilepite v sporočilo"
+    },
+    "shareLinkOnly": {
+        "message": "Posreduje se le povezava do razširitve — kopirajte sliko poročila in jo prilepite v objavo"
+    },
+    "auditLabel": {
+        "message": "Podrobnosti"
+    },
+    "auditIssues": {
+        "message": "težave: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "brez težav"
+    },
+    "auditSpeed": {
+        "message": "Hitrost"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Oznake"
+    },
+    "auditA11y": {
+        "message": "Dostopnost"
+    },
+    "auditSecurity": {
+        "message": "Varnost"
+    },
+    "auditYes": {
+        "message": "da"
+    },
+    "auditNo": {
+        "message": "ne"
+    },
+    "auditLength": {
+        "message": "$COUNT$ znakov",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "druga domena"
+    },
+    "auditNoImage": {
+        "message": "brez slike"
+    },
+    "auditNoInput": {
+        "message": "brez interakcije"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ od $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Premiki postavitve"
+    },
+    "auditTtfb": {
+        "message": "Odziv strežnika (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Koliko časa je trajalo, da je prvi bajt strani prišel s strežnika. Dobro — pod 0,8 s"
+    },
+    "auditFcp": {
+        "message": "Prvi izris (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Kdaj se je na zaslonu pojavila prva vsebina. Dobro — pod 1,8 s"
+    },
+    "auditLcp": {
+        "message": "Glavni blok (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Kdaj je bil izrisan največji blok — slika ali besedilo. Glavni Googlov kazalnik hitrosti. Dobro — pod 2,5 s"
+    },
+    "auditCls": {
+        "message": "Premiki postavitve (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Koliko vsebina med nalaganjem poskakuje. Dobro — pod 0,1"
+    },
+    "auditInp": {
+        "message": "Odziv na dejanja (INP)"
+    },
+    "auditInpHint": {
+        "message": "Najdaljša zakasnitev odziva na klik ali vnos. Dobro — pod 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Blokirajo izris"
+    },
+    "auditBlockingHint": {
+        "message": "Datoteke, na katere brskalnik čaka, preden začne izrisovati stran. Slogi so v redu, skripte pa je bolje nalagati z async ali defer"
+    },
+    "auditStatus": {
+        "message": "Statusna koda"
+    },
+    "auditStatusHint": {
+        "message": "Stanje HTTP strani: 200 — v redu, 4xx in 5xx — napaka"
+    },
+    "auditNoindex": {
+        "message": "Indeksiranje prepovedano"
+    },
+    "auditNoindexHint": {
+        "message": "Stran je skrita pred iskalniki z oznako noindex ali pravilom v robots.txt. Pri straneh za prijavo in uporabniških računih je to običajno"
+    },
+    "auditTitle": {
+        "message": "Naslov (title)"
+    },
+    "auditTitleHint": {
+        "message": "Besedilo povezave v rezultatih iskanja in ime zavihka. Najbolje — 10–70 znakov"
+    },
+    "auditDescription": {
+        "message": "Opis (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Besedilo pod povezavo v rezultatih iskanja. Najbolje — 50–170 znakov"
+    },
+    "auditH1": {
+        "message": "Naslovi h1"
+    },
+    "auditH1Hint": {
+        "message": "Glavni naslov strani. Običajno je eden"
+    },
+    "auditCanonical": {
+        "message": "Kanonični URL"
+    },
+    "auditCanonicalHint": {
+        "message": "Iskalnikom pove glavni naslov strani, če ima ta kopije"
+    },
+    "auditOg": {
+        "message": "Predogled povezave (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Naslov in slika, ki ju prikažejo Telegram, Slack in druge storitve, ko se deli povezava"
+    },
+    "auditViewport": {
+        "message": "Mobilna različica (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Brez meta viewport telefoni prikažejo stran kot pomanjšano različico za računalnik"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Brez njega brskalnik preklopi v način združljivosti s starimi spletnimi mesti in postavitev je lahko drugačna"
+    },
+    "auditNoSize": {
+        "message": "Slike brez mer"
+    },
+    "auditNoSizeHint": {
+        "message": "Brez width in height brskalnik ne ve, koliko prostora rezervirati za sliko, zato postavitev ob nalaganju poskoči"
+    },
+    "auditLarge": {
+        "message": "Prevelike slike"
+    },
+    "auditLargeHint": {
+        "message": "Slika se pošlje opazno večja, kot je prikazana — odvečna teža"
+    },
+    "auditModern": {
+        "message": "Slike WebP in AVIF"
+    },
+    "auditModernHint": {
+        "message": "Ti formati so za 25–50 % manjši od JPEG in PNG"
+    },
+    "auditLang": {
+        "message": "Jezik strani (lang)"
+    },
+    "auditLangHint": {
+        "message": "Potrebujejo ga bralniki zaslona, prevajalniki in iskalniki"
+    },
+    "auditAlt": {
+        "message": "Slike brez alt"
+    },
+    "auditAltHint": {
+        "message": "Opis slike za slepe uporabnike in za primer, da se ne naloži"
+    },
+    "auditLabels": {
+        "message": "Polja brez oznak"
+    },
+    "auditLabelsHint": {
+        "message": "Bralnik zaslona ne bo mogel povedati, kaj vnesti v polje"
+    },
+    "auditNames": {
+        "message": "Gumbi in povezave brez imen"
+    },
+    "auditNamesHint": {
+        "message": "Na primer gumb z ikono brez aria-label: slep uporabnik bo slišal le »gumb«"
+    },
+    "auditMain": {
+        "message": "Glavno območje (main)"
+    },
+    "auditMainHint": {
+        "message": "Omogoča neposreden skok na vsebino mimo menija"
+    },
+    "auditZoom": {
+        "message": "Povečava onemogočena"
+    },
+    "auditZoomHint": {
+        "message": "Slabovidnim preprečuje povečavo strani na telefonu"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Omejuje, od kod lahko stran nalaga skripte — zaščita pred XSS. Če vsebuje 'unsafe-inline' brez nonce ali hash, skoraj ne ščiti"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Brskalniku prepove ugibanje vrst datotek — zaščita pred podtikanjem skript"
+    },
+    "auditFrame": {
+        "message": "Zaščita pred vdelavo"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options ali frame-ancestors preprečujeta vdelavo spletnega mesta v tujo stran, da bi uporabnike z zvijačo pripravili do klikov"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Kolikšen del naslova strani se ob prehodu posreduje drugim spletnim mestom. Brez glave brskalnik uporabi varno privzeto vrednost"
+    },
+    "auditCache": {
+        "message": "Predpomnilnik strani"
+    },
+    "auditCacheHint": {
+        "message": "Od kod je stran prišla: HIT — iz predpomnilnika strežnika ali CDN, MISS — sestavljena na novo. Same strani se redko predpomnijo; običajno slike, skripte in slogi"
+    },
+    "auditCacheBrowser": {
+        "message": "iz predpomnilnika brskalnika"
+    },
+    "auditBots": {
+        "message": "Roboti in UI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Pravila za iskalnike in druge robote. Brez datoteke roboti preiščejo vse, iskalniki pa ne izvejo, kje je zemljevid spletnega mesta"
+    },
+    "auditSitemap": {
+        "message": "Zemljevid spletnega mesta"
+    },
+    "auditSitemapHint": {
+        "message": "Seznam strani za iskalnike. Navede se v robots.txt z vrstico Sitemap:"
+    },
+    "auditAi": {
+        "message": "Pravila za UI-bote"
+    },
+    "auditAiHint": {
+        "message": "Ali smejo UI-boti zbirati besedila spletnega mesta za nevronske mreže — po pravilih v robots.txt, ki bota navajajo po imenu. Razširitev pozna 16 takih botov (GPTBot, ClaudeBot, Google-Extended itd.); boti z drugimi imeni se ne štejejo. »Zaprto za vse« — spletno mesto je zaprto za vse robote prek User-agent: *, brez posebnih pravil za UI"
+    },
+    "auditAiBlocked": {
+        "message": "prepovedano: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "dovoljeno"
+    },
+    "auditAiNone": {
+        "message": "ni nastavljeno"
+    },
+    "auditAiAll": {
+        "message": "zaprto za vse"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Nov format: kratek opis spletnega mesta v Markdownu za UI-pomočnike in agente. Zaenkrat neobvezen"
+    },
+    "auditCspWeak": {
+        "message": "šibka"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Strani in vdelanim okvirjem prepove dostop do kamere, lokacije in drugih zmožnosti brskalnika"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Izolira okno spletnega mesta od drugih oken, ki jih odpre — zaščita pred napadi prek window.opener"
+    },
+    "auditVersions": {
+        "message": "Različice programske opreme v glavah"
+    },
+    "auditVersionsHint": {
+        "message": "Strežnik razkriva različice programske opreme — namig napadalcem, katere znane ranljivosti poskusiti. Kako skriti: server_tokens off v nginx in Angie, expose_php = Off v PHP"
+    },
+    "auditHidden": {
+        "message": "skrito"
+    },
+    "auditSession": {
+        "message": "Piškotki seje berljivi skriptam"
+    },
+    "auditSessionHint": {
+        "message": "Zdi se, da je piškotke prijave mogoče prebrati iz JavaScripta: prek XSS jih je mogoče ukrasti. To prepreči zastavica HttpOnly. Zaznano po imenu piškotka"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Stiki za prijavo ranljivosti v /.well-known/security.txt. Raziskovalcu pomaga, da težavo sporoči vam, namesto da bi jo prodal"
+    },
+    "serverUnknownTitle": {
+        "message": "Omrežij tega ponudnika ni v bazi ABlock: vsebuje velike ponudnike gostovanja, oblake in CDN-je"
+    },
+    "protocolH3Later": {
+        "message": "Strežnik podpira HTTP/3. Ta stran je prišla prek $PROTOCOL$ — tako se zgodi ob prvem obisku: brskalnik za HTTP/3 izve iz odgovora strežnika in nanj preklopi za naslednje zahteve",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Jezik brskalnika"
+    },
+    "langTitle": {
+        "message": "Jezik vmesnika"
+    },
+    "noteTitle": {
+        "message": "Opomba za spletno mesto"
+    },
+    "notePlaceholder": {
+        "message": "Opomba za spletno mesto, vidna samo vam"
+    },
+    "incognitoLabel": {
+        "message": "Delovanje v načinu brez beleženja zgodovine"
+    },
+    "incognitoTitle": {
+        "message": "Odprle se bodo nastavitve razširitev brskalnika – tam vklopite za ABlock dovoljenje v načinu brez beleženja zgodovine"
+    }
+}

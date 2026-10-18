@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "ja",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - 広告ブロッカー＆サイトチェック"
+    },
+    "extDescription": {
+        "message": "広告とトラッカーをブロックして、ページを速く軽く。あらゆるサイトの速度・セキュリティ・追跡をチェックします。"
+    },
+    "toggle": {
+        "message": "オン / オフ"
+    },
+    "statusOn": {
+        "message": "保護はオンです"
+    },
+    "statusOff": {
+        "message": "保護はオフです"
+    },
+    "statusSiteOff": {
+        "message": "このサイトでは保護がオフです"
+    },
+    "telegram": {
+        "message": "Telegram グループ"
+    },
+    "github": {
+        "message": "GitHub で貢献する"
+    },
+    "httpsOn": {
+        "message": "接続は暗号化されています"
+    },
+    "httpsOff": {
+        "message": "接続は暗号化されていません"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — 最速のプロトコル"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — 最新のプロトコル"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — 古いプロトコル",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "プロトコル不明(ページはキャッシュから読み込まれました)"
+    },
+    "loading": {
+        "message": "読み込み中…"
+    },
+    "loadingTitle": {
+        "message": "ページはまだ読み込み中です"
+    },
+    "seconds": {
+        "message": "$SECONDS$ 秒",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "ページの読み込み時間"
+    },
+    "domains": {
+        "message": "ドメイン $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "サードパーティのドメイン:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…ほか $COUNT$ 件",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "サードパーティのドメインはありません"
+    },
+    "blocked": {
+        "message": "ブロック $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "トラッカー $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "このページでブロック\n広告: $ADS$\nトラッカー: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "このサイトはあなたを追跡しています。ブロックしたトラッカー: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "トラッカーは見つかりませんでした"
+    },
+    "scoreLabel": {
+        "message": "サイトの評価"
+    },
+    "serverLabel": {
+        "message": "サーバー"
+    },
+    "techLabel": {
+        "message": "使用技術"
+    },
+    "companiesLabel": {
+        "message": "追跡企業"
+    },
+    "extraLabel": {
+        "message": "その他"
+    },
+    "extendedText": {
+        "message": "拡張モード: すべてのサイトでホスティング、IPv6、HSTS、統計を表示し、広告枠と Cookie のポップアップを非表示にします。データがブラウザの外に出ることはありません。"
+    },
+    "extendedButton": {
+        "message": "オンにする"
+    },
+    "extendedOff": {
+        "message": "拡張モードをオフにする"
+    },
+    "extendedOffTitle": {
+        "message": "拡張機能はすべてのサイトでサーバーの IP とヘッダーの確認、統計の記録、広告枠と Cookie ポップアップの非表示をやめ、すべてのサイトへのアクセス権が取り消されます。いつでも再びオンにできます"
+    },
+    "share": {
+        "message": "共有"
+    },
+    "copied": {
+        "message": "コピーしました"
+    },
+    "cookiesLabel": {
+        "message": "Cookie 同意ポップアップを非表示"
+    },
+    "cookiesTitle": {
+        "message": "Cookie 同意バナーのサービスをブロックします。拡張モードでは、どのサイトでもバナー自体を非表示にします"
+    },
+    "siteLabel": {
+        "message": "$HOST$ でブロック",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "サイトが正しく動作しない場合はチェックを外してください。そのサイトの広告とトラッカーはブロックされなくなります。ページは再読み込みされます"
+    },
+    "guess": {
+        "message": "間接的な兆候から検出 — 不正確な場合があります"
+    },
+    "weightTitle": {
+        "message": "すべてのファイルを含むページサイズ"
+    },
+    "weightEstimated": {
+        "message": "$TOTAL$ 件中 $KNOWN$ 件のファイルは正確なサイズが分かっています。残りは推定です: サードパーティのサイトはサイズを隠します",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "ページは圧縮されています: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "圧縮なし"
+    },
+    "compressionOff": {
+        "message": "ページは圧縮なしで送信されます — 読み込みが遅くなります"
+    },
+    "compressionUnknown": {
+        "message": "圧縮方式不明(ページはキャッシュから読み込まれました)"
+    },
+    "blockedCookies": {
+        "message": "Cookie ポップアップ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "サイズ: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "ブロックされていない:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "サイトで見つかった企業:\n$LIST$\nブロックされているかどうかは拡張モードで表示されます",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "ブロック済み:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "既知の企業は見つかりません"
+    },
+    "serverExtended": {
+        "message": "拡張モードで表示"
+    },
+    "serverReload": {
+        "message": "ページを再読み込みしてください"
+    },
+    "serverReloadTitle": {
+        "message": "サーバーはページの読み込み中に検出されます"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "その他のプロバイダ"
+    },
+    "serverProxy": {
+        "message": "サイトは $NAME$(CDN または DDoS 対策)の背後で動作しています — 実際のサーバーは隠されています",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "ホスティング: $NAME$(RIPE アドレスデータベースより)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "国はプロバイダから判定しています"
+    },
+    "techFound": {
+        "message": "ページで見つかりました"
+    },
+    "techNone": {
+        "message": "検出されません"
+    },
+    "techNoneTitle": {
+        "message": "既知のエンジンやライブラリの兆候は見つかりませんでした"
+    },
+    "ipv6": {
+        "message": "IPv6 で接続"
+    },
+    "ipv4": {
+        "message": "IPv4 で接続。サイトが IPv6 に対応しているかどうかは分かりません: お使いのネットワークにもよります"
+    },
+    "hstsOn": {
+        "message": "HSTS: ブラウザは常に HTTPS のみでこのサイトを開きます"
+    },
+    "hstsOff": {
+        "message": "HSTS なし: サイトへの初回訪問が暗号化なしで行われる可能性があります"
+    },
+    "mixed": {
+        "message": "HTTP ファイル $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS ページが暗号化なしでファイルを読み込んでいます: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "評価 $SCORE$ / 10、評価項目:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "暗号化"
+    },
+    "scoreProtocol": {
+        "message": "プロトコル"
+    },
+    "scoreSpeed": {
+        "message": "読み込み速度"
+    },
+    "scoreWeight": {
+        "message": "ページサイズ"
+    },
+    "scoreTrackers": {
+        "message": "追跡"
+    },
+    "scoreDomains": {
+        "message": "サードパーティのドメイン"
+    },
+    "scoreCompression": {
+        "message": "圧縮"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "混在コンテンツ"
+    },
+    "stats": {
+        "message": "ブロックしたリクエストの合計: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "$DATE$ から。サイズは広告ファイルの平均サイズから推定しています",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "サイトのレポート — 画像またはテキストで"
+    },
+    "reportTitle": {
+        "message": "サイトの評価と詳細を画像またはテキストで — 同僚、委託先、チャットに"
+    },
+    "reportDone": {
+        "message": "保存しました"
+    },
+    "copyIp": {
+        "message": "IP $IP$ をコピー",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "画像をコピー"
+    },
+    "copyText": {
+        "message": "テキストとリンクをコピー"
+    },
+    "shareSystem": {
+        "message": "その他…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ABlock で $SCORE$ / 10 の評価",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "あなたのサイトもチェック:"
+    },
+    "donate": {
+        "message": "寄付"
+    },
+    "donateTitle": {
+        "message": "Boosty で開発を支援する"
+    },
+    "askStats": {
+        "message": "ブロックしたリクエスト: $COUNT$、節約 ≈ $SIZE$。ABlock がお役に立っていれば、開発へのご支援をお願いします",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "ABlock をお使いいただいて 1 か月になりました。お役に立っていれば、開発へのご支援をお願いします"
+    },
+    "askClose": {
+        "message": "今後表示しない"
+    },
+    "reportLegendGuess": {
+        "message": "? — 間接的な兆候から検出"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — おおよその推定"
+    },
+    "companiesNoneTitle": {
+        "message": "このページには ABlock の企業リストに載っている企業はありません。サイト独自のカウンターはあるかもしれません — それらは「トラッカー」バッジで数えられます"
+    },
+    "compressionFiles": {
+        "message": "テキストファイル: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "圧縮なし: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "サイトのデータを削除して再読み込み: Cookie、キャッシュ、ストレージ。バッジと評価は新しい訪問者から見たサイトを表示します。このサイトからはログアウトされます"
+    },
+    "clearConfirm": {
+        "message": "削除しますか?"
+    },
+    "saveImage": {
+        "message": "画像を保存"
+    },
+    "shareSend": {
+        "message": "$NAME$ で送信",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "$NAME$ に投稿",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "テキストとして送信されます: 画像はサーバーにアップロードしないと渡せません — 画像をコピーしてメッセージに貼り付けてください"
+    },
+    "shareLinkOnly": {
+        "message": "拡張機能へのリンクのみが渡されます — レポート画像をコピーして投稿に貼り付けてください"
+    },
+    "auditLabel": {
+        "message": "詳細"
+    },
+    "auditIssues": {
+        "message": "問題: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "問題なし"
+    },
+    "auditSpeed": {
+        "message": "速度"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "マークアップ"
+    },
+    "auditA11y": {
+        "message": "アクセシビリティ"
+    },
+    "auditSecurity": {
+        "message": "セキュリティ"
+    },
+    "auditYes": {
+        "message": "はい"
+    },
+    "auditNo": {
+        "message": "いいえ"
+    },
+    "auditLength": {
+        "message": "$COUNT$ 文字",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "別のドメイン"
+    },
+    "auditNoImage": {
+        "message": "画像なし"
+    },
+    "auditNoInput": {
+        "message": "操作なし"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ / $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "レイアウトのずれ"
+    },
+    "auditTtfb": {
+        "message": "サーバー応答(TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "サーバーからページの最初のバイトを受け取るまでの時間。良好 — 0.8 秒未満"
+    },
+    "auditFcp": {
+        "message": "初回描画(FCP)"
+    },
+    "auditFcpHint": {
+        "message": "最初のコンテンツが画面に表示されるまでの時間。良好 — 1.8 秒未満"
+    },
+    "auditLcp": {
+        "message": "メインブロック(LCP)"
+    },
+    "auditLcpHint": {
+        "message": "最大のブロック(画像またはテキスト)が描画されるまでの時間。Google の主要な速度指標。良好 — 2.5 秒未満"
+    },
+    "auditCls": {
+        "message": "レイアウトのずれ(CLS)"
+    },
+    "auditClsHint": {
+        "message": "読み込み中にコンテンツがどれだけ動くか。良好 — 0.1 未満"
+    },
+    "auditInp": {
+        "message": "操作への応答(INP)"
+    },
+    "auditInpHint": {
+        "message": "クリックや入力に対する応答の最大遅延。良好 — 200 ミリ秒未満"
+    },
+    "auditBlocking": {
+        "message": "描画をブロック"
+    },
+    "auditBlockingHint": {
+        "message": "ブラウザがページの描画を始める前に待つファイル。スタイルは問題ありませんが、スクリプトは async または defer で読み込むのが望ましいです"
+    },
+    "auditStatus": {
+        "message": "ステータスコード"
+    },
+    "auditStatusHint": {
+        "message": "ページの HTTP ステータス: 200 — 正常、4xx と 5xx — エラー"
+    },
+    "auditNoindex": {
+        "message": "インデックス禁止"
+    },
+    "auditNoindexHint": {
+        "message": "ページは noindex タグまたは robots.txt のルールで検索エンジンから隠されています。ログインページやユーザーアカウントでは普通のことです"
+    },
+    "auditTitle": {
+        "message": "タイトル(title)"
+    },
+    "auditTitleHint": {
+        "message": "検索結果のリンクテキストとタブ名。最適 — 10–70 文字"
+    },
+    "auditDescription": {
+        "message": "説明(description)"
+    },
+    "auditDescriptionHint": {
+        "message": "検索結果のリンクの下に表示されるテキスト。最適 — 50–170 文字"
+    },
+    "auditH1": {
+        "message": "h1 見出し"
+    },
+    "auditH1Hint": {
+        "message": "ページのメイン見出し。通常は 1 つです"
+    },
+    "auditCanonical": {
+        "message": "正規 URL"
+    },
+    "auditCanonicalHint": {
+        "message": "ページにコピーがある場合、検索エンジンにメインのアドレスを伝えます"
+    },
+    "auditOg": {
+        "message": "リンクのプレビュー(Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "リンクを共有したときに Telegram、Slack などのサービスが表示するタイトルと画像"
+    },
+    "auditViewport": {
+        "message": "モバイル版(viewport)"
+    },
+    "auditViewportHint": {
+        "message": "meta viewport がないと、スマートフォンはページを縮小したデスクトップ版として表示します"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "これがないと、ブラウザは古いサイト向けの互換モードに切り替わり、レイアウトが変わる場合があります"
+    },
+    "auditNoSize": {
+        "message": "サイズ指定のない画像"
+    },
+    "auditNoSizeHint": {
+        "message": "width と height がないと、ブラウザは画像のためにどれだけ場所を空けるか分からず、読み込み時にレイアウトがずれます"
+    },
+    "auditLarge": {
+        "message": "大きすぎる画像"
+    },
+    "auditLargeHint": {
+        "message": "画像が表示サイズより明らかに大きく送られています — 無駄な重さです"
+    },
+    "auditModern": {
+        "message": "WebP と AVIF の画像"
+    },
+    "auditModernHint": {
+        "message": "これらの形式は JPEG や PNG より 25–50% 小さくなります"
+    },
+    "auditLang": {
+        "message": "ページの言語(lang)"
+    },
+    "auditLangHint": {
+        "message": "スクリーンリーダー、翻訳ツール、検索エンジンに必要です"
+    },
+    "auditAlt": {
+        "message": "alt のない画像"
+    },
+    "auditAltHint": {
+        "message": "目の不自由な人のため、また画像が読み込まれない場合のための画像の説明"
+    },
+    "auditLabels": {
+        "message": "ラベルのない入力欄"
+    },
+    "auditLabelsHint": {
+        "message": "スクリーンリーダーが入力欄に何を入力すればよいか伝えられません"
+    },
+    "auditNames": {
+        "message": "名前のないボタンとリンク"
+    },
+    "auditNamesHint": {
+        "message": "たとえば aria-label のないアイコンボタン: 目の不自由な人には「ボタン」としか聞こえません"
+    },
+    "auditMain": {
+        "message": "メイン領域(main)"
+    },
+    "auditMainHint": {
+        "message": "メニューを飛ばしてコンテンツに直接移動できます"
+    },
+    "auditZoom": {
+        "message": "拡大が無効"
+    },
+    "auditZoomHint": {
+        "message": "弱視の人がスマートフォンでページを拡大できなくなります"
+    },
+    "auditCsp": {
+        "message": "コンテンツ セキュリティ ポリシー(CSP)"
+    },
+    "auditCspHint": {
+        "message": "ページがスクリプトを読み込める場所を制限します — XSS 対策。nonce やハッシュなしで 'unsafe-inline' を含む場合、ほとんど保護になりません"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "ブラウザがファイルの種類を推測するのを防ぎます — スクリプトのすり替え対策"
+    },
+    "auditFrame": {
+        "message": "フレーム埋め込み対策"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options または frame-ancestors は、ユーザーをだましてクリックさせるために他人のページにサイトを埋め込むことを防ぎます"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "移動時にページのアドレスのどこまでを他のサイトに渡すか。このヘッダーがない場合、ブラウザは安全な既定値を使います"
+    },
+    "auditCache": {
+        "message": "ページのキャッシュ"
+    },
+    "auditCacheHint": {
+        "message": "ページの取得元: HIT — サーバーまたは CDN のキャッシュから、MISS — 新たに生成。ページ自体がキャッシュされることはまれで、通常は画像、スクリプト、スタイルです"
+    },
+    "auditCacheBrowser": {
+        "message": "ブラウザのキャッシュから"
+    },
+    "auditBots": {
+        "message": "ロボットと AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "検索エンジンやその他のロボット向けのルール。このファイルがないと、ロボットはすべてをクロールし、検索エンジンはサイトマップの場所が分かりません"
+    },
+    "auditSitemap": {
+        "message": "サイトマップ"
+    },
+    "auditSitemapHint": {
+        "message": "検索エンジン向けのページ一覧。robots.txt に Sitemap: 行で指定します"
+    },
+    "auditAi": {
+        "message": "AI ボットのルール"
+    },
+    "auditAiHint": {
+        "message": "AI ボットがニューラルネットワーク用にサイトのテキストを収集してよいか — ボット名を指定した robots.txt のルールに基づきます。拡張機能はこのようなボットを 16 種類(GPTBot、ClaudeBot、Google-Extended など)認識しています。それ以外の名前のボットは数えません。「すべて拒否」— サイトは User-agent: * ですべてのロボットを拒否しており、AI 向けの個別ルールはありません"
+    },
+    "auditAiBlocked": {
+        "message": "拒否: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "許可"
+    },
+    "auditAiNone": {
+        "message": "未設定"
+    },
+    "auditAiAll": {
+        "message": "すべて拒否"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "新しい形式: AI アシスタントやエージェント向けに Markdown で書かれたサイトの短い説明。現時点では任意です"
+    },
+    "auditCspWeak": {
+        "message": "弱い"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "ページと埋め込みフレームによるカメラ、位置情報、その他のブラウザ機能へのアクセスを禁止します"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "サイトのウィンドウを、サイトが開く他のウィンドウから分離します — window.opener を使った攻撃への対策"
+    },
+    "auditVersions": {
+        "message": "ヘッダー内のソフトウェアバージョン"
+    },
+    "auditVersionsHint": {
+        "message": "サーバーがソフトウェアのバージョンを公開しています — どの既知の脆弱性を試せばよいか攻撃者へのヒントになります。隠す方法: nginx と Angie では server_tokens off、PHP では expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "非公開"
+    },
+    "auditSession": {
+        "message": "スクリプトから読めるセッション Cookie"
+    },
+    "auditSessionHint": {
+        "message": "ログイン Cookie が JavaScript から読み取れるようです: XSS で盗まれる恐れがあります。HttpOnly フラグでこれを防げます。Cookie 名から検出しました"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "/.well-known/security.txt にある脆弱性報告の連絡先。研究者が問題を売らずにあなたへ報告する助けになります"
+    },
+    "serverUnknownTitle": {
+        "message": "このプロバイダのネットワークは ABlock のデータベースにありません: データベースには大手のホスティング、クラウド、CDN が含まれます"
+    },
+    "protocolH3Later": {
+        "message": "サーバーは HTTP/3 に対応しています。このページは $PROTOCOL$ で届きました — 初回訪問時によくあることです: ブラウザはサーバーの応答から HTTP/3 を知り、次のリクエストからそれに切り替えます",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "ブラウザの言語"
+    },
+    "langTitle": {
+        "message": "表示言語"
+    },
+    "noteTitle": {
+        "message": "このサイトのメモ"
+    },
+    "notePlaceholder": {
+        "message": "このサイトのメモ（自分だけに表示）"
+    },
+    "incognitoLabel": {
+        "message": "シークレット モードでも動作"
+    },
+    "incognitoTitle": {
+        "message": "ブラウザの拡張機能の設定が開きます。そこで ABlock のシークレット モードでの実行を許可してください"
+    }
+}

@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "lv",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Reklāmu bloķētājs un vietņu pārbaude"
+    },
+    "extDescription": {
+        "message": "Bloķē reklāmas un izsekotājus: ātrākas lapas, mazāk datu. Pārbauda jebkuras vietnes ātrumu, drošību un izsekošanu."
+    },
+    "toggle": {
+        "message": "Ieslēgt / izslēgt"
+    },
+    "statusOn": {
+        "message": "Aizsardzība ir ieslēgta"
+    },
+    "statusOff": {
+        "message": "Aizsardzība ir izslēgta"
+    },
+    "statusSiteOff": {
+        "message": "Aizsardzība šajā vietnē ir izslēgta"
+    },
+    "telegram": {
+        "message": "Telegram grupa"
+    },
+    "github": {
+        "message": "Piedalīties GitHub"
+    },
+    "httpsOn": {
+        "message": "Savienojums ir šifrēts"
+    },
+    "httpsOff": {
+        "message": "Savienojums nav šifrēts"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — ātrākais protokols"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — mūsdienīgs protokols"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — novecojis protokols",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protokols nav zināms (lapa ielādēta no kešatmiņas)"
+    },
+    "loading": {
+        "message": "Ielādē…"
+    },
+    "loadingTitle": {
+        "message": "Lapa vēl tiek ielādēta"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Lapas ielādes laiks"
+    },
+    "domains": {
+        "message": "Domēni $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Trešo pušu domēni:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…un vēl $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Nav trešo pušu domēnu"
+    },
+    "blocked": {
+        "message": "Bloķēti $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Izsekotāji $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Bloķēts šajā lapā\nReklāmas: $ADS$\nIzsekotāji: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Šī vietne jūs izseko. Bloķēti izsekotāji: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Izsekotāji nav atrasti"
+    },
+    "scoreLabel": {
+        "message": "Vietnes vērtējums"
+    },
+    "serverLabel": {
+        "message": "Serveris"
+    },
+    "techLabel": {
+        "message": "Tehnoloģijas"
+    },
+    "companiesLabel": {
+        "message": "Izseko"
+    },
+    "extraLabel": {
+        "message": "Vēl"
+    },
+    "extendedText": {
+        "message": "Paplašinātais režīms: mitināšana, IPv6, HSTS, statistika un reklāmas vietu un sīkfailu logu slēpšana visās vietnēs. Dati nekad nepamet jūsu pārlūku."
+    },
+    "extendedButton": {
+        "message": "Ieslēgt"
+    },
+    "extendedOff": {
+        "message": "Izslēgt paplašināto režīmu"
+    },
+    "extendedOffTitle": {
+        "message": "Paplašinājums vairs neredzēs serveru IP un galvenes, nevedīs statistiku un neslēps reklāmas vietas un sīkfailu logus visās vietnēs; piekļuve visām vietnēm tiks atsaukta. To var atkal ieslēgt jebkurā laikā"
+    },
+    "share": {
+        "message": "Kopīgot"
+    },
+    "copied": {
+        "message": "Nokopēts"
+    },
+    "cookiesLabel": {
+        "message": "Slēpt sīkfailu piekrišanas logus"
+    },
+    "cookiesTitle": {
+        "message": "Bloķē sīkfailu piekrišanas reklāmkarogu pakalpojumus. Paplašinātajā režīmā slēpj arī pašus reklāmkarogus jebkurā vietnē"
+    },
+    "siteLabel": {
+        "message": "Bloķēt vietnē $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Noņemiet atzīmi, ja vietne nedarbojas pareizi: reklāmas un izsekotāji tajā vairs netiks bloķēti. Lapa tiks pārlādēta"
+    },
+    "guess": {
+        "message": "Noteikts pēc netiešām pazīmēm — var būt neprecīzi"
+    },
+    "weightTitle": {
+        "message": "Lapas izmērs ar visiem failiem"
+    },
+    "weightEstimated": {
+        "message": "Precīzs izmērs zināms $KNOWN$ no $TOTAL$ failiem, pārējie novērtēti: trešo pušu vietnes slēpj izmēru",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Lapa ir saspiesta: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Bez saspiešanas"
+    },
+    "compressionOff": {
+        "message": "Lapa tiek sūtīta nesaspiesta — tā ielādējas lēnāk"
+    },
+    "compressionUnknown": {
+        "message": "Saspiešana nav zināma (lapa ielādēta no kešatmiņas)"
+    },
+    "blockedCookies": {
+        "message": "Sīkfailu logi: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Izmērs: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Nav bloķēti:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Atrasti vietnē:\n$LIST$\nVai tie ir bloķēti, rāda paplašinātais režīms",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Bloķēti:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "zināmi nav atrasti"
+    },
+    "serverExtended": {
+        "message": "paplašinātajā režīmā"
+    },
+    "serverReload": {
+        "message": "pārlādējiet lapu"
+    },
+    "serverReloadTitle": {
+        "message": "Serveris tiek noteikts lapas ielādes laikā"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "cits pakalpojumu sniedzējs"
+    },
+    "serverProxy": {
+        "message": "Vietne darbojas aiz $NAME$ (CDN vai DDoS aizsardzība) — īstais serveris ir paslēpts",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Mitināšana: $NAME$ (no RIPE adrešu datubāzes)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Valsts noteikta pēc pakalpojumu sniedzēja"
+    },
+    "techFound": {
+        "message": "Atrasts lapā"
+    },
+    "techNone": {
+        "message": "nav noteikts"
+    },
+    "techNoneTitle": {
+        "message": "Nav atrastas zināmu dzinēju vai bibliotēku pazīmes"
+    },
+    "ipv6": {
+        "message": "Savienots caur IPv6"
+    },
+    "ipv4": {
+        "message": "Savienots caur IPv4. Tas neliecina, vai vietne atbalsta IPv6: tas atkarīgs arī no jūsu tīkla"
+    },
+    "hstsOn": {
+        "message": "HSTS: pārlūks vienmēr atver vietni tikai caur HTTPS"
+    },
+    "hstsOff": {
+        "message": "Nav HSTS: pirmais vietnes apmeklējums var notikt bez šifrēšanas"
+    },
+    "mixed": {
+        "message": "HTTP faili $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS lapa ielādē failus bez šifrēšanas: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Vērtējums $SCORE$ no 10 pēc:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Šifrēšana"
+    },
+    "scoreProtocol": {
+        "message": "Protokols"
+    },
+    "scoreSpeed": {
+        "message": "Ielādes ātrums"
+    },
+    "scoreWeight": {
+        "message": "Lapas izmērs"
+    },
+    "scoreTrackers": {
+        "message": "Izsekošana"
+    },
+    "scoreDomains": {
+        "message": "Trešo pušu domēni"
+    },
+    "scoreCompression": {
+        "message": "Saspiešana"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Jaukts saturs"
+    },
+    "stats": {
+        "message": "Kopā bloķēti pieprasījumi: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Kopš $DATE$. Izmērs novērtēts pēc reklāmu failu vidējā izmēra",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Vietnes pārskats — kā attēls vai teksts"
+    },
+    "reportTitle": {
+        "message": "Vietnes vērtējums un sīkāka informācija kā attēls vai teksts — kolēģiem, izpildītājam vai tērzēšanai"
+    },
+    "reportDone": {
+        "message": "Saglabāts"
+    },
+    "copyIp": {
+        "message": "Kopēt IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Kopēt attēlu"
+    },
+    "copyText": {
+        "message": "Kopēt tekstu un saiti"
+    },
+    "shareSystem": {
+        "message": "Vēl…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — vērtējums $SCORE$ no 10 ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Pārbaudiet savu vietni:"
+    },
+    "donate": {
+        "message": "Ziedot"
+    },
+    "donateTitle": {
+        "message": "Atbalstiet izstrādi platformā Boosty"
+    },
+    "askStats": {
+        "message": "Bloķēti pieprasījumi: $COUNT$, ietaupīts ≈ $SIZE$. Ja ABlock jums noder, atbalstiet izstrādi",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Jūs lietojat ABlock jau mēnesi. Ja tas noder, atbalstiet izstrādi"
+    },
+    "askClose": {
+        "message": "Vairs nerādīt"
+    },
+    "reportLegendGuess": {
+        "message": "? — noteikts pēc netiešām pazīmēm"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — aptuvens novērtējums"
+    },
+    "companiesNoneTitle": {
+        "message": "Šajā lapā nav uzņēmumu no ABlock kataloga. Vietnes pašas skaitītāji var būt — tos skaita žetons “Izsekotāji”"
+    },
+    "compressionFiles": {
+        "message": "Teksta faili: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Nesaspiesti: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Dzēst vietnes datus un pārlādēt: sīkfailus, kešatmiņu un krātuvi. Žetoni un vērtējums parādīs vietni tā, kā to redz jauns apmeklētājs. Jūs tiksiet izrakstīts no šīs vietnes"
+    },
+    "clearConfirm": {
+        "message": "Dzēst?"
+    },
+    "saveImage": {
+        "message": "Saglabāt attēlu"
+    },
+    "shareSend": {
+        "message": "Sūtīt uz $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Publicēt $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Tiek sūtīts kā teksts: attēlu nevar nodot, to neaugšupielādējot serverī — nokopējiet to un ielīmējiet ziņojumā"
+    },
+    "shareLinkOnly": {
+        "message": "Tiek nodota tikai paplašinājuma saite — nokopējiet pārskata attēlu un ielīmējiet to ierakstā"
+    },
+    "auditLabel": {
+        "message": "Sīkāk"
+    },
+    "auditIssues": {
+        "message": "problēmas: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "bez problēmām"
+    },
+    "auditSpeed": {
+        "message": "Ātrums"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Marķējums"
+    },
+    "auditA11y": {
+        "message": "Pieejamība"
+    },
+    "auditSecurity": {
+        "message": "Drošība"
+    },
+    "auditYes": {
+        "message": "jā"
+    },
+    "auditNo": {
+        "message": "nē"
+    },
+    "auditLength": {
+        "message": "$COUNT$ rakstzīmes",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "cits domēns"
+    },
+    "auditNoImage": {
+        "message": "bez attēla"
+    },
+    "auditNoInput": {
+        "message": "nav darbību"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ no $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Izkārtojuma nobīdes"
+    },
+    "auditTtfb": {
+        "message": "Servera atbilde (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Cik ilgi bija jāgaida lapas pirmais baits no servera. Labi — līdz 0,8 s"
+    },
+    "auditFcp": {
+        "message": "Pirmā attēlošana (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Kad ekrānā parādījās pirmais saturs. Labi — līdz 1,8 s"
+    },
+    "auditLcp": {
+        "message": "Galvenais bloks (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Kad tika attēlots lielākais bloks — attēls vai teksts. Google galvenais ātruma rādītājs. Labi — līdz 2,5 s"
+    },
+    "auditCls": {
+        "message": "Izkārtojuma nobīdes (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Cik ļoti saturs lēkā ielādes laikā. Labi — līdz 0,1"
+    },
+    "auditInp": {
+        "message": "Reakcija uz darbībām (INP)"
+    },
+    "auditInpHint": {
+        "message": "Ilgākā aizkave, reaģējot uz klikšķi vai ievadi. Labi — līdz 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Bloķē attēlošanu"
+    },
+    "auditBlockingHint": {
+        "message": "Faili, ko pārlūks gaida, pirms sāk zīmēt lapu. Stili ir normāli, bet skriptus labāk ielādēt ar async vai defer"
+    },
+    "auditStatus": {
+        "message": "Statusa kods"
+    },
+    "auditStatusHint": {
+        "message": "Lapas HTTP statuss: 200 — kārtībā, 4xx un 5xx — kļūda"
+    },
+    "auditNoindex": {
+        "message": "Indeksēšana aizliegta"
+    },
+    "auditNoindexHint": {
+        "message": "Lapa ir paslēpta no meklētājiem ar noindex tagu vai robots.txt noteikumu. Pieteikšanās lapām un lietotāju kontiem tas ir normāli"
+    },
+    "auditTitle": {
+        "message": "Virsraksts (title)"
+    },
+    "auditTitleHint": {
+        "message": "Saites teksts meklēšanas rezultātos un cilnes nosaukums. Labākais — 10–70 rakstzīmes"
+    },
+    "auditDescription": {
+        "message": "Apraksts (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Teksts zem saites meklēšanas rezultātos. Labākais — 50–170 rakstzīmes"
+    },
+    "auditH1": {
+        "message": "h1 virsraksti"
+    },
+    "auditH1Hint": {
+        "message": "Lapas galvenais virsraksts. Parasti tāds ir viens"
+    },
+    "auditCanonical": {
+        "message": "Kanoniskais URL"
+    },
+    "auditCanonicalHint": {
+        "message": "Norāda meklētājiem lapas galveno adresi, ja tai ir kopijas"
+    },
+    "auditOg": {
+        "message": "Saites priekšskatījums (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Virsraksts un attēls, ko Telegram, Slack un citi pakalpojumi rāda, kad saite tiek kopīgota"
+    },
+    "auditViewport": {
+        "message": "Mobilā versija (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Bez meta viewport tālruņi rāda lapu kā samazinātu datora versiju"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Bez tā pārlūks pārslēdzas veco vietņu saderības režīmā, un izkārtojums var atšķirties"
+    },
+    "auditNoSize": {
+        "message": "Attēli bez izmēriem"
+    },
+    "auditNoSizeHint": {
+        "message": "Bez width un height pārlūks nezina, cik daudz vietas atstāt attēlam, un izkārtojums lēkā, kad tas ielādējas"
+    },
+    "auditLarge": {
+        "message": "Pārāk lieli attēli"
+    },
+    "auditLargeHint": {
+        "message": "Attēls tiek nosūtīts manāmi lielāks, nekā tiek parādīts — lieks svars"
+    },
+    "auditModern": {
+        "message": "WebP un AVIF attēli"
+    },
+    "auditModernHint": {
+        "message": "Šie formāti ir par 25–50% mazāki nekā JPEG un PNG"
+    },
+    "auditLang": {
+        "message": "Lapas valoda (lang)"
+    },
+    "auditLangHint": {
+        "message": "Nepieciešama ekrāna lasītājiem, tulkotājiem un meklētājiem"
+    },
+    "auditAlt": {
+        "message": "Attēli bez alt"
+    },
+    "auditAltHint": {
+        "message": "Attēla apraksts neredzīgiem lietotājiem un gadījumam, ja tas neielādējas"
+    },
+    "auditLabels": {
+        "message": "Lauki bez etiķetēm"
+    },
+    "auditLabelsHint": {
+        "message": "Ekrāna lasītājs nevarēs pateikt, ko laukā ievadīt"
+    },
+    "auditNames": {
+        "message": "Pogas un saites bez nosaukumiem"
+    },
+    "auditNamesHint": {
+        "message": "Piemēram, ikonas poga bez aria-label: neredzīgs lietotājs dzirdēs tikai “poga”"
+    },
+    "auditMain": {
+        "message": "Galvenā daļa (main)"
+    },
+    "auditMainHint": {
+        "message": "Ļauj uzreiz pāriet pie satura, izlaižot izvēlni"
+    },
+    "auditZoom": {
+        "message": "Tālummaiņa aizliegta"
+    },
+    "auditZoomHint": {
+        "message": "Neļauj vājredzīgiem cilvēkiem palielināt lapu tālrunī"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Ierobežo, no kurienes lapa var ielādēt skriptus — aizsardzība pret XSS. Ja tajā ir 'unsafe-inline' bez nonce vai hash, tā gandrīz neaizsargā"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Aizliedz pārlūkam minēt failu tipus — aizsardzība pret skriptu viltošanu"
+    },
+    "auditFrame": {
+        "message": "Aizsardzība pret iegulšanu"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options vai frame-ancestors neļauj iegult vietni svešā lapā, lai ar viltu liktu lietotājiem klikšķināt"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Cik liela daļa lapas adreses tiek nodota citām vietnēm pārejot. Bez galvenes pārlūks izmanto drošu noklusējuma vērtību"
+    },
+    "auditCache": {
+        "message": "Lapas kešatmiņa"
+    },
+    "auditCacheHint": {
+        "message": "No kurienes lapa nāca: HIT — no servera vai CDN kešatmiņas, MISS — izveidota no jauna. Pašas lapas kešatmiņā glabā reti; parasti attēlus, skriptus un stilus"
+    },
+    "auditCacheBrowser": {
+        "message": "no pārlūka kešatmiņas"
+    },
+    "auditBots": {
+        "message": "Roboti un MI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Noteikumi meklētājiem un citiem robotiem. Bez faila roboti pārmeklē visu, un meklētāji neuzzina, kur ir vietnes karte"
+    },
+    "auditSitemap": {
+        "message": "Vietnes karte"
+    },
+    "auditSitemapHint": {
+        "message": "Lapu saraksts meklētājiem. Norāda robots.txt ar rindu Sitemap:"
+    },
+    "auditAi": {
+        "message": "Noteikumi MI robotiem"
+    },
+    "auditAiHint": {
+        "message": "Vai MI roboti drīkst vākt vietnes tekstus neironu tīkliem — pēc robots.txt noteikumiem, kuros robots nosaukts vārdā. Paplašinājums zina 16 šādus robotus (GPTBot, ClaudeBot, Google-Extended u. c.); roboti ar citiem nosaukumiem netiek ieskaitīti. “Slēgts visiem” — vietne ir slēgta visiem robotiem ar User-agent: *, bez atsevišķiem noteikumiem MI"
+    },
+    "auditAiBlocked": {
+        "message": "aizliegti: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "atļauts"
+    },
+    "auditAiNone": {
+        "message": "nav norādīts"
+    },
+    "auditAiAll": {
+        "message": "slēgts visiem"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Jauns formāts: īss vietnes apraksts Markdown formātā MI asistentiem un aģentiem. Pagaidām nav obligāts"
+    },
+    "auditCspWeak": {
+        "message": "vāja"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Aizliedz lapai un iegultajiem rāmjiem piekļuvi kamerai, atrašanās vietai un citām pārlūka iespējām"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Izolē vietnes logu no citiem logiem, ko tā atver — aizsardzība pret uzbrukumiem caur window.opener"
+    },
+    "auditVersions": {
+        "message": "Programmatūras versijas galvenēs"
+    },
+    "auditVersionsHint": {
+        "message": "Serveris atklāj programmatūras versijas — mājiens uzbrucējiem, kuras zināmās ievainojamības izmēģināt. Kā paslēpt: server_tokens off nginx un Angie, expose_php = Off PHP"
+    },
+    "auditHidden": {
+        "message": "paslēptas"
+    },
+    "auditSession": {
+        "message": "Sesijas sīkfaili pieejami skriptiem"
+    },
+    "auditSessionHint": {
+        "message": "Šķiet, ka pieteikšanās sīkfailus var nolasīt no JavaScript: XSS gadījumā tos var nozagt. To novērš karodziņš HttpOnly. Noteikts pēc sīkfaila nosaukuma"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Kontakti ziņošanai par ievainojamībām failā /.well-known/security.txt. Palīdz pētniekam ziņot par problēmu jums, nevis to pārdot"
+    },
+    "serverUnknownTitle": {
+        "message": "Šī pakalpojumu sniedzēja tīklu nav ABlock datubāzē: tajā ir lielie mitinātāji, mākoņi un CDN"
+    },
+    "protocolH3Later": {
+        "message": "Serveris atbalsta HTTP/3. Šī lapa atnāca caur $PROTOCOL$ — tā notiek pirmajā apmeklējumā: pārlūks uzzina par HTTP/3 no servera atbildes un pāriet uz to nākamajiem pieprasījumiem",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Pārlūka valoda"
+    },
+    "langTitle": {
+        "message": "Saskarnes valoda"
+    },
+    "noteTitle": {
+        "message": "Piezīme par vietni"
+    },
+    "notePlaceholder": {
+        "message": "Piezīme par vietni, redzama tikai jums"
+    },
+    "incognitoLabel": {
+        "message": "Darboties inkognito režīmā"
+    },
+    "incognitoTitle": {
+        "message": "Tiks atvērti pārlūka paplašinājumu iestatījumi — tur ieslēdziet ABlock atļauju inkognito režīmā"
+    }
+}

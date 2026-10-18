@@ -3,11 +3,11 @@ import globals from 'globals';
 
 export default [
     {
-        ignores: ['node_modules/', 'rules/', '_metadata/']
+        ignores: ['node_modules/', 'dist/', 'src/rules/', 'src/_metadata/']
     },
     js.configs.recommended,
     {
-        files: ['js/**/*.js'],
+        files: ['src/**/*.js'],
         languageOptions: {
             ecmaVersion: 'latest',
             sourceType: 'script'
@@ -15,23 +15,30 @@ export default [
     },
     // Фоновый скрипт расширения
     {
-        files: ['js/sw.js'],
+        files: ['src/background/**/*.js'],
         languageOptions: {
             globals: {...globals.serviceworker, ...globals.webextensions}
         }
     },
     // Окно расширения
     {
-        files: ['js/popup.js'],
+        files: ['src/popup/**/*.js'],
         languageOptions: {
             globals: {...globals.browser, ...globals.webextensions}
         }
     },
-    // Скрипты, внедряемые в страницы сайтов (world: MAIN, chrome.* там недоступен)
+    // Скрипты, внедряемые в страницы сайтов: content — постоянно, page — по запросу окна (chrome.* там недоступен)
     {
-        files: ['js/youtube.js', 'js/vk.js', 'js/ok.js'],
+        files: ['src/content/**/*.js', 'src/page/**/*.js'],
         languageOptions: {
             globals: globals.browser
+        }
+    },
+    // Контент-скрипт в изолированном мире: chrome.runtime доступен
+    {
+        files: ['src/content/cosmetic.js'],
+        languageOptions: {
+            globals: {...globals.browser, ...globals.webextensions}
         }
     },
     {

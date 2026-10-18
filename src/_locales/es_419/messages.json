@@ -1,0 +1,15 @@
+{
+    "locale": {
+        "message": "es-419",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extendedOffTitle": {
+        "message": "La extensión dejará de ver la IP y los encabezados de los servidores, de llevar estadísticas y de ocultar los avisos de cookies en todos los sitios; se retirará el acceso a todos los sitios. Puedes volver a activarlo en cualquier momento"
+    },
+    "auditViewportHint": {
+        "message": "Sin meta viewport el celular muestra la página como una versión de escritorio reducida"
+    },
+    "auditZoomHint": {
+        "message": "Impide a las personas con baja visión ampliar la página en el celular"
+    }
+}

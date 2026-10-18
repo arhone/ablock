@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "zh-TW",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - 廣告封鎖與網站檢測"
+    },
+    "extDescription": {
+        "message": "封鎖廣告和追蹤器，網頁載入更快、更省流量。檢測任何網站的速度、安全性和追蹤情況。"
+    },
+    "toggle": {
+        "message": "開啟 / 關閉"
+    },
+    "statusOn": {
+        "message": "防護已開啟"
+    },
+    "statusOff": {
+        "message": "防護已關閉"
+    },
+    "statusSiteOff": {
+        "message": "此網站的防護已關閉"
+    },
+    "telegram": {
+        "message": "Telegram 群組"
+    },
+    "github": {
+        "message": "在 GitHub 上參與"
+    },
+    "httpsOn": {
+        "message": "連線已加密"
+    },
+    "httpsOff": {
+        "message": "連線未加密"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — 最快的通訊協定"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — 現代的通訊協定"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — 過時的通訊協定",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "通訊協定不明（頁面從快取載入）"
+    },
+    "loading": {
+        "message": "載入中…"
+    },
+    "loadingTitle": {
+        "message": "頁面仍在載入"
+    },
+    "seconds": {
+        "message": "$SECONDS$ 秒",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "頁面載入時間"
+    },
+    "domains": {
+        "message": "網域 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "第三方網域：\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…還有 $COUNT$ 個",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "沒有第三方網域"
+    },
+    "blocked": {
+        "message": "已攔截 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "追蹤器 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "此頁面已攔截\n廣告：$ADS$\n追蹤器：$TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "此網站在追蹤你。已攔截追蹤器：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "未發現追蹤器"
+    },
+    "scoreLabel": {
+        "message": "網站評分"
+    },
+    "serverLabel": {
+        "message": "伺服器"
+    },
+    "techLabel": {
+        "message": "技術"
+    },
+    "companiesLabel": {
+        "message": "追蹤者"
+    },
+    "extraLabel": {
+        "message": "其他"
+    },
+    "extendedText": {
+        "message": "進階模式：在所有網站上顯示主機商、IPv6、HSTS、統計資料，並隱藏廣告版位和 Cookie 彈出視窗。資料不會離開你的瀏覽器。"
+    },
+    "extendedButton": {
+        "message": "開啟"
+    },
+    "extendedOff": {
+        "message": "關閉進階模式"
+    },
+    "extendedOffTitle": {
+        "message": "擴充功能將不再查看伺服器 IP 和標頭、不再記錄統計資料，也不再於所有網站上隱藏廣告版位和 Cookie 彈出視窗；對所有網站的存取權將被撤銷。你可以隨時重新開啟"
+    },
+    "share": {
+        "message": "分享"
+    },
+    "copied": {
+        "message": "已複製"
+    },
+    "cookiesLabel": {
+        "message": "隱藏 Cookie 同意彈出視窗"
+    },
+    "cookiesTitle": {
+        "message": "攔截 Cookie 同意橫幅服務。在進階模式下，還會在任何網站上隱藏橫幅本身"
+    },
+    "siteLabel": {
+        "message": "在 $HOST$ 上攔截",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "如果網站無法正常運作，請取消勾選：將不再攔截該網站上的廣告和追蹤器。頁面將重新載入"
+    },
+    "guess": {
+        "message": "依間接跡象判斷 — 可能不準確"
+    },
+    "weightTitle": {
+        "message": "頁面及所有檔案的大小"
+    },
+    "weightEstimated": {
+        "message": "$TOTAL$ 個檔案中有 $KNOWN$ 個的確切大小已知，其餘為估算：第三方網站會隱藏大小",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "頁面已壓縮：$NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "未壓縮"
+    },
+    "compressionOff": {
+        "message": "頁面未經壓縮傳送 — 載入較慢"
+    },
+    "compressionUnknown": {
+        "message": "壓縮方式不明（頁面從快取載入）"
+    },
+    "blockedCookies": {
+        "message": "Cookie 彈出視窗：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "大小：≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "未攔截：\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "在網站上發現：\n$LIST$\n是否已攔截會在進階模式中顯示",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "已攔截：\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "未發現已知公司"
+    },
+    "serverExtended": {
+        "message": "於進階模式中"
+    },
+    "serverReload": {
+        "message": "請重新載入頁面"
+    },
+    "serverReloadTitle": {
+        "message": "伺服器會在頁面載入時偵測"
+    },
+    "serverIp": {
+        "message": "IP:$IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "其他供應商"
+    },
+    "serverProxy": {
+        "message": "此網站透過 $NAME$（CDN 或 DDoS 防護）運作 — 真實伺服器已隱藏",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "主機商：$NAME$（依據 RIPE 位址資料庫）",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "國家/地區依供應商判斷"
+    },
+    "techFound": {
+        "message": "在頁面上發現"
+    },
+    "techNone": {
+        "message": "未偵測到"
+    },
+    "techNoneTitle": {
+        "message": "未發現已知引擎或程式庫的跡象"
+    },
+    "ipv6": {
+        "message": "透過 IPv6 連線"
+    },
+    "ipv4": {
+        "message": "透過 IPv4 連線。這無法說明網站是否支援 IPv6：也取決於你的網路"
+    },
+    "hstsOn": {
+        "message": "HSTS：瀏覽器一律只透過 HTTPS 開啟此網站"
+    },
+    "hstsOff": {
+        "message": "沒有 HSTS：首次造訪網站時可能未加密"
+    },
+    "mixed": {
+        "message": "HTTP 檔案 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS 頁面載入了未加密的檔案：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "評分 $SCORE$ / 10，依據：",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "加密"
+    },
+    "scoreProtocol": {
+        "message": "通訊協定"
+    },
+    "scoreSpeed": {
+        "message": "載入速度"
+    },
+    "scoreWeight": {
+        "message": "頁面大小"
+    },
+    "scoreTrackers": {
+        "message": "追蹤"
+    },
+    "scoreDomains": {
+        "message": "第三方網域"
+    },
+    "scoreCompression": {
+        "message": "壓縮"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "混合內容"
+    },
+    "stats": {
+        "message": "已攔截請求總數：$COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "自 $DATE$ 起。大小依廣告檔案的平均大小估算",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "網站報告 — 圖片或文字"
+    },
+    "reportTitle": {
+        "message": "以圖片或文字呈現網站評分與詳細資料 — 給同事、承包商或聊天群組"
+    },
+    "reportDone": {
+        "message": "已儲存"
+    },
+    "copyIp": {
+        "message": "複製 IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "複製圖片"
+    },
+    "copyText": {
+        "message": "複製文字和連結"
+    },
+    "shareSystem": {
+        "message": "更多…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — 在 ABlock 中獲得 $SCORE$ / 10 分",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "檢查你的網站："
+    },
+    "donate": {
+        "message": "贊助"
+    },
+    "donateTitle": {
+        "message": "在 Boosty 上支持開發"
+    },
+    "askStats": {
+        "message": "已封鎖請求：$COUNT$，節省 ≈ $SIZE$。如果 ABlock 對你有幫助，歡迎支持開發",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "你已經使用 ABlock 一個月了。如果它對你有幫助，歡迎支持開發"
+    },
+    "askClose": {
+        "message": "不再顯示"
+    },
+    "reportLegendGuess": {
+        "message": "? — 依間接跡象判斷"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — 概略估計"
+    },
+    "companiesNoneTitle": {
+        "message": "此頁面上沒有 ABlock 名錄中的公司。網站自己的計數器仍可能存在 — 它們會計入「追蹤器」標章"
+    },
+    "compressionFiles": {
+        "message": "文字檔案：$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "未壓縮：$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "刪除網站資料並重新載入：Cookie、快取和儲存空間。標章和評分會以新訪客的角度呈現網站。你將登出此網站"
+    },
+    "clearConfirm": {
+        "message": "要刪除嗎？"
+    },
+    "saveImage": {
+        "message": "儲存圖片"
+    },
+    "shareSend": {
+        "message": "傳送至 $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "發布到 $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "以文字傳送：圖片必須上傳到伺服器才能傳遞 — 請複製圖片並貼到訊息中"
+    },
+    "shareLinkOnly": {
+        "message": "只會傳遞擴充功能的連結 — 請複製報告圖片並貼到貼文中"
+    },
+    "auditLabel": {
+        "message": "詳細資料"
+    },
+    "auditIssues": {
+        "message": "問題：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "沒有問題"
+    },
+    "auditSpeed": {
+        "message": "速度"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "標記"
+    },
+    "auditA11y": {
+        "message": "無障礙"
+    },
+    "auditSecurity": {
+        "message": "安全性"
+    },
+    "auditYes": {
+        "message": "是"
+    },
+    "auditNo": {
+        "message": "否"
+    },
+    "auditLength": {
+        "message": "$COUNT$ 個字元",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "其他網域"
+    },
+    "auditNoImage": {
+        "message": "沒有圖片"
+    },
+    "auditNoInput": {
+        "message": "沒有互動"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ / $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "版面位移"
+    },
+    "auditTtfb": {
+        "message": "伺服器回應（TTFB）"
+    },
+    "auditTtfbHint": {
+        "message": "從伺服器收到頁面第一個位元組所需的時間。良好 — 低於 0.8 秒"
+    },
+    "auditFcp": {
+        "message": "首次繪製（FCP）"
+    },
+    "auditFcpHint": {
+        "message": "第一個內容出現在畫面上的時間。良好 — 低於 1.8 秒"
+    },
+    "auditLcp": {
+        "message": "主要區塊（LCP）"
+    },
+    "auditLcpHint": {
+        "message": "最大的區塊（圖片或文字）繪製完成的時間。Google 的主要速度指標。良好 — 低於 2.5 秒"
+    },
+    "auditCls": {
+        "message": "版面位移（CLS）"
+    },
+    "auditClsHint": {
+        "message": "內容在載入時跳動的程度。良好 — 低於 0.1"
+    },
+    "auditInp": {
+        "message": "互動回應（INP）"
+    },
+    "auditInpHint": {
+        "message": "回應點擊或輸入的最長延遲。良好 — 低於 200 毫秒"
+    },
+    "auditBlocking": {
+        "message": "阻擋轉譯"
+    },
+    "auditBlockingHint": {
+        "message": "瀏覽器開始繪製頁面前必須等待的檔案。樣式沒問題，但指令碼最好以 async 或 defer 載入"
+    },
+    "auditStatus": {
+        "message": "狀態碼"
+    },
+    "auditStatusHint": {
+        "message": "頁面的 HTTP 狀態：200 — 正常，4xx 和 5xx — 錯誤"
+    },
+    "auditNoindex": {
+        "message": "已禁止索引"
+    },
+    "auditNoindexHint": {
+        "message": "頁面透過 noindex 標籤或 robots.txt 規則對搜尋引擎隱藏。登入頁面和使用者帳戶頁面這樣做很正常"
+    },
+    "auditTitle": {
+        "message": "標題（title）"
+    },
+    "auditTitleHint": {
+        "message": "搜尋結果中的連結文字和分頁名稱。最佳 — 10–70 個字元"
+    },
+    "auditDescription": {
+        "message": "描述（description）"
+    },
+    "auditDescriptionHint": {
+        "message": "搜尋結果中連結下方的文字。最佳 — 50–170 個字元"
+    },
+    "auditH1": {
+        "message": "h1 標題"
+    },
+    "auditH1Hint": {
+        "message": "頁面的主標題。通常只有一個"
+    },
+    "auditCanonical": {
+        "message": "標準網址"
+    },
+    "auditCanonicalHint": {
+        "message": "若頁面有副本，告訴搜尋引擎頁面的主要網址"
+    },
+    "auditOg": {
+        "message": "連結預覽（Open Graph）"
+    },
+    "auditOgHint": {
+        "message": "分享連結時，Telegram、Slack 等服務顯示的標題和圖片"
+    },
+    "auditViewport": {
+        "message": "行動版（viewport）"
+    },
+    "auditViewportHint": {
+        "message": "沒有 meta viewport，手機會將頁面顯示為縮小的電腦版"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "沒有它，瀏覽器會切換到舊網站相容模式，版面可能不同"
+    },
+    "auditNoSize": {
+        "message": "未指定尺寸的圖片"
+    },
+    "auditNoSizeHint": {
+        "message": "沒有 width 和 height，瀏覽器不知道要為圖片預留多少空間，圖片載入時版面會跳動"
+    },
+    "auditLarge": {
+        "message": "過大的圖片"
+    },
+    "auditLargeHint": {
+        "message": "傳送的圖片明顯比顯示的尺寸大 — 多餘的大小"
+    },
+    "auditModern": {
+        "message": "WebP 和 AVIF 圖片"
+    },
+    "auditModernHint": {
+        "message": "這些格式比 JPEG 和 PNG 小 25–50%"
+    },
+    "auditLang": {
+        "message": "頁面語言（lang）"
+    },
+    "auditLangHint": {
+        "message": "螢幕閱讀器、翻譯工具和搜尋引擎都需要"
+    },
+    "auditAlt": {
+        "message": "沒有 alt 的圖片"
+    },
+    "auditAltHint": {
+        "message": "為視障使用者以及圖片無法載入時提供的圖片說明"
+    },
+    "auditLabels": {
+        "message": "沒有標籤的欄位"
+    },
+    "auditLabelsHint": {
+        "message": "螢幕閱讀器將無法說明該欄位要輸入什麼"
+    },
+    "auditNames": {
+        "message": "沒有名稱的按鈕和連結"
+    },
+    "auditNamesHint": {
+        "message": "例如沒有 aria-label 的圖示按鈕：視障使用者只會聽到「按鈕」"
+    },
+    "auditMain": {
+        "message": "主要區域（main）"
+    },
+    "auditMainHint": {
+        "message": "讓使用者略過選單，直接跳到內容"
+    },
+    "auditZoom": {
+        "message": "已停用縮放"
+    },
+    "auditZoomHint": {
+        "message": "讓低視力使用者無法在手機上放大頁面"
+    },
+    "auditCsp": {
+        "message": "內容安全政策（CSP）"
+    },
+    "auditCspHint": {
+        "message": "限制頁面可從何處載入指令碼 — 防範 XSS。若包含 'unsafe-inline' 而沒有 nonce 或 hash，幾乎無法防護"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "阻止瀏覽器猜測檔案類型 — 防範指令碼偽造"
+    },
+    "auditFrame": {
+        "message": "防止框架嵌入"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options 或 frame-ancestors 可防止網站被嵌入他人頁面，誘騙使用者點擊"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "瀏覽時會將頁面網址的多少部分傳給其他網站。沒有此標頭時，瀏覽器會使用安全的預設值"
+    },
+    "auditCache": {
+        "message": "頁面快取"
+    },
+    "auditCacheHint": {
+        "message": "頁面的來源：HIT — 來自伺服器或 CDN 快取，MISS — 重新產生。頁面本身很少被快取；通常快取的是圖片、指令碼和樣式"
+    },
+    "auditCacheBrowser": {
+        "message": "來自瀏覽器快取"
+    },
+    "auditBots": {
+        "message": "機器人與 AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "給搜尋引擎和其他機器人的規則。沒有這個檔案，機器人會檢索所有內容，搜尋引擎也不知道網站地圖在哪裡"
+    },
+    "auditSitemap": {
+        "message": "網站地圖"
+    },
+    "auditSitemapHint": {
+        "message": "提供給搜尋引擎的頁面清單。在 robots.txt 中以 Sitemap: 行指定"
+    },
+    "auditAi": {
+        "message": "AI 機器人規則"
+    },
+    "auditAiHint": {
+        "message": "AI 機器人是否可以為神經網路收集網站的文字 — 依據 robots.txt 中指名該機器人的規則。擴充功能認得 16 個這類機器人（GPTBot、ClaudeBot、Google-Extended 等）；其他名稱的機器人不計入。「全部封鎖」— 網站透過 User-agent: * 對所有機器人關閉，沒有針對 AI 的個別規則"
+    },
+    "auditAiBlocked": {
+        "message": "已封鎖：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "允許"
+    },
+    "auditAiNone": {
+        "message": "未設定"
+    },
+    "auditAiAll": {
+        "message": "全部封鎖"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "一種新格式：以 Markdown 撰寫、供 AI 助理和代理程式閱讀的網站簡短說明。目前為選用"
+    },
+    "auditCspWeak": {
+        "message": "薄弱"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "禁止頁面和嵌入的框架存取相機、地理位置和其他瀏覽器功能"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "將網站視窗與它開啟的其他視窗隔離 — 防範 window.opener 攻擊"
+    },
+    "auditVersions": {
+        "message": "標頭中的軟體版本"
+    },
+    "auditVersionsHint": {
+        "message": "伺服器洩漏了軟體版本 — 等於提示攻擊者可以嘗試哪些已知漏洞。隱藏方法：nginx 和 Angie 中設定 server_tokens off,PHP 中設定 expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "已隱藏"
+    },
+    "auditSession": {
+        "message": "指令碼可讀取工作階段 Cookie"
+    },
+    "auditSessionHint": {
+        "message": "登入 Cookie 似乎可被 JavaScript 讀取：遭受 XSS 時可能被竊取。HttpOnly 旗標可防止這種情況。依 Cookie 名稱判斷"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "位於 /.well-known/security.txt 的漏洞回報聯絡方式。讓研究人員向你回報問題，而不是把它賣掉"
+    },
+    "serverUnknownTitle": {
+        "message": "此供應商的網路不在 ABlock 資料庫中：資料庫涵蓋大型主機商、雲端和 CDN"
+    },
+    "protocolH3Later": {
+        "message": "伺服器支援 HTTP/3。此頁面透過 $PROTOCOL$ 傳送 — 首次造訪時會這樣：瀏覽器從伺服器回應得知 HTTP/3，之後的請求就會改用它",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "瀏覽器語言"
+    },
+    "langTitle": {
+        "message": "介面語言"
+    },
+    "noteTitle": {
+        "message": "此網站的備註"
+    },
+    "notePlaceholder": {
+        "message": "此網站的備註，僅您可見"
+    },
+    "incognitoLabel": {
+        "message": "在無痕模式下執行"
+    },
+    "incognitoTitle": {
+        "message": "將開啟瀏覽器的擴充功能設定，請在那裡為 ABlock 開啟無痕模式下的權限"
+    }
+}

@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "fil",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Ad Blocker at Pagsuri ng Site"
+    },
+    "extDescription": {
+        "message": "Hinaharang ang mga ad at tracker: mas mabilis na page, tipid sa data. Sinusuri ang bilis, seguridad at pag-track ng anumang site."
+    },
+    "toggle": {
+        "message": "I-on / i-off"
+    },
+    "statusOn": {
+        "message": "Naka-on ang proteksyon"
+    },
+    "statusOff": {
+        "message": "Naka-off ang proteksyon"
+    },
+    "statusSiteOff": {
+        "message": "Naka-off ang proteksyon sa site na ito"
+    },
+    "telegram": {
+        "message": "Grupo sa Telegram"
+    },
+    "github": {
+        "message": "Mag-ambag sa GitHub"
+    },
+    "httpsOn": {
+        "message": "Naka-encrypt ang koneksyon"
+    },
+    "httpsOff": {
+        "message": "Hindi naka-encrypt ang koneksyon"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — ang pinakamabilis na protocol"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — isang modernong protocol"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — isang lumang protocol",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Hindi alam ang protocol (na-load ang page mula sa cache)"
+    },
+    "loading": {
+        "message": "Naglo-load…"
+    },
+    "loadingTitle": {
+        "message": "Naglo-load pa ang page"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Oras ng pag-load ng page"
+    },
+    "domains": {
+        "message": "Mga domain $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Mga third-party na domain:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…at $COUNT$ pa",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Walang third-party na domain"
+    },
+    "blocked": {
+        "message": "Na-block $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Mga tracker $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Na-block sa page na ito\nMga ad: $ADS$\nMga tracker: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Sinusubaybayan ka ng site na ito. Mga na-block na tracker: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Walang nakitang tracker"
+    },
+    "scoreLabel": {
+        "message": "Iskor ng site"
+    },
+    "serverLabel": {
+        "message": "Server"
+    },
+    "techLabel": {
+        "message": "Ginawa gamit ang"
+    },
+    "companiesLabel": {
+        "message": "Sinusubaybayan ng"
+    },
+    "extraLabel": {
+        "message": "Iba pa"
+    },
+    "extendedText": {
+        "message": "Extended mode: hosting, IPv6, HSTS, istatistika at pagtago ng mga puwang ng ad at cookie pop-up sa lahat ng site. Hindi kailanman lumalabas ang data sa iyong browser."
+    },
+    "extendedButton": {
+        "message": "I-on"
+    },
+    "extendedOff": {
+        "message": "I-off ang extended mode"
+    },
+    "extendedOffTitle": {
+        "message": "Hindi na makikita ng extension ang mga IP at header ng server, hindi na magtatala ng istatistika at hindi na itatago ang mga puwang ng ad at cookie pop-up sa lahat ng site; babawiin ang access sa lahat ng site. Maaari mo itong i-on muli anumang oras"
+    },
+    "share": {
+        "message": "Ibahagi"
+    },
+    "copied": {
+        "message": "Nakopya"
+    },
+    "cookiesLabel": {
+        "message": "Itago ang mga pop-up ng pahintulot sa cookie"
+    },
+    "cookiesTitle": {
+        "message": "Bina-block ang mga serbisyo ng banner ng pahintulot sa cookie. Sa extended mode, itinatago rin ang mismong mga banner sa anumang site"
+    },
+    "siteLabel": {
+        "message": "I-block sa $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Alisin ang check kung hindi gumagana nang tama ang site: hindi na iba-block ang mga ad at tracker dito. Magre-reload ang page"
+    },
+    "guess": {
+        "message": "Natukoy sa di-tuwirang palatandaan — maaaring hindi eksakto"
+    },
+    "weightTitle": {
+        "message": "Laki ng page kasama ang lahat ng file"
+    },
+    "weightEstimated": {
+        "message": "Alam ang eksaktong laki ng $KNOWN$ sa $TOTAL$ na file, tantiya ang iba: itinatago ng mga third-party na site ang laki",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Naka-compress ang page: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Walang compression"
+    },
+    "compressionOff": {
+        "message": "Ipinapadala ang page nang hindi naka-compress — mas mabagal itong mag-load"
+    },
+    "compressionUnknown": {
+        "message": "Hindi alam ang compression (na-load ang page mula sa cache)"
+    },
+    "blockedCookies": {
+        "message": "Mga cookie pop-up: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Laki: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Hindi na-block:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Nakita sa site:\n$LIST$\nIpinapakita sa extended mode kung na-block ang mga ito",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Na-block:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "walang kilalang nakita"
+    },
+    "serverExtended": {
+        "message": "sa extended mode"
+    },
+    "serverReload": {
+        "message": "i-reload ang page"
+    },
+    "serverReloadTitle": {
+        "message": "Natutukoy ang server habang naglo-load ang page"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "ibang provider"
+    },
+    "serverProxy": {
+        "message": "Tumatakbo ang site sa likod ng $NAME$ (CDN o proteksyon sa DDoS) — nakatago ang tunay na server",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Hosting: $NAME$ (mula sa RIPE address database)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Natutukoy ang bansa batay sa provider"
+    },
+    "techFound": {
+        "message": "Nakita sa page"
+    },
+    "techNone": {
+        "message": "hindi natukoy"
+    },
+    "techNoneTitle": {
+        "message": "Walang nakitang palatandaan ng mga kilalang engine o library"
+    },
+    "ipv6": {
+        "message": "Nakakonekta sa IPv6"
+    },
+    "ipv4": {
+        "message": "Nakakonekta sa IPv4. Hindi nito sinasabi kung sinusuportahan ng site ang IPv6: nakadepende rin ito sa iyong network"
+    },
+    "hstsOn": {
+        "message": "HSTS: palaging binubuksan ng browser ang site sa HTTPS lamang"
+    },
+    "hstsOff": {
+        "message": "Walang HSTS: maaaring mangyari nang walang encryption ang unang pagbisita sa site"
+    },
+    "mixed": {
+        "message": "Mga HTTP file $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "Naglo-load ang HTTPS page ng mga file nang walang encryption: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Iskor na $SCORE$ sa 10 batay sa:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Pag-encrypt"
+    },
+    "scoreProtocol": {
+        "message": "Protocol"
+    },
+    "scoreSpeed": {
+        "message": "Bilis ng pag-load"
+    },
+    "scoreWeight": {
+        "message": "Laki ng page"
+    },
+    "scoreTrackers": {
+        "message": "Pagsubaybay"
+    },
+    "scoreDomains": {
+        "message": "Mga third-party na domain"
+    },
+    "scoreCompression": {
+        "message": "Compression"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Halo-halong content"
+    },
+    "stats": {
+        "message": "Kabuuang na-block na request: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Mula $DATE$. Tinatantiya ang laki batay sa karaniwang laki ng mga ad file",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Ulat ng site — bilang larawan o text"
+    },
+    "reportTitle": {
+        "message": "Iskor at detalye ng site bilang larawan o text — para sa mga kasamahan, kontratista o chat"
+    },
+    "reportDone": {
+        "message": "Na-save"
+    },
+    "copyIp": {
+        "message": "Kopyahin ang IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Kopyahin ang larawan"
+    },
+    "copyText": {
+        "message": "Kopyahin ang text at link"
+    },
+    "shareSystem": {
+        "message": "Iba pa…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — iskor na $SCORE$ sa 10 sa ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Suriin ang iyong site:"
+    },
+    "donate": {
+        "message": "Mag-donate"
+    },
+    "donateTitle": {
+        "message": "Suportahan ang development sa Boosty"
+    },
+    "askStats": {
+        "message": "Na-block na request: $COUNT$, natipid ≈ $SIZE$. Kung nakakatulong ang ABlock, suportahan ang pag-develop nito",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "Isang buwan mo nang ginagamit ang ABlock. Kung nakakatulong ito, suportahan ang pag-develop nito"
+    },
+    "askClose": {
+        "message": "Huwag nang ipakita"
+    },
+    "reportLegendGuess": {
+        "message": "? — natukoy sa di-tuwirang palatandaan"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — tinatayang halaga"
+    },
+    "companiesNoneTitle": {
+        "message": "Walang kumpanya mula sa direktoryo ng ABlock sa page na ito. Maaaring mayroon pa ring sariling counter ang site — binibilang ang mga ito ng badge na “Mga tracker”"
+    },
+    "compressionFiles": {
+        "message": "Mga text file: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Hindi naka-compress: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Burahin ang data ng site at i-reload: cookies, cache at storage. Ipapakita ng mga badge at iskor ang site gaya ng nakikita ng bagong bisita. Mala-log out ka sa site na ito"
+    },
+    "clearConfirm": {
+        "message": "Burahin?"
+    },
+    "saveImage": {
+        "message": "I-save ang larawan"
+    },
+    "shareSend": {
+        "message": "Ipadala sa $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "I-post sa $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Ipinapadala bilang text: hindi maipapasa ang larawan nang hindi ina-upload sa server — kopyahin ito at i-paste sa mensahe"
+    },
+    "shareLinkOnly": {
+        "message": "Link lang ng extension ang ipinapasa — kopyahin ang larawan ng ulat at i-paste ito sa post"
+    },
+    "auditLabel": {
+        "message": "Mga detalye"
+    },
+    "auditIssues": {
+        "message": "mga isyu: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "walang isyu"
+    },
+    "auditSpeed": {
+        "message": "Bilis"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Markup"
+    },
+    "auditA11y": {
+        "message": "Accessibility"
+    },
+    "auditSecurity": {
+        "message": "Seguridad"
+    },
+    "auditYes": {
+        "message": "oo"
+    },
+    "auditNo": {
+        "message": "hindi"
+    },
+    "auditLength": {
+        "message": "$COUNT$ character",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "ibang domain"
+    },
+    "auditNoImage": {
+        "message": "walang larawan"
+    },
+    "auditNoInput": {
+        "message": "walang interaksyon"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ sa $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Paggalaw ng layout"
+    },
+    "auditTtfb": {
+        "message": "Tugon ng server (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Gaano katagal bago natanggap ang unang byte ng page mula sa server. Mabuti — wala pang 0.8 s"
+    },
+    "auditFcp": {
+        "message": "Unang paint (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Kailan lumabas sa screen ang unang content. Mabuti — wala pang 1.8 s"
+    },
+    "auditLcp": {
+        "message": "Pangunahing block (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Kailan na-paint ang pinakamalaking block — larawan o text. Ang pangunahing sukatan ng bilis ng Google. Mabuti — wala pang 2.5 s"
+    },
+    "auditCls": {
+        "message": "Paggalaw ng layout (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Gaano gumagalaw ang content habang naglo-load. Mabuti — wala pang 0.1"
+    },
+    "auditInp": {
+        "message": "Tugon sa interaksyon (INP)"
+    },
+    "auditInpHint": {
+        "message": "Ang pinakamahabang antala sa pagtugon sa click o input. Mabuti — wala pang 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Humaharang sa pag-render"
+    },
+    "auditBlockingHint": {
+        "message": "Mga file na hinihintay ng browser bago simulang iguhit ang page. Ayos lang ang mga style, pero mas mabuting i-load ang mga script gamit ang async o defer"
+    },
+    "auditStatus": {
+        "message": "Status code"
+    },
+    "auditStatusHint": {
+        "message": "HTTP status ng page: 200 — OK, 4xx at 5xx — error"
+    },
+    "auditNoindex": {
+        "message": "Naka-block ang pag-index"
+    },
+    "auditNoindexHint": {
+        "message": "Nakatago ang page sa mga search engine gamit ang noindex tag o patakaran sa robots.txt. Normal ito para sa mga login page at user account"
+    },
+    "auditTitle": {
+        "message": "Pamagat (title)"
+    },
+    "auditTitleHint": {
+        "message": "Text ng link sa mga resulta ng paghahanap at pangalan ng tab. Pinakamainam — 10–70 character"
+    },
+    "auditDescription": {
+        "message": "Paglalarawan (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Text sa ilalim ng link sa mga resulta ng paghahanap. Pinakamainam — 50–170 character"
+    },
+    "auditH1": {
+        "message": "Mga heading na h1"
+    },
+    "auditH1Hint": {
+        "message": "Ang pangunahing heading ng page. Karaniwang iisa lang"
+    },
+    "auditCanonical": {
+        "message": "Canonical URL"
+    },
+    "auditCanonicalHint": {
+        "message": "Sinasabi sa mga search engine ang pangunahing address ng page kung may mga kopya ito"
+    },
+    "auditOg": {
+        "message": "Preview ng link (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Pamagat at larawang ipinapakita ng Telegram, Slack at iba pang serbisyo kapag ibinahagi ang link"
+    },
+    "auditViewport": {
+        "message": "Mobile na bersyon (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Kung walang meta viewport, ipinapakita ng mga telepono ang page bilang pinaliit na desktop na bersyon"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Kung wala ito, lilipat ang browser sa compatibility mode para sa mga lumang site, at maaaring mag-iba ang layout"
+    },
+    "auditNoSize": {
+        "message": "Mga larawang walang sukat"
+    },
+    "auditNoSizeHint": {
+        "message": "Kung walang width at height, hindi alam ng browser kung gaano kalaking espasyo ang ilalaan sa larawan, at gumagalaw ang layout kapag nag-load ito"
+    },
+    "auditLarge": {
+        "message": "Sobrang laking mga larawan"
+    },
+    "auditLargeHint": {
+        "message": "Mas malaki nang husto ang ipinapadalang larawan kaysa sa ipinapakita — sobrang bigat"
+    },
+    "auditModern": {
+        "message": "Mga larawang WebP at AVIF"
+    },
+    "auditModernHint": {
+        "message": "Mas maliit nang 25–50% ang mga format na ito kaysa JPEG at PNG"
+    },
+    "auditLang": {
+        "message": "Wika ng page (lang)"
+    },
+    "auditLangHint": {
+        "message": "Kailangan ng mga screen reader, tagasalin at search engine"
+    },
+    "auditAlt": {
+        "message": "Mga larawang walang alt"
+    },
+    "auditAltHint": {
+        "message": "Paglalarawan ng larawan para sa mga bulag na user at kung sakaling hindi ito mag-load"
+    },
+    "auditLabels": {
+        "message": "Mga field na walang label"
+    },
+    "auditLabelsHint": {
+        "message": "Hindi masasabi ng screen reader kung ano ang ilalagay sa field"
+    },
+    "auditNames": {
+        "message": "Mga button at link na walang pangalan"
+    },
+    "auditNamesHint": {
+        "message": "Halimbawa, isang icon button na walang aria-label: “button” lang ang maririnig ng bulag na user"
+    },
+    "auditMain": {
+        "message": "Pangunahing bahagi (main)"
+    },
+    "auditMainHint": {
+        "message": "Hinahayaan ang user na tumalon nang direkta sa content, nilalaktawan ang menu"
+    },
+    "auditZoom": {
+        "message": "Naka-disable ang zoom"
+    },
+    "auditZoomHint": {
+        "message": "Pinipigilan ang mga taong malabo ang paningin na palakihin ang page sa telepono"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Nililimitahan kung saan maaaring mag-load ng script ang page — proteksyon laban sa XSS. Kung may 'unsafe-inline' ito nang walang nonce o hash, halos hindi ito nagpoprotekta"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Pinipigilan ang browser na hulaan ang uri ng file — proteksyon laban sa pinekeng script"
+    },
+    "auditFrame": {
+        "message": "Proteksyon laban sa framing"
+    },
+    "auditFrameHint": {
+        "message": "Pinipigilan ng X-Frame-Options o frame-ancestors na i-embed ang site sa page ng iba para linlangin ang mga user na mag-click"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Gaano karami ng address ng page ang ipinapasa sa ibang site kapag lumipat. Kung walang header, gumagamit ang browser ng ligtas na default"
+    },
+    "auditCache": {
+        "message": "Cache ng page"
+    },
+    "auditCacheHint": {
+        "message": "Saan nanggaling ang page: HIT — mula sa cache ng server o CDN, MISS — binuo muli. Bihirang naka-cache ang mismong mga page; kadalasan ay mga larawan, script at style"
+    },
+    "auditCacheBrowser": {
+        "message": "mula sa cache ng browser"
+    },
+    "auditBots": {
+        "message": "Mga robot at AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Mga patakaran para sa mga search engine at iba pang robot. Kung wala ang file, kino-crawl ng mga robot ang lahat, at hindi malalaman ng mga search engine kung nasaan ang sitemap"
+    },
+    "auditSitemap": {
+        "message": "Sitemap"
+    },
+    "auditSitemapHint": {
+        "message": "Listahan ng mga page para sa mga search engine. Inilalagay sa robots.txt gamit ang linyang Sitemap:"
+    },
+    "auditAi": {
+        "message": "Mga patakaran para sa AI bot"
+    },
+    "auditAiHint": {
+        "message": "Kung pinapayagan ang mga AI bot na kunin ang mga text ng site para sa mga neural network — batay sa mga patakaran sa robots.txt na nagbabanggit sa pangalan ng bot. Kilala ng extension ang 16 na ganitong bot (GPTBot, ClaudeBot, Google-Extended, atbp.); hindi binibilang ang mga bot na may ibang pangalan. “Sarado sa lahat” — sarado ang site sa lahat ng robot sa pamamagitan ng User-agent: *, nang walang hiwalay na patakaran para sa AI"
+    },
+    "auditAiBlocked": {
+        "message": "na-block: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "pinapayagan"
+    },
+    "auditAiNone": {
+        "message": "hindi nakatakda"
+    },
+    "auditAiAll": {
+        "message": "sarado sa lahat"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Bagong format: maikling paglalarawan ng site sa Markdown para sa mga AI assistant at agent. Opsyonal pa sa ngayon"
+    },
+    "auditCspWeak": {
+        "message": "mahina"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Pinagbabawalan ang page at ang mga naka-embed na frame na i-access ang camera, lokasyon at iba pang feature ng browser"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Inihihiwalay ang window ng site sa ibang window na binubuksan nito — proteksyon laban sa mga atake sa pamamagitan ng window.opener"
+    },
+    "auditVersions": {
+        "message": "Mga bersyon ng software sa header"
+    },
+    "auditVersionsHint": {
+        "message": "Inilalantad ng server ang mga bersyon ng software — pahiwatig sa mga attacker kung aling kilalang kahinaan ang susubukan. Para itago: server_tokens off sa nginx at Angie, expose_php = Off sa PHP"
+    },
+    "auditHidden": {
+        "message": "nakatago"
+    },
+    "auditSession": {
+        "message": "Mga session cookie na nababasa ng script"
+    },
+    "auditSessionHint": {
+        "message": "Mukhang nababasa ng JavaScript ang mga login cookie: sa XSS, maaaring manakaw ang mga ito. Pinipigilan ito ng HttpOnly flag. Natukoy batay sa pangalan ng cookie"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Mga contact para sa pag-uulat ng kahinaan sa /.well-known/security.txt. Tumutulong para iulat sa iyo ng researcher ang problema sa halip na ibenta ito"
+    },
+    "serverUnknownTitle": {
+        "message": "Wala sa database ng ABlock ang mga network ng provider na ito: saklaw nito ang malalaking hosting, cloud at CDN"
+    },
+    "protocolH3Later": {
+        "message": "Sinusuportahan ng server ang HTTP/3. Dumating ang page na ito sa $PROTOCOL$ — nangyayari ito sa unang pagbisita: nalalaman ng browser ang tungkol sa HTTP/3 mula sa tugon ng server at lumilipat ito rito para sa mga susunod na request",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Wika ng browser"
+    },
+    "langTitle": {
+        "message": "Wika ng interface"
+    },
+    "noteTitle": {
+        "message": "Tala para sa site na ito"
+    },
+    "notePlaceholder": {
+        "message": "Tala para sa site na ito, ikaw lang ang nakakakita"
+    },
+    "incognitoLabel": {
+        "message": "Gumana sa Incognito mode"
+    },
+    "incognitoTitle": {
+        "message": "Magbubukas ang mga setting ng extension ng browser — i-on doon ang pahintulot ng ABlock sa Incognito mode"
+    }
+}

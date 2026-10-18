@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "bn",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - অ্যাড ব্লকার ও সাইট যাচাই"
+    },
+    "extDescription": {
+        "message": "বিজ্ঞাপন ও ট্র্যাকার ব্লক করে: পেজ দ্রুত, ডেটা কম। যেকোনো সাইটের গতি, নিরাপত্তা ও ট্র্যাকিং যাচাই করে।"
+    },
+    "toggle": {
+        "message": "চালু / বন্ধ"
+    },
+    "statusOn": {
+        "message": "সুরক্ষা চালু আছে"
+    },
+    "statusOff": {
+        "message": "সুরক্ষা বন্ধ আছে"
+    },
+    "statusSiteOff": {
+        "message": "এই সাইটে সুরক্ষা বন্ধ আছে"
+    },
+    "telegram": {
+        "message": "Telegram গ্রুপ"
+    },
+    "github": {
+        "message": "GitHub-এ অবদান রাখুন"
+    },
+    "httpsOn": {
+        "message": "সংযোগ এনক্রিপ্ট করা"
+    },
+    "httpsOff": {
+        "message": "সংযোগ এনক্রিপ্ট করা নয়"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — দ্রুততম প্রোটোকল"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — একটি আধুনিক প্রোটোকল"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — একটি পুরনো প্রোটোকল",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "প্রোটোকল অজানা (পৃষ্ঠাটি ক্যাশ থেকে লোড হয়েছে)"
+    },
+    "loading": {
+        "message": "লোড হচ্ছে…"
+    },
+    "loadingTitle": {
+        "message": "পৃষ্ঠাটি এখনও লোড হচ্ছে"
+    },
+    "seconds": {
+        "message": "$SECONDS$ সে",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "পৃষ্ঠা লোডের সময়"
+    },
+    "domains": {
+        "message": "ডোমেন $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "তৃতীয় পক্ষের ডোমেন:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…আরও $COUNT$টি",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "কোনো তৃতীয় পক্ষের ডোমেন নেই"
+    },
+    "blocked": {
+        "message": "ব্লক $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "ট্র্যাকার $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "এই পৃষ্ঠায় ব্লক করা হয়েছে\nবিজ্ঞাপন: $ADS$\nট্র্যাকার: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "এই সাইট আপনাকে ট্র্যাক করে। ব্লক করা ট্র্যাকার: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "কোনো ট্র্যাকার পাওয়া যায়নি"
+    },
+    "scoreLabel": {
+        "message": "সাইটের স্কোর"
+    },
+    "serverLabel": {
+        "message": "সার্ভার"
+    },
+    "techLabel": {
+        "message": "তৈরি করা হয়েছে"
+    },
+    "companiesLabel": {
+        "message": "ট্র্যাক করছে"
+    },
+    "extraLabel": {
+        "message": "আরও"
+    },
+    "extendedText": {
+        "message": "বর্ধিত মোড: সব সাইটে হোস্টিং, IPv6, HSTS, পরিসংখ্যান এবং বিজ্ঞাপনের জায়গা ও কুকি পপ-আপ লুকানো। ডেটা কখনও আপনার ব্রাউজারের বাইরে যায় না।"
+    },
+    "extendedButton": {
+        "message": "চালু করুন"
+    },
+    "extendedOff": {
+        "message": "বর্ধিত মোড বন্ধ করুন"
+    },
+    "extendedOffTitle": {
+        "message": "এক্সটেনশনটি সব সাইটে সার্ভারের IP ও হেডার দেখা, পরিসংখ্যান রাখা এবং বিজ্ঞাপনের জায়গা ও কুকি পপ-আপ লুকানো বন্ধ করবে; সব সাইটে অ্যাক্সেস প্রত্যাহার করা হবে। আপনি যেকোনো সময় আবার চালু করতে পারেন"
+    },
+    "share": {
+        "message": "শেয়ার করুন"
+    },
+    "copied": {
+        "message": "কপি হয়েছে"
+    },
+    "cookiesLabel": {
+        "message": "কুকি সম্মতির পপ-আপ লুকান"
+    },
+    "cookiesTitle": {
+        "message": "কুকি সম্মতি ব্যানারের পরিষেবা ব্লক করে। বর্ধিত মোডে যেকোনো সাইটে ব্যানারগুলোও লুকিয়ে রাখে"
+    },
+    "siteLabel": {
+        "message": "$HOST$-এ ব্লক করুন",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "সাইট ঠিকমতো কাজ না করলে টিক তুলে দিন: সেখানে বিজ্ঞাপন ও ট্র্যাকার আর ব্লক হবে না। পৃষ্ঠাটি আবার লোড হবে"
+    },
+    "guess": {
+        "message": "পরোক্ষ লক্ষণ থেকে শনাক্ত — নির্ভুল নাও হতে পারে"
+    },
+    "weightTitle": {
+        "message": "সব ফাইলসহ পৃষ্ঠার আকার"
+    },
+    "weightEstimated": {
+        "message": "$TOTAL$টির মধ্যে $KNOWN$টি ফাইলের সঠিক আকার জানা, বাকিগুলো আনুমানিক: তৃতীয় পক্ষের সাইট আকার লুকিয়ে রাখে",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "পৃষ্ঠাটি সংকুচিত: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "সংকোচন নেই"
+    },
+    "compressionOff": {
+        "message": "পৃষ্ঠাটি সংকোচন ছাড়াই পাঠানো হয় — ধীরে লোড হয়"
+    },
+    "compressionUnknown": {
+        "message": "সংকোচন অজানা (পৃষ্ঠাটি ক্যাশ থেকে লোড হয়েছে)"
+    },
+    "blockedCookies": {
+        "message": "কুকি পপ-আপ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "আকার: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "ব্লক করা হয়নি:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "সাইটে পাওয়া গেছে:\n$LIST$\nব্লক করা হয়েছে কি না তা বর্ধিত মোডে দেখা যায়",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "ব্লক করা হয়েছে:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "পরিচিত কিছু পাওয়া যায়নি"
+    },
+    "serverExtended": {
+        "message": "বর্ধিত মোডে"
+    },
+    "serverReload": {
+        "message": "পৃষ্ঠাটি আবার লোড করুন"
+    },
+    "serverReloadTitle": {
+        "message": "পৃষ্ঠা লোড হওয়ার সময় সার্ভার শনাক্ত করা হয়"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "অন্য প্রদানকারী"
+    },
+    "serverProxy": {
+        "message": "সাইটটি $NAME$-এর পেছনে চলে (CDN বা DDoS সুরক্ষা) — আসল সার্ভার লুকানো",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "হোস্টিং: $NAME$ (RIPE ঠিকানা ডেটাবেস থেকে)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "দেশ প্রদানকারী অনুযায়ী নির্ধারিত"
+    },
+    "techFound": {
+        "message": "পৃষ্ঠায় পাওয়া গেছে"
+    },
+    "techNone": {
+        "message": "শনাক্ত হয়নি"
+    },
+    "techNoneTitle": {
+        "message": "পরিচিত ইঞ্জিন বা লাইব্রেরির কোনো লক্ষণ পাওয়া যায়নি"
+    },
+    "ipv6": {
+        "message": "IPv6-এর মাধ্যমে সংযুক্ত"
+    },
+    "ipv4": {
+        "message": "IPv4-এর মাধ্যমে সংযুক্ত। এতে বোঝা যায় না সাইটটি IPv6 সমর্থন করে কি না: এটি আপনার নেটওয়ার্কের ওপরও নির্ভর করে"
+    },
+    "hstsOn": {
+        "message": "HSTS: ব্রাউজার সবসময় শুধু HTTPS-এ সাইটটি খোলে"
+    },
+    "hstsOff": {
+        "message": "HSTS নেই: সাইটে প্রথম ভিজিট এনক্রিপশন ছাড়া হতে পারে"
+    },
+    "mixed": {
+        "message": "HTTP ফাইল $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "HTTPS পৃষ্ঠাটি এনক্রিপশন ছাড়া ফাইল লোড করে: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "স্কোর ১০-এর মধ্যে $SCORE$, যার ভিত্তিতে:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "এনক্রিপশন"
+    },
+    "scoreProtocol": {
+        "message": "প্রোটোকল"
+    },
+    "scoreSpeed": {
+        "message": "লোডের গতি"
+    },
+    "scoreWeight": {
+        "message": "পৃষ্ঠার আকার"
+    },
+    "scoreTrackers": {
+        "message": "ট্র্যাকিং"
+    },
+    "scoreDomains": {
+        "message": "তৃতীয় পক্ষের ডোমেন"
+    },
+    "scoreCompression": {
+        "message": "সংকোচন"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "মিশ্র কনটেন্ট"
+    },
+    "stats": {
+        "message": "মোট ব্লক করা অনুরোধ: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "$DATE$ থেকে। আকার বিজ্ঞাপন ফাইলের গড় আকার থেকে আনুমানিক",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "সাইট রিপোর্ট — ছবি বা টেক্সট হিসেবে"
+    },
+    "reportTitle": {
+        "message": "সাইটের স্কোর ও বিবরণ ছবি বা টেক্সট হিসেবে — সহকর্মী, ঠিকাদার বা চ্যাটের জন্য"
+    },
+    "reportDone": {
+        "message": "সংরক্ষিত"
+    },
+    "copyIp": {
+        "message": "IP $IP$ কপি করুন",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "ছবি কপি করুন"
+    },
+    "copyText": {
+        "message": "টেক্সট ও লিংক কপি করুন"
+    },
+    "shareSystem": {
+        "message": "আরও…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — ABlock-এ ১০-এর মধ্যে $SCORE$ স্কোর",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "আপনার সাইট যাচাই করুন:"
+    },
+    "donate": {
+        "message": "দান করুন"
+    },
+    "donateTitle": {
+        "message": "Boosty-তে উন্নয়নে সহায়তা করুন"
+    },
+    "askStats": {
+        "message": "ব্লক করা অনুরোধ: $COUNT$, সাশ্রয় ≈ $SIZE$। ABlock কাজে লাগলে এর উন্নয়নে সহায়তা করুন",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "আপনি এক মাস ধরে ABlock ব্যবহার করছেন। কাজে লাগলে এর উন্নয়নে সহায়তা করুন"
+    },
+    "askClose": {
+        "message": "আর দেখাবেন না"
+    },
+    "reportLegendGuess": {
+        "message": "? — পরোক্ষ লক্ষণ থেকে শনাক্ত"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — আনুমানিক হিসাব"
+    },
+    "companiesNoneTitle": {
+        "message": "এই পৃষ্ঠায় ABlock তালিকার কোনো কোম্পানি নেই। সাইটের নিজস্ব কাউন্টার তবুও থাকতে পারে — সেগুলো «ট্র্যাকার» ব্যাজে গোনা হয়"
+    },
+    "compressionFiles": {
+        "message": "টেক্সট ফাইল: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "সংকুচিত নয়: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "সাইটের ডেটা মুছে আবার লোড করুন: কুকি, ক্যাশ ও স্টোরেজ। ব্যাজ ও স্কোর সাইটটিকে নতুন দর্শক যেভাবে দেখে সেভাবে দেখাবে। এই সাইট থেকে আপনি লগ আউট হয়ে যাবেন"
+    },
+    "clearConfirm": {
+        "message": "মুছবেন?"
+    },
+    "saveImage": {
+        "message": "ছবি সংরক্ষণ করুন"
+    },
+    "shareSend": {
+        "message": "$NAME$-এ পাঠান",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "$NAME$-এ পোস্ট করুন",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "টেক্সট হিসেবে পাঠানো হয়: সার্ভারে আপলোড না করে ছবি পাঠানো যায় না — ছবিটি কপি করে বার্তায় পেস্ট করুন"
+    },
+    "shareLinkOnly": {
+        "message": "শুধু এক্সটেনশনের লিংক পাঠানো হয় — রিপোর্টের ছবি কপি করে পোস্টে পেস্ট করুন"
+    },
+    "auditLabel": {
+        "message": "বিস্তারিত"
+    },
+    "auditIssues": {
+        "message": "সমস্যা: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "কোনো সমস্যা নেই"
+    },
+    "auditSpeed": {
+        "message": "গতি"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "মার্কআপ"
+    },
+    "auditA11y": {
+        "message": "অ্যাক্সেসিবিলিটি"
+    },
+    "auditSecurity": {
+        "message": "নিরাপত্তা"
+    },
+    "auditYes": {
+        "message": "হ্যাঁ"
+    },
+    "auditNo": {
+        "message": "না"
+    },
+    "auditLength": {
+        "message": "$COUNT$ অক্ষর",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "অন্য ডোমেন"
+    },
+    "auditNoImage": {
+        "message": "ছবি নেই"
+    },
+    "auditNoInput": {
+        "message": "কোনো ইন্টারঅ্যাকশন নেই"
+    },
+    "auditModernValue": {
+        "message": "$TOTAL$-এর মধ্যে $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "লেআউট সরে যাওয়া"
+    },
+    "auditTtfb": {
+        "message": "সার্ভারের সাড়া (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "সার্ভার থেকে পৃষ্ঠার প্রথম বাইট পেতে কত সময় লেগেছে। ভালো — ০.৮ সে-এর কম"
+    },
+    "auditFcp": {
+        "message": "প্রথম রেন্ডার (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "স্ক্রিনে প্রথম কনটেন্ট কখন দেখা গেছে। ভালো — ১.৮ সে-এর কম"
+    },
+    "auditLcp": {
+        "message": "প্রধান ব্লক (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "সবচেয়ে বড় ব্লক — ছবি বা টেক্সট — কখন আঁকা হয়েছে। Google-এর প্রধান গতি মাপকাঠি। ভালো — ২.৫ সে-এর কম"
+    },
+    "auditCls": {
+        "message": "লেআউট সরে যাওয়া (CLS)"
+    },
+    "auditClsHint": {
+        "message": "লোডের সময় কনটেন্ট কতটা লাফায়। ভালো — ০.১-এর কম"
+    },
+    "auditInp": {
+        "message": "ইন্টারঅ্যাকশনে সাড়া (INP)"
+    },
+    "auditInpHint": {
+        "message": "ক্লিক বা ইনপুটে সাড়া দিতে সবচেয়ে বেশি দেরি। ভালো — ২০০ মিলিসেকেন্ডের কম"
+    },
+    "auditBlocking": {
+        "message": "রেন্ডারিং আটকায়"
+    },
+    "auditBlockingHint": {
+        "message": "পৃষ্ঠা আঁকা শুরুর আগে ব্রাউজার যেসব ফাইলের জন্য অপেক্ষা করে। স্টাইল ঠিক আছে, তবে স্ক্রিপ্ট async বা defer দিয়ে লোড করা ভালো"
+    },
+    "auditStatus": {
+        "message": "স্ট্যাটাস কোড"
+    },
+    "auditStatusHint": {
+        "message": "পৃষ্ঠার HTTP স্ট্যাটাস: 200 — ঠিক আছে, 4xx ও 5xx — ত্রুটি"
+    },
+    "auditNoindex": {
+        "message": "ইনডেক্সিং নিষিদ্ধ"
+    },
+    "auditNoindexHint": {
+        "message": "noindex ট্যাগ বা robots.txt নিয়মের মাধ্যমে পৃষ্ঠাটি সার্চ ইঞ্জিন থেকে লুকানো। লগইন পৃষ্ঠা ও ব্যবহারকারী অ্যাকাউন্টের জন্য এটি স্বাভাবিক"
+    },
+    "auditTitle": {
+        "message": "শিরোনাম (title)"
+    },
+    "auditTitleHint": {
+        "message": "সার্চ ফলাফলে লিংকের টেক্সট ও ট্যাবের নাম। সেরা — ১০–৭০ অক্ষর"
+    },
+    "auditDescription": {
+        "message": "বিবরণ (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "সার্চ ফলাফলে লিংকের নিচের টেক্সট। সেরা — ৫০–১৭০ অক্ষর"
+    },
+    "auditH1": {
+        "message": "h1 শিরোনাম"
+    },
+    "auditH1Hint": {
+        "message": "পৃষ্ঠার প্রধান শিরোনাম। সাধারণত একটি থাকে"
+    },
+    "auditCanonical": {
+        "message": "ক্যানোনিকাল URL"
+    },
+    "auditCanonicalHint": {
+        "message": "পৃষ্ঠার কপি থাকলে সার্চ ইঞ্জিনকে প্রধান ঠিকানা জানায়"
+    },
+    "auditOg": {
+        "message": "লিংক প্রিভিউ (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "লিংক শেয়ার করলে Telegram, Slack ও অন্যান্য পরিষেবা যে শিরোনাম ও ছবি দেখায়"
+    },
+    "auditViewport": {
+        "message": "মোবাইল সংস্করণ (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "meta viewport ছাড়া ফোন পৃষ্ঠাটিকে ছোট করা ডেস্কটপ সংস্করণ হিসেবে দেখায়"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "এটি ছাড়া ব্রাউজার পুরনো সাইটের সামঞ্জস্য মোডে চলে যায় এবং লেআউট আলাদা হতে পারে"
+    },
+    "auditNoSize": {
+        "message": "মাপ ছাড়া ছবি"
+    },
+    "auditNoSizeHint": {
+        "message": "width ও height ছাড়া ব্রাউজার জানে না ছবির জন্য কতটা জায়গা রাখতে হবে, তাই ছবি লোড হলে লেআউট লাফায়"
+    },
+    "auditLarge": {
+        "message": "অতিরিক্ত বড় ছবি"
+    },
+    "auditLargeHint": {
+        "message": "ছবিটি দেখানো আকারের চেয়ে অনেক বড় পাঠানো হয় — অপ্রয়োজনীয় ওজন"
+    },
+    "auditModern": {
+        "message": "WebP ও AVIF ছবি"
+    },
+    "auditModernHint": {
+        "message": "এই ফরম্যাটগুলো JPEG ও PNG-এর চেয়ে ২৫–৫০% ছোট"
+    },
+    "auditLang": {
+        "message": "পৃষ্ঠার ভাষা (lang)"
+    },
+    "auditLangHint": {
+        "message": "স্ক্রিন রিডার, অনুবাদক ও সার্চ ইঞ্জিনের জন্য দরকার"
+    },
+    "auditAlt": {
+        "message": "alt ছাড়া ছবি"
+    },
+    "auditAltHint": {
+        "message": "দৃষ্টিহীন ব্যবহারকারীদের জন্য এবং ছবি লোড না হলে ছবির বিবরণ"
+    },
+    "auditLabels": {
+        "message": "লেবেল ছাড়া ফিল্ড"
+    },
+    "auditLabelsHint": {
+        "message": "স্ক্রিন রিডার বলতে পারবে না ফিল্ডে কী লিখতে হবে"
+    },
+    "auditNames": {
+        "message": "নাম ছাড়া বোতাম ও লিংক"
+    },
+    "auditNamesHint": {
+        "message": "যেমন aria-label ছাড়া একটি আইকন বোতাম: দৃষ্টিহীন ব্যবহারকারী শুধু «বোতাম» শুনবেন"
+    },
+    "auditMain": {
+        "message": "প্রধান অংশ (main)"
+    },
+    "auditMainHint": {
+        "message": "মেনু এড়িয়ে সরাসরি কনটেন্টে যেতে দেয়"
+    },
+    "auditZoom": {
+        "message": "জুম বন্ধ"
+    },
+    "auditZoomHint": {
+        "message": "দুর্বল দৃষ্টির মানুষকে ফোনে পৃষ্ঠা বড় করতে বাধা দেয়"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "পৃষ্ঠা কোথা থেকে স্ক্রিপ্ট লোড করতে পারবে তা সীমিত করে — XSS থেকে সুরক্ষা। nonce বা hash ছাড়া 'unsafe-inline' থাকলে প্রায় কোনো সুরক্ষা দেয় না"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "ব্রাউজারকে ফাইলের ধরন অনুমান করতে দেয় না — স্ক্রিপ্ট জালিয়াতি থেকে সুরক্ষা"
+    },
+    "auditFrame": {
+        "message": "ফ্রেমে বসানো থেকে সুরক্ষা"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options বা frame-ancestors ব্যবহারকারীকে ধোঁকা দিয়ে ক্লিক করাতে সাইটটিকে অন্যের পৃষ্ঠায় বসানো আটকায়"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "অন্য সাইটে যাওয়ার সময় পৃষ্ঠার ঠিকানার কতটুকু পাঠানো হবে। এই হেডার না থাকলে ব্রাউজার একটি নিরাপদ ডিফল্ট ব্যবহার করে"
+    },
+    "auditCache": {
+        "message": "পৃষ্ঠার ক্যাশ"
+    },
+    "auditCacheHint": {
+        "message": "পৃষ্ঠাটি কোথা থেকে এসেছে: HIT — সার্ভার বা CDN ক্যাশ থেকে, MISS — নতুন করে তৈরি। পৃষ্ঠা নিজে কমই ক্যাশ হয়; সাধারণত ছবি, স্ক্রিপ্ট ও স্টাইল হয়"
+    },
+    "auditCacheBrowser": {
+        "message": "ব্রাউজার ক্যাশ থেকে"
+    },
+    "auditBots": {
+        "message": "রোবট ও AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "সার্চ ইঞ্জিন ও অন্যান্য রোবটের জন্য নিয়ম। এই ফাইল ছাড়া রোবট সবকিছু ক্রল করে, আর সার্চ ইঞ্জিন জানে না সাইটম্যাপ কোথায়"
+    },
+    "auditSitemap": {
+        "message": "সাইটম্যাপ"
+    },
+    "auditSitemapHint": {
+        "message": "সার্চ ইঞ্জিনের জন্য পৃষ্ঠার তালিকা। robots.txt-এ Sitemap: লাইনে উল্লেখ করা হয়"
+    },
+    "auditAi": {
+        "message": "AI বটের নিয়ম"
+    },
+    "auditAiHint": {
+        "message": "AI বট নিউরাল নেটওয়ার্কের জন্য সাইটের টেক্সট সংগ্রহ করতে পারবে কি না — robots.txt-এর যেসব নিয়মে বটের নাম আছে সেগুলোর ভিত্তিতে। এক্সটেনশন এমন ১৬টি বট চেনে (GPTBot, ClaudeBot, Google-Extended ইত্যাদি); অন্য নামের বট গোনা হয় না। «সবার জন্য বন্ধ» — User-agent: * দিয়ে সাইটটি সব রোবটের জন্য বন্ধ, AI-এর জন্য আলাদা নিয়ম নেই"
+    },
+    "auditAiBlocked": {
+        "message": "নিষিদ্ধ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "অনুমোদিত"
+    },
+    "auditAiNone": {
+        "message": "নির্ধারিত নয়"
+    },
+    "auditAiAll": {
+        "message": "সবার জন্য বন্ধ"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "নতুন ফরম্যাট: AI সহকারী ও এজেন্টের জন্য Markdown-এ সাইটের সংক্ষিপ্ত বিবরণ। আপাতত ঐচ্ছিক"
+    },
+    "auditCspWeak": {
+        "message": "দুর্বল"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "পৃষ্ঠা ও এম্বেড করা ফ্রেমকে ক্যামেরা, অবস্থান ও ব্রাউজারের অন্যান্য সুবিধায় অ্যাক্সেস নিষিদ্ধ করে"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "সাইট যেসব উইন্ডো খোলে সেগুলো থেকে সাইটের উইন্ডোকে আলাদা রাখে — window.opener-এর মাধ্যমে আক্রমণ থেকে সুরক্ষা"
+    },
+    "auditVersions": {
+        "message": "হেডারে সফটওয়্যার সংস্করণ"
+    },
+    "auditVersionsHint": {
+        "message": "সার্ভার সফটওয়্যারের সংস্করণ প্রকাশ করে — আক্রমণকারীদের জন্য কোন পরিচিত দুর্বলতা চেষ্টা করবে তার ইঙ্গিত। লুকাতে: nginx ও Angie-তে server_tokens off, PHP-তে expose_php = Off"
+    },
+    "auditHidden": {
+        "message": "লুকানো"
+    },
+    "auditSession": {
+        "message": "স্ক্রিপ্টে পড়া যায় এমন সেশন কুকি"
+    },
+    "auditSessionHint": {
+        "message": "লগইন কুকি JavaScript থেকে পড়া যায় বলে মনে হচ্ছে: XSS হলে চুরি হতে পারে। HttpOnly ফ্ল্যাগ এটি আটকায়। কুকির নাম দেখে শনাক্ত"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "/.well-known/security.txt-এ দুর্বলতা জানানোর যোগাযোগ। গবেষককে সমস্যাটি বিক্রি না করে আপনাকে জানাতে সাহায্য করে"
+    },
+    "serverUnknownTitle": {
+        "message": "এই প্রদানকারীর নেটওয়ার্ক ABlock ডেটাবেসে নেই: এতে বড় হোস্টিং, ক্লাউড ও CDN আছে"
+    },
+    "protocolH3Later": {
+        "message": "সার্ভার HTTP/3 সমর্থন করে। এই পৃষ্ঠাটি $PROTOCOL$-এ এসেছে — প্রথম ভিজিটে এমন হয়: ব্রাউজার সার্ভারের উত্তর থেকে HTTP/3-এর কথা জানে এবং পরের অনুরোধগুলোতে সেটিতে চলে যায়",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "ব্রাউজারের ভাষা"
+    },
+    "langTitle": {
+        "message": "ইন্টারফেসের ভাষা"
+    },
+    "noteTitle": {
+        "message": "এই সাইটের জন্য নোট"
+    },
+    "notePlaceholder": {
+        "message": "এই সাইটের জন্য নোট, শুধু আপনি দেখতে পাবেন"
+    },
+    "incognitoLabel": {
+        "message": "ছদ্মবেশী মোডেও কাজ করুক"
+    },
+    "incognitoTitle": {
+        "message": "ব্রাউজারের এক্সটেনশন সেটিংস খুলবে — সেখানে ABlock-এর জন্য ছদ্মবেশী মোডে অনুমতি চালু করুন"
+    }
+}

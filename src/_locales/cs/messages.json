@@ -1,0 +1,874 @@
+{
+    "locale": {
+        "message": "cs",
+        "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "extName": {
+        "message": "ABlock - Blokátor reklam a kontrola webů"
+    },
+    "extDescription": {
+        "message": "Blokuje reklamy a sledovací prvky: rychlejší stránky, méně dat. Kontroluje rychlost, zabezpečení a sledování na každém webu."
+    },
+    "toggle": {
+        "message": "Zapnout / vypnout"
+    },
+    "statusOn": {
+        "message": "Ochrana je zapnutá"
+    },
+    "statusOff": {
+        "message": "Ochrana je vypnutá"
+    },
+    "statusSiteOff": {
+        "message": "Ochrana je na tomto webu vypnutá"
+    },
+    "telegram": {
+        "message": "Skupina na Telegramu"
+    },
+    "github": {
+        "message": "Přispějte na GitHubu"
+    },
+    "httpsOn": {
+        "message": "Spojení je šifrované"
+    },
+    "httpsOff": {
+        "message": "Spojení není šifrované"
+    },
+    "protocolH3": {
+        "message": "HTTP/3 (QUIC) — nejrychlejší protokol"
+    },
+    "protocolH2": {
+        "message": "HTTP/2 — moderní protokol"
+    },
+    "protocolOld": {
+        "message": "$PROTOCOL$ — zastaralý protokol",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "protocolUnknown": {
+        "message": "Protokol neznámý (stránka načtena z mezipaměti)"
+    },
+    "loading": {
+        "message": "Načítání…"
+    },
+    "loadingTitle": {
+        "message": "Stránka se stále načítá"
+    },
+    "seconds": {
+        "message": "$SECONDS$ s",
+        "placeholders": {
+            "seconds": {
+                "content": "$1"
+            }
+        }
+    },
+    "loadTime": {
+        "message": "Doba načtení stránky"
+    },
+    "domains": {
+        "message": "Domény $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsList": {
+        "message": "Domény třetích stran:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsMore": {
+        "message": "…a dalších $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "domainsNone": {
+        "message": "Žádné domény třetích stran"
+    },
+    "blocked": {
+        "message": "Blokováno $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackers": {
+        "message": "Sledování $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedTitle": {
+        "message": "Blokováno na této stránce\nReklamy: $ADS$\nSledovací prvky: $TRACKERS$",
+        "placeholders": {
+            "ads": {
+                "content": "$1"
+            },
+            "trackers": {
+                "content": "$2"
+            }
+        }
+    },
+    "trackersFound": {
+        "message": "Tento web vás sleduje. Blokováno sledovacích prvků: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "trackersNone": {
+        "message": "Nenalezeny žádné sledovací prvky"
+    },
+    "scoreLabel": {
+        "message": "Hodnocení webu"
+    },
+    "serverLabel": {
+        "message": "Server"
+    },
+    "techLabel": {
+        "message": "Postaveno na"
+    },
+    "companiesLabel": {
+        "message": "Sledují"
+    },
+    "extraLabel": {
+        "message": "Další"
+    },
+    "extendedText": {
+        "message": "Rozšířený režim: hosting, IPv6, HSTS, statistiky a skrývání reklamních ploch a oken o cookies na všech webech. Data nikdy neopustí váš prohlížeč."
+    },
+    "extendedButton": {
+        "message": "Zapnout"
+    },
+    "extendedOff": {
+        "message": "Vypnout rozšířený režim"
+    },
+    "extendedOffTitle": {
+        "message": "Rozšíření přestane vidět IP adresy a hlavičky serverů, vést statistiky a skrývat reklamní plochy a okna o cookies na všech webech; přístup ke všem webům bude odebrán. Kdykoli jej můžete znovu zapnout"
+    },
+    "share": {
+        "message": "Sdílet"
+    },
+    "copied": {
+        "message": "Zkopírováno"
+    },
+    "cookiesLabel": {
+        "message": "Skrývat okna se souhlasem s cookies"
+    },
+    "cookiesTitle": {
+        "message": "Blokuje služby lišt se souhlasem s cookies. V rozšířeném režimu skrývá i samotné lišty na jakémkoli webu"
+    },
+    "siteLabel": {
+        "message": "Blokovat na $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "siteTitle": {
+        "message": "Zrušte zaškrtnutí, pokud web nefunguje správně: reklamy a sledovací prvky na něm přestanou být blokovány. Stránka se znovu načte"
+    },
+    "guess": {
+        "message": "Zjištěno podle nepřímých znaků — nemusí být přesné"
+    },
+    "weightTitle": {
+        "message": "Velikost stránky se všemi soubory"
+    },
+    "weightEstimated": {
+        "message": "Přesná velikost je známa u $KNOWN$ z $TOTAL$ souborů, zbytek je odhadnut: weby třetích stran velikost skrývají",
+        "placeholders": {
+            "known": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionOn": {
+        "message": "Stránka je komprimovaná: $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionRatio": {
+        "message": "$FROM$ → $TO$",
+        "placeholders": {
+            "from": {
+                "content": "$1"
+            },
+            "to": {
+                "content": "$2"
+            }
+        }
+    },
+    "compressionNone": {
+        "message": "Bez komprese"
+    },
+    "compressionOff": {
+        "message": "Stránka se posílá bez komprese — načítá se pomaleji"
+    },
+    "compressionUnknown": {
+        "message": "Komprese neznámá (stránka načtena z mezipaměti)"
+    },
+    "blockedCookies": {
+        "message": "Okna o cookies: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Velikost: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyLoaded": {
+        "message": "Neblokováno:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyFound": {
+        "message": "Nalezeno na webu:\n$LIST$\nZda jsou blokovány, ukáže rozšířený režim",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companyBlocked": {
+        "message": "Blokováno:\n$LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "companiesNone": {
+        "message": "žádné známé nenalezeny"
+    },
+    "serverExtended": {
+        "message": "v rozšířeném režimu"
+    },
+    "serverReload": {
+        "message": "znovu načtěte stránku"
+    },
+    "serverReloadTitle": {
+        "message": "Server se zjišťuje při načítání stránky"
+    },
+    "serverIp": {
+        "message": "IP: $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverUnknown": {
+        "message": "jiný poskytovatel"
+    },
+    "serverProxy": {
+        "message": "Web běží za $NAME$ (CDN nebo ochrana proti DDoS) — skutečný server je skrytý",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverHosting": {
+        "message": "Hosting: $NAME$ (z databáze adres RIPE)",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "serverCountry": {
+        "message": "Země je určena podle poskytovatele"
+    },
+    "techFound": {
+        "message": "Nalezeno na stránce"
+    },
+    "techNone": {
+        "message": "nezjištěno"
+    },
+    "techNoneTitle": {
+        "message": "Nenalezeny žádné známky známých systémů ani knihoven"
+    },
+    "ipv6": {
+        "message": "Připojeno přes IPv6"
+    },
+    "ipv4": {
+        "message": "Připojeno přes IPv4. To neříká, zda web podporuje IPv6: záleží i na vaší síti"
+    },
+    "hstsOn": {
+        "message": "HSTS: prohlížeč otevírá web vždy jen přes HTTPS"
+    },
+    "hstsOff": {
+        "message": "Bez HSTS: první návštěva webu může proběhnout bez šifrování"
+    },
+    "mixed": {
+        "message": "Soubory HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedTitle": {
+        "message": "Stránka HTTPS načítá soubory bez šifrování: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreTitle": {
+        "message": "Hodnocení $SCORE$ z 10 podle:",
+        "placeholders": {
+            "score": {
+                "content": "$1"
+            }
+        }
+    },
+    "scoreHttps": {
+        "message": "Šifrování"
+    },
+    "scoreProtocol": {
+        "message": "Protokol"
+    },
+    "scoreSpeed": {
+        "message": "Rychlost načítání"
+    },
+    "scoreWeight": {
+        "message": "Velikost stránky"
+    },
+    "scoreTrackers": {
+        "message": "Sledování"
+    },
+    "scoreDomains": {
+        "message": "Domény třetích stran"
+    },
+    "scoreCompression": {
+        "message": "Komprese"
+    },
+    "scoreHsts": {
+        "message": "HSTS"
+    },
+    "scoreMixed": {
+        "message": "Smíšený obsah"
+    },
+    "stats": {
+        "message": "Celkem blokováno požadavků: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "statsTitle": {
+        "message": "Od $DATE$. Velikost je odhadnuta podle průměrné velikosti reklamních souborů",
+        "placeholders": {
+            "date": {
+                "content": "$1"
+            }
+        }
+    },
+    "reportText": {
+        "message": "Zpráva o webu — jako obrázek nebo text"
+    },
+    "reportTitle": {
+        "message": "Hodnocení a podrobnosti o webu jako obrázek nebo text — pro kolegy, dodavatele nebo chat"
+    },
+    "reportDone": {
+        "message": "Uloženo"
+    },
+    "copyIp": {
+        "message": "Kopírovat IP $IP$",
+        "placeholders": {
+            "ip": {
+                "content": "$1"
+            }
+        }
+    },
+    "copyImage": {
+        "message": "Kopírovat obrázek"
+    },
+    "copyText": {
+        "message": "Kopírovat text a odkaz"
+    },
+    "shareSystem": {
+        "message": "Další…"
+    },
+    "reportShareHead": {
+        "message": "$HOST$ — hodnocení $SCORE$ z 10 v ABlock",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            },
+            "score": {
+                "content": "$2"
+            }
+        }
+    },
+    "reportShareFoot": {
+        "message": "Zkontrolujte svůj web:"
+    },
+    "donate": {
+        "message": "Podpořit"
+    },
+    "donateTitle": {
+        "message": "Podpořte vývoj na Boosty"
+    },
+    "askStats": {
+        "message": "Zablokované požadavky: $COUNT$, ušetřeno ≈ $SIZE$. Pokud je vám ABlock užitečný, podpořte jeho vývoj",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
+            }
+        }
+    },
+    "askTime": {
+        "message": "ABlock používáte už měsíc. Pokud je užitečný, podpořte jeho vývoj"
+    },
+    "askClose": {
+        "message": "Už nezobrazovat"
+    },
+    "reportLegendGuess": {
+        "message": "? — zjištěno podle nepřímých znaků"
+    },
+    "reportLegendEstimate": {
+        "message": "≈ — přibližný odhad"
+    },
+    "companiesNoneTitle": {
+        "message": "Na této stránce nejsou žádné společnosti z adresáře ABlock. Vlastní počítadla webu tu přesto mohou být — počítá je štítek „Sledování“"
+    },
+    "compressionFiles": {
+        "message": "Textové soubory: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "compressionPlain": {
+        "message": "Bez komprese: $LIST$",
+        "placeholders": {
+            "list": {
+                "content": "$1"
+            }
+        }
+    },
+    "clearTitle": {
+        "message": "Smazat data webu a znovu načíst: cookies, mezipaměť a úložiště. Štítky a hodnocení ukážou web tak, jak ho vidí nový návštěvník. Budete z tohoto webu odhlášeni"
+    },
+    "clearConfirm": {
+        "message": "Smazat?"
+    },
+    "saveImage": {
+        "message": "Uložit obrázek"
+    },
+    "shareSend": {
+        "message": "Poslat přes $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "sharePost": {
+        "message": "Zveřejnit na $NAME$",
+        "placeholders": {
+            "name": {
+                "content": "$1"
+            }
+        }
+    },
+    "shareAsText": {
+        "message": "Posílá se jako text: obrázek nelze předat bez nahrání na server — zkopírujte ho a vložte do zprávy"
+    },
+    "shareLinkOnly": {
+        "message": "Předá se jen odkaz na rozšíření — zkopírujte obrázek zprávy a vložte ho do příspěvku"
+    },
+    "auditLabel": {
+        "message": "Podrobnosti"
+    },
+    "auditIssues": {
+        "message": "problémy: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditNoIssues": {
+        "message": "bez problémů"
+    },
+    "auditSpeed": {
+        "message": "Rychlost"
+    },
+    "auditSeo": {
+        "message": "SEO"
+    },
+    "auditMarkup": {
+        "message": "Kód stránky"
+    },
+    "auditA11y": {
+        "message": "Přístupnost"
+    },
+    "auditSecurity": {
+        "message": "Zabezpečení"
+    },
+    "auditYes": {
+        "message": "ano"
+    },
+    "auditNo": {
+        "message": "ne"
+    },
+    "auditLength": {
+        "message": "$COUNT$ znaků",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditOtherHost": {
+        "message": "jiná doména"
+    },
+    "auditNoImage": {
+        "message": "bez obrázku"
+    },
+    "auditNoInput": {
+        "message": "bez interakce"
+    },
+    "auditModernValue": {
+        "message": "$COUNT$ z $TOTAL$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "total": {
+                "content": "$2"
+            }
+        }
+    },
+    "scoreCls": {
+        "message": "Posuny rozvržení"
+    },
+    "auditTtfb": {
+        "message": "Odezva serveru (TTFB)"
+    },
+    "auditTtfbHint": {
+        "message": "Jak dlouho trvalo získat první bajt stránky ze serveru. Dobré — do 0,8 s"
+    },
+    "auditFcp": {
+        "message": "První vykreslení (FCP)"
+    },
+    "auditFcpHint": {
+        "message": "Kdy se na obrazovce objevil první obsah. Dobré — do 1,8 s"
+    },
+    "auditLcp": {
+        "message": "Hlavní blok (LCP)"
+    },
+    "auditLcpHint": {
+        "message": "Kdy byl vykreslen největší blok — obrázek nebo text. Hlavní metrika rychlosti Googlu. Dobré — do 2,5 s"
+    },
+    "auditCls": {
+        "message": "Posuny rozvržení (CLS)"
+    },
+    "auditClsHint": {
+        "message": "Jak moc obsah při načítání poskakuje. Dobré — do 0,1"
+    },
+    "auditInp": {
+        "message": "Odezva na interakci (INP)"
+    },
+    "auditInpHint": {
+        "message": "Nejdelší prodleva reakce na kliknutí nebo zadání. Dobré — do 200 ms"
+    },
+    "auditBlocking": {
+        "message": "Blokují vykreslení"
+    },
+    "auditBlockingHint": {
+        "message": "Soubory, na které prohlížeč čeká, než začne stránku vykreslovat. Styly jsou v pořádku, ale skripty je lepší načítat s async nebo defer"
+    },
+    "auditStatus": {
+        "message": "Stavový kód"
+    },
+    "auditStatusHint": {
+        "message": "HTTP stav stránky: 200 — v pořádku, 4xx a 5xx — chyba"
+    },
+    "auditNoindex": {
+        "message": "Indexování zakázáno"
+    },
+    "auditNoindexHint": {
+        "message": "Stránka je skrytá před vyhledávači značkou noindex nebo pravidlem v robots.txt. U přihlašovacích stránek a uživatelských účtů je to normální"
+    },
+    "auditTitle": {
+        "message": "Titulek (title)"
+    },
+    "auditTitleHint": {
+        "message": "Text odkazu ve výsledcích vyhledávání a název karty. Nejlépe 10–70 znaků"
+    },
+    "auditDescription": {
+        "message": "Popis (description)"
+    },
+    "auditDescriptionHint": {
+        "message": "Text pod odkazem ve výsledcích vyhledávání. Nejlépe 50–170 znaků"
+    },
+    "auditH1": {
+        "message": "Nadpisy h1"
+    },
+    "auditH1Hint": {
+        "message": "Hlavní nadpis stránky. Obvykle je jeden"
+    },
+    "auditCanonical": {
+        "message": "Kanonická URL"
+    },
+    "auditCanonicalHint": {
+        "message": "Sděluje vyhledávačům hlavní adresu stránky, pokud má kopie"
+    },
+    "auditOg": {
+        "message": "Náhled odkazu (Open Graph)"
+    },
+    "auditOgHint": {
+        "message": "Titulek a obrázek, které zobrazí Telegram, Slack a další služby při sdílení odkazu"
+    },
+    "auditViewport": {
+        "message": "Mobilní verze (viewport)"
+    },
+    "auditViewportHint": {
+        "message": "Bez meta viewport zobrazí telefony stránku jako zmenšenou verzi pro počítač"
+    },
+    "auditDoctype": {
+        "message": "DOCTYPE"
+    },
+    "auditDoctypeHint": {
+        "message": "Bez něj prohlížeč přepne do režimu kompatibility se starými weby a rozvržení se může lišit"
+    },
+    "auditNoSize": {
+        "message": "Obrázky bez rozměrů"
+    },
+    "auditNoSizeHint": {
+        "message": "Bez width a height prohlížeč neví, kolik místa má obrázku vyhradit, a rozvržení při jeho načtení poskočí"
+    },
+    "auditLarge": {
+        "message": "Příliš velké obrázky"
+    },
+    "auditLargeHint": {
+        "message": "Obrázek se posílá výrazně větší, než jak je zobrazen — zbytečná velikost"
+    },
+    "auditModern": {
+        "message": "Obrázky WebP a AVIF"
+    },
+    "auditModernHint": {
+        "message": "Tyto formáty jsou o 25–50 % menší než JPEG a PNG"
+    },
+    "auditLang": {
+        "message": "Jazyk stránky (lang)"
+    },
+    "auditLangHint": {
+        "message": "Potřebují ho čtečky obrazovky, překladače a vyhledávače"
+    },
+    "auditAlt": {
+        "message": "Obrázky bez alt"
+    },
+    "auditAltHint": {
+        "message": "Popis obrázku pro nevidomé a pro případ, že se nenačte"
+    },
+    "auditLabels": {
+        "message": "Pole bez popisků"
+    },
+    "auditLabelsHint": {
+        "message": "Čtečka obrazovky nedokáže říct, co do pole zadat"
+    },
+    "auditNames": {
+        "message": "Tlačítka a odkazy bez názvů"
+    },
+    "auditNamesHint": {
+        "message": "Například tlačítko s ikonou bez aria-label: nevidomý uslyší jen „tlačítko“"
+    },
+    "auditMain": {
+        "message": "Hlavní oblast (main)"
+    },
+    "auditMainHint": {
+        "message": "Umožňuje přeskočit menu a přejít rovnou k obsahu"
+    },
+    "auditZoom": {
+        "message": "Zvětšení zakázáno"
+    },
+    "auditZoomHint": {
+        "message": "Brání slabozrakým lidem zvětšit stránku na telefonu"
+    },
+    "auditCsp": {
+        "message": "Content Security Policy (CSP)"
+    },
+    "auditCspHint": {
+        "message": "Omezuje, odkud může stránka načítat skripty — ochrana proti XSS. Pokud obsahuje 'unsafe-inline' bez nonce nebo hash, téměř nechrání"
+    },
+    "auditNosniff": {
+        "message": "X-Content-Type-Options"
+    },
+    "auditNosniffHint": {
+        "message": "Brání prohlížeči hádat typy souborů — ochrana proti podvržení skriptů"
+    },
+    "auditFrame": {
+        "message": "Ochrana před vložením do rámce"
+    },
+    "auditFrameHint": {
+        "message": "X-Frame-Options nebo frame-ancestors brání vložení webu do cizí stránky, kde by uživatele podvodem přiměla ke kliknutí"
+    },
+    "auditReferrer": {
+        "message": "Referrer-Policy"
+    },
+    "auditReferrerHint": {
+        "message": "Jak velká část adresy stránky se při přechodu předá jiným webům. Bez hlavičky použije prohlížeč bezpečnou výchozí hodnotu"
+    },
+    "auditCache": {
+        "message": "Mezipaměť stránky"
+    },
+    "auditCacheHint": {
+        "message": "Odkud stránka přišla: HIT — z mezipaměti serveru nebo CDN, MISS — sestavena znovu. Samotné stránky se ukládají do mezipaměti zřídka; obvykle obrázky, skripty a styly"
+    },
+    "auditCacheBrowser": {
+        "message": "z mezipaměti prohlížeče"
+    },
+    "auditBots": {
+        "message": "Roboti a AI"
+    },
+    "auditRobots": {
+        "message": "robots.txt"
+    },
+    "auditRobotsHint": {
+        "message": "Pravidla pro vyhledávače a další roboty. Bez souboru roboti procházejí vše a vyhledávače se nedozví, kde je mapa webu"
+    },
+    "auditSitemap": {
+        "message": "Mapa webu"
+    },
+    "auditSitemapHint": {
+        "message": "Seznam stránek pro vyhledávače. Uvádí se v robots.txt řádkem Sitemap:"
+    },
+    "auditAi": {
+        "message": "Pravidla pro AI boty"
+    },
+    "auditAiHint": {
+        "message": "Zda mohou AI boti sbírat texty webu pro neuronové sítě — podle pravidel robots.txt, která bota jmenují. Rozšíření zná 16 takových botů (GPTBot, ClaudeBot, Google-Extended atd.); boti s jinými jmény se nepočítají. „Zavřeno pro všechny“ — web je zavřený všem robotům přes User-agent: *, bez zvláštních pravidel pro AI"
+    },
+    "auditAiBlocked": {
+        "message": "zakázáno: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditAiAllowed": {
+        "message": "povoleno"
+    },
+    "auditAiNone": {
+        "message": "nenastaveno"
+    },
+    "auditAiAll": {
+        "message": "zavřeno pro všechny"
+    },
+    "auditLlms": {
+        "message": "llms.txt"
+    },
+    "auditLlmsHint": {
+        "message": "Nový formát: krátký popis webu v Markdownu pro AI asistenty a agenty. Zatím nepovinný"
+    },
+    "auditCspWeak": {
+        "message": "slabá"
+    },
+    "auditPermissions": {
+        "message": "Permissions-Policy"
+    },
+    "auditPermissionsHint": {
+        "message": "Zakazuje stránce a vloženým rámcům přístup ke kameře, poloze a dalším funkcím prohlížeče"
+    },
+    "auditCoop": {
+        "message": "Cross-Origin-Opener-Policy"
+    },
+    "auditCoopHint": {
+        "message": "Izoluje okno webu od ostatních oken, která otevře — ochrana proti útokům přes window.opener"
+    },
+    "auditVersions": {
+        "message": "Verze softwaru v hlavičkách"
+    },
+    "auditVersionsHint": {
+        "message": "Server prozrazuje verze softwaru — nápověda útočníkům, které známé zranitelnosti zkusit. Jak skrýt: server_tokens off v nginx a Angie, expose_php = Off v PHP"
+    },
+    "auditHidden": {
+        "message": "skryté"
+    },
+    "auditSession": {
+        "message": "Cookies relace čitelné skripty"
+    },
+    "auditSessionHint": {
+        "message": "Přihlašovací cookies se zdají být čitelné z JavaScriptu: při XSS mohou být ukradeny. Tomu brání příznak HttpOnly. Zjištěno podle názvu cookie"
+    },
+    "auditSecurityTxt": {
+        "message": "security.txt"
+    },
+    "auditSecurityTxtHint": {
+        "message": "Kontakty pro hlášení zranitelností v /.well-known/security.txt. Pomůže výzkumníkovi nahlásit problém vám, místo aby ho prodal"
+    },
+    "serverUnknownTitle": {
+        "message": "Sítě tohoto poskytovatele nejsou v databázi ABlock: obsahuje velké hostingy, cloudy a CDN"
+    },
+    "protocolH3Later": {
+        "message": "Server podporuje HTTP/3. Tato stránka přišla přes $PROTOCOL$ — to se stává při první návštěvě: prohlížeč se o HTTP/3 dozví z odpovědi serveru a pro další požadavky na něj přejde",
+        "placeholders": {
+            "protocol": {
+                "content": "$1"
+            }
+        }
+    },
+    "langAuto": {
+        "message": "Jazyk prohlížeče"
+    },
+    "langTitle": {
+        "message": "Jazyk rozhraní"
+    },
+    "noteTitle": {
+        "message": "Poznámka k webu"
+    },
+    "notePlaceholder": {
+        "message": "Poznámka k webu, vidíte ji jen vy"
+    },
+    "incognitoLabel": {
+        "message": "Fungovat v anonymním režimu"
+    },
+    "incognitoTitle": {
+        "message": "Otevře se nastavení rozšíření prohlížeče — zapněte tam pro ABlock povolení v anonymním režimu"
+    }
+}
