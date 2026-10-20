@@ -458,7 +458,7 @@
         }
     },
     "askTime": {
-        "message": "Olet käyttänyt ABlockia jo kuukauden. Jos se on hyödyllinen, tue kehitystä"
+        "message": "Olet käyttänyt ABlockia jo kolme kuukautta. Jos se on hyödyllinen, tue kehitystä"
     },
     "askClose": {
         "message": "Älä näytä uudelleen"

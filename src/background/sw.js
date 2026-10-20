@@ -152,7 +152,7 @@ async function applyAllowed(allowed) {
  */
 async function applyAction(status) {
     await chrome.declarativeNetRequest.setExtensionActionOptions({displayActionCountAsBadgeText: status});
-    await chrome.action.setBadgeBackgroundColor({color: '#16a34a'});
+    await chrome.action.setBadgeBackgroundColor({color: '#5f6368'});
     await chrome.action.setBadgeTextColor({color: '#ffffff'});
     await chrome.action.setIcon({
         path: {32: status ? '/images/ablock-32.png' : '/images/ablock-32-black.png'}

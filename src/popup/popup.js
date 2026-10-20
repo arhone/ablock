@@ -88,8 +88,8 @@ const DONATE_URL = 'https://boosty.to/a.arh/donate';
 
 // Когда один раз попросить о поддержке: после стольких заблокированных запросов (расширенный режим)
 // или через столько дней после установки (без него счётчика нет)
-const ASK_REQUESTS = 10000;
-const ASK_DAYS = 30;
+const ASK_REQUESTS = 30000;
+const ASK_DAYS = 90;
 
 // Переводы в _locales: язык можно выбрать в окне, не меняя язык браузера
 const LOCALES = ['am', 'ar', 'bg', 'bn', 'ca', 'cs', 'da', 'de', 'el', 'en', 'en_AU', 'en_GB', 'en_US', 'es', 'es_419',

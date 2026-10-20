@@ -648,6 +648,16 @@ footer a {
 footer a:hover {
     color: var(--text);
 }
+/* Telegram и GitHub: одноцветные значки в цвет текста, как глобус языка */
+.icon-link {
+    display: flex;
+    align-items: center;
+}
+.icon-link svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
 /* Язык окна: значок глобуса, поверх него прозрачный select */
 .lang {
     position: relative;

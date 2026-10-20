@@ -458,7 +458,7 @@
         }
     },
     "askTime": {
-        "message": "你已经使用 ABlock 一个月了。如果它对你有帮助，欢迎支持开发"
+        "message": "你已经使用 ABlock 三个月了。如果它对你有帮助，欢迎支持开发"
     },
     "askClose": {
         "message": "不再显示"

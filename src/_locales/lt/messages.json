@@ -458,7 +458,7 @@
         }
     },
     "askTime": {
-        "message": "ABlock naudojatės jau mėnesį. Jei jis naudingas, paremkite kūrimą"
+        "message": "ABlock naudojatės jau tris mėnesius. Jei jis naudingas, paremkite kūrimą"
     },
     "askClose": {
         "message": "Daugiau nerodyti"

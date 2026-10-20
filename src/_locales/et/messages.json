@@ -458,7 +458,7 @@
         }
     },
     "askTime": {
-        "message": "Oled ABlocki kasutanud juba kuu aega. Kui see on kasulik, toeta arendust"
+        "message": "Oled ABlocki kasutanud juba kolm kuud. Kui see on kasulik, toeta arendust"
     },
     "askClose": {
         "message": "Ära enam näita"

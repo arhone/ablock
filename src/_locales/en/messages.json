@@ -458,7 +458,7 @@
         }
     },
     "askTime": {
-        "message": "You have been using ABlock for a month. If it helps you, please support its development"
+        "message": "You have been using ABlock for three months. If it helps you, please support its development"
     },
     "askClose": {
         "message": "Don’t show again"
