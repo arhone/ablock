@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "ಇಂಟರ್ಫೇಸ್ ಭಾಷೆ"
     },
+    "themeDark": {
+        "message": "ಡಾರ್ಕ್ ಥೀಮ್"
+    },
+    "themeLight": {
+        "message": "ಲೈಟ್ ಥೀಮ್"
+    },
     "noteTitle": {
         "message": "ಈ ಸೈಟ್‌ಗಾಗಿ ಟಿಪ್ಪಣಿ"
     },

@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Интерфейс тілі"
     },
+    "themeDark": {
+        "message": "Қараңғы тақырып"
+    },
+    "themeLight": {
+        "message": "Ашық тақырып"
+    },
     "noteTitle": {
         "message": "Сайтқа жазба"
     },

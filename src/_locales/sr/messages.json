@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Језик интерфејса"
     },
+    "themeDark": {
+        "message": "Тамна тема"
+    },
+    "themeLight": {
+        "message": "Светла тема"
+    },
     "noteTitle": {
         "message": "Белешка за сајт"
     },

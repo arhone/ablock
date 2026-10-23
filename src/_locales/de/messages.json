@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Sprache der Oberfläche"
     },
+    "themeDark": {
+        "message": "Dunkles Design"
+    },
+    "themeLight": {
+        "message": "Helles Design"
+    },
     "noteTitle": {
         "message": "Notiz zur Website"
     },

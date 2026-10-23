@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Arayüz dili"
     },
+    "themeDark": {
+        "message": "Koyu tema"
+    },
+    "themeLight": {
+        "message": "Açık tema"
+    },
     "noteTitle": {
         "message": "Site notu"
     },

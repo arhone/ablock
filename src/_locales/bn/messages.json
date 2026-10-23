@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "ইন্টারফেসের ভাষা"
     },
+    "themeDark": {
+        "message": "ডার্ক থিম"
+    },
+    "themeLight": {
+        "message": "লাইট থিম"
+    },
     "noteTitle": {
         "message": "এই সাইটের জন্য নোট"
     },

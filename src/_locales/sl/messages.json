@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Jezik vmesnika"
     },
+    "themeDark": {
+        "message": "Temna tema"
+    },
+    "themeLight": {
+        "message": "Svetla tema"
+    },
     "noteTitle": {
         "message": "Opomba za spletno mesto"
     },

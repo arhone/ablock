@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Wika ng interface"
     },
+    "themeDark": {
+        "message": "Madilim na tema"
+    },
+    "themeLight": {
+        "message": "Maliwanag na tema"
+    },
     "noteTitle": {
         "message": "Tala para sa site na ito"
     },

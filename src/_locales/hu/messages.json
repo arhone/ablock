@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "A felület nyelve"
     },
+    "themeDark": {
+        "message": "Sötét téma"
+    },
+    "themeLight": {
+        "message": "Világos téma"
+    },
     "noteTitle": {
         "message": "Megjegyzés a webhelyhez"
     },

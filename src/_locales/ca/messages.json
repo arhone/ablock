@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Idioma de la interfície"
     },
+    "themeDark": {
+        "message": "Tema fosc"
+    },
+    "themeLight": {
+        "message": "Tema clar"
+    },
     "noteTitle": {
         "message": "Nota sobre aquest lloc"
     },

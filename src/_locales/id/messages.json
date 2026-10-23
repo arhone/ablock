@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Bahasa antarmuka"
     },
+    "themeDark": {
+        "message": "Tema gelap"
+    },
+    "themeLight": {
+        "message": "Tema terang"
+    },
     "noteTitle": {
         "message": "Catatan untuk situs ini"
     },

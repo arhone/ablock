@@ -1,22 +1,41 @@
 :root {
     color-scheme: light dark;
-    --bg: #f6f7f9;
-    --text: #1f2328;
-    --muted: #6b7280;
-    --border: #e3e5e8;
-    --on: #16a34a;
-    --off: #dc2626;
-    --warn: #d97706;
-    --none: #9ca3af;
-    --pill: #ffffff;
+    --bg: #f3f4f7;
+    --text: #1b1f27;
+    --muted: #687080;
+    --border: rgba(24, 32, 52, 0.1);
+    --on: #12a372;
+    --off: #e5484d;
+    --warn: #e08600;
+    --none: #a3a9b4;
+    /* Подложка плашек и карточек: без обводок и теней, только тон */
+    --tint: rgba(24, 32, 52, 0.05);
+    /* Кривые соты поверх фона */
+    --cells: rgba(30, 40, 70, 0.11);
+    /* Мягкие пятна света: зелёное у щита и у «Поддержать», по бокам бирюзовое и оранжевое */
+    --glow:
+        radial-gradient(60% 34% at 50% 6%, rgba(18, 163, 114, 0.1), transparent 70%),
+        radial-gradient(45% 30% at 0% 42%, rgba(20, 184, 190, 0.11), transparent 70%),
+        radial-gradient(45% 30% at 100% 62%, rgba(245, 140, 40, 0.1), transparent 70%),
+        radial-gradient(70% 28% at 50% 100%, rgba(18, 163, 114, 0.09), transparent 70%);
 }
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #1d2024;
-        --text: #e6e8eb;
-        --muted: #9aa1ab;
-        --border: #2f3338;
-        --pill: #262a2f;
+        --text: #e9ebf0;
+        --muted: #959cab;
+        --border: rgba(255, 255, 255, 0.08);
+        --on: #34d399;
+        --off: #ff6369;
+        --warn: #ffb224;
+        --none: #6b7280;
+        --tint: rgba(255, 255, 255, 0.05);
+        --cells: rgba(255, 255, 255, 0.06);
+        --bg: #14171d;
+        --glow:
+            radial-gradient(60% 34% at 50% 6%, rgba(52, 211, 153, 0.15), transparent 70%),
+            radial-gradient(45% 30% at 0% 42%, rgba(45, 212, 210, 0.13), transparent 70%),
+            radial-gradient(45% 30% at 100% 62%, rgba(255, 150, 50, 0.12), transparent 70%),
+            radial-gradient(70% 28% at 50% 100%, rgba(52, 211, 153, 0.15), transparent 70%);
     }
     /* Чёрный контур щита иначе сливается с фоном */
     #logo,
@@ -39,6 +58,30 @@ body {
     color: var(--text);
     font: 13px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     user-select: none;
+}
+/* Соты рисуются цветом --cells через маску: один файл на обе темы */
+body::before,
+.sheet::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: var(--cells);
+    mask: url("cells.svg") top / cover;
+    pointer-events: none;
+}
+/* Свет только при включённой защите: выключили — окно становится монохромным */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: var(--glow);
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+body:has(#status[data-status="false"])::after {
+    opacity: 0;
 }
 body.loading {
     visibility: hidden;
@@ -104,16 +147,15 @@ body.loading {
     display: flex;
     align-items: center;
     gap: 5px;
-    padding: 3px 8px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: var(--pill);
+    padding: 3px 9px;
+    border-radius: 5px;
+    background: var(--tint);
     font-size: 11px;
     font-weight: 600;
     white-space: nowrap;
     cursor: default;
     --color: var(--none);
-    color: var(--color);
+    color: var(--muted);
 }
 .badge::before {
     content: "";
@@ -122,14 +164,21 @@ body.loading {
     border-radius: 50%;
     background: var(--color);
 }
+/* Цветная только точка, текст и заливка цветом только у замечаний */
 .badge[data-state="good"] {
     --color: var(--on);
+    color: var(--text);
 }
 .badge[data-state="warn"] {
     --color: var(--warn);
+    color: var(--warn);
 }
 .badge[data-state="bad"] {
     --color: var(--off);
+    color: var(--off);
+}
+.badge:is([data-state="warn"], [data-state="bad"]) {
+    background: color-mix(in srgb, var(--color) 13%, transparent);
 }
 
 /* Статус */
@@ -137,6 +186,7 @@ body.loading {
     display: flex;
     align-items: center;
     gap: 6px;
+    font-size: 14px;
     font-weight: 600;
 }
 #status::before {
@@ -145,10 +195,12 @@ body.loading {
     height: 8px;
     border-radius: 50%;
     background: var(--on);
-    transition: background 0.3s ease;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--on) 22%, transparent);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 #status[data-status="false"]::before {
     background: var(--off);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--off) 22%, transparent);
 }
 
 /* Заметка к сайту */
@@ -170,7 +222,7 @@ body.loading {
 }
 #note:hover,
 #note:focus-visible {
-    background: var(--pill);
+    background: var(--tint);
     color: var(--text);
     outline: none;
 }
@@ -179,7 +231,7 @@ body.loading {
     padding: 6px 8px;
     border: 1px solid var(--border);
     border-radius: 8px;
-    background: var(--pill);
+    background: var(--tint);
     color: var(--text);
     font: inherit;
     resize: none;
@@ -195,10 +247,9 @@ body.loading {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 8px 12px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: var(--pill);
+    padding: 9px 12px;
+    border-radius: 8px;
+    background: var(--tint);
     cursor: default;
     --color: var(--none);
 }
@@ -224,8 +275,8 @@ body.loading {
     gap: 3px;
 }
 #meter i {
-    height: 8px;
-    border-radius: 2px;
+    height: 7px;
+    border-radius: 4px;
     background: var(--border);
     transition: background 0.3s ease;
 }
@@ -235,8 +286,9 @@ body.loading {
 #score-value {
     min-width: 2.2em;
     text-align: end;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
+    font-variant-numeric: tabular-nums;
     color: var(--color);
 }
 
@@ -261,10 +313,9 @@ body.loading {
     margin: 0;
 }
 .chip {
-    padding: 1px 7px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: var(--pill);
+    padding: 1px 8px;
+    border-radius: 5px;
+    background: var(--tint);
     font-size: 11px;
     font-weight: 600;
     white-space: nowrap;
@@ -272,22 +323,25 @@ body.loading {
     --color: var(--text);
     color: var(--color);
 }
-.chip[data-state="good"] {
-    --color: var(--on);
-}
 .chip[data-state="warn"] {
     --color: var(--warn);
 }
 .chip[data-state="bad"] {
     --color: var(--off);
 }
+.chip:is([data-state="warn"], [data-state="bad"]) {
+    background: color-mix(in srgb, var(--color) 13%, transparent);
+}
 .chip[data-state="none"] {
     --color: var(--muted);
+    padding-inline: 2px;
+    background: none;
     font-weight: 400;
 }
 /* Не «инфа сотка»: определено по косвенным признакам */
 .chip[data-sure="false"] {
-    border-style: dashed;
+    outline: 1px dashed var(--border);
+    outline-offset: -1px;
 }
 .chip[data-sure="false"]::after {
     content: "?";
@@ -298,9 +352,8 @@ body.loading {
 /* Подробнее: скорость, SEO, вёрстка, доступность, безопасность */
 #audit {
     align-self: stretch;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: var(--pill);
+    border-radius: 8px;
+    background: var(--tint);
 }
 #audit summary {
     display: flex;
@@ -398,8 +451,13 @@ body.loading {
 }
 .audit-row b {
     margin-inline-start: auto;
-    color: var(--color);
+    color: var(--text);
+    font-weight: 600;
     white-space: nowrap;
+}
+.audit-row[data-state="warn"] b,
+.audit-row[data-state="bad"] b {
+    color: var(--color);
 }
 .audit-row[data-state="none"] b {
     color: var(--muted);
@@ -421,16 +479,12 @@ body.loading {
     color: var(--muted);
     font-size: 11px;
 }
-#extended {
-    padding: 8px 10px;
-    border: 1px dashed var(--border);
-    border-radius: 12px;
-}
-/* Одноразовая просьба о поддержке */
+/* Предложения: расширенный режим и одноразовая просьба о поддержке */
+#extended,
 #ask {
-    padding: 8px 10px;
-    border: 1px dashed var(--border);
-    border-radius: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: var(--tint);
 }
 #ask-text {
     flex: 1;
@@ -440,7 +494,6 @@ body.loading {
 }
 #ask-donate::before {
     content: "♥ ";
-    color: var(--off);
 }
 #ask-close {
     flex: none;
@@ -450,16 +503,25 @@ body.loading {
 .action {
     flex: none;
     padding: 4px 10px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: var(--pill);
+    border: 0;
+    border-radius: 6px;
+    background: var(--tint);
     color: var(--text);
     font: inherit;
     font-weight: 600;
     cursor: pointer;
 }
-.action:hover {
-    border-color: var(--muted);
+/* Главные кнопки — монохромные, контрастом к фону */
+#extended-button,
+#ask-donate {
+    padding: 5px 14px;
+    background: var(--text);
+    color: var(--bg);
+    transition: opacity 0.15s ease;
+}
+#extended-button:hover,
+#ask-donate:hover {
+    opacity: 0.85;
 }
 #share-menu {
     justify-content: space-between;
@@ -477,18 +539,13 @@ body.loading {
     width: 26px;
     height: 26px;
     padding: 0;
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    background: var(--pill);
+    border: 0;
+    border-radius: 6px;
+    background: var(--tint);
     color: var(--muted);
     cursor: pointer;
 }
-.tool:hover {
-    border-color: var(--muted);
-    color: var(--text);
-}
 .tool[data-done] {
-    border-color: var(--on);
     color: var(--on);
 }
 .tool svg {
@@ -512,18 +569,52 @@ body.loading {
     width: 26px;
     height: 26px;
 }
+/* Настройки: подпись слева, переключатель справа */
 #site-row,
 #cookies-row,
 #incognito-row {
-    justify-content: flex-start;
-    gap: 6px;
+    padding: 2px 0;
+    color: var(--text);
+    font-size: 12px;
     cursor: pointer;
 }
-#site-row input,
-#cookies-row input,
-#incognito-row input {
+.card input[type="checkbox"] {
+    appearance: none;
+    position: relative;
+    flex: none;
+    order: 1;
+    width: 32px;
+    height: 18px;
     margin: 0;
-    accent-color: var(--on);
+    border-radius: 6px;
+    background: var(--tint);
+    box-shadow: inset 0 0 0 1px var(--border);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+/* Тональный: дорожка бледная, цветом — бегунок */
+.card input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    inset-inline-start: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    background: var(--none);
+    transition: inset-inline-start 0.2s ease, background 0.2s ease;
+}
+.card input[type="checkbox"]:checked {
+    background: color-mix(in srgb, var(--on) 18%, transparent);
+    box-shadow: none;
+}
+.card input[type="checkbox"]:checked::before {
+    inset-inline-start: 16px;
+    background: var(--on);
+}
+.card input[type="checkbox"]:focus-visible {
+    outline: 2px solid var(--on);
+    outline-offset: 2px;
 }
 /* Маленькие кнопки-иконки: копирование IP, удаление данных сайта */
 .icon-button {
@@ -535,17 +626,19 @@ body.loading {
     min-width: 22px;
     height: 19px;
     padding: 0 4px;
-    border: 1px solid var(--border);
+    border: 0;
     border-radius: 6px;
-    background: var(--pill);
+    background: var(--tint);
     color: var(--muted);
     font: inherit;
     font-size: 11px;
     font-weight: 600;
     cursor: pointer;
 }
+.action:hover,
+.tool:hover,
 .icon-button:hover {
-    border-color: var(--muted);
+    background: color-mix(in srgb, var(--text) 10%, transparent);
     color: var(--text);
 }
 .icon-button[data-done] {
@@ -561,7 +654,6 @@ body.loading {
 }
 /* Удаление данных: второе нажатие подтверждает */
 #clear[data-confirm] {
-    border-color: var(--off);
     background: var(--off);
     color: #fff;
 }
@@ -580,9 +672,14 @@ body.loading {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    background: var(--bg);
+    position: relative;
+    isolation: isolate;
+    background: var(--glow), var(--bg);
     color: var(--text);
     font: 13px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.sheet::before {
+    position: absolute;
 }
 .sheet-head,
 .sheet-foot {
@@ -677,6 +774,34 @@ footer a:hover {
     stroke: currentColor;
     stroke-width: 1.3;
 }
+/* Тема окна: луна в светлой (включить тёмную), солнце в тёмной */
+#theme {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--muted);
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+#theme:hover,
+#theme:focus-visible {
+    color: var(--text);
+}
+#theme svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+#theme[data-dark="true"] .moon,
+#theme[data-dark="false"] .sun {
+    display: none;
+}
 #ask-close svg {
     width: 11px;
     height: 11px;
@@ -694,5 +819,5 @@ footer a:hover {
 }
 #donate::before {
     content: "♥ ";
-    color: var(--off);
+    color: #f0477f;
 }

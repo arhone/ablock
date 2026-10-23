@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "इंटरफेसची भाषा"
     },
+    "themeDark": {
+        "message": "डार्क थीम"
+    },
+    "themeLight": {
+        "message": "लाइट थीम"
+    },
     "noteTitle": {
         "message": "या साइटसाठी टीप"
     },

@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "ઇન્ટરફેસની ભાષા"
     },
+    "themeDark": {
+        "message": "ડાર્ક થીમ"
+    },
+    "themeLight": {
+        "message": "લાઇટ થીમ"
+    },
     "noteTitle": {
         "message": "આ સાઇટ માટે નોંધ"
     },

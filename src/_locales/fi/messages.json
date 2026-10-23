@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Käyttöliittymän kieli"
     },
+    "themeDark": {
+        "message": "Tumma teema"
+    },
+    "themeLight": {
+        "message": "Vaalea teema"
+    },
     "noteTitle": {
         "message": "Muistiinpano sivustosta"
     },

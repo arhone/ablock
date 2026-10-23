@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "لغة الواجهة"
     },
+    "themeDark": {
+        "message": "المظهر الداكن"
+    },
+    "themeLight": {
+        "message": "المظهر الفاتح"
+    },
     "noteTitle": {
         "message": "ملاحظة عن الموقع"
     },

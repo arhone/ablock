@@ -68,6 +68,10 @@
         const tokens = pending;
         pending = [];
         const message = {cosmetic: tokens, first};
+        // Тема браузера — для цвета счётчика на иконке
+        if (first) {
+            message.dark = matchMedia('(prefers-color-scheme: dark)').matches;
+        }
         first = false;
         chrome.runtime.sendMessage(message).then((count) => {
             misses = count ? 0 : misses + 1;

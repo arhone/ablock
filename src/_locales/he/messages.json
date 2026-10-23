@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "שפת הממשק"
     },
+    "themeDark": {
+        "message": "ערכת נושא כהה"
+    },
+    "themeLight": {
+        "message": "ערכת נושא בהירה"
+    },
     "noteTitle": {
         "message": "הערה לאתר"
     },

@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Jezik sučelja"
     },
+    "themeDark": {
+        "message": "Tamna tema"
+    },
+    "themeLight": {
+        "message": "Svijetla tema"
+    },
     "noteTitle": {
         "message": "Bilješka za web-mjesto"
     },

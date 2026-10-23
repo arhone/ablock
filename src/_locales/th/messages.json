@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "ภาษาของอินเทอร์เฟซ"
     },
+    "themeDark": {
+        "message": "ธีมมืด"
+    },
+    "themeLight": {
+        "message": "ธีมสว่าง"
+    },
     "noteTitle": {
         "message": "บันทึกสำหรับเว็บไซต์นี้"
     },

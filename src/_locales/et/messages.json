@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Liidese keel"
     },
+    "themeDark": {
+        "message": "Tume teema"
+    },
+    "themeLight": {
+        "message": "Hele teema"
+    },
     "noteTitle": {
         "message": "Märkus saidi kohta"
     },

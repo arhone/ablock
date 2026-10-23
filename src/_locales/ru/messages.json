@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Язык интерфейса"
     },
+    "themeDark": {
+        "message": "Тёмная тема"
+    },
+    "themeLight": {
+        "message": "Светлая тема"
+    },
     "noteTitle": {
         "message": "Заметка к сайту"
     },

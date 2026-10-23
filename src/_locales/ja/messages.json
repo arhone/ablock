@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "表示言語"
     },
+    "themeDark": {
+        "message": "ダークテーマ"
+    },
+    "themeLight": {
+        "message": "ライトテーマ"
+    },
     "noteTitle": {
         "message": "このサイトのメモ"
     },

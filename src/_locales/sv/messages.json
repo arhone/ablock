@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Gränssnittets språk"
     },
+    "themeDark": {
+        "message": "Mörkt tema"
+    },
+    "themeLight": {
+        "message": "Ljust tema"
+    },
     "noteTitle": {
         "message": "Anteckning om webbplatsen"
     },

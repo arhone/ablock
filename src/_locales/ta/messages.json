@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "இடைமுக மொழி"
     },
+    "themeDark": {
+        "message": "டார்க் தீம்"
+    },
+    "themeLight": {
+        "message": "லைட் தீம்"
+    },
     "noteTitle": {
         "message": "இந்தத் தளத்துக்கான குறிப்பு"
     },

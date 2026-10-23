@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Saskarnes valoda"
     },
+    "themeDark": {
+        "message": "Tumšais motīvs"
+    },
+    "themeLight": {
+        "message": "Gaišais motīvs"
+    },
     "noteTitle": {
         "message": "Piezīme par vietni"
     },

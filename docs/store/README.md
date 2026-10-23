@@ -69,8 +69,13 @@ Blocks ads, trackers and malicious sites, and shows how the current website perf
 
 ## Обновление скриншотов
 
-Снимаются тестовым стендом (`/tmp/ablock-shots/store.mjs` и `compose.py`, в репозиторий не входят;
-переменные `SITEW` — ширина страницы, `DARK=1`, `PAGEJS` — скрипт на странице перед снимком, `POPJS` — в окне расширения):
-расширение с разрешениями расширенного режима и `declarativeNetRequestFeedback` (иначе счётчик «Блок»
-в тестовом браузере пустой) открывается на сайте, окно снимается в 2× и накладывается на снимок
-страницы с тенью и рамкой.
+Снимаются тестовым стендом (`/tmp/ablock-shots/store.mjs` и `compose.py`, в репозиторий не входят).
+Расширение с разрешениями расширенного режима и `declarativeNetRequestFeedback` (иначе счётчик «Блок»
+в тестовом браузере пустой) открывается на настоящей новостной странице (статья Blic), окно снимается в 2×
+в тёмной теме: `DARK=1 THEME=dark POPLANG=<язык> POPJS=<скрипт в окне> node store.mjs <адрес> <png>`.
+`POPJS` заменяет домен в «Блокировать на …» на «этом сайте». Слева — `mockup/<язык>.html`, снятый в 780×800;
+цифры в статье правятся под окно. `compose.py <страница> <окно> <png>` собирает кадр 1280×800 с тенью и рамкой.
+
+`docs/img/report.webp` (картинка в README) — настоящая картинка «Поделиться» для github.com в тёмной теме:
+`SHARE=<png>` у `store.mjs` перехватывает файл кнопки «Сохранить картинкой»; WebP без потерь.
+Дата в шапке скрыта: `POPJS="const s=document.styleSheets[0]; s.insertRule('.sheet-head > span:last-child{visibility:hidden}', s.cssRules.length)"`.

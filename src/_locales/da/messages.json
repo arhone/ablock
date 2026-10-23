@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Brugerfladens sprog"
     },
+    "themeDark": {
+        "message": "Mørkt tema"
+    },
+    "themeLight": {
+        "message": "Lyst tema"
+    },
     "noteTitle": {
         "message": "Note om webstedet"
     },

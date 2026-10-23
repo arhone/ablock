@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Interfacetaal"
     },
+    "themeDark": {
+        "message": "Donker thema"
+    },
+    "themeLight": {
+        "message": "Licht thema"
+    },
     "noteTitle": {
         "message": "Notitie bij deze site"
     },

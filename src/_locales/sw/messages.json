@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Lugha ya kiolesura"
     },
+    "themeDark": {
+        "message": "Mandhari meusi"
+    },
+    "themeLight": {
+        "message": "Mandhari angavu"
+    },
     "noteTitle": {
         "message": "Dokezo la tovuti hii"
     },

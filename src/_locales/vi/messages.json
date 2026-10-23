@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Ngôn ngữ giao diện"
     },
+    "themeDark": {
+        "message": "Giao diện tối"
+    },
+    "themeLight": {
+        "message": "Giao diện sáng"
+    },
     "noteTitle": {
         "message": "Ghi chú cho trang này"
     },

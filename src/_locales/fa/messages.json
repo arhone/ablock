@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "زبان رابط"
     },
+    "themeDark": {
+        "message": "پوسته تیره"
+    },
+    "themeLight": {
+        "message": "پوسته روشن"
+    },
     "noteTitle": {
         "message": "یادداشت برای این سایت"
     },

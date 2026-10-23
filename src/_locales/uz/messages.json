@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Interfeys tili"
     },
+    "themeDark": {
+        "message": "Tungi mavzu"
+    },
+    "themeLight": {
+        "message": "Kunduzgi mavzu"
+    },
     "noteTitle": {
         "message": "Sayt uchun eslatma"
     },

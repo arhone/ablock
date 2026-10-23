@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Limba interfeței"
     },
+    "themeDark": {
+        "message": "Temă întunecată"
+    },
+    "themeLight": {
+        "message": "Temă luminoasă"
+    },
     "noteTitle": {
         "message": "Notă pentru acest site"
     },

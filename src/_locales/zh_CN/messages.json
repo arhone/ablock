@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "界面语言"
     },
+    "themeDark": {
+        "message": "深色主题"
+    },
+    "themeLight": {
+        "message": "浅色主题"
+    },
     "noteTitle": {
         "message": "此网站的备注"
     },

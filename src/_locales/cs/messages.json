@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Jazyk rozhraní"
     },
+    "themeDark": {
+        "message": "Tmavý motiv"
+    },
+    "themeLight": {
+        "message": "Světlý motiv"
+    },
     "noteTitle": {
         "message": "Poznámka k webu"
     },

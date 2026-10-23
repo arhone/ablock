@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Γλώσσα διεπαφής"
     },
+    "themeDark": {
+        "message": "Σκούρο θέμα"
+    },
+    "themeLight": {
+        "message": "Ανοιχτό θέμα"
+    },
     "noteTitle": {
         "message": "Σημείωση για τον ιστότοπο"
     },

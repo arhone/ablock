@@ -146,14 +146,40 @@ async function applyAllowed(allowed) {
     });
 }
 
+// Счётчик на иконке — тональный, как плашки в окне: бледная подложка и цветной текст.
+// Под светлую и тёмную панель браузера свои цвета
+const BADGE_COLORS = {
+    light: {background: '#d3f1e3', text: '#0a6b4b'},
+    dark: {background: '#1f4a3b', text: '#4be3ad'}
+};
+
+// Тёмная ли тема браузера: воркер её не видит, сообщают окно и content/cosmetic.js
+let dark;
+
+/**
+ * Цвета счётчика под тему браузера
+ * @param {boolean} [value] новая тема, без неё — сохранённая
+ */
+async function applyBadgeColors(value) {
+    dark ??= (await chrome.storage.local.get('aBlockDark')).aBlockDark ?? false;
+    if (value !== undefined && value !== dark) {
+        dark = value;
+        await chrome.storage.local.set({aBlockDark: dark});
+    } else if (value !== undefined) {
+        return;
+    }
+    const colors = BADGE_COLORS[dark ? 'dark' : 'light'];
+    await chrome.action.setBadgeBackgroundColor({color: colors.background});
+    await chrome.action.setBadgeTextColor({color: colors.text});
+}
+
 /**
  * Счётчик заблокированного и иконка
  * @param {boolean} status
  */
 async function applyAction(status) {
     await chrome.declarativeNetRequest.setExtensionActionOptions({displayActionCountAsBadgeText: status});
-    await chrome.action.setBadgeBackgroundColor({color: '#5f6368'});
-    await chrome.action.setBadgeTextColor({color: '#ffffff'});
+    await applyBadgeColors();
     await chrome.action.setIcon({
         path: {32: status ? '/images/ablock-32.png' : '/images/ablock-32-black.png'}
     });
@@ -279,6 +305,9 @@ chrome.permissions.onRemoved.addListener(() => update());
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     // Классы и id элементов страницы от content/cosmetic.js
     if (Array.isArray(request?.cosmetic)) {
+        if (typeof request.dark === 'boolean') {
+            applyBadgeColors(request.dark).catch(console.error);
+        }
         applyCosmetic(sender, request.cosmetic, request.first === true).then(sendResponse, (e) => {
             console.error(e);
             sendResponse(0);
@@ -290,6 +319,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
     if (typeof request?.status === 'boolean') {
         update({status: request.status}).then(() => sendResponse(true));
+        return true;
+    }
+    if (typeof request?.dark === 'boolean') {
+        applyBadgeColors(request.dark).then(() => sendResponse(true));
         return true;
     }
     if (typeof request?.cookies === 'boolean') {

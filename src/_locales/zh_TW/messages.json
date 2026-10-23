@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "介面語言"
     },
+    "themeDark": {
+        "message": "深色主題"
+    },
+    "themeLight": {
+        "message": "淺色主題"
+    },
     "noteTitle": {
         "message": "此網站的備註"
     },

@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Sąsajos kalba"
     },
+    "themeDark": {
+        "message": "Tamsi tema"
+    },
+    "themeLight": {
+        "message": "Šviesi tema"
+    },
     "noteTitle": {
         "message": "Pastaba apie svetainę"
     },

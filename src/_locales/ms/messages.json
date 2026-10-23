@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Bahasa antara muka"
     },
+    "themeDark": {
+        "message": "Tema gelap"
+    },
+    "themeLight": {
+        "message": "Tema cerah"
+    },
     "noteTitle": {
         "message": "Nota untuk tapak ini"
     },

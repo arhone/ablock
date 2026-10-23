@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "ఇంటర్‌ఫేస్ భాష"
     },
+    "themeDark": {
+        "message": "డార్క్ థీమ్"
+    },
+    "themeLight": {
+        "message": "లైట్ థీమ్"
+    },
     "noteTitle": {
         "message": "ఈ సైట్ కోసం గమనిక"
     },

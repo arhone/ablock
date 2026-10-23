@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "ഇന്റർഫേസ് ഭാഷ"
     },
+    "themeDark": {
+        "message": "ഡാർക്ക് തീം"
+    },
+    "themeLight": {
+        "message": "ലൈറ്റ് തീം"
+    },
     "noteTitle": {
         "message": "ഈ സൈറ്റിനുള്ള കുറിപ്പ്"
     },

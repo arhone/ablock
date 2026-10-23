@@ -161,6 +161,69 @@ function initLanguage() {
     });
 }
 
+// Тема окна по системе; выбранная в окне светлая или тёмная хранится в aBlockTheme
+const systemDark = matchMedia('(prefers-color-scheme: dark)');
+// Правило тёмной темы в popup.css: его условие подменяется, когда тема выбрана вручную
+const darkRule = [...document.styleSheets[0].cssRules].find((rule) => rule.conditionText?.includes('prefers-color-scheme'));
+const darkCondition = darkRule.conditionText;
+let theme = null;
+
+/**
+ * Включает тему: 'light', 'dark' или null — как в системе
+ * @param {?string} value
+ */
+function applyTheme(value) {
+    theme = value === 'light' || value === 'dark' ? value : null;
+    darkRule.media.mediaText = theme ? (theme === 'dark' ? 'all' : 'not all') : darkCondition;
+    // Полосы прокрутки, списки и галочки — в цвет темы
+    document.documentElement.style.colorScheme = theme || '';
+}
+
+/**
+ * Тёмная ли тема сейчас
+ * @returns {boolean}
+ */
+function isDark() {
+    return theme ? theme === 'dark' : systemDark.matches;
+}
+
+// Тема до первой отрисовки, чтобы окно не мигало
+chrome.storage.local.get('aBlockTheme').then(({aBlockTheme}) => applyTheme(aBlockTheme));
+
+/**
+ * Кнопка темы: переключает светлую и тёмную. Совпавшая с системной тема не запоминается —
+ * окно снова следует за системой
+ */
+function initTheme() {
+    const button = document.getElementById('theme');
+    const render = () => {
+        button.dataset.dark = String(isDark());
+        button.title = t(isDark() ? 'themeLight' : 'themeDark');
+    };
+    // Тема браузера — для цвета счётчика на иконке (воркер её не видит)
+    const report = () => chrome.runtime.sendMessage({dark: systemDark.matches}).catch(() => {});
+    render();
+    report();
+    systemDark.addEventListener('change', () => {
+        render();
+        report();
+    });
+    chrome.storage.local.get('aBlockTheme').then(({aBlockTheme}) => {
+        applyTheme(aBlockTheme);
+        render();
+    });
+    button.addEventListener('click', () => {
+        const dark = !isDark();
+        applyTheme(dark === systemDark.matches ? null : (dark ? 'dark' : 'light'));
+        render();
+        if (theme) {
+            chrome.storage.local.set({aBlockTheme: theme});
+        } else {
+            chrome.storage.local.remove('aBlockTheme');
+        }
+    });
+}
+
 /**
  * Число по правилам языка браузера
  * @param {number} value
@@ -1227,10 +1290,12 @@ async function renderReport(host, parts) {
     sheet.removeAttribute('style');
 
     // Тема та же, что у окна
-    const dark = matchMedia('(prefers-color-scheme: dark)').matches;
     const style = document.createElement('style');
-    style.textContent = [...document.styleSheets[0].cssRules].map((rule) => rule.cssText).join('\n')
-        .replace('@media (prefers-color-scheme: dark)', dark ? '@media all' : '@media not all');
+    style.textContent = [...document.styleSheets[0].cssRules].map((rule) => rule === darkRule
+        ? `@media ${isDark() ? 'all' : 'not all'} {${[...rule.cssRules].map((inner) => inner.cssText).join('\n')}}`
+        : rule.cssText).join('\n')
+        // Картинка не грузит файлы: маску сот фона — внутрь
+        .replace(/url\("?cells\.svg"?\)/g, `url("${await toDataUrl('cells.svg')}")`);
     // Картинка рисуется вне окна: язык и направление письма задаём явно
     const root = document.createElement('div');
     root.lang = LANG;
@@ -1472,6 +1537,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     await loadLocale();
     translatePage();
     initLanguage();
+    initTheme();
 
     const donate = document.getElementById('donate');
     donate.href = DONATE_URL;

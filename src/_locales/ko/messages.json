@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "인터페이스 언어"
     },
+    "themeDark": {
+        "message": "어두운 테마"
+    },
+    "themeLight": {
+        "message": "밝은 테마"
+    },
     "noteTitle": {
         "message": "이 사이트 메모"
     },

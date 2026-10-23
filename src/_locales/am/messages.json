@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "የበይነገጽ ቋንቋ"
     },
+    "themeDark": {
+        "message": "ጨለማ ገጽታ"
+    },
+    "themeLight": {
+        "message": "ብሩህ ገጽታ"
+    },
     "noteTitle": {
         "message": "ለዚህ ጣቢያ ማስታወሻ"
     },

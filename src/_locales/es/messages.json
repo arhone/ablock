@@ -859,6 +859,12 @@
     "langTitle": {
         "message": "Idioma de la interfaz"
     },
+    "themeDark": {
+        "message": "Tema oscuro"
+    },
+    "themeLight": {
+        "message": "Tema claro"
+    },
     "noteTitle": {
         "message": "Nota sobre este sitio"
     },
