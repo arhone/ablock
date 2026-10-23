@@ -8,6 +8,10 @@
     --off: #e5484d;
     --warn: #e08600;
     --none: #a3a9b4;
+    /* Текст замечаний: темнее точек и заливок, чтобы читался на подложке и сотах (контраст от 4,5:1) */
+    --on-text: #066245;
+    --warn-text: #7f4a00;
+    --off-text: #a81e25;
     /* Подложка плашек и карточек: без обводок и теней, только тон */
     --tint: rgba(24, 32, 52, 0.05);
     /* Кривые соты поверх фона */
@@ -28,6 +32,9 @@
         --off: #ff6369;
         --warn: #ffb224;
         --none: #6b7280;
+        --on-text: var(--on);
+        --warn-text: var(--warn);
+        --off-text: #ff7378;
         --tint: rgba(255, 255, 255, 0.05);
         --cells: rgba(255, 255, 255, 0.06);
         --bg: #14171d;
@@ -109,6 +116,10 @@ body.loading {
     outline: 2px solid var(--on);
     outline-offset: 4px;
 }
+/* Фокус на щите при открытии окна: рамка — только после первого нажатия клавиши (popup.js) */
+#button[data-quiet]:focus-visible {
+    outline: none;
+}
 #button img {
     position: absolute;
     inset: 0;
@@ -139,9 +150,11 @@ body.loading {
 }
 .badges.left {
     align-items: flex-end;
+    text-align: end;
 }
 .badges.right {
     align-items: flex-start;
+    text-align: start;
 }
 .badge {
     display: flex;
@@ -150,8 +163,10 @@ body.loading {
     padding: 3px 9px;
     border-radius: 5px;
     background: var(--tint);
+    max-width: 100%;
     font-size: 11px;
     font-weight: 600;
+    /* Длинный перевод не влезает в окно — popup.js уменьшит шрифт или перенесёт строку (fitBadges) */
     white-space: nowrap;
     cursor: default;
     --color: var(--none);
@@ -159,6 +174,7 @@ body.loading {
 }
 .badge::before {
     content: "";
+    flex: none;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -171,11 +187,11 @@ body.loading {
 }
 .badge[data-state="warn"] {
     --color: var(--warn);
-    color: var(--warn);
+    color: var(--warn-text);
 }
 .badge[data-state="bad"] {
     --color: var(--off);
-    color: var(--off);
+    color: var(--off-text);
 }
 .badge:is([data-state="warn"], [data-state="bad"]) {
     background: color-mix(in srgb, var(--color) 13%, transparent);
@@ -255,12 +271,56 @@ body.loading {
 }
 #score[data-state="good"] {
     --color: var(--on);
+    --ink: var(--on-text);
 }
 #score[data-state="warn"] {
     --color: var(--warn);
+    --ink: var(--warn-text);
 }
 #score[data-state="bad"] {
     --color: var(--off);
+    --ink: var(--off-text);
+}
+/* Подпись, шкала и балл — одна кнопка: раскрывает показатели оценки */
+#score-more {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    border: 0;
+    border-radius: 4px;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: start;
+    cursor: pointer;
+}
+/* Стрелка, как у «Подробнее»: строку можно раскрыть */
+#score-more::after {
+    content: "";
+    flex: none;
+    width: 6px;
+    height: 6px;
+    margin-block-end: 3px;
+    margin-inline-end: 2px;
+    border: solid var(--muted);
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+    transition: transform 0.15s ease;
+}
+#score-more[aria-expanded="true"]::after {
+    margin-block: 3px 0;
+    transform: rotate(-135deg);
+}
+/* На картинке отчёта раскрывать нечего */
+.sheet #score-more::after {
+    display: none;
+}
+#score-parts {
+    align-self: stretch;
+    margin-top: -6px;
 }
 #score-label {
     color: var(--muted);
@@ -270,6 +330,7 @@ body.loading {
 }
 #meter {
     flex: 1;
+    min-width: 0;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 3px;
@@ -289,7 +350,7 @@ body.loading {
     font-size: 16px;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
-    color: var(--color);
+    color: var(--ink, var(--color));
 }
 
 /* Подробности о сайте */
@@ -325,9 +386,11 @@ body.loading {
 }
 .chip[data-state="warn"] {
     --color: var(--warn);
+    color: var(--warn-text);
 }
 .chip[data-state="bad"] {
     --color: var(--off);
+    color: var(--off-text);
 }
 .chip:is([data-state="warn"], [data-state="bad"]) {
     background: color-mix(in srgb, var(--color) 13%, transparent);
@@ -388,13 +451,13 @@ body.loading {
     margin-inline-start: auto;
 }
 #audit-issues[data-state="warn"] {
-    color: var(--warn);
+    color: var(--warn-text);
 }
 #audit-issues[data-state="bad"] {
-    color: var(--off);
+    color: var(--off-text);
 }
 #audit-issues[data-state="good"] {
-    color: var(--on);
+    color: var(--on-text);
 }
 #audit-body {
     display: flex;
@@ -445,9 +508,11 @@ body.loading {
 }
 .audit-row[data-state="warn"] {
     --color: var(--warn);
+    --ink: var(--warn-text);
 }
 .audit-row[data-state="bad"] {
     --color: var(--off);
+    --ink: var(--off-text);
 }
 .audit-row b {
     margin-inline-start: auto;
@@ -457,7 +522,7 @@ body.loading {
 }
 .audit-row[data-state="warn"] b,
 .audit-row[data-state="bad"] b {
-    color: var(--color);
+    color: var(--ink);
 }
 .audit-row[data-state="none"] b {
     color: var(--muted);
@@ -546,7 +611,7 @@ body.loading {
     cursor: pointer;
 }
 .tool[data-done] {
-    color: var(--on);
+    color: var(--on-text);
 }
 .tool svg {
     width: 15px;
@@ -642,7 +707,7 @@ body.loading {
     color: var(--text);
 }
 .icon-button[data-done] {
-    color: var(--on);
+    color: var(--on-text);
 }
 .icon-button svg {
     flex: none;
@@ -654,8 +719,8 @@ body.loading {
 }
 /* Удаление данных: второе нажатие подтверждает */
 #clear[data-confirm] {
-    background: var(--off);
-    color: #fff;
+    background: var(--off-text);
+    color: var(--bg);
 }
 #score:has(#clear[data-confirm]) #score-label {
     display: none;
@@ -726,6 +791,42 @@ body.loading {
 }
 [hidden] {
     display: none !important;
+}
+
+/* Пояснение по нажатию или фокусу с клавиатуры: то же, что в подсказке при наведении (popup.js setupTips) */
+#tip {
+    position: absolute;
+    z-index: 10;
+    max-width: 300px;
+    padding: 6px 9px;
+    border-radius: 6px;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.4;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+    pointer-events: none;
+}
+/* Есть пояснение — по нажатию тоже */
+.badge[tabindex],
+.chip[tabindex],
+.audit-row[tabindex],
+#stats {
+    cursor: help;
+}
+.badge:focus-visible,
+.chip:focus-visible,
+.audit-row:focus-visible,
+#stats:focus-visible,
+#score-more:focus-visible {
+    outline: 2px solid var(--muted);
+    outline-offset: 2px;
+}
+.audit-row:focus-visible {
+    outline-offset: 1px;
+    border-radius: 3px;
 }
 
 /* Ссылки */

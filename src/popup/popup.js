@@ -486,6 +486,44 @@ function setBadge(id, text, state, title) {
     badge.textContent = text;
     badge.dataset.state = state;
     badge.title = title;
+    // С клавиатуры — только значки с пояснением (setupTips); пустые «—» Tab пропускает
+    if (title) {
+        badge.tabIndex = 0;
+    } else {
+        badge.removeAttribute('tabindex');
+    }
+    fitBadges();
+}
+
+/**
+ * Длинный перевод («Verkkotunnukset 10», «Ohne Komprimierung») не должен выталкивать значки за окно.
+ * Пока ряд со щитом шире окна, у самого широкого значка шрифт на полпикселя меньше (не мельче 9,5px), затем
+ * перенос по пробелу (и снова до 9,5px). Слова не рвутся: если и так не влезает, нужен перевод покороче.
+ * Обычные значки не меняются
+ */
+function fitBadges() {
+    const panel = document.getElementById('panel');
+    const badges = [...panel.querySelectorAll('.badge')];
+    for (const badge of badges) {
+        badge.removeAttribute('style');
+    }
+    const overflows = () => panel.scrollWidth > panel.clientWidth + 0.5;
+    // Перенесённый значок занимает всю колонку: при равной ширине колонку держит тот, что в одну строку
+    const width = (badge) => badge.offsetWidth - (badge.style.whiteSpace === 'normal' ? 0.5 : 0);
+    const left = new Set(badges);
+    while (overflows() && left.size) {
+        const widest = [...left].reduce((a, b) => (width(b) > width(a) ? b : a));
+        const size = parseFloat(getComputedStyle(widest).fontSize);
+        const wraps = widest.style.whiteSpace === 'normal';
+        if (size > 9.5) {
+            widest.style.fontSize = `${size - 0.5}px`;
+        } else if (!wraps) {
+            widest.style.whiteSpace = 'normal';
+            widest.style.removeProperty('font-size');
+        } else {
+            left.delete(widest);
+        }
+    }
 }
 
 /**
@@ -501,6 +539,9 @@ function chip(text, state, title, sure = true) {
     el.className = 'chip';
     el.textContent = text;
     el.title = sure ? title : [title, t('guess')].filter(Boolean).join('\n');
+    if (el.title) {
+        el.tabIndex = 0; // Пояснение — и с клавиатуры (setupTips)
+    }
     if (state) {
         el.dataset.state = state;
     }
@@ -524,9 +565,10 @@ async function loadData(name) {
  * Значки сайта: HTTPS, протокол, скорость, сторонние домены, вес, сжатие
  * @param {chrome.tabs.Tab} tab
  * @param {?Object} server данные расширенного режима
+ * @param {Function} [onLoadTime] страница догрузилась после открытия окна: info.loadTime уже обновлён
  * @returns {Promise<?Object>} данные страницы
  */
-async function renderSite(tab, server) {
+async function renderSite(tab, server, onLoadTime) {
     const https = new URL(tab.url).protocol === 'https:';
     setBadge('https', https ? 'HTTPS' : 'HTTP', https ? 'good' : 'bad',
         t(https ? 'httpsOn' : 'httpsOff'));
@@ -560,20 +602,48 @@ async function renderSite(tab, server) {
 
     renderSpeed(info);
     if (info.loadTime === null) {
-        // Окно открыли до конца загрузки: время покажем, когда страница загрузится
-        const listener = async (id, change) => {
-            if (id !== tab.id || change.status !== 'complete') {
+        // Окно открыли до конца загрузки: время покажем, когда страница загрузится, а если она не загрузится
+        // никогда (счётчик или реклама грузятся бесконечно) — время готовности документа через 10 секунд
+        let timer = 0;
+        let attempts = 0;
+        // Ответ на более ранний замер может прийти позже нового — показываем только последний
+        let seq = 0;
+        let done = false;
+        const listener = (id, change) => {
+            if (id === tab.id && change.status === 'complete') {
+                refresh();
+            }
+        };
+        const stop = () => {
+            done = true;
+            clearTimeout(timer);
+            chrome.tabs.onUpdated.removeListener(listener);
+        };
+        const refresh = async () => {
+            clearTimeout(timer);
+            const n = ++seq;
+            let result;
+            try {
+                [{result}] = await chrome.scripting.executeScript({target: {tabId: tab.id}, func: collectPageInfo});
+            } catch {
+                stop(); // Вкладку закрыли или перешли на страницу, недоступную расширению
                 return;
             }
-            chrome.tabs.onUpdated.removeListener(listener);
-            try {
-                const [{result}] = await chrome.scripting.executeScript({target: {tabId: tab.id}, func: collectPageInfo});
-                renderSpeed(result);
-            } catch {
-                // Вкладку закрыли или перешли на страницу, недоступную расширению
+            if (done || n !== seq) {
+                return;
+            }
+            renderSpeed(result);
+            if (result.loadTime !== null) {
+                stop();
+                info.loadTime = result.loadTime;
+                onLoadTime?.();
+            } else if (++attempts < 8) {
+                // Ещё грузится (complete мог и не прийти): замер тяжёлый, поэтому всё реже и не больше 8 попыток
+                timer = setTimeout(refresh, Math.max(10000 - result.age, 1000 * attempts) + 100);
             }
         };
         chrome.tabs.onUpdated.addListener(listener);
+        timer = setTimeout(refresh, Math.max(10000 - info.age, 1000) + 100);
     }
 
     const count = info.domains.length;
@@ -585,7 +655,7 @@ async function renderSite(tab, server) {
     const {bytes, estimated, files, unknown, truncated} = info.weight;
     const approximate = truncated || estimated > bytes * 0.2;
     const megabytes = bytes / 2 ** 20;
-    setBadge('weight', (approximate ? '≈ ' : '') + formatSize(bytes),
+    setBadge('weight', (approximate ? '≈\u00a0' : '') + formatSize(bytes),
         megabytes < 1 ? 'good' : megabytes < 3 ? 'warn' : 'bad',
         [t('weightTitle'), approximate ? t('weightEstimated', files - unknown, files) : ''].filter(Boolean).join('\n'));
 
@@ -630,17 +700,19 @@ async function renderSite(tab, server) {
  * Значок времени загрузки. Если страница так и не загрузилась целиком (счётчик или реклама грузятся
  * бесконечно), через 10 секунд показываем время готовности документа
  * @param {{loadTime: ?number, ready: ?number, age: number}} info
+ * @returns {boolean} время показано (полной загрузки или готовности документа)
  */
 function renderSpeed({loadTime, ready, age}) {
-    const time = loadTime ?? (age > 10000 ? ready : null);
+    const time = loadTime ?? (age >= 10000 ? ready : null);
     if (time === null) {
         setBadge('speed', t('loading'), 'none', t('loadingTitle'));
-        return;
+        return false;
     }
     const seconds = time / 1000;
     const formatted = formatNumber(seconds, {minimumFractionDigits: 1, maximumFractionDigits: 1});
     setBadge('speed', t('seconds', formatted), seconds < 2 ? 'good' : seconds < 5 ? 'warn' : 'bad',
         t(loadTime === null ? 'loadingTitle' : 'loadTime'));
+    return true;
 }
 
 /**
@@ -675,7 +747,8 @@ async function renderBlocked(tab, info, status, server) {
         cookies ? t('blockedCookies', cookies) : '',
         server?.bytes ? t('blockedSize', formatSize(server.bytes)) : ''
     ].filter(Boolean).join('\n'));
-    setBadge('trackers', t('trackers', trackers), trackers ? 'bad' : 'good',
+    // Трекеры заблокированы: сайт пытался следить, но защита это остановила — жёлтый, а не красный
+    setBadge('trackers', t('trackers', trackers), trackers ? 'warn' : 'good',
         trackers ? t('trackersFound', trackers) : t('trackersNone'));
 }
 
@@ -988,6 +1061,9 @@ function renderAudit(audit, server, extended) {
         const name = key.startsWith('auditCustom:') ? key.slice(12) : t(key);
         const hint = key.startsWith('auditCustom:') ? '' : t(key + 'Hint');
         el.title = sure ? hint : [hint, t('guess')].filter(Boolean).join('\n');
+        if (el.title) {
+            el.tabIndex = 0;
+        }
         if (!sure) {
             el.dataset.sure = 'false';
         }
@@ -1198,6 +1274,104 @@ function renderScore(info, companies, hsts, vitals) {
 }
 
 /**
+ * Показатели оценки метками: «Скорость 7», «Трекеры 4» — в окне под оценкой и на картинке отчёта
+ * @param {Array<[string, number]>} parts название, баллы из 10
+ * @returns {HTMLSpanElement[]}
+ */
+function scoreChips(parts) {
+    return parts.map(([name, points]) => chip(`${name} ${formatNumber(points)}`,
+        points >= 8 ? 'good' : points >= 5 ? 'warn' : 'bad', ''));
+}
+
+/**
+ * Нажатие на оценку раскрывает, из чего она сложилась
+ */
+function setupScoreParts() {
+    const box = document.getElementById('score-parts');
+    const button = document.getElementById('score-more');
+    button.addEventListener('click', () => {
+        box.hidden = !box.hidden;
+        button.setAttribute('aria-expanded', String(!box.hidden));
+    });
+}
+
+/**
+ * Пояснения значков, меток и строк «Подробнее» без мыши: по нажатию (в том числе на сенсорном экране)
+ * и по фокусу с клавиатуры показывается тот же текст, что в подсказке при наведении.
+ * Escape, нажатие мимо или уход фокуса — скрыть
+ */
+function setupTips() {
+    const tip = document.getElementById('tip');
+    const SELECTOR = '.badge[tabindex], .chip[tabindex], .audit-row[tabindex], #stats';
+    let owner = null;
+
+    const hide = () => {
+        if (!owner) {
+            return;
+        }
+        // Подсказку при наведении возвращаем, если её не заменили, пока было открыто пояснение
+        if (!owner.title) {
+            owner.title = owner.dataset.tip;
+        }
+        delete owner.dataset.tip;
+        owner.removeAttribute('aria-describedby');
+        owner = null;
+        tip.hidden = true;
+    };
+    const show = (el) => {
+        hide();
+        if (!el.title) {
+            return;
+        }
+        owner = el;
+        // Пока открыто пояснение, подсказка при наведении его не дублирует
+        el.dataset.tip = el.title;
+        el.removeAttribute('title');
+        el.setAttribute('aria-describedby', 'tip');
+        tip.textContent = el.dataset.tip;
+        tip.hidden = false;
+        const rect = el.getBoundingClientRect();
+        const max = document.documentElement.clientWidth - tip.offsetWidth - 8;
+        tip.style.left = `${Math.max(8, Math.min(rect.left + (rect.width - tip.offsetWidth) / 2, max)) + scrollX}px`;
+        tip.style.top = `${rect.bottom + 6 + scrollY}px`;
+    };
+
+    document.addEventListener('click', (event) => {
+        const el = event.target.closest(SELECTOR);
+        if (el && el !== owner) {
+            show(el);
+        } else {
+            hide();
+        }
+    });
+    document.addEventListener('focusin', (event) => {
+        if (event.target.matches(SELECTOR) && event.target.matches(':focus-visible')) {
+            show(event.target);
+        }
+    });
+    document.addEventListener('focusout', (event) => {
+        if (event.target === owner) {
+            hide();
+        }
+    });
+    document.addEventListener('keydown', (event) => {
+        const el = document.activeElement;
+        if (event.key === 'Escape' && owner) {
+            // preventDefault — чтобы Escape закрыл пояснение, а не окно
+            event.preventDefault();
+            hide();
+        } else if ((event.key === 'Enter' || event.key === ' ') && el?.matches(SELECTOR)) {
+            event.preventDefault();
+            if (el === owner) {
+                hide();
+            } else {
+                show(el);
+            }
+        }
+    });
+}
+
+/**
  * Файл расширения → data: URL (картинка в SVG не может ссылаться на файлы)
  * @param {string} src
  * @returns {Promise<string>}
@@ -1241,10 +1415,7 @@ async function renderReport(host, parts) {
     const score = document.getElementById('score').cloneNode(true);
     score.querySelector('#clear').remove();
     const scoreParts = make('div', 'sheet-parts');
-    for (const [name, points] of parts) {
-        const el = chip(`${name} ${formatNumber(points)}`, points >= 8 ? 'good' : points >= 5 ? 'warn' : 'bad', '');
-        scoreParts.append(el);
-    }
+    scoreParts.append(...scoreChips(parts));
 
     const details = document.getElementById('details').cloneNode(true);
     const copy = details.querySelector('#server .icon-button');
@@ -1254,7 +1425,8 @@ async function renderReport(host, parts) {
     const notes = make('ul', 'sheet-notes');
     const problems = [...panel.querySelectorAll(':is(#https, #protocol, #compression)[data-state="bad"]'),
         ...details.querySelectorAll('#extra .chip:is([data-state="bad"], [data-state="warn"])')];
-    for (const text of new Set(problems.map((el) => el.title.split('\n')[0]).filter(Boolean))) {
+    // Пояснение, открытое нажатием, временно хранится в data-tip (setupTips)
+    for (const text of new Set(problems.map((el) => (el.title || el.dataset.tip || '').split('\n')[0]).filter(Boolean))) {
         notes.append(make('li', '', text));
     }
     // Замечания из «Подробнее»: название и значение жирным, дальше пояснение
@@ -1357,11 +1529,19 @@ function reportText(host, short = false) {
 /**
  * «Поделиться» отчётом о сайте: картинка (в буфер, файлом, системным меню) или текст (Telegram, VK, буфер)
  * @param {string} host
- * @param {Array<[string, number]>} parts
+ * @param {{parts: Array<[string, number]>}} score показатели оценки, актуальные на момент нажатия
  */
-function setupReport(host, parts) {
+function setupReport(host, score) {
+    // Картинка рисуется один раз, а заново — если оценка пересчитана (страница догрузилась)
     let image = null;
-    const getImage = () => (image ||= renderReport(host, parts));
+    let imageParts = null;
+    const getImage = () => {
+        if (imageParts !== score.parts) {
+            imageParts = score.parts;
+            image = renderReport(host, score.parts);
+        }
+        return image;
+    };
     const fileName = `ablock-${host}-${new Date().toISOString().slice(0, 10)}.png`;
     // Иконка ненадолго подсвечивается, подсказка сообщает результат и затем возвращается
     const done = (button, key) => {
@@ -1538,6 +1718,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     translatePage();
     initLanguage();
     initTheme();
+    setupTips();
 
     const donate = document.getElementById('donate');
     donate.href = DONATE_URL;
@@ -1622,6 +1803,16 @@ document.addEventListener('DOMContentLoaded', async function () {
     });
 
     document.body.classList.remove('loading');
+    // Фокус при открытии — на щите (главное действие), а не на первом значке. Пока окно было скрыто, autofocus
+    // мог не сработать. Рамка фокуса — только когда начали пользоваться клавиатурой
+    const shield = document.getElementById('button');
+    if (document.activeElement === document.body) {
+        shield.focus();
+    }
+    shield.dataset.quiet = '';
+    const loud = () => delete shield.dataset.quiet;
+    document.addEventListener('keydown', loud, {once: true});
+    shield.addEventListener('blur', loud, {once: true});
 
     let info = null;
     let server = null; // Данные расширенного режима о вкладке
@@ -1683,7 +1874,10 @@ document.addEventListener('DOMContentLoaded', async function () {
     const auditResult = chrome.scripting.executeScript({target: {tabId: tab.id}, files: ['page/audit.js']})
         .then(([{result}]) => result || null)
         .catch(() => null);
-    info = await renderSite(tab, server);
+    // Оценка и её показатели; пересчитываются, если время загрузки придёт позже
+    const score = {parts: null};
+    let rescore = null;
+    info = await renderSite(tab, server, () => rescore?.());
     if (!info) {
         return; // Страница недоступна для расширений (магазин, настройки)
     }
@@ -1696,9 +1890,14 @@ document.addEventListener('DOMContentLoaded', async function () {
     const [tech, audit] = await Promise.all([techResult, auditResult]);
     renderTech(tech, server);
     renderAudit(audit, server, extended);
-    const parts = renderScore(info, companies, hsts, audit?.vitals);
+    rescore = () => {
+        score.parts = renderScore(info, companies, hsts, audit?.vitals);
+        document.getElementById('score-parts').replaceChildren(...scoreChips(score.parts));
+    };
+    rescore();
     document.getElementById('score').hidden = false;
-    setupReport(new URL(tab.url).hostname, parts);
+    setupScoreParts();
+    setupReport(new URL(tab.url).hostname, score);
     setupClear(tab);
 
 });

@@ -68,7 +68,7 @@
         "message": "Sivun latausaika"
     },
     "domains": {
-        "message": "Verkkotunnukset $COUNT$",
+        "message": "Domainit $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
