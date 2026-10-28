@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS lapa ielādē failus bez šifrēšanas: $COUNT$",
+        "message": "HTTPS lapa ielādē skriptus, stilus vai rāmjus bez šifrēšanas: $COUNT$. Pārlūks tos bloķē, tāpēc lapa var nedarboties pareizi",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP multivide $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS lapa ielādē attēlus, video vai audio caur HTTP: $COUNT$. Pārlūks pats pārslēdz tos uz HTTPS; ja serveris to neatbalsta, fails netiks ielādēts",
         "placeholders": {
             "count": {
                 "content": "$1"

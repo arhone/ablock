@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "หน้า HTTPS โหลดไฟล์โดยไม่เข้ารหัส: $COUNT$",
+        "message": "หน้า HTTPS โหลดสคริปต์ สไตล์ หรือเฟรมโดยไม่เข้ารหัส: $COUNT$ เบราว์เซอร์จะบล็อกไว้ หน้าเว็บจึงอาจทำงานไม่ถูกต้อง",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "มีเดีย HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "หน้า HTTPS โหลดรูปภาพ วิดีโอ หรือเสียงผ่าน HTTP: $COUNT$ เบราว์เซอร์จะเปลี่ยนเป็น HTTPS เอง หากเซิร์ฟเวอร์ไม่รองรับ ไฟล์จะโหลดไม่ได้",
         "placeholders": {
             "count": {
                 "content": "$1"

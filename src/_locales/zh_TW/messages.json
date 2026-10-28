@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS 頁面載入了未加密的檔案：$COUNT$",
+        "message": "HTTPS 頁面載入了未加密的指令碼、樣式或框架：$COUNT$。瀏覽器會封鎖它們，頁面可能無法正常運作",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP 媒體 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS 頁面透過 HTTP 載入了圖片、影片或音訊：$COUNT$。瀏覽器會自動改用 HTTPS；若伺服器不支援，檔案將無法載入",
         "placeholders": {
             "count": {
                 "content": "$1"

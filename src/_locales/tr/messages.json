@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS sayfası şifrelemesiz dosya yüklüyor: $COUNT$",
+        "message": "HTTPS sayfası şifrelemesiz betik, stil veya çerçeve yüklüyor: $COUNT$. Tarayıcı bunları engeller, bu yüzden sayfa düzgün çalışmayabilir",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP medyası $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS sayfası HTTP üzerinden görsel, video veya ses yüklüyor: $COUNT$. Tarayıcı bunları kendisi HTTPS’e geçirir; sunucu bunu desteklemiyorsa dosya yüklenmez",
         "placeholders": {
             "count": {
                 "content": "$1"

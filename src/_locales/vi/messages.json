@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Trang HTTPS tải tệp không mã hóa: $COUNT$",
+        "message": "Trang HTTPS tải tập lệnh, kiểu hoặc khung không mã hóa: $COUNT$. Trình duyệt chặn chúng nên trang có thể hoạt động không đúng",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "Phương tiện HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Trang HTTPS tải hình ảnh, video hoặc âm thanh qua HTTP: $COUNT$. Trình duyệt tự chuyển chúng sang HTTPS; nếu máy chủ không hỗ trợ, tệp sẽ không tải được",
         "placeholders": {
             "count": {
                 "content": "$1"

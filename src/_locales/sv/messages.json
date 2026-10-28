@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS-sidan läser in filer utan kryptering: $COUNT$",
+        "message": "HTTPS-sidan läser in skript, stilmallar eller ramar utan kryptering: $COUNT$. Webbläsaren blockerar dem, så sidan kanske inte fungerar som den ska",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP-media $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS-sidan läser in bilder, video eller ljud över HTTP: $COUNT$. Webbläsaren byter själv till HTTPS; om servern inte stöder det läses filen inte in",
         "placeholders": {
             "count": {
                 "content": "$1"

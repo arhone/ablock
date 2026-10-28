@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "تحمّل صفحة HTTPS ملفات دون تشفير: $COUNT$",
+        "message": "تحمّل صفحة HTTPS نصوصًا برمجية أو أنماطًا أو إطارات دون تشفير: $COUNT$. يحظرها المتصفح، لذا قد لا تعمل الصفحة بشكل صحيح",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "وسائط HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "تحمّل صفحة HTTPS صورًا أو فيديو أو صوتًا عبر HTTP: $COUNT$. يحوّلها المتصفح إلى HTTPS بنفسه، وإن لم يدعم الخادم ذلك فلن يُحمَّل الملف",
         "placeholders": {
             "count": {
                 "content": "$1"

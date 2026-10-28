@@ -262,9 +262,13 @@
         security: {
             csp: document.querySelector('meta[http-equiv="Content-Security-Policy" i]')?.content || '',
             securityTxt: typeof securityTxt === 'string' && /contact\s*:/i.test(securityTxt),
-            // Cookie входа, которые видит JavaScript (без HttpOnly), — по названию, это догадка
+            // Cookie входа, которые видит JavaScript (без HttpOnly), — по названию, это догадка.
+            // CSRF-токены JavaScript читает по замыслу, а сессии аналитики (Hotjar, Amplitude, Google, Метрика,
+            // Matomo, Microsoft, Pinterest, TikTok, Stripe, Intercom) входом не являются
             sessionCookies: document.cookie.split(/;\s*/).map((c) => c.split('=')[0])
-                .filter((name) => /sess|sid$|^sid|token|auth|jwt/i.test(name)).slice(0, 3)
+                .filter((name) => /sess|sid$|^sid|token|auth|jwt/i.test(name)
+                    && !/csrf|xsrf|amplitude|^_(hj|ga|ym|pk_|uet|pin_|tt)|^ttcsid|^__stripe|^intercom-/i.test(name))
+                .slice(0, 3)
         }
     };
 })();

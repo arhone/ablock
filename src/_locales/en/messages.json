@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "The HTTPS page loads files without encryption: $COUNT$",
+        "message": "The HTTPS page loads scripts, styles or frames without encryption: $COUNT$. The browser blocks them, so the page may not work properly",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP media $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "The HTTPS page loads images, video or audio over HTTP: $COUNT$. The browser upgrades them to HTTPS itself; if the server doesn't support it, the file won't load",
         "placeholders": {
             "count": {
                 "content": "$1"

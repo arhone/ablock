@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Сторінка HTTPS завантажує файли без шифрування: $COUNT$",
+        "message": "Сторінка HTTPS підключає скрипти, стилі або фрейми без шифрування: $COUNT$. Браузер їх блокує — сторінка може працювати неправильно",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP-медіа $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Сторінка HTTPS завантажує зображення, відео або звук через HTTP: $COUNT$. Браузер сам переводить їх на HTTPS; якщо сервер цього не вміє, файл не завантажиться",
         "placeholders": {
             "count": {
                 "content": "$1"

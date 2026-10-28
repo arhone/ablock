@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS-sivu lataa tiedostoja ilman salausta: $COUNT$",
+        "message": "HTTPS-sivu lataa skriptejä, tyylejä tai kehyksiä ilman salausta: $COUNT$. Selain estää ne, joten sivu ei ehkä toimi oikein",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP-media $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS-sivu lataa kuvia, videota tai ääntä HTTP:n kautta: $COUNT$. Selain vaihtaa ne itse HTTPS:ään; jos palvelin ei tue sitä, tiedosto ei lataudu",
         "placeholders": {
             "count": {
                 "content": "$1"

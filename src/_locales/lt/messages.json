@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS puslapis įkelia failus be šifravimo: $COUNT$",
+        "message": "HTTPS puslapis įkelia scenarijus, stilius ar rėmelius be šifravimo: $COUNT$. Naršyklė juos blokuoja, todėl puslapis gali veikti netinkamai",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP medija $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS puslapis įkelia paveikslėlius, vaizdo ar garso įrašus per HTTP: $COUNT$. Naršyklė pati perjungia juos į HTTPS; jei serveris to nepalaiko, failas neįsikels",
         "placeholders": {
             "count": {
                 "content": "$1"

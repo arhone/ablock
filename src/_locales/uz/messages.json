@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS sahifa shifrlanmagan fayllarni yuklaydi: $COUNT$",
+        "message": "HTTPS sahifa skriptlar, uslublar yoki freymlarni shifrlanmagan holda yuklaydi: $COUNT$. Brauzer ularni bloklaydi, shuning uchun sahifa to‘g‘ri ishlamasligi mumkin",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP media $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS sahifa rasm, video yoki audioni HTTP orqali yuklaydi: $COUNT$. Brauzer ularni o‘zi HTTPS ga o‘tkazadi; server buni qo‘llab-quvvatlamasa, fayl yuklanmaydi",
         "placeholders": {
             "count": {
                 "content": "$1"

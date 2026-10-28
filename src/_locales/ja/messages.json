@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS ページが暗号化なしでファイルを読み込んでいます: $COUNT$",
+        "message": "HTTPS ページが暗号化なしでスクリプト、スタイル、フレームを読み込んでいます: $COUNT$。ブラウザーがブロックするため、ページが正しく動作しない可能性があります",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP メディア $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS ページが HTTP で画像、動画、音声を読み込んでいます: $COUNT$。ブラウザーが自動で HTTPS に切り替えますが、サーバーが対応していないとファイルは読み込まれません",
         "placeholders": {
             "count": {
                 "content": "$1"

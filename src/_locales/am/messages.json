@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "የHTTPS ገጹ ያለ ምስጠራ ፋይሎችን ይጭናል: $COUNT$",
+        "message": "የHTTPS ገጹ ስክሪፕቶችን፣ ቅጦችን ወይም ፍሬሞችን ያለ ምስጠራ ይጭናል: $COUNT$። አሳሹ ያግዳቸዋል፣ ስለዚህ ገጹ በትክክል ላይሰራ ይችላል",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "የHTTP ሚዲያ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "የHTTPS ገጹ ምስሎችን፣ ቪዲዮን ወይም ድምፅን በHTTP ይጭናል: $COUNT$። አሳሹ ራሱ ወደ HTTPS ይቀይራቸዋል፤ አገልጋዩ ካልደገፈው ፋይሉ አይጫንም",
         "placeholders": {
             "count": {
                 "content": "$1"

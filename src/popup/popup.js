@@ -432,10 +432,14 @@ function collectPageInfo() {
         }
     }
 
-    // Смешанный контент: страница по HTTPS подгружает файлы по HTTP
-    const mixed = location.protocol === 'https:'
-        ? document.querySelectorAll('script[src^="http:"], img[src^="http:"], iframe[src^="http:"], '
-            + 'link[rel="stylesheet"][href^="http:"], video[src^="http:"], audio[src^="http:"], source[src^="http:"]').length
+    // Смешанный контент: страница по HTTPS подгружает файлы по HTTP. Скрипты, стили и фреймы (активный)
+    // браузер блокирует — страница ломается; картинки и медиа (пассивный) Chrome сам переводит на HTTPS
+    const https = location.protocol === 'https:';
+    const mixed = https
+        ? document.querySelectorAll('script[src^="http:"], iframe[src^="http:"], link[rel="stylesheet"][href^="http:"]').length
+        : 0;
+    const mixedPassive = https
+        ? document.querySelectorAll('img[src^="http:"], video[src^="http:"], audio[src^="http:"], source[src^="http:"]').length
         : 0;
 
     return {
@@ -470,7 +474,8 @@ function collectPageInfo() {
             files: encodings,
             plain: [...plain].slice(0, 5)
         },
-        mixed
+        mixed,
+        mixedPassive
     };
 }
 
@@ -1010,6 +1015,9 @@ function renderExtra(info, server) {
     if (info.mixed) {
         dd.append(chip(t('mixed', info.mixed), 'bad', t('mixedTitle', info.mixed)));
     }
+    if (info.mixedPassive) {
+        dd.append(chip(t('mixedPassive', info.mixedPassive), 'warn', t('mixedPassiveTitle', info.mixedPassive)));
+    }
     const empty = !dd.childElementCount;
     dd.hidden = empty;
     document.getElementById('extra-label').hidden = empty;
@@ -1188,7 +1196,8 @@ function renderAudit(audit, server, extended) {
         row('auditCsp', !csp ? no : weak ? t('auditCspWeak') : yes, !csp ? 'warn' : weak ? 'warn' : 'good');
         const nosniff = /nosniff/i.test(headers['x-content-type-options'] || '');
         row('auditNosniff', nosniff ? yes : no, nosniff ? 'good' : 'warn');
-        const frame = 'x-frame-options' in headers || /frame-ancestors/i.test(csp);
+        // frame-ancestors в <meta> браузер игнорирует — только из заголовка
+        const frame = 'x-frame-options' in headers || /frame-ancestors/i.test(headers['content-security-policy'] || '');
         row('auditFrame', frame ? yes : no, frame ? 'good' : 'warn');
         row('auditReferrer', 'referrer-policy' in headers ? yes : no, 'referrer-policy' in headers ? 'good' : 'none');
         row('auditPermissions', 'permissions-policy' in headers ? yes : no, 'permissions-policy' in headers ? 'good' : 'none');
@@ -1199,8 +1208,9 @@ function renderAudit(audit, server, extended) {
             .filter((value) => /\d+\.\d+/.test(value));
         row('auditVersions', versions.length ? versions.join(', ') : t('auditHidden'), versions.length ? 'warn' : 'good');
     }
+    // Угадано по названию cookie — найденные показываем нейтрально, без замечания
     row('auditSession', security.sessionCookies.length ? security.sessionCookies.join(', ') : no,
-        security.sessionCookies.length ? 'warn' : 'good', !security.sessionCookies.length);
+        security.sessionCookies.length ? 'none' : 'good', !security.sessionCookies.length);
     row('auditSecurityTxt', unchecked.securityTxt ? '—' : security.securityTxt ? yes : no, security.securityTxt ? 'good' : 'none');
 
     const issues = body.querySelectorAll('.audit-row[data-state="warn"], .audit-row[data-state="bad"]').length;
@@ -1247,7 +1257,8 @@ function renderScore(info, companies, hsts, vitals) {
         ['scoreDomains', step(info.domains.length, [5, 15, 30], [1, 0.6, 0.35, 0.15]), 1],
         ['scoreCompression', compressionScore(info), 0.5],
         ['scoreHsts', hsts === null ? undefined : hsts ? 1 : 0.3, 0.5],
-        ['scoreMixed', info.mixed ? 0.2 : 1, 1]
+        // Пассивный смешанный контент браузер переводит на HTTPS сам — небольшой штраф за ошибку в адресах
+        ['scoreMixed', info.mixed ? 0.2 : info.mixedPassive ? 0.8 : 1, 1]
     ].filter(([, value]) => value !== undefined);
 
     const total = parts.reduce((sum, [, value, weight]) => sum + value * weight, 0);

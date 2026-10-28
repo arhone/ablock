@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Pagina HTTPS încarcă fișiere fără criptare: $COUNT$",
+        "message": "Pagina HTTPS încarcă scripturi, stiluri sau cadre fără criptare: $COUNT$. Browserul le blochează, așa că pagina poate să nu funcționeze corect",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "Media HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Pagina HTTPS încarcă imagini, video sau audio prin HTTP: $COUNT$. Browserul le trece singur pe HTTPS; dacă serverul nu acceptă asta, fișierul nu se va încărca",
         "placeholders": {
             "count": {
                 "content": "$1"

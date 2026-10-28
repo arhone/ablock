@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "صفحهٔ HTTPS فایل‌هایی را بدون رمزگذاری بارگیری می‌کند: $COUNT$",
+        "message": "صفحهٔ HTTPS اسکریپت، استایل یا فریم را بدون رمزگذاری بارگیری می‌کند: $COUNT$. مرورگر آن‌ها را مسدود می‌کند، پس ممکن است صفحه درست کار نکند",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "رسانهٔ HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "صفحهٔ HTTPS تصویر، ویدیو یا صدا را از طریق HTTP بارگیری می‌کند: $COUNT$. مرورگر خودش آن‌ها را به HTTPS می‌برد؛ اگر سرور پشتیبانی نکند، فایل بارگیری نمی‌شود",
         "placeholders": {
             "count": {
                 "content": "$1"

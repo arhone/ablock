@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Die HTTPS-Seite lädt Dateien ohne Verschlüsselung: $COUNT$",
+        "message": "Die HTTPS-Seite lädt Skripte, Stylesheets oder Frames ohne Verschlüsselung: $COUNT$. Der Browser blockiert sie, die Seite funktioniert daher evtl. nicht richtig",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP-Medien $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Die HTTPS-Seite lädt Bilder, Video oder Audio über HTTP: $COUNT$. Der Browser stellt sie selbst auf HTTPS um; unterstützt der Server das nicht, wird die Datei nicht geladen",
         "placeholders": {
             "count": {
                 "content": "$1"

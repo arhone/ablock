@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS-leht laadib faile krüpteerimata: $COUNT$",
+        "message": "HTTPS-leht laadib skripte, stiile või raame krüpteerimata: $COUNT$. Brauser blokeerib need, nii et leht ei pruugi õigesti töötada",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP-meedia $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS-leht laadib pilte, videot või heli üle HTTP: $COUNT$. Brauser viib need ise üle HTTPS-ile; kui server seda ei toeta, faili ei laadita",
         "placeholders": {
             "count": {
                 "content": "$1"

@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Stran HTTPS nalaga datoteke brez šifriranja: $COUNT$",
+        "message": "Stran HTTPS nalaga skripte, sloge ali okvirje brez šifriranja: $COUNT$. Brskalnik jih blokira, zato stran morda ne bo delovala pravilno",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "Mediji HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Stran HTTPS nalaga slike, video ali zvok prek HTTP: $COUNT$. Brskalnik jih sam preklopi na HTTPS; če strežnik tega ne podpira, se datoteka ne bo naložila",
         "placeholders": {
             "count": {
                 "content": "$1"

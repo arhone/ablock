@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Halaman HTTPS memuat file tanpa enkripsi: $COUNT$",
+        "message": "Halaman HTTPS memuat skrip, gaya, atau frame tanpa enkripsi: $COUNT$. Browser memblokirnya, sehingga halaman mungkin tidak berfungsi dengan benar",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "Media HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Halaman HTTPS memuat gambar, video, atau audio lewat HTTP: $COUNT$. Browser sendiri mengalihkannya ke HTTPS; jika server tidak mendukungnya, file tidak akan dimuat",
         "placeholders": {
             "count": {
                 "content": "$1"

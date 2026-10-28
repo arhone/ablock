@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS પેજ એન્ક્રિપ્શન વિના ફાઇલો લોડ કરે છે: $COUNT$",
+        "message": "HTTPS પેજ એન્ક્રિપ્શન વિના સ્ક્રિપ્ટ, સ્ટાઇલ અથવા ફ્રેમ લોડ કરે છે: $COUNT$. બ્રાઉઝર તેમને બ્લૉક કરે છે, તેથી પેજ યોગ્ય રીતે કામ ન પણ કરે",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP મીડિયા $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS પેજ HTTP પર છબીઓ, વિડિયો અથવા ઑડિયો લોડ કરે છે: $COUNT$. બ્રાઉઝર જાતે તેમને HTTPS પર લઈ જાય છે; જો સર્વર તેને સપોર્ટ ન કરે, તો ફાઇલ લોડ નહીં થાય",
         "placeholders": {
             "count": {
                 "content": "$1"

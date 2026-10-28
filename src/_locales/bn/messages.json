@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS পৃষ্ঠাটি এনক্রিপশন ছাড়া ফাইল লোড করে: $COUNT$",
+        "message": "HTTPS পৃষ্ঠাটি এনক্রিপশন ছাড়া স্ক্রিপ্ট, স্টাইল বা ফ্রেম লোড করে: $COUNT$। ব্রাউজার এগুলো ব্লক করে, তাই পৃষ্ঠাটি ঠিকমতো কাজ নাও করতে পারে",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP মিডিয়া $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS পৃষ্ঠাটি HTTP-তে ছবি, ভিডিও বা অডিও লোড করে: $COUNT$। ব্রাউজার নিজেই এগুলোকে HTTPS-এ নিয়ে যায়; সার্ভার তা সমর্থন না করলে ফাইলটি লোড হবে না",
         "placeholders": {
             "count": {
                 "content": "$1"

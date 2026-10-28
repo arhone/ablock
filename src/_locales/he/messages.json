@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "דף ה-HTTPS טוען קבצים ללא הצפנה: $COUNT$",
+        "message": "דף ה-HTTPS טוען סקריפטים, סגנונות או מסגרות ללא הצפנה: $COUNT$. הדפדפן חוסם אותם, ולכן ייתכן שהדף לא יעבוד כראוי",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "מדיה ב-HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "דף ה-HTTPS טוען תמונות, וידאו או שמע דרך HTTP: $COUNT$. הדפדפן מעביר אותם ל-HTTPS בעצמו; אם השרת לא תומך בכך, הקובץ לא ייטען",
         "placeholders": {
             "count": {
                 "content": "$1"

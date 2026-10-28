@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Stránka HTTPS načítá soubory bez šifrování: $COUNT$",
+        "message": "Stránka HTTPS načítá skripty, styly nebo rámce bez šifrování: $COUNT$. Prohlížeč je blokuje, takže stránka nemusí fungovat správně",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "Média HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Stránka HTTPS načítá obrázky, video nebo zvuk přes HTTP: $COUNT$. Prohlížeč je sám převede na HTTPS; pokud to server nepodporuje, soubor se nenačte",
         "placeholders": {
             "count": {
                 "content": "$1"

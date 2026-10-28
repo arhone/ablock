@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Naglo-load ang HTTPS page ng mga file nang walang encryption: $COUNT$",
+        "message": "Naglo-load ang HTTPS page ng mga script, style o frame nang walang encryption: $COUNT$. Bina-block ito ng browser, kaya maaaring hindi gumana nang tama ang page",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP media $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Naglo-load ang HTTPS page ng mga larawan, video o audio sa HTTP: $COUNT$. Kusang inililipat ito ng browser sa HTTPS; kung hindi ito suportado ng server, hindi maglo-load ang file",
         "placeholders": {
             "count": {
                 "content": "$1"

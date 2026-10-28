@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Halaman HTTPS memuatkan fail tanpa penyulitan: $COUNT$",
+        "message": "Halaman HTTPS memuatkan skrip, gaya atau bingkai tanpa penyulitan: $COUNT$. Pelayar menyekatnya, jadi halaman mungkin tidak berfungsi dengan betul",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "Media HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Halaman HTTPS memuatkan imej, video atau audio melalui HTTP: $COUNT$. Pelayar sendiri menukarnya kepada HTTPS; jika pelayan tidak menyokongnya, fail tidak akan dimuatkan",
         "placeholders": {
             "count": {
                 "content": "$1"

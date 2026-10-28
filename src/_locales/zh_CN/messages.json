@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS 页面加载了未加密的文件：$COUNT$",
+        "message": "HTTPS 页面加载了未加密的脚本、样式或框架：$COUNT$。浏览器会拦截它们，页面可能无法正常工作",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP 媒体 $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS 页面通过 HTTP 加载了图片、视频或音频：$COUNT$。浏览器会自动改用 HTTPS；如果服务器不支持，文件将无法加载",
         "placeholders": {
             "count": {
                 "content": "$1"

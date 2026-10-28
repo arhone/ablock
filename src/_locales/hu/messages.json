@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "A HTTPS-oldal titkosítás nélkül tölt be fájlokat: $COUNT$",
+        "message": "A HTTPS-oldal titkosítás nélkül tölt be szkripteket, stílusokat vagy kereteket: $COUNT$. A böngésző letiltja őket, így az oldal hibásan működhet",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP-média $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "A HTTPS-oldal HTTP-n keresztül tölt be képeket, videót vagy hangot: $COUNT$. A böngésző maga állítja át őket HTTPS-re; ha a szerver ezt nem támogatja, a fájl nem töltődik be",
         "placeholders": {
             "count": {
                 "content": "$1"

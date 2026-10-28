@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "La página HTTPS carga archivos sin cifrar: $COUNT$",
+        "message": "La página HTTPS carga scripts, estilos o marcos sin cifrar: $COUNT$. El navegador los bloquea, así que la página puede no funcionar bien",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "Multimedia HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "La página HTTPS carga imágenes, video o audio por HTTP: $COUNT$. El navegador los pasa a HTTPS por sí mismo; si el servidor no lo admite, el archivo no se cargará",
         "placeholders": {
             "count": {
                 "content": "$1"

@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Strona HTTPS ładuje pliki bez szyfrowania: $COUNT$",
+        "message": "Strona HTTPS ładuje skrypty, style lub ramki bez szyfrowania: $COUNT$. Przeglądarka je blokuje, więc strona może działać nieprawidłowo",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "Multimedia HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Strona HTTPS ładuje obrazy, wideo lub dźwięk przez HTTP: $COUNT$. Przeglądarka sama przełącza je na HTTPS; jeśli serwer tego nie obsługuje, plik się nie wczyta",
         "placeholders": {
             "count": {
                 "content": "$1"

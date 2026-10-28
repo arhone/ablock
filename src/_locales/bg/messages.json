@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Страницата по HTTPS зарежда файлове без криптиране: $COUNT$",
+        "message": "Страницата по HTTPS зарежда скриптове, стилове или фреймове без криптиране: $COUNT$. Браузърът ги блокира и страницата може да не работи правилно",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP медия $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Страницата по HTTPS зарежда изображения, видео или аудио по HTTP: $COUNT$. Браузърът сам ги превключва към HTTPS; ако сървърът не го поддържа, файлът няма да се зареди",
         "placeholders": {
             "count": {
                 "content": "$1"

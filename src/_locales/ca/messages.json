@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "La pàgina HTTPS carrega fitxers sense xifrar: $COUNT$",
+        "message": "La pàgina HTTPS carrega scripts, estils o marcs sense xifrar: $COUNT$. El navegador els bloqueja, així que la pàgina pot no funcionar bé",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "Multimèdia HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "La pàgina HTTPS carrega imatges, vídeo o àudio per HTTP: $COUNT$. El navegador els passa a HTTPS per si sol; si el servidor no ho admet, el fitxer no es carregarà",
         "placeholders": {
             "count": {
                 "content": "$1"

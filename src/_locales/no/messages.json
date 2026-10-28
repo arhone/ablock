@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS-siden laster inn filer uten kryptering: $COUNT$",
+        "message": "HTTPS-siden laster inn skript, stiler eller rammer uten kryptering: $COUNT$. Nettleseren blokkerer dem, så siden fungerer kanskje ikke som den skal",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP-medier $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS-siden laster inn bilder, video eller lyd over HTTP: $COUNT$. Nettleseren bytter dem selv til HTTPS; hvis serveren ikke støtter det, lastes ikke filen inn",
         "placeholders": {
             "count": {
                 "content": "$1"

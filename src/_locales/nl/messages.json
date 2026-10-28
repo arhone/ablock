@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "De HTTPS-pagina laadt bestanden zonder versleuteling: $COUNT$",
+        "message": "De HTTPS-pagina laadt scripts, stijlen of frames zonder versleuteling: $COUNT$. De browser blokkeert ze, dus de pagina werkt mogelijk niet goed",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP-media $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "De HTTPS-pagina laadt afbeeldingen, video of audio via HTTP: $COUNT$. De browser zet ze zelf om naar HTTPS; als de server dat niet ondersteunt, wordt het bestand niet geladen",
         "placeholders": {
             "count": {
                 "content": "$1"

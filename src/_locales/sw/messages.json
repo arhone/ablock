@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Ukurasa wa HTTPS unapakia faili bila usimbaji: $COUNT$",
+        "message": "Ukurasa wa HTTPS unapakia hati, mitindo au fremu bila usimbaji: $COUNT$. Kivinjari huzizuia, kwa hiyo ukurasa huenda usifanye kazi ipasavyo",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "Midia ya HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Ukurasa wa HTTPS unapakia picha, video au sauti kupitia HTTP: $COUNT$. Kivinjari chenyewe huzihamishia HTTPS; seva isipoauni hilo, faili halitapakiwa",
         "placeholders": {
             "count": {
                 "content": "$1"

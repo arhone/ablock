@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Страница по HTTPS подгружает файлы без шифрования: $COUNT$",
+        "message": "Страница по HTTPS подключает скрипты, стили или фреймы без шифрования: $COUNT$. Браузер их блокирует — страница может работать неправильно",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP-медиа $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Страница по HTTPS подгружает картинки, видео или звук по HTTP: $COUNT$. Браузер сам переводит их на HTTPS; если сервер так не умеет, файл не загрузится",
         "placeholders": {
             "count": {
                 "content": "$1"

@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS stranica učitava datoteke bez šifriranja: $COUNT$",
+        "message": "HTTPS stranica učitava skripte, stilove ili okvire bez šifriranja: $COUNT$. Preglednik ih blokira pa stranica možda neće ispravno raditi",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP mediji $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS stranica učitava slike, video ili zvuk preko HTTP-a: $COUNT$. Preglednik ih sam prebacuje na HTTPS; ako poslužitelj to ne podržava, datoteka se neće učitati",
         "placeholders": {
             "count": {
                 "content": "$1"

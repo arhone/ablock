@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS беті шифрлаусыз файлдар жүктейді: $COUNT$",
+        "message": "HTTPS беті скрипттерді, стильдерді немесе фреймдерді шифрлаусыз жүктейді: $COUNT$. Браузер оларды бұғаттайды, сондықтан бет дұрыс жұмыс істемеуі мүмкін",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP медиа $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS беті суреттерді, бейнені немесе аудионы HTTP арқылы жүктейді: $COUNT$. Браузер оларды өзі HTTPS-ке ауыстырады; сервер мұны қолдамаса, файл жүктелмейді",
         "placeholders": {
             "count": {
                 "content": "$1"

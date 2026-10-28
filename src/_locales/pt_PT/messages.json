@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "A página HTTPS carrega ficheiros sem encriptação: $COUNT$",
+        "message": "A página HTTPS carrega scripts, estilos ou frames sem encriptação: $COUNT$. O navegador bloqueia-os, por isso a página pode não funcionar corretamente",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "Multimédia HTTP $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "A página HTTPS carrega imagens, vídeo ou áudio por HTTP: $COUNT$. O navegador passa-os sozinho para HTTPS; se o servidor não o suportar, o ficheiro não será carregado",
         "placeholders": {
             "count": {
                 "content": "$1"

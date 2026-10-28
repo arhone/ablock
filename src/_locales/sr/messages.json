@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "Страница преко HTTPS учитава датотеке без шифровања: $COUNT$",
+        "message": "Страница преко HTTPS учитава скрипте, стилове или оквире без шифровања: $COUNT$. Прегледач их блокира, па страница можда неће радити исправно",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP медији $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "Страница преко HTTPS учитава слике, видео или звук преко HTTP: $COUNT$. Прегледач их сам пребацује на HTTPS; ако сервер то не подржава, датотека се неће учитати",
         "placeholders": {
             "count": {
                 "content": "$1"

@@ -339,7 +339,23 @@
         }
     },
     "mixedTitle": {
-        "message": "HTTPS पेज बिना एन्क्रिप्शन की फ़ाइलें लोड करता है: $COUNT$",
+        "message": "HTTPS पेज बिना एन्क्रिप्शन के स्क्रिप्ट, स्टाइल या फ़्रेम लोड करता है: $COUNT$। ब्राउज़र इन्हें ब्लॉक करता है, इसलिए पेज ठीक से काम नहीं कर सकता",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassive": {
+        "message": "HTTP मीडिया $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "mixedPassiveTitle": {
+        "message": "HTTPS पेज HTTP पर इमेज, वीडियो या ऑडियो लोड करता है: $COUNT$। ब्राउज़र खुद इन्हें HTTPS पर ले जाता है; अगर सर्वर इसका समर्थन नहीं करता, तो फ़ाइल लोड नहीं होगी",
         "placeholders": {
             "count": {
                 "content": "$1"
