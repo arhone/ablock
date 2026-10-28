@@ -169,7 +169,8 @@
     // Целые значения через запятую: «max-image-preview:none» — не запрет индексации
     const noindex = robotsMeta.split(',').some((value) => /^\s*(noindex|none)\s*$/i.test(value));
     // Канонический адрес: эта же страница, другая страница сайта или другой сайт. Страница — путь без завершающего «/»
-    // и query, если он указан в каноническом адресе (?page=2 и ?page=1 — разные страницы), hash не учитываем.
+    // (регистр %xx не важен) и параметры из канонического адреса: у этой страницы они должны быть с теми же
+    // значениями (?page=2 и ?page=1 — разные страницы), лишние вроде utm_source и порядок не важны, hash не учитываем.
     // Сайт — хост без «www.». Пустой или неразборчивый адрес — как если бы его не было (пустой href браузер
     // превратил бы в адрес этой же страницы — поэтому берём сам атрибут)
     const canonicalHref = document.querySelector('link[rel="canonical"]')?.getAttribute('href')?.trim();
@@ -180,9 +181,11 @@
         // Адрес не разбирается — считаем, что его нет
     }
     const siteHost = (url) => url.hostname.replace(/^www\./, '');
-    const pagePath = (url) => url.pathname.replace(/\/+$/, '') + (canonicalUrl.search ? url.search : '');
+    const pagePath = (url) => url.pathname.replace(/%[0-9a-f]{2}/gi, (code) => code.toUpperCase()).replace(/\/+$/, '');
+    const pageParams = new URLSearchParams(location.search);
+    const sameParams = () => [...canonicalUrl.searchParams].every(([key, value]) => pageParams.getAll(key).includes(value));
     const canonical = !canonicalUrl ? '' : siteHost(canonicalUrl) !== siteHost(location) ? 'other'
-        : pagePath(canonicalUrl) === pagePath(location) ? 'same' : 'page';
+        : pagePath(canonicalUrl) === pagePath(location) && sameParams() ? 'same' : 'page';
     const viewport = meta('meta[name="viewport" i]');
     const seo = {
         status: navigation?.responseStatus || 0,
