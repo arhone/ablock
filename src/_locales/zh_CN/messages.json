@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "/ 10"
+    },
+    "scoreUnsure": {
+        "message": "看不到服务器标头，评分基于不完整的数据"
+    },
+    "scoreCapHttps": {
+        "message": "没有 HTTPS 时评分最高为 4"
+    },
     "scoreHttps": {
         "message": "加密"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — 根据间接迹象判断"
     },
+    "reportLegendUnsure": {
+        "message": "? — 依据不完整的数据"
+    },
     "reportLegendEstimate": {
         "message": "≈ — 估算值"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "只会传递扩展的链接，请复制报告图片后粘贴到帖子中"
     },
-    "auditLabel": {
-        "message": "详细信息"
+    "auditPrivacy": {
+        "message": "隐私"
+    },
+    "auditAbout": {
+        "message": "关于网站"
+    },
+    "auditTrackingHint": {
+        "message": "ABlock 目录中收集访客数据的公司：统计、广告、社交按钮"
+    },
+    "auditDomainsHint": {
+        "message": "来自其他网站的文件：每个都会得知您的 IP 地址和您打开的页面"
     },
     "auditIssues": {
         "message": "问题：$COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "页面布局"
     },
     "auditA11y": {
         "message": "无障碍"

@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "з 10"
+    },
+    "scoreUnsure": {
+        "message": "Заголовки сервера не видно — бал за неповними даними"
+    },
+    "scoreCapHttps": {
+        "message": "Без HTTPS оцінка не вища за 4"
+    },
     "scoreHttps": {
         "message": "Шифрування"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — визначено за непрямими ознаками"
     },
+    "reportLegendUnsure": {
+        "message": "? — за неповними даними"
+    },
     "reportLegendEstimate": {
         "message": "≈ — приблизна оцінка"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Передається лише посилання на розширення — скопіюйте картинку звіту та вставте її в допис"
     },
-    "auditLabel": {
-        "message": "Подробиці"
+    "auditPrivacy": {
+        "message": "Приватність"
+    },
+    "auditAbout": {
+        "message": "Про сайт"
+    },
+    "auditTrackingHint": {
+        "message": "Компанії з довідника ABlock, які збирають дані про відвідувачів: лічильники, реклама, кнопки соцмереж"
+    },
+    "auditDomainsHint": {
+        "message": "Файли з чужих сайтів: кожен із них дізнається вашу IP-адресу і яку сторінку ви відкрили"
     },
     "auditIssues": {
         "message": "проблем: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Верстка"
     },
     "auditA11y": {
         "message": "Доступність"

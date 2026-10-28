@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "su 10"
+    },
+    "scoreUnsure": {
+        "message": "Le intestazioni del server non sono visibili: il voto si basa su dati incompleti"
+    },
+    "scoreCapHttps": {
+        "message": "Senza HTTPS il voto non supera 4"
+    },
     "scoreHttps": {
         "message": "Cifratura"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — rilevato da indizi indiretti"
     },
+    "reportLegendUnsure": {
+        "message": "? — con dati incompleti"
+    },
     "reportLegendEstimate": {
         "message": "≈ — stima approssimativa"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Viene passato solo il link all'estensione — copia l'immagine del rapporto e incollala nel post"
     },
-    "auditLabel": {
-        "message": "Dettagli"
+    "auditPrivacy": {
+        "message": "Privacy"
+    },
+    "auditAbout": {
+        "message": "Sul sito"
+    },
+    "auditTrackingHint": {
+        "message": "Aziende dell’elenco di ABlock che raccolgono dati sui visitatori: contatori, pubblicità, pulsanti social"
+    },
+    "auditDomainsHint": {
+        "message": "File da altri siti: ognuno conosce il tuo indirizzo IP e la pagina che hai aperto"
     },
     "auditIssues": {
         "message": "segnalazioni: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Markup"
     },
     "auditA11y": {
         "message": "Accessibilità"

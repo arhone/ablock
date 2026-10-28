@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "ከ10"
+    },
+    "scoreUnsure": {
+        "message": "የአገልጋዩ ራስጌዎች አይታዩም — ነጥቡ ባልተሟላ ውሂብ ነው"
+    },
+    "scoreCapHttps": {
+        "message": "ያለ HTTPS ነጥቡ ከ4 አይበልጥም"
+    },
     "scoreHttps": {
         "message": "ምስጠራ"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — በተዘዋዋሪ ምልክቶች የተገኘ"
     },
+    "reportLegendUnsure": {
+        "message": "? — ባልተሟላ ውሂብ"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ግምታዊ"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "የቅጥያው አገናኝ ብቻ ይተላለፋል — የሪፖርቱን ምስል ቀድተው በልጥፉ ውስጥ ይለጥፉት"
     },
-    "auditLabel": {
-        "message": "ዝርዝሮች"
+    "auditPrivacy": {
+        "message": "ግላዊነት"
+    },
+    "auditAbout": {
+        "message": "ስለ ጣቢያው"
+    },
+    "auditTrackingHint": {
+        "message": "ስለ ጎብኚዎች ውሂብ የሚሰበስቡ ኩባንያዎች ከABlock ማውጫ፦ ቆጣሪዎች፣ ማስታወቂያ፣ የማህበራዊ ሚዲያ አዝራሮች"
+    },
+    "auditDomainsHint": {
+        "message": "ከሌሎች ጣቢያዎች የሚመጡ ፋይሎች፦ እያንዳንዳቸው የእርስዎን IP እና የከፈቱትን ገጽ ያውቃሉ"
     },
     "auditIssues": {
         "message": "ችግሮች: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "ማርክአፕ"
     },
     "auditA11y": {
         "message": "ተደራሽነት"

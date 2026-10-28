@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "dari 10"
+    },
+    "scoreUnsure": {
+        "message": "Header server tidak terlihat — nilai berdasarkan data yang tidak lengkap"
+    },
+    "scoreCapHttps": {
+        "message": "Tanpa HTTPS nilai paling tinggi 4"
+    },
     "scoreHttps": {
         "message": "Enkripsi"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — terdeteksi dari tanda tidak langsung"
     },
+    "reportLegendUnsure": {
+        "message": "? — berdasarkan data tidak lengkap"
+    },
     "reportLegendEstimate": {
         "message": "≈ — perkiraan"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Hanya tautan ekstensi yang diteruskan — salin gambar laporan lalu tempel ke postingan"
     },
-    "auditLabel": {
-        "message": "Detail"
+    "auditPrivacy": {
+        "message": "Privasi"
+    },
+    "auditAbout": {
+        "message": "Tentang situs"
+    },
+    "auditTrackingHint": {
+        "message": "Perusahaan dari direktori ABlock yang mengumpulkan data pengunjung: penghitung, iklan, tombol media sosial"
+    },
+    "auditDomainsHint": {
+        "message": "File dari situs lain: masing-masing mengetahui alamat IP Anda dan halaman yang Anda buka"
     },
     "auditIssues": {
         "message": "catatan: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Markup"
     },
     "auditA11y": {
         "message": "Aksesibilitas"

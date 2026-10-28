@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "10-ൽ"
+    },
+    "scoreUnsure": {
+        "message": "സെർവർ ഹെഡറുകൾ കാണാനാകുന്നില്ല — സ്കോർ അപൂർണ ഡാറ്റ അടിസ്ഥാനമാക്കി"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS ഇല്ലെങ്കിൽ സ്കോർ 4-ൽ കൂടില്ല"
+    },
     "scoreHttps": {
         "message": "എൻക്രിപ്ഷൻ"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — പരോക്ഷ സൂചനകളിലൂടെ കണ്ടെത്തിയത്"
     },
+    "reportLegendUnsure": {
+        "message": "? — അപൂർണ ഡാറ്റ പ്രകാരം"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ഏകദേശ കണക്ക്"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "എക്സ്റ്റൻഷന്റെ ലിങ്ക് മാത്രമേ കൈമാറൂ — റിപ്പോർട്ട് ചിത്രം പകർത്തി പോസ്റ്റിൽ ഒട്ടിക്കുക"
     },
-    "auditLabel": {
-        "message": "വിശദാംശങ്ങൾ"
+    "auditPrivacy": {
+        "message": "സ്വകാര്യത"
+    },
+    "auditAbout": {
+        "message": "സൈറ്റിനെക്കുറിച്ച്"
+    },
+    "auditTrackingHint": {
+        "message": "സന്ദർശകരുടെ ഡാറ്റ ശേഖരിക്കുന്ന ABlock പട്ടികയിലെ കമ്പനികൾ: കൗണ്ടറുകൾ, പരസ്യം, സോഷ്യൽ ബട്ടണുകൾ"
+    },
+    "auditDomainsHint": {
+        "message": "മറ്റ് സൈറ്റുകളിൽ നിന്നുള്ള ഫയലുകൾ: ഓരോന്നും നിങ്ങളുടെ IP വിലാസവും തുറന്ന പേജും അറിയുന്നു"
     },
     "auditIssues": {
         "message": "പ്രശ്നങ്ങൾ: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "മാർക്കപ്പ്"
     },
     "auditA11y": {
         "message": "പ്രവേശനക്ഷമത"

@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "van 10"
+    },
+    "scoreUnsure": {
+        "message": "Serverheaders zijn niet zichtbaar — de score is gebaseerd op onvolledige gegevens"
+    },
+    "scoreCapHttps": {
+        "message": "Zonder HTTPS is de score hoogstens 4"
+    },
     "scoreHttps": {
         "message": "Versleuteling"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — bepaald aan de hand van indirecte aanwijzingen"
     },
+    "reportLegendUnsure": {
+        "message": "? — op basis van onvolledige gegevens"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ruwe schatting"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Alleen de link naar de extensie wordt doorgegeven — kopieer de reportafbeelding en plak die in het bericht"
     },
-    "auditLabel": {
-        "message": "Details"
+    "auditPrivacy": {
+        "message": "Privacy"
+    },
+    "auditAbout": {
+        "message": "Over de site"
+    },
+    "auditTrackingHint": {
+        "message": "Bedrijven uit de ABlock-lijst die gegevens over bezoekers verzamelen: tellers, advertenties, sociale knoppen"
+    },
+    "auditDomainsHint": {
+        "message": "Bestanden van andere sites: elk ervan ziet je IP-adres en welke pagina je hebt geopend"
     },
     "auditIssues": {
         "message": "problemen: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Opmaak"
     },
     "auditA11y": {
         "message": "Toegankelijkheid"

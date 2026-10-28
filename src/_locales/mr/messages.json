@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "10 पैकी"
+    },
+    "scoreUnsure": {
+        "message": "सर्व्हरचे हेडर दिसत नाहीत — स्कोअर अपूर्ण डेटावर आधारित आहे"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS शिवाय स्कोअर 4 पेक्षा जास्त नाही"
+    },
     "scoreHttps": {
         "message": "एन्क्रिप्शन"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — अप्रत्यक्ष लक्षणांवरून ओळखले"
     },
+    "reportLegendUnsure": {
+        "message": "? — अपूर्ण डेटावरून"
+    },
     "reportLegendEstimate": {
         "message": "≈ — अंदाजे मूल्य"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "फक्त एक्स्टेंशनची लिंक पाठवली जाते — अहवालाचे चित्र कॉपी करा आणि पोस्टमध्ये पेस्ट करा"
     },
-    "auditLabel": {
-        "message": "तपशील"
+    "auditPrivacy": {
+        "message": "गोपनीयता"
+    },
+    "auditAbout": {
+        "message": "साइटबद्दल"
+    },
+    "auditTrackingHint": {
+        "message": "अभ्यागतांचा डेटा गोळा करणाऱ्या ABlock यादीतील कंपन्या: काउंटर, जाहिराती, सोशल बटणे"
+    },
+    "auditDomainsHint": {
+        "message": "इतर साइट्सवरील फाइल्स: प्रत्येकाला तुमचा IP पत्ता आणि तुम्ही उघडलेले पेज कळते"
     },
     "auditIssues": {
         "message": "समस्या: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "मार्कअप"
     },
     "auditA11y": {
         "message": "सुलभता"

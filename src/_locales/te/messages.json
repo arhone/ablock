@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "10కి"
+    },
+    "scoreUnsure": {
+        "message": "సర్వర్ హెడర్‌లు కనిపించడం లేదు — స్కోర్ అసంపూర్ణ డేటా ఆధారంగా"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS లేకుండా స్కోర్ 4 మించదు"
+    },
     "scoreHttps": {
         "message": "ఎన్‌క్రిప్షన్"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — పరోక్ష సంకేతాల ద్వారా గుర్తించబడింది"
     },
+    "reportLegendUnsure": {
+        "message": "? — అసంపూర్ణ డేటా ఆధారంగా"
+    },
     "reportLegendEstimate": {
         "message": "≈ — సుమారు అంచనా"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "ఎక్స్‌టెన్షన్ లింక్ మాత్రమే పంపబడుతుంది — నివేదిక చిత్రాన్ని కాపీ చేసి పోస్ట్‌లో అతికించండి"
     },
-    "auditLabel": {
-        "message": "వివరాలు"
+    "auditPrivacy": {
+        "message": "గోప్యత"
+    },
+    "auditAbout": {
+        "message": "సైట్ గురించి"
+    },
+    "auditTrackingHint": {
+        "message": "సందర్శకుల డేటాను సేకరించే ABlock జాబితాలోని కంపెనీలు: కౌంటర్‌లు, ప్రకటనలు, సోషల్ బటన్‌లు"
+    },
+    "auditDomainsHint": {
+        "message": "ఇతర సైట్‌ల ఫైల్‌లు: ప్రతి ఒక్కటీ మీ IP చిరునామాను, మీరు తెరిచిన పేజీని తెలుసుకుంటుంది"
     },
     "auditIssues": {
         "message": "సమస్యలు: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "మార్కప్"
     },
     "auditA11y": {
         "message": "యాక్సెసిబిలిటీ"

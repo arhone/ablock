@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "/ 10"
+    },
+    "scoreUnsure": {
+        "message": "Sunucu başlıkları görünmüyor; puan eksik verilere dayanıyor"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS olmadan puan en fazla 4"
+    },
     "scoreHttps": {
         "message": "Şifreleme"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — dolaylı işaretlerle belirlendi"
     },
+    "reportLegendUnsure": {
+        "message": "? — eksik verilere göre"
+    },
     "reportLegendEstimate": {
         "message": "≈ — yaklaşık değer"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Yalnızca uzantı bağlantısı aktarılır — rapor görselini kopyalayıp gönderiye yapıştırın"
     },
-    "auditLabel": {
-        "message": "Ayrıntılar"
+    "auditPrivacy": {
+        "message": "Gizlilik"
+    },
+    "auditAbout": {
+        "message": "Site hakkında"
+    },
+    "auditTrackingHint": {
+        "message": "ABlock dizinindeki, ziyaretçiler hakkında veri toplayan şirketler: sayaçlar, reklamlar, sosyal medya düğmeleri"
+    },
+    "auditDomainsHint": {
+        "message": "Başka sitelerden dosyalar: her biri IP adresinizi ve hangi sayfayı açtığınızı öğrenir"
     },
     "auditIssues": {
         "message": "uyarı: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Düzen"
     },
     "auditA11y": {
         "message": "Erişilebilirlik"

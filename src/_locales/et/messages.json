@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "/10"
+    },
+    "scoreUnsure": {
+        "message": "Serveri päised pole nähtavad — hinne põhineb puudulikel andmetel"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS-ita on hinne kuni 4"
+    },
     "scoreHttps": {
         "message": "Krüpteerimine"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — tuvastatud kaudsete tunnuste järgi"
     },
+    "reportLegendUnsure": {
+        "message": "? — puudulike andmete põhjal"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ligikaudne hinnang"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Edastatakse ainult laienduse link — kopeerige aruande pilt ja kleepige see postitusse"
     },
-    "auditLabel": {
-        "message": "Üksikasjad"
+    "auditPrivacy": {
+        "message": "Privaatsus"
+    },
+    "auditAbout": {
+        "message": "Saidi kohta"
+    },
+    "auditTrackingHint": {
+        "message": "ABlocki kataloogi ettevõtted, mis koguvad külastajate andmeid: loendurid, reklaam, sotsiaalmeedia nupud"
+    },
+    "auditDomainsHint": {
+        "message": "Failid teistelt saitidelt: igaüks neist saab teada teie IP-aadressi ja avatud lehe"
     },
     "auditIssues": {
         "message": "probleeme: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Märgistus"
     },
     "auditA11y": {
         "message": "Ligipääsetavus"

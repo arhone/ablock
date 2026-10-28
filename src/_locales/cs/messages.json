@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "z 10"
+    },
+    "scoreUnsure": {
+        "message": "Hlavičky serveru nejsou vidět — hodnocení je podle neúplných dat"
+    },
+    "scoreCapHttps": {
+        "message": "Bez HTTPS je hodnocení nejvýš 4"
+    },
     "scoreHttps": {
         "message": "Šifrování"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — zjištěno podle nepřímých znaků"
     },
+    "reportLegendUnsure": {
+        "message": "? — podle neúplných dat"
+    },
     "reportLegendEstimate": {
         "message": "≈ — přibližný odhad"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Předá se jen odkaz na rozšíření — zkopírujte obrázek zprávy a vložte ho do příspěvku"
     },
-    "auditLabel": {
-        "message": "Podrobnosti"
+    "auditPrivacy": {
+        "message": "Soukromí"
+    },
+    "auditAbout": {
+        "message": "O webu"
+    },
+    "auditTrackingHint": {
+        "message": "Firmy z adresáře ABlock, které sbírají data o návštěvnících: počítadla, reklama, tlačítka sociálních sítí"
+    },
+    "auditDomainsHint": {
+        "message": "Soubory z cizích webů: každý z nich zjistí vaši IP adresu a jakou stránku jste otevřeli"
     },
     "auditIssues": {
         "message": "problémy: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Kód stránky"
     },
     "auditA11y": {
         "message": "Přístupnost"

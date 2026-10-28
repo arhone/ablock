@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "iš 10"
+    },
+    "scoreUnsure": {
+        "message": "Serverio antraštės nematomos — įvertinimas pagal neišsamius duomenis"
+    },
+    "scoreCapHttps": {
+        "message": "Be HTTPS įvertinimas ne didesnis nei 4"
+    },
     "scoreHttps": {
         "message": "Šifravimas"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — nustatyta pagal netiesioginius požymius"
     },
+    "reportLegendUnsure": {
+        "message": "? — pagal neišsamius duomenis"
+    },
     "reportLegendEstimate": {
         "message": "≈ — apytikslis įvertinimas"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Perduodama tik plėtinio nuoroda — nukopijuokite ataskaitos paveikslėlį ir įklijuokite jį į įrašą"
     },
-    "auditLabel": {
-        "message": "Išsamiau"
+    "auditPrivacy": {
+        "message": "Privatumas"
+    },
+    "auditAbout": {
+        "message": "Apie svetainę"
+    },
+    "auditTrackingHint": {
+        "message": "ABlock kataloge esančios įmonės, renkančios duomenis apie lankytojus: skaitikliai, reklama, socialinių tinklų mygtukai"
+    },
+    "auditDomainsHint": {
+        "message": "Failai iš kitų svetainių: kiekvienas sužino jūsų IP adresą ir kokį puslapį atidarėte"
     },
     "auditIssues": {
         "message": "problemos: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Žymėjimas"
     },
     "auditA11y": {
         "message": "Prieinamumas"

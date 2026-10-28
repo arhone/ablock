@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "din 10"
+    },
+    "scoreUnsure": {
+        "message": "Antetele serverului nu sunt vizibile — nota se bazează pe date incomplete"
+    },
+    "scoreCapHttps": {
+        "message": "Fără HTTPS nota este cel mult 4"
+    },
     "scoreHttps": {
         "message": "Criptare"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — detectat după semne indirecte"
     },
+    "reportLegendUnsure": {
+        "message": "? — după date incomplete"
+    },
     "reportLegendEstimate": {
         "message": "≈ — estimare aproximativă"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Se transmite doar linkul extensiei — copiați imaginea raportului și lipiți-o în postare"
     },
-    "auditLabel": {
-        "message": "Detalii"
+    "auditPrivacy": {
+        "message": "Confidențialitate"
+    },
+    "auditAbout": {
+        "message": "Despre site"
+    },
+    "auditTrackingHint": {
+        "message": "Companii din catalogul ABlock care colectează date despre vizitatori: contoare, reclame, butoane sociale"
+    },
+    "auditDomainsHint": {
+        "message": "Fișiere de pe alte site-uri: fiecare află adresa IP și pagina pe care ați deschis-o"
     },
     "auditIssues": {
         "message": "probleme: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Marcaj"
     },
     "auditA11y": {
         "message": "Accesibilitate"

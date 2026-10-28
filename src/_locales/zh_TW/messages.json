@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "/ 10"
+    },
+    "scoreUnsure": {
+        "message": "看不到伺服器標頭，評分依據不完整的資料"
+    },
+    "scoreCapHttps": {
+        "message": "沒有 HTTPS 時評分最高為 4"
+    },
     "scoreHttps": {
         "message": "加密"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — 依間接跡象判斷"
     },
+    "reportLegendUnsure": {
+        "message": "? — 依據不完整的資料"
+    },
     "reportLegendEstimate": {
         "message": "≈ — 概略估計"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "只會傳遞擴充功能的連結 — 請複製報告圖片並貼到貼文中"
     },
-    "auditLabel": {
-        "message": "詳細資料"
+    "auditPrivacy": {
+        "message": "隱私"
+    },
+    "auditAbout": {
+        "message": "關於網站"
+    },
+    "auditTrackingHint": {
+        "message": "ABlock 目錄中蒐集訪客資料的公司：統計、廣告、社群按鈕"
+    },
+    "auditDomainsHint": {
+        "message": "來自其他網站的檔案：每個都會得知您的 IP 位址和您開啟的頁面"
     },
     "auditIssues": {
         "message": "問題：$COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "標記"
     },
     "auditA11y": {
         "message": "無障礙"

@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "จาก 10"
+    },
+    "scoreUnsure": {
+        "message": "มองไม่เห็นส่วนหัวของเซิร์ฟเวอร์ คะแนนจึงอิงข้อมูลที่ไม่ครบ"
+    },
+    "scoreCapHttps": {
+        "message": "หากไม่มี HTTPS คะแนนไม่เกิน 4"
+    },
     "scoreHttps": {
         "message": "การเข้ารหัส"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — ตรวจพบจากสัญญาณทางอ้อม"
     },
+    "reportLegendUnsure": {
+        "message": "? — จากข้อมูลที่ไม่ครบ"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ค่าประมาณคร่าว ๆ"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "ส่งเฉพาะลิงก์ของส่วนขยาย — คัดลอกรูปภาพรายงานแล้ววางในโพสต์"
     },
-    "auditLabel": {
-        "message": "รายละเอียด"
+    "auditPrivacy": {
+        "message": "ความเป็นส่วนตัว"
+    },
+    "auditAbout": {
+        "message": "เกี่ยวกับเว็บไซต์"
+    },
+    "auditTrackingHint": {
+        "message": "บริษัทในรายชื่อของ ABlock ที่เก็บข้อมูลผู้เข้าชม: ตัวนับ โฆษณา ปุ่มโซเชียล"
+    },
+    "auditDomainsHint": {
+        "message": "ไฟล์จากเว็บไซต์อื่น แต่ละแห่งจะรู้ที่อยู่ IP ของคุณและหน้าที่คุณเปิด"
     },
     "auditIssues": {
         "message": "ปัญหา: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "มาร์กอัป"
     },
     "auditA11y": {
         "message": "การเข้าถึง"

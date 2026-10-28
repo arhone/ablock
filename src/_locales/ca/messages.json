@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "de 10"
+    },
+    "scoreUnsure": {
+        "message": "Les capçaleres del servidor no es veuen: la nota es basa en dades incompletes"
+    },
+    "scoreCapHttps": {
+        "message": "Sense HTTPS la nota no passa de 4"
+    },
     "scoreHttps": {
         "message": "Xifratge"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — detectat per indicis indirectes"
     },
+    "reportLegendUnsure": {
+        "message": "? — amb dades incompletes"
+    },
     "reportLegendEstimate": {
         "message": "≈ — estimació aproximada"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Només es passa l'enllaç de l'extensió — copia la imatge de l'informe i enganxa-la a la publicació"
     },
-    "auditLabel": {
-        "message": "Detalls"
+    "auditPrivacy": {
+        "message": "Privadesa"
+    },
+    "auditAbout": {
+        "message": "Sobre el lloc"
+    },
+    "auditTrackingHint": {
+        "message": "Empreses del directori d’ABlock que recullen dades dels visitants: comptadors, publicitat, botons de xarxes socials"
+    },
+    "auditDomainsHint": {
+        "message": "Fitxers d’altres llocs: cadascun sap la vostra IP i quina pàgina heu obert"
     },
     "auditIssues": {
         "message": "problemes: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Marcatge"
     },
     "auditA11y": {
         "message": "Accessibilitat"

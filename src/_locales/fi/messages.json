@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "/10"
+    },
+    "scoreUnsure": {
+        "message": "Palvelimen otsakkeet eivät näy — arvosana perustuu puutteellisiin tietoihin"
+    },
+    "scoreCapHttps": {
+        "message": "Ilman HTTPS:ää arvosana on enintään 4"
+    },
     "scoreHttps": {
         "message": "Salaus"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — tunnistettu epäsuorista merkeistä"
     },
+    "reportLegendUnsure": {
+        "message": "? — puutteellisten tietojen perusteella"
+    },
     "reportLegendEstimate": {
         "message": "≈ — likimääräinen arvio"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Vain laajennuksen linkki välitetään — kopioi raportin kuva ja liitä se julkaisuun"
     },
-    "auditLabel": {
-        "message": "Tiedot"
+    "auditPrivacy": {
+        "message": "Yksityisyys"
+    },
+    "auditAbout": {
+        "message": "Tietoja sivustosta"
+    },
+    "auditTrackingHint": {
+        "message": "ABlockin hakemiston yritykset, jotka keräävät tietoja kävijöistä: laskurit, mainokset, somepainikkeet"
+    },
+    "auditDomainsHint": {
+        "message": "Tiedostot muilta sivustoilta: jokainen niistä saa tietää IP-osoitteesi ja avaamasi sivun"
     },
     "auditIssues": {
         "message": "ongelmia: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Merkintä"
     },
     "auditA11y": {
         "message": "Saavutettavuus"

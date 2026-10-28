@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "/10"
+    },
+    "scoreUnsure": {
+        "message": "Không thấy tiêu đề máy chủ — điểm dựa trên dữ liệu chưa đầy đủ"
+    },
+    "scoreCapHttps": {
+        "message": "Không có HTTPS thì điểm tối đa là 4"
+    },
     "scoreHttps": {
         "message": "Mã hóa"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — xác định qua dấu hiệu gián tiếp"
     },
+    "reportLegendUnsure": {
+        "message": "? — theo dữ liệu chưa đầy đủ"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ước tính gần đúng"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Chỉ chuyển liên kết tới tiện ích — hãy sao chép hình báo cáo rồi dán vào bài đăng"
     },
-    "auditLabel": {
-        "message": "Chi tiết"
+    "auditPrivacy": {
+        "message": "Quyền riêng tư"
+    },
+    "auditAbout": {
+        "message": "Về trang web"
+    },
+    "auditTrackingHint": {
+        "message": "Các công ty trong danh mục của ABlock thu thập dữ liệu về khách truy cập: bộ đếm, quảng cáo, nút mạng xã hội"
+    },
+    "auditDomainsHint": {
+        "message": "Tệp từ trang web khác: mỗi trang đều biết địa chỉ IP của bạn và trang bạn đã mở"
     },
     "auditIssues": {
         "message": "lưu ý: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Mã trang"
     },
     "auditA11y": {
         "message": "Khả năng tiếp cận"

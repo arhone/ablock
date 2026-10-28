@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "10 માંથી"
+    },
+    "scoreUnsure": {
+        "message": "સર્વરના હેડર દેખાતા નથી — સ્કોર અધૂરા ડેટા પર આધારિત છે"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS વગર સ્કોર 4 થી વધુ નહીં"
+    },
     "scoreHttps": {
         "message": "એન્ક્રિપ્શન"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — પરોક્ષ સંકેતો પરથી શોધાયું"
     },
+    "reportLegendUnsure": {
+        "message": "? — અધૂરા ડેટા પરથી"
+    },
     "reportLegendEstimate": {
         "message": "≈ — અંદાજિત મૂલ્ય"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "ફક્ત એક્સ્ટેંશનની લિંક મોકલાય છે — રિપોર્ટની છબી કૉપિ કરો અને પોસ્ટમાં પેસ્ટ કરો"
     },
-    "auditLabel": {
-        "message": "વિગતો"
+    "auditPrivacy": {
+        "message": "ગોપનીયતા"
+    },
+    "auditAbout": {
+        "message": "સાઇટ વિશે"
+    },
+    "auditTrackingHint": {
+        "message": "ABlock ની યાદીની કંપનીઓ જે મુલાકાતીઓનો ડેટા એકત્ર કરે છે: કાઉન્ટર, જાહેરાતો, સોશિયલ બટન"
+    },
+    "auditDomainsHint": {
+        "message": "બીજી સાઇટ્સની ફાઇલો: દરેકને તમારું IP સરનામું અને તમે ખોલેલું પેજ ખબર પડે છે"
     },
     "auditIssues": {
         "message": "સમસ્યાઓ: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "માર્કઅપ"
     },
     "auditA11y": {
         "message": "ઍક્સેસિબિલિટી"

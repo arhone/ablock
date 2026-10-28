@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "/ 10"
+    },
+    "scoreUnsure": {
+        "message": "서버 헤더가 보이지 않아 불완전한 데이터로 매긴 점수입니다"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS가 없으면 점수는 최대 4점"
+    },
     "scoreHttps": {
         "message": "암호화"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — 간접적인 징후로 감지됨"
     },
+    "reportLegendUnsure": {
+        "message": "? — 불완전한 데이터 기준"
+    },
     "reportLegendEstimate": {
         "message": "≈ — 대략적인 추정"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "확장 프로그램 링크만 전달됩니다 — 보고서 이미지를 복사해 게시물에 붙여 넣으세요"
     },
-    "auditLabel": {
-        "message": "세부 정보"
+    "auditPrivacy": {
+        "message": "개인정보"
+    },
+    "auditAbout": {
+        "message": "사이트 정보"
+    },
+    "auditTrackingHint": {
+        "message": "방문자 데이터를 수집하는 ABlock 목록의 회사: 카운터, 광고, 소셜 버튼"
+    },
+    "auditDomainsHint": {
+        "message": "다른 사이트의 파일: 각각 사용자의 IP 주소와 연 페이지를 알게 됩니다"
     },
     "auditIssues": {
         "message": "문제: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "마크업"
     },
     "auditA11y": {
         "message": "접근성"

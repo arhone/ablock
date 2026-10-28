@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "10 ರಲ್ಲಿ"
+    },
+    "scoreUnsure": {
+        "message": "ಸರ್ವರ್ ಹೆಡರ್‌ಗಳು ಕಾಣುತ್ತಿಲ್ಲ — ಸ್ಕೋರ್ ಅಪೂರ್ಣ ಡೇಟಾ ಆಧಾರಿತ"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS ಇಲ್ಲದೆ ಸ್ಕೋರ್ 4 ಕ್ಕಿಂತ ಹೆಚ್ಚಿಲ್ಲ"
+    },
     "scoreHttps": {
         "message": "ಎನ್‌ಕ್ರಿಪ್ಶನ್"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — ಪರೋಕ್ಷ ಚಿಹ್ನೆಗಳಿಂದ ಪತ್ತೆಯಾಗಿದೆ"
     },
+    "reportLegendUnsure": {
+        "message": "? — ಅಪೂರ್ಣ ಡೇಟಾ ಆಧಾರಿತ"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ಅಂದಾಜು ಮೌಲ್ಯ"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "ಎಕ್ಸ್‌ಟೆನ್ಶನ್ ಲಿಂಕ್ ಮಾತ್ರ ಕಳುಹಿಸಲಾಗುತ್ತದೆ — ವರದಿಯ ಚಿತ್ರವನ್ನು ನಕಲಿಸಿ ಪೋಸ್ಟ್‌ನಲ್ಲಿ ಅಂಟಿಸಿ"
     },
-    "auditLabel": {
-        "message": "ವಿವರಗಳು"
+    "auditPrivacy": {
+        "message": "ಗೌಪ್ಯತೆ"
+    },
+    "auditAbout": {
+        "message": "ಸೈಟ್ ಬಗ್ಗೆ"
+    },
+    "auditTrackingHint": {
+        "message": "ಸಂದರ್ಶಕರ ಡೇಟಾ ಸಂಗ್ರಹಿಸುವ ABlock ಪಟ್ಟಿಯ ಕಂಪನಿಗಳು: ಕೌಂಟರ್‌ಗಳು, ಜಾಹೀರಾತು, ಸಾಮಾಜಿಕ ಬಟನ್‌ಗಳು"
+    },
+    "auditDomainsHint": {
+        "message": "ಇತರ ಸೈಟ್‌ಗಳ ಫೈಲ್‌ಗಳು: ಪ್ರತಿಯೊಂದೂ ನಿಮ್ಮ IP ವಿಳಾಸ ಮತ್ತು ನೀವು ತೆರೆದ ಪುಟವನ್ನು ತಿಳಿಯುತ್ತದೆ"
     },
     "auditIssues": {
         "message": "ಸಮಸ್ಯೆಗಳು: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "ಮಾರ್ಕಪ್"
     },
     "auditA11y": {
         "message": "ಪ್ರವೇಶಸಾಧ್ಯತೆ"

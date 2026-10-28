@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "/10"
+    },
+    "scoreUnsure": {
+        "message": "Server sarlavhalari koʻrinmaydi — baho toʻliq boʻlmagan maʼlumotlar boʻyicha"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS boʻlmasa, baho 4 dan oshmaydi"
+    },
     "scoreHttps": {
         "message": "Shifrlash"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — bilvosita belgilar boʻyicha aniqlangan"
     },
+    "reportLegendUnsure": {
+        "message": "? — toʻliq boʻlmagan maʼlumotlar boʻyicha"
+    },
     "reportLegendEstimate": {
         "message": "≈ — taxminiy baho"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Faqat kengaytma havolasi uzatiladi — hisobot rasmini nusxalab, postga qoʻying"
     },
-    "auditLabel": {
-        "message": "Batafsil"
+    "auditPrivacy": {
+        "message": "Maxfiylik"
+    },
+    "auditAbout": {
+        "message": "Sayt haqida"
+    },
+    "auditTrackingHint": {
+        "message": "ABlock roʻyxatidagi tashrif buyuruvchilar haqida maʼlumot yigʻadigan kompaniyalar: hisoblagichlar, reklama, ijtimoiy tarmoq tugmalari"
+    },
+    "auditDomainsHint": {
+        "message": "Boshqa saytlardagi fayllar: har biri IP manzilingizni va qaysi sahifani ochganingizni biladi"
     },
     "auditIssues": {
         "message": "eslatmalar: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Maket"
     },
     "auditA11y": {
         "message": "Qulaylik"

@@ -257,37 +257,57 @@ body.loading {
     outline: none;
 }
 
-/* Оценка сайта: 10 делений */
+/* Оценка сайта: полоса с 10 делениями; раскрывается в табло и разделы по группам */
 #score {
     align-self: stretch;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 9px 12px;
     border-radius: 8px;
     background: var(--tint);
-    cursor: default;
     --color: var(--none);
 }
-#score[data-state="good"] {
+/* Цвет балла: полоса, табло, заголовки разделов */
+#score[data-state="good"],
+.board-total[data-state="good"],
+.board-row[data-state="good"],
+.audit-group h3[data-state="good"] {
     --color: var(--on);
     --ink: var(--on-text);
 }
-#score[data-state="warn"] {
+#score[data-state="warn"],
+.board-total[data-state="warn"],
+.board-row[data-state="warn"],
+.audit-group h3[data-state="warn"] {
     --color: var(--warn);
     --ink: var(--warn-text);
 }
-#score[data-state="bad"] {
+#score[data-state="bad"],
+.board-total[data-state="bad"],
+.board-row[data-state="bad"],
+.audit-group h3[data-state="bad"] {
     --color: var(--off);
     --ink: var(--off-text);
 }
-/* Подпись, шкала и балл — одна кнопка: раскрывает показатели оценки */
+.board-row[data-state="none"],
+.audit-group h3[data-state="none"] {
+    --color: var(--none);
+    --ink: var(--muted);
+}
+#score-head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 10px 9px 12px;
+    cursor: pointer;
+}
+#score[data-open] #score-head {
+    padding-block: 6px 4px;
+}
+/* Подпись, шкала, балл и замечания — одна кнопка: раскрывает оценку */
 #score-more {
     flex: 1;
     min-width: 0;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     padding: 0;
     border: 0;
     border-radius: 4px;
@@ -297,43 +317,43 @@ body.loading {
     text-align: start;
     cursor: pointer;
 }
-/* Стрелка, как у «Подробнее»: строку можно раскрыть */
-#score-more::after {
-    content: "";
+/* В раскрытом виде общая — в табло, корзины нет (её не нажать случайно), есть «Поделиться» */
+#score[data-open] :is(#meter, #score-value, #clear) {
+    display: none;
+}
+/* Стрелка, как у раскрывающихся строк */
+#score-head .chevron {
     flex: none;
     width: 6px;
     height: 6px;
     margin-block-end: 3px;
-    margin-inline-end: 2px;
+    margin-inline: 1px;
     border: solid var(--muted);
     border-width: 0 1.5px 1.5px 0;
     transform: rotate(45deg);
     transition: transform 0.15s ease;
 }
-#score-more[aria-expanded="true"]::after {
+#score[data-open] .chevron {
     margin-block: 3px 0;
     transform: rotate(-135deg);
 }
-/* На картинке отчёта раскрывать нечего */
-.sheet #score-more::after {
-    display: none;
+#share-head {
+    width: 24px;
+    height: 22px;
 }
-#score-parts {
-    align-self: stretch;
-    margin-top: -6px;
-}
+/* Длинная подпись («Webstedets karakter») переносится по пробелу, а шкала остаётся видна */
 #score-label {
     color: var(--muted);
     font-size: 11px;
     font-weight: 600;
-    white-space: nowrap;
+    line-height: 1.2;
 }
 #meter {
-    flex: 1;
-    min-width: 0;
+    flex: 1 0 42px;
+    min-width: 42px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    gap: 3px;
+    gap: 2px;
 }
 #meter i {
     height: 7px;
@@ -345,20 +365,170 @@ body.loading {
     background: var(--color);
 }
 #score-value {
-    min-width: 2.2em;
     text-align: end;
     font-size: 16px;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
     color: var(--ink, var(--color));
 }
+#score-issues {
+    margin-inline-start: auto;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+#score-issues[data-state="warn"] {
+    color: var(--warn-text);
+}
+#score-issues[data-state="bad"] {
+    color: var(--off-text);
+}
+#score-issues[data-state="good"] {
+    color: var(--on-text);
+}
 
-/* Подробности о сайте */
+/* Табло: круг общей слева, строки групп с пятью делениями справа */
+.board {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 14px;
+    padding: 4px 12px 10px;
+}
+.board-total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    border-radius: 50%;
+}
+.dial {
+    position: relative;
+    display: block;
+    width: 72px;
+    height: 72px;
+}
+.dial .num {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+}
+.dial .num small {
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 9.5px;
+    font-weight: 600;
+}
+/* Подпись под кругом — только на картинке отчёта: в окне она в шапке */
+.board-total .caption {
+    display: none;
+    max-width: 90px;
+    color: var(--muted);
+    font-size: 10.5px;
+    font-weight: 600;
+    text-align: center;
+}
+.board-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+.board-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 54px 2.6em;
+    align-items: center;
+    gap: 8px;
+    padding: 1px 0;
+    border-radius: 3px;
+    font-size: 11px;
+    cursor: default;
+}
+.board-row .label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.board-row[data-state="none"] .label {
+    color: var(--muted);
+}
+.five {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+}
+.five .seg {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--border);
+}
+.five .seg.on {
+    background: var(--color);
+}
+.five .seg.half {
+    background: linear-gradient(90deg, var(--color) 50%, var(--border) 50%);
+}
+/* Неполные данные: пустые деления пунктиром, у числа «?» */
+.board-row[data-sure="false"] .five .seg:not(.on, .half) {
+    background: none;
+    outline: 1px dashed color-mix(in srgb, var(--muted) 60%, transparent);
+    outline-offset: -1px;
+}
+.board-row .num {
+    text-align: end;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+}
+.board-row[data-sure="false"] .num::after,
+.audit-group h3[data-sure="false"] .h-value::after {
+    content: "?";
+    margin-inline-start: 1px;
+    opacity: 0.6;
+}
+/* Круг: дорожка, дуга цветом балла; неполные данные — дорожка пунктиром */
+.ring {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+.ring .track {
+    fill: color-mix(in srgb, var(--color) 10%, transparent);
+    stroke: var(--border);
+}
+.ring .arc {
+    fill: none;
+    stroke: var(--color);
+    stroke-linecap: round;
+}
+.audit-group h3 .ring {
+    flex: none;
+    width: 16px;
+    height: 16px;
+}
+.audit-group h3 .ring .track {
+    fill: none;
+}
+.audit-group h3[data-sure="false"] .ring .track {
+    stroke: color-mix(in srgb, var(--color) 45%, transparent);
+    stroke-dasharray: 2 3;
+}
+
+/* О сайте: сервер, движок, IPv6 */
 #details {
     align-self: stretch;
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 6px 10px;
+    gap: 4px 10px;
     margin: 0;
 }
 #details dt {
@@ -412,53 +582,7 @@ body.loading {
     opacity: 0.6;
 }
 
-/* Подробнее: скорость, SEO, вёрстка, доступность, безопасность */
-#audit {
-    align-self: stretch;
-    border-radius: 8px;
-    background: var(--tint);
-}
-#audit summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    padding: 7px 12px;
-    color: var(--muted);
-    font-size: 11px;
-    font-weight: 600;
-    list-style: none;
-    cursor: pointer;
-}
-#audit summary::-webkit-details-marker {
-    display: none;
-}
-#audit summary::after {
-    content: "";
-    width: 6px;
-    height: 6px;
-    margin: 0 2px 3px 0;
-    border: solid var(--muted);
-    border-width: 0 1.5px 1.5px 0;
-    transform: rotate(45deg);
-    transition: transform 0.15s ease;
-}
-#audit[open] summary::after {
-    margin: 3px 2px 0 0;
-    transform: rotate(-135deg);
-}
-#audit-issues {
-    margin-inline-start: auto;
-}
-#audit-issues[data-state="warn"] {
-    color: var(--warn-text);
-}
-#audit-issues[data-state="bad"] {
-    color: var(--off-text);
-}
-#audit-issues[data-state="good"] {
-    color: var(--on-text);
-}
+/* Разделы раскрытой оценки: о сайте, группы, роботы и ИИ */
 #audit-body {
     display: flex;
     flex-direction: column;
@@ -485,6 +609,34 @@ body.loading {
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+}
+/* Разделы групп: круг, название и балл; «О сайте» — с той же чертой */
+.audit-group h3.scored,
+#about h3 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--border);
+}
+.h-num {
+    margin-inline-start: auto;
+    letter-spacing: 0;
+    text-transform: none;
+    white-space: nowrap;
+}
+.h-value {
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+}
+.h-note {
+    margin: 0 0 3px;
+    color: var(--muted);
+    font-size: 10.5px;
+    font-style: italic;
 }
 .audit-row {
     display: flex;
@@ -588,8 +740,15 @@ body.loading {
 #ask-donate:hover {
     opacity: 0.85;
 }
+/* «Поделиться» в конце раскрытой оценки и меню под ним (или над табло — из шапки) */
+#report {
+    margin: 0 12px;
+    padding: 8px 0 10px;
+    border-top: 1px solid var(--border);
+}
 #share-menu {
     justify-content: space-between;
+    padding: 0 12px 10px;
 }
 /* Действия с отчётом — иконки, подпись в title */
 .tools,
@@ -722,7 +881,7 @@ body.loading {
     background: var(--off-text);
     color: var(--bg);
 }
-#score:has(#clear[data-confirm]) #score-label {
+#score:has(#clear[data-confirm]) :is(#score-label, #score-issues) {
     display: none;
 }
 #clear:disabled {
@@ -772,10 +931,14 @@ body.loading {
 .sheet-head span {
     white-space: nowrap;
 }
-.sheet-parts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
+/* Табло на картинке — отдельной плашкой, с подписью под кругом */
+.sheet .board {
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: var(--tint);
+}
+.sheet .board-total .caption {
+    display: block;
 }
 .sheet-notes {
     margin: 0;
@@ -816,12 +979,14 @@ body.loading {
 .badge[tabindex],
 .chip[tabindex],
 .audit-row[tabindex],
+.board [tabindex],
 #stats {
     cursor: help;
 }
 .badge:focus-visible,
 .chip:focus-visible,
 .audit-row:focus-visible,
+.board [tabindex]:focus-visible,
 #stats:focus-visible,
 #score-more:focus-visible {
     outline: 2px solid var(--muted);

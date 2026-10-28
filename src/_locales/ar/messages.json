@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "من 10"
+    },
+    "scoreUnsure": {
+        "message": "ترويسات الخادم غير مرئية — التقييم مبني على بيانات ناقصة"
+    },
+    "scoreCapHttps": {
+        "message": "بدون HTTPS لا يتجاوز التقييم 4"
+    },
     "scoreHttps": {
         "message": "التشفير"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — اكتُشف بعلامات غير مباشرة"
     },
+    "reportLegendUnsure": {
+        "message": "? — ببيانات ناقصة"
+    },
     "reportLegendEstimate": {
         "message": "≈ — تقدير تقريبي"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "يُمرَّر رابط الإضافة فقط — انسخ صورة التقرير والصقها في المنشور"
     },
-    "auditLabel": {
-        "message": "التفاصيل"
+    "auditPrivacy": {
+        "message": "الخصوصية"
+    },
+    "auditAbout": {
+        "message": "عن الموقع"
+    },
+    "auditTrackingHint": {
+        "message": "شركات من دليل ABlock تجمع بيانات عن الزوار: عدّادات وإعلانات وأزرار شبكات التواصل"
+    },
+    "auditDomainsHint": {
+        "message": "ملفات من مواقع أخرى: كل منها يعرف عنوان IP الخاص بك والصفحة التي فتحتها"
     },
     "auditIssues": {
         "message": "المشكلات: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "الترميز"
     },
     "auditA11y": {
         "message": "إمكانية الوصول"

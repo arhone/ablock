@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "מתוך 10"
+    },
+    "scoreUnsure": {
+        "message": "כותרות השרת אינן גלויות — הציון מבוסס על נתונים חלקיים"
+    },
+    "scoreCapHttps": {
+        "message": "בלי HTTPS הציון לא עולה על 4"
+    },
     "scoreHttps": {
         "message": "הצפנה"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — זוהה לפי סימנים עקיפים"
     },
+    "reportLegendUnsure": {
+        "message": "? — לפי נתונים חלקיים"
+    },
     "reportLegendEstimate": {
         "message": "≈ — הערכה גסה"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "מועבר רק הקישור לתוסף — העתיקו את תמונת הדוח והדביקו אותה בפוסט"
     },
-    "auditLabel": {
-        "message": "פרטים"
+    "auditPrivacy": {
+        "message": "פרטיות"
+    },
+    "auditAbout": {
+        "message": "על האתר"
+    },
+    "auditTrackingHint": {
+        "message": "חברות ממדריך ABlock שאוספות נתונים על המבקרים: מונים, פרסומות, כפתורי רשתות חברתיות"
+    },
+    "auditDomainsHint": {
+        "message": "קבצים מאתרים אחרים: כל אחד מהם יודע את כתובת ה-IP שלכם ואיזה עמוד פתחתם"
     },
     "auditIssues": {
         "message": "בעיות: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "סימון"
     },
     "auditA11y": {
         "message": "נגישות"

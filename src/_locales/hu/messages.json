@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "/10"
+    },
+    "scoreUnsure": {
+        "message": "A szerver fejlécei nem láthatók — az értékelés hiányos adatokon alapul"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS nélkül legfeljebb 4"
+    },
     "scoreHttps": {
         "message": "Titkosítás"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — közvetett jelek alapján észlelve"
     },
+    "reportLegendUnsure": {
+        "message": "? — hiányos adatok alapján"
+    },
     "reportLegendEstimate": {
         "message": "≈ — hozzávetőleges becslés"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Csak a bővítmény hivatkozása kerül átadásra — másolja ki a jelentés képét, és illessze be a bejegyzésbe"
     },
-    "auditLabel": {
-        "message": "Részletek"
+    "auditPrivacy": {
+        "message": "Adatvédelem"
+    },
+    "auditAbout": {
+        "message": "A webhelyről"
+    },
+    "auditTrackingHint": {
+        "message": "Az ABlock jegyzékében szereplő cégek, amelyek adatokat gyűjtenek a látogatókról: számlálók, hirdetések, közösségi gombok"
+    },
+    "auditDomainsHint": {
+        "message": "Más webhelyek fájljai: mindegyik megtudja az IP-címét és hogy melyik oldalt nyitotta meg"
     },
     "auditIssues": {
         "message": "problémák: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Jelölőkód"
     },
     "auditA11y": {
         "message": "Akadálymentesség"

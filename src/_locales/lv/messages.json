@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "no 10"
+    },
+    "scoreUnsure": {
+        "message": "Servera galvenes nav redzamas — vērtējums pēc nepilnīgiem datiem"
+    },
+    "scoreCapHttps": {
+        "message": "Bez HTTPS vērtējums nav augstāks par 4"
+    },
     "scoreHttps": {
         "message": "Šifrēšana"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — noteikts pēc netiešām pazīmēm"
     },
+    "reportLegendUnsure": {
+        "message": "? — pēc nepilnīgiem datiem"
+    },
     "reportLegendEstimate": {
         "message": "≈ — aptuvens novērtējums"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Tiek nodota tikai paplašinājuma saite — nokopējiet pārskata attēlu un ielīmējiet to ierakstā"
     },
-    "auditLabel": {
-        "message": "Sīkāk"
+    "auditPrivacy": {
+        "message": "Privātums"
+    },
+    "auditAbout": {
+        "message": "Par vietni"
+    },
+    "auditTrackingHint": {
+        "message": "ABlock katalogā esošie uzņēmumi, kas vāc datus par apmeklētājiem: skaitītāji, reklāma, sociālo tīklu pogas"
+    },
+    "auditDomainsHint": {
+        "message": "Faili no citām vietnēm: katrs uzzina jūsu IP adresi un atvērto lapu"
     },
     "auditIssues": {
         "message": "problēmas: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Marķējums"
     },
     "auditA11y": {
         "message": "Pieejamība"

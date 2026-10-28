@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "১০-এর মধ্যে"
+    },
+    "scoreUnsure": {
+        "message": "সার্ভারের হেডার দেখা যাচ্ছে না — স্কোর অসম্পূর্ণ তথ্যের ভিত্তিতে"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS ছাড়া স্কোর ৪-এর বেশি নয়"
+    },
     "scoreHttps": {
         "message": "এনক্রিপশন"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — পরোক্ষ লক্ষণ থেকে শনাক্ত"
     },
+    "reportLegendUnsure": {
+        "message": "? — অসম্পূর্ণ তথ্যে"
+    },
     "reportLegendEstimate": {
         "message": "≈ — আনুমানিক হিসাব"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "শুধু এক্সটেনশনের লিংক পাঠানো হয় — রিপোর্টের ছবি কপি করে পোস্টে পেস্ট করুন"
     },
-    "auditLabel": {
-        "message": "বিস্তারিত"
+    "auditPrivacy": {
+        "message": "গোপনীয়তা"
+    },
+    "auditAbout": {
+        "message": "সাইট সম্পর্কে"
+    },
+    "auditTrackingHint": {
+        "message": "ABlock-এর তালিকার যেসব কোম্পানি দর্শকদের তথ্য সংগ্রহ করে: কাউন্টার, বিজ্ঞাপন, সোশ্যাল বোতাম"
+    },
+    "auditDomainsHint": {
+        "message": "অন্য সাইটের ফাইল: প্রতিটি আপনার IP ঠিকানা এবং আপনি কোন পৃষ্ঠা খুলেছেন তা জানতে পারে"
     },
     "auditIssues": {
         "message": "সমস্যা: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "মার্কআপ"
     },
     "auditA11y": {
         "message": "অ্যাক্সেসিবিলিটি"

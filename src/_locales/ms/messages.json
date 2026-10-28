@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "daripada 10"
+    },
+    "scoreUnsure": {
+        "message": "Pengepala pelayan tidak kelihatan — skor berdasarkan data yang tidak lengkap"
+    },
+    "scoreCapHttps": {
+        "message": "Tanpa HTTPS skor paling tinggi 4"
+    },
     "scoreHttps": {
         "message": "Penyulitan"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — dikesan melalui tanda tidak langsung"
     },
+    "reportLegendUnsure": {
+        "message": "? — berdasarkan data tidak lengkap"
+    },
     "reportLegendEstimate": {
         "message": "≈ — anggaran kasar"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Hanya pautan sambungan dihantar — salin imej laporan dan tampalkan dalam siaran"
     },
-    "auditLabel": {
-        "message": "Butiran"
+    "auditPrivacy": {
+        "message": "Privasi"
+    },
+    "auditAbout": {
+        "message": "Tentang tapak"
+    },
+    "auditTrackingHint": {
+        "message": "Syarikat daripada direktori ABlock yang mengumpul data pelawat: pembilang, iklan, butang media sosial"
+    },
+    "auditDomainsHint": {
+        "message": "Fail dari tapak lain: setiap satu mengetahui alamat IP anda dan halaman yang anda buka"
     },
     "auditIssues": {
         "message": "isu: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Penanda"
     },
     "auditA11y": {
         "message": "Kebolehcapaian"

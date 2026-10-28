@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "od 10"
+    },
+    "scoreUnsure": {
+        "message": "Glave strežnika niso vidne — ocena temelji na nepopolnih podatkih"
+    },
+    "scoreCapHttps": {
+        "message": "Brez HTTPS je ocena največ 4"
+    },
     "scoreHttps": {
         "message": "Šifriranje"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — zaznano po posrednih znakih"
     },
+    "reportLegendUnsure": {
+        "message": "? — po nepopolnih podatkih"
+    },
     "reportLegendEstimate": {
         "message": "≈ — približna ocena"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Posreduje se le povezava do razširitve — kopirajte sliko poročila in jo prilepite v objavo"
     },
-    "auditLabel": {
-        "message": "Podrobnosti"
+    "auditPrivacy": {
+        "message": "Zasebnost"
+    },
+    "auditAbout": {
+        "message": "O spletnem mestu"
+    },
+    "auditTrackingHint": {
+        "message": "Podjetja iz imenika ABlock, ki zbirajo podatke o obiskovalcih: števci, oglasi, gumbi družbenih omrežij"
+    },
+    "auditDomainsHint": {
+        "message": "Datoteke z drugih spletnih mest: vsako izve vaš naslov IP in katero stran ste odprli"
     },
     "auditIssues": {
         "message": "težave: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Oznake"
     },
     "auditA11y": {
         "message": "Dostopnost"

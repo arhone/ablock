@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "στα 10"
+    },
+    "scoreUnsure": {
+        "message": "Οι κεφαλίδες του διακομιστή δεν φαίνονται — η βαθμολογία βασίζεται σε ελλιπή δεδομένα"
+    },
+    "scoreCapHttps": {
+        "message": "Χωρίς HTTPS η βαθμολογία δεν ξεπερνά το 4"
+    },
     "scoreHttps": {
         "message": "Κρυπτογράφηση"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — εντοπίστηκε από έμμεσες ενδείξεις"
     },
+    "reportLegendUnsure": {
+        "message": "? — με ελλιπή δεδομένα"
+    },
     "reportLegendEstimate": {
         "message": "≈ — κατά προσέγγιση εκτίμηση"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Μεταβιβάζεται μόνο ο σύνδεσμος της επέκτασης — αντιγράψτε την εικόνα της αναφοράς και επικολλήστε την στην ανάρτηση"
     },
-    "auditLabel": {
-        "message": "Λεπτομέρειες"
+    "auditPrivacy": {
+        "message": "Απόρρητο"
+    },
+    "auditAbout": {
+        "message": "Για τον ιστότοπο"
+    },
+    "auditTrackingHint": {
+        "message": "Εταιρείες από τον κατάλογο του ABlock που συλλέγουν δεδομένα επισκεπτών: μετρητές, διαφημίσεις, κουμπιά κοινωνικών δικτύων"
+    },
+    "auditDomainsHint": {
+        "message": "Αρχεία από ξένους ιστότοπους: ο καθένας μαθαίνει τη διεύθυνση IP σας και ποια σελίδα ανοίξατε"
     },
     "auditIssues": {
         "message": "προβλήματα: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Σήμανση"
     },
     "auditA11y": {
         "message": "Προσβασιμότητα"

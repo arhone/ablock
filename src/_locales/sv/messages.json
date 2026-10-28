@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "av 10"
+    },
+    "scoreUnsure": {
+        "message": "Serverns rubriker syns inte — betyget bygger på ofullständiga data"
+    },
+    "scoreCapHttps": {
+        "message": "Utan HTTPS är betyget högst 4"
+    },
     "scoreHttps": {
         "message": "Kryptering"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — upptäckt utifrån indirekta tecken"
     },
+    "reportLegendUnsure": {
+        "message": "? — utifrån ofullständiga data"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ungefärlig uppskattning"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Bara länken till tillägget skickas — kopiera rapportbilden och klistra in den i inlägget"
     },
-    "auditLabel": {
-        "message": "Detaljer"
+    "auditPrivacy": {
+        "message": "Integritet"
+    },
+    "auditAbout": {
+        "message": "Om webbplatsen"
+    },
+    "auditTrackingHint": {
+        "message": "Företag ur ABlocks register som samlar in data om besökare: räknare, annonser, knappar för sociala medier"
+    },
+    "auditDomainsHint": {
+        "message": "Filer från andra webbplatser: var och en får veta din IP-adress och vilken sida du öppnade"
     },
     "auditIssues": {
         "message": "problem: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Uppmärkning"
     },
     "auditA11y": {
         "message": "Tillgänglighet"

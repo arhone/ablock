@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "kati ya 10"
+    },
+    "scoreUnsure": {
+        "message": "Vichwa vya seva havionekani — alama inatokana na data isiyokamilika"
+    },
+    "scoreCapHttps": {
+        "message": "Bila HTTPS alama haizidi 4"
+    },
     "scoreHttps": {
         "message": "Usimbaji"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — imegunduliwa kwa ishara zisizo za moja kwa moja"
     },
+    "reportLegendUnsure": {
+        "message": "? — kwa data isiyokamilika"
+    },
     "reportLegendEstimate": {
         "message": "≈ — makadirio ya takriban"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Kiungo cha kiendelezi pekee ndicho kinapitishwa — nakili picha ya ripoti na uibandike kwenye chapisho"
     },
-    "auditLabel": {
-        "message": "Maelezo"
+    "auditPrivacy": {
+        "message": "Faragha"
+    },
+    "auditAbout": {
+        "message": "Kuhusu tovuti"
+    },
+    "auditTrackingHint": {
+        "message": "Kampuni kutoka orodha ya ABlock zinazokusanya data kuhusu wageni: vihesabu, matangazo, vitufe vya mitandao ya kijamii"
+    },
+    "auditDomainsHint": {
+        "message": "Faili kutoka tovuti nyingine: kila moja hujua anwani yako ya IP na ukurasa uliofungua"
     },
     "auditIssues": {
         "message": "matatizo: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Msimbo wa ukurasa"
     },
     "auditA11y": {
         "message": "Ufikivu"

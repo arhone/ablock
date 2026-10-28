@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "از 10"
+    },
+    "scoreUnsure": {
+        "message": "سرآیندهای سرور دیده نمی‌شوند — امتیاز بر اساس داده‌های ناقص است"
+    },
+    "scoreCapHttps": {
+        "message": "بدون HTTPS امتیاز بیشتر از 4 نیست"
+    },
     "scoreHttps": {
         "message": "رمزگذاری"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — از روی نشانه‌های غیرمستقیم تشخیص داده شد"
     },
+    "reportLegendUnsure": {
+        "message": "? — با داده‌های ناقص"
+    },
     "reportLegendEstimate": {
         "message": "≈ — تخمین تقریبی"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "فقط پیوند افزونه فرستاده می‌شود — تصویر گزارش را کپی کنید و در پست بچسبانید"
     },
-    "auditLabel": {
-        "message": "جزئیات"
+    "auditPrivacy": {
+        "message": "حریم خصوصی"
+    },
+    "auditAbout": {
+        "message": "دربارهٔ سایت"
+    },
+    "auditTrackingHint": {
+        "message": "شرکت‌هایی از فهرست ABlock که دربارهٔ بازدیدکنندگان داده جمع می‌کنند: شمارنده‌ها، تبلیغات، دکمه‌های شبکه‌های اجتماعی"
+    },
+    "auditDomainsHint": {
+        "message": "فایل‌هایی از سایت‌های دیگر: هر کدام IP شما و صفحه‌ای را که باز کرده‌اید می‌فهمد"
     },
     "auditIssues": {
         "message": "مشکلات: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "نشانه‌گذاری"
     },
     "auditA11y": {
         "message": "دسترس‌پذیری"

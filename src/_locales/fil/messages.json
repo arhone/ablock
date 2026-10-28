@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "sa 10"
+    },
+    "scoreUnsure": {
+        "message": "Hindi nakikita ang mga header ng server — batay sa kulang na data ang iskor"
+    },
+    "scoreCapHttps": {
+        "message": "Kung walang HTTPS, hanggang 4 lang ang iskor"
+    },
     "scoreHttps": {
         "message": "Pag-encrypt"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — natukoy sa di-tuwirang palatandaan"
     },
+    "reportLegendUnsure": {
+        "message": "? — batay sa kulang na data"
+    },
     "reportLegendEstimate": {
         "message": "≈ — tinatayang halaga"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Link lang ng extension ang ipinapasa — kopyahin ang larawan ng ulat at i-paste ito sa post"
     },
-    "auditLabel": {
-        "message": "Mga detalye"
+    "auditPrivacy": {
+        "message": "Privacy"
+    },
+    "auditAbout": {
+        "message": "Tungkol sa site"
+    },
+    "auditTrackingHint": {
+        "message": "Mga kumpanya mula sa direktoryo ng ABlock na nangongolekta ng data tungkol sa mga bisita: counter, ad, social button"
+    },
+    "auditDomainsHint": {
+        "message": "Mga file mula sa ibang site: nalalaman ng bawat isa ang iyong IP address at kung anong page ang binuksan mo"
     },
     "auditIssues": {
         "message": "mga isyu: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Markup"
     },
     "auditA11y": {
         "message": "Accessibility"

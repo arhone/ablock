@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "ud af 10"
+    },
+    "scoreUnsure": {
+        "message": "Serverens headere er ikke synlige — karakteren bygger på ufuldstændige data"
+    },
+    "scoreCapHttps": {
+        "message": "Uden HTTPS er karakteren højst 4"
+    },
     "scoreHttps": {
         "message": "Kryptering"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — fundet ud fra indirekte tegn"
     },
+    "reportLegendUnsure": {
+        "message": "? — ud fra ufuldstændige data"
+    },
     "reportLegendEstimate": {
         "message": "≈ — omtrentligt skøn"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Kun linket til udvidelsen videregives — kopiér rapportbilledet og indsæt det i opslaget"
     },
-    "auditLabel": {
-        "message": "Detaljer"
+    "auditPrivacy": {
+        "message": "Privatliv"
+    },
+    "auditAbout": {
+        "message": "Om webstedet"
+    },
+    "auditTrackingHint": {
+        "message": "Virksomheder fra ABlocks register, der indsamler data om besøgende: tællere, reklamer, knapper til sociale medier"
+    },
+    "auditDomainsHint": {
+        "message": "Filer fra andre websteder: hver af dem får din IP-adresse at vide og hvilken side du har åbnet"
     },
     "auditIssues": {
         "message": "problemer: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Opmærkning"
     },
     "auditA11y": {
         "message": "Tilgængelighed"

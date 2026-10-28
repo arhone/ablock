@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "na 10"
+    },
+    "scoreUnsure": {
+        "message": "Nagłówki serwera nie są widoczne — ocena według niepełnych danych"
+    },
+    "scoreCapHttps": {
+        "message": "Bez HTTPS ocena najwyżej 4"
+    },
     "scoreHttps": {
         "message": "Szyfrowanie"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — ustalono na podstawie pośrednich oznak"
     },
+    "reportLegendUnsure": {
+        "message": "? — według niepełnych danych"
+    },
     "reportLegendEstimate": {
         "message": "≈ — przybliżone oszacowanie"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Przekazywany jest tylko link do rozszerzenia — skopiuj obraz raportu i wklej go do posta"
     },
-    "auditLabel": {
-        "message": "Szczegóły"
+    "auditPrivacy": {
+        "message": "Prywatność"
+    },
+    "auditAbout": {
+        "message": "O stronie"
+    },
+    "auditTrackingHint": {
+        "message": "Firmy z katalogu ABlock, które zbierają dane o odwiedzających: liczniki, reklamy, przyciski serwisów społecznościowych"
+    },
+    "auditDomainsHint": {
+        "message": "Pliki z obcych stron: każda z nich poznaje Twój adres IP i otwartą stronę"
     },
     "auditIssues": {
         "message": "uwagi: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Kod strony"
     },
     "auditA11y": {
         "message": "Dostępność"

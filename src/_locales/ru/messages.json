@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "из 10"
+    },
+    "scoreUnsure": {
+        "message": "Заголовки сервера не видны — балл по неполным данным"
+    },
+    "scoreCapHttps": {
+        "message": "Без HTTPS оценка не выше 4"
+    },
     "scoreHttps": {
         "message": "Шифрование"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — определено по косвенным признакам"
     },
+    "reportLegendUnsure": {
+        "message": "? — по неполным данным"
+    },
     "reportLegendEstimate": {
         "message": "≈ — примерная оценка"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Передаётся только ссылка на расширение — картинку отчёта скопируйте и вставьте в пост"
     },
-    "auditLabel": {
-        "message": "Подробнее"
+    "auditPrivacy": {
+        "message": "Приватность"
+    },
+    "auditAbout": {
+        "message": "О сайте"
+    },
+    "auditTrackingHint": {
+        "message": "Компании из справочника ABlock, которые собирают данные о посетителях: счётчики, реклама, кнопки соцсетей"
+    },
+    "auditDomainsHint": {
+        "message": "Файлы с чужих сайтов: каждый из них узнаёт ваш IP-адрес и какую страницу вы открыли"
     },
     "auditIssues": {
         "message": "замечаний: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Вёрстка"
     },
     "auditA11y": {
         "message": "Доступность"

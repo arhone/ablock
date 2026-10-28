@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "10-க்கு"
+    },
+    "scoreUnsure": {
+        "message": "சர்வர் தலைப்புகள் தெரியவில்லை — மதிப்பெண் முழுமையற்ற தரவின் அடிப்படையில்"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS இல்லாமல் மதிப்பெண் 4-க்கு மேல் இல்லை"
+    },
     "scoreHttps": {
         "message": "மறைகுறியாக்கம்"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — மறைமுக அறிகுறிகளால் கண்டறியப்பட்டது"
     },
+    "reportLegendUnsure": {
+        "message": "? — முழுமையற்ற தரவின்படி"
+    },
     "reportLegendEstimate": {
         "message": "≈ — தோராயமான மதிப்பீடு"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "நீட்டிப்பின் இணைப்பு மட்டுமே அனுப்பப்படுகிறது — அறிக்கைப் படத்தை நகலெடுத்து இடுகையில் ஒட்டுங்கள்"
     },
-    "auditLabel": {
-        "message": "விவரங்கள்"
+    "auditPrivacy": {
+        "message": "தனியுரிமை"
+    },
+    "auditAbout": {
+        "message": "தளம் பற்றி"
+    },
+    "auditTrackingHint": {
+        "message": "பார்வையாளர்களின் தரவைச் சேகரிக்கும் ABlock பட்டியலில் உள்ள நிறுவனங்கள்: கவுண்டர்கள், விளம்பரங்கள், சமூக பொத்தான்கள்"
+    },
+    "auditDomainsHint": {
+        "message": "பிற தளங்களின் கோப்புகள்: ஒவ்வொன்றும் உங்கள் IP முகவரியையும் நீங்கள் திறந்த பக்கத்தையும் அறியும்"
     },
     "auditIssues": {
         "message": "சிக்கல்கள்: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "மார்க்அப்"
     },
     "auditA11y": {
         "message": "அணுகல்தன்மை"

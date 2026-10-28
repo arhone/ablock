@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "z 10"
+    },
+    "scoreUnsure": {
+        "message": "Hlavičky servera nie sú viditeľné — hodnotenie podľa neúplných údajov"
+    },
+    "scoreCapHttps": {
+        "message": "Bez HTTPS je hodnotenie najviac 4"
+    },
     "scoreHttps": {
         "message": "Šifrovanie"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — určené podľa nepriamych znakov"
     },
+    "reportLegendUnsure": {
+        "message": "? — podľa neúplných údajov"
+    },
     "reportLegendEstimate": {
         "message": "≈ — približný odhad"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Odovzdá sa len odkaz na rozšírenie — skopírujte obrázok správy a vložte ho do príspevku"
     },
-    "auditLabel": {
-        "message": "Podrobnosti"
+    "auditPrivacy": {
+        "message": "Súkromie"
+    },
+    "auditAbout": {
+        "message": "O stránke"
+    },
+    "auditTrackingHint": {
+        "message": "Firmy z adresára ABlock, ktoré zbierajú údaje o návštevníkoch: počítadlá, reklama, tlačidlá sociálnych sietí"
+    },
+    "auditDomainsHint": {
+        "message": "Súbory z cudzích stránok: každá z nich zistí vašu IP adresu a akú stránku ste otvorili"
     },
     "auditIssues": {
         "message": "pripomienky: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Rozloženie"
     },
     "auditA11y": {
         "message": "Prístupnosť"

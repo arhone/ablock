@@ -373,6 +373,15 @@
             }
         }
     },
+    "scoreOutOf": {
+        "message": "10-нан"
+    },
+    "scoreUnsure": {
+        "message": "Сервер тақырыптары көрінбейді — баға толық емес деректер бойынша"
+    },
+    "scoreCapHttps": {
+        "message": "HTTPS болмаса, баға 4-тен аспайды"
+    },
     "scoreHttps": {
         "message": "Шифрлау"
     },
@@ -485,6 +494,9 @@
     "reportLegendGuess": {
         "message": "? — жанама белгілер бойынша анықталған"
     },
+    "reportLegendUnsure": {
+        "message": "? — толық емес деректер бойынша"
+    },
     "reportLegendEstimate": {
         "message": "≈ — шамамен алынған баға"
     },
@@ -538,8 +550,17 @@
     "shareLinkOnly": {
         "message": "Тек кеңейтімге сілтеме беріледі — есеп суретін көшіріп, жазбаға қойыңыз"
     },
-    "auditLabel": {
-        "message": "Толығырақ"
+    "auditPrivacy": {
+        "message": "Құпиялық"
+    },
+    "auditAbout": {
+        "message": "Сайт туралы"
+    },
+    "auditTrackingHint": {
+        "message": "ABlock анықтамалығындағы келушілер туралы дерек жинайтын компаниялар: санағыштар, жарнама, әлеуметтік желі түймелері"
+    },
+    "auditDomainsHint": {
+        "message": "Бөгде сайттардағы файлдар: әрқайсысы IP мекенжайыңызды және ашқан бетіңізді біледі"
     },
     "auditIssues": {
         "message": "ескертулер: $COUNT$",
@@ -557,9 +578,6 @@
     },
     "auditSeo": {
         "message": "SEO"
-    },
-    "auditMarkup": {
-        "message": "Беттеу"
     },
     "auditA11y": {
         "message": "Қолжетімділік"
