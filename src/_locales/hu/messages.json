@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "A hirdetések és nyomkövetők le lettek tiltva, és nem töltődtek be – védelem nélkül az oldal nagyobb"
+    },
     "compressionOn": {
         "message": "Az oldal tömörített: $NAME$",
         "placeholders": {

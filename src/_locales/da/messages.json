@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Annoncer og trackere blev blokeret og ikke indlæst — uden beskyttelse er siden større"
+    },
     "compressionOn": {
         "message": "Siden er komprimeret: $NAME$",
         "placeholders": {

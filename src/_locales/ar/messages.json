@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "تم حظر الإعلانات وأدوات التتبع فلم تُحمَّل — بدون الحماية ستكون الصفحة أثقل"
+    },
     "compressionOn": {
         "message": "الصفحة مضغوطة: $NAME$",
         "placeholders": {

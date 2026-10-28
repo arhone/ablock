@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Reklamy a sledovače boli zablokované a nenačítali sa — bez ochrany je stránka väčšia"
+    },
     "compressionOn": {
         "message": "Stránka je komprimovaná: $NAME$",
         "placeholders": {

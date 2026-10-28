@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Reklama va trekerlar bloklandi va yuklanmadi — himoyasiz sahifa og‘irroq"
+    },
     "compressionOn": {
         "message": "Sahifa siqilgan: $NAME$",
         "placeholders": {

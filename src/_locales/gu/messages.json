@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "જાહેરાતો અને ટ્રેકર્સ બ્લૉક થયા અને લોડ ન થયા — સુરક્ષા વિના પેજ વધુ ભારે છે"
+    },
     "compressionOn": {
         "message": "પેજ સંકુચિત છે: $NAME$",
         "placeholders": {

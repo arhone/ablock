@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Oglasi in sledilniki so bili blokirani in se niso naložili – brez zaščite je stran večja"
+    },
     "compressionOn": {
         "message": "Stran je stisnjena: $NAME$",
         "placeholders": {

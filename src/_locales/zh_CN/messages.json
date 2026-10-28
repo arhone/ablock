@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "广告和跟踪器已被拦截，未加载——没有保护时页面会更大"
+    },
     "compressionOn": {
         "message": "页面已压缩：$NAME$",
         "placeholders": {

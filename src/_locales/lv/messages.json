@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Reklāmas un izsekotāji tika bloķēti un netika ielādēti — bez aizsardzības lapa ir lielāka"
+    },
     "compressionOn": {
         "message": "Lapa ir saspiesta: $NAME$",
         "placeholders": {

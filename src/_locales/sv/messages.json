@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Annonser och spårare blockerades och lästes inte in – utan skydd är sidan större"
+    },
     "compressionOn": {
         "message": "Sidan är komprimerad: $NAME$",
         "placeholders": {

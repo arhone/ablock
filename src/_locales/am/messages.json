@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "ማስታወቂያዎች እና መከታተያዎች ታግደዋል እና አልተጫኑም — ያለ ጥበቃ ገጹ የበለጠ ይከብዳል"
+    },
     "compressionOn": {
         "message": "ገጹ ተጨምቋል: $NAME$",
         "placeholders": {

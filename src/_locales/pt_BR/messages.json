@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Anúncios e rastreadores foram bloqueados e não carregaram — sem proteção a página pesa mais"
+    },
     "compressionOn": {
         "message": "Página comprimida: $NAME$",
         "placeholders": {

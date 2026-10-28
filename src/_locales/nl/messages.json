@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Advertenties en trackers zijn geblokkeerd en niet geladen — zonder bescherming is de pagina groter"
+    },
     "compressionOn": {
         "message": "Pagina is gecomprimeerd: $NAME$",
         "placeholders": {

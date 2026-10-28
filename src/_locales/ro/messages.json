@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Reclamele și elementele de urmărire au fost blocate și nu s-au încărcat — fără protecție pagina este mai mare"
+    },
     "compressionOn": {
         "message": "Pagina este comprimată: $NAME$",
         "placeholders": {

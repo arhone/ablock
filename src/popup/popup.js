@@ -589,7 +589,7 @@ async function renderSite(tab, server, onLoadTime) {
 
     const protocols = {
         'h3': ['HTTP/3', 'good', t('protocolH3')],
-        'h2': ['HTTP/2', 'warn', t('protocolH2')],
+        'h2': ['HTTP/2', 'good', t('protocolH2')],
         'http/1.1': ['HTTP/1.1', 'bad', t('protocolOld', 'HTTP/1.1')],
         'http/1.0': ['HTTP/1.0', 'bad', t('protocolOld', 'HTTP/1.0')]
     };
@@ -651,6 +651,12 @@ async function renderSite(tab, server, onLoadTime) {
         timer = setTimeout(refresh, Math.max(10000 - info.age, 1000) + 100);
     }
 
+    // Сайты и CDN той же компании (githubassets.com у github.com, userapi.com у vk.com) — не сторонние
+    const host = new URL(tab.url).hostname;
+    const owner = (await loadData('companies')).find((company) => company.sites?.some((d) => matchesDomain(host, d)));
+    if (owner) {
+        info.domains = info.domains.filter((domain) => !owner.sites.some((d) => matchesDomain(domain, d)));
+    }
     const count = info.domains.length;
     const list = info.domains.slice(0, 25).join('\n') + (count > 25 ? '\n' + t('domainsMore', count - 25) : '');
     setBadge('domains', t('domains', count), count <= 5 ? 'good' : count <= 15 ? 'warn' : 'bad',
@@ -661,7 +667,7 @@ async function renderSite(tab, server, onLoadTime) {
     const approximate = truncated || estimated > bytes * 0.2;
     const megabytes = bytes / 2 ** 20;
     setBadge('weight', (approximate ? '≈\u00a0' : '') + formatSize(bytes),
-        megabytes < 1 ? 'good' : megabytes < 3 ? 'warn' : 'bad',
+        megabytes <= 2 ? 'good' : megabytes <= 5 ? 'warn' : 'bad',
         [t('weightTitle'), approximate ? t('weightEstimated', files - unknown, files) : ''].filter(Boolean).join('\n'));
 
     // Сжатие главного документа
@@ -755,6 +761,11 @@ async function renderBlocked(tab, info, status, server) {
     // Трекеры заблокированы: сайт пытался следить, но защита это остановила — жёлтый, а не красный
     setBadge('trackers', t('trackers', trackers), trackers ? 'warn' : 'good',
         trackers ? t('trackersFound', trackers) : t('trackersNone'));
+    // Заблокированное не загрузилось — без защиты страница весила бы больше
+    if (ads || trackers) {
+        const weight = document.getElementById('weight');
+        weight.title += '\n' + t('weightBlocked');
+    }
 }
 
 /**
@@ -1247,14 +1258,17 @@ function renderScore(info, companies, hsts, vitals) {
     const step = (value, limits, points) => points[limits.findIndex((limit) => value <= limit)] ?? points[points.length - 1];
     const parts = [
         ['scoreHttps', info.https ? 1 : 0, 3],
-        ['scoreProtocol', info.h3 ? 1 : {'h2': 0.8, 'http/1.1': 0.3, 'http/1.0': 0.2}[info.protocol], 1],
+        // HTTP/2 — норма (Lighthouse ругается только на HTTP/1.x), HTTP/3 — небольшой плюс
+        ['scoreProtocol', info.h3 ? 1 : {'h2': 0.9, 'http/1.1': 0.3, 'http/1.0': 0.2}[info.protocol], 1],
         // Скорость — по отрисовке главного блока (LCP), как у Google; если её нет — по полной загрузке
         ['scoreSpeed', vitals?.lcp != null ? step(vitals.lcp / 1000, [1.5, 2.5, 4, 6], [1, 0.85, 0.5, 0.25, 0.1])
             : info.loadTime === null ? undefined : step(info.loadTime / 1000, [1, 2, 3, 5], [1, 0.85, 0.65, 0.4, 0.15]), 2],
         ['scoreCls', vitals?.cls != null ? step(vitals.cls, [0.1, 0.25], [1, 0.5, 0.1]) : undefined, 1],
-        ['scoreWeight', step(info.weight.bytes / 2 ** 20, [0.5, 1, 2, 3, 5], [1, 0.85, 0.7, 0.5, 0.3, 0.1]), 1.5],
+        // Пороги как у метки веса: до 2 МБ — от 8 баллов, до 5 — от 5, больше — меньше 5
+        ['scoreWeight', step(info.weight.bytes / 2 ** 20, [1, 2, 3, 5, 8], [1, 0.9, 0.7, 0.55, 0.3, 0.1]), 1.5],
         ['scoreTrackers', step(companies, [0, 1, 2, 4, 7], [1, 0.8, 0.65, 0.45, 0.25, 0.1]), 2.5],
-        ['scoreDomains', step(info.domains.length, [5, 15, 30], [1, 0.6, 0.35, 0.15]), 1],
+        // Вес небольшой: сторонние домены во многом те же трекеры, они уже учтены выше
+        ['scoreDomains', step(info.domains.length, [5, 15, 30], [1, 0.6, 0.35, 0.15]), 0.5],
         ['scoreCompression', compressionScore(info), 0.5],
         ['scoreHsts', hsts === null ? undefined : hsts ? 1 : 0.3, 0.5],
         // Пассивный смешанный контент браузер переводит на HTTPS сам — штраф мягче, но балл ниже 8,

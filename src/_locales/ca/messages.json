@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Els anuncis i rastrejadors s'han bloquejat i no s'han carregat: sense protecció la pàgina pesa més"
+    },
     "compressionOn": {
         "message": "La pàgina està comprimida: $NAME$",
         "placeholders": {

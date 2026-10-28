@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Oglasi i alati za praćenje blokirani su i nisu učitani — bez zaštite stranica je veća"
+    },
     "compressionOn": {
         "message": "Stranica je sažeta: $NAME$",
         "placeholders": {

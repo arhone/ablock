@@ -20,6 +20,17 @@
             "adfox.yandex.ru",
             "yandex.ru/ads/",
             "yandex.ru/an/"
+        ],
+        "sites": [
+            "yandex.ru",
+            "yandex.com",
+            "yandex.by",
+            "yandex.kz",
+            "yandex.uz",
+            "yandex.com.tr",
+            "ya.ru",
+            "yandex.net",
+            "yastatic.net"
         ]
     },
     {
@@ -34,6 +45,22 @@
             "ads.vk.com",
             "vk.com/rtrg",
             "vk.ru/rtrg"
+        ],
+        "sites": [
+            "vk.com",
+            "vk.ru",
+            "vk.me",
+            "userapi.com",
+            "vkuser.net",
+            "vkuseraudio.net",
+            "vkuservideo.net",
+            "mail.ru",
+            "imgsmail.ru",
+            "ok.ru",
+            "mycdn.me",
+            "okcdn.ru",
+            "dzen.ru",
+            "dzeninfra.ru"
         ]
     },
     {
@@ -52,6 +79,18 @@
             "youtube.com/pagead/",
             "youtube.com/youtubei/v1/log_event",
             "google.com/pagead/"
+        ],
+        "sites": [
+            "google.com",
+            "google.ru",
+            "googleapis.com",
+            "gstatic.com",
+            "googleusercontent.com",
+            "youtube.com",
+            "youtube-nocookie.com",
+            "ytimg.com",
+            "ggpht.com",
+            "googlevideo.com"
         ]
     },
     {
@@ -60,6 +99,17 @@
             "connect.facebook.net",
             "pixel.facebook.com",
             "facebook.com/tr"
+        ],
+        "sites": [
+            "facebook.com",
+            "facebook.net",
+            "fbcdn.net",
+            "instagram.com",
+            "cdninstagram.com",
+            "whatsapp.com",
+            "whatsapp.net",
+            "messenger.com",
+            "threads.net"
         ]
     },
     {
@@ -71,6 +121,19 @@
             "browser.events.data.microsoft.com",
             "js.monitor.azure.com",
             "dc.services.visualstudio.com"
+        ],
+        "sites": [
+            "microsoft.com",
+            "microsoftonline.com",
+            "s-microsoft.com",
+            "live.com",
+            "office.com",
+            "office.net",
+            "bing.com",
+            "bing.net",
+            "msn.com",
+            "skype.com",
+            "xbox.com"
         ]
     },
     {
@@ -183,6 +246,11 @@
         "name": "TikTok",
         "domains": [
             "analytics.tiktok.com"
+        ],
+        "sites": [
+            "tiktok.com",
+            "tiktokcdn.com",
+            "tiktokcdn-us.com"
         ]
     },
     {
@@ -191,6 +259,11 @@
             "static.ads-twitter.com",
             "analytics.twitter.com",
             "ads-api.twitter.com"
+        ],
+        "sites": [
+            "x.com",
+            "twitter.com",
+            "twimg.com"
         ]
     },
     {
@@ -198,12 +271,20 @@
         "domains": [
             "snap.licdn.com",
             "px.ads.linkedin.com"
+        ],
+        "sites": [
+            "linkedin.com",
+            "licdn.com"
         ]
     },
     {
         "name": "Pinterest",
         "domains": [
             "ct.pinterest.com"
+        ],
+        "sites": [
+            "pinterest.com",
+            "pinimg.com"
         ]
     },
     {
@@ -217,6 +298,14 @@
         "name": "Amazon",
         "domains": [
             "amazon-adsystem.com"
+        ],
+        "sites": [
+            "amazon.com",
+            "amazon.co.uk",
+            "amazon.de",
+            "amazon.co.jp",
+            "media-amazon.com",
+            "ssl-images-amazon.com"
         ]
     },
     {
@@ -326,6 +415,11 @@
         "domains": [
             "collector.github.com",
             "api.github.com/_private/browser/stats"
+        ],
+        "sites": [
+            "github.com",
+            "githubassets.com",
+            "githubusercontent.com"
         ]
     },
     {
@@ -369,6 +463,10 @@
             "analytics.yahoo.com",
             "ads.yahoo.com",
             "sp.analytics.yahoo.com"
+        ],
+        "sites": [
+            "yahoo.com",
+            "yimg.com"
         ]
     },
     {

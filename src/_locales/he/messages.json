@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "פרסומות ורכיבי מעקב נחסמו ולא נטענו — בלי הגנה הדף כבד יותר"
+    },
     "compressionOn": {
         "message": "הדף דחוס: $NAME$",
         "placeholders": {

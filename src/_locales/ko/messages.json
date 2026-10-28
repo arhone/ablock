@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "광고와 추적기가 차단되어 로드되지 않았습니다. 보호 기능이 없으면 페이지가 더 무겁습니다"
+    },
     "compressionOn": {
         "message": "페이지가 압축됨: $NAME$",
         "placeholders": {

@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Ads and trackers were blocked and not loaded — without protection the page is heavier"
+    },
     "compressionOn": {
         "message": "Page is compressed: $NAME$",
         "placeholders": {

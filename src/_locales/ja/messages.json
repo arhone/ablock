@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "広告とトラッカーはブロックされ、読み込まれていません。保護なしではページはもっと重くなります"
+    },
     "compressionOn": {
         "message": "ページは圧縮されています: $NAME$",
         "placeholders": {

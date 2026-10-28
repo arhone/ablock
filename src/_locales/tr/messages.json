@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Reklamlar ve izleyiciler engellendi ve yüklenmedi — koruma olmadan sayfa daha büyük"
+    },
     "compressionOn": {
         "message": "Sayfa sıkıştırılmış: $NAME$",
         "placeholders": {

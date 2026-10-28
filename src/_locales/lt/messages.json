@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Reklamos ir sekikliai užblokuoti ir neįkelti – be apsaugos puslapis didesnis"
+    },
     "compressionOn": {
         "message": "Puslapis suglaudintas: $NAME$",
         "placeholders": {

@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Reklaamid ja jälgijad blokeeriti ega laaditud — ilma kaitseta on leht suurem"
+    },
     "compressionOn": {
         "message": "Leht on tihendatud: $NAME$",
         "placeholders": {

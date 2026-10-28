@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Mainokset ja seurantatyökalut estettiin eikä niitä ladattu – ilman suojausta sivu on suurempi"
+    },
     "compressionOn": {
         "message": "Sivu on pakattu: $NAME$",
         "placeholders": {

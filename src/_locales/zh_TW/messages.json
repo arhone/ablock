@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "廣告和追蹤器已被封鎖，未載入——沒有保護時頁面會更大"
+    },
     "compressionOn": {
         "message": "頁面已壓縮：$NAME$",
         "placeholders": {

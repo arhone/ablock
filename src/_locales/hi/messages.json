@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "विज्ञापन और ट्रैकर ब्लॉक हुए और लोड नहीं हुए — सुरक्षा के बिना पेज भारी होता है"
+    },
     "compressionOn": {
         "message": "पेज कंप्रेस है: $NAME$",
         "placeholders": {

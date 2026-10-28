@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Matangazo na vifuatiliaji vimezuiwa na havikupakiwa — bila ulinzi ukurasa ni mzito zaidi"
+    },
     "compressionOn": {
         "message": "Ukurasa umebanwa: $NAME$",
         "placeholders": {

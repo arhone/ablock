@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Na-block ang mga ad at tracker kaya hindi na-load — kung walang proteksyon, mas mabigat ang page"
+    },
     "compressionOn": {
         "message": "Naka-compress ang page: $NAME$",
         "placeholders": {

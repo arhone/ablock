@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Iklan dan penjejak disekat dan tidak dimuatkan — tanpa perlindungan halaman lebih berat"
+    },
     "compressionOn": {
         "message": "Halaman dimampatkan: $NAME$",
         "placeholders": {

@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Reklamy i trackery zostały zablokowane i się nie wczytały — bez ochrony strona jest większa"
+    },
     "compressionOn": {
         "message": "Strona jest skompresowana: $NAME$",
         "placeholders": {

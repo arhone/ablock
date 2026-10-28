@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Quảng cáo và trình theo dõi đã bị chặn nên không tải — nếu không có bảo vệ, trang sẽ nặng hơn"
+    },
     "compressionOn": {
         "message": "Trang được nén: $NAME$",
         "placeholders": {

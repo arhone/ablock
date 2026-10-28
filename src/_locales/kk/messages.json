@@ -199,6 +199,9 @@
             }
         }
     },
+    "weightBlocked": {
+        "message": "Жарнама мен трекерлер бұғатталып, жүктелмеді — қорғаныссыз бет ауырырақ"
+    },
     "compressionOn": {
         "message": "Бет сығылған: $NAME$",
         "placeholders": {
