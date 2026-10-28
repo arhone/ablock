@@ -1226,10 +1226,15 @@ function renderAudit(audit, server, extended) {
         row('auditCustom:CSP, X-Frame-Options, Permissions-Policy…', t(extended ? 'serverReload' : 'serverExtended'), 'none');
     } else {
         const headers = server.headers;
-        const csp = [headers['content-security-policy'], security.csp].filter(Boolean).join(';');
-        // 'unsafe-inline' без nonce и hash разрешает любой встроенный скрипт — от XSS такая политика не спасает
-        const scripts = /(?:^|;)\s*script-src([^;]*)/i.exec(csp)?.[1] ?? /(?:^|;)\s*default-src([^;]*)/i.exec(csp)?.[1] ?? '';
-        const weak = /'unsafe-inline'/i.test(scripts) && !/'nonce-|'sha(256|384|512)-|'strict-dynamic'/i.test(scripts);
+        // Каждый заголовок CSP (повторы склеены через запятую) и <meta> — отдельная политика, браузер применяет все
+        const policies = [...(headers['content-security-policy'] || '').split(','), security.csp].filter((policy) => policy?.trim());
+        const csp = policies.length > 0;
+        // 'unsafe-inline' без nonce и hash разрешает любой встроенный скрипт — от XSS такая политика не спасает.
+        // Слабо, только если слабы все политики, ограничивающие скрипты: строгая перекрывает слабую
+        const scripts = policies.map((policy) => /(?:^|;)\s*script-src([^;]*)/i.exec(policy)?.[1]
+            ?? /(?:^|;)\s*default-src([^;]*)/i.exec(policy)?.[1]).filter((value) => value !== undefined);
+        const weak = scripts.length > 0 && scripts.every((value) => /'unsafe-inline'/i.test(value)
+            && !/'nonce-|'sha(256|384|512)-|'strict-dynamic'/i.test(value));
         row('auditCsp', !csp ? no : weak ? t('auditCspWeak') : yes, !csp ? 'warn' : weak ? 'warn' : 'good');
         const nosniff = /nosniff/i.test(headers['x-content-type-options'] || '');
         row('auditNosniff', nosniff ? yes : no, nosniff ? 'good' : 'warn');

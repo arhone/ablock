@@ -631,8 +631,10 @@ async function onMainFrame(details) {
     const headers = {};
     for (const {name, value} of details.responseHeaders || []) {
         const key = name.toLowerCase();
+        // Одноимённые заголовки склеиваем через запятую, как это делает HTTP: иначе остался бы только
+        // последний (два CSP, X-Robots-Tag с noindex в первом)
         if (HEADERS.includes(key)) {
-            headers[key] = value;
+            headers[key] = key in headers ? `${headers[key]}, ${value}` : value;
         }
     }
     s.tabs[details.tabId] = {
