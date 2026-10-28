@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "לא היו פעולות"
     },
+    "auditInpFast": {
+        "message": "פחות מ-$TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ מתוך $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "תגובה לפעולות (INP)"
     },
     "auditInpHint": {
-        "message": "העיכוב הארוך ביותר בתגובה ללחיצה או להקלדה. טוב — פחות מ-200 מ״ש"
+        "message": "העיכוב הארוך ביותר בתגובה ללחיצה או להקלדה. אם היו יותר מ-50 פעולות, חריגים נדירים אינם נספרים. טוב — פחות מ-200 מ״ש"
     },
     "auditBlocking": {
         "message": "חוסמים רינדור"

@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "sin interacciones"
     },
+    "auditInpFast": {
+        "message": "menos de $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ de $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Respuesta a acciones (INP)"
     },
     "auditInpHint": {
-        "message": "El mayor retraso al reaccionar a un clic o una entrada. Bien: hasta 200 ms"
+        "message": "El mayor retraso al reaccionar a un clic o una entrada. Con más de 50 acciones, no se cuentan los valores atípicos aislados. Bien: hasta 200 ms"
     },
     "auditBlocking": {
         "message": "Bloquean el renderizado"

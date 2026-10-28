@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "žiadne akcie"
     },
+    "auditInpFast": {
+        "message": "pod $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ z $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Odozva na akcie (INP)"
     },
     "auditInpHint": {
-        "message": "Najdlhšie oneskorenie reakcie na kliknutie alebo vstup. Dobre — do 200 ms"
+        "message": "Najdlhšie oneskorenie reakcie na kliknutie alebo vstup. Pri viac ako 50 akciách sa ojedinelé výkyvy nezapočítavajú. Dobre — do 200 ms"
     },
     "auditBlocking": {
         "message": "Blokujú vykresľovanie"

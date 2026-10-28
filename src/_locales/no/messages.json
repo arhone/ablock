@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "ingen interaksjon"
     },
+    "auditInpFast": {
+        "message": "under $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ av $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Respons på interaksjon (INP)"
     },
     "auditInpHint": {
-        "message": "Den lengste forsinkelsen i responsen på et klikk eller en inndata. Bra — under 200 ms"
+        "message": "Den lengste forsinkelsen i responsen på et klikk eller en inndata. Ved mer enn 50 handlinger telles ikke sjeldne avvik med. Bra — under 200 ms"
     },
     "auditBlocking": {
         "message": "Blokkerer gjengivelse"

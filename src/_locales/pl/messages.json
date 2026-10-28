@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "brak interakcji"
     },
+    "auditInpFast": {
+        "message": "poniżej $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ z $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Reakcja na interakcje (INP)"
     },
     "auditInpHint": {
-        "message": "Najdłuższe opóźnienie reakcji na kliknięcie lub wpisywanie. Dobrze — do 200 ms"
+        "message": "Najdłuższe opóźnienie reakcji na kliknięcie lub wpisywanie. Przy ponad 50 działaniach rzadkie skrajne wartości nie są liczone. Dobrze — do 200 ms"
     },
     "auditBlocking": {
         "message": "Blokują renderowanie"

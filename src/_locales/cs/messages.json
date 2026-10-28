@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "bez interakce"
     },
+    "auditInpFast": {
+        "message": "pod $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ z $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Odezva na interakci (INP)"
     },
     "auditInpHint": {
-        "message": "Nejdelší prodleva reakce na kliknutí nebo zadání. Dobré — do 200 ms"
+        "message": "Nejdelší prodleva reakce na kliknutí nebo zadání. Při více než 50 akcích se ojedinělé výkyvy nepočítají. Dobré — do 200 ms"
     },
     "auditBlocking": {
         "message": "Blokují vykreslení"

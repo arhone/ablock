@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "aucune action"
     },
+    "auditInpFast": {
+        "message": "moins de $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ sur $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Réactivité (INP)"
     },
     "auditInpHint": {
-        "message": "Le plus long délai de réaction à un clic ou une saisie. Bien — moins de 200 ms"
+        "message": "Le plus long délai de réaction à un clic ou une saisie. Au-delà de 50 actions, les rares valeurs extrêmes ne sont pas comptées. Bien — moins de 200 ms"
     },
     "auditBlocking": {
         "message": "Bloquent l'affichage"

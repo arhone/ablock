@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "nav darbību"
     },
+    "auditInpFast": {
+        "message": "mazāk par $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ no $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Reakcija uz darbībām (INP)"
     },
     "auditInpHint": {
-        "message": "Ilgākā aizkave, reaģējot uz klikšķi vai ievadi. Labi — līdz 200 ms"
+        "message": "Ilgākā aizkave, reaģējot uz klikšķi vai ievadi. Ja darbību ir vairāk nekā 50, retas novirzes netiek ņemtas vērā. Labi — līdz 200 ms"
     },
     "auditBlocking": {
         "message": "Bloķē attēlošanu"

@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "interaktsioone polnud"
     },
+    "auditInpFast": {
+        "message": "alla $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$/$TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Reageerimine tegevustele (INP)"
     },
     "auditInpHint": {
-        "message": "Pikim viivitus klõpsule või sisestusele reageerimisel. Hea — alla 200 ms"
+        "message": "Pikim viivitus klõpsule või sisestusele reageerimisel. Kui toiminguid on üle 50, harvu kõrvalekaldeid ei arvestata. Hea — alla 200 ms"
     },
     "auditBlocking": {
         "message": "Blokeerivad renderdamist"

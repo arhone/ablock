@@ -1115,7 +1115,10 @@ function renderAudit(audit, server, extended) {
     time('auditLcp', vitals.lcp, 2500, 4000);
     row('auditCls', vitals.cls === null ? '—' : formatNumber(vitals.cls, {maximumFractionDigits: 2}),
         vitals.cls === null ? 'none' : grade(vitals.cls, 0.1, 0.25));
-    if (vitals.inp === null) {
+    // Действия были, но все быстрее 104 мс — браузер их не сохранил: точного числа нет, но это хорошо
+    if (vitals.inpFast) {
+        row('auditInp', t('auditInpFast', formatTime(100)), 'good');
+    } else if (vitals.inp === null) {
         row('auditInp', t('auditNoInput'), 'none');
     } else {
         time('auditInp', vitals.inp, 200, 500);

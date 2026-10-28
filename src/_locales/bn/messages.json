@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "কোনো ইন্টারঅ্যাকশন নেই"
     },
+    "auditInpFast": {
+        "message": "$TIME$-এর কম",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$TOTAL$-এর মধ্যে $COUNT$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "ইন্টারঅ্যাকশনে সাড়া (INP)"
     },
     "auditInpHint": {
-        "message": "ক্লিক বা ইনপুটে সাড়া দিতে সবচেয়ে বেশি দেরি। ভালো — ২০০ মিলিসেকেন্ডের কম"
+        "message": "ক্লিক বা ইনপুটে সাড়া দিতে সবচেয়ে বেশি দেরি। ৫০টির বেশি ক্রিয়া হলে বিরল ব্যতিক্রমগুলো গণনা করা হয় না। ভালো — ২০০ মিলিসেকেন্ডের কম"
     },
     "auditBlocking": {
         "message": "রেন্ডারিং আটকায়"

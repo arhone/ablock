@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "상호작용 없음"
     },
+    "auditInpFast": {
+        "message": "$TIME$ 미만",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$/$TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "상호작용 응답(INP)"
     },
     "auditInpHint": {
-        "message": "클릭이나 입력에 대한 응답의 최대 지연. 좋음 — 200ms 미만"
+        "message": "클릭이나 입력에 대한 응답의 최대 지연. 상호작용이 50회를 넘으면 드문 이상값은 제외합니다. 좋음 — 200ms 미만"
     },
     "auditBlocking": {
         "message": "렌더링 차단"

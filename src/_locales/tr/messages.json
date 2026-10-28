@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "etkileşim olmadı"
     },
+    "auditInpFast": {
+        "message": "$TIME$ altı",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ / $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Etkileşime yanıt (INP)"
     },
     "auditInpHint": {
-        "message": "Tıklama veya girişe verilen en uzun tepki gecikmesi. İyi: 200 ms’ye kadar"
+        "message": "Tıklama veya girişe verilen en uzun tepki gecikmesi. 50’den fazla etkileşimde nadir aykırı değerler sayılmaz. İyi: 200 ms’ye kadar"
     },
     "auditBlocking": {
         "message": "Oluşturmayı engelleyenler"

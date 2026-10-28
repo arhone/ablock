@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "walang interaksyon"
     },
+    "auditInpFast": {
+        "message": "wala pang $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ sa $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Tugon sa interaksyon (INP)"
     },
     "auditInpHint": {
-        "message": "Ang pinakamahabang antala sa pagtugon sa click o input. Mabuti — wala pang 200 ms"
+        "message": "Ang pinakamahabang antala sa pagtugon sa click o input. Kapag higit sa 50 ang aksyon, hindi binibilang ang mga bihirang outlier. Mabuti — wala pang 200 ms"
     },
     "auditBlocking": {
         "message": "Humaharang sa pag-render"

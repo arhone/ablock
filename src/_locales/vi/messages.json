@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "chưa có thao tác"
     },
+    "auditInpFast": {
+        "message": "dưới $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$/$TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Phản hồi thao tác (INP)"
     },
     "auditInpHint": {
-        "message": "Độ trễ lâu nhất khi phản hồi cú nhấp hoặc nhập liệu. Tốt — dưới 200 ms"
+        "message": "Độ trễ lâu nhất khi phản hồi cú nhấp hoặc nhập liệu. Nếu có hơn 50 thao tác, các giá trị bất thường hiếm gặp sẽ không được tính. Tốt — dưới 200 ms"
     },
     "auditBlocking": {
         "message": "Chặn hiển thị"

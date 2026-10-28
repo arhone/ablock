@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "geen interactie"
     },
+    "auditInpFast": {
+        "message": "onder $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ van $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Reactie op interactie (INP)"
     },
     "auditInpHint": {
-        "message": "De langste vertraging bij het reageren op een klik of invoer. Goed — onder 200 ms"
+        "message": "De langste vertraging bij het reageren op een klik of invoer. Bij meer dan 50 interacties tellen zeldzame uitschieters niet mee. Goed — onder 200 ms"
     },
     "auditBlocking": {
         "message": "Blokkeren weergave"

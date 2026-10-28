@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "bez interakcije"
     },
+    "auditInpFast": {
+        "message": "ispod $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ od $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Odziv na radnje (INP)"
     },
     "auditInpHint": {
-        "message": "Najdulje kašnjenje odziva na klik ili unos. Dobro — ispod 200 ms"
+        "message": "Najdulje kašnjenje odziva na klik ili unos. Kod više od 50 radnji rijetka odstupanja se ne računaju. Dobro — ispod 200 ms"
     },
     "auditBlocking": {
         "message": "Blokiraju iscrtavanje"

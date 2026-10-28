@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "ei vuorovaikutusta"
     },
+    "auditInpFast": {
+        "message": "alle $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$/$TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Vaste vuorovaikutukseen (INP)"
     },
     "auditInpHint": {
-        "message": "Pisin viive napsautukseen tai syötteeseen vastaamisessa. Hyvä — alle 200 ms"
+        "message": "Pisin viive napsautukseen tai syötteeseen vastaamisessa. Jos toimintoja on yli 50, harvinaisia poikkeamia ei lasketa. Hyvä — alle 200 ms"
     },
     "auditBlocking": {
         "message": "Estävät hahmonnuksen"

@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "tiada interaksi"
     },
+    "auditInpFast": {
+        "message": "bawah $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ daripada $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Respons interaksi (INP)"
     },
     "auditInpHint": {
-        "message": "Kelewatan terpanjang dalam bertindak balas kepada klik atau input. Baik — bawah 200 ms"
+        "message": "Kelewatan terpanjang dalam bertindak balas kepada klik atau input. Jika lebih daripada 50 tindakan, nilai luar biasa yang jarang berlaku tidak dikira. Baik — bawah 200 ms"
     },
     "auditBlocking": {
         "message": "Menyekat pemaparan"

@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "ምንም መስተጋብር የለም"
     },
+    "auditInpFast": {
+        "message": "ከ$TIME$ በታች",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ ከ$TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "ለመስተጋብር ምላሽ (INP)"
     },
     "auditInpHint": {
-        "message": "ለጠቅታ ወይም ለግቤት ምላሽ ለመስጠት ረጅሙ መዘግየት። ጥሩ — ከ200 ሚሰ በታች"
+        "message": "ለጠቅታ ወይም ለግቤት ምላሽ ለመስጠት ረጅሙ መዘግየት። ከ50 በላይ እርምጃዎች ካሉ፣ አልፎ አልፎ የሚከሰቱ ከፍተኛ ዋጋዎች አይቆጠሩም። ጥሩ — ከ200 ሚሰ በታች"
     },
     "auditBlocking": {
         "message": "ማሳየትን የሚያግዱ"

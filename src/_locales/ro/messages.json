@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "fără interacțiuni"
     },
+    "auditInpFast": {
+        "message": "sub $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ din $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Răspuns la interacțiune (INP)"
     },
     "auditInpHint": {
-        "message": "Cea mai mare întârziere de reacție la un clic sau la o introducere de text. Bine — sub 200 ms"
+        "message": "Cea mai mare întârziere de reacție la un clic sau la o introducere de text. La peste 50 de acțiuni, valorile extreme rare nu sunt luate în calcul. Bine — sub 200 ms"
     },
     "auditBlocking": {
         "message": "Blochează redarea"

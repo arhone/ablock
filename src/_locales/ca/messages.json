@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "sense interaccions"
     },
+    "auditInpFast": {
+        "message": "menys de $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ de $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Resposta a la interacció (INP)"
     },
     "auditInpHint": {
-        "message": "El retard més llarg en respondre a un clic o una entrada. Bé — menys de 200 ms"
+        "message": "El retard més llarg en respondre a un clic o una entrada. Si hi ha més de 50 accions, no es tenen en compte els valors atípics puntuals. Bé — menys de 200 ms"
     },
     "auditBlocking": {
         "message": "Bloquegen la renderització"

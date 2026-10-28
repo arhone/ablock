@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "keine Eingaben"
     },
+    "auditInpFast": {
+        "message": "unter $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ von $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Reaktion auf Eingaben (INP)"
     },
     "auditInpHint": {
-        "message": "Die längste Verzögerung bei der Reaktion auf einen Klick oder eine Eingabe. Gut — bis 200 ms"
+        "message": "Die längste Verzögerung bei der Reaktion auf einen Klick oder eine Eingabe. Bei mehr als 50 Aktionen werden seltene Ausreißer nicht berücksichtigt. Gut — bis 200 ms"
     },
     "auditBlocking": {
         "message": "Blockieren das Rendern"

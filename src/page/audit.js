@@ -111,10 +111,11 @@
     };
 
     // Всё ожидание — параллельно: окно ждёт не дольше самого медленного (обычно 60 мс, файлы сайта — до 2 с)
-    const [lcpEntries, shifts, events, robotsText, llms, securityTxt] = await Promise.all([
+    const [lcpEntries, shifts, events, firstInput, robotsText, llms, securityTxt] = await Promise.all([
         recorded({type: 'largest-contentful-paint'}),
         recorded({type: 'layout-shift'}),
         recorded({type: 'event', durationThreshold: 16}),
+        recorded({type: 'first-input'}),
         siteFile('/robots.txt'),
         siteFile('/llms.txt'),
         siteFile('/.well-known/security.txt')
@@ -140,9 +141,21 @@
         cls = Math.max(cls, session);
     }
 
-    // INP — самая долгая реакция на клик или ввод (для небольшого числа действий так и считается)
-    const interactions = events.filter((event) => event.interactionId > 0);
-    const inp = interactions.length ? Math.max(...interactions.map((event) => event.duration)) : null;
+    // INP — как у Google: одно действие (нажатие, отпускание, клик) — одно значение, самое долгое из его событий.
+    // До 50 действий INP — самая долгая реакция, больше — 98-й перцентиль: на каждые 50 действий отбрасываем
+    // одну самую долгую. Браузер до подписки хранит только события от 104 мс, поэтому всех действий считаем
+    // по interactionCount, а первое действие (first-input) хранится всегда: событий нет, а первое действие есть —
+    // значит, действия были и все быстрее 104 мс
+    const longest = new Map();
+    for (const event of events) {
+        if (event.interactionId > 0) {
+            longest.set(event.interactionId, Math.max(longest.get(event.interactionId) || 0, event.duration));
+        }
+    }
+    // Перцентиль попал на действие быстрее 104 мс — его длительности не знаем, но оно быстрое
+    const durations = [...longest.values()].sort((a, b) => b - a);
+    const count = Math.max(performance.interactionCount || 0, durations.length);
+    const inp = durations[Math.floor(count / 50)] ?? null;
 
     const fcp = performance.getEntriesByName('first-contentful-paint')[0];
     const lcp = lcpEntries[lcpEntries.length - 1];
@@ -155,6 +168,8 @@
         // Сдвиги не записаны, если вкладка грузилась в фоне, — тогда не знаем
         cls: shifts.length || lcp ? Math.round(cls * 1000) / 1000 : null,
         inp,
+        // INP не записан, но действия были — все быстрее 100 мс
+        inpFast: inp === null && (count > 0 || firstInput.length > 0),
         blocking: resources.filter((entry) => entry.renderBlockingStatus === 'blocking').length,
         blockingScripts: resources.filter((entry) => entry.renderBlockingStatus === 'blocking'
             && entry.initiatorType === 'script').length,

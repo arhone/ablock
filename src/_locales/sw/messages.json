@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "hakuna mwingiliano"
     },
+    "auditInpFast": {
+        "message": "chini ya $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ kati ya $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Jibu kwa mwingiliano (INP)"
     },
     "auditInpHint": {
-        "message": "Ucheleweshaji mrefu zaidi katika kujibu kubofya au kuingiza. Nzuri — chini ya ms 200"
+        "message": "Ucheleweshaji mrefu zaidi katika kujibu kubofya au kuingiza. Vitendo vikiwa zaidi ya 50, thamani chache za kipekee hazihesabiwi. Nzuri — chini ya ms 200"
     },
     "auditBlocking": {
         "message": "Huzuia uonyeshaji"

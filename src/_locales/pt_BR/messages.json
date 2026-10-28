@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "sem interações"
     },
+    "auditInpFast": {
+        "message": "menos de $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ de $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Resposta a ações (INP)"
     },
     "auditInpHint": {
-        "message": "O maior atraso na reação a um clique ou digitação. Bom: até 200 ms"
+        "message": "O maior atraso na reação a um clique ou digitação. Com mais de 50 ações, valores atípicos raros não são contados. Bom: até 200 ms"
     },
     "auditBlocking": {
         "message": "Bloqueiam a renderização"

@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "कोई क्रिया नहीं हुई"
     },
+    "auditInpFast": {
+        "message": "$TIME$ से कम",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$TOTAL$ में से $COUNT$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "क्रिया पर प्रतिक्रिया (INP)"
     },
     "auditInpHint": {
-        "message": "क्लिक या इनपुट पर सबसे लंबी देरी। अच्छा — 200 मि.से. तक"
+        "message": "क्लिक या इनपुट पर सबसे लंबी देरी। 50 से ज़्यादा क्रियाएँ होने पर इक्का-दुक्का अपवाद नहीं गिने जाते। अच्छा — 200 मि.से. तक"
     },
     "auditBlocking": {
         "message": "प्रदर्शन रोकने वाली फ़ाइलें"

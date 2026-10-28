@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "no interactions"
     },
+    "auditInpFast": {
+        "message": "under $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ of $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Interaction response (INP)"
     },
     "auditInpHint": {
-        "message": "The longest delay in responding to a click or input. Good — under 200 ms"
+        "message": "The longest delay in responding to a click or input. With more than 50 interactions, rare outliers are not counted. Good — under 200 ms"
     },
     "auditBlocking": {
         "message": "Render-blocking"

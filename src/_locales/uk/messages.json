@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "не було дій"
     },
+    "auditInpFast": {
+        "message": "менше $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ з $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Відгук на дії (INP)"
     },
     "auditInpHint": {
-        "message": "Найбільша затримка реакції на натискання чи введення. Добре — до 200 мс"
+        "message": "Найбільша затримка реакції на натискання чи введення. Якщо дій понад 50, поодинокі викиди не враховуються. Добре — до 200 мс"
     },
     "auditBlocking": {
         "message": "Блокують відмальовку"

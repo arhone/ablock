@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "brez interakcije"
     },
+    "auditInpFast": {
+        "message": "pod $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ od $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Odziv na dejanja (INP)"
     },
     "auditInpHint": {
-        "message": "Najdaljša zakasnitev odziva na klik ali vnos. Dobro — pod 200 ms"
+        "message": "Najdaljša zakasnitev odziva na klik ali vnos. Pri več kot 50 dejanjih redka odstopanja niso upoštevana. Dobro — pod 200 ms"
     },
     "auditBlocking": {
         "message": "Blokirajo izris"

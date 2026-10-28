@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "بدون تعامل"
     },
+    "auditInpFast": {
+        "message": "کمتر از $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ از $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "پاسخ به تعامل (INP)"
     },
     "auditInpHint": {
-        "message": "بیشترین تأخیر در پاسخ به کلیک یا ورودی. خوب — کمتر از 200 میلی‌ثانیه"
+        "message": "بیشترین تأخیر در پاسخ به کلیک یا ورودی. اگر تعداد اقدام‌ها بیش از 50 باشد، مقادیر پرت نادر حساب نمی‌شوند. خوب — کمتر از 200 میلی‌ثانیه"
     },
     "auditBlocking": {
         "message": "مسدودکنندهٔ نمایش"

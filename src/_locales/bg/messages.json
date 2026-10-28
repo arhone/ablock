@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "нямаше действия"
     },
+    "auditInpFast": {
+        "message": "под $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ от $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Реакция на действия (INP)"
     },
     "auditInpHint": {
-        "message": "Най-дългото забавяне на реакцията на клик или въвеждане. Добре — до 200 мс"
+        "message": "Най-дългото забавяне на реакцията на клик или въвеждане. При повече от 50 действия редките изключения не се отчитат. Добре — до 200 мс"
     },
     "auditBlocking": {
         "message": "Блокират изобразяването"

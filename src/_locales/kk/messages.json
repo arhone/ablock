@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "әрекет болмады"
     },
+    "auditInpFast": {
+        "message": "$TIME$-тан аз",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$TOTAL$ ішінен $COUNT$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Әрекетке жауап (INP)"
     },
     "auditInpHint": {
-        "message": "Шертуге немесе енгізуге ең ұзақ кідіріс. Жақсы — 200 мс дейін"
+        "message": "Шертуге немесе енгізуге ең ұзақ кідіріс. Әрекеттер 50-ден көп болса, сирек ауытқулар есептелмейді. Жақсы — 200 мс дейін"
     },
     "auditBlocking": {
         "message": "Сызуды бөгейді"

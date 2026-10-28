@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "沒有互動"
     },
+    "auditInpFast": {
+        "message": "低於 $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ / $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "互動回應（INP）"
     },
     "auditInpHint": {
-        "message": "回應點擊或輸入的最長延遲。良好 — 低於 200 毫秒"
+        "message": "回應點擊或輸入的最長延遲。操作超過 50 次時，不計入偶發的極端值。良好 — 低於 200 毫秒"
     },
     "auditBlocking": {
         "message": "阻擋轉譯"

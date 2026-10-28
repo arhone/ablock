@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "ingen interaktion"
     },
+    "auditInpFast": {
+        "message": "under $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ af $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Svar på interaktion (INP)"
     },
     "auditInpHint": {
-        "message": "Den længste forsinkelse i svaret på et klik eller input. Godt — under 200 ms"
+        "message": "Den længste forsinkelse i svaret på et klik eller input. Ved mere end 50 handlinger tælles sjældne udsving ikke med. Godt — under 200 ms"
     },
     "auditBlocking": {
         "message": "Blokerer gengivelse"

@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "没有操作"
     },
+    "auditInpFast": {
+        "message": "低于 $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ / $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "交互响应 (INP)"
     },
     "auditInpHint": {
-        "message": "点击或输入后最长的响应延迟。良好：200 毫秒以内"
+        "message": "点击或输入后最长的响应延迟。操作超过 50 次时，不计入偶发的极端值。良好：200 毫秒以内"
     },
     "auditBlocking": {
         "message": "阻塞渲染的文件"

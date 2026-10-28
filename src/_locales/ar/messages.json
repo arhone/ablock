@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "لا تفاعلات"
     },
+    "auditInpFast": {
+        "message": "أقل من $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ من $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "الاستجابة للتفاعل (INP)"
     },
     "auditInpHint": {
-        "message": "أطول تأخير في الاستجابة لنقرة أو إدخال. جيد — أقل من 200 مللي ثانية"
+        "message": "أطول تأخير في الاستجابة لنقرة أو إدخال. إذا كانت الإجراءات أكثر من 50، لا تُحتسب القيم الشاذة النادرة. جيد — أقل من 200 مللي ثانية"
     },
     "auditBlocking": {
         "message": "تعيق العرض"

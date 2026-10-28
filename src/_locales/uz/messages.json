@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "harakatlar boʻlmadi"
     },
+    "auditInpFast": {
+        "message": "$TIME$ dan kam",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$TOTAL$ tadan $COUNT$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Harakatlarga javob (INP)"
     },
     "auditInpHint": {
-        "message": "Bosish yoki kiritishga eng uzoq javob kechikishi. Yaxshi — 200 ms gacha"
+        "message": "Bosish yoki kiritishga eng uzoq javob kechikishi. Harakatlar 50 tadan koʻp boʻlsa, kamdan-kam uchraydigan chetga chiqishlar hisobga olinmaydi. Yaxshi — 200 ms gacha"
     },
     "auditBlocking": {
         "message": "Chizishni bloklaydi"

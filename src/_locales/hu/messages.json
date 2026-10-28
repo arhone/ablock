@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "nem volt interakció"
     },
+    "auditInpFast": {
+        "message": "$TIME$ alatt",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$/$TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Interakcióra adott válasz (INP)"
     },
     "auditInpHint": {
-        "message": "A leghosszabb késleltetés egy kattintásra vagy bevitelre adott válaszban. Jó — 200 ms alatt"
+        "message": "A leghosszabb késleltetés egy kattintásra vagy bevitelre adott válaszban. 50-nél több művelet esetén a ritka kiugró értékek nem számítanak. Jó — 200 ms alatt"
     },
     "auditBlocking": {
         "message": "Megjelenítést blokkolók"

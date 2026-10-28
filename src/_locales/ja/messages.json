@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "操作なし"
     },
+    "auditInpFast": {
+        "message": "$TIME$ 未満",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ / $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "操作への応答(INP)"
     },
     "auditInpHint": {
-        "message": "クリックや入力に対する応答の最大遅延。良好 — 200 ミリ秒未満"
+        "message": "クリックや入力に対する応答の最大遅延。操作が 50 回を超える場合、まれな外れ値は除外されます。良好 — 200 ミリ秒未満"
     },
     "auditBlocking": {
         "message": "描画をブロック"

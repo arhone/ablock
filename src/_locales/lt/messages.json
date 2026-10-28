@@ -593,6 +593,14 @@
     "auditNoInput": {
         "message": "veiksmų nebuvo"
     },
+    "auditInpFast": {
+        "message": "mažiau nei $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ iš $TOTAL$",
         "placeholders": {
@@ -635,7 +643,7 @@
         "message": "Reakcija į veiksmus (INP)"
     },
     "auditInpHint": {
-        "message": "Ilgiausias delsimas reaguojant į spustelėjimą ar įvestį. Gerai — iki 200 ms"
+        "message": "Ilgiausias delsimas reaguojant į spustelėjimą ar įvestį. Kai veiksmų daugiau nei 50, reti nukrypimai neskaičiuojami. Gerai — iki 200 ms"
     },
     "auditBlocking": {
         "message": "Blokuoja atvaizdavimą"
