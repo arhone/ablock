@@ -601,6 +601,14 @@
             }
         }
     },
+    "auditInpSlowest": {
+        "message": "በጣም ቀርፋፋው እርምጃ፦ $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ ከ$TOTAL$",
         "placeholders": {

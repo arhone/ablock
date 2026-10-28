@@ -601,6 +601,14 @@
             }
         }
     },
+    "auditInpSlowest": {
+        "message": "Lēnākā darbība: $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ no $TOTAL$",
         "placeholders": {

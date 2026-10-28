@@ -782,6 +782,9 @@ body.loading {
     padding-inline-start: 16px;
     font-size: 11px;
 }
+.sheet-notes li {
+    white-space: pre-line; /* Пояснение может быть в несколько строк */
+}
 .sheet-notes li + li {
     margin-top: 3px;
 }

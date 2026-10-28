@@ -601,6 +601,14 @@
             }
         }
     },
+    "auditInpSlowest": {
+        "message": "Slowest interaction: $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ of $TOTAL$",
         "placeholders": {

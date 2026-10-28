@@ -142,12 +142,14 @@
     }
 
     // INP — как у Google: одно действие (нажатие, отпускание, клик) — одно значение, самое долгое из его событий.
-    // До 50 действий INP — самая долгая реакция, больше — 98-й перцентиль: на каждые 50 действий отбрасываем
-    // одну самую долгую. Браузер до подписки хранит только события от 104 мс, поэтому всех действий считаем
-    // по interactionCount, а первое действие (first-input) хранится всегда: событий нет, а первое действие есть —
-    // значит, действия были и все быстрее 104 мс
+    // До 50 действий включительно INP — самая долгая реакция, больше — 98-й перцентиль: на каждые следующие
+    // 50 действий отбрасываем одну самую долгую (51–100 — одну, 101–150 — две). Браузер до подписки хранит
+    // только события от 104 мс, поэтому всех действий считаем по interactionCount, а первое действие
+    // (first-input) хранится всегда: событий нет, а первое действие есть — значит, действия были и все
+    // быстрее 104 мс. Долгое первое действие учитываем и с длительностью: из переполненного буфера событий
+    // (около 150 записей) оно пропадает. Быстрое — нет: это только нажатие, отпускание и клик могли быть дольше
     const longest = new Map();
-    for (const event of events) {
+    for (const event of [...events, ...firstInput.slice(0, 1).filter((entry) => entry.duration >= 104)]) {
         if (event.interactionId > 0) {
             longest.set(event.interactionId, Math.max(longest.get(event.interactionId) || 0, event.duration));
         }
@@ -155,7 +157,7 @@
     // Перцентиль попал на действие быстрее 104 мс — его длительности не знаем, но оно быстрое
     const durations = [...longest.values()].sort((a, b) => b - a);
     const count = Math.max(performance.interactionCount || 0, durations.length);
-    const inp = durations[Math.floor(count / 50)] ?? null;
+    const inp = durations[Math.floor(Math.max(count - 1, 0) / 50)] ?? null;
 
     const fcp = performance.getEntriesByName('first-contentful-paint')[0];
     const lcp = lcpEntries[lcpEntries.length - 1];
@@ -170,6 +172,8 @@
         inp,
         // INP не записан, но действия были — все быстрее 100 мс
         inpFast: inp === null && (count > 0 || firstInput.length > 0),
+        // Самое долгое известное действие: больше INP, если перцентиль его отбросил
+        inpMax: durations[0] ?? null,
         blocking: resources.filter((entry) => entry.renderBlockingStatus === 'blocking').length,
         blockingScripts: resources.filter((entry) => entry.renderBlockingStatus === 'blocking'
             && entry.initiatorType === 'script').length,

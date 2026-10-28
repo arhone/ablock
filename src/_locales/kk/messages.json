@@ -601,6 +601,14 @@
             }
         }
     },
+    "auditInpSlowest": {
+        "message": "Ең баяу әрекет: $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$TOTAL$ ішінен $COUNT$",
         "placeholders": {

@@ -601,6 +601,14 @@
             }
         }
     },
+    "auditInpSlowest": {
+        "message": "Η πιο αργή ενέργεια: $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$COUNT$ από $TOTAL$",
         "placeholders": {

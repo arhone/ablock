@@ -1116,12 +1116,17 @@ function renderAudit(audit, server, extended) {
     row('auditCls', vitals.cls === null ? '—' : formatNumber(vitals.cls, {maximumFractionDigits: 2}),
         vitals.cls === null ? 'none' : grade(vitals.cls, 0.1, 0.25));
     // Действия были, но все быстрее 104 мс — браузер их не сохранил: точного числа нет, но это хорошо
+    let inpRow;
     if (vitals.inpFast) {
-        row('auditInp', t('auditInpFast', formatTime(100)), 'good');
+        inpRow = row('auditInp', t('auditInpFast', formatTime(100)), 'good');
     } else if (vitals.inp === null) {
         row('auditInp', t('auditNoInput'), 'none');
     } else {
-        time('auditInp', vitals.inp, 200, 500);
+        inpRow = time('auditInp', vitals.inp, 200, 500);
+    }
+    // Перцентиль отбросил медленные действия — самое медленное называем в пояснении (и в картинке «Поделиться»)
+    if (inpRow && vitals.inpMax > (vitals.inp ?? 0)) {
+        inpRow.title = inpRow.dataset.hint = `${inpRow.dataset.hint}\n${t('auditInpSlowest', formatTime(vitals.inpMax))}`;
     }
     row('auditBlocking', formatNumber(vitals.blocking), vitals.blockingScripts || vitals.blocking > 15 ? 'warn' : 'good');
     // Кэш: браузера (видно всегда) или сервера и CDN (по заголовкам, в расширенном режиме). Не замечание

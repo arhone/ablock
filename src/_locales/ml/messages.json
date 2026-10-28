@@ -601,6 +601,14 @@
             }
         }
     },
+    "auditInpSlowest": {
+        "message": "ഏറ്റവും മന്ദഗതിയിലുള്ള പ്രവർത്തനം: $TIME$",
+        "placeholders": {
+            "time": {
+                "content": "$1"
+            }
+        }
+    },
     "auditModernValue": {
         "message": "$TOTAL$-ൽ $COUNT$",
         "placeholders": {
