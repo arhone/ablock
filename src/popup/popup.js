@@ -665,10 +665,14 @@ async function renderSite(tab, server, onLoadTime) {
     // Вес: если размер многих файлов оценён, а не известен точно — «≈»
     const {bytes, estimated, files, unknown, truncated} = info.weight;
     const approximate = truncated || estimated > bytes * 0.2;
-    const megabytes = bytes / 2 ** 20;
+    // Цвет — по тому же округлённому числу, что на значке: «2 МБ» не должно быть жёлтым
+    const megabytes = Math.round(bytes / 2 ** 20 * 10) / 10;
+    const weightTitle = [t('weightTitle'), approximate ? t('weightEstimated', files - unknown, files) : '']
+        .filter(Boolean).join('\n');
     setBadge('weight', (approximate ? '≈\u00a0' : '') + formatSize(bytes),
-        megabytes <= 2 ? 'good' : megabytes <= 5 ? 'warn' : 'bad',
-        [t('weightTitle'), approximate ? t('weightEstimated', files - unknown, files) : ''].filter(Boolean).join('\n'));
+        megabytes <= 2 ? 'good' : megabytes <= 5 ? 'warn' : 'bad', weightTitle);
+    // Строку о заблокированном добавляет renderBlocked — при каждом нажатии на щит заново от этой основы
+    document.getElementById('weight').dataset.base = weightTitle;
 
     // Сжатие главного документа
     const NAMES = {br: 'Brotli', zstd: 'Zstandard', gzip: 'gzip', deflate: 'Deflate', dcb: 'Brotli', dcz: 'Zstandard'};
@@ -734,6 +738,14 @@ function renderSpeed({loadTime, ready, age}) {
  * @param {?Object} server данные расширенного режима: оценка объёма заблокированного
  */
 async function renderBlocked(tab, info, status, server) {
+    // Подсказка веса: основа из renderSite и, если что-то заблокировано, строка об этом
+    const weight = document.getElementById('weight');
+    const setWeightTitle = (blocked) => {
+        if (weight.dataset.base !== undefined) {
+            weight.title = [weight.dataset.base, blocked ? t('weightBlocked') : ''].filter(Boolean).join('\n');
+        }
+    };
+    setWeightTitle(false);
     if (!status) {
         setBadge('blocked', t('blocked', '—'), 'none', t('statusOff'));
         setBadge('trackers', t('trackers', '—'), 'none', t('statusOff'));
@@ -762,10 +774,7 @@ async function renderBlocked(tab, info, status, server) {
     setBadge('trackers', t('trackers', trackers), trackers ? 'warn' : 'good',
         trackers ? t('trackersFound', trackers) : t('trackersNone'));
     // Заблокированное не загрузилось — без защиты страница весила бы больше
-    if (ads || trackers) {
-        const weight = document.getElementById('weight');
-        weight.title += '\n' + t('weightBlocked');
-    }
+    setWeightTitle(ads || trackers);
 }
 
 /**
@@ -1265,7 +1274,7 @@ function renderScore(info, companies, hsts, vitals) {
             : info.loadTime === null ? undefined : step(info.loadTime / 1000, [1, 2, 3, 5], [1, 0.85, 0.65, 0.4, 0.15]), 2],
         ['scoreCls', vitals?.cls != null ? step(vitals.cls, [0.1, 0.25], [1, 0.5, 0.1]) : undefined, 1],
         // Пороги как у метки веса: до 2 МБ — от 8 баллов, до 5 — от 5, больше — меньше 5
-        ['scoreWeight', step(info.weight.bytes / 2 ** 20, [1, 2, 3, 5, 8], [1, 0.9, 0.7, 0.55, 0.3, 0.1]), 1.5],
+        ['scoreWeight', step(Math.round(info.weight.bytes / 2 ** 20 * 10) / 10, [1, 2, 3, 5, 8], [1, 0.9, 0.7, 0.55, 0.3, 0.1]), 1.5],
         ['scoreTrackers', step(companies, [0, 1, 2, 4, 7], [1, 0.8, 0.65, 0.45, 0.25, 0.1]), 2.5],
         // Вес небольшой: сторонние домены во многом те же трекеры, они уже учтены выше
         ['scoreDomains', step(info.domains.length, [5, 15, 30], [1, 0.6, 0.35, 0.15]), 0.5],
