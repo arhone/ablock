@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "domain lain"
+    "auditOtherPage": {
+        "message": "halaman lain"
+    },
+    "auditOtherSite": {
+        "message": "situs lain"
     },
     "auditNoImage": {
         "message": "tanpa gambar"
@@ -674,7 +677,7 @@
         "message": "URL kanonis"
     },
     "auditCanonicalHint": {
-        "message": "Memberi tahu mesin pencari alamat utama halaman jika ada salinannya"
+        "message": "Memberi tahu mesin pencari alamat utama halaman jika ada salinannya. Jika menunjuk halaman lain, mesin pencari akan menampilkan halaman itu, bukan halaman ini"
     },
     "auditOg": {
         "message": "Pratinjau tautan (Open Graph)"

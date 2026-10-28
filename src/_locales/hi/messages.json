@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "दूसरा डोमेन"
+    "auditOtherPage": {
+        "message": "दूसरा पेज"
+    },
+    "auditOtherSite": {
+        "message": "दूसरी साइट"
     },
     "auditNoImage": {
         "message": "बिना चित्र"
@@ -674,7 +677,7 @@
         "message": "कैनोनिकल पता"
     },
     "auditCanonicalHint": {
-        "message": "पेज की प्रतियाँ हों तो सर्च इंजन को मुख्य पता बताता है"
+        "message": "पेज की प्रतियाँ हों तो सर्च इंजन को मुख्य पता बताता है। दूसरा पेज बताया हो तो सर्च इंजन इसकी जगह वही दिखाएगा"
     },
     "auditOg": {
         "message": "लिंक पूर्वावलोकन (Open Graph)"

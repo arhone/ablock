@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "ander domein"
+    "auditOtherPage": {
+        "message": "andere pagina"
+    },
+    "auditOtherSite": {
+        "message": "andere site"
     },
     "auditNoImage": {
         "message": "geen afbeelding"
@@ -674,7 +677,7 @@
         "message": "Canonieke URL"
     },
     "auditCanonicalHint": {
-        "message": "Vertelt zoekmachines het hoofdadres van de pagina als die kopieën heeft"
+        "message": "Vertelt zoekmachines het hoofdadres van de pagina als die kopieën heeft. Verwijst het naar een andere pagina, dan toont de zoekmachine die in plaats van deze"
     },
     "auditOg": {
         "message": "Linkvoorbeeld (Open Graph)"

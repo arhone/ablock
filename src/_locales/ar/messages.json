@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "نطاق آخر"
+    "auditOtherPage": {
+        "message": "صفحة أخرى"
+    },
+    "auditOtherSite": {
+        "message": "موقع آخر"
     },
     "auditNoImage": {
         "message": "بلا صورة"
@@ -674,7 +677,7 @@
         "message": "عنوان URL الأساسي"
     },
     "auditCanonicalHint": {
-        "message": "يُعلم محركات البحث بالعنوان الرئيسي للصفحة إن كانت لها نسخ"
+        "message": "يُعلم محركات البحث بالعنوان الرئيسي للصفحة إن كانت لها نسخ. إن أشار إلى صفحة أخرى، يعرض محرك البحث تلك الصفحة بدلًا من هذه"
     },
     "auditOg": {
         "message": "معاينة الرابط (Open Graph)"

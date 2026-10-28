@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "muu domeen"
+    "auditOtherPage": {
+        "message": "muu leht"
+    },
+    "auditOtherSite": {
+        "message": "muu sait"
     },
     "auditNoImage": {
         "message": "pildita"
@@ -674,7 +677,7 @@
         "message": "Kanooniline URL"
     },
     "auditCanonicalHint": {
-        "message": "Annab otsingumootoritele teada lehe põhiaadressi, kui lehel on koopiaid"
+        "message": "Annab otsingumootoritele teada lehe põhiaadressi, kui lehel on koopiaid. Kui see viitab teisele lehele, näitab otsingumootor seda selle asemel"
     },
     "auditOg": {
         "message": "Lingi eelvaade (Open Graph)"

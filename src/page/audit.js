@@ -168,7 +168,11 @@
         .map((el) => el.content).join(',');
     // Целые значения через запятую: «max-image-preview:none» — не запрет индексации
     const noindex = robotsMeta.split(',').some((value) => /^\s*(noindex|none)\s*$/i.test(value));
-    const canonical = document.querySelector('link[rel="canonical"]')?.href || '';
+    // Канонический адрес: эта же страница (без query, hash и завершающего «/»), другая страница сайта или другой сайт
+    const canonicalUrl = document.querySelector('link[rel="canonical"]')?.href || '';
+    const pagePath = (url) => url.pathname.replace(/\/+$/, '');
+    const canonical = !canonicalUrl ? '' : new URL(canonicalUrl).hostname !== location.hostname ? 'other'
+        : pagePath(new URL(canonicalUrl)) === pagePath(location) ? 'same' : 'page';
     const viewport = meta('meta[name="viewport" i]');
     const seo = {
         status: navigation?.responseStatus || 0,
@@ -178,7 +182,7 @@
         title: document.title.trim().length,
         description: meta('meta[name="description" i]')?.length ?? null,
         h1: document.querySelectorAll('h1').length,
-        canonical: canonical ? (new URL(canonical).hostname === location.hostname ? 'same' : 'other') : '',
+        canonical,
         ogTitle: !!meta('meta[property="og:title" i]'),
         ogImage: !!meta('meta[property="og:image" i]'),
         viewport: viewport !== null,

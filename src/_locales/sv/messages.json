@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "annan domän"
+    "auditOtherPage": {
+        "message": "annan sida"
+    },
+    "auditOtherSite": {
+        "message": "annan webbplats"
     },
     "auditNoImage": {
         "message": "ingen bild"
@@ -674,7 +677,7 @@
         "message": "Kanonisk URL"
     },
     "auditCanonicalHint": {
-        "message": "Talar om för sökmotorer vilken som är sidans huvudadress om den har kopior"
+        "message": "Talar om för sökmotorer vilken som är sidans huvudadress om den har kopior. Pekar den på en annan sida visar sökmotorn den i stället för den här"
     },
     "auditOg": {
         "message": "Länkförhandsvisning (Open Graph)"

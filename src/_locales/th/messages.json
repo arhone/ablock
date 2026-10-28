@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "โดเมนอื่น"
+    "auditOtherPage": {
+        "message": "หน้าอื่น"
+    },
+    "auditOtherSite": {
+        "message": "เว็บไซต์อื่น"
     },
     "auditNoImage": {
         "message": "ไม่มีรูปภาพ"
@@ -674,7 +677,7 @@
         "message": "URL หลัก (canonical)"
     },
     "auditCanonicalHint": {
-        "message": "บอกเครื่องมือค้นหาว่าที่อยู่หลักของหน้าคืออะไร หากหน้ามีสำเนา"
+        "message": "บอกเครื่องมือค้นหาว่าที่อยู่หลักของหน้าคืออะไร หากหน้ามีสำเนา หากชี้ไปยังหน้าอื่น เครื่องมือค้นหาจะแสดงหน้านั้นแทนหน้านี้"
     },
     "auditOg": {
         "message": "ตัวอย่างลิงก์ (Open Graph)"

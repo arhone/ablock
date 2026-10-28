@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "다른 도메인"
+    "auditOtherPage": {
+        "message": "다른 페이지"
+    },
+    "auditOtherSite": {
+        "message": "다른 사이트"
     },
     "auditNoImage": {
         "message": "이미지 없음"
@@ -674,7 +677,7 @@
         "message": "표준 URL"
     },
     "auditCanonicalHint": {
-        "message": "페이지에 사본이 있을 때 검색 엔진에 대표 주소를 알려 줍니다"
+        "message": "페이지에 사본이 있을 때 검색 엔진에 대표 주소를 알려 줍니다. 다른 페이지를 가리키면 검색 엔진은 이 페이지 대신 그 페이지를 보여 줍니다"
     },
     "auditOg": {
         "message": "링크 미리보기(Open Graph)"

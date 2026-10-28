@@ -1138,13 +1138,15 @@ function renderAudit(audit, server, extended) {
     if (seo.status) {
         row('auditStatus', String(seo.status), seo.status >= 400 ? 'bad' : seo.status >= 300 ? 'warn' : 'good');
     }
+    // Длина вне рекомендованной — не замечание: Google режет по ширине в пикселях, а описание часто пишет сам
     row('auditTitle', seo.title ? t('auditLength', formatNumber(seo.title)) : no,
-        !seo.title ? 'bad' : seo.title < 10 || seo.title > 70 ? 'warn' : 'good');
+        !seo.title ? 'bad' : seo.title < 10 || seo.title > 70 ? 'none' : 'good');
     row('auditDescription', seo.description ? t('auditLength', formatNumber(seo.description)) : no,
-        !seo.description || seo.description < 50 || seo.description > 170 ? 'warn' : 'good');
+        !seo.description ? 'warn' : seo.description < 50 || seo.description > 170 ? 'none' : 'good');
     row('auditH1', formatNumber(seo.h1), seo.h1 === 0 ? 'warn' : seo.h1 === 1 ? 'good' : 'none');
-    row('auditCanonical', {same: yes, other: t('auditOtherHost'), '': no}[seo.canonical],
-        {same: 'good', other: 'warn', '': 'none'}[seo.canonical]);
+    // Указана другая страница или другой сайт — бывает законно (зеркала, AMP, фильтры, перепечатки), не замечание
+    row('auditCanonical', {same: yes, page: t('auditOtherPage'), other: t('auditOtherSite'), '': no}[seo.canonical],
+        seo.canonical === 'same' ? 'good' : 'none');
     row('auditOg', seo.ogTitle && seo.ogImage ? yes : seo.ogTitle ? t('auditNoImage') : no,
         seo.ogTitle && seo.ogImage ? 'good' : 'warn');
     row('auditViewport', seo.viewport ? yes : no, seo.viewport ? 'good' : 'warn');
@@ -1174,7 +1176,8 @@ function renderAudit(audit, server, extended) {
             ai.title += '\n' + blockedBots.join(', ');
         }
     }
-    row('auditLlms', unchecked.llms ? '—' : seo.llms ? yes : no, seo.llms ? 'good' : 'none');
+    // Google llms.txt не использует — есть файл или нет, только для сведения
+    row('auditLlms', unchecked.llms ? '—' : seo.llms ? yes : no, 'none');
 
     section('auditMarkup');
     row('auditDoctype', markup.quirks ? no : yes, markup.quirks ? 'bad' : 'good');

@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "ibang domain"
+    "auditOtherPage": {
+        "message": "ibang page"
+    },
+    "auditOtherSite": {
+        "message": "ibang site"
     },
     "auditNoImage": {
         "message": "walang larawan"
@@ -674,7 +677,7 @@
         "message": "Canonical URL"
     },
     "auditCanonicalHint": {
-        "message": "Sinasabi sa mga search engine ang pangunahing address ng page kung may mga kopya ito"
+        "message": "Sinasabi sa mga search engine ang pangunahing address ng page kung may mga kopya ito. Kung ibang page ang nakasaad, iyon ang ipapakita ng search engine sa halip na ito"
     },
     "auditOg": {
         "message": "Preview ng link (Open Graph)"

@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "otro dominio"
+    "auditOtherPage": {
+        "message": "otra página"
+    },
+    "auditOtherSite": {
+        "message": "otro sitio"
     },
     "auditNoImage": {
         "message": "sin imagen"
@@ -674,7 +677,7 @@
         "message": "URL canónica"
     },
     "auditCanonicalHint": {
-        "message": "Indica a los buscadores la dirección principal de la página si tiene copias"
+        "message": "Indica a los buscadores la dirección principal de la página si tiene copias. Si indica otra página, el buscador mostrará esa en lugar de esta"
     },
     "auditOg": {
         "message": "Vista previa (Open Graph)"

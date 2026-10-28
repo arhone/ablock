@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "domain lain"
+    "auditOtherPage": {
+        "message": "halaman lain"
+    },
+    "auditOtherSite": {
+        "message": "laman lain"
     },
     "auditNoImage": {
         "message": "tiada imej"
@@ -674,7 +677,7 @@
         "message": "URL kanonik"
     },
     "auditCanonicalHint": {
-        "message": "Memberitahu enjin carian alamat utama halaman jika ia mempunyai salinan"
+        "message": "Memberitahu enjin carian alamat utama halaman jika ia mempunyai salinan. Jika ia menunjuk ke halaman lain, enjin carian akan memaparkan halaman itu dan bukan halaman ini"
     },
     "auditOg": {
         "message": "Pratonton pautan (Open Graph)"

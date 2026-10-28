@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "druga domena"
+    "auditOtherPage": {
+        "message": "druga stranica"
+    },
+    "auditOtherSite": {
+        "message": "drugo web-mjesto"
     },
     "auditNoImage": {
         "message": "bez slike"
@@ -674,7 +677,7 @@
         "message": "Kanonski URL"
     },
     "auditCanonicalHint": {
-        "message": "Govori tražilicama glavnu adresu stranice ako ona ima kopije"
+        "message": "Govori tražilicama glavnu adresu stranice ako ona ima kopije. Ako upućuje na drugu stranicu, tražilica će prikazati nju umjesto ove"
     },
     "auditOg": {
         "message": "Pregled poveznice (Open Graph)"

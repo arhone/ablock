@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "másik domain"
+    "auditOtherPage": {
+        "message": "másik oldal"
+    },
+    "auditOtherSite": {
+        "message": "másik webhely"
     },
     "auditNoImage": {
         "message": "nincs kép"
@@ -674,7 +677,7 @@
         "message": "Kanonikus URL"
     },
     "auditCanonicalHint": {
-        "message": "Megmondja a keresőknek az oldal fő címét, ha vannak másolatai"
+        "message": "Megmondja a keresőknek az oldal fő címét, ha vannak másolatai. Ha másik oldalra mutat, a kereső azt jeleníti meg ehelyett"
     },
     "auditOg": {
         "message": "Hivatkozás-előnézet (Open Graph)"

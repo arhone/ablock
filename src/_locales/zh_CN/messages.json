@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "其他域名"
+    "auditOtherPage": {
+        "message": "其他页面"
+    },
+    "auditOtherSite": {
+        "message": "其他网站"
     },
     "auditNoImage": {
         "message": "无图片"
@@ -674,7 +677,7 @@
         "message": "规范网址"
     },
     "auditCanonicalHint": {
-        "message": "页面有副本时，告诉搜索引擎哪个是主网址"
+        "message": "页面有副本时，告诉搜索引擎哪个是主网址。如果指向其他页面，搜索引擎会显示那个页面而不是本页"
     },
     "auditOg": {
         "message": "链接预览 (Open Graph)"

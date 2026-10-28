@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "અન્ય ડોમેન"
+    "auditOtherPage": {
+        "message": "અન્ય પેજ"
+    },
+    "auditOtherSite": {
+        "message": "અન્ય સાઇટ"
     },
     "auditNoImage": {
         "message": "છબી નથી"
@@ -674,7 +677,7 @@
         "message": "કૅનોનિકલ URL"
     },
     "auditCanonicalHint": {
-        "message": "જો પેજની નકલો હોય તો સર્ચ એન્જિનને મુખ્ય સરનામું જણાવે છે"
+        "message": "જો પેજની નકલો હોય તો સર્ચ એન્જિનને મુખ્ય સરનામું જણાવે છે. અન્ય પેજ દર્શાવેલ હોય તો સર્ચ એન્જિન આના બદલે તે બતાવશે"
     },
     "auditOg": {
         "message": "લિંક પ્રીવ્યૂ (Open Graph)"

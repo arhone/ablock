@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "דומיין אחר"
+    "auditOtherPage": {
+        "message": "דף אחר"
+    },
+    "auditOtherSite": {
+        "message": "אתר אחר"
     },
     "auditNoImage": {
         "message": "ללא תמונה"
@@ -674,7 +677,7 @@
         "message": "כתובת URL קנונית"
     },
     "auditCanonicalHint": {
-        "message": "מציינת למנועי החיפוש את הכתובת הראשית של הדף אם יש לו עותקים"
+        "message": "מציינת למנועי החיפוש את הכתובת הראשית של הדף אם יש לו עותקים. אם מצוין דף אחר, מנוע החיפוש יציג אותו במקום הדף הזה"
     },
     "auditOg": {
         "message": "תצוגה מקדימה של קישור (Open Graph)"

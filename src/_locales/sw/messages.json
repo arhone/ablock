@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "kikoa kingine"
+    "auditOtherPage": {
+        "message": "ukurasa mwingine"
+    },
+    "auditOtherSite": {
+        "message": "tovuti nyingine"
     },
     "auditNoImage": {
         "message": "hakuna picha"
@@ -674,7 +677,7 @@
         "message": "URL ya msingi"
     },
     "auditCanonicalHint": {
-        "message": "Huambia injini za utafutaji anwani kuu ya ukurasa ikiwa una nakala"
+        "message": "Huambia injini za utafutaji anwani kuu ya ukurasa ikiwa una nakala. Ikielekeza ukurasa mwingine, injini ya utafutaji itauonyesha badala ya huu"
     },
     "auditOg": {
         "message": "Onyesho la kiungo (Open Graph)"

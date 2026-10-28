@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "cits domēns"
+    "auditOtherPage": {
+        "message": "cita lapa"
+    },
+    "auditOtherSite": {
+        "message": "cita vietne"
     },
     "auditNoImage": {
         "message": "bez attēla"
@@ -674,7 +677,7 @@
         "message": "Kanoniskais URL"
     },
     "auditCanonicalHint": {
-        "message": "Norāda meklētājiem lapas galveno adresi, ja tai ir kopijas"
+        "message": "Norāda meklētājiem lapas galveno adresi, ja tai ir kopijas. Ja norādīta cita lapa, meklētājs rādīs to šīs vietā"
     },
     "auditOg": {
         "message": "Saites priekšskatījums (Open Graph)"

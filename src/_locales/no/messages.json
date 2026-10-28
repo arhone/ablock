@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "annet domene"
+    "auditOtherPage": {
+        "message": "annen side"
+    },
+    "auditOtherSite": {
+        "message": "annet nettsted"
     },
     "auditNoImage": {
         "message": "uten bilde"
@@ -674,7 +677,7 @@
         "message": "Kanonisk URL"
     },
     "auditCanonicalHint": {
-        "message": "Forteller søkemotorer sidens hovedadresse hvis den har kopier"
+        "message": "Forteller søkemotorer sidens hovedadresse hvis den har kopier. Peker den til en annen side, viser søkemotoren den i stedet for denne"
     },
     "auditOg": {
         "message": "Lenkeforhåndsvisning (Open Graph)"

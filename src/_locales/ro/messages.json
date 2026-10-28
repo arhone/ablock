@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "alt domeniu"
+    "auditOtherPage": {
+        "message": "altă pagină"
+    },
+    "auditOtherSite": {
+        "message": "alt site"
     },
     "auditNoImage": {
         "message": "fără imagine"
@@ -674,7 +677,7 @@
         "message": "URL canonic"
     },
     "auditCanonicalHint": {
-        "message": "Indică motoarelor de căutare adresa principală a paginii, dacă are copii"
+        "message": "Indică motoarelor de căutare adresa principală a paginii, dacă are copii. Dacă indică altă pagină, motorul de căutare o va afișa pe aceea în locul acesteia"
     },
     "auditOg": {
         "message": "Previzualizare link (Open Graph)"

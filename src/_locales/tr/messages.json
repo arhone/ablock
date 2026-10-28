@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "başka alan adı"
+    "auditOtherPage": {
+        "message": "başka sayfa"
+    },
+    "auditOtherSite": {
+        "message": "başka site"
     },
     "auditNoImage": {
         "message": "görselsiz"
@@ -674,7 +677,7 @@
         "message": "Kanonik adres"
     },
     "auditCanonicalHint": {
-        "message": "Sayfanın kopyaları varsa arama motorlarına asıl adresi bildirir"
+        "message": "Sayfanın kopyaları varsa arama motorlarına asıl adresi bildirir. Başka bir sayfayı gösteriyorsa arama motoru bunun yerine o sayfayı gösterir"
     },
     "auditOg": {
         "message": "Bağlantı önizlemesi (Open Graph)"

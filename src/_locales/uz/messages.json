@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "boshqa domen"
+    "auditOtherPage": {
+        "message": "boshqa sahifa"
+    },
+    "auditOtherSite": {
+        "message": "boshqa sayt"
     },
     "auditNoImage": {
         "message": "rasmsiz"
@@ -674,7 +677,7 @@
         "message": "Kanonik manzil"
     },
     "auditCanonicalHint": {
-        "message": "Sahifaning nusxalari boʻlsa, qidiruv tizimlariga asosiy manzilni koʻrsatadi"
+        "message": "Sahifaning nusxalari boʻlsa, qidiruv tizimlariga asosiy manzilni koʻrsatadi. Boshqa sahifa koʻrsatilgan boʻlsa, qidiruv tizimi bu sahifa oʻrniga oʻshani koʻrsatadi"
     },
     "auditOg": {
         "message": "Havola koʻrinishi (Open Graph)"

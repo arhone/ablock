@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "druga domena"
+    "auditOtherPage": {
+        "message": "druga stran"
+    },
+    "auditOtherSite": {
+        "message": "drugo spletno mesto"
     },
     "auditNoImage": {
         "message": "brez slike"
@@ -674,7 +677,7 @@
         "message": "Kanonični URL"
     },
     "auditCanonicalHint": {
-        "message": "Iskalnikom pove glavni naslov strani, če ima ta kopije"
+        "message": "Iskalnikom pove glavni naslov strani, če ima ta kopije. Če kaže na drugo stran, bo iskalnik prikazal njo namesto te"
     },
     "auditOg": {
         "message": "Predogled povezave (Open Graph)"

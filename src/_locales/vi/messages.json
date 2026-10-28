@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "tên miền khác"
+    "auditOtherPage": {
+        "message": "trang khác"
+    },
+    "auditOtherSite": {
+        "message": "trang web khác"
     },
     "auditNoImage": {
         "message": "không có ảnh"
@@ -674,7 +677,7 @@
         "message": "URL chuẩn"
     },
     "auditCanonicalHint": {
-        "message": "Cho công cụ tìm kiếm biết địa chỉ chính của trang nếu trang có bản sao"
+        "message": "Cho công cụ tìm kiếm biết địa chỉ chính của trang nếu trang có bản sao. Nếu trỏ tới trang khác, công cụ tìm kiếm sẽ hiển thị trang đó thay cho trang này"
     },
     "auditOg": {
         "message": "Xem trước liên kết (Open Graph)"

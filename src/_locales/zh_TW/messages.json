@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "其他網域"
+    "auditOtherPage": {
+        "message": "其他頁面"
+    },
+    "auditOtherSite": {
+        "message": "其他網站"
     },
     "auditNoImage": {
         "message": "沒有圖片"
@@ -674,7 +677,7 @@
         "message": "標準網址"
     },
     "auditCanonicalHint": {
-        "message": "若頁面有副本，告訴搜尋引擎頁面的主要網址"
+        "message": "若頁面有副本，告訴搜尋引擎頁面的主要網址。若指向其他頁面，搜尋引擎會顯示該頁面而非本頁"
     },
     "auditOg": {
         "message": "連結預覽（Open Graph）"

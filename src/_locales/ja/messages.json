@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "別のドメイン"
+    "auditOtherPage": {
+        "message": "別のページ"
+    },
+    "auditOtherSite": {
+        "message": "別のサイト"
     },
     "auditNoImage": {
         "message": "画像なし"
@@ -674,7 +677,7 @@
         "message": "正規 URL"
     },
     "auditCanonicalHint": {
-        "message": "ページにコピーがある場合、検索エンジンにメインのアドレスを伝えます"
+        "message": "ページにコピーがある場合、検索エンジンにメインのアドレスを伝えます。別のページを指している場合、検索エンジンはこのページの代わりにそのページを表示します"
     },
     "auditOg": {
         "message": "リンクのプレビュー(Open Graph)"

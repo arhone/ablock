@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "অন্য ডোমেন"
+    "auditOtherPage": {
+        "message": "অন্য পৃষ্ঠা"
+    },
+    "auditOtherSite": {
+        "message": "অন্য সাইট"
     },
     "auditNoImage": {
         "message": "ছবি নেই"
@@ -674,7 +677,7 @@
         "message": "ক্যানোনিকাল URL"
     },
     "auditCanonicalHint": {
-        "message": "পৃষ্ঠার কপি থাকলে সার্চ ইঞ্জিনকে প্রধান ঠিকানা জানায়"
+        "message": "পৃষ্ঠার কপি থাকলে সার্চ ইঞ্জিনকে প্রধান ঠিকানা জানায়। অন্য পৃষ্ঠা দেওয়া থাকলে সার্চ ইঞ্জিন এটির বদলে সেটি দেখাবে"
     },
     "auditOg": {
         "message": "লিংক প্রিভিউ (Open Graph)"

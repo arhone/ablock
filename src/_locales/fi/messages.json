@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "eri verkkotunnus"
+    "auditOtherPage": {
+        "message": "eri sivu"
+    },
+    "auditOtherSite": {
+        "message": "eri sivusto"
     },
     "auditNoImage": {
         "message": "ei kuvaa"
@@ -674,7 +677,7 @@
         "message": "Kanoninen URL"
     },
     "auditCanonicalHint": {
-        "message": "Kertoo hakukoneille sivun pääosoitteen, jos sivulla on kopioita"
+        "message": "Kertoo hakukoneille sivun pääosoitteen, jos sivulla on kopioita. Jos se osoittaa toiselle sivulle, hakukone näyttää sen tämän sijaan"
     },
     "auditOg": {
         "message": "Linkin esikatselu (Open Graph)"

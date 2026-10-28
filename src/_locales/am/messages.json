@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "ሌላ ጎራ"
+    "auditOtherPage": {
+        "message": "ሌላ ገጽ"
+    },
+    "auditOtherSite": {
+        "message": "ሌላ ጣቢያ"
     },
     "auditNoImage": {
         "message": "ምስል የለም"
@@ -674,7 +677,7 @@
         "message": "ቀኖናዊ URL"
     },
     "auditCanonicalHint": {
-        "message": "ገጹ ቅጂዎች ካሉት ለፍለጋ ፕሮግራሞች ዋናውን አድራሻ ይነግራል"
+        "message": "ገጹ ቅጂዎች ካሉት ለፍለጋ ፕሮግራሞች ዋናውን አድራሻ ይነግራል። ሌላ ገጽ ከተጠቀሰ የፍለጋ ፕሮግራሙ ከዚህ ይልቅ እሱን ያሳያል"
     },
     "auditOg": {
         "message": "የአገናኝ ቅድመ እይታ (Open Graph)"

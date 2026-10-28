@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "jiná doména"
+    "auditOtherPage": {
+        "message": "jiná stránka"
+    },
+    "auditOtherSite": {
+        "message": "jiný web"
     },
     "auditNoImage": {
         "message": "bez obrázku"
@@ -674,7 +677,7 @@
         "message": "Kanonická URL"
     },
     "auditCanonicalHint": {
-        "message": "Sděluje vyhledávačům hlavní adresu stránky, pokud má kopie"
+        "message": "Sděluje vyhledávačům hlavní adresu stránky, pokud má kopie. Pokud uvádí jinou stránku, vyhledávač zobrazí ji místo této"
     },
     "auditOg": {
         "message": "Náhled odkazu (Open Graph)"

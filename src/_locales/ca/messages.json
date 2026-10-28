@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "un altre domini"
+    "auditOtherPage": {
+        "message": "una altra pàgina"
+    },
+    "auditOtherSite": {
+        "message": "un altre lloc"
     },
     "auditNoImage": {
         "message": "sense imatge"
@@ -674,7 +677,7 @@
         "message": "URL canònic"
     },
     "auditCanonicalHint": {
-        "message": "Indica als cercadors l'adreça principal de la pàgina si en té còpies"
+        "message": "Indica als cercadors l'adreça principal de la pàgina si en té còpies. Si indica una altra pàgina, el cercador mostrarà aquella en lloc d'aquesta"
     },
     "auditOg": {
         "message": "Previsualització de l'enllaç (Open Graph)"

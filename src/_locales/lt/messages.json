@@ -581,8 +581,11 @@
             }
         }
     },
-    "auditOtherHost": {
-        "message": "kitas domenas"
+    "auditOtherPage": {
+        "message": "kitas puslapis"
+    },
+    "auditOtherSite": {
+        "message": "kita svetainė"
     },
     "auditNoImage": {
         "message": "be paveikslėlio"
@@ -674,7 +677,7 @@
         "message": "Kanoninis URL"
     },
     "auditCanonicalHint": {
-        "message": "Nurodo paieškos sistemoms pagrindinį puslapio adresą, jei jis turi kopijų"
+        "message": "Nurodo paieškos sistemoms pagrindinį puslapio adresą, jei jis turi kopijų. Jei nurodytas kitas puslapis, paieškos sistema rodys jį vietoj šio"
     },
     "auditOg": {
         "message": "Nuorodos peržiūra (Open Graph)"
