@@ -11,15 +11,16 @@
     const start = navigation?.activationStart || 0;
 
     /**
-     * Уже записанные браузером замеры. Если замеров нет, обработчик не вызывается — ждём недолго
+     * Уже записанные браузером замеры. Если замеров нет, обработчик не вызывается — ждём недолго.
+     * В свойстве dropped — сколько замеров браузер не сохранил: буфер полон, новые отбрасываются
      * @param {Object} options
      * @returns {Promise<PerformanceEntry[]>}
      */
     const recorded = (options) => new Promise((resolve) => {
         try {
-            const observer = new PerformanceObserver((list) => {
+            const observer = new PerformanceObserver((list, self, info) => {
                 observer.disconnect();
-                resolve(list.getEntries());
+                resolve(Object.assign(list.getEntries(), {dropped: info?.droppedEntriesCount || 0}));
             });
             observer.observe({...options, buffered: true});
             setTimeout(() => {
@@ -141,13 +142,15 @@
         cls = Math.max(cls, session);
     }
 
-    // INP — как у Google: одно действие (нажатие, отпускание, клик) — одно значение, самое долгое из его событий.
-    // До 50 действий включительно INP — самая долгая реакция, больше — 98-й перцентиль: на каждые следующие
-    // 50 действий отбрасываем одну самую долгую (51–100 — одну, 101–150 — две). Браузер до подписки хранит
-    // только события от 104 мс, поэтому всех действий считаем по interactionCount, а первое действие
-    // (first-input) хранится всегда: событий нет, а первое действие есть — значит, действия были и все
-    // быстрее 104 мс. Долгое первое действие учитываем и с длительностью: из переполненного буфера событий
-    // (около 150 записей) оно пропадает. Быстрое — нет: это только нажатие, отпускание и клик могли быть дольше
+    // INP: одно действие (нажатие, отпускание, клик) — одно значение, самое долгое из его событий, как у Google.
+    // До 50 действий включительно INP — самая долгая реакция, с 51-го — 98-й перцентиль: на каждые следующие
+    // 50 действий отбрасываем одну самую долгую (51–100 — одну, 101–150 — две). У Google (web-vitals) перцентиль
+    // уже с 50-го действия; у нас с 51-го, чтобы совпадать с пояснением «больше 50».
+    // Браузер до подписки хранит только события от 104 мс, поэтому всех действий считаем по interactionCount,
+    // а первое действие (first-input) хранится всегда, в своём буфере: событий нет, а первое действие есть —
+    // значит, действия были и все быстрее 104 мс. Буфер событий — около 150 записей; когда он полон, браузер
+    // отбрасывает новые. Долгое первое действие учитываем и по first-input: его событие могло не поместиться.
+    // Быстрое — нет: в first-input только нажатие, отпускание и клик могли быть дольше
     const longest = new Map();
     for (const event of [...events, ...firstInput.slice(0, 1).filter((entry) => entry.duration >= 104)]) {
         if (event.interactionId > 0) {
@@ -157,7 +160,10 @@
     // Перцентиль попал на действие быстрее 104 мс — его длительности не знаем, но оно быстрое
     const durations = [...longest.values()].sort((a, b) => b - a);
     const count = Math.max(performance.interactionCount || 0, durations.length);
-    const inp = durations[Math.floor(Math.max(count - 1, 0) / 50)] ?? null;
+    // События отброшены, а сохранённых действий меньше, чем было, — какие-то действия не знаем,
+    // быстрые они или медленные: INP не называем
+    const inpPartial = events.dropped > 0 && count > durations.length;
+    const inp = inpPartial ? null : durations[Math.floor(Math.max(count - 1, 0) / 50)] ?? null;
 
     const fcp = performance.getEntriesByName('first-contentful-paint')[0];
     const lcp = lcpEntries[lcpEntries.length - 1];
@@ -171,7 +177,9 @@
         cls: shifts.length || lcp ? Math.round(cls * 1000) / 1000 : null,
         inp,
         // INP не записан, но действия были — все быстрее 100 мс
-        inpFast: inp === null && (count > 0 || firstInput.length > 0),
+        inpFast: inp === null && !inpPartial && (count > 0 || firstInput.length > 0),
+        // Браузер сохранил не все события — INP неизвестен
+        inpPartial,
         // Самое долгое известное действие: больше INP, если перцентиль его отбросил
         inpMax: durations[0] ?? null,
         blocking: resources.filter((entry) => entry.renderBlockingStatus === 'blocking').length,

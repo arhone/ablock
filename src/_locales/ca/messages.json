@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "El navegador no ha desat tots els esdeveniments: les dades són incompletes i no hi ha un valor exacte"
+    },
     "auditModernValue": {
         "message": "$COUNT$ de $TOTAL$",
         "placeholders": {

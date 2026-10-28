@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "బ్రౌజర్ అన్ని ఈవెంట్‌లను సేవ్ చేయలేదు — డేటా అసంపూర్ణం, ఖచ్చితమైన విలువ లేదు"
+    },
     "auditModernValue": {
         "message": "$TOTAL$లో $COUNT$",
         "placeholders": {

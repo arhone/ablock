@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "مرورگر همهٔ رویدادها را نگه نداشته است — داده‌ها ناقص‌اند و مقدار دقیقی وجود ندارد"
+    },
     "auditModernValue": {
         "message": "$COUNT$ از $TOTAL$",
         "placeholders": {

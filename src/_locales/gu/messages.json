@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "બ્રાઉઝરે બધી ઘટનાઓ સાચવી નથી — ડેટા અધૂરો છે, ચોક્કસ મૂલ્ય નથી"
+    },
     "auditModernValue": {
         "message": "$TOTAL$ માંથી $COUNT$",
         "placeholders": {

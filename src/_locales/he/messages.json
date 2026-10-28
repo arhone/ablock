@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "הדפדפן לא שמר את כל האירועים — הנתונים חלקיים, ואין ערך מדויק"
+    },
     "auditModernValue": {
         "message": "$COUNT$ מתוך $TOTAL$",
         "placeholders": {

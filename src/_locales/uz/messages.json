@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Brauzer barcha hodisalarni saqlamadi — maʼlumotlar toʻliq emas, aniq qiymat yoʻq"
+    },
     "auditModernValue": {
         "message": "$TOTAL$ tadan $COUNT$",
         "placeholders": {

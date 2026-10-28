@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Browserul nu a păstrat toate evenimentele — datele sunt incomplete, nu există o valoare exactă"
+    },
     "auditModernValue": {
         "message": "$COUNT$ din $TOTAL$",
         "placeholders": {

@@ -1115,18 +1115,24 @@ function renderAudit(audit, server, extended) {
     time('auditLcp', vitals.lcp, 2500, 4000);
     row('auditCls', vitals.cls === null ? '—' : formatNumber(vitals.cls, {maximumFractionDigits: 2}),
         vitals.cls === null ? 'none' : grade(vitals.cls, 0.1, 0.25));
-    // Действия были, но все быстрее 104 мс — браузер их не сохранил: точного числа нет, но это хорошо
+    // Действия были, но все быстрее 104 мс — браузер их не сохранил: точного числа нет, но это хорошо.
+    // Браузер отбросил часть событий — INP не знаем: «—» и в пояснении, что данные неполные
     let inpRow;
-    if (vitals.inpFast) {
+    if (vitals.inpPartial) {
+        inpRow = row('auditInp', '—', 'none');
+        inpRow.title = inpRow.dataset.hint = `${inpRow.dataset.hint}\n${t('auditInpPartial')}`;
+    } else if (vitals.inpFast) {
         inpRow = row('auditInp', t('auditInpFast', formatTime(100)), 'good');
     } else if (vitals.inp === null) {
         row('auditInp', t('auditNoInput'), 'none');
     } else {
         inpRow = time('auditInp', vitals.inp, 200, 500);
     }
-    // Перцентиль отбросил медленные действия — самое медленное называем в пояснении (и в картинке «Поделиться»)
-    if (inpRow && vitals.inpMax > (vitals.inp ?? 0)) {
-        inpRow.title = inpRow.dataset.hint = `${inpRow.dataset.hint}\n${t('auditInpSlowest', formatTime(vitals.inpMax))}`;
+    // Перцентиль отбросил медленные действия или данные неполные — самое медленное известное называем
+    // в пояснении (и в картинке «Поделиться»), если оно на вид не совпадает с показанным значением
+    const slowest = vitals.inpMax === null ? '' : formatTime(vitals.inpMax);
+    if (inpRow && slowest && (vitals.inpPartial || (vitals.inpFast ? vitals.inpMax >= 100 : slowest !== formatTime(vitals.inp)))) {
+        inpRow.title = inpRow.dataset.hint = `${inpRow.dataset.hint}\n${t('auditInpSlowest', slowest)}`;
     }
     row('auditBlocking', formatNumber(vitals.blocking), vitals.blockingScripts || vitals.blocking > 15 ? 'warn' : 'good');
     // Кэш: браузера (видно всегда) или сервера и CDN (по заголовкам, в расширенном режиме). Не замечание

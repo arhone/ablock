@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Прегледач није сачувао све догађаје — подаци су непотпуни, тачне вредности нема"
+    },
     "auditModernValue": {
         "message": "$COUNT$ од $TOTAL$",
         "placeholders": {

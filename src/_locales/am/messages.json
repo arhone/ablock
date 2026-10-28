@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "አሳሹ ሁሉንም ክስተቶች አላስቀመጠም — ውሂቡ ያልተሟላ ነው፣ ትክክለኛ ዋጋ የለም"
+    },
     "auditModernValue": {
         "message": "$COUNT$ ከ$TOTAL$",
         "placeholders": {

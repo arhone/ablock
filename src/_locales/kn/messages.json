@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "ಬ್ರೌಸರ್ ಎಲ್ಲಾ ಈವೆಂಟ್‌ಗಳನ್ನು ಉಳಿಸಿಲ್ಲ — ಡೇಟಾ ಅಪೂರ್ಣ, ನಿಖರ ಮೌಲ್ಯವಿಲ್ಲ"
+    },
     "auditModernValue": {
         "message": "$TOTAL$ ರಲ್ಲಿ $COUNT$",
         "placeholders": {

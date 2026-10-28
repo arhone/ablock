@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "El navegador no guardó todos los eventos: los datos están incompletos y no hay un valor exacto"
+    },
     "auditModernValue": {
         "message": "$COUNT$ de $TOTAL$",
         "placeholders": {

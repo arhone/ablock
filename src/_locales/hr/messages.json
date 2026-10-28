@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Preglednik nije spremio sve događaje — podaci su nepotpuni, točne vrijednosti nema"
+    },
     "auditModernValue": {
         "message": "$COUNT$ od $TOTAL$",
         "placeholders": {

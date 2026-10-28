@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Браузер барлық оқиғаны сақтамады — деректер толық емес, нақты мән жоқ"
+    },
     "auditModernValue": {
         "message": "$TOTAL$ ішінен $COUNT$",
         "placeholders": {

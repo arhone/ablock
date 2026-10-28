@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Ο περιηγητής δεν αποθήκευσε όλα τα συμβάντα — τα δεδομένα είναι ελλιπή, δεν υπάρχει ακριβής τιμή"
+    },
     "auditModernValue": {
         "message": "$COUNT$ από $TOTAL$",
         "placeholders": {

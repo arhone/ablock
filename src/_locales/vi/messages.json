@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Trình duyệt không lưu hết các sự kiện — dữ liệu không đầy đủ nên không có giá trị chính xác"
+    },
     "auditModernValue": {
         "message": "$COUNT$/$TOTAL$",
         "placeholders": {

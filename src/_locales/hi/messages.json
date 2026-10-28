@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "ब्राउज़र ने सभी इवेंट नहीं सहेजे — डेटा अधूरा है, सटीक मान नहीं है"
+    },
     "auditModernValue": {
         "message": "$TOTAL$ में से $COUNT$",
         "placeholders": {

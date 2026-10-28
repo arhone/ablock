@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Browser tidak menyimpan semua peristiwa — datanya tidak lengkap, jadi tidak ada nilai pasti"
+    },
     "auditModernValue": {
         "message": "$COUNT$ dari $TOTAL$",
         "placeholders": {

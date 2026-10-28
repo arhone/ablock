@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Der Browser hat nicht alle Ereignisse gespeichert — die Daten sind unvollständig, ein genauer Wert fehlt"
+    },
     "auditModernValue": {
         "message": "$COUNT$ von $TOTAL$",
         "placeholders": {

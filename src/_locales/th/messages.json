@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "เบราว์เซอร์ไม่ได้เก็บเหตุการณ์ทั้งหมด ข้อมูลจึงไม่ครบและไม่มีค่าที่แน่นอน"
+    },
     "auditModernValue": {
         "message": "$COUNT$ จาก $TOTAL$",
         "placeholders": {

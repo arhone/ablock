@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "浏览器没有保存全部事件，数据不完整，没有准确值"
+    },
     "auditModernValue": {
         "message": "$COUNT$ / $TOTAL$",
         "placeholders": {

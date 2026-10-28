@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Brauser ei salvestanud kõiki sündmusi — andmed on puudulikud, täpset väärtust pole"
+    },
     "auditModernValue": {
         "message": "$COUNT$/$TOTAL$",
         "placeholders": {

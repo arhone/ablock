@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "لم يحفظ المتصفح كل الأحداث — البيانات غير مكتملة، ولا توجد قيمة دقيقة"
+    },
     "auditModernValue": {
         "message": "$COUNT$ من $TOTAL$",
         "placeholders": {

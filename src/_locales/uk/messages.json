@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Браузер зберіг не всі події — дані неповні, точного значення немає"
+    },
     "auditModernValue": {
         "message": "$COUNT$ з $TOTAL$",
         "placeholders": {

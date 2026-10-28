@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "ブラウザーがすべてのイベントを保存していないため、データが不完全で正確な値はありません"
+    },
     "auditModernValue": {
         "message": "$COUNT$ / $TOTAL$",
         "placeholders": {

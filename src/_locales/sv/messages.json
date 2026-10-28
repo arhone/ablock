@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Webbläsaren sparade inte alla händelser — data är ofullständiga, inget exakt värde finns"
+    },
     "auditModernValue": {
         "message": "$COUNT$ av $TOTAL$",
         "placeholders": {

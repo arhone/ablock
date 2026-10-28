@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Prehliadač neuložil všetky udalosti — údaje sú neúplné, presná hodnota nie je k dispozícii"
+    },
     "auditModernValue": {
         "message": "$COUNT$ z $TOTAL$",
         "placeholders": {

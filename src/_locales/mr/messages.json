@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "ब्राउझरने सर्व इव्हेंट जतन केले नाहीत — डेटा अपूर्ण आहे, अचूक मूल्य नाही"
+    },
     "auditModernValue": {
         "message": "$TOTAL$ पैकी $COUNT$",
         "placeholders": {

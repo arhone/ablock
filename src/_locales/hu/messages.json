@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "A böngésző nem őrzött meg minden eseményt — az adatok hiányosak, pontos érték nincs"
+    },
     "auditModernValue": {
         "message": "$COUNT$/$TOTAL$",
         "placeholders": {

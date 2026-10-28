@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Prohlížeč neuložil všechny události — data jsou neúplná, přesná hodnota není k dispozici"
+    },
     "auditModernValue": {
         "message": "$COUNT$ z $TOTAL$",
         "placeholders": {

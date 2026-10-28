@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "ব্রাউজার সব ইভেন্ট সংরক্ষণ করেনি — তথ্য অসম্পূর্ণ, সঠিক মান নেই"
+    },
     "auditModernValue": {
         "message": "$TOTAL$-এর মধ্যে $COUNT$",
         "placeholders": {

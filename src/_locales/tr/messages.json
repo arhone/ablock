@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Tarayıcı tüm olayları saklamadı; veriler eksik, kesin bir değer yok"
+    },
     "auditModernValue": {
         "message": "$COUNT$ / $TOTAL$",
         "placeholders": {

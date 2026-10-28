@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Brskalnik ni shranil vseh dogodkov — podatki so nepopolni, natančne vrednosti ni"
+    },
     "auditModernValue": {
         "message": "$COUNT$ od $TOTAL$",
         "placeholders": {

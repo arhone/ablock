@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Pelayar tidak menyimpan semua peristiwa — data tidak lengkap, jadi tiada nilai tepat"
+    },
     "auditModernValue": {
         "message": "$COUNT$ daripada $TOTAL$",
         "placeholders": {

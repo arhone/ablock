@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Kivinjari hakikuhifadhi matukio yote — data haijakamilika, hakuna thamani kamili"
+    },
     "auditModernValue": {
         "message": "$COUNT$ kati ya $TOTAL$",
         "placeholders": {

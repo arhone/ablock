@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Hindi lahat ng event ay na-save ng browser — kulang ang data, kaya walang eksaktong value"
+    },
     "auditModernValue": {
         "message": "$COUNT$ sa $TOTAL$",
         "placeholders": {

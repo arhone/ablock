@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Naršyklė išsaugojo ne visus įvykius — duomenys neišsamūs, tikslios reikšmės nėra"
+    },
     "auditModernValue": {
         "message": "$COUNT$ iš $TOTAL$",
         "placeholders": {

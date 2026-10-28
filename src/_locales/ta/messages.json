@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "உலாவி எல்லா நிகழ்வுகளையும் சேமிக்கவில்லை — தரவு முழுமையற்றது, துல்லியமான மதிப்பு இல்லை"
+    },
     "auditModernValue": {
         "message": "$TOTAL$-இல் $COUNT$",
         "placeholders": {

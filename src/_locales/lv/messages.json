@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Pārlūks nesaglabāja visus notikumus — dati ir nepilnīgi, precīzas vērtības nav"
+    },
     "auditModernValue": {
         "message": "$COUNT$ no $TOTAL$",
         "placeholders": {

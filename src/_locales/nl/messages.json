@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "De browser heeft niet alle gebeurtenissen bewaard — de gegevens zijn onvolledig, er is geen exacte waarde"
+    },
     "auditModernValue": {
         "message": "$COUNT$ van $TOTAL$",
         "placeholders": {

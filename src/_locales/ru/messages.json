@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Браузер сохранил не все события — данные неполные, точного значения нет"
+    },
     "auditModernValue": {
         "message": "$COUNT$ из $TOTAL$",
         "placeholders": {

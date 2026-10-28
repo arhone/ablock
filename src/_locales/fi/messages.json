@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Selain ei tallentanut kaikkia tapahtumia — tiedot ovat puutteelliset, tarkkaa arvoa ei ole"
+    },
     "auditModernValue": {
         "message": "$COUNT$/$TOTAL$",
         "placeholders": {

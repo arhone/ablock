@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Przeglądarka nie zapisała wszystkich zdarzeń — dane są niepełne, dokładnej wartości brak"
+    },
     "auditModernValue": {
         "message": "$COUNT$ z $TOTAL$",
         "placeholders": {

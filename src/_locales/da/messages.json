@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Browseren gemte ikke alle hændelser — dataene er ufuldstændige, der er ingen præcis værdi"
+    },
     "auditModernValue": {
         "message": "$COUNT$ af $TOTAL$",
         "placeholders": {

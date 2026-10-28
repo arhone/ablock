@@ -609,6 +609,9 @@
             }
         }
     },
+    "auditInpPartial": {
+        "message": "Nettleseren lagret ikke alle hendelser — dataene er ufullstendige, det finnes ingen nøyaktig verdi"
+    },
     "auditModernValue": {
         "message": "$COUNT$ av $TOTAL$",
         "placeholders": {
