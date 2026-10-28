@@ -1257,8 +1257,9 @@ function renderScore(info, companies, hsts, vitals) {
         ['scoreDomains', step(info.domains.length, [5, 15, 30], [1, 0.6, 0.35, 0.15]), 1],
         ['scoreCompression', compressionScore(info), 0.5],
         ['scoreHsts', hsts === null ? undefined : hsts ? 1 : 0.3, 0.5],
-        // Пассивный смешанный контент браузер переводит на HTTPS сам — небольшой штраф за ошибку в адресах
-        ['scoreMixed', info.mixed ? 0.2 : info.mixedPassive ? 0.8 : 1, 1]
+        // Пассивный смешанный контент браузер переводит на HTTPS сам — штраф мягче, но балл ниже 8,
+        // чтобы в раскладке оценки он был жёлтым, как метка «HTTP-медиа»
+        ['scoreMixed', info.mixed ? 0.2 : info.mixedPassive ? 0.7 : 1, 1]
     ].filter(([, value]) => value !== undefined);
 
     const total = parts.reduce((sum, [, value, weight]) => sum + value * weight, 0);
