@@ -579,6 +579,32 @@ async function loadData(name) {
 }
 
 /**
+ * Принимаем аудит только для документа исходного снимка и всё ещё открытого документа.
+ * Повторная короткая инъекция не читает DOM и не ждёт загрузки. Ошибка доступа — отказ.
+ * @param {number} tabId
+ * @param {?chrome.scripting.InjectionResult} injection
+ * @param {Object} info
+ * @returns {Promise<?Object>}
+ */
+async function acceptAudit(tabId, injection, info) {
+    const audit = injection?.result;
+    const context = audit?.causes?.context;
+    if (!info.documentId || injection?.documentId !== info.documentId
+        || audit?.causes?.version !== 1 || context?.scope !== 'top-document'
+        || !Number.isFinite(context.timeOrigin) || context.timeOrigin !== info.timeOrigin) {
+        return null;
+    }
+    try {
+        const [current] = await chrome.scripting.executeScript({
+            target: {tabId}, func: () => performance.timeOrigin, injectImmediately: true
+        });
+        return current?.documentId === injection.documentId && current.result === context.timeOrigin ? audit : null;
+    } catch {
+        return null;
+    }
+}
+
+/**
  * Значки сайта: HTTPS, протокол, скорость, сторонние домены, вес, сжатие
  * @param {chrome.tabs.Tab} tab
  * @param {?Object} server данные расширенного режима
@@ -591,12 +617,14 @@ async function renderSite(tab, server, onLoadTime) {
         t(https ? 'httpsOn' : 'httpsOff'));
 
     let info;
+    let documentId;
     try {
         // Сразу, не дожидаясь разбора страницы: нужны только замеры браузера
-        [{result: info}] = await chrome.scripting.executeScript({target: {tabId: tab.id}, func: collectPageInfo, injectImmediately: true});
+        [{result: info, documentId}] = await chrome.scripting.executeScript({target: {tabId: tab.id}, func: collectPageInfo, injectImmediately: true});
     } catch {
         return null; // Страница недоступна для расширений
     }
+    info.documentId = documentId;
     info.https = https;
 
     const protocols = {
@@ -2494,7 +2522,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         .then(([{result}]) => result || [])
         .catch(() => []);
     const auditResult = chrome.scripting.executeScript({target: {tabId: tab.id}, files: ['page/audit.js']})
-        .then(([{result}]) => result || null)
+        .then(([injection]) => injection || null)
         .catch(() => null);
     // Оценка по группам; пересчитывается, если время загрузки придёт позже
     const score = {result: null};
@@ -2510,7 +2538,8 @@ document.addEventListener('DOMContentLoaded', async function () {
     await renderServer(server, extended);
     renderExtra(server);
 
-    const [tech, audit] = await Promise.all([techResult, auditResult]);
+    const [tech, auditInjection] = await Promise.all([techResult, auditResult]);
+    const audit = await acceptAudit(tab.id, auditInjection, info);
     renderTech(tech, server);
     const rows = renderAudit(audit, server, extended, info, companies);
     rescore = () => {

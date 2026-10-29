@@ -11,6 +11,73 @@
     const start = navigation?.activationStart || 0;
 
     /**
+     * Контракт audit.causes v1: только JSON-факты главного документа, без влияния на оценку.
+     * context: documentUrl (origin + путь до 512 символов, без userinfo/query/hash),
+     * timeOrigin и capturedAt (epoch ms), scope: top-document, navigationType (строка|null),
+     * activationStart (ms|null). documentId берёт окно из результата executeScript, не из страницы.
+     * Каждый раздел: {status, reasons: string[], truncated: boolean, data: object|null}.
+     * status: ok — доступные факты собраны; partial — собраны с ограничениями;
+     * unavailable — нет данных; unsupported — нет нужного API. null — неизвестно, 0 — измеренный ноль.
+     * Все времена/длительности — ms без форматирования, CLS — безразмерная величина.
+     *
+     * Реестр reasons (стабильные коды, не тексты интерфейса):
+     * not-collected — сборщик ещё не подключён; api-unsupported — API отсутствует;
+     * no-entry — буфер не содержит записи; buffer-dropped — браузер отбросил записи;
+     * budget-exceeded — исчерпан бюджет обработки; result-limit — результат обрезан;
+     * navigation-missing — нет Navigation Timing; timing-restricted — сетевые отметки скрыты;
+     * prerender — активация предварительно загруженного документа; bfcache — восстановление;
+     * element-unavailable — узел удалён/скрыт; resource-unmatched — ресурс не сопоставлен;
+     * text-lcp — у текстового LCP нет сетевых фаз; sources-unavailable — нет источников CLS;
+     * resource-ambiguous — несколько подходящих ресурсов; timing-inconsistent — фазы не согласованы.
+     * truncated=true только при отсечении фактов лимитом/бюджетом, не просто при unavailable.
+     *
+     * Формат data для следующих сборщиков (в заглушке целиком null):
+     * lcp: {value, startTime, size, kind: image|text|unknown, element, resourceUrl,
+     *   phases: {ttfb, resourceLoadDelay, resourceLoadDuration, elementRenderDelay},
+     *   longestPhase, attributes: {loading, fetchPriority}, preload: boolean|null}.
+     * element: {tag: string} | null — только имя тега, без id/class/текста/HTML/атрибутов сайта.
+     * attributes — текущие значения известных enum, не доказательство значений при загрузке.
+     * Для text/неполного timing неизвестные сетевые фазы null. Фазы неотрицательны,
+     * при полном разложении их сумма равна value; prerender/bfcache не раскладываем механически.
+     * cls: {value, session: {startTime, endTime}|null, shifts: [
+     *   {startTime, value, sources: [{element, previousRect, currentRect}]}]}.
+     * rect: {x,y,width,height}|null; shifts — только максимальная серия, без hadRecentInput.
+     * До 10 источников суммарно; value принадлежит сдвигу, не дублируется у его источников.
+     * Сдвинувшийся элемент — факт, а не доказанный виновник; отсутствующий узел — null.
+     * ttfb: {value, phases: {redirect, dns, connection, tls, requestWait, unaccounted},
+     *   responseStart, finalResponseHeadersStart, workerStart, deliveryType,
+     *   serverTiming: [{name, description, duration}]}.
+     * connection включает tls (tls не прибавлять второй раз); requestWait — сеть + сервер.
+     * responseStart сохраняет прежний смысл TTFB; finalResponseHeadersStart — отдельное
+     * необязательное поле. serverTiming — до 5 записей, name до 64, description до 128 символов;
+     * это объявленные сервером интервалы, они могут перекрываться и не входят в сумму фаз.
+     * Строки только текстом; URL в data сокращать как documentUrl (только http/https, иначе null).
+     * Нельзя возвращать DOM, PerformanceEntry, HTML, текст страницы, cookies, query-значения.
+     *
+     * Бюджет следующих сборщиков: дополнительная синхронная обработка до 20 ms,
+     * вычислительный аудит — ориентир до 50 ms на тяжёлом стенде (без ожидания файлов сайта).
+     * Новые наблюдатели запускать параллельно существующим, без последовательного ожидания,
+     * отключать по завершении/тайм-ауту. Проверять бюджет в ограниченных проходах;
+     * при превышении partial + budget-exceeded + truncated. Необязательные API — по наличию.
+     * Сейчас O(1), без новых наблюдателей, проходов DOM/ресурсов, таймеров и запросов.
+     */
+    const documentUrl = new URL(location.href);
+    const causes = {
+        version: 1,
+        context: {
+            documentUrl: /^https?:$/.test(documentUrl.protocol) ? documentUrl.origin + documentUrl.pathname.slice(0, 512) : null,
+            timeOrigin: performance.timeOrigin,
+            capturedAt: null,
+            scope: 'top-document',
+            navigationType: navigation?.type ?? null,
+            activationStart: navigation?.activationStart ?? null
+        },
+        lcp: {status: 'unavailable', reasons: ['not-collected'], truncated: false, data: null},
+        cls: {status: 'unavailable', reasons: ['not-collected'], truncated: false, data: null},
+        ttfb: {status: 'unavailable', reasons: ['not-collected'], truncated: false, data: null}
+    };
+
+    /**
      * Уже записанные браузером замеры. Если замеров нет, обработчик не вызывается — ждём недолго.
      * В свойстве dropped — сколько замеров браузер не сохранил: буфер полон, новые отбрасываются
      * @param {Object} options
@@ -285,7 +352,9 @@
         main: !!document.querySelector('main, [role="main"]')
     };
 
+    causes.context.capturedAt = Date.now();
     return {
+        causes,
         vitals,
         seo,
         // Файлы, которые не удалось проверить: сайт не ответил за 2 секунды или сеть недоступна
