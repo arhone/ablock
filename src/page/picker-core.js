@@ -115,12 +115,22 @@
             stablePath ||= level.stable;
             const siblings = [...level.node.parentElement.children].filter((sibling) =>
                 sibling.localName === level.node.localName && sibling.namespaceURI === level.node.namespaceURI);
-            const part = `${level.part}:nth-of-type(${siblings.indexOf(level.node) + 1})`;
+            level.position = siblings.indexOf(level.node) + 1;
+            const part = `${level.part}:nth-of-type(${level.position})`;
             path = path ? `${part} > ${path}` : part;
             if ((stablePath || !hasStable) && consider(path)) return best;
         }
-        // Голый тег допустим только при отсутствии устойчивых признаков во всей цепочке.
-        if (!levels.some((level) => level.stable)) consider(CSS.escape(el.localName));
+        // Если допустимого пути с признаками нет, пробуем короткую позиционную цепочку.
+        if (!best) {
+            path = '';
+            for (const level of levels) {
+                const part = `${CSS.escape(level.node.localName)}:nth-of-type(${level.position})`;
+                path = path ? `${part} > ${path}` : part;
+                if (consider(path)) return best;
+            }
+        }
+        // Голый тег — последний запасной вариант.
+        if (!best) consider(CSS.escape(el.localName));
         return best || empty;
     }
 
@@ -147,12 +157,20 @@
             }
         }
 
-        // Отбрасываем чувствительные поддеревья целиком, не читая их текст.
+        function invisible(node) {
+            if (node.hasAttribute('hidden') || node.getAttribute('aria-hidden') === 'true' ||
+                node.checkVisibility?.() === false) return true;
+            const style = view.getComputedStyle(node);
+            return style.display === 'none' || ['hidden', 'collapse'].includes(style.visibility);
+        }
+
+        // Отбрасываем чувствительные и невидимые поддеревья целиком, не читая их текст.
         function safeText() {
+            if (invisible(el)) return '';
             const walker = doc.createTreeWalker(el, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
                 acceptNode(node) {
                     if (node.nodeType === 3) return NodeFilter.FILTER_ACCEPT;
-                    if (node.isContentEditable || node.matches('input, textarea, select, [contenteditable], script, style, noscript, template')) {
+                    if (node.isContentEditable || node.matches('input, textarea, select, [contenteditable], script, style, noscript, template') || invisible(node)) {
                         return NodeFilter.FILTER_REJECT;
                     }
                     return NodeFilter.FILTER_SKIP;
