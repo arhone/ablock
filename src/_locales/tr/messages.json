@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "sıkıştırma yok"
+    },
     "compressionNone": {
         "message": "Sıkıştırma yok"
+    },
+    "compressionMultipleInline": {
+        "message": "birkaç yöntem"
     },
     "compressionMultiple": {
         "message": "Birkaç yöntem"

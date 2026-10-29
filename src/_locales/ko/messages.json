@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "압축 없음"
+    },
     "compressionNone": {
         "message": "압축 없음"
+    },
+    "compressionMultipleInline": {
+        "message": "여러 방식"
     },
     "compressionMultiple": {
         "message": "여러 방식"

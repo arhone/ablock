@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "ምንም መጨመቅ የለም"
+    },
     "compressionNone": {
         "message": "ምንም መጨመቅ የለም"
+    },
+    "compressionMultipleInline": {
+        "message": "በበርካታ ዘዴዎች"
     },
     "compressionMultiple": {
         "message": "በበርካታ ዘዴዎች"

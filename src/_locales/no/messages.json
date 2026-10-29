@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "ingen komprimering"
+    },
     "compressionNone": {
         "message": "Ingen komprimering"
+    },
+    "compressionMultipleInline": {
+        "message": "flere metoder"
     },
     "compressionMultiple": {
         "message": "Flere metoder"

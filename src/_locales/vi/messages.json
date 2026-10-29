@@ -218,11 +218,17 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "không nén"
+    },
     "compressionNone": {
         "message": "Không nén"
     },
+    "compressionMultipleInline": {
+        "message": "nhiều cách"
+    },
     "compressionMultiple": {
-        "message": "Nhiều phương thức"
+        "message": "Nhiều cách"
     },
     "compressionOff": {
         "message": "Trang được truyền không nén — tải chậm hơn"

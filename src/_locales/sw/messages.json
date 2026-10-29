@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "hakuna mbano"
+    },
     "compressionNone": {
         "message": "Hakuna mbano"
+    },
+    "compressionMultipleInline": {
+        "message": "njia kadhaa"
     },
     "compressionMultiple": {
         "message": "Njia kadhaa"

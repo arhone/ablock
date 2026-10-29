@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "tiada pemampatan"
+    },
     "compressionNone": {
         "message": "Tiada pemampatan"
+    },
+    "compressionMultipleInline": {
+        "message": "beberapa kaedah"
     },
     "compressionMultiple": {
         "message": "Beberapa kaedah"

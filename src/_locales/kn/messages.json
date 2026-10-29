@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "ಸಂಕುಚನವಿಲ್ಲ"
+    },
     "compressionNone": {
         "message": "ಸಂಕುಚನವಿಲ್ಲ"
+    },
+    "compressionMultipleInline": {
+        "message": "ಹಲವು ವಿಧಾನಗಳು"
     },
     "compressionMultiple": {
         "message": "ಹಲವು ವಿಧಾನಗಳು"

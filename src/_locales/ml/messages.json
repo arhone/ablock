@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "കംപ്രഷൻ ഇല്ല"
+    },
     "compressionNone": {
         "message": "കംപ്രഷൻ ഇല്ല"
+    },
+    "compressionMultipleInline": {
+        "message": "പല രീതികൾ"
     },
     "compressionMultiple": {
         "message": "പല രീതികൾ"

@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "walang compression"
+    },
     "compressionNone": {
         "message": "Walang compression"
+    },
+    "compressionMultipleInline": {
+        "message": "ilang paraan"
     },
     "compressionMultiple": {
         "message": "Ilang paraan"

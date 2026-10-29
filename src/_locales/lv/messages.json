@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "bez saspiešanas"
+    },
     "compressionNone": {
         "message": "Bez saspiešanas"
+    },
+    "compressionMultipleInline": {
+        "message": "vairākas metodes"
     },
     "compressionMultiple": {
         "message": "Vairākas metodes"

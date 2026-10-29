@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "bez kompresie"
+    },
     "compressionNone": {
         "message": "Bez kompresie"
+    },
+    "compressionMultipleInline": {
+        "message": "viac metód"
     },
     "compressionMultiple": {
         "message": "Viac metód"

@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "be glaudinimo"
+    },
     "compressionNone": {
         "message": "Be glaudinimo"
+    },
+    "compressionMultipleInline": {
+        "message": "keli metodai"
     },
     "compressionMultiple": {
         "message": "Keli metodai"

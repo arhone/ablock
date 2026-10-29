@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "சுருக்கம் இல்லை"
+    },
     "compressionNone": {
         "message": "சுருக்கம் இல்லை"
+    },
+    "compressionMultipleInline": {
+        "message": "பல முறைகள்"
     },
     "compressionMultiple": {
         "message": "பல முறைகள்"

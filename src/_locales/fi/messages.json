@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "ei pakkausta"
+    },
     "compressionNone": {
         "message": "Ei pakkausta"
+    },
+    "compressionMultipleInline": {
+        "message": "useita menetelmiä"
     },
     "compressionMultiple": {
         "message": "Useita menetelmiä"

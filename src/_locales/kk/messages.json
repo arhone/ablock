@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "сығусыз"
+    },
     "compressionNone": {
         "message": "Сығусыз"
+    },
+    "compressionMultipleInline": {
+        "message": "бірнеше әдіс"
     },
     "compressionMultiple": {
         "message": "Бірнеше әдіс"

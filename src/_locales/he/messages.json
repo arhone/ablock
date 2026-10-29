@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "ללא דחיסה"
+    },
     "compressionNone": {
         "message": "ללא דחיסה"
+    },
+    "compressionMultipleInline": {
+        "message": "כמה שיטות"
     },
     "compressionMultiple": {
         "message": "כמה שיטות"

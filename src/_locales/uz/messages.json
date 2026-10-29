@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "siqilmagan"
+    },
     "compressionNone": {
         "message": "Siqilmagan"
+    },
+    "compressionMultipleInline": {
+        "message": "bir nechta usul"
     },
     "compressionMultiple": {
         "message": "Bir nechta usul"

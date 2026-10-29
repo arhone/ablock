@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "बिना कंप्रेशन"
+    },
     "compressionNone": {
         "message": "बिना कंप्रेशन"
+    },
+    "compressionMultipleInline": {
+        "message": "कई तरीके"
     },
     "compressionMultiple": {
         "message": "कई तरीके"

@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "未压缩"
+    },
     "compressionNone": {
         "message": "未压缩"
+    },
+    "compressionMultipleInline": {
+        "message": "多种方式"
     },
     "compressionMultiple": {
         "message": "多种方式"

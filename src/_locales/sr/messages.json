@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "без компресије"
+    },
     "compressionNone": {
         "message": "Без компресије"
+    },
+    "compressionMultipleInline": {
+        "message": "више метода"
     },
     "compressionMultiple": {
         "message": "Више метода"

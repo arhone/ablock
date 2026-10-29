@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "nincs tömörítés"
+    },
     "compressionNone": {
         "message": "Nincs tömörítés"
+    },
+    "compressionMultipleInline": {
+        "message": "több módszer"
     },
     "compressionMultiple": {
         "message": "Több módszer"

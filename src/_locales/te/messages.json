@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "కంప్రెషన్ లేదు"
+    },
     "compressionNone": {
         "message": "కంప్రెషన్ లేదు"
+    },
+    "compressionMultipleInline": {
+        "message": "అనేక పద్ధతులు"
     },
     "compressionMultiple": {
         "message": "అనేక పద్ధతులు"

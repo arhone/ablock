@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "χωρίς συμπίεση"
+    },
     "compressionNone": {
         "message": "Χωρίς συμπίεση"
+    },
+    "compressionMultipleInline": {
+        "message": "πολλές μέθοδοι"
     },
     "compressionMultiple": {
         "message": "Πολλές μέθοδοι"

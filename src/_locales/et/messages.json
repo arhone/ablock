@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "tihendamata"
+    },
     "compressionNone": {
         "message": "Tihendamata"
+    },
+    "compressionMultipleInline": {
+        "message": "mitu meetodit"
     },
     "compressionMultiple": {
         "message": "Mitu meetodit"

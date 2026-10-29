@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "fără compresie"
+    },
     "compressionNone": {
         "message": "Fără compresie"
+    },
+    "compressionMultipleInline": {
+        "message": "mai multe metode"
     },
     "compressionMultiple": {
         "message": "Mai multe metode"

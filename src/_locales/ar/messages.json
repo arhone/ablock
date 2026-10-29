@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "بلا ضغط"
+    },
     "compressionNone": {
         "message": "بلا ضغط"
+    },
+    "compressionMultipleInline": {
+        "message": "عدة طرق"
     },
     "compressionMultiple": {
         "message": "عدة طرق"

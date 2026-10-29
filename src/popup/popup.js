@@ -694,8 +694,8 @@ async function renderSite(tab, server, onLoadTime) {
     const counts = {};
     for (const [key, count] of Object.entries(encodedFiles)) {
         // «multiple» — так браузер пишет про файл, сжатый несколькими способами подряд
-        const name = !key ? t('compressionNone').toLocaleLowerCase(LANG)
-            : key === 'multiple' ? t('compressionMultiple').toLocaleLowerCase(LANG) : NAMES[key] || key;
+        const name = !key ? t('compressionNoneInline')
+            : key === 'multiple' ? t('compressionMultipleInline') : NAMES[key] || key;
         counts[name] = (counts[name] || 0) + count;
     }
     const total = Object.values(encodedFiles).reduce((sum, count) => sum + count, 0);
@@ -719,7 +719,7 @@ async function renderSite(tab, server, onLoadTime) {
         const name = multiple ? t('compressionMultiple') : NAMES[encoding] || encoding;
         info.compressed = true;
         setBadge('compression', name, multiple ? 'none' : encoding === 'br' || encoding === 'zstd' ? 'good' : 'warn', [
-            t('compressionOn', multiple ? name.toLocaleLowerCase(LANG) : name)
+            t('compressionOn', multiple ? t('compressionMultipleInline') : name)
             + (decoded > encoded && encoded > 0 ? ` (${t('compressionRatio', formatSize(decoded), formatSize(encoded))})` : ''),
             ...filesLines
         ].filter(Boolean).join('\n'));
@@ -1239,20 +1239,17 @@ function renderAudit(audit, server, extended, info, companies) {
             .filter((policy) => policy.trim());
         const csp = policies.length > 0;
         // 'unsafe-inline' без nonce и hash разрешает любой встроенный скрипт — от XSS такая политика не спасает.
-        // Слабо, только если слабы все политики, ограничивающие скрипты: строгая перекрывает слабую.
-        // Как в браузере (CSP3): для <script> действует script-src-elem, для onclick= и подобных — script-src-attr,
-        // при их отсутствии — script-src, затем default-src. Политика слабая, если слаб хотя бы один из двух списков
+        // Для элементов и атрибутов своя цепочка: script-src-elem/-attr → script-src → default-src.
+        // Набор слаб, если задан хотя бы в одной политике и слаб во всех, где задан.
+        // Строгие ограничения элементов не перекрывают слабые ограничения атрибутов и наоборот.
         const directive = (policy, name) => new RegExp(`(?:^|;)\\s*${name}(?![\\w-])([^;]*)`, 'i').exec(policy)?.[1];
-        const restricting = policies.filter((policy) => ['script-src-elem', 'script-src-attr', 'script-src', 'default-src']
-            .some((name) => directive(policy, name) !== undefined));
-        const weak = restricting.length > 0 && restricting.every((policy) => {
-            const fallback = directive(policy, 'script-src') ?? directive(policy, 'default-src');
-            return [directive(policy, 'script-src-elem') ?? fallback, directive(policy, 'script-src-attr') ?? fallback]
-                .some((value) => value !== undefined && /'unsafe-inline'/i.test(value)
-                    && !/'nonce-|'sha(256|384|512)-|'strict-dynamic'/i.test(value));
-        });
+        const sources = ['script-src-elem', 'script-src-attr'].map((name) => policies
+            .map((policy) => directive(policy, name) ?? directive(policy, 'script-src') ?? directive(policy, 'default-src'))
+            .filter((value) => value !== undefined));
+        const weak = sources.some((values) => values.length > 0 && values.every((value) => /'unsafe-inline'/i.test(value)
+            && !/'nonce-|'sha(256|384|512)-|'strict-dynamic'/i.test(value)));
         // CSP только с frame-ancestors или upgrade-insecure-requests есть, но от XSS не защищает
-        const loose = csp && restricting.length === 0;
+        const loose = csp && sources.every((values) => values.length === 0);
         row('auditCsp', !csp ? no : loose ? t('auditCspNoScripts') : weak ? t('auditCspWeak') : yes,
             !csp || loose || weak ? 'warn' : 'good');
         const nosniff = /nosniff/i.test(headers['x-content-type-options'] || '');

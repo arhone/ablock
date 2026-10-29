@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "tanpa kompresi"
+    },
     "compressionNone": {
         "message": "Tanpa kompresi"
+    },
+    "compressionMultipleInline": {
+        "message": "beberapa metode"
     },
     "compressionMultiple": {
         "message": "Beberapa metode"

@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "ไม่บีบอัด"
+    },
     "compressionNone": {
         "message": "ไม่บีบอัด"
+    },
+    "compressionMultipleInline": {
+        "message": "หลายวิธี"
     },
     "compressionMultiple": {
         "message": "หลายวิธี"

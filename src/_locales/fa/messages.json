@@ -218,8 +218,14 @@
             }
         }
     },
+    "compressionNoneInline": {
+        "message": "بدون فشرده‌سازی"
+    },
     "compressionNone": {
         "message": "بدون فشرده‌سازی"
+    },
+    "compressionMultipleInline": {
+        "message": "چند روش"
     },
     "compressionMultiple": {
         "message": "چند روش"
