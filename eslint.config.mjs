@@ -3,7 +3,7 @@ import globals from 'globals';
 
 export default [
     {
-        ignores: ['node_modules/', 'dist/', 'src/rules/', 'src/_metadata/']
+        ignores: ['node_modules/', 'dist/', '.agents/', 'src/rules/', 'src/_metadata/']
     },
     js.configs.recommended,
     {
