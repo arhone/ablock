@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Tashqi domenlar yoʻq"
     },
-    "blocked": {
-        "message": "Blok $COUNT$",
+    "ads": {
+        "message": "Reklama $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Sahifada blokirovka qilindi\nReklama: $ADS$\nKuzatuvchilar: $TRACKERS$",
+        "message": "Sahifada blokirovka qilindi\nReklama: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

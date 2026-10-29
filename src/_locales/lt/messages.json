@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Trečiųjų šalių domenų nėra"
     },
-    "blocked": {
-        "message": "Užblokuota $COUNT$",
+    "ads": {
+        "message": "Reklamos $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Užblokuota šiame puslapyje\nReklamos: $ADS$\nSekikliai: $TRACKERS$",
+        "message": "Užblokuota šiame puslapyje\nReklamos: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "কোনো তৃতীয় পক্ষের ডোমেন নেই"
     },
-    "blocked": {
-        "message": "ব্লক $COUNT$",
+    "ads": {
+        "message": "বিজ্ঞাপন $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "এই পৃষ্ঠায় ব্লক করা হয়েছে\nবিজ্ঞাপন: $ADS$\nট্র্যাকার: $TRACKERS$",
+        "message": "এই পৃষ্ঠায় ব্লক করা হয়েছে\nবিজ্ঞাপন: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

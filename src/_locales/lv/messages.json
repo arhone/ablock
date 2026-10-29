@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Nav trešo pušu domēnu"
     },
-    "blocked": {
-        "message": "Bloķēti $COUNT$",
+    "ads": {
+        "message": "Reklāmas $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Bloķēts šajā lapā\nReklāmas: $ADS$\nIzsekotāji: $TRACKERS$",
+        "message": "Bloķēts šajā lapā\nReklāmas: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Бөгде домендер жоқ"
     },
-    "blocked": {
-        "message": "Блок $COUNT$",
+    "ads": {
+        "message": "Жарнама $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Бетте бұғатталды\nЖарнама: $ADS$\nТрекерлер: $TRACKERS$",
+        "message": "Бетте бұғатталды\nЖарнама: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

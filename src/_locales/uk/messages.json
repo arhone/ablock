@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Сторонніх доменів немає"
     },
-    "blocked": {
-        "message": "Заблоковано $COUNT$",
+    "ads": {
+        "message": "Реклама $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Заблоковано на цій сторінці\nРеклама: $ADS$\nТрекери: $TRACKERS$",
+        "message": "Заблоковано на цій сторінці\nРеклама: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

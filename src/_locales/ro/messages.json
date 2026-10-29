@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Niciun domeniu terț"
     },
-    "blocked": {
-        "message": "Blocate $COUNT$",
+    "ads": {
+        "message": "Reclame $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Blocate pe această pagină\nReclame: $ADS$\nUrmăritori: $TRACKERS$",
+        "message": "Blocate pe această pagină\nReclame: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Hakuna vikoa vya wahusika wengine"
     },
-    "blocked": {
-        "message": "Vilivyozuiwa $COUNT$",
+    "ads": {
+        "message": "Matangazo $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Vilivyozuiwa kwenye ukurasa huu\nMatangazo: $ADS$\nVifuatiliaji: $TRACKERS$",
+        "message": "Vilivyozuiwa kwenye ukurasa huu\nMatangazo: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

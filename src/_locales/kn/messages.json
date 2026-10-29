@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಡೊಮೇನ್‌ಗಳಿಲ್ಲ"
     },
-    "blocked": {
-        "message": "ನಿರ್ಬಂಧಿತ $COUNT$",
+    "ads": {
+        "message": "ಜಾಹೀರಾತು $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "ಈ ಪುಟದಲ್ಲಿ ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ\nಜಾಹೀರಾತುಗಳು: $ADS$\nಟ್ರ್ಯಾಕರ್‌ಗಳು: $TRACKERS$",
+        "message": "ಈ ಪುಟದಲ್ಲಿ ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ\nಜಾಹೀರಾತುಗಳು: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

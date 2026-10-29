@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Walang third-party na domain"
     },
-    "blocked": {
-        "message": "Na-block $COUNT$",
+    "ads": {
+        "message": "Mga ad $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Na-block sa page na ito\nMga ad: $ADS$\nMga tracker: $TRACKERS$",
+        "message": "Na-block sa page na ito\nMga ad: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

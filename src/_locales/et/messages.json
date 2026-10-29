@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Kolmandate osapoolte domeene pole"
     },
-    "blocked": {
-        "message": "Blokeeritud $COUNT$",
+    "ads": {
+        "message": "Reklaamid $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Sellel lehel blokeeritud\nReklaamid: $ADS$\nJälgijad: $TRACKERS$",
+        "message": "Sellel lehel blokeeritud\nReklaamid: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

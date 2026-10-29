@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "لا توجد نطاقات لجهات خارجية"
     },
-    "blocked": {
-        "message": "المحظور $COUNT$",
+    "ads": {
+        "message": "الإعلانات $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "المحظور في هذه الصفحة\nالإعلانات: $ADS$\nأدوات التتبع: $TRACKERS$",
+        "message": "المحظور في هذه الصفحة\nالإعلانات: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

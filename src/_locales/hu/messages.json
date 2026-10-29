@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Nincsenek külső domainek"
     },
-    "blocked": {
-        "message": "Blokkolva $COUNT$",
+    "ads": {
+        "message": "Hirdetések $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Ezen az oldalon blokkolva\nHirdetések: $ADS$\nNyomkövetők: $TRACKERS$",
+        "message": "Ezen az oldalon blokkolva\nHirdetések: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

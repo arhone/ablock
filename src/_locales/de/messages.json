@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Keine fremden Domains"
     },
-    "blocked": {
-        "message": "Blockiert $COUNT$",
+    "ads": {
+        "message": "Werbung $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Auf der Seite blockiert\nWerbung: $ADS$\nTracker: $TRACKERS$",
+        "message": "Auf der Seite blockiert\nWerbung: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

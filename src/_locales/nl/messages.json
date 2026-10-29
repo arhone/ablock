@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Geen domeinen van derden"
     },
-    "blocked": {
-        "message": "Geblokkeerd $COUNT$",
+    "ads": {
+        "message": "Reclame $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Geblokkeerd op deze pagina\nAdvertenties: $ADS$\nTrackers: $TRACKERS$",
+        "message": "Geblokkeerd op deze pagina\nAdvertenties: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "የሶስተኛ ወገን ጎራዎች የሉም"
     },
-    "blocked": {
-        "message": "የታገዱ $COUNT$",
+    "ads": {
+        "message": "ማስታወቂያ $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "በዚህ ገጽ ላይ የታገዱ\nማስታወቂያዎች: $ADS$\nመከታተያዎች: $TRACKERS$",
+        "message": "በዚህ ገጽ ላይ የታገዱ\nማስታወቂያዎች: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

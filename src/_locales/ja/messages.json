@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "サードパーティのドメインはありません"
     },
-    "blocked": {
-        "message": "ブロック $COUNT$",
+    "ads": {
+        "message": "広告 $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "このページでブロック\n広告: $ADS$\nトラッカー: $TRACKERS$",
+        "message": "このページでブロック\n広告: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

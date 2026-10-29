@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Žiadne domény tretích strán"
     },
-    "blocked": {
-        "message": "Blok $COUNT$",
+    "ads": {
+        "message": "Reklamy $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Zablokované na stránke\nReklamy: $ADS$\nSledovače: $TRACKERS$",
+        "message": "Zablokované na stránke\nReklamy: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

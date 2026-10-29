@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "No hay dominios de terceros"
     },
-    "blocked": {
-        "message": "Bloqueos $COUNT$",
+    "ads": {
+        "message": "Anuncios $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Bloqueado en esta página\nAnuncios: $ADS$\nRastreadores: $TRACKERS$",
+        "message": "Bloqueado en esta página\nAnuncios: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

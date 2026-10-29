@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "മൂന്നാം കക്ഷി ഡൊമെയ്‌നുകളില്ല"
     },
-    "blocked": {
-        "message": "തടഞ്ഞത് $COUNT$",
+    "ads": {
+        "message": "പരസ്യങ്ങൾ $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "ഈ പേജിൽ തടഞ്ഞത്\nപരസ്യങ്ങൾ: $ADS$\nട്രാക്കറുകൾ: $TRACKERS$",
+        "message": "ഈ പേജിൽ തടഞ്ഞത്\nപരസ്യങ്ങൾ: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

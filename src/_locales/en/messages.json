@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "No third-party domains"
     },
-    "blocked": {
-        "message": "Blocked $COUNT$",
+    "ads": {
+        "message": "Ads $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Blocked on this page\nAds: $ADS$\nTrackers: $TRACKERS$",
+        "message": "Blocked on this page\nAds: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

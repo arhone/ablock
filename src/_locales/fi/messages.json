@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Ei kolmansien osapuolten verkkotunnuksia"
     },
-    "blocked": {
-        "message": "Estetty $COUNT$",
+    "ads": {
+        "message": "Mainokset $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Estetty tällä sivulla\nMainokset: $ADS$\nSeurannat: $TRACKERS$",
+        "message": "Estetty tällä sivulla\nMainokset: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

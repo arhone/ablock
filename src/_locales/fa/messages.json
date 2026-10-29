@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "دامنهٔ شخص ثالثی وجود ندارد"
     },
-    "blocked": {
-        "message": "مسدودشده $COUNT$",
+    "ads": {
+        "message": "تبلیغات $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "مسدودشده در این صفحه\nتبلیغات: $ADS$\nردیاب‌ها: $TRACKERS$",
+        "message": "مسدودشده در این صفحه\nتبلیغات: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Nema domena trećih strana"
     },
-    "blocked": {
-        "message": "Blokirano $COUNT$",
+    "ads": {
+        "message": "Oglasi $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Blokirano na ovoj stranici\nOglasi: $ADS$\nAlati za praćenje: $TRACKERS$",
+        "message": "Blokirano na ovoj stranici\nOglasi: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

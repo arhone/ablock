@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "沒有第三方網域"
     },
-    "blocked": {
-        "message": "已攔截 $COUNT$",
+    "ads": {
+        "message": "廣告 $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "此頁面已攔截\n廣告：$ADS$\n追蹤器：$TRACKERS$",
+        "message": "此頁面已攔截\n廣告：$ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

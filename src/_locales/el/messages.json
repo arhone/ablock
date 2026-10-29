@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Κανένας τομέας τρίτων"
     },
-    "blocked": {
-        "message": "Αποκλείστηκαν $COUNT$",
+    "ads": {
+        "message": "Διαφημίσεις $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Αποκλείστηκαν σε αυτή τη σελίδα\nΔιαφημίσεις: $ADS$\nΙχνηλάτες: $TRACKERS$",
+        "message": "Αποκλείστηκαν σε αυτή τη σελίδα\nΔιαφημίσεις: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Tiada domain pihak ketiga"
     },
-    "blocked": {
-        "message": "Disekat $COUNT$",
+    "ads": {
+        "message": "Iklan $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Disekat pada halaman ini\nIklan: $ADS$\nPenjejak: $TRACKERS$",
+        "message": "Disekat pada halaman ini\nIklan: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

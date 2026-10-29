@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "மூன்றாம் தரப்பு டொமைன்கள் இல்லை"
     },
-    "blocked": {
-        "message": "தடுப்பு $COUNT$",
+    "ads": {
+        "message": "விளம்பரம் $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "இந்தப் பக்கத்தில் தடுக்கப்பட்டவை\nவிளம்பரங்கள்: $ADS$\nடிராக்கர்கள்: $TRACKERS$",
+        "message": "இந்தப் பக்கத்தில் தடுக்கப்பட்டவை\nவிளம்பரங்கள்: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

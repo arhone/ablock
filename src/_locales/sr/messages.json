@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Нема спољних домена"
     },
-    "blocked": {
-        "message": "Блок $COUNT$",
+    "ads": {
+        "message": "Рекламе $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Блокирано на страници\nРекламе: $ADS$\nТрекери: $TRACKERS$",
+        "message": "Блокирано на страници\nРекламе: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

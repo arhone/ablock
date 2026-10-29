@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "אין דומיינים של צד שלישי"
     },
-    "blocked": {
-        "message": "נחסמו $COUNT$",
+    "ads": {
+        "message": "פרסומות $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "נחסם בדף זה\nפרסומות: $ADS$\nרכיבי מעקב: $TRACKERS$",
+        "message": "נחסם בדף זה\nפרסומות: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

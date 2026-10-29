@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "서드파티 도메인 없음"
     },
-    "blocked": {
-        "message": "차단 $COUNT$",
+    "ads": {
+        "message": "광고 $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "이 페이지에서 차단됨\n광고: $ADS$\n추적기: $TRACKERS$",
+        "message": "이 페이지에서 차단됨\n광고: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

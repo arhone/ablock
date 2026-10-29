@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "ไม่มีโดเมนของบุคคลที่สาม"
     },
-    "blocked": {
-        "message": "บล็อกแล้ว $COUNT$",
+    "ads": {
+        "message": "โฆษณา $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "บล็อกในหน้านี้\nโฆษณา: $ADS$\nตัวติดตาม: $TRACKERS$",
+        "message": "บล็อกในหน้านี้\nโฆษณา: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

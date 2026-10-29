@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Сторонних доменов нет"
     },
-    "blocked": {
-        "message": "Блок $COUNT$",
+    "ads": {
+        "message": "Реклама $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Заблокировано на странице\nРеклама: $ADS$\nТрекеры: $TRACKERS$",
+        "message": "Заблокировано на странице\nРеклама: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

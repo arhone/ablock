@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "没有第三方域名"
     },
-    "blocked": {
-        "message": "已拦截 $COUNT$",
+    "ads": {
+        "message": "广告 $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "本页已拦截\n广告：$ADS$\n跟踪器：$TRACKERS$",
+        "message": "本页已拦截\n广告：$ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "કોઈ તૃતીય-પક્ષ ડોમેન નથી"
     },
-    "blocked": {
-        "message": "બ્લૉક $COUNT$",
+    "ads": {
+        "message": "જાહેરાતો $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "આ પેજ પર બ્લૉક કર્યું\nજાહેરાતો: $ADS$\nટ્રેકર્સ: $TRACKERS$",
+        "message": "આ પેજ પર બ્લૉક કર્યું\nજાહેરાતો: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

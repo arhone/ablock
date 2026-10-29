@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "कोई तृतीय-पक्ष डोमेन नहीं"
     },
-    "blocked": {
-        "message": "ब्लॉक $COUNT$",
+    "ads": {
+        "message": "विज्ञापन $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "इस पेज पर ब्लॉक किया गया\nविज्ञापन: $ADS$\nट्रैकर: $TRACKERS$",
+        "message": "इस पेज पर ब्लॉक किया गया\nविज्ञापन: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

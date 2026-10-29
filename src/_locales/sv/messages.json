@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Inga tredjepartsdomäner"
     },
-    "blocked": {
-        "message": "Blockerade $COUNT$",
+    "ads": {
+        "message": "Annonser $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Blockerat på den här sidan\nAnnonser: $ADS$\nSpårare: $TRACKERS$",
+        "message": "Blockerat på den här sidan\nAnnonser: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

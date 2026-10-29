@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Không có tên miền bên thứ ba"
     },
-    "blocked": {
-        "message": "Đã chặn $COUNT$",
+    "ads": {
+        "message": "Quảng cáo $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Đã chặn trên trang\nQuảng cáo: $ADS$\nTrình theo dõi: $TRACKERS$",
+        "message": "Đã chặn trên trang\nQuảng cáo: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

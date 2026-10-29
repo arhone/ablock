@@ -268,7 +268,7 @@ function translatePage() {
     for (const el of document.querySelectorAll('[data-i18n-placeholder]')) {
         el.placeholder = t(el.dataset.i18nPlaceholder);
     }
-    setBadge('blocked', t('blocked', '—'), 'none', '');
+    setBadge('blocked', t('ads', '—'), 'none', '');
     setBadge('trackers', t('trackers', '—'), 'none', '');
     setBadge('domains', t('domains', '—'), 'none', '');
     document.getElementById('meter').append(...Array.from({length: 10}, () => document.createElement('i')));
@@ -753,7 +753,7 @@ function renderSpeed({loadTime, ready, age}) {
 }
 
 /**
- * Значки заблокированного на вкладке. В подсказке «Блок» в расширенном режиме и объём: его считает sw.js
+ * Значки заблокированного на вкладке. В подсказке «Реклама» в расширенном режиме и объём: его считает sw.js
  * по webRequest, без расширенного режима объёма нет
  * @param {chrome.tabs.Tab} tab
  * @param {?Object} info
@@ -770,7 +770,7 @@ async function renderBlocked(tab, info, status, server) {
     };
     setWeightTitle(false);
     if (!status) {
-        setBadge('blocked', t('blocked', '—'), 'none', t('statusOff'));
+        setBadge('blocked', t('ads', '—'), 'none', t('statusOff'));
         setBadge('trackers', t('trackers', '—'), 'none', t('statusOff'));
         return;
     }
@@ -788,8 +788,8 @@ async function renderBlocked(tab, info, status, server) {
     const trackers = matched.filter((m) => TRACKER_RULESETS.includes(m.rule.rulesetId)).length;
     const cookies = matched.filter((m) => m.rule.rulesetId === COOKIE_RULESET).length;
     const ads = matched.length - trackers - cookies;
-    setBadge('blocked', t('blocked', formatNumber(matched.length)), 'good', [
-        t('blockedTitle', ads, trackers),
+    setBadge('blocked', t('ads', formatNumber(ads + cookies)), 'good', [
+        t('blockedTitle', ads),
         cookies ? t('blockedCookies', cookies) : '',
         server?.bytes ? t('blockedSize', formatSize(server.bytes)) : ''
     ].filter(Boolean).join('\n'));

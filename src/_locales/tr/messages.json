@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "Üçüncü taraf alan adı yok"
     },
-    "blocked": {
-        "message": "Engel $COUNT$",
+    "ads": {
+        "message": "Reklam $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "Bu sayfada engellenenler\nReklam: $ADS$\nİzleyici: $TRACKERS$",
+        "message": "Bu sayfada engellenenler\nReklam: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },

@@ -94,8 +94,8 @@
     "domainsNone": {
         "message": "థర్డ్-పార్టీ డొమైన్‌లు లేవు"
     },
-    "blocked": {
-        "message": "బ్లాక్ $COUNT$",
+    "ads": {
+        "message": "ప్రకటనలు $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -111,13 +111,10 @@
         }
     },
     "blockedTitle": {
-        "message": "ఈ పేజీలో బ్లాక్ చేసినవి\nప్రకటనలు: $ADS$\nట్రాకర్లు: $TRACKERS$",
+        "message": "ఈ పేజీలో బ్లాక్ చేసినవి\nప్రకటనలు: $ADS$",
         "placeholders": {
             "ads": {
                 "content": "$1"
-            },
-            "trackers": {
-                "content": "$2"
             }
         }
     },
