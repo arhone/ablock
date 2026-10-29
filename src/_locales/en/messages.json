@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Only available observations are shown."
+    },
+    "causeElement": {
+        "message": "Element"
+    },
+    "causeText": {
+        "message": "Text block"
+    },
+    "causeLoadDelay": {
+        "message": "Resource load delay"
+    },
+    "causeLoadDuration": {
+        "message": "Resource load after first byte"
+    },
+    "causeRenderDelay": {
+        "message": "Render delay"
+    },
+    "causeLongest": {
+        "message": "Longest phase"
+    },
+    "causeResource": {
+        "message": "Image resource"
+    },
+    "causeImageHints": {
+        "message": "Current attributes"
+    },
+    "causePreload": {
+        "message": "Matching preload now"
+    },
+    "causeRedirect": {
+        "message": "Redirects"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Connection (includes TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (within connection)"
+    },
+    "causeRequestWait": {
+        "message": "Request and response wait"
+    },
+    "causeUnaccounted": {
+        "message": "Unattributed interval"
+    },
+    "causeWorker": {
+        "message": "Service worker (internal fetches excluded)"
+    },
+    "causeInterim": {
+        "message": "Interim response (code unknown)"
+    },
+    "causeFinalHeaders": {
+        "message": "Final headers (from navigation start)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (server-declared)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Prerender or history navigation: phases are not reconstructed."
+    },
+    "causeLimited": {
+        "message": "Some details are missing, hidden or limited."
+    },
+    "causeScope": {
+        "message": "Original document load; not a new measurement after history restore."
     }
 }

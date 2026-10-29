@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Alleen beschikbare waarnemingen worden getoond."
+    },
+    "causeElement": {
+        "message": "Element"
+    },
+    "causeText": {
+        "message": "Tekstblok"
+    },
+    "causeLoadDelay": {
+        "message": "Vertraging bij laden van bron"
+    },
+    "causeLoadDuration": {
+        "message": "Bron laden na eerste byte"
+    },
+    "causeRenderDelay": {
+        "message": "Rendervertraging"
+    },
+    "causeLongest": {
+        "message": "Langste fase"
+    },
+    "causeResource": {
+        "message": "Afbeeldingsbron"
+    },
+    "causeImageHints": {
+        "message": "Huidige attributen"
+    },
+    "causePreload": {
+        "message": "Huidige passende preload"
+    },
+    "causeRedirect": {
+        "message": "Omleidingen"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Verbinding (inclusief TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (deel van verbinding)"
+    },
+    "causeRequestWait": {
+        "message": "Verzoek en wachten op antwoord"
+    },
+    "causeUnaccounted": {
+        "message": "Niet toegewezen interval"
+    },
+    "causeWorker": {
+        "message": "Service worker (zonder interne verzoeken)"
+    },
+    "causeInterim": {
+        "message": "Tussentijds antwoord (code onbekend)"
+    },
+    "causeFinalHeaders": {
+        "message": "Definitieve headers (vanaf navigatiestart)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (volgens server)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Prerendering of geschiedenisnavigatie: fasen worden niet gereconstrueerd."
+    },
+    "causeLimited": {
+        "message": "Sommige details ontbreken, zijn verborgen of beperkt."
+    },
+    "causeScope": {
+        "message": "Oorspronkelijke documentlading; geen nieuwe meting na herstel uit de geschiedenis."
     }
 }

@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "ಲಭ್ಯವಿರುವ ಅವಲೋಕನಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸಲಾಗಿದೆ."
+    },
+    "causeElement": {
+        "message": "ಅಂಶ"
+    },
+    "causeText": {
+        "message": "ಪಠ್ಯ ಬ್ಲಾಕ್"
+    },
+    "causeLoadDelay": {
+        "message": "ಸಂಪನ್ಮೂಲ ಲೋಡ್ ವಿಳಂಬ"
+    },
+    "causeLoadDuration": {
+        "message": "ಮೊದಲ ಬೈಟ್ ನಂತರ ಸಂಪನ್ಮೂಲ ಲೋಡ್"
+    },
+    "causeRenderDelay": {
+        "message": "ರೆಂಡರ್ ವಿಳಂಬ"
+    },
+    "causeLongest": {
+        "message": "ಅತಿ ದೀರ್ಘ ಹಂತ"
+    },
+    "causeResource": {
+        "message": "ಚಿತ್ರ ಸಂಪನ್ಮೂಲ"
+    },
+    "causeImageHints": {
+        "message": "ಪ್ರಸ್ತುತ ಗುಣಲಕ್ಷಣಗಳು"
+    },
+    "causePreload": {
+        "message": "ಈಗ ಹೊಂದುವ ಪೂರ್ವಲೋಡ್"
+    },
+    "causeRedirect": {
+        "message": "ಮರುನಿರ್ದೇಶನಗಳು"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "ಸಂಪರ್ಕ (TLS ಒಳಗೊಂಡಂತೆ)"
+    },
+    "causeTls": {
+        "message": "TLS (ಸಂಪರ್ಕದ ಭಾಗ)"
+    },
+    "causeRequestWait": {
+        "message": "ವಿನಂತಿ ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆಯ ನಿರೀಕ್ಷೆ"
+    },
+    "causeUnaccounted": {
+        "message": "ವರ್ಗೀಕರಿಸದ ಅವಧಿ"
+    },
+    "causeWorker": {
+        "message": "Service worker (ಆಂತರಿಕ ವಿನಂತಿಗಳನ್ನು ಹೊರತುಪಡಿಸಿ)"
+    },
+    "causeInterim": {
+        "message": "ಮಧ್ಯಂತರ ಪ್ರತಿಕ್ರಿಯೆ (ಕೋಡ್ ತಿಳಿದಿಲ್ಲ)"
+    },
+    "causeFinalHeaders": {
+        "message": "ಅಂತಿಮ ಹೆಡರ್‌ಗಳು (ನ್ಯಾವಿಗೇಷನ್ ಆರಂಭದಿಂದ)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (ಸರ್ವರ್ ಘೋಷಿಸಿದ್ದು)"
+    },
+    "causeSpecialNavigation": {
+        "message": "ಪೂರ್ವ ರೆಂಡರ್ ಅಥವಾ ಇತಿಹಾಸ ನ್ಯಾವಿಗೇಷನ್: ಹಂತಗಳನ್ನು ಮರುರಚಿಸಲಾಗುವುದಿಲ್ಲ."
+    },
+    "causeLimited": {
+        "message": "ಕೆಲವು ವಿವರಗಳು ಕಾಣೆಯಾಗಿವೆ, ಮರೆಮಾಡಲಾಗಿದೆ ಅಥವಾ ಸೀಮಿತವಾಗಿವೆ."
+    },
+    "causeScope": {
+        "message": "ದಾಖಲೆಯ ಮೂಲ ಲೋಡ್; ಇತಿಹಾಸದಿಂದ ಮರುಸ್ಥಾಪನೆಯ ನಂತರ ಹೊಸ ಅಳತೆಯಲ್ಲ."
     }
 }

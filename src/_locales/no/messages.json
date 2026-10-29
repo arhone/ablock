@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Bare tilgjengelige observasjoner vises."
+    },
+    "causeElement": {
+        "message": "Element"
+    },
+    "causeText": {
+        "message": "Tekstblokk"
+    },
+    "causeLoadDelay": {
+        "message": "Forsinkelse i ressurslasting"
+    },
+    "causeLoadDuration": {
+        "message": "Ressurslasting etter første byte"
+    },
+    "causeRenderDelay": {
+        "message": "Gjengivelsesforsinkelse"
+    },
+    "causeLongest": {
+        "message": "Lengste fase"
+    },
+    "causeResource": {
+        "message": "Bilderessurs"
+    },
+    "causeImageHints": {
+        "message": "Gjeldende attributter"
+    },
+    "causePreload": {
+        "message": "Gjeldende samsvarende preload"
+    },
+    "causeRedirect": {
+        "message": "Omdirigeringer"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Tilkobling (inkludert TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (del av tilkoblingen)"
+    },
+    "causeRequestWait": {
+        "message": "Forespørsel og venting på svar"
+    },
+    "causeUnaccounted": {
+        "message": "Ikke tilordnet intervall"
+    },
+    "causeWorker": {
+        "message": "Service worker (uten interne hentinger)"
+    },
+    "causeInterim": {
+        "message": "Foreløpig svar (ukjent kode)"
+    },
+    "causeFinalHeaders": {
+        "message": "Endelige headere (fra navigasjonsstart)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (oppgitt av serveren)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Forhåndsgjengivelse eller historikknavigasjon: faser rekonstrueres ikke."
+    },
+    "causeLimited": {
+        "message": "Noen detaljer mangler, er skjult eller begrenset."
+    },
+    "causeScope": {
+        "message": "Dokumentets opprinnelige lasting; ingen ny måling etter gjenoppretting fra historikken."
     }
 }

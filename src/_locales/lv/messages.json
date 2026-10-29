@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Tiek rādīti tikai pieejamie novērojumi."
+    },
+    "causeElement": {
+        "message": "Elements"
+    },
+    "causeText": {
+        "message": "Teksta bloks"
+    },
+    "causeLoadDelay": {
+        "message": "Resursa ielādes aizkave"
+    },
+    "causeLoadDuration": {
+        "message": "Resursa ielāde pēc pirmā baita"
+    },
+    "causeRenderDelay": {
+        "message": "Attēlošanas aizkave"
+    },
+    "causeLongest": {
+        "message": "Ilgākais posms"
+    },
+    "causeResource": {
+        "message": "Attēla resurss"
+    },
+    "causeImageHints": {
+        "message": "Pašreizējie atribūti"
+    },
+    "causePreload": {
+        "message": "Pašreiz atbilstoša priekšielāde"
+    },
+    "causeRedirect": {
+        "message": "Novirzīšanas"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Savienojums (ietver TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (savienojuma daļa)"
+    },
+    "causeRequestWait": {
+        "message": "Pieprasījums un atbildes gaidīšana"
+    },
+    "causeUnaccounted": {
+        "message": "Nepiesaistīts intervāls"
+    },
+    "causeWorker": {
+        "message": "Service worker (bez iekšējiem pieprasījumiem)"
+    },
+    "causeInterim": {
+        "message": "Starpatbilde (kods nav zināms)"
+    },
+    "causeFinalHeaders": {
+        "message": "Gala galvenes (no navigācijas sākuma)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (servera norādīts)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Priekšrenderēšana vai vēstures navigācija: posmi netiek rekonstruēti."
+    },
+    "causeLimited": {
+        "message": "Daļa informācijas trūkst, ir slēpta vai ierobežota."
+    },
+    "causeScope": {
+        "message": "Dokumenta sākotnējā ielāde; nav jauna mērījuma pēc atjaunošanas no vēstures."
     }
 }

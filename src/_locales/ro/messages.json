@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Sunt afișate doar observațiile disponibile."
+    },
+    "causeElement": {
+        "message": "Element"
+    },
+    "causeText": {
+        "message": "Bloc de text"
+    },
+    "causeLoadDelay": {
+        "message": "Întârzierea încărcării resursei"
+    },
+    "causeLoadDuration": {
+        "message": "Încărcare după primul octet"
+    },
+    "causeRenderDelay": {
+        "message": "Întârzierea randării"
+    },
+    "causeLongest": {
+        "message": "Cea mai lungă fază"
+    },
+    "causeResource": {
+        "message": "Resursa imaginii"
+    },
+    "causeImageHints": {
+        "message": "Atribute actuale"
+    },
+    "causePreload": {
+        "message": "Preîncărcare corespunzătoare actuală"
+    },
+    "causeRedirect": {
+        "message": "Redirecționări"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Conexiune (include TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (parte din conexiune)"
+    },
+    "causeRequestWait": {
+        "message": "Cerere și așteptarea răspunsului"
+    },
+    "causeUnaccounted": {
+        "message": "Interval neatribuit"
+    },
+    "causeWorker": {
+        "message": "Service worker (fără cereri interne)"
+    },
+    "causeInterim": {
+        "message": "Răspuns intermediar (cod necunoscut)"
+    },
+    "causeFinalHeaders": {
+        "message": "Antete finale (de la începutul navigării)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (declarat de server)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Prerandare sau navigare în istoric: fazele nu sunt reconstruite."
+    },
+    "causeLimited": {
+        "message": "Unele detalii lipsesc, sunt ascunse sau limitate."
+    },
+    "causeScope": {
+        "message": "Încărcarea inițială a documentului; nu o măsurare nouă după restaurarea din istoric."
     }
 }

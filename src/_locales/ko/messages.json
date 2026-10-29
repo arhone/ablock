@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "확인 가능한 관측 결과만 표시됩니다."
+    },
+    "causeElement": {
+        "message": "요소"
+    },
+    "causeText": {
+        "message": "텍스트 블록"
+    },
+    "causeLoadDelay": {
+        "message": "리소스 로드 지연"
+    },
+    "causeLoadDuration": {
+        "message": "첫 바이트 이후 리소스 로드"
+    },
+    "causeRenderDelay": {
+        "message": "렌더링 지연"
+    },
+    "causeLongest": {
+        "message": "가장 긴 단계"
+    },
+    "causeResource": {
+        "message": "이미지 리소스"
+    },
+    "causeImageHints": {
+        "message": "현재 속성"
+    },
+    "causePreload": {
+        "message": "현재 일치하는 미리 로드"
+    },
+    "causeRedirect": {
+        "message": "리디렉션"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "연결 (TLS 포함)"
+    },
+    "causeTls": {
+        "message": "TLS (연결의 일부)"
+    },
+    "causeRequestWait": {
+        "message": "요청 및 응답 대기"
+    },
+    "causeUnaccounted": {
+        "message": "분류되지 않은 구간"
+    },
+    "causeWorker": {
+        "message": "Service worker (내부 요청 제외)"
+    },
+    "causeInterim": {
+        "message": "중간 응답 (코드 알 수 없음)"
+    },
+    "causeFinalHeaders": {
+        "message": "최종 헤더 (탐색 시작부터)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (서버가 제공한 값)"
+    },
+    "causeSpecialNavigation": {
+        "message": "사전 렌더링 또는 방문 기록 탐색: 단계를 재구성하지 않습니다."
+    },
+    "causeLimited": {
+        "message": "일부 세부 정보가 없거나 숨겨져 있거나 제한됩니다."
+    },
+    "causeScope": {
+        "message": "문서의 원래 로드이며 방문 기록 복원 후의 새 측정이 아닙니다."
     }
 }

@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "تُعرض الملاحظات المتاحة فقط."
+    },
+    "causeElement": {
+        "message": "العنصر"
+    },
+    "causeText": {
+        "message": "كتلة نصية"
+    },
+    "causeLoadDelay": {
+        "message": "تأخير تحميل المورد"
+    },
+    "causeLoadDuration": {
+        "message": "تحميل المورد بعد أول بايت"
+    },
+    "causeRenderDelay": {
+        "message": "تأخير العرض"
+    },
+    "causeLongest": {
+        "message": "أطول مرحلة"
+    },
+    "causeResource": {
+        "message": "مورد الصورة"
+    },
+    "causeImageHints": {
+        "message": "السمات الحالية"
+    },
+    "causePreload": {
+        "message": "التحميل المسبق المطابق حاليًا"
+    },
+    "causeRedirect": {
+        "message": "إعادة التوجيه"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "الاتصال (يشمل TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (جزء من الاتصال)"
+    },
+    "causeRequestWait": {
+        "message": "الطلب وانتظار الرد"
+    },
+    "causeUnaccounted": {
+        "message": "فترة غير منسوبة"
+    },
+    "causeWorker": {
+        "message": "Service worker (دون طلباته الداخلية)"
+    },
+    "causeInterim": {
+        "message": "رد مؤقت (الرمز غير معروف)"
+    },
+    "causeFinalHeaders": {
+        "message": "الترويسات النهائية (من بداية التنقل)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (كما أعلنه الخادم)"
+    },
+    "causeSpecialNavigation": {
+        "message": "العرض المسبق أو التنقل في السجل: لا تُعاد بناء المراحل."
+    },
+    "causeLimited": {
+        "message": "بعض التفاصيل مفقودة أو مخفية أو محدودة."
+    },
+    "causeScope": {
+        "message": "تحميل المستند الأصلي؛ ليس قياسًا جديدًا بعد الاستعادة من السجل."
     }
 }

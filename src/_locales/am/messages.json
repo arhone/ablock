@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "የሚገኙት ምልከታዎች ብቻ ይታያሉ።"
+    },
+    "causeElement": {
+        "message": "ክፍል"
+    },
+    "causeText": {
+        "message": "የጽሑፍ ብሎክ"
+    },
+    "causeLoadDelay": {
+        "message": "የምንጭ ጭነት መዘግየት"
+    },
+    "causeLoadDuration": {
+        "message": "ከመጀመሪያው ባይት በኋላ ያለ ጭነት"
+    },
+    "causeRenderDelay": {
+        "message": "የማሳያ መዘግየት"
+    },
+    "causeLongest": {
+        "message": "ረጅሙ ደረጃ"
+    },
+    "causeResource": {
+        "message": "የምስል ምንጭ"
+    },
+    "causeImageHints": {
+        "message": "የአሁኑ ባህሪያት"
+    },
+    "causePreload": {
+        "message": "አሁን የሚዛመድ ቅድመ ጭነት"
+    },
+    "causeRedirect": {
+        "message": "አቅጣጫ ማዞሪያዎች"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "ግንኙነት (TLS ጨምሮ)"
+    },
+    "causeTls": {
+        "message": "TLS (የግንኙነቱ ክፍል)"
+    },
+    "causeRequestWait": {
+        "message": "ጥያቄና ምላሽ መጠበቅ"
+    },
+    "causeUnaccounted": {
+        "message": "ያልተመደበ ጊዜ"
+    },
+    "causeWorker": {
+        "message": "Service worker (የውስጥ ጥያቄዎች አይካተቱም)"
+    },
+    "causeInterim": {
+        "message": "ጊዜያዊ ምላሽ (ኮዱ አይታወቅም)"
+    },
+    "causeFinalHeaders": {
+        "message": "የመጨረሻ ራስጌዎች (ከአሰሳ መጀመሪያ)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (አገልጋዩ ያሳወቀው)"
+    },
+    "causeSpecialNavigation": {
+        "message": "ቅድመ ማሳያ ወይም የታሪክ አሰሳ፦ ደረጃዎች እንደገና አይገነቡም።"
+    },
+    "causeLimited": {
+        "message": "አንዳንድ ዝርዝሮች የሉም፣ ተደብቀዋል ወይም ተገድበዋል።"
+    },
+    "causeScope": {
+        "message": "የሰነዱ የመጀመሪያ ጭነት፤ ከታሪክ መመለስ በኋላ አዲስ ልኬት አይደለም።"
     }
 }

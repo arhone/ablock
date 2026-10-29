@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Тек қолжетімді бақылаулар көрсетілген."
+    },
+    "causeElement": {
+        "message": "Элемент"
+    },
+    "causeText": {
+        "message": "Мәтін блогы"
+    },
+    "causeLoadDelay": {
+        "message": "Ресурсты жүктеу кідірісі"
+    },
+    "causeLoadDuration": {
+        "message": "Алғашқы байттан кейінгі жүктеу"
+    },
+    "causeRenderDelay": {
+        "message": "Көрсету кідірісі"
+    },
+    "causeLongest": {
+        "message": "Ең ұзақ кезең"
+    },
+    "causeResource": {
+        "message": "Сурет ресурсы"
+    },
+    "causeImageHints": {
+        "message": "Ағымдағы атрибуттар"
+    },
+    "causePreload": {
+        "message": "Қазір сәйкес алдын ала жүктеу"
+    },
+    "causeRedirect": {
+        "message": "Қайта бағыттаулар"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Қосылым (TLS қоса)"
+    },
+    "causeTls": {
+        "message": "TLS (қосылым бөлігі)"
+    },
+    "causeRequestWait": {
+        "message": "Сұрау және жауапты күту"
+    },
+    "causeUnaccounted": {
+        "message": "Бөлінбеген аралық"
+    },
+    "causeWorker": {
+        "message": "Service worker (ішкі сұрауларсыз)"
+    },
+    "causeInterim": {
+        "message": "Аралық жауап (код белгісіз)"
+    },
+    "causeFinalHeaders": {
+        "message": "Соңғы тақырыптар (навигация басынан)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (сервер мәлімдеген)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Алдын ала көрсету не тарих: кезеңдер қалпына келтірілмейді."
+    },
+    "causeLimited": {
+        "message": "Кейбір мәліметтер жоқ, жасырылған не шектелген."
+    },
+    "causeScope": {
+        "message": "Құжаттың бастапқы жүктелуі; тарихтан қайтқаннан кейінгі жаңа өлшем емес."
     }
 }

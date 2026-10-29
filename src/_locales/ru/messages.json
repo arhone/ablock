@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Показаны только доступные наблюдения."
+    },
+    "causeElement": {
+        "message": "Элемент"
+    },
+    "causeText": {
+        "message": "Текстовый блок"
+    },
+    "causeLoadDelay": {
+        "message": "Задержка загрузки ресурса"
+    },
+    "causeLoadDuration": {
+        "message": "Загрузка ресурса после первого байта"
+    },
+    "causeRenderDelay": {
+        "message": "Задержка отрисовки"
+    },
+    "causeLongest": {
+        "message": "Самая долгая фаза"
+    },
+    "causeResource": {
+        "message": "Ресурс картинки"
+    },
+    "causeImageHints": {
+        "message": "Текущие атрибуты"
+    },
+    "causePreload": {
+        "message": "Подходящий preload сейчас"
+    },
+    "causeRedirect": {
+        "message": "Переадресации"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Соединение (включая TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (часть соединения)"
+    },
+    "causeRequestWait": {
+        "message": "Запрос и ожидание ответа"
+    },
+    "causeUnaccounted": {
+        "message": "Неразложенный интервал"
+    },
+    "causeWorker": {
+        "message": "Service worker (без его внутренних запросов)"
+    },
+    "causeInterim": {
+        "message": "Промежуточный ответ (код неизвестен)"
+    },
+    "causeFinalHeaders": {
+        "message": "Финальные заголовки (от начала навигации)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (заявлено сервером)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Предварительный рендеринг или переход по истории: фазы не восстанавливаются."
+    },
+    "causeLimited": {
+        "message": "Часть подробностей отсутствует, скрыта или ограничена."
+    },
+    "causeScope": {
+        "message": "Исходная загрузка документа; не новый замер после возврата по истории."
     }
 }

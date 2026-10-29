@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Sono mostrate solo le osservazioni disponibili."
+    },
+    "causeElement": {
+        "message": "Elemento"
+    },
+    "causeText": {
+        "message": "Blocco di testo"
+    },
+    "causeLoadDelay": {
+        "message": "Ritardo di caricamento della risorsa"
+    },
+    "causeLoadDuration": {
+        "message": "Caricamento dopo il primo byte"
+    },
+    "causeRenderDelay": {
+        "message": "Ritardo di rendering"
+    },
+    "causeLongest": {
+        "message": "Fase più lunga"
+    },
+    "causeResource": {
+        "message": "Risorsa immagine"
+    },
+    "causeImageHints": {
+        "message": "Attributi attuali"
+    },
+    "causePreload": {
+        "message": "Precaricamento corrispondente attuale"
+    },
+    "causeRedirect": {
+        "message": "Reindirizzamenti"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Connessione (include TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (parte della connessione)"
+    },
+    "causeRequestWait": {
+        "message": "Richiesta e attesa della risposta"
+    },
+    "causeUnaccounted": {
+        "message": "Intervallo non attribuito"
+    },
+    "causeWorker": {
+        "message": "Service worker (senza richieste interne)"
+    },
+    "causeInterim": {
+        "message": "Risposta intermedia (codice sconosciuto)"
+    },
+    "causeFinalHeaders": {
+        "message": "Intestazioni finali (dall’inizio della navigazione)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (dichiarato dal server)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Prerendering o navigazione nella cronologia: le fasi non vengono ricostruite."
+    },
+    "causeLimited": {
+        "message": "Alcuni dettagli sono assenti, nascosti o limitati."
+    },
+    "causeScope": {
+        "message": "Caricamento originale del documento; nessuna nuova misura dopo il ripristino dalla cronologia."
     }
 }

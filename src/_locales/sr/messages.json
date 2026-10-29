@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Приказана су само доступна запажања."
+    },
+    "causeElement": {
+        "message": "Елемент"
+    },
+    "causeText": {
+        "message": "Текстуални блок"
+    },
+    "causeLoadDelay": {
+        "message": "Кашњење учитавања ресурса"
+    },
+    "causeLoadDuration": {
+        "message": "Учитавање после првог бајта"
+    },
+    "causeRenderDelay": {
+        "message": "Кашњење исцртавања"
+    },
+    "causeLongest": {
+        "message": "Најдужа фаза"
+    },
+    "causeResource": {
+        "message": "Ресурс слике"
+    },
+    "causeImageHints": {
+        "message": "Тренутни атрибути"
+    },
+    "causePreload": {
+        "message": "Тренутно одговарајуће предучитавање"
+    },
+    "causeRedirect": {
+        "message": "Преусмеравања"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Веза (укључује TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (део везе)"
+    },
+    "causeRequestWait": {
+        "message": "Захтев и чекање одговора"
+    },
+    "causeUnaccounted": {
+        "message": "Неприписани интервал"
+    },
+    "causeWorker": {
+        "message": "Service worker (без унутрашњих захтева)"
+    },
+    "causeInterim": {
+        "message": "Привремени одговор (непознат кôд)"
+    },
+    "causeFinalHeaders": {
+        "message": "Коначна заглавља (од почетка навигације)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (навод сервера)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Предисцртавање или историја: фазе се не реконструишу."
+    },
+    "causeLimited": {
+        "message": "Неки детаљи недостају, скривени су или ограничени."
+    },
+    "causeScope": {
+        "message": "Првобитно учитавање документа; није ново мерење после повратка из историје."
     }
 }

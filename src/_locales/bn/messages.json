@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "শুধু উপলব্ধ পর্যবেক্ষণ দেখানো হয়েছে।"
+    },
+    "causeElement": {
+        "message": "উপাদান"
+    },
+    "causeText": {
+        "message": "টেক্সট ব্লক"
+    },
+    "causeLoadDelay": {
+        "message": "রিসোর্স লোডে বিলম্ব"
+    },
+    "causeLoadDuration": {
+        "message": "প্রথম বাইটের পর রিসোর্স লোড"
+    },
+    "causeRenderDelay": {
+        "message": "রেন্ডারে বিলম্ব"
+    },
+    "causeLongest": {
+        "message": "দীর্ঘতম ধাপ"
+    },
+    "causeResource": {
+        "message": "ছবির রিসোর্স"
+    },
+    "causeImageHints": {
+        "message": "বর্তমান বৈশিষ্ট্য"
+    },
+    "causePreload": {
+        "message": "বর্তমানে মিলে যাওয়া প্রিলোড"
+    },
+    "causeRedirect": {
+        "message": "পুনর্নির্দেশ"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "সংযোগ (TLS সহ)"
+    },
+    "causeTls": {
+        "message": "TLS (সংযোগের অংশ)"
+    },
+    "causeRequestWait": {
+        "message": "অনুরোধ ও সাড়ার অপেক্ষা"
+    },
+    "causeUnaccounted": {
+        "message": "অশ্রেণিবদ্ধ সময়"
+    },
+    "causeWorker": {
+        "message": "Service worker (অভ্যন্তরীণ অনুরোধ বাদে)"
+    },
+    "causeInterim": {
+        "message": "অন্তর্বর্তী সাড়া (কোড অজানা)"
+    },
+    "causeFinalHeaders": {
+        "message": "চূড়ান্ত হেডার (নেভিগেশনের শুরু থেকে)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (সার্ভারের ঘোষণা)"
+    },
+    "causeSpecialNavigation": {
+        "message": "প্রিরেন্ডার বা ইতিহাস নেভিগেশন: ধাপ পুনর্গঠন করা হয় না।"
+    },
+    "causeLimited": {
+        "message": "কিছু তথ্য অনুপস্থিত, লুকানো বা সীমিত।"
+    },
+    "causeScope": {
+        "message": "নথির মূল লোড; ইতিহাস থেকে পুনরুদ্ধারের পর নতুন পরিমাপ নয়।"
     }
 }

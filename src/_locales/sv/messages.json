@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Endast tillgängliga observationer visas."
+    },
+    "causeElement": {
+        "message": "Element"
+    },
+    "causeText": {
+        "message": "Textblock"
+    },
+    "causeLoadDelay": {
+        "message": "Fördröjning vid resursladdning"
+    },
+    "causeLoadDuration": {
+        "message": "Resursladdning efter första byte"
+    },
+    "causeRenderDelay": {
+        "message": "Renderingsfördröjning"
+    },
+    "causeLongest": {
+        "message": "Längsta fas"
+    },
+    "causeResource": {
+        "message": "Bildresurs"
+    },
+    "causeImageHints": {
+        "message": "Aktuella attribut"
+    },
+    "causePreload": {
+        "message": "Aktuell matchande förladdning"
+    },
+    "causeRedirect": {
+        "message": "Omdirigeringar"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Anslutning (inklusive TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (del av anslutningen)"
+    },
+    "causeRequestWait": {
+        "message": "Begäran och väntan på svar"
+    },
+    "causeUnaccounted": {
+        "message": "Ej tillskrivet intervall"
+    },
+    "causeWorker": {
+        "message": "Service worker (utan interna hämtningar)"
+    },
+    "causeInterim": {
+        "message": "Interimsvar (okänd kod)"
+    },
+    "causeFinalHeaders": {
+        "message": "Slutliga huvuden (från navigeringens början)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (enligt servern)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Förrendering eller historiknavigering: faser återskapas inte."
+    },
+    "causeLimited": {
+        "message": "Vissa detaljer saknas, är dolda eller begränsade."
+    },
+    "causeScope": {
+        "message": "Dokumentets ursprungliga laddning; ingen ny mätning efter återställning från historiken."
     }
 }

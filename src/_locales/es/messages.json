@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Solo se muestran las observaciones disponibles."
+    },
+    "causeElement": {
+        "message": "Elemento"
+    },
+    "causeText": {
+        "message": "Bloque de texto"
+    },
+    "causeLoadDelay": {
+        "message": "Demora de carga del recurso"
+    },
+    "causeLoadDuration": {
+        "message": "Carga tras el primer byte"
+    },
+    "causeRenderDelay": {
+        "message": "Demora de renderizado"
+    },
+    "causeLongest": {
+        "message": "Fase más larga"
+    },
+    "causeResource": {
+        "message": "Recurso de imagen"
+    },
+    "causeImageHints": {
+        "message": "Atributos actuales"
+    },
+    "causePreload": {
+        "message": "Precarga coincidente actual"
+    },
+    "causeRedirect": {
+        "message": "Redirecciones"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Conexión (incluye TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (parte de la conexión)"
+    },
+    "causeRequestWait": {
+        "message": "Solicitud y espera de respuesta"
+    },
+    "causeUnaccounted": {
+        "message": "Intervalo sin atribuir"
+    },
+    "causeWorker": {
+        "message": "Service worker (sin solicitudes internas)"
+    },
+    "causeInterim": {
+        "message": "Respuesta intermedia (código desconocido)"
+    },
+    "causeFinalHeaders": {
+        "message": "Cabeceras finales (desde el inicio de navegación)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (declarado por el servidor)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Prerrenderizado o navegación del historial: no se reconstruyen las fases."
+    },
+    "causeLimited": {
+        "message": "Faltan algunos detalles o están ocultos o limitados."
+    },
+    "causeScope": {
+        "message": "Carga original del documento; no es una nueva medición tras volver desde el historial."
     }
 }

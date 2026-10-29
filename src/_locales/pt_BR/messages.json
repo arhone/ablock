@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Apenas as observações disponíveis são exibidas."
+    },
+    "causeElement": {
+        "message": "Elemento"
+    },
+    "causeText": {
+        "message": "Bloco de texto"
+    },
+    "causeLoadDelay": {
+        "message": "Atraso na carga do recurso"
+    },
+    "causeLoadDuration": {
+        "message": "Carga após o primeiro byte"
+    },
+    "causeRenderDelay": {
+        "message": "Atraso de renderização"
+    },
+    "causeLongest": {
+        "message": "Fase mais longa"
+    },
+    "causeResource": {
+        "message": "Recurso de imagem"
+    },
+    "causeImageHints": {
+        "message": "Atributos atuais"
+    },
+    "causePreload": {
+        "message": "Pré-carregamento correspondente atual"
+    },
+    "causeRedirect": {
+        "message": "Redirecionamentos"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Conexão (inclui TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (parte da conexão)"
+    },
+    "causeRequestWait": {
+        "message": "Solicitação e espera da resposta"
+    },
+    "causeUnaccounted": {
+        "message": "Intervalo não atribuído"
+    },
+    "causeWorker": {
+        "message": "Service worker (sem solicitações internas)"
+    },
+    "causeInterim": {
+        "message": "Resposta intermediária (código desconhecido)"
+    },
+    "causeFinalHeaders": {
+        "message": "Cabeçalhos finais (desde o início da navegação)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (declarado pelo servidor)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Pré-renderização ou navegação no histórico: as fases não são reconstruídas."
+    },
+    "causeLimited": {
+        "message": "Alguns detalhes estão ausentes, ocultos ou limitados."
+    },
+    "causeScope": {
+        "message": "Carga original do documento; não é uma nova medição após restauração pelo histórico."
     }
 }

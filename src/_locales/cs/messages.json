@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Zobrazují se pouze dostupná pozorování."
+    },
+    "causeElement": {
+        "message": "Prvek"
+    },
+    "causeText": {
+        "message": "Textový blok"
+    },
+    "causeLoadDelay": {
+        "message": "Prodleva načítání zdroje"
+    },
+    "causeLoadDuration": {
+        "message": "Načítání zdroje po prvním bajtu"
+    },
+    "causeRenderDelay": {
+        "message": "Prodleva vykreslení"
+    },
+    "causeLongest": {
+        "message": "Nejdelší fáze"
+    },
+    "causeResource": {
+        "message": "Zdroj obrázku"
+    },
+    "causeImageHints": {
+        "message": "Aktuální atributy"
+    },
+    "causePreload": {
+        "message": "Nyní odpovídající přednačtení"
+    },
+    "causeRedirect": {
+        "message": "Přesměrování"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Spojení (včetně TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (součást spojení)"
+    },
+    "causeRequestWait": {
+        "message": "Požadavek a čekání na odpověď"
+    },
+    "causeUnaccounted": {
+        "message": "Nepřiřazený interval"
+    },
+    "causeWorker": {
+        "message": "Service worker (bez vnitřních požadavků)"
+    },
+    "causeInterim": {
+        "message": "Průběžná odpověď (neznámý kód)"
+    },
+    "causeFinalHeaders": {
+        "message": "Konečné hlavičky (od začátku navigace)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (údaje serveru)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Předvykreslení nebo navigace historií: fáze se neobnovují."
+    },
+    "causeLimited": {
+        "message": "Některé podrobnosti chybí, jsou skryté nebo omezené."
+    },
+    "causeScope": {
+        "message": "Původní načtení dokumentu; nejde o nové měření po obnovení z historie."
     }
 }

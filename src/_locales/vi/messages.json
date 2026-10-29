@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Chỉ hiển thị các quan sát có sẵn."
+    },
+    "causeElement": {
+        "message": "Phần tử"
+    },
+    "causeText": {
+        "message": "Khối văn bản"
+    },
+    "causeLoadDelay": {
+        "message": "Độ trễ tải tài nguyên"
+    },
+    "causeLoadDuration": {
+        "message": "Tải tài nguyên sau byte đầu tiên"
+    },
+    "causeRenderDelay": {
+        "message": "Độ trễ hiển thị"
+    },
+    "causeLongest": {
+        "message": "Giai đoạn dài nhất"
+    },
+    "causeResource": {
+        "message": "Tài nguyên ảnh"
+    },
+    "causeImageHints": {
+        "message": "Thuộc tính hiện tại"
+    },
+    "causePreload": {
+        "message": "Tải trước phù hợp hiện tại"
+    },
+    "causeRedirect": {
+        "message": "Chuyển hướng"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Kết nối (gồm TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (một phần kết nối)"
+    },
+    "causeRequestWait": {
+        "message": "Yêu cầu và chờ phản hồi"
+    },
+    "causeUnaccounted": {
+        "message": "Khoảng chưa phân loại"
+    },
+    "causeWorker": {
+        "message": "Service worker (không gồm yêu cầu nội bộ)"
+    },
+    "causeInterim": {
+        "message": "Phản hồi tạm thời (không rõ mã)"
+    },
+    "causeFinalHeaders": {
+        "message": "Tiêu đề cuối (từ đầu điều hướng)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (do máy chủ công bố)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Kết xuất trước hoặc điều hướng lịch sử: không tái dựng các giai đoạn."
+    },
+    "causeLimited": {
+        "message": "Một số chi tiết bị thiếu, ẩn hoặc giới hạn."
+    },
+    "causeScope": {
+        "message": "Lần tải gốc của tài liệu; không phải phép đo mới sau khi khôi phục từ lịch sử."
     }
 }

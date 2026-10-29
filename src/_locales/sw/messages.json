@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Uchunguzi unaopatikana pekee ndio unaoonyeshwa."
+    },
+    "causeElement": {
+        "message": "Kipengele"
+    },
+    "causeText": {
+        "message": "Kizuizi cha maandishi"
+    },
+    "causeLoadDelay": {
+        "message": "Kuchelewa kwa upakiaji wa rasilimali"
+    },
+    "causeLoadDuration": {
+        "message": "Upakiaji baada ya baiti ya kwanza"
+    },
+    "causeRenderDelay": {
+        "message": "Kuchelewa kwa uonyeshaji"
+    },
+    "causeLongest": {
+        "message": "Awamu ndefu zaidi"
+    },
+    "causeResource": {
+        "message": "Rasilimali ya picha"
+    },
+    "causeImageHints": {
+        "message": "Sifa za sasa"
+    },
+    "causePreload": {
+        "message": "Upakiaji wa awali unaolingana sasa"
+    },
+    "causeRedirect": {
+        "message": "Uelekezaji upya"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Muunganisho (pamoja na TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (sehemu ya muunganisho)"
+    },
+    "causeRequestWait": {
+        "message": "Ombi na kusubiri jibu"
+    },
+    "causeUnaccounted": {
+        "message": "Muda usioainishwa"
+    },
+    "causeWorker": {
+        "message": "Service worker (bila maombi yake ya ndani)"
+    },
+    "causeInterim": {
+        "message": "Jibu la muda (msimbo haujulikani)"
+    },
+    "causeFinalHeaders": {
+        "message": "Vichwa vya mwisho (tangu mwanzo wa urambazaji)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (iliyotangazwa na seva)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Uonyeshaji wa awali au historia: awamu hazijengwi upya."
+    },
+    "causeLimited": {
+        "message": "Baadhi ya maelezo hayapo, yamefichwa au yamewekewa kikomo."
+    },
+    "causeScope": {
+        "message": "Upakiaji wa awali wa hati; si kipimo kipya baada ya kurejesha kutoka historia."
     }
 }

@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Es werden nur verfügbare Beobachtungen angezeigt."
+    },
+    "causeElement": {
+        "message": "Element"
+    },
+    "causeText": {
+        "message": "Textblock"
+    },
+    "causeLoadDelay": {
+        "message": "Verzögerung des Ressourcenladens"
+    },
+    "causeLoadDuration": {
+        "message": "Ressourcenladen nach dem ersten Byte"
+    },
+    "causeRenderDelay": {
+        "message": "Renderverzögerung"
+    },
+    "causeLongest": {
+        "message": "Längste Phase"
+    },
+    "causeResource": {
+        "message": "Bildressource"
+    },
+    "causeImageHints": {
+        "message": "Aktuelle Attribute"
+    },
+    "causePreload": {
+        "message": "Aktuell passender Preload"
+    },
+    "causeRedirect": {
+        "message": "Weiterleitungen"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Verbindung (einschließlich TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (Teil der Verbindung)"
+    },
+    "causeRequestWait": {
+        "message": "Anfrage und Warten auf Antwort"
+    },
+    "causeUnaccounted": {
+        "message": "Nicht zugeordnetes Intervall"
+    },
+    "causeWorker": {
+        "message": "Service Worker (ohne interne Abrufe)"
+    },
+    "causeInterim": {
+        "message": "Zwischenantwort (Status unbekannt)"
+    },
+    "causeFinalHeaders": {
+        "message": "Endgültige Header (ab Navigationsbeginn)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (Serverangaben)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Prerendering oder Verlaufnavigation: Phasen werden nicht rekonstruiert."
+    },
+    "causeLimited": {
+        "message": "Einige Details fehlen, sind verborgen oder begrenzt."
+    },
+    "causeScope": {
+        "message": "Ursprüngliches Laden des Dokuments; keine neue Messung nach Rückkehr im Verlauf."
     }
 }

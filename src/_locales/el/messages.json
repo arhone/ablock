@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Εμφανίζονται μόνο οι διαθέσιμες παρατηρήσεις."
+    },
+    "causeElement": {
+        "message": "Στοιχείο"
+    },
+    "causeText": {
+        "message": "Μπλοκ κειμένου"
+    },
+    "causeLoadDelay": {
+        "message": "Καθυστέρηση φόρτωσης πόρου"
+    },
+    "causeLoadDuration": {
+        "message": "Φόρτωση πόρου μετά το πρώτο byte"
+    },
+    "causeRenderDelay": {
+        "message": "Καθυστέρηση απόδοσης"
+    },
+    "causeLongest": {
+        "message": "Μεγαλύτερη φάση"
+    },
+    "causeResource": {
+        "message": "Πόρος εικόνας"
+    },
+    "causeImageHints": {
+        "message": "Τρέχοντα γνωρίσματα"
+    },
+    "causePreload": {
+        "message": "Τρέχουσα αντίστοιχη προφόρτωση"
+    },
+    "causeRedirect": {
+        "message": "Ανακατευθύνσεις"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Σύνδεση (περιλαμβάνει TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (μέρος της σύνδεσης)"
+    },
+    "causeRequestWait": {
+        "message": "Αίτημα και αναμονή απόκρισης"
+    },
+    "causeUnaccounted": {
+        "message": "Μη αποδιδόμενο διάστημα"
+    },
+    "causeWorker": {
+        "message": "Service worker (χωρίς εσωτερικές λήψεις)"
+    },
+    "causeInterim": {
+        "message": "Ενδιάμεση απόκριση (άγνωστος κωδικός)"
+    },
+    "causeFinalHeaders": {
+        "message": "Τελικές κεφαλίδες (από την αρχή πλοήγησης)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (δήλωση διακομιστή)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Προαπόδοση ή πλοήγηση ιστορικού: οι φάσεις δεν ανακατασκευάζονται."
+    },
+    "causeLimited": {
+        "message": "Ορισμένες λεπτομέρειες λείπουν, είναι κρυφές ή περιορισμένες."
+    },
+    "causeScope": {
+        "message": "Αρχική φόρτωση εγγράφου· όχι νέα μέτρηση μετά την επαναφορά από το ιστορικό."
     }
 }

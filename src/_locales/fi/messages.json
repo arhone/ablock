@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Vain saatavilla olevat havainnot näytetään."
+    },
+    "causeElement": {
+        "message": "Elementti"
+    },
+    "causeText": {
+        "message": "Tekstilohko"
+    },
+    "causeLoadDelay": {
+        "message": "Resurssin latausviive"
+    },
+    "causeLoadDuration": {
+        "message": "Resurssin lataus ensimmäisen tavun jälkeen"
+    },
+    "causeRenderDelay": {
+        "message": "Piirtoviive"
+    },
+    "causeLongest": {
+        "message": "Pisin vaihe"
+    },
+    "causeResource": {
+        "message": "Kuvaresurssi"
+    },
+    "causeImageHints": {
+        "message": "Nykyiset attribuutit"
+    },
+    "causePreload": {
+        "message": "Nyt vastaava esilataus"
+    },
+    "causeRedirect": {
+        "message": "Uudelleenohjaukset"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Yhteys (sisältää TLS:n)"
+    },
+    "causeTls": {
+        "message": "TLS (osa yhteyttä)"
+    },
+    "causeRequestWait": {
+        "message": "Pyyntö ja vastauksen odotus"
+    },
+    "causeUnaccounted": {
+        "message": "Erittelemätön aikaväli"
+    },
+    "causeWorker": {
+        "message": "Service worker (ei sisäisiä hakuja)"
+    },
+    "causeInterim": {
+        "message": "Välivastaus (koodi tuntematon)"
+    },
+    "causeFinalHeaders": {
+        "message": "Lopulliset otsakkeet (navigoinnin alusta)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (palvelimen ilmoittama)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Esirenderöinti tai siirtyminen historiassa: vaiheita ei muodosteta."
+    },
+    "causeLimited": {
+        "message": "Joitakin tietoja puuttuu, on piilotettu tai rajoitettu."
+    },
+    "causeScope": {
+        "message": "Asiakirjan alkuperäinen lataus; ei uutta mittausta historiasta palautettaessa."
     }
 }

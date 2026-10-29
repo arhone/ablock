@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Mga available na obserbasyon lang ang ipinapakita."
+    },
+    "causeElement": {
+        "message": "Elemento"
+    },
+    "causeText": {
+        "message": "Bloke ng teksto"
+    },
+    "causeLoadDelay": {
+        "message": "Pagkaantala ng pag-load ng resource"
+    },
+    "causeLoadDuration": {
+        "message": "Pag-load matapos ang unang byte"
+    },
+    "causeRenderDelay": {
+        "message": "Pagkaantala ng pag-render"
+    },
+    "causeLongest": {
+        "message": "Pinakamatagal na yugto"
+    },
+    "causeResource": {
+        "message": "Resource ng larawan"
+    },
+    "causeImageHints": {
+        "message": "Kasalukuyang mga attribute"
+    },
+    "causePreload": {
+        "message": "Kasalukuyang tugmang preload"
+    },
+    "causeRedirect": {
+        "message": "Mga pag-redirect"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Koneksyon (kasama ang TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (bahagi ng koneksyon)"
+    },
+    "causeRequestWait": {
+        "message": "Request at paghihintay ng tugon"
+    },
+    "causeUnaccounted": {
+        "message": "Hindi nakatalagang agwat"
+    },
+    "causeWorker": {
+        "message": "Service worker (hindi kasama ang mga panloob na request)"
+    },
+    "causeInterim": {
+        "message": "Pansamantalang tugon (hindi alam ang code)"
+    },
+    "causeFinalHeaders": {
+        "message": "Huling mga header (mula sa simula ng nabigasyon)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (ayon sa server)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Prerender o nabigasyon sa kasaysayan: hindi binubuong muli ang mga yugto."
+    },
+    "causeLimited": {
+        "message": "May ilang detalyeng wala, nakatago o limitado."
+    },
+    "causeScope": {
+        "message": "Orihinal na pag-load ng dokumento; hindi bagong sukat matapos ibalik mula sa kasaysayan."
     }
 }

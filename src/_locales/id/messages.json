@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Hanya pengamatan yang tersedia yang ditampilkan."
+    },
+    "causeElement": {
+        "message": "Elemen"
+    },
+    "causeText": {
+        "message": "Blok teks"
+    },
+    "causeLoadDelay": {
+        "message": "Penundaan muat sumber daya"
+    },
+    "causeLoadDuration": {
+        "message": "Pemuatan setelah byte pertama"
+    },
+    "causeRenderDelay": {
+        "message": "Penundaan render"
+    },
+    "causeLongest": {
+        "message": "Fase terlama"
+    },
+    "causeResource": {
+        "message": "Sumber daya gambar"
+    },
+    "causeImageHints": {
+        "message": "Atribut saat ini"
+    },
+    "causePreload": {
+        "message": "Preload yang cocok saat ini"
+    },
+    "causeRedirect": {
+        "message": "Pengalihan"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Koneksi (termasuk TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (bagian koneksi)"
+    },
+    "causeRequestWait": {
+        "message": "Permintaan dan menunggu respons"
+    },
+    "causeUnaccounted": {
+        "message": "Interval tanpa atribusi"
+    },
+    "causeWorker": {
+        "message": "Service worker (tanpa permintaan internal)"
+    },
+    "causeInterim": {
+        "message": "Respons sementara (kode tidak diketahui)"
+    },
+    "causeFinalHeaders": {
+        "message": "Header akhir (sejak awal navigasi)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (dinyatakan server)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Prarender atau navigasi riwayat: fase tidak direkonstruksi."
+    },
+    "causeLimited": {
+        "message": "Sebagian detail tidak ada, tersembunyi, atau dibatasi."
+    },
+    "causeScope": {
+        "message": "Pemuatan dokumen asli; bukan pengukuran baru setelah pemulihan riwayat."
     }
 }

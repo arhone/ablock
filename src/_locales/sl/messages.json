@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Prikazana so samo razpoložljiva opažanja."
+    },
+    "causeElement": {
+        "message": "Element"
+    },
+    "causeText": {
+        "message": "Besedilni blok"
+    },
+    "causeLoadDelay": {
+        "message": "Zakasnitev nalaganja vira"
+    },
+    "causeLoadDuration": {
+        "message": "Nalaganje vira po prvem bajtu"
+    },
+    "causeRenderDelay": {
+        "message": "Zakasnitev izrisa"
+    },
+    "causeLongest": {
+        "message": "Najdaljša faza"
+    },
+    "causeResource": {
+        "message": "Vir slike"
+    },
+    "causeImageHints": {
+        "message": "Trenutni atributi"
+    },
+    "causePreload": {
+        "message": "Trenutno ustrezno prednalaganje"
+    },
+    "causeRedirect": {
+        "message": "Preusmeritve"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Povezava (vključuje TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (del povezave)"
+    },
+    "causeRequestWait": {
+        "message": "Zahteva in čakanje na odgovor"
+    },
+    "causeUnaccounted": {
+        "message": "Nepripisan interval"
+    },
+    "causeWorker": {
+        "message": "Service worker (brez notranjih zahtev)"
+    },
+    "causeInterim": {
+        "message": "Vmesni odgovor (neznana koda)"
+    },
+    "causeFinalHeaders": {
+        "message": "Končne glave (od začetka navigacije)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (navedba strežnika)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Predizris ali navigacija po zgodovini: faze se ne rekonstruirajo."
+    },
+    "causeLimited": {
+        "message": "Nekatere podrobnosti manjkajo, so skrite ali omejene."
+    },
+    "causeScope": {
+        "message": "Prvotno nalaganje dokumenta; ne nova meritev po obnovitvi iz zgodovine."
     }
 }

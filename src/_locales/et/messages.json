@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Kuvatakse ainult saadaolevad vaatlused."
+    },
+    "causeElement": {
+        "message": "Element"
+    },
+    "causeText": {
+        "message": "Tekstiplokk"
+    },
+    "causeLoadDelay": {
+        "message": "Ressursi laadimise viivitus"
+    },
+    "causeLoadDuration": {
+        "message": "Ressursi laadimine pärast esimest baiti"
+    },
+    "causeRenderDelay": {
+        "message": "Kuvamise viivitus"
+    },
+    "causeLongest": {
+        "message": "Pikim etapp"
+    },
+    "causeResource": {
+        "message": "Pildiressurss"
+    },
+    "causeImageHints": {
+        "message": "Praegused atribuudid"
+    },
+    "causePreload": {
+        "message": "Praegune vastav eellaadimine"
+    },
+    "causeRedirect": {
+        "message": "Ümbersuunamised"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Ühendus (sisaldab TLS-i)"
+    },
+    "causeTls": {
+        "message": "TLS (ühenduse osa)"
+    },
+    "causeRequestWait": {
+        "message": "Päring ja vastuse ootus"
+    },
+    "causeUnaccounted": {
+        "message": "Omistamata ajavahemik"
+    },
+    "causeWorker": {
+        "message": "Service worker (sisemiste päringuteta)"
+    },
+    "causeInterim": {
+        "message": "Vahevastus (kood teadmata)"
+    },
+    "causeFinalHeaders": {
+        "message": "Lõplikud päised (navigeerimise algusest)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (serveri teatatud)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Eelrenderdus või ajaloos navigeerimine: etappe ei taastata."
+    },
+    "causeLimited": {
+        "message": "Mõned üksikasjad puuduvad, on peidetud või piiratud."
+    },
+    "causeScope": {
+        "message": "Dokumendi algne laadimine; pärast ajaloost taastamist uut mõõtmist ei tehta."
     }
 }

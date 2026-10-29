@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "கிடைக்கும் அவதானிப்புகள் மட்டுமே காட்டப்படுகின்றன."
+    },
+    "causeElement": {
+        "message": "உறுப்பு"
+    },
+    "causeText": {
+        "message": "உரைத் தொகுதி"
+    },
+    "causeLoadDelay": {
+        "message": "வள ஏற்றத் தாமதம்"
+    },
+    "causeLoadDuration": {
+        "message": "முதல் பைட்டுக்குப் பின் வள ஏற்றம்"
+    },
+    "causeRenderDelay": {
+        "message": "காட்சியாக்கத் தாமதம்"
+    },
+    "causeLongest": {
+        "message": "மிக நீண்ட கட்டம்"
+    },
+    "causeResource": {
+        "message": "பட வளம்"
+    },
+    "causeImageHints": {
+        "message": "தற்போதைய பண்புகள்"
+    },
+    "causePreload": {
+        "message": "தற்போது பொருந்தும் முன்ஏற்றம்"
+    },
+    "causeRedirect": {
+        "message": "திசைதிருப்பல்கள்"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "இணைப்பு (TLS உட்பட)"
+    },
+    "causeTls": {
+        "message": "TLS (இணைப்பின் பகுதி)"
+    },
+    "causeRequestWait": {
+        "message": "கோரிக்கை மற்றும் பதிலுக்கான காத்திருப்பு"
+    },
+    "causeUnaccounted": {
+        "message": "வகைப்படுத்தாத இடைவெளி"
+    },
+    "causeWorker": {
+        "message": "Service worker (உள் கோரிக்கைகள் தவிர)"
+    },
+    "causeInterim": {
+        "message": "இடைக்கால பதில் (குறியீடு தெரியாது)"
+    },
+    "causeFinalHeaders": {
+        "message": "இறுதி தலைப்புகள் (வழிசெலுத்தல் தொடக்கத்திலிருந்து)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (சேவையகம் அறிவித்தது)"
+    },
+    "causeSpecialNavigation": {
+        "message": "முன்காட்சியாக்கம் அல்லது வரலாற்று வழிசெலுத்தல்: கட்டங்கள் மீட்டமைக்கப்படாது."
+    },
+    "causeLimited": {
+        "message": "சில விவரங்கள் இல்லை, மறைக்கப்பட்டுள்ளன அல்லது வரம்புக்குட்பட்டவை."
+    },
+    "causeScope": {
+        "message": "ஆவணத்தின் அசல் ஏற்றம்; வரலாற்றிலிருந்து மீட்டெடுத்த பின் புதிய அளவீடு அல்ல."
     }
 }

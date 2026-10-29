@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Yalnızca mevcut gözlemler gösteriliyor."
+    },
+    "causeElement": {
+        "message": "Öğe"
+    },
+    "causeText": {
+        "message": "Metin bloğu"
+    },
+    "causeLoadDelay": {
+        "message": "Kaynak yükleme gecikmesi"
+    },
+    "causeLoadDuration": {
+        "message": "İlk bayttan sonra kaynak yükleme"
+    },
+    "causeRenderDelay": {
+        "message": "Çizim gecikmesi"
+    },
+    "causeLongest": {
+        "message": "En uzun aşama"
+    },
+    "causeResource": {
+        "message": "Görsel kaynağı"
+    },
+    "causeImageHints": {
+        "message": "Güncel öznitelikler"
+    },
+    "causePreload": {
+        "message": "Şu an eşleşen ön yükleme"
+    },
+    "causeRedirect": {
+        "message": "Yönlendirmeler"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Bağlantı (TLS dahil)"
+    },
+    "causeTls": {
+        "message": "TLS (bağlantının parçası)"
+    },
+    "causeRequestWait": {
+        "message": "İstek ve yanıt bekleme"
+    },
+    "causeUnaccounted": {
+        "message": "Atanmamış aralık"
+    },
+    "causeWorker": {
+        "message": "Service worker (iç istekler hariç)"
+    },
+    "causeInterim": {
+        "message": "Ara yanıt (kod bilinmiyor)"
+    },
+    "causeFinalHeaders": {
+        "message": "Son başlıklar (gezinme başlangıcından)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (sunucu beyanı)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Ön işleme veya geçmiş gezinmesi: aşamalar yeniden oluşturulmaz."
+    },
+    "causeLimited": {
+        "message": "Bazı ayrıntılar eksik, gizli veya sınırlıdır."
+    },
+    "causeScope": {
+        "message": "Belgenin ilk yüklemesi; geçmişten geri dönüş sonrası yeni bir ölçüm değildir."
     }
 }

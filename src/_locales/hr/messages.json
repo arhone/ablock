@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Prikazana su samo dostupna opažanja."
+    },
+    "causeElement": {
+        "message": "Element"
+    },
+    "causeText": {
+        "message": "Tekstni blok"
+    },
+    "causeLoadDelay": {
+        "message": "Odgoda učitavanja resursa"
+    },
+    "causeLoadDuration": {
+        "message": "Učitavanje resursa nakon prvog bajta"
+    },
+    "causeRenderDelay": {
+        "message": "Odgoda iscrtavanja"
+    },
+    "causeLongest": {
+        "message": "Najdulja faza"
+    },
+    "causeResource": {
+        "message": "Resurs slike"
+    },
+    "causeImageHints": {
+        "message": "Trenutni atributi"
+    },
+    "causePreload": {
+        "message": "Trenutno odgovarajuće predučitavanje"
+    },
+    "causeRedirect": {
+        "message": "Preusmjeravanja"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Veza (uključuje TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (dio veze)"
+    },
+    "causeRequestWait": {
+        "message": "Zahtjev i čekanje odgovora"
+    },
+    "causeUnaccounted": {
+        "message": "Nedodijeljeni interval"
+    },
+    "causeWorker": {
+        "message": "Service worker (bez unutarnjih zahtjeva)"
+    },
+    "causeInterim": {
+        "message": "Privremeni odgovor (nepoznat kôd)"
+    },
+    "causeFinalHeaders": {
+        "message": "Završna zaglavlja (od početka navigacije)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (navod poslužitelja)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Prediscrtavanje ili navigacija poviješću: faze se ne rekonstruiraju."
+    },
+    "causeLimited": {
+        "message": "Neke pojedinosti nedostaju, skrivene su ili ograničene."
+    },
+    "causeScope": {
+        "message": "Izvorno učitavanje dokumenta; nije novo mjerenje nakon povratka iz povijesti."
     }
 }

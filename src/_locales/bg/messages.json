@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Показани са само наличните наблюдения."
+    },
+    "causeElement": {
+        "message": "Елемент"
+    },
+    "causeText": {
+        "message": "Текстов блок"
+    },
+    "causeLoadDelay": {
+        "message": "Забавяне на зареждането на ресурса"
+    },
+    "causeLoadDuration": {
+        "message": "Зареждане след първия байт"
+    },
+    "causeRenderDelay": {
+        "message": "Забавяне на изобразяването"
+    },
+    "causeLongest": {
+        "message": "Най-дълга фаза"
+    },
+    "causeResource": {
+        "message": "Ресурс на изображението"
+    },
+    "causeImageHints": {
+        "message": "Текущи атрибути"
+    },
+    "causePreload": {
+        "message": "Подходящо предварително зареждане сега"
+    },
+    "causeRedirect": {
+        "message": "Пренасочвания"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Връзка (включва TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (част от връзката)"
+    },
+    "causeRequestWait": {
+        "message": "Заявка и чакане на отговор"
+    },
+    "causeUnaccounted": {
+        "message": "Неразпределен интервал"
+    },
+    "causeWorker": {
+        "message": "Service worker (без вътрешните му заявки)"
+    },
+    "causeInterim": {
+        "message": "Междинен отговор (неизвестен код)"
+    },
+    "causeFinalHeaders": {
+        "message": "Крайни заглавки (от началото на навигацията)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (заявено от сървъра)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Предварително изобразяване или история: фазите не се възстановяват."
+    },
+    "causeLimited": {
+        "message": "Част от подробностите липсват, скрити са или са ограничени."
+    },
+    "causeScope": {
+        "message": "Първоначалното зареждане на документа; не ново измерване след връщане по историята."
     }
 }

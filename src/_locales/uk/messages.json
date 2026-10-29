@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Показано лише доступні спостереження."
+    },
+    "causeElement": {
+        "message": "Елемент"
+    },
+    "causeText": {
+        "message": "Текстовий блок"
+    },
+    "causeLoadDelay": {
+        "message": "Затримка завантаження ресурсу"
+    },
+    "causeLoadDuration": {
+        "message": "Завантаження після першого байта"
+    },
+    "causeRenderDelay": {
+        "message": "Затримка відображення"
+    },
+    "causeLongest": {
+        "message": "Найдовша фаза"
+    },
+    "causeResource": {
+        "message": "Ресурс зображення"
+    },
+    "causeImageHints": {
+        "message": "Поточні атрибути"
+    },
+    "causePreload": {
+        "message": "Відповідний preload зараз"
+    },
+    "causeRedirect": {
+        "message": "Переспрямування"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "З’єднання (включно з TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (частина з’єднання)"
+    },
+    "causeRequestWait": {
+        "message": "Запит і очікування відповіді"
+    },
+    "causeUnaccounted": {
+        "message": "Нерозподілений інтервал"
+    },
+    "causeWorker": {
+        "message": "Service worker (без його внутрішніх запитів)"
+    },
+    "causeInterim": {
+        "message": "Проміжна відповідь (код невідомий)"
+    },
+    "causeFinalHeaders": {
+        "message": "Кінцеві заголовки (від початку навігації)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (заявлено сервером)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Попереднє відображення або історія: фази не відновлюються."
+    },
+    "causeLimited": {
+        "message": "Частина подробиць відсутня, прихована або обмежена."
+    },
+    "causeScope": {
+        "message": "Початкове завантаження документа; не новий вимір після повернення з історії."
     }
 }

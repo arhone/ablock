@@ -1084,6 +1084,79 @@ function formatTime(ms) {
 }
 
 /**
+ * Переведённые факты LCP/TTFB для общего компонента. Неизвестное показываем «—»,
+ * причины не создают строк оценки и не попадают в экспорт. Неизвестные коды не выводим сырыми.
+ * @param {string} key
+ * @param {?Object} section
+ * @returns {Array<{label: string, value: string}>}
+ */
+function formatLoadCauses(key, section) {
+    const data = section?.data;
+    if (!data || !['lcp', 'ttfb'].includes(key)) {
+        return [];
+    }
+    const items = [];
+    const add = (label, value) => items.push({label: t(label), value});
+    const time = (value) => typeof value === 'number' && Number.isFinite(value) && value >= 0 ? formatTime(value) : '—';
+    const phases = key === 'lcp' ? {
+        ttfb: 'auditTtfb', resourceLoadDelay: 'causeLoadDelay', resourceLoadDuration: 'causeLoadDuration', elementRenderDelay: 'causeRenderDelay'
+    } : {
+        redirect: 'causeRedirect', dns: 'causeDns', connection: 'causeConnection', tls: 'causeTls',
+        requestWait: 'causeRequestWait', unaccounted: 'causeUnaccounted'
+    };
+    if (key === 'lcp') {
+        add('causeElement', [data.element?.tag, data.kind === 'text' ? t('causeText')
+            : data.kind === 'image' ? t('kindImage') : ''].filter(Boolean).join(' · ') || '—');
+    }
+    for (const [name, label] of Object.entries(phases)) {
+        if (key === 'lcp' && data.kind === 'text' && ['resourceLoadDelay', 'resourceLoadDuration'].includes(name)) {
+            continue; // У текстового LCP нет фазы загрузки картинки, нули не придумываем.
+        }
+        add(label, time(data.phases?.[name]));
+    }
+    if (key === 'lcp') {
+        if (data.longestPhase && phases[data.longestPhase]) {
+            add('causeLongest', t(phases[data.longestPhase]));
+        }
+        if (data.resourceUrl) {
+            add('causeResource', data.resourceUrl);
+        }
+        if (data.kind === 'image') {
+            const attributes = data.attributes || {};
+            add('causeImageHints', [attributes.loading && `loading=${attributes.loading}`,
+                attributes.fetchPriority && `fetchpriority=${attributes.fetchPriority}`].filter(Boolean).join('; ') || '—');
+            add('causePreload', data.preload === true ? t('auditYes') : data.preload === false ? t('auditNo') : '—');
+        }
+    } else {
+        if (data.browserCache === true) {
+            add('auditCache', t('auditCacheBrowser'));
+        }
+        if (data.workerStart > 0) {
+            add('causeWorker', t('auditYes'));
+        }
+        if (section.reasons.includes('interim-response')) {
+            add('causeInterim', time(data.firstInterimResponseStart));
+        }
+        if (data.finalResponseHeadersStart !== null) {
+            add('causeFinalHeaders', time(data.finalResponseHeadersStart));
+        }
+        for (const entry of data.serverTiming || []) {
+            add('causeServerTiming', [entry.name, time(entry.duration), entry.description].filter(Boolean).join(' · '));
+        }
+    }
+    if (section.reasons.some((code) => ['prerender', 'history-navigation'].includes(code))) {
+        add('auditDetails', t('causeSpecialNavigation'));
+    }
+    if (section.reasons.some((code) => ['timing-incomplete', 'timing-inconsistent', 'timing-restricted', 'redirect-unavailable',
+        'element-unavailable', 'resource-unmatched', 'resource-ambiguous', 'render-time-unavailable', 'buffer-dropped',
+        'budget-exceeded', 'result-limit', 'navigation-missing', 'preload-unresolved'].includes(code))) {
+        add('auditDetails', t('causeLimited'));
+    }
+    add('auditDetails', t('causeScope'));
+    return items;
+}
+
+/**
  * Разделы под табло оценки: строки по группам оценки (приватность, скорость, безопасность, SEO, доступность)
  * и «Роботы и ИИ» без оценки. Строка — название, значение и цвет; пояснение — при наведении.
  * Замечания — жёлтые и красные строки. Балл группы в заголовке раздела ставит renderScore
@@ -1150,7 +1223,7 @@ function renderAudit(audit, server, extended, info, companies) {
         group.append(el);
         const causeKey = {auditLcp: 'lcp', auditCls: 'cls', auditTtfb: 'ttfb'}[key];
         if (causeKey && audit?.causes?.version === 1) {
-            renderAuditCauses(el, audit.causes[causeKey]);
+            renderAuditCauses(el, audit.causes[causeKey], formatLoadCauses(causeKey, audit.causes[causeKey]));
         }
         rows.set(key, {name, state});
         return el;

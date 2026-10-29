@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "فقط مشاهدات موجود نمایش داده می‌شوند."
+    },
+    "causeElement": {
+        "message": "عنصر"
+    },
+    "causeText": {
+        "message": "بلوک متنی"
+    },
+    "causeLoadDelay": {
+        "message": "تأخیر بارگیری منبع"
+    },
+    "causeLoadDuration": {
+        "message": "بارگیری پس از اولین بایت"
+    },
+    "causeRenderDelay": {
+        "message": "تأخیر نمایش"
+    },
+    "causeLongest": {
+        "message": "طولانی‌ترین مرحله"
+    },
+    "causeResource": {
+        "message": "منبع تصویر"
+    },
+    "causeImageHints": {
+        "message": "ویژگی‌های فعلی"
+    },
+    "causePreload": {
+        "message": "پیش‌بارگیری منطبق فعلی"
+    },
+    "causeRedirect": {
+        "message": "تغییرمسیرها"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "اتصال (شامل TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (بخشی از اتصال)"
+    },
+    "causeRequestWait": {
+        "message": "درخواست و انتظار پاسخ"
+    },
+    "causeUnaccounted": {
+        "message": "بازهٔ تخصیص‌نیافته"
+    },
+    "causeWorker": {
+        "message": "Service worker (بدون درخواست‌های داخلی آن)"
+    },
+    "causeInterim": {
+        "message": "پاسخ موقت (کد نامشخص)"
+    },
+    "causeFinalHeaders": {
+        "message": "سرآیندهای نهایی (از شروع پیمایش)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (اعلام‌شده توسط سرور)"
+    },
+    "causeSpecialNavigation": {
+        "message": "پیش‌رندر یا پیمایش تاریخچه: مراحل بازسازی نمی‌شوند."
+    },
+    "causeLimited": {
+        "message": "برخی جزئیات موجود نیستند، پنهان یا محدودند."
+    },
+    "causeScope": {
+        "message": "بارگیری اولیهٔ سند؛ نه اندازه‌گیری جدید پس از بازیابی از تاریخچه."
     }
 }

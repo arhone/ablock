@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "అందుబాటులో ఉన్న పరిశీలనలు మాత్రమే చూపబడతాయి."
+    },
+    "causeElement": {
+        "message": "మూలకం"
+    },
+    "causeText": {
+        "message": "టెక్స్ట్ బ్లాక్"
+    },
+    "causeLoadDelay": {
+        "message": "వనరు లోడ్ ఆలస్యం"
+    },
+    "causeLoadDuration": {
+        "message": "మొదటి బైట్ తర్వాత వనరు లోడ్"
+    },
+    "causeRenderDelay": {
+        "message": "రెండర్ ఆలస్యం"
+    },
+    "causeLongest": {
+        "message": "అత్యంత దీర్ఘ దశ"
+    },
+    "causeResource": {
+        "message": "చిత్ర వనరు"
+    },
+    "causeImageHints": {
+        "message": "ప్రస్తుత లక్షణాలు"
+    },
+    "causePreload": {
+        "message": "ప్రస్తుతం సరిపోలే ప్రీలోడ్"
+    },
+    "causeRedirect": {
+        "message": "దారి మళ్లింపులు"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "కనెక్షన్ (TLS సహా)"
+    },
+    "causeTls": {
+        "message": "TLS (కనెక్షన్‌లో భాగం)"
+    },
+    "causeRequestWait": {
+        "message": "అభ్యర్థన మరియు ప్రతిస్పందన కోసం నిరీక్షణ"
+    },
+    "causeUnaccounted": {
+        "message": "వర్గీకరించని వ్యవధి"
+    },
+    "causeWorker": {
+        "message": "Service worker (అంతర్గత అభ్యర్థనలు మినహా)"
+    },
+    "causeInterim": {
+        "message": "మధ్యంతర ప్రతిస్పందన (కోడ్ తెలియదు)"
+    },
+    "causeFinalHeaders": {
+        "message": "తుది హెడర్‌లు (నావిగేషన్ ప్రారంభం నుంచి)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (సర్వర్ ప్రకటించినవి)"
+    },
+    "causeSpecialNavigation": {
+        "message": "ప్రీరెండర్ లేదా చరిత్ర నావిగేషన్: దశలు పునర్నిర్మించబడవు."
+    },
+    "causeLimited": {
+        "message": "కొన్ని వివరాలు లేవు, దాచబడ్డాయి లేదా పరిమితంగా ఉన్నాయి."
+    },
+    "causeScope": {
+        "message": "పత్రం అసలు లోడ్; చరిత్ర నుంచి పునరుద్ధరించిన తర్వాత కొత్త కొలత కాదు."
     }
 }

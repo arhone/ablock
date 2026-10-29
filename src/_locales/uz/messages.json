@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Faqat mavjud kuzatuvlar ko‘rsatilgan."
+    },
+    "causeElement": {
+        "message": "Element"
+    },
+    "causeText": {
+        "message": "Matn bloki"
+    },
+    "causeLoadDelay": {
+        "message": "Resurs yuklanish kechikishi"
+    },
+    "causeLoadDuration": {
+        "message": "Birinchi baytdan keyingi yuklash"
+    },
+    "causeRenderDelay": {
+        "message": "Chizish kechikishi"
+    },
+    "causeLongest": {
+        "message": "Eng uzoq bosqich"
+    },
+    "causeResource": {
+        "message": "Rasm resursi"
+    },
+    "causeImageHints": {
+        "message": "Joriy atributlar"
+    },
+    "causePreload": {
+        "message": "Hozir mos keluvchi oldindan yuklash"
+    },
+    "causeRedirect": {
+        "message": "Qayta yo‘naltirishlar"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Ulanish (TLS bilan)"
+    },
+    "causeTls": {
+        "message": "TLS (ulanishning bir qismi)"
+    },
+    "causeRequestWait": {
+        "message": "So‘rov va javobni kutish"
+    },
+    "causeUnaccounted": {
+        "message": "Ajratilmagan oraliq"
+    },
+    "causeWorker": {
+        "message": "Service worker (ichki so‘rovlarsiz)"
+    },
+    "causeInterim": {
+        "message": "Oraliq javob (kod noma’lum)"
+    },
+    "causeFinalHeaders": {
+        "message": "Yakuniy sarlavhalar (navigatsiya boshidan)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (server bildirgan)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Oldindan chizish yoki tarix: bosqichlar tiklanmaydi."
+    },
+    "causeLimited": {
+        "message": "Ayrim tafsilotlar yo‘q, yashirilgan yoki cheklangan."
+    },
+    "causeScope": {
+        "message": "Hujjatning dastlabki yuklanishi; tarixdan qaytgandan keyingi yangi o‘lchov emas."
     }
 }

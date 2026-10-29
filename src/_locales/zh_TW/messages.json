@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "僅顯示可用的觀測結果。"
+    },
+    "causeElement": {
+        "message": "元素"
+    },
+    "causeText": {
+        "message": "文字區塊"
+    },
+    "causeLoadDelay": {
+        "message": "資源載入延遲"
+    },
+    "causeLoadDuration": {
+        "message": "首位元組後的資源載入"
+    },
+    "causeRenderDelay": {
+        "message": "轉譯延遲"
+    },
+    "causeLongest": {
+        "message": "耗時最長的階段"
+    },
+    "causeResource": {
+        "message": "圖片資源"
+    },
+    "causeImageHints": {
+        "message": "目前屬性"
+    },
+    "causePreload": {
+        "message": "目前相符的預先載入"
+    },
+    "causeRedirect": {
+        "message": "重新導向"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "連線（包含 TLS）"
+    },
+    "causeTls": {
+        "message": "TLS（連線的一部分）"
+    },
+    "causeRequestWait": {
+        "message": "請求及等待回應"
+    },
+    "causeUnaccounted": {
+        "message": "未歸屬的時間區段"
+    },
+    "causeWorker": {
+        "message": "Service worker（不含其內部請求）"
+    },
+    "causeInterim": {
+        "message": "中間回應（狀態碼未知）"
+    },
+    "causeFinalHeaders": {
+        "message": "最終回應標頭（從導覽開始計時）"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing（伺服器宣告）"
+    },
+    "causeSpecialNavigation": {
+        "message": "預先轉譯或歷史記錄導覽：不重建各階段。"
+    },
+    "causeLimited": {
+        "message": "部分詳細資料缺失、隱藏或受限。"
+    },
+    "causeScope": {
+        "message": "文件的原始載入，並非從歷史記錄還原後的新測量。"
     }
 }

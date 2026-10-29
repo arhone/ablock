@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Només es mostren les observacions disponibles."
+    },
+    "causeElement": {
+        "message": "Element"
+    },
+    "causeText": {
+        "message": "Bloc de text"
+    },
+    "causeLoadDelay": {
+        "message": "Retard de càrrega del recurs"
+    },
+    "causeLoadDuration": {
+        "message": "Càrrega després del primer byte"
+    },
+    "causeRenderDelay": {
+        "message": "Retard de renderització"
+    },
+    "causeLongest": {
+        "message": "Fase més llarga"
+    },
+    "causeResource": {
+        "message": "Recurs d’imatge"
+    },
+    "causeImageHints": {
+        "message": "Atributs actuals"
+    },
+    "causePreload": {
+        "message": "Precàrrega coincident actual"
+    },
+    "causeRedirect": {
+        "message": "Redireccions"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Connexió (inclou TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (part de la connexió)"
+    },
+    "causeRequestWait": {
+        "message": "Sol·licitud i espera de resposta"
+    },
+    "causeUnaccounted": {
+        "message": "Interval sense atribuir"
+    },
+    "causeWorker": {
+        "message": "Service worker (sense peticions internes)"
+    },
+    "causeInterim": {
+        "message": "Resposta intermèdia (codi desconegut)"
+    },
+    "causeFinalHeaders": {
+        "message": "Capçaleres finals (des de l’inici de navegació)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (declarat pel servidor)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Prerenderització o navegació de l’historial: no es reconstrueixen les fases."
+    },
+    "causeLimited": {
+        "message": "Alguns detalls falten, estan ocults o limitats."
+    },
+    "causeScope": {
+        "message": "Càrrega original del document; no és una mesura nova després de restaurar des de l’historial."
     }
 }

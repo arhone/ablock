@@ -28,10 +28,15 @@
      * prerender — активация предварительно загруженного документа; bfcache — восстановление;
      * element-unavailable — узел удалён/скрыт; resource-unmatched — ресурс не сопоставлен;
      * text-lcp — у текстового LCP нет сетевых фаз; sources-unavailable — нет источников CLS;
-     * resource-ambiguous — несколько подходящих ресурсов; timing-inconsistent — фазы не согласованы.
+     * resource-ambiguous — несколько подходящих ресурсов; timing-inconsistent — фазы не согласованы;
+     * timing-incomplete — отметки отсутствуют; redirect-unavailable — редиректы не раскрыты;
+     * render-time-unavailable — нет времени отрисовки LCP; service-worker — участие SW;
+     * browser-cache — доставка из кэша; interim-response — промежуточный ответ (код неизвестен);
+     * history-navigation — переход по истории (попадание в bfcache не доказано);
+     * preload-unresolved — нельзя сопоставить responsive preload без догадки.
      * truncated=true только при отсечении фактов лимитом/бюджетом, не просто при unavailable.
      *
-     * Формат data для следующих сборщиков (в заглушке целиком null):
+     * Формат data (у недоступного раздела целиком null):
      * lcp: {value, startTime, size, kind: image|text|unknown, element, resourceUrl,
      *   phases: {ttfb, resourceLoadDelay, resourceLoadDuration, elementRenderDelay},
      *   longestPhase, attributes: {loading, fetchPriority}, preload: boolean|null}.
@@ -45,12 +50,16 @@
      * До 10 источников суммарно; value принадлежит сдвигу, не дублируется у его источников.
      * Сдвинувшийся элемент — факт, а не доказанный виновник; отсутствующий узел — null.
      * ttfb: {value, phases: {redirect, dns, connection, tls, requestWait, unaccounted},
-     *   responseStart, finalResponseHeadersStart, workerStart, deliveryType,
+     *   responseStart, finalResponseHeadersStart, firstInterimResponseStart, workerStart, deliveryType, browserCache,
      *   serverTiming: [{name, description, duration}]}.
      * connection включает tls (tls не прибавлять второй раз); requestWait — сеть + сервер.
      * responseStart сохраняет прежний смысл TTFB; finalResponseHeadersStart — отдельное
      * необязательное поле. serverTiming — до 5 записей, name до 64, description до 128 символов;
      * это объявленные сервером интервалы, они могут перекрываться и не входят в сумму фаз.
+     * browserCache: boolean|null; deliveryType: cache|navigational-prefetch|null.
+     * firstInterimResponseStart — необязательная отметка первого промежуточного ответа, не доказательство 103.
+     * Все данные относятся к исходной навигации документа, не к новому визиту после bfcache.
+     * preload — подходящий link в текущей разметке, не доказательство фактического использования.
      * Строки только текстом; URL в data сокращать как documentUrl (только http/https, иначе null).
      * Нельзя возвращать DOM, PerformanceEntry, HTML, текст страницы, cookies, query-значения.
      *
@@ -59,7 +68,8 @@
      * Новые наблюдатели запускать параллельно существующим, без последовательного ожидания,
      * отключать по завершении/тайм-ауту. Проверять бюджет в ограниченных проходах;
      * при превышении partial + budget-exceeded + truncated. Необязательные API — по наличию.
-     * Сейчас O(1), без новых наблюдателей, проходов DOM/ресурсов, таймеров и запросов.
+     * LCP: до 2000 ресурсов и 100 link, общий бюджет причин 20 ms; TTFB: до 5 Server-Timing.
+     * Нет новых наблюдателей, таймеров и запросов; превышение лимитов отмечается явно.
      */
     const documentUrl = new URL(location.href);
     const causes = {
@@ -255,6 +265,303 @@
         // Страница целиком из кэша браузера — сервер не спрашивали
         browserCache: navigation?.deliveryType === 'cache' || (navigation?.transferSize === 0 && navigation?.decodedBodySize > 0)
     };
+
+    // Только дополнительные вычисления причин: прежние vitals выше остаются неизменными.
+    const causeStarted = performance.now();
+    const finite = (value) => typeof value === 'number' && Number.isFinite(value) && value >= 0 ? value : null;
+    const positive = (value) => finite(value) !== null && value > 0 ? value : null;
+    const shortUrl = (value) => {
+        try {
+            if (typeof value !== 'string' || value.length > 8192 || !/^https?:\/\//i.test(value)) {
+                return null;
+            }
+            const url = new URL(value);
+            return url.origin + url.pathname.slice(0, 512);
+        } catch {
+            return null;
+        }
+    };
+    const reason = (section, code, partial = true) => {
+        if (!section.reasons.includes(code)) {
+            section.reasons.push(code);
+        }
+        if (partial && section.status === 'ok') {
+            section.status = 'partial';
+        }
+    };
+    const limited = (section, code) => {
+        section.truncated = true;
+        reason(section, code);
+    };
+    const budget = (section) => {
+        if (performance.now() - causeStarted >= 20) {
+            limited(section, 'budget-exceeded');
+            return false;
+        }
+        return true;
+    };
+    // Поздняя инъекция не знает о pageshow.persisted до её запуска. Это исходные измерения
+    // документа, а не запись нового визита. back_forward сам по себе не доказывает bfcache.
+    const specialNavigation = (section) => {
+        if (start > 0 || document.prerendering === true) {
+            reason(section, 'prerender');
+            return true;
+        }
+        if (navigation?.type === 'back_forward') {
+            reason(section, 'history-navigation');
+            return true;
+        }
+        return false;
+    };
+
+    const collectTtfb = () => {
+        const section = {status: 'ok', reasons: [], truncated: false, data: null};
+        if (!navigation || positive(navigation.responseStart) === null) {
+            section.status = 'unavailable';
+            reason(section, navigation ? 'no-entry' : 'navigation-missing');
+            return section;
+        }
+        const data = section.data = {
+            value: vitals.ttfb,
+            phases: {redirect: null, dns: null, connection: null, tls: null, requestWait: null, unaccounted: null},
+            responseStart: positive(navigation.responseStart),
+            finalResponseHeadersStart: positive(navigation.finalResponseHeadersStart),
+            firstInterimResponseStart: positive(navigation.firstInterimResponseStart),
+            workerStart: finite(navigation.workerStart),
+            deliveryType: ['cache', 'navigational-prefetch'].includes(navigation.deliveryType) ? navigation.deliveryType : null,
+            browserCache: null,
+            serverTiming: []
+        };
+        const worker = data.workerStart !== null && data.workerStart > 0;
+        data.browserCache = data.deliveryType === 'cache' || (!worker && data.workerStart === 0
+            && navigation.transferSize === 0 && navigation.decodedBodySize > 0) ? true
+            : navigation.transferSize > 0 ? false : null;
+        if (worker) {
+            reason(section, 'service-worker');
+        }
+        if (data.browserCache) {
+            reason(section, 'browser-cache', false);
+        }
+        if (data.firstInterimResponseStart !== null || (data.finalResponseHeadersStart !== null
+            && data.finalResponseHeadersStart > data.responseStart)) {
+            // Промежуточный ответ не обязательно 103; его код Performance API не сообщает.
+            reason(section, 'interim-response', false);
+        }
+        const interval = (begin, end) => {
+            if (positive(begin) === null || positive(end) === null) {
+                reason(section, 'timing-incomplete');
+                return null;
+            }
+            if (end < begin || end > data.responseStart) {
+                reason(section, 'timing-inconsistent');
+                return null;
+            }
+            return end - begin;
+        };
+        if (!specialNavigation(section) && budget(section)) {
+            const phases = data.phases;
+            // Нулевые redirectStart/End и redirectCount не отличают отсутствие от скрытой цепочки.
+            if (positive(navigation.redirectStart) !== null && positive(navigation.redirectEnd) !== null) {
+                phases.redirect = interval(navigation.redirectStart, navigation.redirectEnd);
+            } else {
+                reason(section, 'redirect-unavailable');
+            }
+            if (!worker) {
+                phases.dns = interval(navigation.domainLookupStart, navigation.domainLookupEnd);
+                phases.connection = interval(navigation.connectStart, navigation.connectEnd);
+                const tlsStart = finite(navigation.secureConnectionStart);
+                if (phases.connection !== null && tlsStart !== null) {
+                    if (tlsStart > 0 && tlsStart >= navigation.connectStart) {
+                        phases.tls = interval(tlsStart, navigation.connectEnd);
+                    } else if (tlsStart === 0 && (phases.connection === 0 || location.protocol === 'http:')) {
+                        phases.tls = 0; // Измеренное отсутствие нового соединения/незашифрованный HTTP.
+                    }
+                }
+                if (phases.tls === null) {
+                    reason(section, 'timing-incomplete');
+                }
+            }
+            phases.requestWait = interval(navigation.requestStart, data.responseStart);
+            // Складываем только непересекающиеся интервалы: TLS уже входит в connection.
+            const spans = [
+                [navigation.redirectStart, navigation.redirectEnd, phases.redirect],
+                [navigation.domainLookupStart, navigation.domainLookupEnd, phases.dns],
+                [navigation.connectStart, navigation.connectEnd, phases.connection],
+                [navigation.requestStart, data.responseStart, phases.requestWait]
+            ].filter(([, , value]) => value !== null).sort((a, b) => a[0] - b[0]);
+            let end = 0;
+            let sum = 0;
+            let consistent = true;
+            for (const [begin, finish, duration] of spans) {
+                if (begin < end) {
+                    consistent = false;
+                }
+                end = Math.max(end, finish);
+                sum += duration;
+            }
+            if (consistent && sum <= data.value) {
+                // Включает скрытые/невыделенные интервалы; не приписываем остаток серверу.
+                phases.unaccounted = data.value - sum;
+            } else {
+                for (const key of Object.keys(phases)) {
+                    phases[key] = null;
+                }
+                reason(section, 'timing-inconsistent');
+            }
+        }
+        const timings = navigation.serverTiming || [];
+        const clean = (value, max) => {
+            const source = String(value ?? '');
+            if (source.length > max) {
+                limited(section, 'result-limit');
+            }
+            const text = source.slice(0, 4096).replace(/https?:\/\/[^\s]+/g, (url) => shortUrl(url) || '')
+                .replace(/\?[^\s]*/g, '').replace(/[<>\p{Cc}]/gu, '');
+            if (text.length > max) {
+                limited(section, 'result-limit');
+            }
+            return text.slice(0, max);
+        };
+        for (let i = 0; i < Math.min(timings.length, 5); i++) {
+            if (!budget(section)) {
+                break;
+            }
+            const entry = timings[i];
+            data.serverTiming.push({name: clean(entry.name, 64), description: clean(entry.description, 128), duration: finite(entry.duration)});
+        }
+        if (timings.length > 5) {
+            limited(section, 'result-limit');
+        }
+        return section;
+    };
+
+    const collectLcp = () => {
+        const section = {status: 'ok', reasons: [], truncated: false, data: null};
+        if (!lcp) {
+            const supported = typeof PerformanceObserver !== 'undefined' && (!Array.isArray(PerformanceObserver.supportedEntryTypes)
+                || PerformanceObserver.supportedEntryTypes.includes('largest-contentful-paint'));
+            section.status = supported ? 'unavailable' : 'unsupported';
+            reason(section, supported ? 'no-entry' : 'api-unsupported');
+            return section;
+        }
+        const node = lcp.element?.isConnected ? lcp.element : null;
+        const tag = node?.localName?.toLowerCase();
+        const element = tag && /^[a-z][a-z0-9-]{0,31}$/.test(tag) ? {tag} : null;
+        const image = !!lcp.url || ['img', 'image', 'video'].includes(tag);
+        const data = section.data = {
+            value: vitals.lcp, startTime: finite(lcp.startTime), size: finite(lcp.size),
+            kind: image ? 'image' : element ? 'text' : 'unknown', element,
+            resourceUrl: lcp.url ? shortUrl(lcp.url) : null,
+            phases: {ttfb: null, resourceLoadDelay: null, resourceLoadDuration: null, elementRenderDelay: null},
+            longestPhase: null,
+            attributes: {
+                loading: tag === 'img' && ['eager', 'lazy', 'auto'].includes(node.loading) ? node.loading : null,
+                fetchPriority: tag === 'img' && ['auto', 'high', 'low'].includes(node.fetchPriority) ? node.fetchPriority : null
+            },
+            preload: null
+        };
+        if (!element) {
+            reason(section, 'element-unavailable');
+        }
+        if (lcpEntries.dropped > 0) {
+            reason(section, 'buffer-dropped');
+        }
+        const special = specialNavigation(section);
+        if (!navigation) {
+            reason(section, 'navigation-missing');
+        }
+        if (!special && navigation && positive(navigation.responseStart) !== null && data.startTime >= navigation.responseStart) {
+            data.phases.ttfb = navigation.responseStart;
+        }
+        if (data.kind === 'text') {
+            reason(section, 'text-lcp', false);
+            if (data.phases.ttfb !== null) {
+                data.phases.elementRenderDelay = data.value - data.phases.ttfb;
+            }
+        } else if (image && lcp.url && budget(section)) {
+            const resourceName = data.resourceUrl ? lcp.url.split('#', 1)[0] : lcp.url;
+            const matches = [];
+            for (let i = 0; i < Math.min(resources.length, 2000); i++) {
+                if (!budget(section)) {
+                    break;
+                }
+                const entry = resources[i];
+                if ((entry.name === resourceName || entry.name === lcp.url) && finite(entry.startTime) !== null && entry.startTime <= data.startTime) {
+                    matches.push(entry);
+                }
+            }
+            if (resources.length > 2000) {
+                limited(section, 'result-limit');
+            }
+            const resource = !section.truncated && matches.length === 1 ? matches[0] : null;
+            if (!resource) {
+                reason(section, matches.length > 1 ? 'resource-ambiguous' : 'resource-unmatched');
+            }
+            if (resource && (positive(resource.requestStart) === null || positive(resource.responseStart) === null)) {
+                reason(section, 'timing-restricted');
+            }
+            if (positive(lcp.renderTime) === null) {
+                reason(section, 'render-time-unavailable');
+            }
+            if (!special && resource && positive(resource.requestStart) !== null && positive(resource.responseStart) !== null
+                && positive(lcp.renderTime) !== null && data.phases.ttfb !== null) {
+                // Разложение непересекающегося интервала после первого байта HTML, включая ранний preload.
+                // https://web.dev/articles/optimize-lcp — фазы неотрицательны и суммируются в LCP.
+                const begin = resource.requestStart;
+                const end = resource.responseEnd;
+                if (finite(end) !== null && end >= resource.responseStart && resource.responseStart >= begin && end <= data.startTime) {
+                    const loadStart = Math.max(data.phases.ttfb, begin);
+                    const loadEnd = Math.max(loadStart, end);
+                    data.phases.resourceLoadDelay = loadStart - data.phases.ttfb;
+                    data.phases.resourceLoadDuration = loadEnd - loadStart;
+                    data.phases.elementRenderDelay = data.value - loadEnd;
+                } else {
+                    reason(section, 'timing-inconsistent');
+                }
+            }
+            // Нынешний preload в разметке — не доказательство его использования при загрузке.
+            const links = document.getElementsByTagName('link');
+            let complete = true;
+            let responsive = false;
+            for (let i = 0; i < Math.min(links.length, 100); i++) {
+                if (!budget(section)) {
+                    complete = false;
+                    break;
+                }
+                const link = links[i];
+                if (link.rel.toLowerCase().split(/\s+/).includes('preload') && link.as.toLowerCase() === 'image') {
+                    const srcset = link.imageSrcset || link.getAttribute('imagesrcset');
+                    responsive ||= !!srcset;
+                    const matchesUrl = link.href === lcp.url || (data.resourceUrl && link.href.length <= 8192
+                        && link.href.split('#', 1)[0] === resourceName);
+                    if (matchesUrl && !srcset) {
+                        data.preload = true;
+                    }
+                }
+            }
+            if (links.length > 100) {
+                complete = false;
+                limited(section, 'result-limit');
+            }
+            if (data.preload !== true && complete && !responsive) {
+                data.preload = false;
+            } else if (data.preload !== true && responsive) {
+                reason(section, 'preload-unresolved');
+            }
+        } else if (image) {
+            reason(section, 'resource-unmatched');
+        }
+        if (data.phases.ttfb === null && !special) {
+            reason(section, 'timing-incomplete');
+        }
+        const applicable = data.kind === 'text' ? ['ttfb', 'elementRenderDelay'] : Object.keys(data.phases);
+        if (applicable.every((key) => data.phases[key] !== null)) {
+            data.longestPhase = applicable.reduce((a, b) => data.phases[a] >= data.phases[b] ? a : b);
+        }
+        return section;
+    };
+    causes.ttfb = collectTtfb();
+    causes.lcp = collectLcp();
 
     // SEO
     const meta = (selector) => document.querySelector(selector)?.getAttribute('content')?.trim() ?? null;

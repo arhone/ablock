@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "แสดงเฉพาะข้อมูลที่สังเกตได้เท่านั้น"
+    },
+    "causeElement": {
+        "message": "องค์ประกอบ"
+    },
+    "causeText": {
+        "message": "บล็อกข้อความ"
+    },
+    "causeLoadDelay": {
+        "message": "ความล่าช้าในการโหลดทรัพยากร"
+    },
+    "causeLoadDuration": {
+        "message": "การโหลดหลังไบต์แรก"
+    },
+    "causeRenderDelay": {
+        "message": "ความล่าช้าในการแสดงผล"
+    },
+    "causeLongest": {
+        "message": "ช่วงที่นานที่สุด"
+    },
+    "causeResource": {
+        "message": "ทรัพยากรรูปภาพ"
+    },
+    "causeImageHints": {
+        "message": "แอตทริบิวต์ปัจจุบัน"
+    },
+    "causePreload": {
+        "message": "การโหลดล่วงหน้าที่ตรงกันขณะนี้"
+    },
+    "causeRedirect": {
+        "message": "การเปลี่ยนเส้นทาง"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "การเชื่อมต่อ (รวม TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (ส่วนหนึ่งของการเชื่อมต่อ)"
+    },
+    "causeRequestWait": {
+        "message": "คำขอและการรอการตอบกลับ"
+    },
+    "causeUnaccounted": {
+        "message": "ช่วงเวลาที่ยังไม่จัดหมวด"
+    },
+    "causeWorker": {
+        "message": "Service worker (ไม่รวมคำขอภายใน)"
+    },
+    "causeInterim": {
+        "message": "การตอบกลับระหว่างทาง (ไม่ทราบรหัส)"
+    },
+    "causeFinalHeaders": {
+        "message": "ส่วนหัวสุดท้าย (นับจากเริ่มนำทาง)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (ค่าที่เซิร์ฟเวอร์ระบุ)"
+    },
+    "causeSpecialNavigation": {
+        "message": "การเรนเดอร์ล่วงหน้าหรือการนำทางจากประวัติ: ไม่สร้างช่วงเวลาขึ้นใหม่"
+    },
+    "causeLimited": {
+        "message": "รายละเอียดบางส่วนขาดหาย ถูกซ่อน หรือมีข้อจำกัด"
+    },
+    "causeScope": {
+        "message": "การโหลดเอกสารครั้งแรก ไม่ใช่การวัดใหม่หลังคืนค่าจากประวัติ"
     }
 }

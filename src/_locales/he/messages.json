@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "מוצגות רק התצפיות הזמינות."
+    },
+    "causeElement": {
+        "message": "רכיב"
+    },
+    "causeText": {
+        "message": "בלוק טקסט"
+    },
+    "causeLoadDelay": {
+        "message": "עיכוב בטעינת המשאב"
+    },
+    "causeLoadDuration": {
+        "message": "טעינת המשאב לאחר הבייט הראשון"
+    },
+    "causeRenderDelay": {
+        "message": "עיכוב בתצוגה"
+    },
+    "causeLongest": {
+        "message": "השלב הארוך ביותר"
+    },
+    "causeResource": {
+        "message": "משאב התמונה"
+    },
+    "causeImageHints": {
+        "message": "מאפיינים נוכחיים"
+    },
+    "causePreload": {
+        "message": "טעינה מוקדמת תואמת כעת"
+    },
+    "causeRedirect": {
+        "message": "הפניות"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "חיבור (כולל TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (חלק מהחיבור)"
+    },
+    "causeRequestWait": {
+        "message": "בקשה והמתנה לתשובה"
+    },
+    "causeUnaccounted": {
+        "message": "מרווח ללא שיוך"
+    },
+    "causeWorker": {
+        "message": "Service worker (ללא הבקשות הפנימיות שלו)"
+    },
+    "causeInterim": {
+        "message": "תגובת ביניים (הקוד לא ידוע)"
+    },
+    "causeFinalHeaders": {
+        "message": "כותרות סופיות (מתחילת הניווט)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (לפי הצהרת השרת)"
+    },
+    "causeSpecialNavigation": {
+        "message": "רינדור מראש או ניווט בהיסטוריה: השלבים אינם משוחזרים."
+    },
+    "causeLimited": {
+        "message": "חלק מהפרטים חסרים, מוסתרים או מוגבלים."
+    },
+    "causeScope": {
+        "message": "טעינת המסמך המקורית; לא מדידה חדשה לאחר שחזור מההיסטוריה."
     }
 }

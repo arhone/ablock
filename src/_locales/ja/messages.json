@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "取得できた観測結果のみ表示しています。"
+    },
+    "causeElement": {
+        "message": "要素"
+    },
+    "causeText": {
+        "message": "テキストブロック"
+    },
+    "causeLoadDelay": {
+        "message": "リソース読み込みの遅延"
+    },
+    "causeLoadDuration": {
+        "message": "最初のバイト以降のリソース読み込み"
+    },
+    "causeRenderDelay": {
+        "message": "描画の遅延"
+    },
+    "causeLongest": {
+        "message": "最長の段階"
+    },
+    "causeResource": {
+        "message": "画像リソース"
+    },
+    "causeImageHints": {
+        "message": "現在の属性"
+    },
+    "causePreload": {
+        "message": "現在一致する事前読み込み"
+    },
+    "causeRedirect": {
+        "message": "リダイレクト"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "接続（TLS を含む）"
+    },
+    "causeTls": {
+        "message": "TLS（接続の一部）"
+    },
+    "causeRequestWait": {
+        "message": "リクエストと応答待ち"
+    },
+    "causeUnaccounted": {
+        "message": "未分類の時間"
+    },
+    "causeWorker": {
+        "message": "Service worker（内部リクエストは対象外）"
+    },
+    "causeInterim": {
+        "message": "中間応答（コード不明）"
+    },
+    "causeFinalHeaders": {
+        "message": "最終ヘッダー（ナビゲーション開始から）"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing（サーバーの申告値）"
+    },
+    "causeSpecialNavigation": {
+        "message": "事前描画または履歴からの移動では、各段階を再構成しません。"
+    },
+    "causeLimited": {
+        "message": "一部の詳細が欠落、非公開、または制限されています。"
+    },
+    "causeScope": {
+        "message": "ドキュメントの元の読み込みです。履歴からの復元後の新しい測定ではありません。"
     }
 }

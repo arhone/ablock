@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "仅显示可用的观测结果。"
+    },
+    "causeElement": {
+        "message": "元素"
+    },
+    "causeText": {
+        "message": "文本块"
+    },
+    "causeLoadDelay": {
+        "message": "资源加载延迟"
+    },
+    "causeLoadDuration": {
+        "message": "首字节后的资源加载"
+    },
+    "causeRenderDelay": {
+        "message": "渲染延迟"
+    },
+    "causeLongest": {
+        "message": "耗时最长的阶段"
+    },
+    "causeResource": {
+        "message": "图片资源"
+    },
+    "causeImageHints": {
+        "message": "当前属性"
+    },
+    "causePreload": {
+        "message": "当前匹配的预加载"
+    },
+    "causeRedirect": {
+        "message": "重定向"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "连接（包含 TLS）"
+    },
+    "causeTls": {
+        "message": "TLS（连接的一部分）"
+    },
+    "causeRequestWait": {
+        "message": "请求及等待响应"
+    },
+    "causeUnaccounted": {
+        "message": "未归属的时间段"
+    },
+    "causeWorker": {
+        "message": "Service worker（不包含其内部请求）"
+    },
+    "causeInterim": {
+        "message": "中间响应（状态码未知）"
+    },
+    "causeFinalHeaders": {
+        "message": "最终响应头（从导航开始计时）"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing（服务器声明）"
+    },
+    "causeSpecialNavigation": {
+        "message": "预渲染或历史记录导航：不重建各阶段。"
+    },
+    "causeLimited": {
+        "message": "部分详情缺失、隐藏或受限。"
+    },
+    "causeScope": {
+        "message": "文档的原始加载，并非从历史记录恢复后的新测量。"
     }
 }

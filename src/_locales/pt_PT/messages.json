@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "São apresentadas apenas as observações disponíveis."
+    },
+    "causeElement": {
+        "message": "Elemento"
+    },
+    "causeText": {
+        "message": "Bloco de texto"
+    },
+    "causeLoadDelay": {
+        "message": "Atraso no carregamento do recurso"
+    },
+    "causeLoadDuration": {
+        "message": "Carregamento após o primeiro byte"
+    },
+    "causeRenderDelay": {
+        "message": "Atraso de apresentação"
+    },
+    "causeLongest": {
+        "message": "Fase mais longa"
+    },
+    "causeResource": {
+        "message": "Recurso de imagem"
+    },
+    "causeImageHints": {
+        "message": "Atributos atuais"
+    },
+    "causePreload": {
+        "message": "Pré-carregamento correspondente atual"
+    },
+    "causeRedirect": {
+        "message": "Redirecionamentos"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Ligação (inclui TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (parte da ligação)"
+    },
+    "causeRequestWait": {
+        "message": "Pedido e espera da resposta"
+    },
+    "causeUnaccounted": {
+        "message": "Intervalo não atribuído"
+    },
+    "causeWorker": {
+        "message": "Service worker (sem pedidos internos)"
+    },
+    "causeInterim": {
+        "message": "Resposta intermédia (código desconhecido)"
+    },
+    "causeFinalHeaders": {
+        "message": "Cabeçalhos finais (desde o início da navegação)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (declarado pelo servidor)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Pré-renderização ou navegação no histórico: as fases não são reconstruídas."
+    },
+    "causeLimited": {
+        "message": "Alguns detalhes estão ausentes, ocultos ou limitados."
+    },
+    "causeScope": {
+        "message": "Carregamento original do documento; não é uma nova medição após restauro pelo histórico."
     }
 }

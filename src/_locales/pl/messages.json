@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Wyświetlane są tylko dostępne obserwacje."
+    },
+    "causeElement": {
+        "message": "Element"
+    },
+    "causeText": {
+        "message": "Blok tekstu"
+    },
+    "causeLoadDelay": {
+        "message": "Opóźnienie ładowania zasobu"
+    },
+    "causeLoadDuration": {
+        "message": "Ładowanie zasobu po pierwszym bajcie"
+    },
+    "causeRenderDelay": {
+        "message": "Opóźnienie renderowania"
+    },
+    "causeLongest": {
+        "message": "Najdłuższa faza"
+    },
+    "causeResource": {
+        "message": "Zasób obrazu"
+    },
+    "causeImageHints": {
+        "message": "Bieżące atrybuty"
+    },
+    "causePreload": {
+        "message": "Obecnie pasujące wstępne ładowanie"
+    },
+    "causeRedirect": {
+        "message": "Przekierowania"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Połączenie (z TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (część połączenia)"
+    },
+    "causeRequestWait": {
+        "message": "Żądanie i oczekiwanie na odpowiedź"
+    },
+    "causeUnaccounted": {
+        "message": "Nieprzypisany przedział"
+    },
+    "causeWorker": {
+        "message": "Service worker (bez żądań wewnętrznych)"
+    },
+    "causeInterim": {
+        "message": "Odpowiedź pośrednia (nieznany kod)"
+    },
+    "causeFinalHeaders": {
+        "message": "Końcowe nagłówki (od początku nawigacji)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (deklarowane przez serwer)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Prerenderowanie lub nawigacja historii: fazy nie są odtwarzane."
+    },
+    "causeLimited": {
+        "message": "Niektórych szczegółów brakuje lub są ukryte albo ograniczone."
+    },
+    "causeScope": {
+        "message": "Pierwotne ładowanie dokumentu; nie nowy pomiar po przywróceniu z historii."
     }
 }

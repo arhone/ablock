@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Csak a rendelkezésre álló megfigyelések láthatók."
+    },
+    "causeElement": {
+        "message": "Elem"
+    },
+    "causeText": {
+        "message": "Szövegblokk"
+    },
+    "causeLoadDelay": {
+        "message": "Erőforrás-betöltési késés"
+    },
+    "causeLoadDuration": {
+        "message": "Betöltés az első bájt után"
+    },
+    "causeRenderDelay": {
+        "message": "Megjelenítési késés"
+    },
+    "causeLongest": {
+        "message": "Leghosszabb szakasz"
+    },
+    "causeResource": {
+        "message": "Képerőforrás"
+    },
+    "causeImageHints": {
+        "message": "Jelenlegi attribútumok"
+    },
+    "causePreload": {
+        "message": "Jelenleg egyező előtöltés"
+    },
+    "causeRedirect": {
+        "message": "Átirányítások"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Kapcsolat (TLS-sel együtt)"
+    },
+    "causeTls": {
+        "message": "TLS (a kapcsolat része)"
+    },
+    "causeRequestWait": {
+        "message": "Kérés és válaszra várakozás"
+    },
+    "causeUnaccounted": {
+        "message": "Nem hozzárendelt időszak"
+    },
+    "causeWorker": {
+        "message": "Service worker (belső lekérések nélkül)"
+    },
+    "causeInterim": {
+        "message": "Köztes válasz (ismeretlen kód)"
+    },
+    "causeFinalHeaders": {
+        "message": "Végleges fejlécek (a navigáció kezdetétől)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (a szerver közlése)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Előzetes megjelenítés vagy előzménynavigáció: a szakaszok nem állíthatók helyre."
+    },
+    "causeLimited": {
+        "message": "Egyes részletek hiányoznak, rejtettek vagy korlátozottak."
+    },
+    "causeScope": {
+        "message": "A dokumentum eredeti betöltése; nem új mérés az előzményekből való visszaállítás után."
     }
 }

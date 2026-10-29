@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "ફક્ત ઉપલબ્ધ અવલોકનો બતાવવામાં આવે છે."
+    },
+    "causeElement": {
+        "message": "એલિમેન્ટ"
+    },
+    "causeText": {
+        "message": "ટેક્સ્ટ બ્લોક"
+    },
+    "causeLoadDelay": {
+        "message": "સંસાધન લોડમાં વિલંબ"
+    },
+    "causeLoadDuration": {
+        "message": "પ્રથમ બાઇટ પછી સંસાધન લોડ"
+    },
+    "causeRenderDelay": {
+        "message": "રેન્ડરમાં વિલંબ"
+    },
+    "causeLongest": {
+        "message": "સૌથી લાંબો તબક્કો"
+    },
+    "causeResource": {
+        "message": "છબી સંસાધન"
+    },
+    "causeImageHints": {
+        "message": "વર્તમાન લક્ષણો"
+    },
+    "causePreload": {
+        "message": "હાલ મેળ ખાતું પ્રીલોડ"
+    },
+    "causeRedirect": {
+        "message": "રીડાયરેક્ટ"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "જોડાણ (TLS સહિત)"
+    },
+    "causeTls": {
+        "message": "TLS (જોડાણનો ભાગ)"
+    },
+    "causeRequestWait": {
+        "message": "વિનંતી અને પ્રતિસાદની રાહ"
+    },
+    "causeUnaccounted": {
+        "message": "અવર્ગીકૃત સમયગાળો"
+    },
+    "causeWorker": {
+        "message": "Service worker (આંતરિક વિનંતીઓ સિવાય)"
+    },
+    "causeInterim": {
+        "message": "વચગાળાનો પ્રતિસાદ (કોડ અજ્ઞાત)"
+    },
+    "causeFinalHeaders": {
+        "message": "અંતિમ હેડર (નેવિગેશનની શરૂઆતથી)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (સર્વર દ્વારા જાહેર)"
+    },
+    "causeSpecialNavigation": {
+        "message": "પ્રીરેન્ડર અથવા ઇતિહાસ નેવિગેશન: તબક્કાઓ ફરી રચાતા નથી."
+    },
+    "causeLimited": {
+        "message": "કેટલીક વિગતો ગેરહાજર, છુપાયેલી અથવા મર્યાદિત છે."
+    },
+    "causeScope": {
+        "message": "દસ્તાવેજનું મૂળ લોડ; ઇતિહાસમાંથી પુનઃસ્થાપન પછીનું નવું માપ નહીં."
     }
 }

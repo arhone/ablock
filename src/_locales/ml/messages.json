@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "ലഭ്യമായ നിരീക്ഷണങ്ങൾ മാത്രം കാണിക്കുന്നു."
+    },
+    "causeElement": {
+        "message": "ഘടകം"
+    },
+    "causeText": {
+        "message": "ടെക്സ്റ്റ് ബ്ലോക്ക്"
+    },
+    "causeLoadDelay": {
+        "message": "റിസോഴ്സ് ലോഡ് കാലതാമസം"
+    },
+    "causeLoadDuration": {
+        "message": "ആദ്യ ബൈറ്റിന് ശേഷമുള്ള റിസോഴ്സ് ലോഡ്"
+    },
+    "causeRenderDelay": {
+        "message": "റെൻഡർ കാലതാമസം"
+    },
+    "causeLongest": {
+        "message": "ഏറ്റവും ദൈർഘ്യമുള്ള ഘട്ടം"
+    },
+    "causeResource": {
+        "message": "ചിത്ര റിസോഴ്സ്"
+    },
+    "causeImageHints": {
+        "message": "നിലവിലെ ആട്രിബ്യൂട്ടുകൾ"
+    },
+    "causePreload": {
+        "message": "നിലവിൽ പൊരുത്തപ്പെടുന്ന പ്രീലോഡ്"
+    },
+    "causeRedirect": {
+        "message": "റീഡയറക്ടുകൾ"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "കണക്ഷൻ (TLS ഉൾപ്പെടെ)"
+    },
+    "causeTls": {
+        "message": "TLS (കണക്ഷന്റെ ഭാഗം)"
+    },
+    "causeRequestWait": {
+        "message": "അഭ്യർത്ഥനയും പ്രതികരണത്തിനുള്ള കാത്തിരിപ്പും"
+    },
+    "causeUnaccounted": {
+        "message": "തരംതിരിക്കാത്ത ഇടവേള"
+    },
+    "causeWorker": {
+        "message": "Service worker (ആന്തരിക അഭ്യർത്ഥനകൾ ഒഴികെ)"
+    },
+    "causeInterim": {
+        "message": "ഇടക്കാല പ്രതികരണം (കോഡ് അജ്ഞാതം)"
+    },
+    "causeFinalHeaders": {
+        "message": "അന്തിമ ഹെഡറുകൾ (നാവിഗേഷൻ ആരംഭം മുതൽ)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (സെർവർ പ്രഖ്യാപിച്ചത്)"
+    },
+    "causeSpecialNavigation": {
+        "message": "പ്രീറെൻഡർ അല്ലെങ്കിൽ ചരിത്ര നാവിഗേഷൻ: ഘട്ടങ്ങൾ പുനർനിർമ്മിക്കില്ല."
+    },
+    "causeLimited": {
+        "message": "ചില വിശദാംശങ്ങൾ ലഭ്യമല്ല, മറച്ചിരിക്കുന്നു അല്ലെങ്കിൽ പരിമിതമാണ്."
+    },
+    "causeScope": {
+        "message": "ഡോക്യുമെന്റിന്റെ യഥാർത്ഥ ലോഡ്; ചരിത്രത്തിൽ നിന്ന് പുനഃസ്ഥാപിച്ചതിന് ശേഷമുള്ള പുതിയ അളവല്ല."
     }
 }

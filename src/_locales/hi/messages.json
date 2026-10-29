@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "केवल उपलब्ध अवलोकन दिखाए गए हैं।"
+    },
+    "causeElement": {
+        "message": "एलिमेंट"
+    },
+    "causeText": {
+        "message": "टेक्स्ट ब्लॉक"
+    },
+    "causeLoadDelay": {
+        "message": "संसाधन लोड में देरी"
+    },
+    "causeLoadDuration": {
+        "message": "पहले बाइट के बाद संसाधन लोड"
+    },
+    "causeRenderDelay": {
+        "message": "रेंडर में देरी"
+    },
+    "causeLongest": {
+        "message": "सबसे लंबा चरण"
+    },
+    "causeResource": {
+        "message": "चित्र संसाधन"
+    },
+    "causeImageHints": {
+        "message": "वर्तमान विशेषताएँ"
+    },
+    "causePreload": {
+        "message": "अभी मिलता-जुलता प्रीलोड"
+    },
+    "causeRedirect": {
+        "message": "रीडायरेक्ट"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "कनेक्शन (TLS सहित)"
+    },
+    "causeTls": {
+        "message": "TLS (कनेक्शन का हिस्सा)"
+    },
+    "causeRequestWait": {
+        "message": "अनुरोध और जवाब का इंतज़ार"
+    },
+    "causeUnaccounted": {
+        "message": "अवर्गीकृत अंतराल"
+    },
+    "causeWorker": {
+        "message": "Service worker (आंतरिक अनुरोध शामिल नहीं)"
+    },
+    "causeInterim": {
+        "message": "अंतरिम जवाब (कोड अज्ञात)"
+    },
+    "causeFinalHeaders": {
+        "message": "अंतिम हेडर (नेविगेशन शुरू होने से)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (सर्वर द्वारा घोषित)"
+    },
+    "causeSpecialNavigation": {
+        "message": "प्रीरेंडर या इतिहास नेविगेशन: चरणों का पुनर्निर्माण नहीं होता।"
+    },
+    "causeLimited": {
+        "message": "कुछ विवरण अनुपलब्ध, छिपे हुए या सीमित हैं।"
+    },
+    "causeScope": {
+        "message": "दस्तावेज़ का मूल लोड; इतिहास से बहाली के बाद नया माप नहीं।"
     }
 }

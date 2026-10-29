@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Rodomi tik prieinami stebėjimai."
+    },
+    "causeElement": {
+        "message": "Elementas"
+    },
+    "causeText": {
+        "message": "Teksto blokas"
+    },
+    "causeLoadDelay": {
+        "message": "Ištekliaus įkėlimo delsa"
+    },
+    "causeLoadDuration": {
+        "message": "Ištekliaus įkėlimas po pirmojo baito"
+    },
+    "causeRenderDelay": {
+        "message": "Atvaizdavimo delsa"
+    },
+    "causeLongest": {
+        "message": "Ilgiausias etapas"
+    },
+    "causeResource": {
+        "message": "Vaizdo išteklius"
+    },
+    "causeImageHints": {
+        "message": "Dabartiniai atributai"
+    },
+    "causePreload": {
+        "message": "Dabar atitinkantis išankstinis įkėlimas"
+    },
+    "causeRedirect": {
+        "message": "Peradresavimai"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Ryšys (įskaitant TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (ryšio dalis)"
+    },
+    "causeRequestWait": {
+        "message": "Užklausa ir atsakymo laukimas"
+    },
+    "causeUnaccounted": {
+        "message": "Nepriskirtas intervalas"
+    },
+    "causeWorker": {
+        "message": "Service worker (be vidinių užklausų)"
+    },
+    "causeInterim": {
+        "message": "Tarpinis atsakymas (kodas nežinomas)"
+    },
+    "causeFinalHeaders": {
+        "message": "Galutinės antraštės (nuo naršymo pradžios)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (serverio nurodyta)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Išankstinis atvaizdavimas arba istorijos naršymas: etapai neatkuriami."
+    },
+    "causeLimited": {
+        "message": "Kai kurių duomenų trūksta, jie paslėpti arba riboti."
+    },
+    "causeScope": {
+        "message": "Pradinis dokumento įkėlimas; ne naujas matavimas atkūrus iš istorijos."
     }
 }

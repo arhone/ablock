@@ -1154,5 +1154,71 @@
     },
     "auditDetailsPartial": {
         "message": "Hanya pemerhatian yang tersedia dipaparkan."
+    },
+    "causeElement": {
+        "message": "Elemen"
+    },
+    "causeText": {
+        "message": "Blok teks"
+    },
+    "causeLoadDelay": {
+        "message": "Kelewatan muatan sumber"
+    },
+    "causeLoadDuration": {
+        "message": "Muatan selepas bait pertama"
+    },
+    "causeRenderDelay": {
+        "message": "Kelewatan pemaparan"
+    },
+    "causeLongest": {
+        "message": "Fasa terpanjang"
+    },
+    "causeResource": {
+        "message": "Sumber imej"
+    },
+    "causeImageHints": {
+        "message": "Atribut semasa"
+    },
+    "causePreload": {
+        "message": "Pramuat sepadan semasa"
+    },
+    "causeRedirect": {
+        "message": "Ubah hala"
+    },
+    "causeDns": {
+        "message": "DNS"
+    },
+    "causeConnection": {
+        "message": "Sambungan (termasuk TLS)"
+    },
+    "causeTls": {
+        "message": "TLS (bahagian sambungan)"
+    },
+    "causeRequestWait": {
+        "message": "Permintaan dan menunggu respons"
+    },
+    "causeUnaccounted": {
+        "message": "Selang tidak dikaitkan"
+    },
+    "causeWorker": {
+        "message": "Service worker (tanpa permintaan dalaman)"
+    },
+    "causeInterim": {
+        "message": "Respons sementara (kod tidak diketahui)"
+    },
+    "causeFinalHeaders": {
+        "message": "Pengepala akhir (dari mula navigasi)"
+    },
+    "causeServerTiming": {
+        "message": "Server-Timing (diisytiharkan pelayan)"
+    },
+    "causeSpecialNavigation": {
+        "message": "Prarender atau navigasi sejarah: fasa tidak dibina semula."
+    },
+    "causeLimited": {
+        "message": "Sesetengah butiran tiada, tersembunyi atau terhad."
+    },
+    "causeScope": {
+        "message": "Muatan asal dokumen; bukan ukuran baharu selepas pemulihan sejarah."
     }
 }
