@@ -1211,8 +1211,9 @@ function renderAudit(audit, server, extended, info, companies) {
         row('auditCustom:CSP, X-Frame-Options, Permissions-Policy…', t(extended ? 'serverReload' : 'serverExtended'), 'none');
     } else {
         const headers = server.headers;
-        // Каждый заголовок CSP (повторы склеены через запятую) и <meta> — отдельная политика, браузер применяет все
-        const policies = [...(headers['content-security-policy'] || '').split(','), audit?.security.csp].filter((policy) => policy?.trim());
+        // Каждый заголовок CSP (повторы склеены через запятую) и каждый <meta> — отдельная политика, браузер применяет все
+        const policies = [...(headers['content-security-policy'] || '').split(','), ...(audit?.security.csp || [])]
+            .filter((policy) => policy.trim());
         const csp = policies.length > 0;
         // 'unsafe-inline' без nonce и hash разрешает любой встроенный скрипт — от XSS такая политика не спасает.
         // Слабо, только если слабы все политики, ограничивающие скрипты: строгая перекрывает слабую

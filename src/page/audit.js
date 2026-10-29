@@ -304,7 +304,9 @@
         },
         a11y,
         security: {
-            csp: document.querySelector('meta[http-equiv="Content-Security-Policy" i]')?.content || '',
+            // Каждый <meta> CSP — отдельная политика, браузер применяет все
+            csp: [...document.querySelectorAll('meta[http-equiv="Content-Security-Policy" i]')]
+                .map((meta) => meta.content).filter(Boolean),
             securityTxt: typeof securityTxt === 'string' && /contact\s*:/i.test(securityTxt),
             // Cookie входа, которые видит JavaScript (без HttpOnly), — по названию, это догадка.
             // CSRF-токены JavaScript читает по замыслу, а сессии аналитики и сервисов (Hotjar, Amplitude, Google,
