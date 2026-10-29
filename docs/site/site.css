@@ -49,7 +49,7 @@ body {
     font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 a { color: var(--on-text); }
-a:focus-visible, .btn:focus-visible { outline: 3px solid var(--on); outline-offset: 3px; }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--on-text); outline-offset: 3px; }
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
 header.top { display: flex; align-items: center; gap: 24px; padding: 18px 0; }
