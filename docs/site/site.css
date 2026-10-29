@@ -149,3 +149,12 @@ a { overflow-wrap: anywhere; }
     .eyebrow { border-radius: 12px; }
     .btn { padding-left: 16px; padding-right: 16px; }
 }
+
+/* Подробная страница приватности: стили ограничены текстовой областью. */
+.prose h2 { margin-top: 48px; scroll-margin-top: 24px; }
+.prose h3 { font-size: 22px; line-height: 1.3; margin: 28px 0 12px; }
+.prose dt { font-weight: 700; margin-top: 20px; }
+.prose dd { margin: 6px 0 0; }
+.prose code { font-size: 0.9em; overflow-wrap: anywhere; }
+.prose .lead { max-width: 42em; }
+.privacy-nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 28px 0; }
