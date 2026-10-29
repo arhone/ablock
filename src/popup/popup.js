@@ -594,13 +594,20 @@ async function acceptAudit(tabId, injection, info) {
         || !Number.isFinite(context.timeOrigin) || context.timeOrigin !== info.timeOrigin) {
         return null;
     }
+    let timer;
     try {
-        const [current] = await chrome.scripting.executeScript({
-            target: {tabId}, func: () => performance.timeOrigin, injectImmediately: true
-        });
+        // 400 мс дают проверке время на короткую занятость страницы, но не задерживают весь отчёт надолго.
+        const [current] = await Promise.race([
+            chrome.scripting.executeScript({
+                target: {tabId}, func: () => performance.timeOrigin, injectImmediately: true
+            }),
+            new Promise((resolve) => { timer = setTimeout(() => resolve([]), 400); })
+        ]);
         return current?.documentId === injection.documentId && current.result === context.timeOrigin ? audit : null;
     } catch {
         return null;
+    } finally {
+        clearTimeout(timer);
     }
 }
 
