@@ -1904,7 +1904,8 @@ function showDone(button, key) {
 
 /**
  * Соцсети языка окна в меню «Поделиться» — значки из шаблона #networks по порядку NETWORKS_BY_LANG.
- * Ссылка пересобирается при нажатии: текст к этому времени мог измениться
+ * Ссылка пересобирается перед любым её использованием (нажатие, средняя кнопка, контекстное меню, фокус):
+ * текст к этому времени мог измениться — оценку пересчитывают, когда страница догрузилась
  * @param {Element} box .networks меню
  * @param {function(boolean): string} getText текст; true — короткий (лимит X) или нужна только первая строка
  * @param {function(Object): string} [hint] вторая строка подсказки значка
@@ -1922,7 +1923,9 @@ function setupNetworks(box, getText, hint = () => '') {
             link.href = network.url(STORE_URL, network.title ? text.split('\n')[0] : text);
         };
         update();
-        link.addEventListener('click', update);
+        for (const type of ['pointerdown', 'focus', 'contextmenu', 'auxclick', 'click']) {
+            link.addEventListener(type, update);
+        }
         box.append(link);
     }
 }
@@ -2105,8 +2108,9 @@ function setupExtensionShare() {
  */
 async function renderNotices(extended, stats) {
     // Хранилище не прочиталось — просьб нет, но расширенный режим или статистика видны
-    const seen = await chrome.storage.local.get(['aBlockInstalled', 'aBlockRated', 'aBlockAsked'])
-        .catch(() => ({}));
+    const stored = await chrome.storage.local.get(['aBlockInstalled', 'aBlockRated', 'aBlockAsked'])
+        .catch(() => null);
+    const seen = stored || {};
     const days = (time) => time ? (Date.now() - time) / 86400000 : 0;
     const cards = [
         ['rate', () => !seen.aBlockRated && days(seen.aBlockInstalled) >= RATE_DAYS],
@@ -2148,14 +2152,15 @@ async function renderNotices(extended, stats) {
     once('rate', STORE_URL, 'aBlockRated');
     once('ask', DONATE_URL, 'aBlockAsked');
     // Палец вверх в статистике — та же оценка в магазине: просьба оценить после него не появится.
-    // Время первой оценки не переписываем — от него считается просьба поддержать
+    // Время первой оценки не переписываем — от него считается просьба поддержать; хранилище не прочиталось —
+    // не пишем вовсе: оценка могла уже быть. Магазин открывается, даже если запись не удалась
     const rate = document.getElementById('stats-rate');
     rate.href = STORE_URL;
     rate.addEventListener('click', async (event) => {
         event.preventDefault();
-        if (!seen.aBlockRated) {
+        if (stored && !seen.aBlockRated) {
             seen.aBlockRated = Date.now();
-            await chrome.storage.local.set({aBlockRated: seen.aBlockRated});
+            await chrome.storage.local.set({aBlockRated: seen.aBlockRated}).catch(() => null);
         }
         chrome.tabs.create({url: STORE_URL});
     });

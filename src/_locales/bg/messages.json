@@ -435,10 +435,10 @@
         }
     },
     "statsRate": {
-        "message": "Оценете ABlock в Chrome Web Store"
+        "message": "Оцени ABlock в Chrome Web Store"
     },
     "statsShare": {
-        "message": "Споделете връзка към ABlock"
+        "message": "Сподели връзка към ABlock"
     },
     "copyLink": {
         "message": "Копирай връзката"
