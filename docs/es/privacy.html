@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad — ABlock</title>
+<meta name="description" content="Qué permisos usa ABlock, qué guarda en el navegador y qué solicitudes hace al analizar un sitio.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://ablock.arh.one/es/privacy.html">
+<link rel="alternate" hreflang="en" href="https://ablock.arh.one/privacy.html">
+<link rel="alternate" hreflang="es" href="https://ablock.arh.one/es/privacy.html">
+<link rel="alternate" hreflang="pt-BR" href="https://ablock.arh.one/pt-br/privacy.html">
+<link rel="alternate" hreflang="de" href="https://ablock.arh.one/de/privacy.html">
+<link rel="alternate" hreflang="ru" href="https://ablock.arh.one/ru/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://ablock.arh.one/privacy.html">
+<meta property="og:url" content="https://ablock.arh.one/es/privacy.html">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image:alt" content="Informe de ABlock sobre ya.ru">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Privacidad — ABlock">
+<meta property="og:description" content="Qué permisos usa ABlock, qué guarda en el navegador y qué solicitudes hace al analizar un sitio.">
+<meta property="og:image" content="https://ablock.arh.one/site/img/report-es.webp">
+<link rel="icon" href="../site/img/ablock-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../site/img/ablock-128.png">
+<link rel="stylesheet" href="../site/site.css">
+</head>
+<body>
+<div class="wrap">
+    <header class="top">
+        <a class="brand" href="./"><img class="logo" src="../site/img/ablock-128.png" width="32" height="32" alt="">ABlock</a>
+        <details class="language">
+            <summary aria-label="Idioma: Español">Español</summary>
+            <nav aria-label="Idioma">
+                <a lang="en" hreflang="en" href="../privacy.html">English</a>
+                <span lang="es" aria-current="page">Español</span>
+                <a lang="pt-BR" hreflang="pt-BR" href="../pt-br/privacy.html">Português (Brasil)</a>
+                <a lang="de" hreflang="de" href="../de/privacy.html">Deutsch</a>
+                <a lang="ru" hreflang="ru" href="../ru/privacy.html">Русский</a>
+            </nav>
+        </details>
+    </header>
+</div>
+<main class="wrap prose">
+    <h1>Privacidad</h1>
+    <p class="lead">ABlock procesa los datos de los sitios en el navegador. Aquí se explica qué datos necesita la extensión, dónde se guardan y cuándo se realizan solicitudes de red.</p>
+    <nav class="privacy-nav" aria-label="En esta página">
+        <a href="#permissions">Permisos</a>
+        <a href="#storage">Datos en el navegador</a>
+        <a href="#requests">Solicitudes</a>
+        <a href="#links">Enlaces externos</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <h2 id="permissions">Permisos y acceso a sitios</h2>
+    <p>Los permisos obligatorios se indican en el manifiesto de la extensión:</p>
+    <dl>
+        <dt><code>declarativeNetRequest</code></dt>
+        <dd>Bloquea anuncios, rastreadores y direcciones peligrosas mediante reglas incluidas en la extensión. Para los sitios donde desactivas la protección se crea una regla de excepción.</dd>
+        <dt><code>scripting</code></dt>
+        <dd>Inserta scripts y CSS para eliminar anuncios, ocultar banners y obtener datos para el informe: tecnologías, carga, marcado y otros indicadores de la página.</dd>
+        <dt><code>activeTab</code></dt>
+        <dd>Accede a la pestaña actual al abrir la ventana de la extensión para leer la dirección y obtener datos de la página para el informe.</dd>
+        <dt><code>storage</code></dt>
+        <dd>Guarda ajustes, excepciones, notas y estadísticas en el navegador. Más detalles a continuación.</dd>
+        <dt>Acceso a sitios concretos</dt>
+        <dd>Plataformas de vídeo y redes sociales: YouTube, VK, OK y otras. Los scripts y estilos eliminan anuncios de los reproductores, feeds y páginas de estos sitios.</dd>
+    </dl>
+    <p>Para elaborar el informe, ABlock lee en el navegador las cookies de la página accesibles a JavaScript (sin HttpOnly). Detecta tecnologías del sitio mediante indicios como <code>PHPSESSID</code> y <code>wordpress_</code>. Para el análisis de seguridad busca hasta tres nombres de cookies que parezcan estar relacionados con el inicio de sesión. Es una suposición basada en el nombre. La extensión no guarda los valores de las cookies ni los transmite a ningún destino.</p>
+    <h3>Permisos opcionales</h3>
+    <p>Al activar el modo ampliado, ABlock solicita <code>webRequest</code> y acceso a todas las direcciones (<code>&lt;all_urls&gt;</code>). Así puede obtener la IP y determinados encabezados de respuesta del servidor, contar formatos de imagen y registrar solicitudes bloqueadas. El acceso a todos los sitios también permite ocultar avisos de cookies y huecos de anuncios, y ampliar el búfer de información sobre los recursos cargados de la página.</p>
+    <p>El modo ampliado se desactiva con el botón situado al final del panel de la nota desplegado. La extensión retira entonces ambos permisos. Desactivar el modo no elimina por sí solo las estadísticas guardadas.</p>
+    <p><code>browsingData</code> se solicita por separado la primera vez que usas la papelera «Borrar datos del sitio». Tras la confirmación, ABlock elimina las cookies, caché, Cache Storage, sistemas de archivos, IndexedDB, localStorage, service workers y WebSQL del sitio actual, y recarga la pestaña sin caché. Para el almacenamiento se incluyen las direcciones HTTP y HTTPS con y sin <code>www.</code>; el navegador elimina las cookies del dominio. Esto puede cerrar tu sesión en el sitio.</p>
+
+    <h2 id="storage">Qué se guarda en el navegador</h2>
+    <p>La extensión usa <code>chrome.storage.local</code> para los siguientes datos. El código no usa <code>chrome.storage.sync</code>: la extensión no envía estos datos a la sincronización del navegador.</p>
+    <dl>
+        <dt>Ajustes de protección</dt>
+        <dd><code>aBlockStorage</code>: si la protección está activada (<code>status</code>); <code>aBlockSettings</code>: el ajuste para ocultar avisos de cookies (<code>cookies</code>); <code>aBlockAllowed</code>: la lista de dominios con la protección desactivada.</dd>
+        <dt>Idioma y apariencia</dt>
+        <dd><code>aBlockLang</code>: el idioma elegido para la ventana; <code>aBlockTheme</code>: el tema elegido; <code>aBlockDark</code>: un indicador de tema oscuro para los colores del contador del icono de la extensión.</dd>
+        <dt>Notas</dt>
+        <dd><code>aBlockNotes</code>: tus textos, asociados al nombre del sitio sin el <code>www.</code> inicial.</dd>
+        <dt>Estadísticas globales</dt>
+        <dd><code>aBlockStats</code>: tres números: cantidad de solicitudes bloqueadas (<code>requests</code>), volumen aproximado de datos ahorrados (<code>bytes</code>) y momento de inicio del recuento (<code>since</code>). El ahorro se estima según el tamaño medio de las solicitudes de cada tipo. Estas estadísticas globales no contienen una lista de sitios visitados.</dd>
+        <dt>Marcas de tiempo de los recordatorios</dt>
+        <dd><code>aBlockInstalled</code>: momento de la instalación o, para quienes ya tenían la extensión, de la primera actualización con esta función. <code>aBlockRated</code> y <code>aBlockAsked</code>: momento en que se pulsó un botón o se cerró una petición de valorar la extensión o apoyar el proyecto. Son marcas de la presentación de las peticiones, no confirmaciones de una valoración o un pago.</dd>
+    </dl>
+    <h3>Datos temporales</h3>
+    <p>En <code>chrome.storage.session</code>, el modo ampliado guarda <code>aBlockTabs</code>: por pestaña, el nombre del sitio, IP del servidor, determinados encabezados de respuesta, contadores de formatos de imagen, estimación de datos ahorrados y contadores de direcciones bloqueadas. Para estas últimas se registran el dominio y hasta 40 caracteres de la ruta sin parámetros de consulta; un máximo de 300 registros por pestaña. Los datos de la pestaña se eliminan al cerrarla y se sustituyen al recibir la respuesta de una nueva página principal. El almacenamiento de sesión dura hasta que se cierra el navegador.</p>
+    <p><code>aBlockClear</code>, en el mismo almacenamiento, es una orden temporal de limpiar un sitio: ID de la pestaña, URL completa y momento del clic. Es necesaria si la ventana de la extensión se cierra mientras se solicita el permiso. Si se concede, la orden se elimina y se ejecuta solo si han pasado menos de dos minutos; si se deniega, se elimina.</p>
+    <h3>Cómo cambiar o eliminar los datos</h3>
+    <p>Los ajustes de protección, idioma y tema se cambian en la ventana de la extensión. Para quitar un sitio de las excepciones, activa la protección en él. Para eliminar una nota, ábrela, borra el texto y pulsa Enter para guardar.</p>
+    <p>Actualmente no hay un botón en la interfaz para eliminar todos los ajustes y estadísticas. La papelera «Borrar datos del sitio» elimina los datos del propio sitio, no los ajustes de ABlock. Para eliminar todos los datos de la extensión, desinstala ABlock desde la página de extensiones del navegador: <code>chrome://extensions</code> en Chrome o <code>browser://extensions</code> en Yandex Browser.</p>
+
+    <h2 id="requests">Qué solicitudes hace la extensión</h2>
+    <p>Al abrir la ventana de ABlock se inicia un análisis de la página. Se solicitan tres archivos al sitio abierto: <code>/robots.txt</code>, <code>/llms.txt</code> y <code>/.well-known/security.txt</code>. Sus direcciones se construyen a partir de la dirección del sitio abierto. Sirven para conocer las reglas para buscadores y bots de IA y la existencia de un contacto de seguridad. Las solicitudes se hacen sin credenciales (<code>credentials: omit</code>), tienen un tiempo de espera de dos segundos y siguen las redirecciones del servidor, incluso a otra dirección.</p>
+    <p>Las demás llamadas a <code>fetch</code> leen archivos de la extensión instalada: traducciones, directorios de empresas y alojamientos, descripciones de conjuntos de reglas, filtros cosméticos propios y de terceros y, al crear la imagen del informe, sus imágenes locales y el fondo. No se descargan de los servidores del proyecto. La IP del servidor se obtiene de los eventos del navegador y el alojamiento se identifica mediante una base de datos incluida en la extensión.</p>
+    <p>El script para VK intercepta el <code>fetch</code> de la página: las comprobaciones del bloqueador mediante HEAD a cuatro direcciones de publicidad y contadores reciben una respuesta de éxito artificial; las demás llamadas se pasan a la función original del sitio. Se procesan las solicitudes del sitio; no se envían datos de la extensión.</p>
+    <p>No hay otras solicitudes de red independientes en el código de la extensión: no consulta DoH, whois, API de terceros ni servicios de analíticas, ni envía ajustes, notas o estadísticas a un servidor. No hay llamadas a <code>XMLHttpRequest</code>. Las listas de filtros y la base de datos de alojamientos se incluyen en la extensión.</p>
+
+    <h2 id="links">Enlaces y «Compartir»</h2>
+    <p>Chrome Web Store, Boosty, Telegram y GitHub se abren al pulsar sus enlaces. Son visitas a sitios externos, no transferencias de datos de ABlock en segundo plano.</p>
+    <p>El menú «Compartir» puede abrir el servicio que elijas. La selección depende del idioma de la interfaz; en español incluye, por ejemplo, Telegram, WhatsApp y X. El enlace incorpora la dirección de la extensión en la tienda y el texto del informe o la descripción de la extensión, según la acción y el servicio elegidos. Algunos servicios solo reciben el enlace. El informe puede contener el nombre del sitio analizado, la nota, datos del servidor y observaciones del análisis.</p>
+    <p>También puedes copiar la imagen o el texto del informe, guardar la imagen como archivo o enviarla con el menú «Compartir» del sistema, si está disponible en el navegador. Tú eliges el destinatario. Los servicios externos correspondientes procesan las visitas y los materiales que envías.</p>
+
+    <h2 id="contact">Preguntas sobre privacidad</h2>
+    <p>Escribe al <a href="https://t.me/ablockinfo">Telegram del proyecto</a> o <a href="https://github.com/arhone/ablock/issues">abre un issue en GitHub</a>.</p>
+    <p><a href="./">Inicio</a></p>
+</main>
+<footer>
+    <div class="wrap">
+        <span>ABlock</span>
+        <nav aria-label="Enlaces">
+            <a href="https://github.com/arhone/ablock">GitHub</a>
+            <a href="https://t.me/ablockinfo">Telegram</a>
+            <a href="https://boosty.to/a.arh/donate">Apoya el proyecto</a>
+            <a href="privacy.html">Privacidad</a>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>

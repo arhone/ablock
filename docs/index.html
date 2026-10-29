@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ABlock — Ad Blocker &amp; Site Checker for Chrome and Yandex Browser</title>
+<meta name="description" content="Blocks ads and trackers so pages load faster and use less data. Checks any site's speed, security and privacy.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://ablock.arh.one/">
+<link rel="alternate" hreflang="en" href="https://ablock.arh.one/">
+<link rel="alternate" hreflang="es" href="https://ablock.arh.one/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://ablock.arh.one/pt-br/">
+<link rel="alternate" hreflang="de" href="https://ablock.arh.one/de/">
+<link rel="alternate" hreflang="ru" href="https://ablock.arh.one/ru/">
+<link rel="alternate" hreflang="x-default" href="https://ablock.arh.one/">
+<meta property="og:url" content="https://ablock.arh.one/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="ABlock report for ya.ru">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ABlock — Ad Blocker &amp; Site Checker">
+<meta property="og:description" content="Blocks ads and trackers and shows, in one click, how fast, safe and private the site you are on is.">
+<meta property="og:image" content="https://ablock.arh.one/site/img/report-en.webp">
+<link rel="icon" href="site/img/ablock-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="site/img/ablock-128.png">
+<link rel="stylesheet" href="site/site.css">
+</head>
+<body>
+<div class="hero">
+    <div class="wrap">
+        <header class="top">
+            <a class="brand" href="./"><img class="logo" src="site/img/ablock-128.png" width="32" height="32" alt="">ABlock</a>
+            <nav class="menu" aria-label="Sections">
+                <a href="#block">Blocking</a>
+                <a href="#check">Site check</a>
+                <a href="#privacy">Privacy</a>
+                <a href="https://github.com/arhone/ablock">GitHub</a>
+            </nav>
+            <details class="language">
+                <summary aria-label="Language: English">English</summary>
+                <nav aria-label="Language">
+                    <span lang="en" aria-current="page">English</span>
+                    <a lang="es" hreflang="es" href="es/">Español</a>
+                    <a lang="pt-BR" hreflang="pt-BR" href="pt-br/">Português (Brasil)</a>
+                    <a lang="de" hreflang="de" href="de/">Deutsch</a>
+                    <a lang="ru" hreflang="ru" href="ru/">Русский</a>
+                </nav>
+            </details>
+        </header>
+        <aside class="language-suggestion" id="language-suggestion" aria-label="Language suggestion" hidden>
+            <a id="language-suggestion-link"></a>
+            <button type="button" id="language-suggestion-close" aria-label="Dismiss language suggestion">×</button>
+        </aside>
+        <div class="hero-grid">
+            <div>
+                <span class="eyebrow">For Chrome and Yandex Browser</span>
+                <h1>No ads. <em>A report</em> for every site.</h1>
+                <p class="lead">ABlock blocks ads and trackers and shows, in one click, how fast, safe and private the site you are on is.</p>
+                <div class="cta">
+                    <a class="btn" href="https://chromewebstore.google.com/detail/cmbihlcgenpbmdkipolfghkplheignfe">Install from Chrome Web Store</a>
+                    <span class="btn-note">Free · open source · no accounts</span>
+                </div>
+            </div>
+            <figure class="report">
+                <img src="site/img/report-en.webp" width="720" height="1272" alt="ABlock report for ya.ru: HTTPS, HTTP/2, Brotli; Ads 4, Trackers 9; load time 0.8 s, page weight ≈674 kB; score 9.3 out of 10: privacy 8.5, speed 9.7, security 10, SEO 9.2, accessibility 9.3; server Yandex, built with React">
+                <figcaption><b>Site report</b>as an image or text — for colleagues, contractors and chats</figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+
+<main>
+    <section id="block">
+        <div class="wrap">
+            <h2>Two tools in one extension</h2>
+            <p class="sub">ABlock blocks unwanted content in the background. Open the extension to see how the current site works. Useful for visitors, site owners and developers alike.</p>
+            <div class="two">
+                <div class="card">
+                    <h3><span class="dot"></span>Blocking</h3>
+                    <ul>
+                        <li>Ads: Yandex Direct, Yandex Advertising Network, Adfox, Google Ads and international networks.</li>
+                        <li>Trackers and counters: Yandex Metrica, Google Analytics, LiveInternet, Mail.ru.</li>
+                        <li>Ads in the player and feed on YouTube, VK and OK.</li>
+                        <li>Known scam and phishing sites.</li>
+                        <li>Cookie consent pop-ups.</li>
+                        <li>Regional filter lists turn on automatically based on your browser's languages.</li>
+                    </ul>
+                    <p class="note">No exemptions or “acceptable ads”. The browser blocks content using built-in rules, so the extension doesn't slow down page loading.</p>
+                </div>
+                <div class="card" id="check">
+                    <h3><span class="dot"></span>Site check</h3>
+                    <ul>
+                        <li>Score out of 10: privacy, speed, security, SEO and accessibility.</li>
+                        <li>Protocol, load time, page weight, compression and third-party domains.</li>
+                        <li>Who collects data on the page and what was blocked.</li>
+                        <li>Site engine, frameworks and libraries, hosting and server IP.</li>
+                        <li>Core Web Vitals, security headers and rules for search engines and AI bots.</li>
+                        <li>Report as an image or text.</li>
+                    </ul>
+                    <p class="note">Metrics are measured in your browser on your network — real data, with no emulation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <h2>What goes into the score</h2>
+            <p class="sub">Below the shield is the “Site score” bar. Click it to open the report with the overall score and category scores. Tooltips explain how they are calculated.</p>
+            <div class="groups">
+                <div class="group"><div class="bar"><i></i><i></i><i></i><i class="w"></i><i class="e"></i></div><b>Privacy</b><span>Tracking companies and third-party domains</span></div>
+                <div class="group"><div class="bar"><i></i><i></i><i class="w"></i><i class="e"></i><i class="e"></i></div><b>Speed</b><span>LCP, page weight, CLS, INP, protocol, compression</span></div>
+                <div class="group"><div class="bar"><i></i><i></i><i></i><i></i><i class="e"></i></div><b>Security</b><span>HTTPS, HSTS, CSP, mixed content</span></div>
+                <div class="group"><div class="bar"><i></i><i></i><i></i><i></i><i></i></div><b>SEO</b><span>title, description, h1, indexing</span></div>
+                <div class="group"><div class="bar"><i></i><i></i><i></i><i class="w"></i><i class="e"></i></div><b>Accessibility</b><span>lang, alt, field labels, zoom</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="privacy">
+        <div class="wrap privacy">
+            <img class="big logo" src="site/img/ablock-128.png" width="96" height="96" alt="">
+            <div>
+                <h2>Your data stays in your browser</h2>
+                <p class="sub">The extension collects nothing and sends nothing away. All data is calculated and stored in your browser; server IPs are looked up in a database inside the extension.</p>
+                <ul class="facts">
+                    <li>No analytics</li>
+                    <li>No accounts</li>
+                    <li>No servers of our own</li>
+                    <li>Open source</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="final">
+        <div class="wrap">
+            <h2>Try it on your favourite site</h2>
+            <p class="sub">If blocking causes a site to stop working properly, you can turn protection off for that site only.</p>
+            <div class="cta">
+                <a class="btn" href="https://chromewebstore.google.com/detail/cmbihlcgenpbmdkipolfghkplheignfe">Install ABlock</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="wrap">
+        <span>ABlock</span>
+        <nav aria-label="Links">
+            <a href="https://github.com/arhone/ablock">GitHub</a>
+            <a href="https://t.me/ablockinfo">Telegram</a>
+            <a href="https://boosty.to/a.arh/donate">Support the project</a>
+            <a href="privacy.html">Privacy</a>
+        </nav>
+    </div>
+</footer>
+<script>
+(() => {
+    const key = 'ablockLanguageSuggestionDismissed';
+    try {
+        if (localStorage.getItem(key) === '1') return;
+    } catch { /* The suggestion also works when storage is unavailable. */ }
+    const versions = {
+        ru: ['ru/', 'Есть на русском'],
+        es: ['es/', 'Disponible en español'],
+        pt: ['pt-br/', 'Disponível em português do Brasil'],
+        de: ['de/', 'Auch auf Deutsch verfügbar']
+    };
+    for (const language of navigator.languages || [navigator.language]) {
+        const code = (language || '').toLowerCase().split('-')[0];
+        if (code === 'en') break;
+        if (!versions[code]) continue;
+        const banner = document.getElementById('language-suggestion');
+        const link = document.getElementById('language-suggestion-link');
+        [link.href, link.textContent] = versions[code];
+        link.lang = code === 'pt' ? 'pt-BR' : code;
+        link.hreflang = link.lang;
+        banner.hidden = false;
+        document.getElementById('language-suggestion-close').addEventListener('click', () => {
+            banner.hidden = true;
+            try { localStorage.setItem(key, '1'); } catch { /* Closing still works. */ }
+        });
+        break;
+    }
+})();
+</script>
+</body>
+</html>

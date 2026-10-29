@@ -158,3 +158,25 @@ a { overflow-wrap: anywhere; }
 .prose code { font-size: 0.9em; overflow-wrap: anywhere; }
 .prose .lead { max-width: 42em; }
 .privacy-nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 28px 0; }
+
+/* Выбор языка доступен без JavaScript на каждой странице. */
+header.top { flex-wrap: wrap; }
+.language { position: relative; margin-left: auto; font-size: 14px; }
+.language summary { cursor: pointer; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); }
+.language summary:focus-visible, .language-suggestion button:focus-visible { outline: 3px solid var(--on-text); outline-offset: 3px; }
+.language nav { position: absolute; top: calc(100% + 8px); right: 0; z-index: 2; width: min(240px, calc(100vw - 32px)); padding: 8px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); box-shadow: 0 10px 30px -10px rgba(10, 20, 40, 0.35); }
+.language nav a, .language nav span { display: block; padding: 8px 12px; border-radius: 6px; }
+.language nav a { text-decoration: none; }
+.language nav a:hover { background: var(--tint); }
+.language [aria-current] { color: var(--text); background: var(--tint); font-weight: 700; }
+.language-suggestion { display: flex; align-items: center; gap: 16px; margin: 8px 0; padding: 10px 14px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); font-size: 15px; }
+.language-suggestion[hidden] { display: none; }
+.language-suggestion button { margin-left: auto; flex: 0 0 36px; min-height: 36px; border: 1px solid var(--border); border-radius: 8px; background: var(--tint); color: var(--text); font: inherit; font-size: 22px; cursor: pointer; }
+@media (max-width: 1000px) {
+    nav.menu { order: 1; flex-basis: 100%; flex-wrap: wrap; margin-left: 0; }
+}
+@media (max-width: 600px) {
+    header.top { gap: 12px; }
+    .language { max-width: calc(100% - 130px); }
+    .language summary { overflow-wrap: anywhere; }
+}
