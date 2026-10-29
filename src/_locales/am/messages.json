@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "መንቀሳቀስ"
     },
-    "causeClsRects": {
-        "message": "በፊት → በኋላ (x፣ y፣ ስፋት፣ ቁመት)፣ px"
-    },
     "causeClsUnavailable": {
         "message": "አባሉ አይገኝም"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "እነዚህ አባላት መንስኤ ሳይሆኑ የተጎዱ ሊሆኑ ይችላሉ። ያሉት ምንጮች ሙሉውን CLS ላያብራሩ ይችላሉ።"
+    },
+    "causeClsParagraph": {
+        "message": "አንቀጽ"
+    },
+    "causeClsHeading": {
+        "message": "ርዕስ"
+    },
+    "causeClsBlock": {
+        "message": "ብሎክ"
+    },
+    "causeClsLink": {
+        "message": "አገናኝ"
+    },
+    "causeClsButton": {
+        "message": "አዝራር"
+    },
+    "causeClsFrame": {
+        "message": "የተከተተ ፍሬም"
+    },
+    "causeClsList": {
+        "message": "ዝርዝር"
+    },
+    "causeClsTable": {
+        "message": "ሰንጠረዥ"
+    },
+    "causeClsBefore": {
+        "message": "በፊት"
+    },
+    "causeClsAfter": {
+        "message": "በኋላ"
+    },
+    "causeClsCapture": {
+        "message": "መስኮቱ ሲከፈት በዚህ ገጽ ላይ የተከማቹ መንቀሳቀሶች፤ በታሪክ ተመልሶ ከመጣ በኋላ የተለየ መለኪያ የለም።"
     }
 }

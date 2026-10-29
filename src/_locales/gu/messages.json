@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "ખસેડો"
     },
-    "causeClsRects": {
-        "message": "પહેલાં → પછી (x, y, પહોળાઈ, ઊંચાઈ), px"
-    },
     "causeClsUnavailable": {
         "message": "તત્વ ઉપલબ્ધ નથી"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "આ તત્વો કારણને બદલે અસરગ્રસ્ત હોઈ શકે છે. ઉપલબ્ધ સ્ત્રોતો સમગ્ર CLS સમજાવે તે જરૂરી નથી."
+    },
+    "causeClsParagraph": {
+        "message": "ફકરો"
+    },
+    "causeClsHeading": {
+        "message": "શીર્ષક"
+    },
+    "causeClsBlock": {
+        "message": "બ્લોક"
+    },
+    "causeClsLink": {
+        "message": "લિંક"
+    },
+    "causeClsButton": {
+        "message": "બટન"
+    },
+    "causeClsFrame": {
+        "message": "એમ્બેડ કરેલી ફ્રેમ"
+    },
+    "causeClsList": {
+        "message": "યાદી"
+    },
+    "causeClsTable": {
+        "message": "કોષ્ટક"
+    },
+    "causeClsBefore": {
+        "message": "પહેલાં"
+    },
+    "causeClsAfter": {
+        "message": "પછી"
+    },
+    "causeClsCapture": {
+        "message": "વિન્ડો ખોલતી વખતે વર્તમાન પૃષ્ઠ પર એકત્ર થયેલા ખસેડા; ઇતિહાસથી પાછા ફર્યા પછી અલગ માપન નથી."
     }
 }

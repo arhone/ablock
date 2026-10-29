@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "תזוזה"
     },
-    "causeClsRects": {
-        "message": "לפני → אחרי (x, y, רוחב, גובה), px"
-    },
     "causeClsUnavailable": {
         "message": "הרכיב אינו זמין"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "רכיבים אלה עשויים להיות מושפעים ולא הגורם. המקורות הזמינים אינם בהכרח מסבירים את כל ה-CLS."
+    },
+    "causeClsParagraph": {
+        "message": "פסקה"
+    },
+    "causeClsHeading": {
+        "message": "כותרת"
+    },
+    "causeClsBlock": {
+        "message": "בלוק"
+    },
+    "causeClsLink": {
+        "message": "קישור"
+    },
+    "causeClsButton": {
+        "message": "כפתור"
+    },
+    "causeClsFrame": {
+        "message": "מסגרת מוטמעת"
+    },
+    "causeClsList": {
+        "message": "רשימה"
+    },
+    "causeClsTable": {
+        "message": "טבלה"
+    },
+    "causeClsBefore": {
+        "message": "לפני"
+    },
+    "causeClsAfter": {
+        "message": "אחרי"
+    },
+    "causeClsCapture": {
+        "message": "תזוזות שנצברו בדף הנוכחי עד פתיחת החלון; אין מדידה נפרדת לאחר חזרה דרך ההיסטוריה."
     }
 }

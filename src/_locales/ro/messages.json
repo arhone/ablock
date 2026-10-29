@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Deplasare"
     },
-    "causeClsRects": {
-        "message": "Înainte → după (x, y, lățime, înălțime), px"
-    },
     "causeClsUnavailable": {
         "message": "Element indisponibil"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Aceste elemente pot fi afectate, fără a fi cauza. Sursele disponibile nu explică neapărat întregul CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Paragraf"
+    },
+    "causeClsHeading": {
+        "message": "Titlu"
+    },
+    "causeClsBlock": {
+        "message": "Bloc"
+    },
+    "causeClsLink": {
+        "message": "Link"
+    },
+    "causeClsButton": {
+        "message": "Buton"
+    },
+    "causeClsFrame": {
+        "message": "Cadru încorporat"
+    },
+    "causeClsList": {
+        "message": "Listă"
+    },
+    "causeClsTable": {
+        "message": "Tabel"
+    },
+    "causeClsBefore": {
+        "message": "Înainte"
+    },
+    "causeClsAfter": {
+        "message": "După"
+    },
+    "causeClsCapture": {
+        "message": "Deplasări acumulate pe această pagină la deschiderea ferestrei; fără măsurare separată după revenirea prin istoric."
     }
 }

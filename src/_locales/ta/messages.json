@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "இடமாற்றம்"
     },
-    "causeClsRects": {
-        "message": "முன் → பின் (x, y, அகலம், உயரம்), px"
-    },
     "causeClsUnavailable": {
         "message": "உறுப்பு கிடைக்கவில்லை"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "இந்த உறுப்புகள் காரணமாக இல்லாமல் பாதிக்கப்பட்டிருக்கலாம். கிடைக்கும் மூலங்கள் முழு CLS ஐ விளக்க வேண்டியதில்லை."
+    },
+    "causeClsParagraph": {
+        "message": "பத்தி"
+    },
+    "causeClsHeading": {
+        "message": "தலைப்பு"
+    },
+    "causeClsBlock": {
+        "message": "தொகுதி"
+    },
+    "causeClsLink": {
+        "message": "இணைப்பு"
+    },
+    "causeClsButton": {
+        "message": "பொத்தான்"
+    },
+    "causeClsFrame": {
+        "message": "உட்பொதிக்கப்பட்ட சட்டகம்"
+    },
+    "causeClsList": {
+        "message": "பட்டியல்"
+    },
+    "causeClsTable": {
+        "message": "அட்டவணை"
+    },
+    "causeClsBefore": {
+        "message": "முன்"
+    },
+    "causeClsAfter": {
+        "message": "பின்"
+    },
+    "causeClsCapture": {
+        "message": "சாளரத்தைத் திறக்கும்போது தற்போதைய பக்கத்தில் சேர்ந்த இடமாற்றங்கள்; வரலாறு வழியாகத் திரும்பிய பிறகு தனி அளவீடு இல்லை."
     }
 }

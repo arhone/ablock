@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Forskydning"
     },
-    "causeClsRects": {
-        "message": "Før → efter (x, y, bredde, højde), px"
-    },
     "causeClsUnavailable": {
         "message": "Elementet er utilgængeligt"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Disse elementer kan være berørt uden at være årsagen. Tilgængelige kilder forklarer ikke nødvendigvis hele CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Afsnit"
+    },
+    "causeClsHeading": {
+        "message": "Overskrift"
+    },
+    "causeClsBlock": {
+        "message": "Blok"
+    },
+    "causeClsLink": {
+        "message": "Link"
+    },
+    "causeClsButton": {
+        "message": "Knap"
+    },
+    "causeClsFrame": {
+        "message": "Indlejret ramme"
+    },
+    "causeClsList": {
+        "message": "Liste"
+    },
+    "causeClsTable": {
+        "message": "Tabel"
+    },
+    "causeClsBefore": {
+        "message": "Før"
+    },
+    "causeClsAfter": {
+        "message": "Efter"
+    },
+    "causeClsCapture": {
+        "message": "Forskydninger indsamlet på denne side, når pop op-vinduet åbnes; ingen separat måling efter tilbagevenden via historikken."
     }
 }

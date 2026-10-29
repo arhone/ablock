@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Desplaçament"
     },
-    "causeClsRects": {
-        "message": "Abans → després (x, y, amplada, alçada), px"
-    },
     "causeClsUnavailable": {
         "message": "Element no disponible"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Aquests elements poden estar afectats sense ser la causa. Les fonts disponibles no expliquen necessàriament tot el CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Paràgraf"
+    },
+    "causeClsHeading": {
+        "message": "Encapçalament"
+    },
+    "causeClsBlock": {
+        "message": "Bloc"
+    },
+    "causeClsLink": {
+        "message": "Enllaç"
+    },
+    "causeClsButton": {
+        "message": "Botó"
+    },
+    "causeClsFrame": {
+        "message": "Marc incrustat"
+    },
+    "causeClsList": {
+        "message": "Llista"
+    },
+    "causeClsTable": {
+        "message": "Taula"
+    },
+    "causeClsBefore": {
+        "message": "Abans"
+    },
+    "causeClsAfter": {
+        "message": "Després"
+    },
+    "causeClsCapture": {
+        "message": "Desplaçaments acumulats en aquesta pàgina en obrir la finestra; no hi ha cap mesurament separat després de tornar mitjançant l’historial."
     }
 }

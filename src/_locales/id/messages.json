@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Pergeseran"
     },
-    "causeClsRects": {
-        "message": "Sebelum → sesudah (x, y, lebar, tinggi), px"
-    },
     "causeClsUnavailable": {
         "message": "Elemen tidak tersedia"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Elemen ini mungkin terdampak, bukan penyebabnya. Sumber yang tersedia belum tentu menjelaskan seluruh CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Paragraf"
+    },
+    "causeClsHeading": {
+        "message": "Judul"
+    },
+    "causeClsBlock": {
+        "message": "Blok"
+    },
+    "causeClsLink": {
+        "message": "Tautan"
+    },
+    "causeClsButton": {
+        "message": "Tombol"
+    },
+    "causeClsFrame": {
+        "message": "Bingkai tersemat"
+    },
+    "causeClsList": {
+        "message": "Daftar"
+    },
+    "causeClsTable": {
+        "message": "Tabel"
+    },
+    "causeClsBefore": {
+        "message": "Sebelum"
+    },
+    "causeClsAfter": {
+        "message": "Sesudah"
+    },
+    "causeClsCapture": {
+        "message": "Pergeseran yang terkumpul di halaman ini saat popup dibuka; tidak ada pengukuran terpisah setelah kembali melalui riwayat."
     }
 }

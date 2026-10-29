@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "إزاحة"
     },
-    "causeClsRects": {
-        "message": "قبل → بعد (x، y، العرض، الارتفاع)، px"
-    },
     "causeClsUnavailable": {
         "message": "العنصر غير متاح"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "قد تتأثر هذه العناصر دون أن تكون السبب. لا تفسر المصادر المتاحة بالضرورة قيمة CLS بالكامل."
+    },
+    "causeClsParagraph": {
+        "message": "فقرة"
+    },
+    "causeClsHeading": {
+        "message": "عنوان"
+    },
+    "causeClsBlock": {
+        "message": "كتلة"
+    },
+    "causeClsLink": {
+        "message": "رابط"
+    },
+    "causeClsButton": {
+        "message": "زر"
+    },
+    "causeClsFrame": {
+        "message": "إطار مضمّن"
+    },
+    "causeClsList": {
+        "message": "قائمة"
+    },
+    "causeClsTable": {
+        "message": "جدول"
+    },
+    "causeClsBefore": {
+        "message": "قبل"
+    },
+    "causeClsAfter": {
+        "message": "بعد"
+    },
+    "causeClsCapture": {
+        "message": "الإزاحات المتراكمة في هذه الصفحة عند فتح النافذة؛ لا يوجد قياس منفصل بعد العودة عبر السجل."
     }
 }

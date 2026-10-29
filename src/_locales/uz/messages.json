@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Siljish"
     },
-    "causeClsRects": {
-        "message": "Oldin → keyin (x, y, kenglik, balandlik), px"
-    },
     "causeClsUnavailable": {
         "message": "Element mavjud emas"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Bu elementlar sabab emas, ta’sirlangan bo‘lishi mumkin. Mavjud manbalar butun CLSni tushuntirishi shart emas."
+    },
+    "causeClsParagraph": {
+        "message": "Xatboshi"
+    },
+    "causeClsHeading": {
+        "message": "Sarlavha"
+    },
+    "causeClsBlock": {
+        "message": "Blok"
+    },
+    "causeClsLink": {
+        "message": "Havola"
+    },
+    "causeClsButton": {
+        "message": "Tugma"
+    },
+    "causeClsFrame": {
+        "message": "Ichki freym"
+    },
+    "causeClsList": {
+        "message": "Ro‘yxat"
+    },
+    "causeClsTable": {
+        "message": "Jadval"
+    },
+    "causeClsBefore": {
+        "message": "Oldin"
+    },
+    "causeClsAfter": {
+        "message": "Keyin"
+    },
+    "causeClsCapture": {
+        "message": "Oyna ochilguncha joriy sahifada to‘plangan siljishlar; tarix orqali qaytgandan keyin alohida o‘lchov yo‘q."
     }
 }

@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Elmozdulás"
     },
-    "causeClsRects": {
-        "message": "Előtte → utána (x, y, szélesség, magasság), px"
-    },
     "causeClsUnavailable": {
         "message": "Az elem nem érhető el"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Ezek az elemek érintettek lehetnek anélkül, hogy az okot jelentenék. Az elérhető források nem feltétlenül magyarázzák a teljes CLS-t."
+    },
+    "causeClsParagraph": {
+        "message": "Bekezdés"
+    },
+    "causeClsHeading": {
+        "message": "Címsor"
+    },
+    "causeClsBlock": {
+        "message": "Blokk"
+    },
+    "causeClsLink": {
+        "message": "Hivatkozás"
+    },
+    "causeClsButton": {
+        "message": "Gomb"
+    },
+    "causeClsFrame": {
+        "message": "Beágyazott keret"
+    },
+    "causeClsList": {
+        "message": "Lista"
+    },
+    "causeClsTable": {
+        "message": "Táblázat"
+    },
+    "causeClsBefore": {
+        "message": "Előtte"
+    },
+    "causeClsAfter": {
+        "message": "Utána"
+    },
+    "causeClsCapture": {
+        "message": "Az ablak megnyitásáig ezen az oldalon összegyűlt elmozdulások; az előzményekből visszatérés után nincs külön mérés."
     }
 }

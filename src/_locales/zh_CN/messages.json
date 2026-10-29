@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "布局偏移"
     },
-    "causeClsRects": {
-        "message": "之前 → 之后（x、y、宽、高），px"
-    },
     "causeClsUnavailable": {
         "message": "元素不可用"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "这些元素可能是受影响者，而非原因。可用来源不一定能解释全部 CLS。"
+    },
+    "causeClsParagraph": {
+        "message": "段落"
+    },
+    "causeClsHeading": {
+        "message": "标题"
+    },
+    "causeClsBlock": {
+        "message": "区块"
+    },
+    "causeClsLink": {
+        "message": "链接"
+    },
+    "causeClsButton": {
+        "message": "按钮"
+    },
+    "causeClsFrame": {
+        "message": "嵌入框架"
+    },
+    "causeClsList": {
+        "message": "列表"
+    },
+    "causeClsTable": {
+        "message": "表格"
+    },
+    "causeClsBefore": {
+        "message": "之前"
+    },
+    "causeClsAfter": {
+        "message": "之后"
+    },
+    "causeClsCapture": {
+        "message": "打开弹窗时当前页面已累积的布局偏移；通过历史记录返回后不会单独测量。"
     }
 }

@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Verschiebung"
     },
-    "causeClsRects": {
-        "message": "Vorher → nachher (x, y, Breite, Höhe), px"
-    },
     "causeClsUnavailable": {
         "message": "Element nicht verfügbar"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Diese Elemente können betroffen sein, ohne die Ursache zu sein. Verfügbare Quellen erklären nicht unbedingt den gesamten CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Absatz"
+    },
+    "causeClsHeading": {
+        "message": "Überschrift"
+    },
+    "causeClsBlock": {
+        "message": "Block"
+    },
+    "causeClsLink": {
+        "message": "Link"
+    },
+    "causeClsButton": {
+        "message": "Schaltfläche"
+    },
+    "causeClsFrame": {
+        "message": "Eingebetteter Frame"
+    },
+    "causeClsList": {
+        "message": "Liste"
+    },
+    "causeClsTable": {
+        "message": "Tabelle"
+    },
+    "causeClsBefore": {
+        "message": "Vorher"
+    },
+    "causeClsAfter": {
+        "message": "Nachher"
+    },
+    "causeClsCapture": {
+        "message": "Bis zum Öffnen des Popups auf dieser Seite erfasste Verschiebungen; keine separate Messung nach der Rückkehr über den Verlauf."
     }
 }

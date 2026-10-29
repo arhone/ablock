@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "खिसकाव"
     },
-    "causeClsRects": {
-        "message": "पहले → बाद (x, y, चौड़ाई, ऊँचाई), px"
-    },
     "causeClsUnavailable": {
         "message": "तत्व उपलब्ध नहीं"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "ये तत्व कारण होने के बजाय प्रभावित हो सकते हैं। उपलब्ध स्रोत पूरे CLS की व्याख्या नहीं भी कर सकते हैं।"
+    },
+    "causeClsParagraph": {
+        "message": "अनुच्छेद"
+    },
+    "causeClsHeading": {
+        "message": "शीर्षक"
+    },
+    "causeClsBlock": {
+        "message": "ब्लॉक"
+    },
+    "causeClsLink": {
+        "message": "लिंक"
+    },
+    "causeClsButton": {
+        "message": "बटन"
+    },
+    "causeClsFrame": {
+        "message": "एम्बेड किया गया फ़्रेम"
+    },
+    "causeClsList": {
+        "message": "सूची"
+    },
+    "causeClsTable": {
+        "message": "तालिका"
+    },
+    "causeClsBefore": {
+        "message": "पहले"
+    },
+    "causeClsAfter": {
+        "message": "बाद"
+    },
+    "causeClsCapture": {
+        "message": "विंडो खोलते समय वर्तमान पृष्ठ पर संचित खिसकाव; इतिहास से लौटने के बाद कोई अलग माप नहीं है।"
     }
 }

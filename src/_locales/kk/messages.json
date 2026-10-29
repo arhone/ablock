@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Жылжу"
     },
-    "causeClsRects": {
-        "message": "Дейін → кейін (x, y, ені, биіктігі), px"
-    },
     "causeClsUnavailable": {
         "message": "Элемент қолжетімсіз"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Бұл элементтер себеп емес, зардап шеккен болуы мүмкін. Қолжетімді көздер бүкіл CLS-ті түсіндірмеуі мүмкін."
+    },
+    "causeClsParagraph": {
+        "message": "Абзац"
+    },
+    "causeClsHeading": {
+        "message": "Тақырып"
+    },
+    "causeClsBlock": {
+        "message": "Блок"
+    },
+    "causeClsLink": {
+        "message": "Сілтеме"
+    },
+    "causeClsButton": {
+        "message": "Түйме"
+    },
+    "causeClsFrame": {
+        "message": "Ендірілген фрейм"
+    },
+    "causeClsList": {
+        "message": "Тізім"
+    },
+    "causeClsTable": {
+        "message": "Кесте"
+    },
+    "causeClsBefore": {
+        "message": "Дейін"
+    },
+    "causeClsAfter": {
+        "message": "Кейін"
+    },
+    "causeClsCapture": {
+        "message": "Терезе ашылғанға дейін ағымдағы бетте жиналған жылжулар; тарих арқылы оралғаннан кейін бөлек өлшем жоқ."
     }
 }

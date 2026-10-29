@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "സ്ഥാനമാറ്റം"
     },
-    "causeClsRects": {
-        "message": "മുമ്പ് → ശേഷം (x, y, വീതി, ഉയരം), px"
-    },
     "causeClsUnavailable": {
         "message": "ഘടകം ലഭ്യമല്ല"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "ഈ ഘടകങ്ങൾ കാരണമാകാതെ ബാധിക്കപ്പെട്ടവയാകാം. ലഭ്യമായ ഉറവിടങ്ങൾ മുഴുവൻ CLS വിശദീകരിക്കണമെന്നില്ല."
+    },
+    "causeClsParagraph": {
+        "message": "ഖണ്ഡിക"
+    },
+    "causeClsHeading": {
+        "message": "തലക്കെട്ട്"
+    },
+    "causeClsBlock": {
+        "message": "ബ്ലോക്ക്"
+    },
+    "causeClsLink": {
+        "message": "ലിങ്ക്"
+    },
+    "causeClsButton": {
+        "message": "ബട്ടൺ"
+    },
+    "causeClsFrame": {
+        "message": "ഉൾച്ചേർത്ത ഫ്രെയിം"
+    },
+    "causeClsList": {
+        "message": "പട്ടിക"
+    },
+    "causeClsTable": {
+        "message": "ടേബിൾ"
+    },
+    "causeClsBefore": {
+        "message": "മുമ്പ്"
+    },
+    "causeClsAfter": {
+        "message": "ശേഷം"
+    },
+    "causeClsCapture": {
+        "message": "ജാലകം തുറക്കുമ്പോൾ ഈ പേജിൽ ശേഖരിച്ച സ്ഥാനമാറ്റങ്ങൾ; ചരിത്രത്തിലൂടെ മടങ്ങിയെത്തിയ ശേഷം പ്രത്യേക അളവെടുപ്പില്ല."
     }
 }

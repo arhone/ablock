@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Förskjutning"
     },
-    "causeClsRects": {
-        "message": "Före → efter (x, y, bredd, höjd), px"
-    },
     "causeClsUnavailable": {
         "message": "Elementet är inte tillgängligt"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Dessa element kan påverkas utan att vara orsaken. Tillgängliga källor förklarar inte nödvändigtvis hela CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Stycke"
+    },
+    "causeClsHeading": {
+        "message": "Rubrik"
+    },
+    "causeClsBlock": {
+        "message": "Block"
+    },
+    "causeClsLink": {
+        "message": "Länk"
+    },
+    "causeClsButton": {
+        "message": "Knapp"
+    },
+    "causeClsFrame": {
+        "message": "Inbäddad ram"
+    },
+    "causeClsList": {
+        "message": "Lista"
+    },
+    "causeClsTable": {
+        "message": "Tabell"
+    },
+    "causeClsBefore": {
+        "message": "Före"
+    },
+    "causeClsAfter": {
+        "message": "Efter"
+    },
+    "causeClsCapture": {
+        "message": "Förskjutningar som samlats på denna sida när popupen öppnas; ingen separat mätning efter återkomst via historiken."
     }
 }

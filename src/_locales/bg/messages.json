@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Изместване"
     },
-    "causeClsRects": {
-        "message": "Преди → след (x, y, ширина, височина), px"
-    },
     "causeClsUnavailable": {
         "message": "Елементът е недостъпен"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Тези елементи може да са засегнати, а не причина. Наличните източници не обясняват непременно целия CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Абзац"
+    },
+    "causeClsHeading": {
+        "message": "Заглавие"
+    },
+    "causeClsBlock": {
+        "message": "Блок"
+    },
+    "causeClsLink": {
+        "message": "Връзка"
+    },
+    "causeClsButton": {
+        "message": "Бутон"
+    },
+    "causeClsFrame": {
+        "message": "Вградена рамка"
+    },
+    "causeClsList": {
+        "message": "Списък"
+    },
+    "causeClsTable": {
+        "message": "Таблица"
+    },
+    "causeClsBefore": {
+        "message": "Преди"
+    },
+    "causeClsAfter": {
+        "message": "След"
+    },
+    "causeClsCapture": {
+        "message": "Измествания, натрупани на тази страница до отварянето на прозореца; няма отделно измерване след връщане чрез историята."
     }
 }

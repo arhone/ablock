@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "การเลื่อน"
     },
-    "causeClsRects": {
-        "message": "ก่อน → หลัง (x, y, ความกว้าง, ความสูง), px"
-    },
     "causeClsUnavailable": {
         "message": "องค์ประกอบไม่พร้อมใช้งาน"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "องค์ประกอบเหล่านี้อาจได้รับผลกระทบโดยไม่ได้เป็นสาเหตุ แหล่งที่มีอยู่อาจอธิบาย CLS ทั้งหมดไม่ได้"
+    },
+    "causeClsParagraph": {
+        "message": "ย่อหน้า"
+    },
+    "causeClsHeading": {
+        "message": "หัวเรื่อง"
+    },
+    "causeClsBlock": {
+        "message": "บล็อก"
+    },
+    "causeClsLink": {
+        "message": "ลิงก์"
+    },
+    "causeClsButton": {
+        "message": "ปุ่ม"
+    },
+    "causeClsFrame": {
+        "message": "เฟรมที่ฝัง"
+    },
+    "causeClsList": {
+        "message": "รายการ"
+    },
+    "causeClsTable": {
+        "message": "ตาราง"
+    },
+    "causeClsBefore": {
+        "message": "ก่อน"
+    },
+    "causeClsAfter": {
+        "message": "หลัง"
+    },
+    "causeClsCapture": {
+        "message": "การเลื่อนที่สะสมในหน้าปัจจุบันเมื่อเปิดหน้าต่าง ไม่มีการวัดแยกหลังจากกลับผ่านประวัติ"
     }
 }

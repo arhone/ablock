@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "레이아웃 이동"
     },
-    "causeClsRects": {
-        "message": "이전 → 이후 (x, y, 너비, 높이), px"
-    },
     "causeClsUnavailable": {
         "message": "요소를 사용할 수 없음"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "이 요소는 원인이 아니라 영향을 받은 것일 수 있습니다. 사용 가능한 소스가 전체 CLS를 설명하지는 않을 수 있습니다."
+    },
+    "causeClsParagraph": {
+        "message": "문단"
+    },
+    "causeClsHeading": {
+        "message": "제목"
+    },
+    "causeClsBlock": {
+        "message": "블록"
+    },
+    "causeClsLink": {
+        "message": "링크"
+    },
+    "causeClsButton": {
+        "message": "버튼"
+    },
+    "causeClsFrame": {
+        "message": "삽입된 프레임"
+    },
+    "causeClsList": {
+        "message": "목록"
+    },
+    "causeClsTable": {
+        "message": "표"
+    },
+    "causeClsBefore": {
+        "message": "이전"
+    },
+    "causeClsAfter": {
+        "message": "이후"
+    },
+    "causeClsCapture": {
+        "message": "팝업을 열 때까지 현재 페이지에 누적된 이동입니다. 방문 기록을 통해 돌아온 후의 별도 측정은 없습니다."
     }
 }

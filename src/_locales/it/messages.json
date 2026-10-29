@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Spostamento"
     },
-    "causeClsRects": {
-        "message": "Prima → dopo (x, y, larghezza, altezza), px"
-    },
     "causeClsUnavailable": {
         "message": "Elemento non disponibile"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Questi elementi possono subire lo spostamento senza causarlo. Le fonti disponibili non spiegano necessariamente tutto il CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Paragrafo"
+    },
+    "causeClsHeading": {
+        "message": "Intestazione"
+    },
+    "causeClsBlock": {
+        "message": "Blocco"
+    },
+    "causeClsLink": {
+        "message": "Link"
+    },
+    "causeClsButton": {
+        "message": "Pulsante"
+    },
+    "causeClsFrame": {
+        "message": "Frame incorporato"
+    },
+    "causeClsList": {
+        "message": "Elenco"
+    },
+    "causeClsTable": {
+        "message": "Tabella"
+    },
+    "causeClsBefore": {
+        "message": "Prima"
+    },
+    "causeClsAfter": {
+        "message": "Dopo"
+    },
+    "causeClsCapture": {
+        "message": "Spostamenti accumulati su questa pagina all’apertura della finestra; nessuna misurazione separata dopo il ritorno tramite la cronologia."
     }
 }

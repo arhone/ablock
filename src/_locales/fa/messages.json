@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "جابه‌جایی"
     },
-    "causeClsRects": {
-        "message": "قبل → بعد (x، y، عرض، ارتفاع)، px"
-    },
     "causeClsUnavailable": {
         "message": "عنصر در دسترس نیست"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "این عناصر ممکن است تحت تأثیر باشند، نه علت. منابع در دسترس لزوماً تمام CLS را توضیح نمی‌دهند."
+    },
+    "causeClsParagraph": {
+        "message": "پاراگراف"
+    },
+    "causeClsHeading": {
+        "message": "عنوان"
+    },
+    "causeClsBlock": {
+        "message": "بلوک"
+    },
+    "causeClsLink": {
+        "message": "پیوند"
+    },
+    "causeClsButton": {
+        "message": "دکمه"
+    },
+    "causeClsFrame": {
+        "message": "قاب تعبیه‌شده"
+    },
+    "causeClsList": {
+        "message": "فهرست"
+    },
+    "causeClsTable": {
+        "message": "جدول"
+    },
+    "causeClsBefore": {
+        "message": "قبل"
+    },
+    "causeClsAfter": {
+        "message": "بعد"
+    },
+    "causeClsCapture": {
+        "message": "جابه‌جایی‌های جمع‌شده در این صفحه تا زمان باز شدن پنجره؛ پس از بازگشت از تاریخچه اندازه‌گیری جداگانه‌ای انجام نمی‌شود."
     }
 }

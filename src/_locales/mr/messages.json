@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "सरकणे"
     },
-    "causeClsRects": {
-        "message": "आधी → नंतर (x, y, रुंदी, उंची), px"
-    },
     "causeClsUnavailable": {
         "message": "घटक उपलब्ध नाही"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "हे घटक कारण नसून प्रभावित असू शकतात. उपलब्ध स्रोत संपूर्ण CLS स्पष्ट करतीलच असे नाही."
+    },
+    "causeClsParagraph": {
+        "message": "परिच्छेद"
+    },
+    "causeClsHeading": {
+        "message": "शीर्षक"
+    },
+    "causeClsBlock": {
+        "message": "ब्लॉक"
+    },
+    "causeClsLink": {
+        "message": "दुवा"
+    },
+    "causeClsButton": {
+        "message": "बटण"
+    },
+    "causeClsFrame": {
+        "message": "एम्बेड केलेली फ्रेम"
+    },
+    "causeClsList": {
+        "message": "यादी"
+    },
+    "causeClsTable": {
+        "message": "तक्ता"
+    },
+    "causeClsBefore": {
+        "message": "आधी"
+    },
+    "causeClsAfter": {
+        "message": "नंतर"
+    },
+    "causeClsCapture": {
+        "message": "विंडो उघडताना सध्याच्या पानावर जमा झालेले सरकणे; इतिहासातून परतल्यानंतर वेगळे मोजमाप नाही."
     }
 }

@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Nihe"
     },
-    "causeClsRects": {
-        "message": "Enne → pärast (x, y, laius, kõrgus), px"
-    },
     "causeClsUnavailable": {
         "message": "Element pole saadaval"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Need elemendid võivad olla mõjutatud, mitte põhjuseks. Saadaolevad allikad ei pruugi selgitada kogu CLS-i."
+    },
+    "causeClsParagraph": {
+        "message": "Lõik"
+    },
+    "causeClsHeading": {
+        "message": "Pealkiri"
+    },
+    "causeClsBlock": {
+        "message": "Plokk"
+    },
+    "causeClsLink": {
+        "message": "Link"
+    },
+    "causeClsButton": {
+        "message": "Nupp"
+    },
+    "causeClsFrame": {
+        "message": "Manustatud raam"
+    },
+    "causeClsList": {
+        "message": "Loend"
+    },
+    "causeClsTable": {
+        "message": "Tabel"
+    },
+    "causeClsBefore": {
+        "message": "Enne"
+    },
+    "causeClsAfter": {
+        "message": "Pärast"
+    },
+    "causeClsCapture": {
+        "message": "Sellel lehel hüpikakna avamiseni kogunenud nihked; ajaloost naasmise järel eraldi mõõtmist ei tehta."
     }
 }

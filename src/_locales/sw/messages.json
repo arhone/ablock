@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Mhamo"
     },
-    "causeClsRects": {
-        "message": "Kabla → baada (x, y, upana, urefu), px"
-    },
     "causeClsUnavailable": {
         "message": "Kipengele hakipatikani"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Vipengele hivi vinaweza kuathiriwa bila kuwa chanzo. Vyanzo vinavyopatikana huenda havielezi CLS yote."
+    },
+    "causeClsParagraph": {
+        "message": "Aya"
+    },
+    "causeClsHeading": {
+        "message": "Kichwa"
+    },
+    "causeClsBlock": {
+        "message": "Kizuizi"
+    },
+    "causeClsLink": {
+        "message": "Kiungo"
+    },
+    "causeClsButton": {
+        "message": "Kitufe"
+    },
+    "causeClsFrame": {
+        "message": "Fremu iliyopachikwa"
+    },
+    "causeClsList": {
+        "message": "Orodha"
+    },
+    "causeClsTable": {
+        "message": "Jedwali"
+    },
+    "causeClsBefore": {
+        "message": "Kabla"
+    },
+    "causeClsAfter": {
+        "message": "Baada"
+    },
+    "causeClsCapture": {
+        "message": "Mihamo iliyokusanywa kwenye ukurasa huu dirisha linapofunguliwa; hakuna kipimo tofauti baada ya kurudi kupitia historia."
     }
 }

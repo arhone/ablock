@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Pomak"
     },
-    "causeClsRects": {
-        "message": "Prije → poslije (x, y, širina, visina), px"
-    },
     "causeClsUnavailable": {
         "message": "Element nije dostupan"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Ovi elementi mogu biti pogođeni, a ne uzrok. Dostupni izvori ne moraju objasniti cijeli CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Odlomak"
+    },
+    "causeClsHeading": {
+        "message": "Naslov"
+    },
+    "causeClsBlock": {
+        "message": "Blok"
+    },
+    "causeClsLink": {
+        "message": "Poveznica"
+    },
+    "causeClsButton": {
+        "message": "Gumb"
+    },
+    "causeClsFrame": {
+        "message": "Ugrađeni okvir"
+    },
+    "causeClsList": {
+        "message": "Popis"
+    },
+    "causeClsTable": {
+        "message": "Tablica"
+    },
+    "causeClsBefore": {
+        "message": "Prije"
+    },
+    "causeClsAfter": {
+        "message": "Poslije"
+    },
+    "causeClsCapture": {
+        "message": "Pomaci prikupljeni na ovoj stranici do otvaranja prozora; nema zasebnog mjerenja nakon povratka putem povijesti."
     }
 }

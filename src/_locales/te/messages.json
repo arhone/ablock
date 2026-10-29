@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "స్థానమార్పు"
     },
-    "causeClsRects": {
-        "message": "ముందు → తర్వాత (x, y, వెడల్పు, ఎత్తు), px"
-    },
     "causeClsUnavailable": {
         "message": "అంశం అందుబాటులో లేదు"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "ఈ అంశాలు కారణం కాకుండా ప్రభావితమైనవి కావచ్చు. అందుబాటులో ఉన్న మూలాలు మొత్తం CLSను వివరించకపోవచ్చు."
+    },
+    "causeClsParagraph": {
+        "message": "పేరా"
+    },
+    "causeClsHeading": {
+        "message": "శీర్షిక"
+    },
+    "causeClsBlock": {
+        "message": "బ్లాక్"
+    },
+    "causeClsLink": {
+        "message": "లింక్"
+    },
+    "causeClsButton": {
+        "message": "బటన్"
+    },
+    "causeClsFrame": {
+        "message": "పొందుపరిచిన ఫ్రేమ్"
+    },
+    "causeClsList": {
+        "message": "జాబితా"
+    },
+    "causeClsTable": {
+        "message": "పట్టిక"
+    },
+    "causeClsBefore": {
+        "message": "ముందు"
+    },
+    "causeClsAfter": {
+        "message": "తర్వాత"
+    },
+    "causeClsCapture": {
+        "message": "విండో తెరిచే సమయానికి ప్రస్తుత పేజీలో చేరిన స్థానమార్పులు; చరిత్ర ద్వారా తిరిగి వచ్చిన తర్వాత ప్రత్యేక కొలత లేదు."
     }
 }

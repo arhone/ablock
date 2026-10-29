@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Μετατόπιση"
     },
-    "causeClsRects": {
-        "message": "Πριν → μετά (x, y, πλάτος, ύψος), px"
-    },
     "causeClsUnavailable": {
         "message": "Μη διαθέσιμο στοιχείο"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Αυτά τα στοιχεία μπορεί να επηρεάζονται χωρίς να είναι η αιτία. Οι διαθέσιμες πηγές δεν εξηγούν απαραίτητα όλο το CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Παράγραφος"
+    },
+    "causeClsHeading": {
+        "message": "Επικεφαλίδα"
+    },
+    "causeClsBlock": {
+        "message": "Μπλοκ"
+    },
+    "causeClsLink": {
+        "message": "Σύνδεσμος"
+    },
+    "causeClsButton": {
+        "message": "Κουμπί"
+    },
+    "causeClsFrame": {
+        "message": "Ενσωματωμένο πλαίσιο"
+    },
+    "causeClsList": {
+        "message": "Λίστα"
+    },
+    "causeClsTable": {
+        "message": "Πίνακας"
+    },
+    "causeClsBefore": {
+        "message": "Πριν"
+    },
+    "causeClsAfter": {
+        "message": "Μετά"
+    },
+    "causeClsCapture": {
+        "message": "Μετατοπίσεις που συσσωρεύτηκαν στην τρέχουσα σελίδα μέχρι το άνοιγμα του παραθύρου· δεν υπάρχει ξεχωριστή μέτρηση μετά την επιστροφή μέσω ιστορικού."
     }
 }

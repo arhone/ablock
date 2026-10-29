@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Paglipat"
     },
-    "causeClsRects": {
-        "message": "Bago → pagkatapos (x, y, lapad, taas), px"
-    },
     "causeClsUnavailable": {
         "message": "Hindi available ang elemento"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Maaaring naapektuhan ang mga elementong ito at hindi sila ang sanhi. Hindi tiyak na naipapaliwanag ng mga available na source ang buong CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Talata"
+    },
+    "causeClsHeading": {
+        "message": "Heading"
+    },
+    "causeClsBlock": {
+        "message": "Bloke"
+    },
+    "causeClsLink": {
+        "message": "Link"
+    },
+    "causeClsButton": {
+        "message": "Button"
+    },
+    "causeClsFrame": {
+        "message": "Naka-embed na frame"
+    },
+    "causeClsList": {
+        "message": "Listahan"
+    },
+    "causeClsTable": {
+        "message": "Talahanayan"
+    },
+    "causeClsBefore": {
+        "message": "Bago"
+    },
+    "causeClsAfter": {
+        "message": "Pagkatapos"
+    },
+    "causeClsCapture": {
+        "message": "Mga paglipat na naipon sa pahinang ito sa pagbukas ng popup; walang hiwalay na pagsukat pagkabalik sa pamamagitan ng kasaysayan."
     }
 }

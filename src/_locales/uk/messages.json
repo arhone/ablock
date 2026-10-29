@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Зсув"
     },
-    "causeClsRects": {
-        "message": "До → після (x, y, ширина, висота), px"
-    },
     "causeClsUnavailable": {
         "message": "Елемент недоступний"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Елементи можуть бути постраждалими, а не причиною. Доступні джерела не обов’язково пояснюють увесь CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Абзац"
+    },
+    "causeClsHeading": {
+        "message": "Заголовок"
+    },
+    "causeClsBlock": {
+        "message": "Блок"
+    },
+    "causeClsLink": {
+        "message": "Посилання"
+    },
+    "causeClsButton": {
+        "message": "Кнопка"
+    },
+    "causeClsFrame": {
+        "message": "Вбудований фрейм"
+    },
+    "causeClsList": {
+        "message": "Список"
+    },
+    "causeClsTable": {
+        "message": "Таблиця"
+    },
+    "causeClsBefore": {
+        "message": "До"
+    },
+    "causeClsAfter": {
+        "message": "Після"
+    },
+    "causeClsCapture": {
+        "message": "Зсуви, накопичені на поточній сторінці до відкриття вікна; окремого вимірювання після повернення через історію немає."
     }
 }

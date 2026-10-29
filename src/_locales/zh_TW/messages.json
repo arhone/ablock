@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "版面位移"
     },
-    "causeClsRects": {
-        "message": "之前 → 之後（x、y、寬、高），px"
-    },
     "causeClsUnavailable": {
         "message": "元素無法取得"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "這些元素可能是受影響者，而非原因。可用來源不一定能解釋全部 CLS。"
+    },
+    "causeClsParagraph": {
+        "message": "段落"
+    },
+    "causeClsHeading": {
+        "message": "標題"
+    },
+    "causeClsBlock": {
+        "message": "區塊"
+    },
+    "causeClsLink": {
+        "message": "連結"
+    },
+    "causeClsButton": {
+        "message": "按鈕"
+    },
+    "causeClsFrame": {
+        "message": "嵌入框架"
+    },
+    "causeClsList": {
+        "message": "清單"
+    },
+    "causeClsTable": {
+        "message": "表格"
+    },
+    "causeClsBefore": {
+        "message": "之前"
+    },
+    "causeClsAfter": {
+        "message": "之後"
+    },
+    "causeClsCapture": {
+        "message": "開啟彈出視窗時目前頁面已累積的版面位移；透過歷史記錄返回後不會另外測量。"
     }
 }

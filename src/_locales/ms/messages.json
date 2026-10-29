@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Anjakan"
     },
-    "causeClsRects": {
-        "message": "Sebelum → selepas (x, y, lebar, tinggi), px"
-    },
     "causeClsUnavailable": {
         "message": "Elemen tidak tersedia"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Elemen ini mungkin terjejas, bukan puncanya. Sumber yang tersedia tidak semestinya menjelaskan keseluruhan CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Perenggan"
+    },
+    "causeClsHeading": {
+        "message": "Tajuk"
+    },
+    "causeClsBlock": {
+        "message": "Blok"
+    },
+    "causeClsLink": {
+        "message": "Pautan"
+    },
+    "causeClsButton": {
+        "message": "Butang"
+    },
+    "causeClsFrame": {
+        "message": "Bingkai terbenam"
+    },
+    "causeClsList": {
+        "message": "Senarai"
+    },
+    "causeClsTable": {
+        "message": "Jadual"
+    },
+    "causeClsBefore": {
+        "message": "Sebelum"
+    },
+    "causeClsAfter": {
+        "message": "Selepas"
+    },
+    "causeClsCapture": {
+        "message": "Anjakan yang terkumpul pada halaman ini ketika tetingkap dibuka; tiada ukuran berasingan selepas kembali melalui sejarah."
     }
 }

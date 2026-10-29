@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "レイアウトシフト"
     },
-    "causeClsRects": {
-        "message": "前 → 後（x, y, 幅, 高さ）、px"
-    },
     "causeClsUnavailable": {
         "message": "要素を取得できません"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "これらの要素は原因ではなく影響を受けた可能性があります。取得できたソースだけでCLS全体を説明できるとは限りません。"
+    },
+    "causeClsParagraph": {
+        "message": "段落"
+    },
+    "causeClsHeading": {
+        "message": "見出し"
+    },
+    "causeClsBlock": {
+        "message": "ブロック"
+    },
+    "causeClsLink": {
+        "message": "リンク"
+    },
+    "causeClsButton": {
+        "message": "ボタン"
+    },
+    "causeClsFrame": {
+        "message": "埋め込みフレーム"
+    },
+    "causeClsList": {
+        "message": "リスト"
+    },
+    "causeClsTable": {
+        "message": "表"
+    },
+    "causeClsBefore": {
+        "message": "移動前"
+    },
+    "causeClsAfter": {
+        "message": "移動後"
+    },
+    "causeClsCapture": {
+        "message": "ポップアップを開くまでにこのページで蓄積されたレイアウトシフトです。履歴から戻った後の個別の測定ではありません。"
     }
 }

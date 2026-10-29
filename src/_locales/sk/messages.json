@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Posun"
     },
-    "causeClsRects": {
-        "message": "Pred → po (x, y, šírka, výška), px"
-    },
     "causeClsUnavailable": {
         "message": "Prvok nie je dostupný"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Tieto prvky môžu byť zasiahnuté, nie príčinou. Dostupné zdroje nemusia vysvetľovať celé CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Odsek"
+    },
+    "causeClsHeading": {
+        "message": "Nadpis"
+    },
+    "causeClsBlock": {
+        "message": "Blok"
+    },
+    "causeClsLink": {
+        "message": "Odkaz"
+    },
+    "causeClsButton": {
+        "message": "Tlačidlo"
+    },
+    "causeClsFrame": {
+        "message": "Vložený rámec"
+    },
+    "causeClsList": {
+        "message": "Zoznam"
+    },
+    "causeClsTable": {
+        "message": "Tabuľka"
+    },
+    "causeClsBefore": {
+        "message": "Pred"
+    },
+    "causeClsAfter": {
+        "message": "Po"
+    },
+    "causeClsCapture": {
+        "message": "Posuny zhromaždené na tejto stránke do otvorenia okna; po návrate cez históriu sa samostatné meranie nevykonáva."
     }
 }

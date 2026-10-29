@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Posun"
     },
-    "causeClsRects": {
-        "message": "Před → po (x, y, šířka, výška), px"
-    },
     "causeClsUnavailable": {
         "message": "Prvek není dostupný"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Tyto prvky mohou být zasažené, nikoli příčinou. Dostupné zdroje nemusí vysvětlovat celé CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Odstavec"
+    },
+    "causeClsHeading": {
+        "message": "Nadpis"
+    },
+    "causeClsBlock": {
+        "message": "Blok"
+    },
+    "causeClsLink": {
+        "message": "Odkaz"
+    },
+    "causeClsButton": {
+        "message": "Tlačítko"
+    },
+    "causeClsFrame": {
+        "message": "Vložený rámec"
+    },
+    "causeClsList": {
+        "message": "Seznam"
+    },
+    "causeClsTable": {
+        "message": "Tabulka"
+    },
+    "causeClsBefore": {
+        "message": "Před"
+    },
+    "causeClsAfter": {
+        "message": "Po"
+    },
+    "causeClsCapture": {
+        "message": "Posuny shromážděné na této stránce do otevření okna; po návratu přes historii se samostatné měření neprovádí."
     }
 }

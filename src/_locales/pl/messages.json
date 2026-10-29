@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Przesunięcie"
     },
-    "causeClsRects": {
-        "message": "Przed → po (x, y, szerokość, wysokość), px"
-    },
     "causeClsUnavailable": {
         "message": "Element niedostępny"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Te elementy mogą być dotknięte przesunięciem, a nie jego przyczyną. Dostępne źródła nie muszą wyjaśniać całego CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Akapit"
+    },
+    "causeClsHeading": {
+        "message": "Nagłówek"
+    },
+    "causeClsBlock": {
+        "message": "Blok"
+    },
+    "causeClsLink": {
+        "message": "Link"
+    },
+    "causeClsButton": {
+        "message": "Przycisk"
+    },
+    "causeClsFrame": {
+        "message": "Osadzona ramka"
+    },
+    "causeClsList": {
+        "message": "Lista"
+    },
+    "causeClsTable": {
+        "message": "Tabela"
+    },
+    "causeClsBefore": {
+        "message": "Przed"
+    },
+    "causeClsAfter": {
+        "message": "Po"
+    },
+    "causeClsCapture": {
+        "message": "Przesunięcia zgromadzone na tej stronie do otwarcia okna; brak osobnego pomiaru po powrocie przez historię."
     }
 }

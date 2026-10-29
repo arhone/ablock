@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Kayma"
     },
-    "causeClsRects": {
-        "message": "Önce → sonra (x, y, genişlik, yükseklik), px"
-    },
     "causeClsUnavailable": {
         "message": "Öğe kullanılamıyor"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Bu öğeler neden olmaktan çok etkilenmiş olabilir. Mevcut kaynaklar tüm CLS değerini açıklamayabilir."
+    },
+    "causeClsParagraph": {
+        "message": "Paragraf"
+    },
+    "causeClsHeading": {
+        "message": "Başlık"
+    },
+    "causeClsBlock": {
+        "message": "Blok"
+    },
+    "causeClsLink": {
+        "message": "Bağlantı"
+    },
+    "causeClsButton": {
+        "message": "Düğme"
+    },
+    "causeClsFrame": {
+        "message": "Gömülü çerçeve"
+    },
+    "causeClsList": {
+        "message": "Liste"
+    },
+    "causeClsTable": {
+        "message": "Tablo"
+    },
+    "causeClsBefore": {
+        "message": "Önce"
+    },
+    "causeClsAfter": {
+        "message": "Sonra"
+    },
+    "causeClsCapture": {
+        "message": "Pencere açılana kadar bu sayfada biriken kaymalar; geçmiş üzerinden dönüldükten sonra ayrı bir ölçüm yapılmaz."
     }
 }

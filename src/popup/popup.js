@@ -1099,8 +1099,9 @@ function formatCauseTime(value) {
 
 /**
  * Сдвиги и источники максимальной серии; величина принадлежит сдвигу, не каждому узлу.
+ * geometry содержит только подписи и числа; компонент изолирует числовые группы как LTR.
  * @param {?Object} section
- * @returns {Array<{label: string, value: string}>}
+ * @returns {Array<{label: string, value: string, geometry?: Array<{label: string, value: string}>}>}
  */
 function formatClsCauses(section) {
     const data = section?.data;
@@ -1110,7 +1111,20 @@ function formatClsCauses(section) {
     const items = [{label: t('causeClsTitle'), value: t('causeClsScope')}];
     const number = (value) => typeof value === 'number' && Number.isFinite(value)
         ? formatNumber(value, {maximumFractionDigits: 3}) : '—';
-    const rect = (value) => value ? [value.x, value.y, value.width, value.height].map(number).join(', ') : '—';
+    const rect = (value) => value
+        ? `${number(value.x)}, ${number(value.y)} · ${number(value.width)}×${number(value.height)} px` : '—';
+    const tagKeys = {
+        p: 'causeClsParagraph', img: 'kindImage', video: 'kindVideo', iframe: 'causeClsFrame',
+        div: 'causeClsBlock', section: 'causeClsBlock', article: 'causeClsBlock', main: 'causeClsBlock',
+        header: 'causeClsBlock', footer: 'causeClsBlock', aside: 'causeClsBlock', nav: 'causeClsBlock',
+        a: 'causeClsLink', button: 'causeClsButton', ul: 'causeClsList', ol: 'causeClsList', dl: 'causeClsList',
+        table: 'causeClsTable'
+    };
+    const elementName = (tag) => {
+        const key = /^h[1-6]$/.test(tag) ? 'causeClsHeading'
+            : Object.hasOwn(tagKeys, tag) ? tagKeys[tag] : null;
+        return key ? t(key) : tag || t('causeClsUnavailable');
+    };
     if (data.session) {
         items.push({label: t('causeClsSession'), value: `${formatCauseTime(data.session.startTime)} – ${formatCauseTime(data.session.endTime)} · ${number(data.value)}`});
     } else {
@@ -1122,15 +1136,13 @@ function formatClsCauses(section) {
             items.push({label: t('causeElement'), value: t('causeClsUnavailable')});
         }
         for (const source of shift.sources || []) {
-            items.push({label: source.element?.tag || t('causeClsUnavailable'),
-                value: `${t('causeClsRects')}: ${rect(source.previousRect)} → ${rect(source.currentRect)}`
-                    + (source.imageWithoutDimensions === true ? ` · ${t('causeClsImageGuess')}` : '')});
+            items.push({label: elementName(source.element?.tag),
+                geometry: [{label: t('causeClsBefore'), value: rect(source.previousRect)},
+                    {label: t('causeClsAfter'), value: rect(source.currentRect)}],
+                value: source.imageWithoutDimensions === true ? t('causeClsImageGuess') : ''});
         }
     }
-    if (section.reasons.some((code) => ['prerender', 'history-navigation'].includes(code))) {
-        items.push({label: t('auditDetails'), value: t('causeSpecialNavigation')});
-    }
-    items.push({label: t('auditDetails'), value: t('causeScope')});
+    items.push({label: t('auditDetails'), value: t('causeClsCapture')});
     return items;
 }
 
@@ -1576,7 +1588,7 @@ function openAuditGroup(group, open = true) {
  * Пять фактов видны сразу, остальные раскрываются в общем потоке. Ни одного .audit-row внутри.
  * @param {HTMLElement} row
  * @param {?Object} section раздел causes v1
- * @param {Array<{label: string, value: string}>} [items] подготовленные подписи и значения
+ * @param {Array<{label: string, value: string, geometry?: Array<{label: string, value: string}>}>} [items] подготовленные подписи и значения
  */
 function renderAuditCauses(row, section, items = []) {
     if (!['ok', 'partial'].includes(section?.status)) {
@@ -1617,11 +1629,24 @@ function renderAuditCauses(row, section, items = []) {
         return;
     }
     const list = document.createElement('ul');
-    const append = ({label, value}) => {
+    const append = ({label, value, geometry}) => {
         const item = document.createElement('li');
         const text = document.createElement('bdi');
         text.textContent = value;
-        item.append(label + ': ', text);
+        item.append(label + ': ');
+        if (geometry) {
+            geometry.forEach((part, index) => {
+                const numbers = document.createElement('bdi');
+                numbers.setAttribute('dir', 'ltr');
+                numbers.textContent = part.value;
+                item.append((index ? ' · ' : '') + part.label + ': ', numbers);
+            });
+            if (value) {
+                item.append(' · ', text);
+            }
+        } else {
+            item.append(text);
+        }
         list.append(item);
     };
     items.slice(0, 5).forEach(append);

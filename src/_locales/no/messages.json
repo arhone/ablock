@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Forskyvning"
     },
-    "causeClsRects": {
-        "message": "Før → etter (x, y, bredde, høyde), px"
-    },
     "causeClsUnavailable": {
         "message": "Elementet er utilgjengelig"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Disse elementene kan være berørt uten å være årsaken. Tilgjengelige kilder forklarer ikke nødvendigvis hele CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Avsnitt"
+    },
+    "causeClsHeading": {
+        "message": "Overskrift"
+    },
+    "causeClsBlock": {
+        "message": "Blokk"
+    },
+    "causeClsLink": {
+        "message": "Lenke"
+    },
+    "causeClsButton": {
+        "message": "Knapp"
+    },
+    "causeClsFrame": {
+        "message": "Innebygd ramme"
+    },
+    "causeClsList": {
+        "message": "Liste"
+    },
+    "causeClsTable": {
+        "message": "Tabell"
+    },
+    "causeClsBefore": {
+        "message": "Før"
+    },
+    "causeClsAfter": {
+        "message": "Etter"
+    },
+    "causeClsCapture": {
+        "message": "Forskyvninger samlet på denne siden når popupen åpnes; ingen egen måling etter retur via historikken."
     }
 }

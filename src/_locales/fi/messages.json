@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Siirtymä"
     },
-    "causeClsRects": {
-        "message": "Ennen → jälkeen (x, y, leveys, korkeus), px"
-    },
     "causeClsUnavailable": {
         "message": "Elementti ei ole saatavilla"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Nämä elementit voivat kärsiä siirtymästä aiheuttamatta sitä. Saatavilla olevat lähteet eivät välttämättä selitä kaikkea CLS:ää."
+    },
+    "causeClsParagraph": {
+        "message": "Kappale"
+    },
+    "causeClsHeading": {
+        "message": "Otsikko"
+    },
+    "causeClsBlock": {
+        "message": "Lohko"
+    },
+    "causeClsLink": {
+        "message": "Linkki"
+    },
+    "causeClsButton": {
+        "message": "Painike"
+    },
+    "causeClsFrame": {
+        "message": "Upotettu kehys"
+    },
+    "causeClsList": {
+        "message": "Luettelo"
+    },
+    "causeClsTable": {
+        "message": "Taulukko"
+    },
+    "causeClsBefore": {
+        "message": "Ennen"
+    },
+    "causeClsAfter": {
+        "message": "Jälkeen"
+    },
+    "causeClsCapture": {
+        "message": "Tälle sivulle ponnahdusikkunan avaamiseen mennessä kertyneet siirtymät; ei erillistä mittausta historiasta paluun jälkeen."
     }
 }

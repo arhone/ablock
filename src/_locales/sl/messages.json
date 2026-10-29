@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Premik"
     },
-    "causeClsRects": {
-        "message": "Prej → potem (x, y, širina, višina), px"
-    },
     "causeClsUnavailable": {
         "message": "Element ni na voljo"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Ti elementi so lahko prizadeti in niso vzrok. Razpoložljivi viri ne pojasnijo nujno celotnega CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Odstavek"
+    },
+    "causeClsHeading": {
+        "message": "Naslov"
+    },
+    "causeClsBlock": {
+        "message": "Blok"
+    },
+    "causeClsLink": {
+        "message": "Povezava"
+    },
+    "causeClsButton": {
+        "message": "Gumb"
+    },
+    "causeClsFrame": {
+        "message": "Vdelani okvir"
+    },
+    "causeClsList": {
+        "message": "Seznam"
+    },
+    "causeClsTable": {
+        "message": "Tabela"
+    },
+    "causeClsBefore": {
+        "message": "Prej"
+    },
+    "causeClsAfter": {
+        "message": "Potem"
+    },
+    "causeClsCapture": {
+        "message": "Premiki, zbrani na tej strani do odprtja okna; po vrnitvi prek zgodovine ni ločene meritve."
     }
 }

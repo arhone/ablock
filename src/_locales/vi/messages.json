@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Dịch chuyển"
     },
-    "causeClsRects": {
-        "message": "Trước → sau (x, y, rộng, cao), px"
-    },
     "causeClsUnavailable": {
         "message": "Phần tử không khả dụng"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Các phần tử này có thể bị ảnh hưởng chứ không phải nguyên nhân. Nguồn hiện có không nhất thiết giải thích toàn bộ CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Đoạn văn"
+    },
+    "causeClsHeading": {
+        "message": "Tiêu đề"
+    },
+    "causeClsBlock": {
+        "message": "Khối"
+    },
+    "causeClsLink": {
+        "message": "Liên kết"
+    },
+    "causeClsButton": {
+        "message": "Nút"
+    },
+    "causeClsFrame": {
+        "message": "Khung nhúng"
+    },
+    "causeClsList": {
+        "message": "Danh sách"
+    },
+    "causeClsTable": {
+        "message": "Bảng"
+    },
+    "causeClsBefore": {
+        "message": "Trước"
+    },
+    "causeClsAfter": {
+        "message": "Sau"
+    },
+    "causeClsCapture": {
+        "message": "Các dịch chuyển tích lũy trên trang hiện tại khi mở cửa sổ; không có phép đo riêng sau khi quay lại qua lịch sử."
     }
 }

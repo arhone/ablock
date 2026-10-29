@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Померање"
     },
-    "causeClsRects": {
-        "message": "Пре → после (x, y, ширина, висина), px"
-    },
     "causeClsUnavailable": {
         "message": "Елемент није доступан"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Ови елементи могу бити погођени, а не узрок. Доступни извори не морају објаснити цео CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Пасус"
+    },
+    "causeClsHeading": {
+        "message": "Наслов"
+    },
+    "causeClsBlock": {
+        "message": "Блок"
+    },
+    "causeClsLink": {
+        "message": "Веза"
+    },
+    "causeClsButton": {
+        "message": "Дугме"
+    },
+    "causeClsFrame": {
+        "message": "Уграђени оквир"
+    },
+    "causeClsList": {
+        "message": "Листа"
+    },
+    "causeClsTable": {
+        "message": "Табела"
+    },
+    "causeClsBefore": {
+        "message": "Пре"
+    },
+    "causeClsAfter": {
+        "message": "После"
+    },
+    "causeClsCapture": {
+        "message": "Померања прикупљена на овој страници до отварања прозора; нема засебног мерења након повратка преко историје."
     }
 }

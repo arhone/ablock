@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Verschuiving"
     },
-    "causeClsRects": {
-        "message": "Voor → na (x, y, breedte, hoogte), px"
-    },
     "causeClsUnavailable": {
         "message": "Element niet beschikbaar"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Deze elementen kunnen getroffen zijn zonder de oorzaak te zijn. Beschikbare bronnen verklaren niet noodzakelijk alle CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Alinea"
+    },
+    "causeClsHeading": {
+        "message": "Kop"
+    },
+    "causeClsBlock": {
+        "message": "Blok"
+    },
+    "causeClsLink": {
+        "message": "Link"
+    },
+    "causeClsButton": {
+        "message": "Knop"
+    },
+    "causeClsFrame": {
+        "message": "Ingesloten frame"
+    },
+    "causeClsList": {
+        "message": "Lijst"
+    },
+    "causeClsTable": {
+        "message": "Tabel"
+    },
+    "causeClsBefore": {
+        "message": "Voor"
+    },
+    "causeClsAfter": {
+        "message": "Na"
+    },
+    "causeClsCapture": {
+        "message": "Verschuivingen die op deze pagina zijn verzameld bij het openen van de pop-up; geen aparte meting na terugkeer via de geschiedenis."
     }
 }

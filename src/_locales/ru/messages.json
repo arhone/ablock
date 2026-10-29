@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Сдвиг"
     },
-    "causeClsRects": {
-        "message": "До → после (x, y, ширина, высота), px"
-    },
     "causeClsUnavailable": {
         "message": "Элемент недоступен"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Элементы могут быть пострадавшими, а не причиной. Доступные источники не обязательно объясняют весь CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Абзац"
+    },
+    "causeClsHeading": {
+        "message": "Заголовок"
+    },
+    "causeClsBlock": {
+        "message": "Блок"
+    },
+    "causeClsLink": {
+        "message": "Ссылка"
+    },
+    "causeClsButton": {
+        "message": "Кнопка"
+    },
+    "causeClsFrame": {
+        "message": "Встроенный фрейм"
+    },
+    "causeClsList": {
+        "message": "Список"
+    },
+    "causeClsTable": {
+        "message": "Таблица"
+    },
+    "causeClsBefore": {
+        "message": "До"
+    },
+    "causeClsAfter": {
+        "message": "После"
+    },
+    "causeClsCapture": {
+        "message": "Сдвиги, накопленные на текущей странице к моменту открытия окна; отдельного замера после возврата по истории нет."
     }
 }

@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Shift"
     },
-    "causeClsRects": {
-        "message": "Before → after (x, y, width, height), px"
-    },
     "causeClsUnavailable": {
         "message": "Element unavailable"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "These elements may be affected rather than causes. Available sources need not explain all CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Paragraph"
+    },
+    "causeClsHeading": {
+        "message": "Heading"
+    },
+    "causeClsBlock": {
+        "message": "Block"
+    },
+    "causeClsLink": {
+        "message": "Link"
+    },
+    "causeClsButton": {
+        "message": "Button"
+    },
+    "causeClsFrame": {
+        "message": "Embedded frame"
+    },
+    "causeClsList": {
+        "message": "List"
+    },
+    "causeClsTable": {
+        "message": "Table"
+    },
+    "causeClsBefore": {
+        "message": "Before"
+    },
+    "causeClsAfter": {
+        "message": "After"
+    },
+    "causeClsCapture": {
+        "message": "Shifts accumulated on this page when the popup opens; no separate measurement after returning through history."
     }
 }

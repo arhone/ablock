@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Poslinkis"
     },
-    "causeClsRects": {
-        "message": "Prieš → po (x, y, plotis, aukštis), px"
-    },
     "causeClsUnavailable": {
         "message": "Elementas nepasiekiamas"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Šie elementai gali būti paveikti, o ne priežastis. Prieinami šaltiniai nebūtinai paaiškina visą CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Pastraipa"
+    },
+    "causeClsHeading": {
+        "message": "Antraštė"
+    },
+    "causeClsBlock": {
+        "message": "Blokas"
+    },
+    "causeClsLink": {
+        "message": "Nuoroda"
+    },
+    "causeClsButton": {
+        "message": "Mygtukas"
+    },
+    "causeClsFrame": {
+        "message": "Įterptas rėmelis"
+    },
+    "causeClsList": {
+        "message": "Sąrašas"
+    },
+    "causeClsTable": {
+        "message": "Lentelė"
+    },
+    "causeClsBefore": {
+        "message": "Prieš"
+    },
+    "causeClsAfter": {
+        "message": "Po"
+    },
+    "causeClsCapture": {
+        "message": "Šiame puslapyje iki lango atidarymo sukaupti poslinkiai; grįžus per istoriją atskiras matavimas neatliekamas."
     }
 }

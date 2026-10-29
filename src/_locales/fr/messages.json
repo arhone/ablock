@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Déplacement"
     },
-    "causeClsRects": {
-        "message": "Avant → après (x, y, largeur, hauteur), px"
-    },
     "causeClsUnavailable": {
         "message": "Élément indisponible"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Ces éléments peuvent subir le déplacement sans le causer. Les sources disponibles n’expliquent pas forcément tout le CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Paragraphe"
+    },
+    "causeClsHeading": {
+        "message": "Titre"
+    },
+    "causeClsBlock": {
+        "message": "Bloc"
+    },
+    "causeClsLink": {
+        "message": "Lien"
+    },
+    "causeClsButton": {
+        "message": "Bouton"
+    },
+    "causeClsFrame": {
+        "message": "Cadre intégré"
+    },
+    "causeClsList": {
+        "message": "Liste"
+    },
+    "causeClsTable": {
+        "message": "Tableau"
+    },
+    "causeClsBefore": {
+        "message": "Avant"
+    },
+    "causeClsAfter": {
+        "message": "Après"
+    },
+    "causeClsCapture": {
+        "message": "Déplacements accumulés sur cette page à l’ouverture de la fenêtre ; aucune mesure distincte après un retour via l’historique."
     }
 }

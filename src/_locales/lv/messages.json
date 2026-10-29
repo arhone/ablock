@@ -1227,9 +1227,6 @@
     "causeClsShift": {
         "message": "Nobīde"
     },
-    "causeClsRects": {
-        "message": "Pirms → pēc (x, y, platums, augstums), px"
-    },
     "causeClsUnavailable": {
         "message": "Elements nav pieejams"
     },
@@ -1238,5 +1235,38 @@
     },
     "causeClsScope": {
         "message": "Šie elementi var būt skarti, nevis cēlonis. Pieejamie avoti ne vienmēr izskaidro visu CLS."
+    },
+    "causeClsParagraph": {
+        "message": "Rindkopa"
+    },
+    "causeClsHeading": {
+        "message": "Virsraksts"
+    },
+    "causeClsBlock": {
+        "message": "Bloks"
+    },
+    "causeClsLink": {
+        "message": "Saite"
+    },
+    "causeClsButton": {
+        "message": "Poga"
+    },
+    "causeClsFrame": {
+        "message": "Iegults rāmis"
+    },
+    "causeClsList": {
+        "message": "Saraksts"
+    },
+    "causeClsTable": {
+        "message": "Tabula"
+    },
+    "causeClsBefore": {
+        "message": "Pirms"
+    },
+    "causeClsAfter": {
+        "message": "Pēc"
+    },
+    "causeClsCapture": {
+        "message": "Šajā lapā līdz loga atvēršanai uzkrātās nobīdes; pēc atgriešanās caur vēsturi atsevišķs mērījums netiek veikts."
     }
 }
