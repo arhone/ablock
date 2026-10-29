@@ -147,7 +147,7 @@
         }
     }
     function place(rect) {
-        const height = panel.getBoundingClientRect().height + 8;
+        const height = panel.getBoundingClientRect().height + 12 + 8;
         const bottom = rect && rect.bottom > innerHeight - height && rect.top < innerHeight;
         const top = rect && rect.top < height && rect.bottom > 0;
         const above = bottom && !top;
@@ -183,8 +183,8 @@
         cancelAnimationFrame(frame);
         frame = requestAnimationFrame(draw);
     }
-    function update() {
-        result = core.build(selected);
+    function update(next = core.build(selected)) {
+        result = next;
         description.replaceChildren();
         const info = core.describe(selected);
         summary(description, info, true);
@@ -215,7 +215,12 @@
             el !== host && !/^(html|body)$/.test(el.localName) && el.getRootNode() === document);
     }
     function inPanel(event) {
-        return event.composedPath().includes(panel);
+        // На window закрытый Shadow DOM виден только как host; фон слоя тоже host.
+        if (event.target !== host) return false;
+        if (!('clientX' in event)) return panel.contains(root.activeElement);
+        const rect = panel.getBoundingClientRect();
+        return event.clientX >= rect.left && event.clientX <= rect.right &&
+            event.clientY >= rect.top && event.clientY <= rect.bottom;
     }
     function block(event) {
         event.preventDefault();
@@ -253,13 +258,15 @@
             block(event);
             buttons[next].focus({preventScroll: true});
         } else if (!inPanel(event)) block(event);
-        else event.stopPropagation();
+        // Не останавливаем перехват на window: событие должно дойти до кнопки.
     }
     async function save() {
-        if (busy || !selected?.isConnected || !result?.s) return;
-        busy = true;
-        const pick = {s: result.s, ...core.describe(selected)};
-        update();
+        if (busy || !selected?.isConnected) return;
+        const next = core.build(selected);
+        busy = !!next.s;
+        update(next);
+        if (!next.s) return;
+        const pick = {s: next.s, ...core.describe(selected)};
         let response;
         try { response = await chrome.runtime.sendMessage({pick}); } catch { response = null; }
         if (ended) return;
