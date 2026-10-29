@@ -1947,6 +1947,14 @@ function setupClear(tab) {
         text.hidden = true;
     };
 
+    // Нажатие на полосу (раскрытие оценки) отменяет подтверждение: в раскрытой шапке корзины нет
+    document.getElementById('score-head').addEventListener('click', (event) => {
+        if (!event.target.closest('#clear')) {
+            clearTimeout(timer);
+            reset();
+        }
+    });
+
     button.addEventListener('click', async () => {
         if (!('confirm' in button.dataset)) {
             button.dataset.confirm = '';
