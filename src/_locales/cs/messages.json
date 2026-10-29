@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "slabá"
     },
+    "auditCspNoScripts": {
+        "message": "neomezuje skripty"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

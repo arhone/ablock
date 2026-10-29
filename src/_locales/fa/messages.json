@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "ضعیف"
     },
+    "auditCspNoScripts": {
+        "message": "اسکریپت‌ها را محدود نمی‌کند"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

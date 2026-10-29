@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "బలహీనం"
     },
+    "auditCspNoScripts": {
+        "message": "స్క్రిప్ట్‌లను పరిమితం చేయదు"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

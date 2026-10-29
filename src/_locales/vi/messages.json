@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "yếu"
     },
+    "auditCspNoScripts": {
+        "message": "không giới hạn script"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

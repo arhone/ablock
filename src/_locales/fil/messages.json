@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "mahina"
     },
+    "auditCspNoScripts": {
+        "message": "hindi nililimitahan ang mga script"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

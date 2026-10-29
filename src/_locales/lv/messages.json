@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "vāja"
     },
+    "auditCspNoScripts": {
+        "message": "neierobežo skriptus"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

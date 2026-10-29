@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "fraca"
     },
+    "auditCspNoScripts": {
+        "message": "não limita scripts"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

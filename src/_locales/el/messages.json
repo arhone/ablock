@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "αδύναμη"
     },
+    "auditCspNoScripts": {
+        "message": "δεν περιορίζει τα σενάρια"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

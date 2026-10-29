@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "பலவீனம்"
     },
+    "auditCspNoScripts": {
+        "message": "ஸ்கிரிப்ட்களைக் கட்டுப்படுத்தவில்லை"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

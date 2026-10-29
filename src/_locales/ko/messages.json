@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "약함"
     },
+    "auditCspNoScripts": {
+        "message": "스크립트 제한 없음"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

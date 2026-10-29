@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "nõrk"
     },
+    "auditCspNoScripts": {
+        "message": "skripte ei piira"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

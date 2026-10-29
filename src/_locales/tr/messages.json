@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "zayıf"
     },
+    "auditCspNoScripts": {
+        "message": "betikleri kısıtlamıyor"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

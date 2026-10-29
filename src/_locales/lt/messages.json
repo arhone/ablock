@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "silpna"
     },
+    "auditCspNoScripts": {
+        "message": "neriboja scenarijų"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

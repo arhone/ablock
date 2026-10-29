@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "lemah"
     },
+    "auditCspNoScripts": {
+        "message": "tidak mengehadkan skrip"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

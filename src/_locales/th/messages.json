@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "อ่อน"
     },
+    "auditCspNoScripts": {
+        "message": "ไม่จำกัดสคริปต์"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

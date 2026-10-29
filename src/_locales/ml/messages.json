@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "ദുർബലം"
     },
+    "auditCspNoScripts": {
+        "message": "സ്ക്രിപ്റ്റുകൾ നിയന്ത്രിക്കുന്നില്ല"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

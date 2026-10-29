@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "弱い"
     },
+    "auditCspNoScripts": {
+        "message": "スクリプトを制限しない"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

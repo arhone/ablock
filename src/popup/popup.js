@@ -1224,7 +1224,10 @@ function renderAudit(audit, server, extended, info, companies) {
             ?? /(?:^|;)\s*default-src(?![\w-])([^;]*)/i.exec(policy)?.[1]).filter((value) => value !== undefined);
         const weak = scripts.length > 0 && scripts.every((value) => /'unsafe-inline'/i.test(value)
             && !/'nonce-|'sha(256|384|512)-|'strict-dynamic'/i.test(value));
-        row('auditCsp', !csp ? no : weak ? t('auditCspWeak') : yes, !csp ? 'warn' : weak ? 'warn' : 'good');
+        // CSP только с frame-ancestors или upgrade-insecure-requests есть, но от XSS не защищает
+        const loose = csp && scripts.length === 0;
+        row('auditCsp', !csp ? no : loose ? t('auditCspNoScripts') : weak ? t('auditCspWeak') : yes,
+            !csp || loose || weak ? 'warn' : 'good');
         const nosniff = /nosniff/i.test(headers['x-content-type-options'] || '');
         row('auditNosniff', nosniff ? yes : no, nosniff ? 'good' : 'warn');
         // frame-ancestors в <meta> браузер игнорирует — только из заголовка

@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "gyenge"
     },
+    "auditCspNoScripts": {
+        "message": "nem korlátozza a szkripteket"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "ደካማ"
     },
+    "auditCspNoScripts": {
+        "message": "ስክሪፕቶችን አይገድብም"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

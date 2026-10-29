@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "slabă"
     },
+    "auditCspNoScripts": {
+        "message": "nu limitează scripturile"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

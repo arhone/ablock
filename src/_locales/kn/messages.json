@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "ದುರ್ಬಲ"
     },
+    "auditCspNoScripts": {
+        "message": "ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳನ್ನು ನಿರ್ಬಂಧಿಸುವುದಿಲ್ಲ"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

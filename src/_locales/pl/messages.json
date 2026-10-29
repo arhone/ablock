@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "słaba"
     },
+    "auditCspNoScripts": {
+        "message": "nie ogranicza skryptów"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

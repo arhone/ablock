@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "әлсіз"
     },
+    "auditCspNoScripts": {
+        "message": "скрипттерді шектемейді"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

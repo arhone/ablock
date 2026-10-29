@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "薄弱"
     },
+    "auditCspNoScripts": {
+        "message": "未限制指令碼"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

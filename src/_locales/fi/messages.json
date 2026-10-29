@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "heikko"
     },
+    "auditCspNoScripts": {
+        "message": "ei rajoita skriptejä"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },

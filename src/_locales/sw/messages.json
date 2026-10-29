@@ -874,6 +874,9 @@
     "auditCspWeak": {
         "message": "dhaifu"
     },
+    "auditCspNoScripts": {
+        "message": "haizuii hati"
+    },
     "auditPermissions": {
         "message": "Permissions-Policy"
     },
