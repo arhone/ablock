@@ -95,7 +95,7 @@
         "message": "மூன்றாம் தரப்பு டொமைன்கள் இல்லை"
     },
     "blocked": {
-        "message": "தடுக்கப்பட்டவை $COUNT$",
+        "message": "தடுப்பு $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
