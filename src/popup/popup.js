@@ -1220,13 +1220,19 @@ function renderAudit(audit, server, extended, info, companies) {
         const csp = policies.length > 0;
         // 'unsafe-inline' без nonce и hash разрешает любой встроенный скрипт — от XSS такая политика не спасает.
         // Слабо, только если слабы все политики, ограничивающие скрипты: строгая перекрывает слабую.
-        // Именно script-src, а не script-src-elem и script-src-attr
-        const scripts = policies.map((policy) => /(?:^|;)\s*script-src(?![\w-])([^;]*)/i.exec(policy)?.[1]
-            ?? /(?:^|;)\s*default-src(?![\w-])([^;]*)/i.exec(policy)?.[1]).filter((value) => value !== undefined);
-        const weak = scripts.length > 0 && scripts.every((value) => /'unsafe-inline'/i.test(value)
-            && !/'nonce-|'sha(256|384|512)-|'strict-dynamic'/i.test(value));
+        // Как в браузере (CSP3): для <script> действует script-src-elem, для onclick= и подобных — script-src-attr,
+        // при их отсутствии — script-src, затем default-src. Политика слабая, если слаб хотя бы один из двух списков
+        const directive = (policy, name) => new RegExp(`(?:^|;)\\s*${name}(?![\\w-])([^;]*)`, 'i').exec(policy)?.[1];
+        const restricting = policies.filter((policy) => ['script-src-elem', 'script-src-attr', 'script-src', 'default-src']
+            .some((name) => directive(policy, name) !== undefined));
+        const weak = restricting.length > 0 && restricting.every((policy) => {
+            const fallback = directive(policy, 'script-src') ?? directive(policy, 'default-src');
+            return [directive(policy, 'script-src-elem') ?? fallback, directive(policy, 'script-src-attr') ?? fallback]
+                .some((value) => value !== undefined && /'unsafe-inline'/i.test(value)
+                    && !/'nonce-|'sha(256|384|512)-|'strict-dynamic'/i.test(value));
+        });
         // CSP только с frame-ancestors или upgrade-insecure-requests есть, но от XSS не защищает
-        const loose = csp && scripts.length === 0;
+        const loose = csp && restricting.length === 0;
         row('auditCsp', !csp ? no : loose ? t('auditCspNoScripts') : weak ? t('auditCspWeak') : yes,
             !csp || loose || weak ? 'warn' : 'good');
         const nosniff = /nosniff/i.test(headers['x-content-type-options'] || '');
