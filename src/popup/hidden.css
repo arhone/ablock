@@ -1,0 +1,185 @@
+/* На отдельном экране остаются общие фон, тема и подвал окна. */
+body[data-screen="hidden"] {
+    max-height: 600px;
+    overflow: hidden;
+}
+body[data-screen="hidden"] > :not(#hidden-screen, footer, #defs, script, template) {
+    display: none !important;
+}
+body[data-screen="hidden"] > footer {
+    flex-shrink: 0;
+}
+#hidden-screen[hidden] {
+    display: none;
+}
+#hidden-screen {
+    flex-shrink: 0;
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.hidden-head,
+.hidden-toolbar,
+.hidden-actions,
+.hidden-all {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.hidden-title {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+    font-size: 15px;
+}
+.hidden-count {
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: var(--tint);
+    color: var(--muted);
+    font-weight: 600;
+}
+#hidden-screen button {
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    border: 0;
+    border-radius: 7px;
+    padding: 7px 10px;
+}
+#hidden-screen input {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: var(--on);
+}
+#hidden-screen button:focus-visible,
+#hidden-screen input:focus-visible {
+    outline: 2px solid var(--on);
+    outline-offset: 2px;
+}
+#hidden-screen .hidden-back {
+    background: var(--tint);
+    font-size: 24px;
+    line-height: 1;
+}
+[dir="rtl"] .hidden-back span {
+    display: block;
+    transform: scaleX(-1);
+}
+.hidden-toolbar,
+.hidden-actions {
+    justify-content: space-between;
+}
+.hidden-all {
+    cursor: pointer;
+}
+.hidden-selected {
+    color: var(--muted);
+    text-align: end;
+}
+
+.hidden-list {
+    min-height: 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+    background: var(--tint);
+    border-radius: 9px;
+    scrollbar-width: thin;
+}
+.hidden-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.hidden-row:hover,
+.hidden-row:focus-within {
+    background: var(--tint);
+}
+.hidden-row:has(input:checked) {
+    background: color-mix(in srgb, var(--on) 16%, transparent);
+}
+.hidden-row svg {
+    flex: 0 0 26px;
+    width: 26px;
+    height: 26px;
+    padding: 4px;
+    background: var(--tint);
+    border-radius: 6px;
+    fill: none;
+    stroke: var(--muted);
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+}
+.hidden-description {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+}
+.hidden-summary,
+.hidden-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hidden-text,
+.hidden-absent,
+.hidden-hint {
+    color: var(--muted);
+    font-size: 11px;
+}
+.hidden-missing {
+    color: var(--muted);
+}
+.hidden-missing svg {
+    opacity: 0.5;
+}
+.hidden-absent {
+    font-style: italic;
+}
+/* Селектор доступен и мышью, и с клавиатуры; текст никогда не становится HTML. */
+.hidden-selector {
+    display: none;
+    overflow-wrap: anywhere;
+    font: 10px/1.4 monospace;
+    text-align: start;
+    color: var(--muted);
+    user-select: text;
+}
+.hidden-row:hover .hidden-selector,
+.hidden-row:focus-within .hidden-selector {
+    display: block;
+}
+.hidden-hint {
+    margin: 0;
+}
+#hidden-screen .hidden-clear {
+    background: transparent;
+    color: var(--muted);
+    text-align: start;
+}
+#hidden-screen .hidden-delete {
+    background: var(--text);
+    color: var(--bg);
+    font-weight: 600;
+}
+#hidden-screen .hidden-confirm {
+    background: var(--off);
+    color: var(--bg);
+    font-weight: 600;
+}
+#hidden-screen button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+#hidden-screen:has(.hidden-confirm) .hidden-hint {
+    color: var(--off);
+}
