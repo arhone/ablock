@@ -5,7 +5,7 @@
 
 ## Окно в headless Chrome
 - Chrome 137+ не грузит расширение флагом `--load-extension` — только через CDP pipe (`--remote-debugging-pipe`) и `Extensions.loadUnpacked` с путём к папке.
-- Расширение просит часть прав по запросу (optional) и получает доступ к вкладке по клику (activeTab). В headless клика нет, поэтому для стенда — копия `src/` с этими правами в обязательных и `declarativeNetRequestFeedback` (иначе «Блок —»). Сам `src/manifest.json` не менять.
+- Расширение просит часть прав по запросу (optional) и получает доступ к вкладке по клику (activeTab). В headless клика нет, поэтому для стенда — копия `src/` с этими правами в обязательных и `declarativeNetRequestFeedback` (иначе «Реклама —»). Сам `src/manifest.json` не менять.
 - Окно: `chrome-extension://<id>/popup/popup.html` во вкладке, или настоящее окно через `chrome.action.openPopup()` из фонового скрипта. Фоновый скрипт засыпает и теряет данные вкладки — перед снимком перезагружать сайт.
 - Тема — `Emulation.setEmulatedMedia` (`prefers-color-scheme`). Язык — `aBlockLang` в `chrome.storage.local` или язык браузера.
 - Локальные сайты — свой сервер на 127.0.0.1 и `--host-resolver-rules`; HTTPS со своим сертификатом — `--ignore-certificate-errors`. Внешние сайты из песочницы могут не открываться; некоторые (lenta.ru) рвут соединение с HeadlessChrome — нужен обычный User-Agent.

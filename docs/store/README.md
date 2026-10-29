@@ -70,7 +70,7 @@ Blocks ads, trackers and malicious sites, and shows how the current website perf
 ## Обновление скриншотов
 
 Снимаются тестовым стендом (`/tmp/ablock-shots/store.mjs` и `compose.py`, в репозиторий не входят).
-Расширение с разрешениями расширенного режима и `declarativeNetRequestFeedback` (иначе счётчик «Блок»
+Расширение с разрешениями расширенного режима и `declarativeNetRequestFeedback` (иначе счётчик «Реклама»
 в тестовом браузере пустой) открывается на настоящей новостной странице (статья Blic), окно снимается в 2×
 в тёмной теме: `DARK=1 THEME=dark POPLANG=<язык> POPJS=<скрипт в окне> node store.mjs <адрес> <png>`.
 `POPJS` заменяет домен в «Блокировать на …» на «этом сайте». Слева — `mockup/<язык>.html`, снятый в 780×800;
