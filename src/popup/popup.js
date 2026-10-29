@@ -87,7 +87,7 @@ const NETWORKS_BY_LANG = {
 const DONATE_URL = 'https://boosty.to/a.arh/donate';
 
 // Одноразовые просьбы (renderNotices): оценить в магазине — через столько дней после установки,
-// поддержать — после просьбы оценить и через столько дней. В расширенном режиме просьба поддержать
+// поддержать — через столько дней после того, как закрыли просьбу оценить. В расширенном режиме просьба поддержать
 // называет число заблокированного, если его набралось столько (статистика идёт с включения режима)
 const RATE_DAYS = 30;
 const ASK_DAYS = 90;
@@ -2061,26 +2061,36 @@ function renderStats(stats) {
  * @param {?Object} stats Статистика расширенного режима, null без него
  */
 async function renderNotices(extended, stats) {
-    const seen = await chrome.storage.local.get(['aBlockInstalled', 'aBlockRated', 'aBlockAsked']);
-    const days = seen.aBlockInstalled ? (Date.now() - seen.aBlockInstalled) / 86400000 : 0;
+    // Хранилище не прочиталось — просьб нет, но расширенный режим или статистика видны
+    const seen = await chrome.storage.local.get(['aBlockInstalled', 'aBlockRated', 'aBlockAsked'])
+        .catch(() => ({}));
+    const days = (time) => time ? (Date.now() - time) / 86400000 : 0;
     const cards = [
-        ['rate', () => !seen.aBlockRated && days >= RATE_DAYS],
-        ['ask', () => Boolean(DONATE_URL) && Boolean(seen.aBlockRated) && !seen.aBlockAsked && days > ASK_DAYS],
+        ['rate', () => !seen.aBlockRated && days(seen.aBlockInstalled) >= RATE_DAYS],
+        ['ask', () => Boolean(DONATE_URL) && !seen.aBlockAsked && days(seen.aBlockRated) >= ASK_DAYS],
         ['extended', () => !extended],
         ['stats', () => extended]
     ];
+    // Главная кнопка карточки — куда перевести фокус, если закрыли предыдущую
+    const focusTarget = {rate: 'rate-button', ask: 'ask-button', extended: 'extended-button', stats: 'stats'};
     const show = () => {
         const [shown] = cards.find(([, when]) => when()) || [];
         for (const [id] of cards) {
             document.getElementById(id).hidden = id !== shown;
         }
+        return shown;
     };
     // Кнопка просьбы открывает ссылку, крестик — «больше не показывать»; то и другое запоминается.
     // Новая вкладка закрывает окно: сначала запоминаем, потом открываем
     const once = (id, url, key) => {
         const done = async () => {
+            // Фокус был в закрытой карточке — без переноса он ушёл бы на body
+            const focused = document.getElementById(id).contains(document.activeElement);
             seen[key] = Date.now();
-            show();
+            const shown = show();
+            if (focused && shown) {
+                document.getElementById(focusTarget[shown]).focus();
+            }
             await chrome.storage.local.set({[key]: seen[key]});
         };
         const link = document.getElementById(`${id}-button`);
@@ -2267,7 +2277,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     let rescore = null;
     info = await renderSite(tab, server, () => rescore?.());
     if (!info) {
-        return; // Страница недоступна для расширений (магазин, настройки)
+        // Страница недоступна для расширений (магазин, настройки): блокировок не узнать
+        document.getElementById('blocked').hidden = true;
+        return;
     }
     setupClear(tab);
     await renderBlocked(tab, info, active(), server);

@@ -734,10 +734,10 @@ body.loading {
     text-decoration: none;
 }
 #rate-button::before {
-    content: "★ ";
+    content: "★ " / "";
 }
 #ask-button::before {
-    content: "♥ ";
+    content: "♥ " / "";
 }
 .notice .close {
     flex: none;
@@ -1129,6 +1129,6 @@ footer a:hover {
     color: var(--text);
 }
 #donate::before {
-    content: "♥ ";
+    content: "♥ " / "";
     color: #f0477f;
 }
