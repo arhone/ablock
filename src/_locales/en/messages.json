@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Prerender or history navigation: phases are not reconstructed."
     },
-    "causeLimited": {
-        "message": "Some details are missing, hidden or limited."
-    },
     "causeScope": {
         "message": "Original document load; not a new measurement after history restore."
     }

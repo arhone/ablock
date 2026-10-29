@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Uonyeshaji wa awali au historia: awamu hazijengwi upya."
     },
-    "causeLimited": {
-        "message": "Baadhi ya maelezo hayapo, yamefichwa au yamewekewa kikomo."
-    },
     "causeScope": {
         "message": "Upakiaji wa awali wa hati; si kipimo kipya baada ya kurejesha kutoka historia."
     }

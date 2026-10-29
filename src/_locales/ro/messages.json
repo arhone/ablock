@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Prerandare sau navigare în istoric: fazele nu sunt reconstruite."
     },
-    "causeLimited": {
-        "message": "Unele detalii lipsesc, sunt ascunse sau limitate."
-    },
     "causeScope": {
         "message": "Încărcarea inițială a documentului; nu o măsurare nouă după restaurarea din istoric."
     }

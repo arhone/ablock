@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Prerendering o navigazione nella cronologia: le fasi non vengono ricostruite."
     },
-    "causeLimited": {
-        "message": "Alcuni dettagli sono assenti, nascosti o limitati."
-    },
     "causeScope": {
         "message": "Caricamento originale del documento; nessuna nuova misura dopo il ripristino dalla cronologia."
     }

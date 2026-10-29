@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Pré-renderização ou navegação no histórico: as fases não são reconstruídas."
     },
-    "causeLimited": {
-        "message": "Alguns detalhes estão ausentes, ocultos ou limitados."
-    },
     "causeScope": {
         "message": "Carregamento original do documento; não é uma nova medição após restauro pelo histórico."
     }

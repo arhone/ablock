@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Eelrenderdus või ajaloos navigeerimine: etappe ei taastata."
     },
-    "causeLimited": {
-        "message": "Mõned üksikasjad puuduvad, on peidetud või piiratud."
-    },
     "causeScope": {
         "message": "Dokumendi algne laadimine; pärast ajaloost taastamist uut mõõtmist ei tehta."
     }

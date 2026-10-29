@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Prerenderowanie lub nawigacja historii: fazy nie są odtwarzane."
     },
-    "causeLimited": {
-        "message": "Niektórych szczegółów brakuje lub są ukryte albo ograniczone."
-    },
     "causeScope": {
         "message": "Pierwotne ładowanie dokumentu; nie nowy pomiar po przywróceniu z historii."
     }

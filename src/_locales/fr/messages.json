@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Prérendu ou navigation dans l’historique : les phases ne sont pas reconstruites."
     },
-    "causeLimited": {
-        "message": "Certains détails sont absents, masqués ou limités."
-    },
     "causeScope": {
         "message": "Chargement initial du document ; pas de nouvelle mesure après restauration depuis l’historique."
     }

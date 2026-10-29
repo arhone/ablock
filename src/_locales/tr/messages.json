@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Ön işleme veya geçmiş gezinmesi: aşamalar yeniden oluşturulmaz."
     },
-    "causeLimited": {
-        "message": "Bazı ayrıntılar eksik, gizli veya sınırlıdır."
-    },
     "causeScope": {
         "message": "Belgenin ilk yüklemesi; geçmişten geri dönüş sonrası yeni bir ölçüm değildir."
     }

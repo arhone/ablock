@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Prerendering oder Verlaufnavigation: Phasen werden nicht rekonstruiert."
     },
-    "causeLimited": {
-        "message": "Einige Details fehlen, sind verborgen oder begrenzt."
-    },
     "causeScope": {
         "message": "Ursprüngliches Laden des Dokuments; keine neue Messung nach Rückkehr im Verlauf."
     }

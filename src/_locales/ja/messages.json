@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "事前描画または履歴からの移動では、各段階を再構成しません。"
     },
-    "causeLimited": {
-        "message": "一部の詳細が欠落、非公開、または制限されています。"
-    },
     "causeScope": {
         "message": "ドキュメントの元の読み込みです。履歴からの復元後の新しい測定ではありません。"
     }

@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Priekšrenderēšana vai vēstures navigācija: posmi netiek rekonstruēti."
     },
-    "causeLimited": {
-        "message": "Daļa informācijas trūkst, ir slēpta vai ierobežota."
-    },
     "causeScope": {
         "message": "Dokumenta sākotnējā ielāde; nav jauna mērījuma pēc atjaunošanas no vēstures."
     }

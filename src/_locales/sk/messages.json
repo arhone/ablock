@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Predvykreslenie alebo navigácia históriou: fázy sa neobnovujú."
     },
-    "causeLimited": {
-        "message": "Niektoré podrobnosti chýbajú, sú skryté alebo obmedzené."
-    },
     "causeScope": {
         "message": "Pôvodné načítanie dokumentu; nejde o nové meranie po obnovení z histórie."
     }

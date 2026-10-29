@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Oldindan chizish yoki tarix: bosqichlar tiklanmaydi."
     },
-    "causeLimited": {
-        "message": "Ayrim tafsilotlar yo‘q, yashirilgan yoki cheklangan."
-    },
     "causeScope": {
         "message": "Hujjatning dastlabki yuklanishi; tarixdan qaytgandan keyingi yangi o‘lchov emas."
     }

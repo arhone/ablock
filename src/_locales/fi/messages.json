@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Esirenderöinti tai siirtyminen historiassa: vaiheita ei muodosteta."
     },
-    "causeLimited": {
-        "message": "Joitakin tietoja puuttuu, on piilotettu tai rajoitettu."
-    },
     "causeScope": {
         "message": "Asiakirjan alkuperäinen lataus; ei uutta mittausta historiasta palautettaessa."
     }

@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Kết xuất trước hoặc điều hướng lịch sử: không tái dựng các giai đoạn."
     },
-    "causeLimited": {
-        "message": "Một số chi tiết bị thiếu, ẩn hoặc giới hạn."
-    },
     "causeScope": {
         "message": "Lần tải gốc của tài liệu; không phải phép đo mới sau khi khôi phục từ lịch sử."
     }

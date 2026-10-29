@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Predizris ali navigacija po zgodovini: faze se ne rekonstruirajo."
     },
-    "causeLimited": {
-        "message": "Nekatere podrobnosti manjkajo, so skrite ali omejene."
-    },
     "causeScope": {
         "message": "Prvotno nalaganje dokumenta; ne nova meritev po obnovitvi iz zgodovine."
     }

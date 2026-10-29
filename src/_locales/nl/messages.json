@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Prerendering of geschiedenisnavigatie: fasen worden niet gereconstrueerd."
     },
-    "causeLimited": {
-        "message": "Sommige details ontbreken, zijn verborgen of beperkt."
-    },
     "causeScope": {
         "message": "Oorspronkelijke documentlading; geen nieuwe meting na herstel uit de geschiedenis."
     }

@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "預先轉譯或歷史記錄導覽：不重建各階段。"
     },
-    "causeLimited": {
-        "message": "部分詳細資料缺失、隱藏或受限。"
-    },
     "causeScope": {
         "message": "文件的原始載入，並非從歷史記錄還原後的新測量。"
     }

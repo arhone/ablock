@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Prarender atau navigasi sejarah: fasa tidak dibina semula."
     },
-    "causeLimited": {
-        "message": "Sesetengah butiran tiada, tersembunyi atau terhad."
-    },
     "causeScope": {
         "message": "Muatan asal dokumen; bukan ukuran baharu selepas pemulihan sejarah."
     }

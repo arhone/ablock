@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "사전 렌더링 또는 방문 기록 탐색: 단계를 재구성하지 않습니다."
     },
-    "causeLimited": {
-        "message": "일부 세부 정보가 없거나 숨겨져 있거나 제한됩니다."
-    },
     "causeScope": {
         "message": "문서의 원래 로드이며 방문 기록 복원 후의 새 측정이 아닙니다."
     }

@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Išankstinis atvaizdavimas arba istorijos naršymas: etapai neatkuriami."
     },
-    "causeLimited": {
-        "message": "Kai kurių duomenų trūksta, jie paslėpti arba riboti."
-    },
     "causeScope": {
         "message": "Pradinis dokumento įkėlimas; ne naujas matavimas atkūrus iš istorijos."
     }

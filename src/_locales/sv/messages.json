@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Förrendering eller historiknavigering: faser återskapas inte."
     },
-    "causeLimited": {
-        "message": "Vissa detaljer saknas, är dolda eller begränsade."
-    },
     "causeScope": {
         "message": "Dokumentets ursprungliga laddning; ingen ny mätning efter återställning från historiken."
     }

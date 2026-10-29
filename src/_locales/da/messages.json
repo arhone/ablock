@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Forhåndsgengivelse eller historiknavigation: faser rekonstrueres ikke."
     },
-    "causeLimited": {
-        "message": "Nogle detaljer mangler, er skjulte eller begrænsede."
-    },
     "causeScope": {
         "message": "Dokumentets oprindelige indlæsning; ingen ny måling efter gendannelse fra historikken."
     }

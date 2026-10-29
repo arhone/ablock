@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Prerender o nabigasyon sa kasaysayan: hindi binubuong muli ang mga yugto."
     },
-    "causeLimited": {
-        "message": "May ilang detalyeng wala, nakatago o limitado."
-    },
     "causeScope": {
         "message": "Orihinal na pag-load ng dokumento; hindi bagong sukat matapos ibalik mula sa kasaysayan."
     }

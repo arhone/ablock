@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Előzetes megjelenítés vagy előzménynavigáció: a szakaszok nem állíthatók helyre."
     },
-    "causeLimited": {
-        "message": "Egyes részletek hiányoznak, rejtettek vagy korlátozottak."
-    },
     "causeScope": {
         "message": "A dokumentum eredeti betöltése; nem új mérés az előzményekből való visszaállítás után."
     }

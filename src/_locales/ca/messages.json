@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Prerenderització o navegació de l’historial: no es reconstrueixen les fases."
     },
-    "causeLimited": {
-        "message": "Alguns detalls falten, estan ocults o limitats."
-    },
     "causeScope": {
         "message": "Càrrega original del document; no és una mesura nova després de restaurar des de l’historial."
     }

@@ -1215,9 +1215,6 @@
     "causeSpecialNavigation": {
         "message": "Prarender atau navigasi riwayat: fase tidak direkonstruksi."
     },
-    "causeLimited": {
-        "message": "Sebagian detail tidak ada, tersembunyi, atau dibatasi."
-    },
     "causeScope": {
         "message": "Pemuatan dokumen asli; bukan pengukuran baru setelah pemulihan riwayat."
     }
