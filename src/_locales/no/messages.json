@@ -498,7 +498,7 @@
         }
     },
     "askTime": {
-        "message": "Du har brukt ABlock i tre måneder. Hvis den er nyttig, støtt utviklingen"
+        "message": "Du har brukt ABlock i flere måneder. Hvis den er nyttig, støtt utviklingen"
     },
     "askClose": {
         "message": "Ikke vis igjen"

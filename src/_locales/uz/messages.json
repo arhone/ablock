@@ -498,7 +498,7 @@
         }
     },
     "askTime": {
-        "message": "Siz ABlock’dan uch oydan beri foydalanyapsiz. Foydali boʻlsa, ishlab chiqishni qoʻllab-quvvatlang"
+        "message": "Siz ABlock’dan bir necha oydan beri foydalanyapsiz. Foydali boʻlsa, ishlab chiqishni qoʻllab-quvvatlang"
     },
     "askClose": {
         "message": "Boshqa koʻrsatilmasin"

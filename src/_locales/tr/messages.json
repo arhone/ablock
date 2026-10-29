@@ -498,7 +498,7 @@
         }
     },
     "askTime": {
-        "message": "ABlock’u üç aydır kullanıyorsunuz. İşinize yarıyorsa geliştirilmesini destekleyin"
+        "message": "ABlock’u birkaç aydır kullanıyorsunuz. İşinize yarıyorsa geliştirilmesini destekleyin"
     },
     "askClose": {
         "message": "Bir daha gösterme"

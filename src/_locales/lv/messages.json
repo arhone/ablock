@@ -498,7 +498,7 @@
         }
     },
     "askTime": {
-        "message": "Jūs lietojat ABlock jau trīs mēnešus. Ja tas noder, atbalstiet izstrādi"
+        "message": "Jūs lietojat ABlock jau vairākus mēnešus. Ja tas noder, atbalstiet izstrādi"
     },
     "askClose": {
         "message": "Vairs nerādīt"
