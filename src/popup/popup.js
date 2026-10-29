@@ -2292,16 +2292,30 @@ document.addEventListener('DOMContentLoaded', async function () {
     let server = null; // Данные расширенного режима о вкладке
 
     // Нажатие на кнопку. Если защита отключена только на этом сайте — щит возвращает её сайту
-    document.getElementById('button').addEventListener('click', function () {
+    document.getElementById('button').addEventListener('click', async function () {
         if (status && allowedEntry) {
             setSite(true);
             return;
         }
+        shield.disabled = true;
+        const saved = await chrome.runtime.sendMessage({status: !status}).catch(() => false);
+        if (saved !== true) {
+            // Фоновый скрипт не сохранил настройку
+            shield.disabled = false;
+            return;
+        }
         status = !status;
         render();
-        chrome.runtime.sendMessage({status});
         if (isSite) {
             renderBlocked(tab, info, active(), server);
+            chrome.tabs.onUpdated.addListener((id, change) => {
+                if (id === tab.id && change.status === 'complete') {
+                    setTimeout(() => location.reload(), 1000);
+                }
+            });
+            await chrome.tabs.reload(tab.id);
+        } else {
+            shield.disabled = false;
         }
     });
 
