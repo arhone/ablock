@@ -90,7 +90,19 @@
             "youtube-nocookie.com",
             "ytimg.com",
             "ggpht.com",
-            "googlevideo.com"
+            "googlevideo.com",
+            "google.de",
+            "google.fr",
+            "google.it",
+            "google.es",
+            "google.co.uk",
+            "google.ca",
+            "google.com.br",
+            "google.co.in",
+            "google.co.jp",
+            "google.com.tr",
+            "google.kz",
+            "google.by"
         ]
     },
     {
@@ -250,7 +262,9 @@
         "sites": [
             "tiktok.com",
             "tiktokcdn.com",
-            "tiktokcdn-us.com"
+            "tiktokcdn-us.com",
+            "ttwstatic.com",
+            "byteimg.com"
         ]
     },
     {
@@ -305,7 +319,13 @@
             "amazon.de",
             "amazon.co.jp",
             "media-amazon.com",
-            "ssl-images-amazon.com"
+            "ssl-images-amazon.com",
+            "amazon.fr",
+            "amazon.it",
+            "amazon.es",
+            "amazon.ca",
+            "amazon.in",
+            "amazon.com.br"
         ]
     },
     {
