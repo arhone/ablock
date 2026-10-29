@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Без компресије"
     },
+    "compressionMultiple": {
+        "message": "Више метода"
+    },
     "compressionOff": {
         "message": "Страница се шаље без компресије — учитава се спорије"
     },

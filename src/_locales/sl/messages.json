@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Brez stiskanja"
     },
+    "compressionMultiple": {
+        "message": "Več metod"
+    },
     "compressionOff": {
         "message": "Stran se pošilja nestisnjena — nalaga se počasneje"
     },

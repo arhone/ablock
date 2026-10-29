@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Fără compresie"
     },
+    "compressionMultiple": {
+        "message": "Mai multe metode"
+    },
     "compressionOff": {
         "message": "Pagina este trimisă necomprimată — se încarcă mai încet"
     },

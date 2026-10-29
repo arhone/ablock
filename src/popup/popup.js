@@ -681,7 +681,9 @@ async function renderSite(tab, server, onLoadTime) {
     // Текстовые файлы: «Brotli — 14, gzip — 5, без сжатия — 2»
     const counts = {};
     for (const [key, count] of Object.entries(encodedFiles)) {
-        const name = key ? NAMES[key] || key : t('compressionNone').toLocaleLowerCase(LANG);
+        // «multiple» — так браузер пишет про файл, сжатый несколькими способами подряд
+        const name = !key ? t('compressionNone').toLocaleLowerCase(LANG)
+            : key === 'multiple' ? t('compressionMultiple').toLocaleLowerCase(LANG) : NAMES[key] || key;
         counts[name] = (counts[name] || 0) + count;
     }
     const total = Object.values(encodedFiles).reduce((sum, count) => sum + count, 0);
@@ -692,15 +694,20 @@ async function renderSite(tab, server, onLoadTime) {
         plain.length ? t('compressionPlain', plain.join(', ')) : ''
     ] : [];
     // Из заголовка — если браузер не назвал сжатие или при нескольких написал «multiple». Повторы склеены
-    // через запятую («gzip, br»): сжатия применены по порядку, последнее — то, в котором пришёл документ
-    const encoding = (info.encoding.name !== 'multiple' && info.encoding.name)
-        || (server?.headers['content-encoding'] || '').split(',').at(-1).trim() || info.encoding.name;
+    // через запятую («gzip, br»): сжатия применены по порядку, последнее — то, в котором пришёл документ.
+    // Пустые значения пропускаем, регистр не важен («BR» — тоже Brotli)
+    const encoding = ((info.encoding.name !== 'multiple' && info.encoding.name)
+        || (server?.headers['content-encoding'] || '').split(',').map((s) => s.trim()).filter(Boolean).at(-1)
+        || info.encoding.name).toLowerCase();
     info.compressed = null;
     if (encoding && encoding !== 'identity') {
-        const name = NAMES[encoding] || encoding;
+        // «multiple» без заголовка (не расширенный режим): сжатие есть, но каким способом пришёл документ,
+        // неизвестно — нейтрально, не хвалим и не ругаем
+        const multiple = encoding === 'multiple';
+        const name = multiple ? t('compressionMultiple') : NAMES[encoding] || encoding;
         info.compressed = true;
-        setBadge('compression', name, encoding === 'br' || encoding === 'zstd' ? 'good' : 'warn', [
-            t('compressionOn', name)
+        setBadge('compression', name, multiple ? 'none' : encoding === 'br' || encoding === 'zstd' ? 'good' : 'warn', [
+            t('compressionOn', multiple ? name.toLocaleLowerCase(LANG) : name)
             + (decoded > encoded && encoded > 0 ? ` (${t('compressionRatio', formatSize(decoded), formatSize(encoded))})` : ''),
             ...filesLines
         ].filter(Boolean).join('\n'));
@@ -1163,7 +1170,7 @@ function renderAudit(audit, server, extended, info, companies) {
         } else if (cacheHeader) {
             // Повторы склеены через запятую (два X-Cache, у Fastly с щитом — «MISS, HIT» одной строкой): каждое
             // значение — свой уровень кэша, последнее — ближайший к посетителю. По нему и подпись, и цвет
-            const value = server.headers[cacheHeader].split(',').at(-1).trim();
+            const value = server.headers[cacheHeader].split(',').map((s) => s.trim()).filter(Boolean).at(-1) ?? '';
             const hit = /\bhit\b/i.test(value);
             row('auditCache', (/\b(hit|miss|expired|stale|bypass|dynamic|updating|revalidated)\b/i.exec(value)?.[1] || value)
                 .toUpperCase() + (cacheSource ? ` · ${cacheSource}` : ''), hit ? 'good' : 'none');

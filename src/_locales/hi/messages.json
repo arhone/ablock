@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "बिना कंप्रेशन"
     },
+    "compressionMultiple": {
+        "message": "कई तरीके"
+    },
     "compressionOff": {
         "message": "पेज बिना कंप्रेशन के भेजा जाता है — देर से लोड होता है"
     },

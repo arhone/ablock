@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "بدون فشرده‌سازی"
     },
+    "compressionMultiple": {
+        "message": "چند روش"
+    },
     "compressionOff": {
         "message": "صفحه بدون فشرده‌سازی ارسال می‌شود — کندتر بارگیری می‌شود"
     },

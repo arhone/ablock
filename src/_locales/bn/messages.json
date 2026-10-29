@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "সংকোচন নেই"
     },
+    "compressionMultiple": {
+        "message": "একাধিক পদ্ধতি"
+    },
     "compressionOff": {
         "message": "পৃষ্ঠাটি সংকোচন ছাড়াই পাঠানো হয় — ধীরে লোড হয়"
     },

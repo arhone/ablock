@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Tiada pemampatan"
     },
+    "compressionMultiple": {
+        "message": "Beberapa kaedah"
+    },
     "compressionOff": {
         "message": "Halaman dihantar tanpa dimampatkan — ia dimuatkan lebih perlahan"
     },

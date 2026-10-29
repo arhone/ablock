@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Hakuna mbano"
     },
+    "compressionMultiple": {
+        "message": "Njia kadhaa"
+    },
     "compressionOff": {
         "message": "Ukurasa unatumwa bila kubanwa — unapakia polepole zaidi"
     },

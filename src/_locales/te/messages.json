@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "కంప్రెషన్ లేదు"
     },
+    "compressionMultiple": {
+        "message": "అనేక పద్ధతులు"
+    },
     "compressionOff": {
         "message": "పేజీ కంప్రెషన్ లేకుండా పంపబడుతుంది — నెమ్మదిగా లోడ్ అవుతుంది"
     },

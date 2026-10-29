@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Ingen komprimering"
     },
+    "compressionMultiple": {
+        "message": "Flere metoder"
+    },
     "compressionOff": {
         "message": "Siden sendes ukomprimert — den lastes saktere"
     },

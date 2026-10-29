@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Bez komprese"
     },
+    "compressionMultiple": {
+        "message": "Více metod"
+    },
     "compressionOff": {
         "message": "Stránka se posílá bez komprese — načítá se pomaleji"
     },

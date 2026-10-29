@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Bez saspiešanas"
     },
+    "compressionMultiple": {
+        "message": "Vairākas metodes"
+    },
     "compressionOff": {
         "message": "Lapa tiek sūtīta nesaspiesta — tā ielādējas lēnāk"
     },

@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "No compression"
     },
+    "compressionMultiple": {
+        "message": "Several methods"
+    },
     "compressionOff": {
         "message": "The page is sent uncompressed — it loads slower"
     },

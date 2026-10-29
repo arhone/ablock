@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Ei pakkausta"
     },
+    "compressionMultiple": {
+        "message": "Useita menetelmiä"
+    },
     "compressionOff": {
         "message": "Sivu lähetetään pakkaamattomana — se latautuu hitaammin"
     },

@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "未压缩"
     },
+    "compressionMultiple": {
+        "message": "多种方式"
+    },
     "compressionOff": {
         "message": "页面未经压缩传输，加载更慢"
     },

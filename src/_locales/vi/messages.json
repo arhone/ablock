@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Không nén"
     },
+    "compressionMultiple": {
+        "message": "Nhiều phương thức"
+    },
     "compressionOff": {
         "message": "Trang được truyền không nén — tải chậm hơn"
     },

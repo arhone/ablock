@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "ללא דחיסה"
     },
+    "compressionMultiple": {
+        "message": "כמה שיטות"
+    },
     "compressionOff": {
         "message": "הדף נשלח ללא דחיסה — הוא נטען לאט יותר"
     },

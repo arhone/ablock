@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Nincs tömörítés"
     },
+    "compressionMultiple": {
+        "message": "Több módszer"
+    },
     "compressionOff": {
         "message": "Az oldal tömörítés nélkül érkezik — lassabban töltődik be"
     },

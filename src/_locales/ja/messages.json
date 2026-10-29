@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "圧縮なし"
     },
+    "compressionMultiple": {
+        "message": "複数の方式"
+    },
     "compressionOff": {
         "message": "ページは圧縮なしで送信されます — 読み込みが遅くなります"
     },

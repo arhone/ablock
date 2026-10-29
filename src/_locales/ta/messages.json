@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "சுருக்கம் இல்லை"
     },
+    "compressionMultiple": {
+        "message": "பல முறைகள்"
+    },
     "compressionOff": {
         "message": "பக்கம் சுருக்கமின்றி அனுப்பப்படுகிறது — மெதுவாக ஏற்றப்படுகிறது"
     },

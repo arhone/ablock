@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "未壓縮"
     },
+    "compressionMultiple": {
+        "message": "多種方式"
+    },
     "compressionOff": {
         "message": "頁面未經壓縮傳送 — 載入較慢"
     },

@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "ไม่บีบอัด"
     },
+    "compressionMultiple": {
+        "message": "หลายวิธี"
+    },
     "compressionOff": {
         "message": "หน้าถูกส่งโดยไม่บีบอัด — โหลดช้าลง"
     },

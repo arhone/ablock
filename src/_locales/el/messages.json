@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Χωρίς συμπίεση"
     },
+    "compressionMultiple": {
+        "message": "Πολλές μέθοδοι"
+    },
     "compressionOff": {
         "message": "Η σελίδα αποστέλλεται χωρίς συμπίεση — φορτώνει πιο αργά"
     },

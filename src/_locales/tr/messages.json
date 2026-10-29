@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Sıkıştırma yok"
     },
+    "compressionMultiple": {
+        "message": "Birkaç yöntem"
+    },
     "compressionOff": {
         "message": "Sayfa sıkıştırılmadan gönderiliyor, daha yavaş yüklenir"
     },

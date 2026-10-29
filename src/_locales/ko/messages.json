@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "압축 없음"
     },
+    "compressionMultiple": {
+        "message": "여러 방식"
+    },
     "compressionOff": {
         "message": "페이지가 압축 없이 전송됩니다 — 로드가 느려집니다"
     },

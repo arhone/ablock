@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "കംപ്രഷൻ ഇല്ല"
     },
+    "compressionMultiple": {
+        "message": "പല രീതികൾ"
+    },
     "compressionOff": {
         "message": "പേജ് കംപ്രഷൻ ഇല്ലാതെ അയയ്ക്കുന്നു — അത് പതുക്കെ ലോഡ് ചെയ്യുന്നു"
     },

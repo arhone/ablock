@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Siqilmagan"
     },
+    "compressionMultiple": {
+        "message": "Bir nechta usul"
+    },
     "compressionOff": {
         "message": "Sahifa siqilmasdan uzatiladi — sekinroq yuklanadi"
     },

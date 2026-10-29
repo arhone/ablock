@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Geen compressie"
     },
+    "compressionMultiple": {
+        "message": "Meerdere methoden"
+    },
     "compressionOff": {
         "message": "De pagina wordt ongecomprimeerd verstuurd — hij laadt trager"
     },

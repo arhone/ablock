@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "સંકોચન નથી"
     },
+    "compressionMultiple": {
+        "message": "અનેક પદ્ધતિઓ"
+    },
     "compressionOff": {
         "message": "પેજ સંકોચન વિના મોકલાય છે — તે ધીમું લોડ થાય છે"
     },

@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Tanpa kompresi"
     },
+    "compressionMultiple": {
+        "message": "Beberapa metode"
+    },
     "compressionOff": {
         "message": "Halaman dikirim tanpa kompresi — dimuat lebih lambat"
     },

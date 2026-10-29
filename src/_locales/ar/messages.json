@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "بلا ضغط"
     },
+    "compressionMultiple": {
+        "message": "عدة طرق"
+    },
     "compressionOff": {
         "message": "تُرسل الصفحة دون ضغط — فتُحمّل أبطأ"
     },

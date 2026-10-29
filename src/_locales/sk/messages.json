@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Bez kompresie"
     },
+    "compressionMultiple": {
+        "message": "Viac metód"
+    },
     "compressionOff": {
         "message": "Stránka sa posiela bez kompresie — načítava sa dlhšie"
     },

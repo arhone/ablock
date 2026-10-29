@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "ಸಂಕುಚನವಿಲ್ಲ"
     },
+    "compressionMultiple": {
+        "message": "ಹಲವು ವಿಧಾನಗಳು"
+    },
     "compressionOff": {
         "message": "ಪುಟವನ್ನು ಸಂಕುಚಿಸದೆ ಕಳುಹಿಸಲಾಗುತ್ತದೆ — ಅದು ನಿಧಾನವಾಗಿ ಲೋಡ್ ಆಗುತ್ತದೆ"
     },

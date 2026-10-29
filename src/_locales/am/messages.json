@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "ምንም መጨመቅ የለም"
     },
+    "compressionMultiple": {
+        "message": "በበርካታ ዘዴዎች"
+    },
     "compressionOff": {
         "message": "ገጹ ሳይጨመቅ ይላካል — በዝግታ ይጫናል"
     },

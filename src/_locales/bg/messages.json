@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Без компресия"
     },
+    "compressionMultiple": {
+        "message": "Няколко метода"
+    },
     "compressionOff": {
         "message": "Страницата се изпраща без компресия — зарежда се по-бавно"
     },

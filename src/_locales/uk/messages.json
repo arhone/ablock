@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Без стиснення"
     },
+    "compressionMultiple": {
+        "message": "Кілька способів"
+    },
     "compressionOff": {
         "message": "Сторінка передається без стиснення — завантажується повільніше"
     },

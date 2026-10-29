@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Bez sažimanja"
     },
+    "compressionMultiple": {
+        "message": "Više metoda"
+    },
     "compressionOff": {
         "message": "Stranica se šalje bez sažimanja — učitava se sporije"
     },

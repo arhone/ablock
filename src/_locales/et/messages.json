@@ -224,6 +224,9 @@
     "compressionNone": {
         "message": "Tihendamata"
     },
+    "compressionMultiple": {
+        "message": "Mitu meetodit"
+    },
     "compressionOff": {
         "message": "Leht saadetakse tihendamata — see laadib aeglasemalt"
     },
