@@ -1216,9 +1216,10 @@ function renderAudit(audit, server, extended, info, companies) {
             .filter((policy) => policy.trim());
         const csp = policies.length > 0;
         // 'unsafe-inline' без nonce и hash разрешает любой встроенный скрипт — от XSS такая политика не спасает.
-        // Слабо, только если слабы все политики, ограничивающие скрипты: строгая перекрывает слабую
-        const scripts = policies.map((policy) => /(?:^|;)\s*script-src([^;]*)/i.exec(policy)?.[1]
-            ?? /(?:^|;)\s*default-src([^;]*)/i.exec(policy)?.[1]).filter((value) => value !== undefined);
+        // Слабо, только если слабы все политики, ограничивающие скрипты: строгая перекрывает слабую.
+        // Именно script-src, а не script-src-elem и script-src-attr
+        const scripts = policies.map((policy) => /(?:^|;)\s*script-src(?![\w-])([^;]*)/i.exec(policy)?.[1]
+            ?? /(?:^|;)\s*default-src(?![\w-])([^;]*)/i.exec(policy)?.[1]).filter((value) => value !== undefined);
         const weak = scripts.length > 0 && scripts.every((value) => /'unsafe-inline'/i.test(value)
             && !/'nonce-|'sha(256|384|512)-|'strict-dynamic'/i.test(value));
         row('auditCsp', !csp ? no : weak ? t('auditCspWeak') : yes, !csp ? 'warn' : weak ? 'warn' : 'good');
