@@ -2186,6 +2186,117 @@ async function renderNotices(extended, stats) {
     show();
 }
 
+/** Доступ к своему хосту и варианту с www, без поддоменов */
+function siteOrigins(host) {
+    return (/^[\d.]+$|:/.test(host) ? [host] : [host, 'www.' + host]).map((h) => `*://${h}/*`);
+}
+
+/** Строка пипетки: открытие окна ничего не меняет на странице */
+async function setupPicker(tab, host, active) {
+    const row = document.getElementById('pick-row');
+    const button = document.getElementById('pick');
+    const countButton = document.getElementById('pick-count');
+    const hint = document.getElementById('pick-hint');
+    const message = document.getElementById('pick-message');
+    const permission = document.getElementById('pick-permission');
+    let count = 0;
+    let access = false;
+    let notice = '';
+    let timer;
+    let revision = 0;
+
+    function render() {
+        const enabled = active();
+        button.disabled = !enabled;
+        document.getElementById('pick-label').dataset.off = String(!enabled);
+        button.title = t(enabled ? 'pickTitle' : 'pickOff');
+        countButton.hidden = !count;
+        countButton.textContent = `${count} ›`;
+        countButton.title = t('pickCountTitle', count);
+        countButton.setAttribute('aria-label', countButton.title);
+        permission.hidden = !enabled || access || !count || Boolean(notice);
+        message.textContent = !enabled ? t('pickOff') : notice || (!access && count ? t('pickTemp') : '');
+        hint.hidden = !message.textContent;
+    }
+
+    function announce(key) {
+        clearTimeout(timer);
+        notice = t(key);
+        render();
+        timer = setTimeout(() => {
+            notice = '';
+            render();
+        }, 3000);
+    }
+
+    async function refresh() {
+        const current = ++revision;
+        const [stored, extended, siteAccess] = await Promise.all([
+            chrome.storage.local.get('aBlockCustom').catch(() => ({})),
+            chrome.permissions.contains(EXTENDED).catch(() => false),
+            chrome.permissions.contains({origins: [`*://${host}/*`]}).catch(() => false)
+        ]);
+        if (current !== revision) {
+            return;
+        }
+        count = stored.aBlockCustom?.[host]?.length || 0;
+        access = extended || siteAccess;
+        render();
+    }
+
+    document.getElementById('pick-allow').addEventListener('click', async () => {
+        // Запрос первым вызовом: сохраняем пользовательский жест и при закрытии окна диалогом.
+        const granted = await chrome.permissions.request({origins: siteOrigins(host)}).catch(() => false);
+        await refresh();
+        if (granted && access) {
+            announce('pickAllowed');
+        }
+    });
+    button.addEventListener('click', async () => {
+        if (!active() || button.disabled) {
+            return;
+        }
+        button.disabled = true;
+        const keys = ['pickHint', 'pickHintTouch', 'pickEsc', 'pickWider', 'pickNarrower', 'pickHide',
+            'pickCancel', 'pickMatches', 'pickMatchesAll', 'pickDone', 'pickDoneList', 'pickDoneTemp',
+            'pickDoneTempSave', 'pickLimit', 'kindImage', 'kindVideo', 'kindFrame', 'kindBanner',
+            'kindDialog', 'kindBlock', 'pickQuote'];
+        // Подстановки выполняет панель на странице, поэтому передаём шаблоны с $1.
+        const cfg = {strings: Object.fromEntries(keys.map((key) => [key, t(key, '$1')])),
+            dir: document.documentElement.dir === 'rtl' ? 'rtl' : 'ltr'};
+        try {
+            await chrome.scripting.executeScript({target: {tabId: tab.id},
+                func: (c) => { globalThis.aBlockPickerConfig = c; }, args: [cfg]});
+            await chrome.scripting.executeScript({target: {tabId: tab.id}, files: ['page/picker-core.js', 'page/picker.js']});
+            window.close();
+        } catch {
+            render();
+        }
+    });
+    countButton.addEventListener('click', () => {
+        if (typeof globalThis.openHidden !== 'function') {
+            return;
+        }
+        globalThis.openHidden({tab, host, active: active(), access, onClose: async (changed) => {
+            await refresh();
+            if (changed && !count) {
+                announce('pickCleared');
+            }
+            (count ? countButton : active() ? button : document.getElementById('button')).focus();
+        }});
+    });
+    chrome.storage.onChanged.addListener((changes, area) => {
+        if (area === 'local' && changes.aBlockCustom) {
+            refresh();
+        }
+    });
+    chrome.permissions.onAdded.addListener(refresh);
+    chrome.permissions.onRemoved.addListener(refresh);
+    await refresh();
+    row.hidden = false;
+    return render;
+}
+
 document.addEventListener('DOMContentLoaded', async function () {
 
     await loadLocale();
@@ -2215,11 +2326,14 @@ document.addEventListener('DOMContentLoaded', async function () {
     // Защита действует на этой странице
     const active = () => status && !allowedEntry;
 
+    let renderPicker = () => {};
+
     // Отображает статус
     function render() {
         bg.dataset.status = String(active());
         label.dataset.status = String(active());
         label.textContent = t(!status ? 'statusOff' : allowedEntry ? 'statusSiteOff' : 'statusOn');
+        renderPicker();
     }
     render();
 
@@ -2387,6 +2501,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (!info) {
         return; // Страница недоступна для расширений (магазин, настройки)
     }
+    renderPicker = await setupPicker(tab, host, active);
     setupClear(tab);
     await renderBlocked(tab, info, active(), server);
     const companies = await findCompanies(info, server, active());

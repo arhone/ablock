@@ -55,6 +55,8 @@
 }
 body {
     width: 360px;
+    max-height: 600px;
+    overflow-y: auto;
     margin: 0;
     padding: 16px 16px 0;
     display: flex;
@@ -65,6 +67,10 @@ body {
     color: var(--text);
     font: 13px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     user-select: none;
+}
+/* При длинных переводах и раскрытой оценке прокручивается окно, строки не сжимаются. */
+body > * {
+    flex-shrink: 0;
 }
 /* Соты рисуются цветом --cells через маску: один файл на обе темы */
 body::before,
@@ -897,6 +903,62 @@ body.loading {
 #clear:disabled {
     opacity: 0.5;
     cursor: default;
+}
+
+/* Пипетка: счётчик рядом с подписью, пояснение отдельной строкой. */
+#pick-row {
+    padding-block: 2px;
+    color: var(--text);
+    font-size: 12px;
+}
+#pick-copy {
+    flex: 1;
+    min-width: 0;
+}
+#pick-heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+#pick-label[data-off="true"] {
+    color: var(--muted);
+}
+#pick-count {
+    border: 1px solid var(--border);
+    background: none;
+    white-space: nowrap;
+}
+#pick {
+    min-width: 32px;
+}
+#pick:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+#pick-hint {
+    margin-block-start: 2px;
+    color: var(--muted);
+    font-size: 10.5px;
+    overflow-wrap: anywhere;
+}
+#pick-allow {
+    display: inline;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--on-text);
+    font: inherit;
+    font-weight: 600;
+    text-align: start;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#pick:focus-visible,
+#pick-count:focus-visible,
+#pick-allow:focus-visible {
+    outline: 2px solid var(--on);
+    outline-offset: 2px;
 }
 
 /* Картинка с отчётом (собирается в popup.js, в окне не видна) */
