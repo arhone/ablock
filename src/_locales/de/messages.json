@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Server-Header sind nicht sichtbar — Bewertung nach unvollständigen Daten"
     },
+    "scoreSpeedUnsure": {
+        "message": "Die Seite ließ keine Prüfung zu — Google-Metriken fehlen, die Geschwindigkeit beruht nur auf Größe, Protokoll und Ladezeit"
+    },
     "scoreCapHttps": {
         "message": "Ohne HTTPS höchstens 4"
     },

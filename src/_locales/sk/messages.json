@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Hlavičky servera nie sú viditeľné — hodnotenie podľa neúplných údajov"
     },
+    "scoreSpeedUnsure": {
+        "message": "Stránka nedovolila audit — metriky Google chýbajú, rýchlosť je len podľa veľkosti, protokolu a času načítania"
+    },
     "scoreCapHttps": {
         "message": "Bez HTTPS je hodnotenie najviac 4"
     },

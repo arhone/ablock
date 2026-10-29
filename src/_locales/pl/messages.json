@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Nagłówki serwera nie są widoczne — ocena według niepełnych danych"
     },
+    "scoreSpeedUnsure": {
+        "message": "Strona nie pozwoliła na audyt — brak metryk Google, szybkość tylko według rozmiaru, protokołu i czasu ładowania"
+    },
     "scoreCapHttps": {
         "message": "Bez HTTPS ocena najwyżej 4"
     },

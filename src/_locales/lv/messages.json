@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Servera galvenes nav redzamas — vērtējums pēc nepilnīgiem datiem"
     },
+    "scoreSpeedUnsure": {
+        "message": "Lapa neļāva pārbaudi — Google metriku nav, ātrums vērtēts tikai pēc apjoma, protokola un ielādes laika"
+    },
     "scoreCapHttps": {
         "message": "Bez HTTPS vērtējums nav augstāks par 4"
     },

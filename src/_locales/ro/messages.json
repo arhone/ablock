@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Antetele serverului nu sunt vizibile — nota se bazează pe date incomplete"
     },
+    "scoreSpeedUnsure": {
+        "message": "Pagina nu a permis verificarea — lipsesc metricile Google, viteza se bazează doar pe dimensiune, protocol și timpul de încărcare"
+    },
     "scoreCapHttps": {
         "message": "Fără HTTPS nota este cel mult 4"
     },

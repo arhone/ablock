@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "看不到伺服器標頭，評分依據不完整的資料"
     },
+    "scoreSpeedUnsure": {
+        "message": "頁面不允許檢查，沒有 Google 指標，速度僅依據大小、協定和載入時間計算"
+    },
     "scoreCapHttps": {
         "message": "沒有 HTTPS 時評分最高為 4"
     },

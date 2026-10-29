@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Hindi nakikita ang mga header ng server — batay sa kulang na data ang iskor"
     },
+    "scoreSpeedUnsure": {
+        "message": "Hindi pinayagan ng page ang audit — walang Google metrics, kaya batay lang sa laki, protocol at oras ng pag-load ang bilis"
+    },
     "scoreCapHttps": {
         "message": "Kung walang HTTPS, hanggang 4 lang ang iskor"
     },

@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Server sarlavhalari koʻrinmaydi — baho toʻliq boʻlmagan maʼlumotlar boʻyicha"
     },
+    "scoreSpeedUnsure": {
+        "message": "Sahifa tekshirishga ruxsat bermadi — Google koʻrsatkichlari yoʻq, tezlik faqat hajm, protokol va yuklanish vaqti boʻyicha"
+    },
     "scoreCapHttps": {
         "message": "HTTPS boʻlmasa, baho 4 dan oshmaydi"
     },

@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Le intestazioni del server non sono visibili: il voto si basa su dati incompleti"
     },
+    "scoreSpeedUnsure": {
+        "message": "La pagina non ha permesso il controllo: mancano le metriche Google e la velocità si basa solo su peso, protocollo e tempo di caricamento"
+    },
     "scoreCapHttps": {
         "message": "Senza HTTPS il voto non supera 4"
     },

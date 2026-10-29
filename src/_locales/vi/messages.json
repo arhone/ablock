@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Không thấy tiêu đề máy chủ — điểm dựa trên dữ liệu chưa đầy đủ"
     },
+    "scoreSpeedUnsure": {
+        "message": "Trang không cho phép kiểm tra — không có chỉ số Google, tốc độ chỉ dựa trên dung lượng, giao thức và thời gian tải"
+    },
     "scoreCapHttps": {
         "message": "Không có HTTPS thì điểm tối đa là 4"
     },

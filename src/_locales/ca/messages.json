@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Les capçaleres del servidor no es veuen: la nota es basa en dades incompletes"
     },
+    "scoreSpeedUnsure": {
+        "message": "La pàgina no ha permès l’auditoria: no hi ha mètriques de Google i la velocitat només es basa en el pes, el protocol i el temps de càrrega"
+    },
     "scoreCapHttps": {
         "message": "Sense HTTPS la nota no passa de 4"
     },

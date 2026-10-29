@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Os cabeçalhos do servidor não estão visíveis: a nota usa dados incompletos"
     },
+    "scoreSpeedUnsure": {
+        "message": "A página não permitiu a auditoria: não há métricas do Google, e a velocidade usa só o peso, o protocolo e o tempo de carregamento"
+    },
     "scoreCapHttps": {
         "message": "Sem HTTPS a nota não passa de 4"
     },

@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Zaglavlja poslužitelja nisu vidljiva — ocjena je prema nepotpunim podacima"
     },
+    "scoreSpeedUnsure": {
+        "message": "Stranica nije dopustila provjeru — nema Googleovih metrika, brzina je samo prema veličini, protokolu i vremenu učitavanja"
+    },
     "scoreCapHttps": {
         "message": "Bez HTTPS-a ocjena je najviše 4"
     },

@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Serverens headere er ikke synlige — karakteren bygger på ufuldstændige data"
     },
+    "scoreSpeedUnsure": {
+        "message": "Siden tillod ikke tjekket — Googles målinger mangler, hastigheden bygger kun på størrelse, protokol og indlæsningstid"
+    },
     "scoreCapHttps": {
         "message": "Uden HTTPS er karakteren højst 4"
     },

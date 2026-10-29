@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Sunucu başlıkları görünmüyor; puan eksik verilere dayanıyor"
     },
+    "scoreSpeedUnsure": {
+        "message": "Sayfa denetime izin vermedi; Google ölçümleri yok, hız yalnızca boyut, protokol ve yükleme süresine göre"
+    },
     "scoreCapHttps": {
         "message": "HTTPS olmadan puan en fazla 4"
     },

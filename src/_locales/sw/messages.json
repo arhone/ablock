@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Vichwa vya seva havionekani — alama inatokana na data isiyokamilika"
     },
+    "scoreSpeedUnsure": {
+        "message": "Ukurasa haukuruhusu ukaguzi — hakuna vipimo vya Google, kasi inategemea ukubwa, itifaki na muda wa kupakia pekee"
+    },
     "scoreCapHttps": {
         "message": "Bila HTTPS alama haizidi 4"
     },

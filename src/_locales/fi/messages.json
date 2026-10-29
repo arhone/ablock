@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Palvelimen otsakkeet eivät näy — arvosana perustuu puutteellisiin tietoihin"
     },
+    "scoreSpeedUnsure": {
+        "message": "Sivu ei sallinut tarkistusta — Googlen mittareita ei ole, nopeus perustuu vain kokoon, protokollaan ja latausaikaan"
+    },
     "scoreCapHttps": {
         "message": "Ilman HTTPS:ää arvosana on enintään 4"
     },

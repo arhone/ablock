@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Serverheaders zijn niet zichtbaar — de score is gebaseerd op onvolledige gegevens"
     },
+    "scoreSpeedUnsure": {
+        "message": "De pagina stond de controle niet toe — er zijn geen Google-metrics, de snelheid is alleen gebaseerd op grootte, protocol en laadtijd"
+    },
     "scoreCapHttps": {
         "message": "Zonder HTTPS is de score hoogstens 4"
     },

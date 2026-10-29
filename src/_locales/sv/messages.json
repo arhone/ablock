@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Serverns rubriker syns inte — betyget bygger på ofullständiga data"
     },
+    "scoreSpeedUnsure": {
+        "message": "Sidan tillät inte granskningen — Googles mätvärden saknas, hastigheten bygger bara på storlek, protokoll och laddningstid"
+    },
     "scoreCapHttps": {
         "message": "Utan HTTPS är betyget högst 4"
     },

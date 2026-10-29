@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "看不到服务器标头，评分基于不完整的数据"
     },
+    "scoreSpeedUnsure": {
+        "message": "页面不允许检查，没有 Google 指标，速度仅根据大小、协议和加载时间计算"
+    },
     "scoreCapHttps": {
         "message": "没有 HTTPS 时评分最高为 4"
     },

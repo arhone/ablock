@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "Header server tidak terlihat — nilai berdasarkan data yang tidak lengkap"
     },
+    "scoreSpeedUnsure": {
+        "message": "Halaman tidak mengizinkan audit — tidak ada metrik Google, kecepatan hanya berdasarkan ukuran, protokol, dan waktu muat"
+    },
     "scoreCapHttps": {
         "message": "Tanpa HTTPS nilai paling tinggi 4"
     },

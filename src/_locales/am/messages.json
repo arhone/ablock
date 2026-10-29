@@ -379,6 +379,9 @@
     "scoreUnsure": {
         "message": "የአገልጋዩ ራስጌዎች አይታዩም — ነጥቡ ባልተሟላ ውሂብ ነው"
     },
+    "scoreSpeedUnsure": {
+        "message": "ገጹ ኦዲቱን እንዲሠራ አልፈቀደም — የGoogle መለኪያዎች የሉም፣ ፍጥነቱ በክብደት፣ በፕሮቶኮል እና በመጫኛ ጊዜ ብቻ ነው"
+    },
     "scoreCapHttps": {
         "message": "ያለ HTTPS ነጥቡ ከ4 አይበልጥም"
     },

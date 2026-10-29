@@ -1420,8 +1420,9 @@ function scoreSite(info, companies, audit, rows, server) {
             weight,
             exact: weights ? (sum / weights) * 10 : null,
             score: weights ? Math.round((sum / weights) * 100) / 10 : null,
-            // Безопасность без заголовков сервера (без расширенного режима) — по неполным данным
-            sure: id !== 'security' || Boolean(server),
+            // По неполным данным: безопасность без заголовков сервера (без расширенного режима), скорость — если
+            // страница не дала выполнить аудит (метрик Google нет, остались вес, протокол и время загрузки)
+            sure: id === 'security' ? Boolean(server) : id === 'speed' ? Boolean(audit) : true,
             parts: known.map(([name, value]) => [name, Math.round(value * 10)])
         };
     });
@@ -1518,7 +1519,7 @@ function renderScore(info, companies, audit, rows, server) {
         item.title = group.score === null ? '' : [
             `${group.name}. ${t('scoreTitle', value + (group.sure ? '' : '?'))}`,
             ...group.parts.map(([name, points]) => `${name}: ${formatNumber(points)}`),
-            group.sure ? '' : t('scoreUnsure'),
+            group.sure ? '' : t(group.id === 'speed' ? 'scoreSpeedUnsure' : 'scoreUnsure'),
             group.id === 'speed' && info.loadTime === null ? t('loadingTitle') : ''
         ].filter(Boolean).join('\n');
         if (item.title) {
