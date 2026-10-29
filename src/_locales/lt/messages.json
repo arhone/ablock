@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — pagal neišsamius duomenis"
     },
+    "reportLegendQuestion": {
+        "message": "? — pagal netiesioginius požymius arba neišsamius duomenis"
+    },
     "reportLegendEstimate": {
         "message": "≈ — apytikslis įvertinimas"
     },

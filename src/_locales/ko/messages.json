@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — 불완전한 데이터 기준"
     },
+    "reportLegendQuestion": {
+        "message": "? — 간접적인 징후 또는 불완전한 데이터 기준"
+    },
     "reportLegendEstimate": {
         "message": "≈ — 대략적인 추정"
     },

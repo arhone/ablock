@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — ud fra ufuldstændige data"
     },
+    "reportLegendQuestion": {
+        "message": "? — ud fra indirekte tegn eller ufuldstændige data"
+    },
     "reportLegendEstimate": {
         "message": "≈ — omtrentligt skøn"
     },

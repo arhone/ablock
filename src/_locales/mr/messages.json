@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — अपूर्ण डेटावरून"
     },
+    "reportLegendQuestion": {
+        "message": "? — अप्रत्यक्ष लक्षणांवरून किंवा अपूर्ण डेटावरून"
+    },
     "reportLegendEstimate": {
         "message": "≈ — अंदाजे मूल्य"
     },

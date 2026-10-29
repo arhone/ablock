@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — അപൂർണ ഡാറ്റ പ്രകാരം"
     },
+    "reportLegendQuestion": {
+        "message": "? — പരോക്ഷ സൂചനകളോ അപൂർണ ഡാറ്റയോ പ്രകാരം"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ഏകദേശ കണക്ക്"
     },

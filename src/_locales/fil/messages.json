@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — batay sa kulang na data"
     },
+    "reportLegendQuestion": {
+        "message": "? — batay sa di-tuwirang palatandaan o kulang na data"
+    },
     "reportLegendEstimate": {
         "message": "≈ — tinatayang halaga"
     },

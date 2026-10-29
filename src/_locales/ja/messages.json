@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — 不完全なデータに基づく"
     },
+    "reportLegendQuestion": {
+        "message": "? — 間接的な兆候または不完全なデータに基づく"
+    },
     "reportLegendEstimate": {
         "message": "≈ — おおよその推定"
     },

@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — অসম্পূর্ণ তথ্যে"
     },
+    "reportLegendQuestion": {
+        "message": "? — পরোক্ষ লক্ষণ বা অসম্পূর্ণ তথ্যে"
+    },
     "reportLegendEstimate": {
         "message": "≈ — আনুমানিক হিসাব"
     },

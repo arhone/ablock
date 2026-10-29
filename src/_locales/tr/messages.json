@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — eksik verilere göre"
     },
+    "reportLegendQuestion": {
+        "message": "? — dolaylı işaretlere veya eksik verilere göre"
+    },
     "reportLegendEstimate": {
         "message": "≈ — yaklaşık değer"
     },

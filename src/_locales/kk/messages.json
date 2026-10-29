@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — толық емес деректер бойынша"
     },
+    "reportLegendQuestion": {
+        "message": "? — жанама белгілер немесе толық емес деректер бойынша"
+    },
     "reportLegendEstimate": {
         "message": "≈ — шамамен алынған баға"
     },

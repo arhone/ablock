@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — nach unvollständigen Daten"
     },
+    "reportLegendQuestion": {
+        "message": "? — anhand indirekter Merkmale oder unvollständiger Daten"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ungefähre Schätzung"
     },

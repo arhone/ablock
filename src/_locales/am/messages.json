@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — ባልተሟላ ውሂብ"
     },
+    "reportLegendQuestion": {
+        "message": "? — በተዘዋዋሪ ምልክቶች ወይም ባልተሟላ ውሂብ"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ግምታዊ"
     },

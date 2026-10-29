@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — hiányos adatok alapján"
     },
+    "reportLegendQuestion": {
+        "message": "? — közvetett jelek vagy hiányos adatok alapján"
+    },
     "reportLegendEstimate": {
         "message": "≈ — hozzávetőleges becslés"
     },

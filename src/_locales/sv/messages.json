@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — utifrån ofullständiga data"
     },
+    "reportLegendQuestion": {
+        "message": "? — utifrån indirekta tecken eller ofullständiga data"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ungefärlig uppskattning"
     },

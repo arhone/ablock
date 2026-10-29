@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — 依據不完整的資料"
     },
+    "reportLegendQuestion": {
+        "message": "? — 依據間接跡象或不完整的資料"
+    },
     "reportLegendEstimate": {
         "message": "≈ — 概略估計"
     },

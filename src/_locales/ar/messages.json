@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — ببيانات ناقصة"
     },
+    "reportLegendQuestion": {
+        "message": "? — بعلامات غير مباشرة أو ببيانات ناقصة"
+    },
     "reportLegendEstimate": {
         "message": "≈ — تقدير تقريبي"
     },

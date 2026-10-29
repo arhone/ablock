@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — לפי נתונים חלקיים"
     },
+    "reportLegendQuestion": {
+        "message": "? — לפי סימנים עקיפים או נתונים חלקיים"
+    },
     "reportLegendEstimate": {
         "message": "≈ — הערכה גסה"
     },

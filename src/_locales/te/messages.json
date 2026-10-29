@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — అసంపూర్ణ డేటా ఆధారంగా"
     },
+    "reportLegendQuestion": {
+        "message": "? — పరోక్ష సంకేతాలు లేదా అసంపూర్ణ డేటా ఆధారంగా"
+    },
     "reportLegendEstimate": {
         "message": "≈ — సుమారు అంచనా"
     },

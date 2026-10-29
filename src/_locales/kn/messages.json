@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — ಅಪೂರ್ಣ ಡೇಟಾ ಆಧಾರಿತ"
     },
+    "reportLegendQuestion": {
+        "message": "? — ಪರೋಕ್ಷ ಚಿಹ್ನೆಗಳು ಅಥವಾ ಅಪೂರ್ಣ ಡೇಟಾ ಆಧಾರಿತ"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ಅಂದಾಜು ಮೌಲ್ಯ"
     },

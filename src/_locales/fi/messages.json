@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — puutteellisten tietojen perusteella"
     },
+    "reportLegendQuestion": {
+        "message": "? — epäsuorien merkkien tai puutteellisten tietojen perusteella"
+    },
     "reportLegendEstimate": {
         "message": "≈ — likimääräinen arvio"
     },

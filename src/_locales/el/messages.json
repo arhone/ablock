@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — με ελλιπή δεδομένα"
     },
+    "reportLegendQuestion": {
+        "message": "? — από έμμεσες ενδείξεις ή με ελλιπή δεδομένα"
+    },
     "reportLegendEstimate": {
         "message": "≈ — κατά προσέγγιση εκτίμηση"
     },

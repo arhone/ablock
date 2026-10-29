@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — puudulike andmete põhjal"
     },
+    "reportLegendQuestion": {
+        "message": "? — kaudsete tunnuste või puudulike andmete põhjal"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ligikaudne hinnang"
     },

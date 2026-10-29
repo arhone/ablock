@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — અધૂરા ડેટા પરથી"
     },
+    "reportLegendQuestion": {
+        "message": "? — પરોક્ષ સંકેતો અથવા અધૂરા ડેટા પરથી"
+    },
     "reportLegendEstimate": {
         "message": "≈ — અંદાજિત મૂલ્ય"
     },

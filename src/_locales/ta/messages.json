@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — முழுமையற்ற தரவின்படி"
     },
+    "reportLegendQuestion": {
+        "message": "? — மறைமுக அறிகுறிகள் அல்லது முழுமையற்ற தரவின்படி"
+    },
     "reportLegendEstimate": {
         "message": "≈ — தோராயமான மதிப்பீடு"
     },

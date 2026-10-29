@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — theo dữ liệu chưa đầy đủ"
     },
+    "reportLegendQuestion": {
+        "message": "? — theo dấu hiệu gián tiếp hoặc dữ liệu chưa đầy đủ"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ước tính gần đúng"
     },

@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — według niepełnych danych"
     },
+    "reportLegendQuestion": {
+        "message": "? — według pośrednich oznak lub niepełnych danych"
+    },
     "reportLegendEstimate": {
         "message": "≈ — przybliżone oszacowanie"
     },

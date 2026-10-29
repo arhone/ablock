@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — pēc nepilnīgiem datiem"
     },
+    "reportLegendQuestion": {
+        "message": "? — pēc netiešām pazīmēm vai nepilnīgiem datiem"
+    },
     "reportLegendEstimate": {
         "message": "≈ — aptuvens novērtējums"
     },

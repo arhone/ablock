@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — จากข้อมูลที่ไม่ครบ"
     },
+    "reportLegendQuestion": {
+        "message": "? — จากสัญญาณทางอ้อมหรือข้อมูลที่ไม่ครบ"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ค่าประมาณคร่าว ๆ"
     },

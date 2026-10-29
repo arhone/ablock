@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — după date incomplete"
     },
+    "reportLegendQuestion": {
+        "message": "? — după semne indirecte sau date incomplete"
+    },
     "reportLegendEstimate": {
         "message": "≈ — estimare aproximativă"
     },

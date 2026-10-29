@@ -1732,8 +1732,10 @@ async function renderReport(host) {
         notes.append(li);
     }
 
-    const legendText = [details.querySelector('[data-sure="false"]') ? t('reportLegendGuess') : '',
-        board.querySelector('[data-sure="false"]') ? t('reportLegendUnsure') : '',
+    // «?» — и у меток, определённых по косвенным признакам, и у баллов по неполным данным: одно пояснение на знак
+    const guess = Boolean(details.querySelector('[data-sure="false"]'));
+    const unsure = Boolean(board.querySelector('[data-sure="false"]'));
+    const legendText = [guess && unsure ? t('reportLegendQuestion') : guess ? t('reportLegendGuess') : unsure ? t('reportLegendUnsure') : '',
         /≈/.test(panel.textContent) ? t('reportLegendEstimate') : ''].filter(Boolean).join(' · ');
     const legend = legendText ? make('div', 'sheet-legend', legendText) : null;
     const foot = make('div', 'sheet-foot');

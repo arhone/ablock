@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — toʻliq boʻlmagan maʼlumotlar boʻyicha"
     },
+    "reportLegendQuestion": {
+        "message": "? — bilvosita belgilar yoki toʻliq boʻlmagan maʼlumotlar boʻyicha"
+    },
     "reportLegendEstimate": {
         "message": "≈ — taxminiy baho"
     },

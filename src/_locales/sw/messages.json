@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — kwa data isiyokamilika"
     },
+    "reportLegendQuestion": {
+        "message": "? — kwa ishara zisizo za moja kwa moja au data isiyokamilika"
+    },
     "reportLegendEstimate": {
         "message": "≈ — makadirio ya takriban"
     },

@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — podľa neúplných údajov"
     },
+    "reportLegendQuestion": {
+        "message": "? — podľa nepriamych znakov alebo neúplných údajov"
+    },
     "reportLegendEstimate": {
         "message": "≈ — približný odhad"
     },

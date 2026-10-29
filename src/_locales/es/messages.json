@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — con datos incompletos"
     },
+    "reportLegendQuestion": {
+        "message": "? — por indicios indirectos o con datos incompletos"
+    },
     "reportLegendEstimate": {
         "message": "≈ — valor aproximado"
     },

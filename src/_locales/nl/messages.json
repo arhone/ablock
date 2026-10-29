@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — op basis van onvolledige gegevens"
     },
+    "reportLegendQuestion": {
+        "message": "? — op basis van indirecte aanwijzingen of onvolledige gegevens"
+    },
     "reportLegendEstimate": {
         "message": "≈ — ruwe schatting"
     },

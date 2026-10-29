@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — berdasarkan data tidak lengkap"
     },
+    "reportLegendQuestion": {
+        "message": "? — dari tanda tidak langsung atau data tidak lengkap"
+    },
     "reportLegendEstimate": {
         "message": "≈ — perkiraan"
     },

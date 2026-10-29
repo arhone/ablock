@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — अधूरे डेटा पर"
     },
+    "reportLegendQuestion": {
+        "message": "? — अप्रत्यक्ष संकेतों या अधूरे डेटा पर"
+    },
     "reportLegendEstimate": {
         "message": "≈ — अनुमानित मान"
     },

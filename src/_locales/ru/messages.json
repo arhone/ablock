@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — по неполным данным"
     },
+    "reportLegendQuestion": {
+        "message": "? — по косвенным признакам или неполным данным"
+    },
     "reportLegendEstimate": {
         "message": "≈ — примерная оценка"
     },

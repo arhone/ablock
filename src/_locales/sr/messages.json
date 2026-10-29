@@ -500,6 +500,9 @@
     "reportLegendUnsure": {
         "message": "? — по непотпуним подацима"
     },
+    "reportLegendQuestion": {
+        "message": "? — по посредним знацима или непотпуним подацима"
+    },
     "reportLegendEstimate": {
         "message": "≈ — приближна процена"
     },
