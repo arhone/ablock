@@ -691,7 +691,9 @@ async function renderSite(tab, server, onLoadTime) {
             .map(([name, count]) => `${name} — ${formatNumber(count)}`).join(', ')),
         plain.length ? t('compressionPlain', plain.join(', ')) : ''
     ] : [];
-    const encoding = info.encoding.name || server?.headers['content-encoding'] || '';
+    // Из заголовка — только если браузер не назвал сжатие. Повторы склеены через запятую («gzip, br»):
+    // сжатия применены по порядку, последнее — то, в котором пришёл документ
+    const encoding = info.encoding.name || (server?.headers['content-encoding'] || '').split(',').at(-1).trim();
     info.compressed = null;
     if (encoding && encoding !== 'identity') {
         const name = NAMES[encoding] || encoding;
