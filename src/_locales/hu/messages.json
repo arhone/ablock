@@ -1021,7 +1021,7 @@
         "message": "Összes törlése"
     },
     "hiddenClearConfirm": {
-        "message": "Törli mind a(z) $COUNT$ elemet?",
+        "message": "Összes elem törlése ($COUNT$)?",
         "placeholders": {
             "count": {
                 "content": "$1"
