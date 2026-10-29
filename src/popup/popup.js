@@ -1775,7 +1775,7 @@ async function renderReport(host) {
         /≈/.test(panel.textContent) ? t('reportLegendEstimate') : ''].filter(Boolean).join(' · ');
     const legend = legendText ? make('div', 'sheet-legend', legendText) : null;
     const foot = make('div', 'sheet-foot');
-    foot.append(make('span', '', 'ABlock'), make('span', '', 'github.com/arhone/ablock'));
+    foot.append(make('span', '', 'ABlock'), make('span', '', 'https://ablock.arh.one'));
 
     sheet.append(head, panel, board, details);
     if (notes.childElementCount) {
