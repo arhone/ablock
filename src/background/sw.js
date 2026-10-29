@@ -355,7 +355,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
     if (request?.customRemove || request?.customClear) {
         const data = request.customRemove || request.customClear;
-        enqueue(() => removeCustom(data, !!request.customClear)).then(() => sendResponse(true));
+        enqueue(() => removeCustom(data, !!request.customClear).then(() => true, () => false)).then(sendResponse);
         return true;
     }
     if (typeof request?.status === 'boolean') {
@@ -457,7 +457,13 @@ async function saveCustom(sender, host, pick) {
             }
         }
         aBlockCustom[host] = [...entries, entry];
-        await chrome.storage.local.set({aBlockCustom});
+        try {
+            await chrome.storage.local.set({aBlockCustom});
+        } catch {
+            // Запись не сохранилась: возвращаем элемент на страницу
+            await chrome.scripting.removeCSS(customCSS(sender.tab.id, sender.documentId, pick.s)).catch(() => {});
+            return {ok: false, error: 'inject'};
+        }
         if (!entries.length) {
             update();
         }
