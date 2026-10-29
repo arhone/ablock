@@ -2,3 +2,9 @@
 _metadata/
 node_modules/
 dist/
+
+.agents/local/
+
+# Агенты: рабочие файлы, не в git
+.agents/workers/
+.agents/tasks/
