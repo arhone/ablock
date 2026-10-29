@@ -88,6 +88,15 @@ const TIMING_SCRIPT = {
     runAt: 'document_start'
 };
 
+// Пользовательские правила: только главный документ и только сайты с доступом
+const CUSTOM_SCRIPT = {
+    id: 'custom',
+    js: ['content/custom.js'],
+    allFrames: false,
+    world: 'ISOLATED',
+    runAt: 'document_start'
+};
+
 // Правило, которое пропускает всё на сайтах, где защита отключена. Приоритет выше, чем у любого правила списков
 const ALLOW_RULE_ID = 1;
 const ALLOW_PRIORITY = 1000;
@@ -119,7 +128,22 @@ async function applyContentScripts({status, cookies, allowed}, extended) {
     // На сайтах без защиты свои скрипты тоже не запускаем: сайт и его поддомены
     const excludeMatches = allowed.flatMap((host) => [`*://${host}/*`, `*://*.${host}/*`]);
     const protect = (script) => (excludeMatches.length ? {...script, excludeMatches} : script);
+    const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
+    const matches = [];
+    if (status) {
+        for (const host of Object.keys(aBlockCustom)) {
+            if (!aBlockCustom[host]?.length) {
+                continue;
+            }
+            for (const pattern of siteOrigins(host)) {
+                if (await chrome.permissions.contains({origins: [pattern]})) {
+                    matches.push(pattern);
+                }
+            }
+        }
+    }
     const scripts = [
+        ...(matches.length ? [protect({...CUSTOM_SCRIPT, matches})] : []),
         ...(status ? CONTENT_SCRIPTS.map(protect) : []),
         ...(extended ? [TIMING_SCRIPT] : []),
         ...(extended && status ? [protect(ADS_SCRIPT)] : []),
@@ -300,9 +324,21 @@ chrome.permissions.onAdded.addListener(async (permissions) => {
 });
 chrome.permissions.onRemoved.addListener(() => update());
 
-// Сообщения: от страниц сайтов (content/cosmetic.js) — только классы и id элементов,
-// настройки и данные вкладок — только из окна расширения (popup.js)
+// Сообщения сайтов — косметика и пипетка; настройки и данные вкладок — только из окна расширения
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request?.pick || request?.custom === true) {
+        const host = customSenderHost(sender);
+        if (!host) {
+            return;
+        }
+        enqueue(async () => {
+            if (request.pick) {
+                return saveCustom(sender, host, request.pick).catch(() => ({ok: false, error: 'inject'}));
+            }
+            return applyCustom(sender, host);
+        }).then(sendResponse, () => sendResponse({ok: false, error: 'inject'}));
+        return true;
+    }
     // Классы и id элементов страницы от content/cosmetic.js
     if (Array.isArray(request?.cosmetic)) {
         if (typeof request.dark === 'boolean') {
@@ -316,6 +352,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
     if (sender.id !== chrome.runtime.id || !sender.url?.startsWith(chrome.runtime.getURL(''))) {
         return;
+    }
+    if (request?.customRemove || request?.customClear) {
+        const data = request.customRemove || request.customClear;
+        enqueue(() => removeCustom(data, !!request.customClear)).then(() => sendResponse(true));
+        return true;
     }
     if (typeof request?.status === 'boolean') {
         update({status: request.status}).then(() => sendResponse(true));
@@ -347,6 +388,160 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         load().then((s) => sendResponse({tab: s.tabs[request.tabInfo] || null, stats: s.stats}));
         return true;
     }
+});
+
+/** Доступ к своему хосту и варианту с www, без поддоменов */
+function siteOrigins(host) {
+    return (/^[\d.]+$|:/.test(host) ? [host] : [host, 'www.' + host]).map((h) => `*://${h}/*`);
+}
+
+/** Принимаем выбор и запрос скрытия только от главного документа сайта */
+function customSenderHost(sender) {
+    if (sender.id !== chrome.runtime.id || !Number.isInteger(sender.tab?.id) || sender.tab.id < 0
+        || sender.frameId !== 0 || !sender.documentId) {
+        return null;
+    }
+    try {
+        const url = new URL(sender.url);
+        return /^https?:$/.test(url.protocol) ? url.hostname.replace(/^www\./, '') : null;
+    } catch {
+        return null;
+    }
+}
+
+function validCustomSelector(s) {
+    return typeof s === 'string' && !!s.trim() && s.length <= 300
+        && !/[{};]/.test(s) && !s.includes('/*') && !/^(html|body|:root|\*)$/i.test(s.trim());
+}
+
+/** Исключения действуют и на родительские домены, как в окне */
+async function customActive(host) {
+    const {status, allowed} = await getSettings();
+    return status && !allowed.some((site) => host === site || host.endsWith('.' + site));
+}
+
+function customCSS(tabId, documentId, s, highlight = false) {
+    return {
+        target: {tabId, documentIds: [documentId]},
+        css: highlight ? `${s}{outline:2px solid #12a86b!important;outline-offset:-2px!important}`
+            : `${s}{display:none!important}`,
+        origin: 'USER'
+    };
+}
+
+async function saveCustom(sender, host, pick) {
+    if (!validCustomSelector(pick.s) || !await customActive(host)) {
+        return {ok: false, error: 'invalid'};
+    }
+    const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
+    const entries = own(aBlockCustom, host) || [];
+    const exists = entries.some(({s}) => s === pick.s);
+    if (!exists && entries.length >= 100) {
+        return {ok: false, error: 'limit'};
+    }
+    try {
+        await chrome.scripting.insertCSS(customCSS(sender.tab.id, sender.documentId, pick.s));
+    } catch {
+        return {ok: false, error: 'inject'};
+    }
+    if (!exists) {
+        const k = ['image', 'video', 'frame', 'banner', 'dialog', 'block'].includes(pick.k) ? pick.k : 'block';
+        const size = (n) => Number.isFinite(n) ? Math.max(0, Math.round(n)) : 0;
+        const entry = {s: pick.s, k, t: typeof pick.t === 'string' ? pick.t.slice(0, 60) : '',
+            w: size(pick.w), h: size(pick.h), d: Date.now()};
+        if (typeof pick.src === 'string') {
+            try {
+                entry.src = new URL(`https://${pick.src}`).hostname;
+            } catch {
+                // Некорректный источник не сохраняем
+            }
+        }
+        aBlockCustom[host] = [...entries, entry];
+        await chrome.storage.local.set({aBlockCustom});
+        if (!entries.length) {
+            update();
+        }
+    }
+    const permanent = await chrome.permissions.contains(EXTENDED)
+        || await chrome.permissions.contains({origins: [`*://${host}/*`]});
+    return {ok: true, count: entries.length + (exists ? 0 : 1), permanent};
+}
+
+async function applyCustom(sender, host) {
+    if (!await customActive(host)) {
+        return;
+    }
+    const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
+    for (const {s} of own(aBlockCustom, host) || []) {
+        if (validCustomSelector(s)) {
+            await chrome.scripting.insertCSS(customCSS(sender.tab.id, sender.documentId, s)).catch(() => {});
+        }
+    }
+}
+
+async function removeCustom(data, clear) {
+    if (typeof data?.host !== 'string') {
+        return;
+    }
+    const host = data.host.replace(/^www\./, '');
+    const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
+    const entries = own(aBlockCustom, host) || [];
+    const removed = entries.filter(({s}) => clear || data.selectors?.includes(s));
+    const remaining = entries.filter((entry) => !removed.includes(entry));
+    if (remaining.length) {
+        aBlockCustom[host] = remaining;
+    } else {
+        delete aBlockCustom[host];
+    }
+    await chrome.storage.local.set({aBlockCustom});
+    if (entries.length && !remaining.length) {
+        update();
+    }
+    if (Number.isInteger(data.tabId) && data.documentId) {
+        for (const {s} of removed) {
+            await chrome.scripting.removeCSS(customCSS(data.tabId, data.documentId, s)).catch(() => {});
+        }
+    }
+}
+
+// Закрытие окна не должно оставлять подсветку или временно показанный элемент
+chrome.runtime.onConnect.addListener((port) => {
+    if (port.name !== 'aBlockHover' || port.sender?.id !== chrome.runtime.id
+        || !port.sender.url?.startsWith(chrome.runtime.getURL(''))) {
+        return;
+    }
+    let current = null;
+    const restore = async () => {
+        const item = current;
+        current = null;
+        if (!item) {
+            return;
+        }
+        const {tabId, documentId, s, hidden} = item;
+        await chrome.scripting.removeCSS(customCSS(tabId, documentId, s, true)).catch(() => {});
+        if (hidden) {
+            // После удаления записи или выключения защиты скрытие не возвращаем
+            try {
+                const tab = await chrome.tabs.get(tabId);
+                const host = new URL(tab.url).hostname.replace(/^www\./, '');
+                const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
+                if (await customActive(host) && own(aBlockCustom, host)?.some((entry) => entry.s === s)) {
+                    await chrome.scripting.insertCSS(customCSS(tabId, documentId, s));
+                }
+            } catch {
+                // Документ уже закрыт или доступ снят
+            }
+        }
+    };
+    port.onMessage.addListener((item) => {
+        enqueue(async () => {
+            current = null;
+            if (Number.isInteger(item?.tabId) && typeof item.documentId === 'string' && validCustomSelector(item.s)) {
+                current = {tabId: item.tabId, documentId: item.documentId, s: item.s, hidden: item.hidden === true};
+            }
+        });
+    });
+    port.onDisconnect.addListener(() => enqueue(restore));
 });
 
 /*

@@ -36,7 +36,7 @@ export default [
     },
     // Контент-скрипт в изолированном мире: chrome.runtime доступен
     {
-        files: ['src/content/cosmetic.js'],
+        files: ['src/content/cosmetic.js', 'src/content/custom.js', 'src/page/picker*.js'],
         languageOptions: {
             globals: {...globals.browser, ...globals.webextensions}
         }
