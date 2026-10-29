@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "ब्राउज़र की एक्सटेंशन सेटिंग खुलेंगी — वहाँ ABlock के लिए गुप्त मोड में अनुमति चालू करें"
+    },
+    "pickLabel": {
+        "message": "एलिमेंट छिपाएँ"
+    },
+    "pickTitle": {
+        "message": "पेज पर कोई एलिमेंट चुनें और उसे इस साइट पर छिपाएँ"
+    },
+    "pickCountTitle": {
+        "message": "इस साइट पर छिपे: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "इस साइट की सुरक्षा चालू करें"
+    },
+    "pickTemp": {
+        "message": "सिर्फ़ दोबारा लोड होने तक"
+    },
+    "pickAllow": {
+        "message": "इस साइट पर अनुमति दें"
+    },
+    "pickAllowTitle": {
+        "message": "दोबारा लोड करने के बाद भी एलिमेंट छिपे रहेंगे। ब्राउज़र इस साइट तक पहुँच की अनुमति माँगेगा"
+    },
+    "pickAllowed": {
+        "message": "दोबारा लोड होने पर भी छिपा रहेगा"
+    },
+    "pickCleared": {
+        "message": "सब फिर पेज पर आ गया"
+    },
+    "hiddenTitle": {
+        "message": "$HOST$ पर छिपे",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "वापस"
+    },
+    "hiddenSelectAll": {
+        "message": "सभी चुनें"
+    },
+    "hiddenSelected": {
+        "message": "चुने गए: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "हटाएँ"
+    },
+    "hiddenDeleteN": {
+        "message": "हटाएँ ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "सभी साफ़ करें"
+    },
+    "hiddenClearConfirm": {
+        "message": "सभी $COUNT$ साफ़ करें?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "सभी छिपे एलिमेंट फिर पेज पर दिखेंगे"
+    },
+    "hiddenHint": {
+        "message": "पेज पर एलिमेंट हाइलाइट करने के लिए पंक्ति पर माउस ले जाएँ"
+    },
+    "hiddenLit": {
+        "message": "पेज पर एलिमेंट हाइलाइट है"
+    },
+    "hiddenMissing": {
+        "message": "इस पेज पर नहीं है"
+    },
+    "hiddenMissingHint": {
+        "message": "इस पेज पर नहीं है — हाइलाइट करने को कुछ नहीं"
+    },
+    "hiddenOffHint": {
+        "message": "साइट की सुरक्षा बंद है — छिपे एलिमेंट अभी दिख रहे हैं"
+    },
+    "kindImage": {
+        "message": "चित्र"
+    },
+    "kindVideo": {
+        "message": "वीडियो"
+    },
+    "kindFrame": {
+        "message": "एम्बेड किया गया ब्लॉक"
+    },
+    "kindBanner": {
+        "message": "पट्टी"
+    },
+    "kindDialog": {
+        "message": "विंडो"
+    },
+    "kindBlock": {
+        "message": "ब्लॉक"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "जिस एलिमेंट को छिपाना है उस पर क्लिक करें"
+    },
+    "pickHintTouch": {
+        "message": "जिस एलिमेंट को छिपाना है उसे छुएँ"
+    },
+    "pickEsc": {
+        "message": "Esc — रद्द करें"
+    },
+    "pickWider": {
+        "message": "चौड़ा"
+    },
+    "pickNarrower": {
+        "message": "संकरा"
+    },
+    "pickHide": {
+        "message": "छिपाएँ"
+    },
+    "pickCancel": {
+        "message": "रद्द करें"
+    },
+    "pickMatches": {
+        "message": "मिलान: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "मिलान: $COUNT$ — सभी छिप जाएँगे",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "छिपा दिया"
+    },
+    "pickDoneList": {
+        "message": "सूची — ABlock विंडो में"
+    },
+    "pickDoneTemp": {
+        "message": "दोबारा लोड होने तक छिपा है"
+    },
+    "pickDoneTempSave": {
+        "message": "सहेजें — ABlock विंडो में"
+    },
+    "pickLimit": {
+        "message": "इस साइट पर पहले से 100 छिपे एलिमेंट हैं — ABlock विंडो में अनचाहे एलिमेंट हटाएँ"
     }
 }

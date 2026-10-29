@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Se abrirá la configuración de extensiones del navegador: activa allí el permiso en modo incógnito para ABlock"
+    },
+    "pickLabel": {
+        "message": "Ocultar elemento"
+    },
+    "pickTitle": {
+        "message": "Elige un elemento de la página y ocúltalo en este sitio"
+    },
+    "pickCountTitle": {
+        "message": "Ocultos en este sitio: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Activa la protección en este sitio"
+    },
+    "pickTemp": {
+        "message": "Solo hasta recargar"
+    },
+    "pickAllow": {
+        "message": "Permitir en este sitio"
+    },
+    "pickAllowTitle": {
+        "message": "Los elementos seguirán ocultos al recargar. El navegador pedirá acceso a este sitio"
+    },
+    "pickAllowed": {
+        "message": "Sigue oculto al recargar"
+    },
+    "pickCleared": {
+        "message": "Todo vuelve a estar en la página"
+    },
+    "hiddenTitle": {
+        "message": "Ocultos en $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Atrás"
+    },
+    "hiddenSelectAll": {
+        "message": "Seleccionar todo"
+    },
+    "hiddenSelected": {
+        "message": "Seleccionados: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Eliminar"
+    },
+    "hiddenDeleteN": {
+        "message": "Eliminar ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Borrar todo"
+    },
+    "hiddenClearConfirm": {
+        "message": "¿Borrar los $COUNT$ elementos?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Todos los elementos ocultos volverán a aparecer en la página"
+    },
+    "hiddenHint": {
+        "message": "Pasa el cursor por una fila para resaltar el elemento en la página"
+    },
+    "hiddenLit": {
+        "message": "Elemento resaltado en la página"
+    },
+    "hiddenMissing": {
+        "message": "no está en esta página"
+    },
+    "hiddenMissingHint": {
+        "message": "No está en esta página — no hay nada que resaltar"
+    },
+    "hiddenOffHint": {
+        "message": "La protección del sitio está desactivada — los elementos ocultos ahora son visibles"
+    },
+    "kindImage": {
+        "message": "Imagen"
+    },
+    "kindVideo": {
+        "message": "Vídeo"
+    },
+    "kindFrame": {
+        "message": "Bloque incrustado"
+    },
+    "kindBanner": {
+        "message": "Franja"
+    },
+    "kindDialog": {
+        "message": "Ventana"
+    },
+    "kindBlock": {
+        "message": "Bloque"
+    },
+    "pickQuote": {
+        "message": "«$TEXT$»",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Haz clic en el elemento que quieras ocultar"
+    },
+    "pickHintTouch": {
+        "message": "Toca el elemento que quieras ocultar"
+    },
+    "pickEsc": {
+        "message": "Esc — cancelar"
+    },
+    "pickWider": {
+        "message": "Más amplio"
+    },
+    "pickNarrower": {
+        "message": "Más estrecho"
+    },
+    "pickHide": {
+        "message": "Ocultar"
+    },
+    "pickCancel": {
+        "message": "Cancelar"
+    },
+    "pickMatches": {
+        "message": "Coincidencias: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Coincidencias: $COUNT$ — se ocultarán todas",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Oculto"
+    },
+    "pickDoneList": {
+        "message": "lista — en la ventana de ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Oculto hasta recargar"
+    },
+    "pickDoneTempSave": {
+        "message": "guardar — en la ventana de ABlock"
+    },
+    "pickLimit": {
+        "message": "Este sitio ya tiene 100 elementos ocultos — elimina algunos en la ventana de ABlock"
     }
 }

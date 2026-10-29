@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Selaimen laajennusasetukset avautuvat – ota siellä ABlockille käyttöön lupa incognito-tilassa"
+    },
+    "pickLabel": {
+        "message": "Piilota elementti"
+    },
+    "pickTitle": {
+        "message": "Valitse sivulta elementti ja piilota se tällä sivustolla"
+    },
+    "pickCountTitle": {
+        "message": "Piilotettu tällä sivustolla: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Ota sivuston suojaus käyttöön"
+    },
+    "pickTemp": {
+        "message": "Vain uudelleenlataukseen asti"
+    },
+    "pickAllow": {
+        "message": "Salli tällä sivustolla"
+    },
+    "pickAllowTitle": {
+        "message": "Elementit pysyvät piilossa myös uudelleenlatauksen jälkeen. Selain pyytää pääsyä tälle sivustolle"
+    },
+    "pickAllowed": {
+        "message": "Pysyy piilossa uudelleenladattaessa"
+    },
+    "pickCleared": {
+        "message": "Kaikki on taas sivulla"
+    },
+    "hiddenTitle": {
+        "message": "Piilotettu: $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Takaisin"
+    },
+    "hiddenSelectAll": {
+        "message": "Valitse kaikki"
+    },
+    "hiddenSelected": {
+        "message": "Valittu: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Poista"
+    },
+    "hiddenDeleteN": {
+        "message": "Poista ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Tyhjennä kaikki"
+    },
+    "hiddenClearConfirm": {
+        "message": "Tyhjennetäänkö kaikki $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Kaikki piilotetut elementit tulevat taas näkyviin sivulle"
+    },
+    "hiddenHint": {
+        "message": "Vie osoitin rivin päälle, niin elementti korostetaan sivulla"
+    },
+    "hiddenLit": {
+        "message": "Elementti on korostettu sivulla"
+    },
+    "hiddenMissing": {
+        "message": "ei tällä sivulla"
+    },
+    "hiddenMissingHint": {
+        "message": "Ei tällä sivulla — ei korostettavaa"
+    },
+    "hiddenOffHint": {
+        "message": "Sivuston suojaus on pois käytöstä — piilotetut elementit näkyvät nyt"
+    },
+    "kindImage": {
+        "message": "Kuva"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Upotettu lohko"
+    },
+    "kindBanner": {
+        "message": "Palkki"
+    },
+    "kindDialog": {
+        "message": "Ikkuna"
+    },
+    "kindBlock": {
+        "message": "Lohko"
+    },
+    "pickQuote": {
+        "message": "”$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Napsauta elementtiä, jonka haluat piilottaa"
+    },
+    "pickHintTouch": {
+        "message": "Kosketa elementtiä, jonka haluat piilottaa"
+    },
+    "pickEsc": {
+        "message": "Esc — peruuta"
+    },
+    "pickWider": {
+        "message": "Laajempi"
+    },
+    "pickNarrower": {
+        "message": "Suppeampi"
+    },
+    "pickHide": {
+        "message": "Piilota"
+    },
+    "pickCancel": {
+        "message": "Peruuta"
+    },
+    "pickMatches": {
+        "message": "Osumia: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Osumia: $COUNT$ — kaikki piilotetaan",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Piilotettu"
+    },
+    "pickDoneList": {
+        "message": "luettelo — ABlockin ikkunassa"
+    },
+    "pickDoneTemp": {
+        "message": "Piilotettu uudelleenlataukseen asti"
+    },
+    "pickDoneTempSave": {
+        "message": "tallenna — ABlockin ikkunassa"
+    },
+    "pickLimit": {
+        "message": "Sivustolla on jo 100 piilotettua elementtiä — poista turhat ABlockin ikkunassa"
     }
 }

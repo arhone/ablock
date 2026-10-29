@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "تنظیمات افزونه‌های مرورگر باز می‌شود؛ آنجا اجازهٔ اجرای ABlock در حالت ناشناس را روشن کنید"
+    },
+    "pickLabel": {
+        "message": "پنهان کردن عنصر"
+    },
+    "pickTitle": {
+        "message": "عنصری را در صفحه انتخاب کنید تا در این سایت پنهان شود"
+    },
+    "pickCountTitle": {
+        "message": "پنهان‌شده در این سایت: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "محافظت را برای این سایت روشن کنید"
+    },
+    "pickTemp": {
+        "message": "فقط تا بارگیری دوباره"
+    },
+    "pickAllow": {
+        "message": "اجازه در این سایت"
+    },
+    "pickAllowTitle": {
+        "message": "عناصر پس از بارگیری دوباره هم پنهان می‌مانند. مرورگر دسترسی به این سایت را درخواست می‌کند"
+    },
+    "pickAllowed": {
+        "message": "پس از بارگیری دوباره هم پنهان است"
+    },
+    "pickCleared": {
+        "message": "همه‌چیز به صفحه برگشت"
+    },
+    "hiddenTitle": {
+        "message": "پنهان‌شده در $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "بازگشت"
+    },
+    "hiddenSelectAll": {
+        "message": "انتخاب همه"
+    },
+    "hiddenSelected": {
+        "message": "انتخاب‌شده: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "حذف"
+    },
+    "hiddenDeleteN": {
+        "message": "حذف ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "پاک کردن همه"
+    },
+    "hiddenClearConfirm": {
+        "message": "هر $COUNT$ مورد پاک شود؟",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "همهٔ عناصر پنهان دوباره در صفحه ظاهر می‌شوند"
+    },
+    "hiddenHint": {
+        "message": "نشانگر را روی یک ردیف ببرید تا عنصر در صفحه برجسته شود"
+    },
+    "hiddenLit": {
+        "message": "عنصر در صفحه برجسته شده است"
+    },
+    "hiddenMissing": {
+        "message": "در این صفحه نیست"
+    },
+    "hiddenMissingHint": {
+        "message": "در این صفحه نیست — چیزی برای برجسته کردن نیست"
+    },
+    "hiddenOffHint": {
+        "message": "محافظت سایت خاموش است — عناصر پنهان اکنون دیده می‌شوند"
+    },
+    "kindImage": {
+        "message": "تصویر"
+    },
+    "kindVideo": {
+        "message": "ویدیو"
+    },
+    "kindFrame": {
+        "message": "بلوک جاسازی‌شده"
+    },
+    "kindBanner": {
+        "message": "نوار"
+    },
+    "kindDialog": {
+        "message": "پنجره"
+    },
+    "kindBlock": {
+        "message": "بلوک"
+    },
+    "pickQuote": {
+        "message": "«$TEXT$»",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "روی عنصری که می‌خواهید پنهان کنید کلیک کنید"
+    },
+    "pickHintTouch": {
+        "message": "عنصری را که می‌خواهید پنهان کنید لمس کنید"
+    },
+    "pickEsc": {
+        "message": "Esc — لغو"
+    },
+    "pickWider": {
+        "message": "گسترده‌تر"
+    },
+    "pickNarrower": {
+        "message": "محدودتر"
+    },
+    "pickHide": {
+        "message": "پنهان کردن"
+    },
+    "pickCancel": {
+        "message": "لغو"
+    },
+    "pickMatches": {
+        "message": "موارد مطابق: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "موارد مطابق: $COUNT$ — همه پنهان می‌شوند",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "پنهان شد"
+    },
+    "pickDoneList": {
+        "message": "فهرست — در پنجرهٔ ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "پنهان تا بارگیری دوباره"
+    },
+    "pickDoneTempSave": {
+        "message": "ذخیره — در پنجرهٔ ABlock"
+    },
+    "pickLimit": {
+        "message": "این سایت از قبل 100 عنصر پنهان دارد — موارد اضافی را در پنجرهٔ ABlock حذف کنید"
     }
 }

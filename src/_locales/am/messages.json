@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "የአሳሹ የቅጥያዎች ቅንብሮች ይከፈታሉ፤ እዚያ ለABlock በማንነት የማያሳውቅ ሁነታ መዳረሻን ያብሩ"
+    },
+    "pickLabel": {
+        "message": "አባል ደብቅ"
+    },
+    "pickTitle": {
+        "message": "በገጹ ላይ አባል ምረጥና በዚህ ጣቢያ ላይ ደብቅ"
+    },
+    "pickCountTitle": {
+        "message": "በዚህ ጣቢያ የተደበቁ፦ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "በዚህ ጣቢያ ጥበቃን አብራ"
+    },
+    "pickTemp": {
+        "message": "እንደገና እስኪጫን ድረስ ብቻ"
+    },
+    "pickAllow": {
+        "message": "በዚህ ጣቢያ ፍቀድ"
+    },
+    "pickAllowTitle": {
+        "message": "የተደበቁት እንደገና ከተጫነም በኋላ ተደብቀው ይቆያሉ። አሳሹ ለዚህ ጣቢያ መዳረሻ ይጠይቃል"
+    },
+    "pickAllowed": {
+        "message": "እንደገና ከተጫነም በኋላ ይደበቃል"
+    },
+    "pickCleared": {
+        "message": "ሁሉም ወደ ገጹ ተመልሷል"
+    },
+    "hiddenTitle": {
+        "message": "በ $HOST$ የተደበቁ",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "ተመለስ"
+    },
+    "hiddenSelectAll": {
+        "message": "ሁሉንም ምረጥ"
+    },
+    "hiddenSelected": {
+        "message": "የተመረጡ፦ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "ሰርዝ"
+    },
+    "hiddenDeleteN": {
+        "message": "ሰርዝ ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "ሁሉንም አጽዳ"
+    },
+    "hiddenClearConfirm": {
+        "message": "ሁሉንም $COUNT$ አጽዳ?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "የተደበቁ አባላት ሁሉ በገጹ ላይ እንደገና ይታያሉ"
+    },
+    "hiddenHint": {
+        "message": "አባሉን በገጹ ላይ ለማድመቅ ጠቋሚውን በረድፉ ላይ ያንዣብቡ"
+    },
+    "hiddenLit": {
+        "message": "አባሉ በገጹ ላይ ደምቋል"
+    },
+    "hiddenMissing": {
+        "message": "በዚህ ገጽ ላይ የለም"
+    },
+    "hiddenMissingHint": {
+        "message": "በዚህ ገጽ ላይ የለም — ለማድመቅ ምንም የለም"
+    },
+    "hiddenOffHint": {
+        "message": "የጣቢያው ጥበቃ ጠፍቷል — የተደበቁት አሁን ይታያሉ"
+    },
+    "kindImage": {
+        "message": "ምስል"
+    },
+    "kindVideo": {
+        "message": "ቪዲዮ"
+    },
+    "kindFrame": {
+        "message": "የተካተተ ብሎክ"
+    },
+    "kindBanner": {
+        "message": "ሰንደቅ"
+    },
+    "kindDialog": {
+        "message": "መስኮት"
+    },
+    "kindBlock": {
+        "message": "ብሎክ"
+    },
+    "pickQuote": {
+        "message": "«$TEXT$»",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "መደበቅ የሚፈልጉትን አባል ይጫኑ"
+    },
+    "pickHintTouch": {
+        "message": "መደበቅ የሚፈልጉትን አባል ይንኩ"
+    },
+    "pickEsc": {
+        "message": "Esc — ሰርዝ"
+    },
+    "pickWider": {
+        "message": "አስፋ"
+    },
+    "pickNarrower": {
+        "message": "አጥብብ"
+    },
+    "pickHide": {
+        "message": "ደብቅ"
+    },
+    "pickCancel": {
+        "message": "ሰርዝ"
+    },
+    "pickMatches": {
+        "message": "ተዛማጆች፦ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "ተዛማጆች፦ $COUNT$ — ሁሉም ይደበቃሉ",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "ተደብቋል"
+    },
+    "pickDoneList": {
+        "message": "ዝርዝሩ — በABlock መስኮት"
+    },
+    "pickDoneTemp": {
+        "message": "እንደገና እስኪጫን ድረስ ተደብቋል"
+    },
+    "pickDoneTempSave": {
+        "message": "ለማስቀመጥ — በABlock መስኮት"
+    },
+    "pickLimit": {
+        "message": "በጣቢያው ላይ 100 የተደበቁ አባላት አሉ — በABlock መስኮት የማያስፈልጉትን ያስወግዱ"
     }
 }

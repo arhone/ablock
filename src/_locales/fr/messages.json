@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Les paramètres des extensions du navigateur s'ouvrent : activez-y l'autorisation en navigation privée pour ABlock"
+    },
+    "pickLabel": {
+        "message": "Masquer un élément"
+    },
+    "pickTitle": {
+        "message": "Choisir un élément de la page et le masquer sur ce site"
+    },
+    "pickCountTitle": {
+        "message": "Masqués sur ce site : $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Activez la protection sur ce site"
+    },
+    "pickTemp": {
+        "message": "Jusqu’au rechargement"
+    },
+    "pickAllow": {
+        "message": "Autoriser sur ce site"
+    },
+    "pickAllowTitle": {
+        "message": "Les éléments resteront masqués après rechargement. Le navigateur demandera l’accès à ce site"
+    },
+    "pickAllowed": {
+        "message": "Reste masqué après rechargement"
+    },
+    "pickCleared": {
+        "message": "Tout est de retour sur la page"
+    },
+    "hiddenTitle": {
+        "message": "Masqués sur $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Retour"
+    },
+    "hiddenSelectAll": {
+        "message": "Tout sélectionner"
+    },
+    "hiddenSelected": {
+        "message": "Sélectionnés : $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Supprimer"
+    },
+    "hiddenDeleteN": {
+        "message": "Supprimer ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Tout effacer"
+    },
+    "hiddenClearConfirm": {
+        "message": "Tout effacer ($COUNT$) ?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Tous les éléments masqués réapparaîtront sur la page"
+    },
+    "hiddenHint": {
+        "message": "Survolez une ligne pour mettre l’élément en évidence sur la page"
+    },
+    "hiddenLit": {
+        "message": "Élément mis en évidence sur la page"
+    },
+    "hiddenMissing": {
+        "message": "absent de cette page"
+    },
+    "hiddenMissingHint": {
+        "message": "Absent de cette page — rien à mettre en évidence"
+    },
+    "hiddenOffHint": {
+        "message": "La protection du site est désactivée — les éléments masqués sont visibles"
+    },
+    "kindImage": {
+        "message": "Image"
+    },
+    "kindVideo": {
+        "message": "Vidéo"
+    },
+    "kindFrame": {
+        "message": "Bloc intégré"
+    },
+    "kindBanner": {
+        "message": "Bandeau"
+    },
+    "kindDialog": {
+        "message": "Fenêtre"
+    },
+    "kindBlock": {
+        "message": "Bloc"
+    },
+    "pickQuote": {
+        "message": "« $TEXT$ »",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Cliquez sur l’élément à masquer"
+    },
+    "pickHintTouch": {
+        "message": "Touchez l’élément à masquer"
+    },
+    "pickEsc": {
+        "message": "Esc — annuler"
+    },
+    "pickWider": {
+        "message": "Plus large"
+    },
+    "pickNarrower": {
+        "message": "Plus étroit"
+    },
+    "pickHide": {
+        "message": "Masquer"
+    },
+    "pickCancel": {
+        "message": "Annuler"
+    },
+    "pickMatches": {
+        "message": "Correspondances : $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Correspondances : $COUNT$ — toutes seront masquées",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Masqué"
+    },
+    "pickDoneList": {
+        "message": "liste — dans la fenêtre ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Masqué jusqu’au rechargement"
+    },
+    "pickDoneTempSave": {
+        "message": "enregistrer — dans la fenêtre ABlock"
+    },
+    "pickLimit": {
+        "message": "Ce site a déjà 100 éléments masqués — supprimez-en dans la fenêtre ABlock"
     }
 }

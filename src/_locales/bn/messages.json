@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "ব্রাউজারের এক্সটেনশন সেটিংস খুলবে — সেখানে ABlock-এর জন্য ছদ্মবেশী মোডে অনুমতি চালু করুন"
+    },
+    "pickLabel": {
+        "message": "এলিমেন্ট লুকান"
+    },
+    "pickTitle": {
+        "message": "পৃষ্ঠায় একটি এলিমেন্ট বেছে এই সাইটে লুকান"
+    },
+    "pickCountTitle": {
+        "message": "এই সাইটে লুকানো: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "এই সাইটের সুরক্ষা চালু করুন"
+    },
+    "pickTemp": {
+        "message": "শুধু রিলোড পর্যন্ত"
+    },
+    "pickAllow": {
+        "message": "এই সাইটে অনুমতি দিন"
+    },
+    "pickAllowTitle": {
+        "message": "রিলোডের পরেও এলিমেন্ট লুকানো থাকবে। ব্রাউজার এই সাইটে অ্যাক্সেস চাইবে"
+    },
+    "pickAllowed": {
+        "message": "রিলোডের পরেও লুকানো থাকে"
+    },
+    "pickCleared": {
+        "message": "সব আবার পৃষ্ঠায় ফিরে এসেছে"
+    },
+    "hiddenTitle": {
+        "message": "$HOST$-এ লুকানো",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "ফিরে যান"
+    },
+    "hiddenSelectAll": {
+        "message": "সব বাছুন"
+    },
+    "hiddenSelected": {
+        "message": "বাছাই করা: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "মুছুন"
+    },
+    "hiddenDeleteN": {
+        "message": "মুছুন ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "সব মুছুন"
+    },
+    "hiddenClearConfirm": {
+        "message": "সব $COUNT$টি মুছবেন?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "লুকানো সব এলিমেন্ট আবার পৃষ্ঠায় দেখা যাবে"
+    },
+    "hiddenHint": {
+        "message": "সারির ওপর মাউস রাখলে পৃষ্ঠায় এলিমেন্টটি হাইলাইট হবে"
+    },
+    "hiddenLit": {
+        "message": "পৃষ্ঠায় এলিমেন্ট হাইলাইট করা হয়েছে"
+    },
+    "hiddenMissing": {
+        "message": "এই পৃষ্ঠায় নেই"
+    },
+    "hiddenMissingHint": {
+        "message": "এই পৃষ্ঠায় নেই — হাইলাইট করার কিছু নেই"
+    },
+    "hiddenOffHint": {
+        "message": "সাইটের সুরক্ষা বন্ধ — লুকানো এলিমেন্ট এখন দেখা যাচ্ছে"
+    },
+    "kindImage": {
+        "message": "ছবি"
+    },
+    "kindVideo": {
+        "message": "ভিডিও"
+    },
+    "kindFrame": {
+        "message": "এম্বেড করা ব্লক"
+    },
+    "kindBanner": {
+        "message": "ব্যানার"
+    },
+    "kindDialog": {
+        "message": "উইন্ডো"
+    },
+    "kindBlock": {
+        "message": "ব্লক"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "যে এলিমেন্ট লুকাতে চান তাতে ক্লিক করুন"
+    },
+    "pickHintTouch": {
+        "message": "যে এলিমেন্ট লুকাতে চান তা স্পর্শ করুন"
+    },
+    "pickEsc": {
+        "message": "Esc — বাতিল"
+    },
+    "pickWider": {
+        "message": "বাড়ান"
+    },
+    "pickNarrower": {
+        "message": "কমান"
+    },
+    "pickHide": {
+        "message": "লুকান"
+    },
+    "pickCancel": {
+        "message": "বাতিল"
+    },
+    "pickMatches": {
+        "message": "মিল: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "মিল: $COUNT$ — সব লুকানো হবে",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "লুকানো হয়েছে"
+    },
+    "pickDoneList": {
+        "message": "তালিকা — ABlock উইন্ডোতে"
+    },
+    "pickDoneTemp": {
+        "message": "রিলোড পর্যন্ত লুকানো"
+    },
+    "pickDoneTempSave": {
+        "message": "সংরক্ষণ — ABlock উইন্ডোতে"
+    },
+    "pickLimit": {
+        "message": "এই সাইটে ইতিমধ্যে 100টি এলিমেন্ট লুকানো — ABlock উইন্ডো থেকে অপ্রয়োজনীয়গুলো মুছুন"
     }
 }

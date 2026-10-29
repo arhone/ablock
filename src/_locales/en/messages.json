@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Opens the browser extension settings — turn on Incognito access for ABlock there"
+    },
+    "pickLabel": {
+        "message": "Hide element"
+    },
+    "pickTitle": {
+        "message": "Select an element on the page and hide it on this site"
+    },
+    "pickCountTitle": {
+        "message": "Hidden on this site: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Turn on protection for this site"
+    },
+    "pickTemp": {
+        "message": "Only until reload"
+    },
+    "pickAllow": {
+        "message": "Allow on this site"
+    },
+    "pickAllowTitle": {
+        "message": "Elements will stay hidden after reload. The browser will ask for access to this site"
+    },
+    "pickAllowed": {
+        "message": "Stays hidden after reload"
+    },
+    "pickCleared": {
+        "message": "Everything is back on the page"
+    },
+    "hiddenTitle": {
+        "message": "Hidden on $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Back"
+    },
+    "hiddenSelectAll": {
+        "message": "Select all"
+    },
+    "hiddenSelected": {
+        "message": "Selected: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Delete"
+    },
+    "hiddenDeleteN": {
+        "message": "Delete ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Clear all"
+    },
+    "hiddenClearConfirm": {
+        "message": "Clear all $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "All hidden elements will reappear on the page"
+    },
+    "hiddenHint": {
+        "message": "Hover over a row to highlight the element on the page"
+    },
+    "hiddenLit": {
+        "message": "Element highlighted on the page"
+    },
+    "hiddenMissing": {
+        "message": "not on this page"
+    },
+    "hiddenMissingHint": {
+        "message": "Not on this page — nothing to highlight"
+    },
+    "hiddenOffHint": {
+        "message": "Site protection is off — hidden elements are now visible"
+    },
+    "kindImage": {
+        "message": "Image"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Embedded block"
+    },
+    "kindBanner": {
+        "message": "Banner"
+    },
+    "kindDialog": {
+        "message": "Window"
+    },
+    "kindBlock": {
+        "message": "Block"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Click the element you want to hide"
+    },
+    "pickHintTouch": {
+        "message": "Tap the element you want to hide"
+    },
+    "pickEsc": {
+        "message": "Esc — cancel"
+    },
+    "pickWider": {
+        "message": "Wider"
+    },
+    "pickNarrower": {
+        "message": "Narrower"
+    },
+    "pickHide": {
+        "message": "Hide"
+    },
+    "pickCancel": {
+        "message": "Cancel"
+    },
+    "pickMatches": {
+        "message": "Matches: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Matches: $COUNT$ — all will be hidden",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Hidden"
+    },
+    "pickDoneList": {
+        "message": "list — in the ABlock popup"
+    },
+    "pickDoneTemp": {
+        "message": "Hidden until reload"
+    },
+    "pickDoneTempSave": {
+        "message": "save — in the ABlock popup"
+    },
+    "pickLimit": {
+        "message": "This site already has 100 hidden elements — remove some in the ABlock popup"
     }
 }

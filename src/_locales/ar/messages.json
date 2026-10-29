@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "ستُفتح إعدادات الإضافات في المتصفح؛ فعِّل هناك السماح لـ ABlock في وضع التصفح المتخفي"
+    },
+    "pickLabel": {
+        "message": "إخفاء عنصر"
+    },
+    "pickTitle": {
+        "message": "اختر عنصرًا في الصفحة لإخفائه على هذا الموقع"
+    },
+    "pickCountTitle": {
+        "message": "المخفي على هذا الموقع: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "شغّل الحماية لهذا الموقع"
+    },
+    "pickTemp": {
+        "message": "حتى إعادة التحميل فقط"
+    },
+    "pickAllow": {
+        "message": "السماح على هذا الموقع"
+    },
+    "pickAllowTitle": {
+        "message": "ستبقى العناصر مخفية بعد إعادة التحميل. سيطلب المتصفح الوصول إلى هذا الموقع"
+    },
+    "pickAllowed": {
+        "message": "يبقى مخفيًا بعد إعادة التحميل"
+    },
+    "pickCleared": {
+        "message": "عاد كل شيء إلى الصفحة"
+    },
+    "hiddenTitle": {
+        "message": "المخفي على $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "رجوع"
+    },
+    "hiddenSelectAll": {
+        "message": "تحديد الكل"
+    },
+    "hiddenSelected": {
+        "message": "المحدد: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "حذف"
+    },
+    "hiddenDeleteN": {
+        "message": "حذف ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "مسح الكل"
+    },
+    "hiddenClearConfirm": {
+        "message": "مسح كل العناصر ($COUNT$)؟",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "ستظهر كل العناصر المخفية مجددًا على الصفحة"
+    },
+    "hiddenHint": {
+        "message": "مرّر المؤشر فوق صف لإبراز العنصر على الصفحة"
+    },
+    "hiddenLit": {
+        "message": "العنصر مبرز على الصفحة"
+    },
+    "hiddenMissing": {
+        "message": "غير موجود على هذه الصفحة"
+    },
+    "hiddenMissingHint": {
+        "message": "غير موجود على هذه الصفحة — لا شيء لإبرازه"
+    },
+    "hiddenOffHint": {
+        "message": "حماية الموقع متوقفة — العناصر المخفية ظاهرة الآن"
+    },
+    "kindImage": {
+        "message": "صورة"
+    },
+    "kindVideo": {
+        "message": "فيديو"
+    },
+    "kindFrame": {
+        "message": "كتلة مضمّنة"
+    },
+    "kindBanner": {
+        "message": "شريط"
+    },
+    "kindDialog": {
+        "message": "نافذة"
+    },
+    "kindBlock": {
+        "message": "كتلة"
+    },
+    "pickQuote": {
+        "message": "«$TEXT$»",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "انقر على العنصر الذي تريد إخفاءه"
+    },
+    "pickHintTouch": {
+        "message": "المس العنصر الذي تريد إخفاءه"
+    },
+    "pickEsc": {
+        "message": "Esc — إلغاء"
+    },
+    "pickWider": {
+        "message": "أوسع"
+    },
+    "pickNarrower": {
+        "message": "أضيق"
+    },
+    "pickHide": {
+        "message": "إخفاء"
+    },
+    "pickCancel": {
+        "message": "إلغاء"
+    },
+    "pickMatches": {
+        "message": "التطابقات: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "التطابقات: $COUNT$ — ستُخفى كلها",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "تم الإخفاء"
+    },
+    "pickDoneList": {
+        "message": "القائمة — في نافذة ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "مخفي حتى إعادة التحميل"
+    },
+    "pickDoneTempSave": {
+        "message": "للحفظ — من نافذة ABlock"
+    },
+    "pickLimit": {
+        "message": "يوجد بالفعل 100 عنصر مخفي على الموقع — احذف بعضها من نافذة ABlock"
     }
 }

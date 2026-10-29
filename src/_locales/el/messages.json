@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Θα ανοίξουν οι ρυθμίσεις επεκτάσεων του προγράμματος περιήγησης — ενεργοποιήστε εκεί για το ABlock την άδεια για ανώνυμη περιήγηση"
+    },
+    "pickLabel": {
+        "message": "Απόκρυψη στοιχείου"
+    },
+    "pickTitle": {
+        "message": "Επιλέξτε ένα στοιχείο στη σελίδα και αποκρύψτε το σε αυτόν τον ιστότοπο"
+    },
+    "pickCountTitle": {
+        "message": "Κρυμμένα σε αυτόν τον ιστότοπο: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Ενεργοποιήστε την προστασία εδώ"
+    },
+    "pickTemp": {
+        "message": "Μόνο μέχρι την ανανέωση"
+    },
+    "pickAllow": {
+        "message": "Να επιτρέπεται εδώ"
+    },
+    "pickAllowTitle": {
+        "message": "Τα στοιχεία θα παραμείνουν κρυμμένα μετά την ανανέωση. Το πρόγραμμα περιήγησης θα ζητήσει πρόσβαση σε αυτόν τον ιστότοπο"
+    },
+    "pickAllowed": {
+        "message": "Παραμένει κρυμμένο μετά την ανανέωση"
+    },
+    "pickCleared": {
+        "message": "Όλα επέστρεψαν στη σελίδα"
+    },
+    "hiddenTitle": {
+        "message": "Κρυμμένα στο $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Πίσω"
+    },
+    "hiddenSelectAll": {
+        "message": "Επιλογή όλων"
+    },
+    "hiddenSelected": {
+        "message": "Επιλεγμένα: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Διαγραφή"
+    },
+    "hiddenDeleteN": {
+        "message": "Διαγραφή ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Εκκαθάριση όλων"
+    },
+    "hiddenClearConfirm": {
+        "message": "Εκκαθάριση και των $COUNT$;",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Όλα τα κρυμμένα στοιχεία θα εμφανιστούν ξανά στη σελίδα"
+    },
+    "hiddenHint": {
+        "message": "Περάστε τον δείκτη πάνω από μια γραμμή για επισήμανση του στοιχείου στη σελίδα"
+    },
+    "hiddenLit": {
+        "message": "Το στοιχείο επισημαίνεται στη σελίδα"
+    },
+    "hiddenMissing": {
+        "message": "δεν υπάρχει σε αυτή τη σελίδα"
+    },
+    "hiddenMissingHint": {
+        "message": "Δεν υπάρχει σε αυτή τη σελίδα — τίποτα για επισήμανση"
+    },
+    "hiddenOffHint": {
+        "message": "Η προστασία του ιστότοπου είναι ανενεργή — τα κρυμμένα στοιχεία είναι τώρα ορατά"
+    },
+    "kindImage": {
+        "message": "Εικόνα"
+    },
+    "kindVideo": {
+        "message": "Βίντεο"
+    },
+    "kindFrame": {
+        "message": "Ενσωματωμένο μπλοκ"
+    },
+    "kindBanner": {
+        "message": "Μπάρα"
+    },
+    "kindDialog": {
+        "message": "Παράθυρο"
+    },
+    "kindBlock": {
+        "message": "Μπλοκ"
+    },
+    "pickQuote": {
+        "message": "«$TEXT$»",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Κάντε κλικ στο στοιχείο που θέλετε να αποκρύψετε"
+    },
+    "pickHintTouch": {
+        "message": "Αγγίξτε το στοιχείο που θέλετε να αποκρύψετε"
+    },
+    "pickEsc": {
+        "message": "Esc — ακύρωση"
+    },
+    "pickWider": {
+        "message": "Πλατύτερα"
+    },
+    "pickNarrower": {
+        "message": "Στενότερα"
+    },
+    "pickHide": {
+        "message": "Απόκρυψη"
+    },
+    "pickCancel": {
+        "message": "Ακύρωση"
+    },
+    "pickMatches": {
+        "message": "Αντιστοιχίες: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Αντιστοιχίες: $COUNT$ — θα κρυφτούν όλες",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Κρυμμένο"
+    },
+    "pickDoneList": {
+        "message": "λίστα — στο παράθυρο ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Κρυμμένο μέχρι την ανανέωση"
+    },
+    "pickDoneTempSave": {
+        "message": "αποθήκευση — στο παράθυρο ABlock"
+    },
+    "pickLimit": {
+        "message": "Ο ιστότοπος έχει ήδη 100 κρυμμένα στοιχεία — διαγράψτε μερικά στο παράθυρο ABlock"
     }
 }

@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Avanevad brauseri laienduste seaded – lülitage seal ABlocki jaoks sisse luba inkognito režiimis"
+    },
+    "pickLabel": {
+        "message": "Peida element"
+    },
+    "pickTitle": {
+        "message": "Valige lehel element ja peitke see sellel saidil"
+    },
+    "pickCountTitle": {
+        "message": "Sellel saidil peidetud: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Lülitage selle saidi kaitse sisse"
+    },
+    "pickTemp": {
+        "message": "Ainult taaslaadimiseni"
+    },
+    "pickAllow": {
+        "message": "Luba sellel saidil"
+    },
+    "pickAllowTitle": {
+        "message": "Elemendid jäävad peidetuks ka pärast taaslaadimist. Brauser küsib sellele saidile juurdepääsu"
+    },
+    "pickAllowed": {
+        "message": "Peidetud ka pärast taaslaadimist"
+    },
+    "pickCleared": {
+        "message": "Kõik on jälle lehel"
+    },
+    "hiddenTitle": {
+        "message": "Peidetud saidil $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Tagasi"
+    },
+    "hiddenSelectAll": {
+        "message": "Vali kõik"
+    },
+    "hiddenSelected": {
+        "message": "Valitud: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Kustuta"
+    },
+    "hiddenDeleteN": {
+        "message": "Kustuta ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Tühjenda kõik"
+    },
+    "hiddenClearConfirm": {
+        "message": "Tühjendada kõik $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Kõik peidetud elemendid ilmuvad lehele tagasi"
+    },
+    "hiddenHint": {
+        "message": "Elemendi esiletõstmiseks lehel viige kursor rea kohale"
+    },
+    "hiddenLit": {
+        "message": "Element on lehel esile tõstetud"
+    },
+    "hiddenMissing": {
+        "message": "pole sellel lehel"
+    },
+    "hiddenMissingHint": {
+        "message": "Pole sellel lehel — pole midagi esile tõsta"
+    },
+    "hiddenOffHint": {
+        "message": "Saidi kaitse on väljas — peidetud elemendid on praegu nähtavad"
+    },
+    "kindImage": {
+        "message": "Pilt"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Manustatud plokk"
+    },
+    "kindBanner": {
+        "message": "Riba"
+    },
+    "kindDialog": {
+        "message": "Aken"
+    },
+    "kindBlock": {
+        "message": "Plokk"
+    },
+    "pickQuote": {
+        "message": "„$TEXT$“",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Klõpsake elemendil, mille soovite peita"
+    },
+    "pickHintTouch": {
+        "message": "Puudutage elementi, mille soovite peita"
+    },
+    "pickEsc": {
+        "message": "Esc — tühista"
+    },
+    "pickWider": {
+        "message": "Laiem"
+    },
+    "pickNarrower": {
+        "message": "Kitsam"
+    },
+    "pickHide": {
+        "message": "Peida"
+    },
+    "pickCancel": {
+        "message": "Tühista"
+    },
+    "pickMatches": {
+        "message": "Vasteid: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Vasteid: $COUNT$ — kõik peidetakse",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Peidetud"
+    },
+    "pickDoneList": {
+        "message": "loend — ABlocki aknas"
+    },
+    "pickDoneTemp": {
+        "message": "Peidetud taaslaadimiseni"
+    },
+    "pickDoneTempSave": {
+        "message": "salvesta — ABlocki aknas"
+    },
+    "pickLimit": {
+        "message": "Sellel saidil on juba 100 peidetud elementi — kustutage liigsed ABlocki aknas"
     }
 }

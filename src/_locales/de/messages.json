@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Die Erweiterungseinstellungen des Browsers werden geöffnet – aktivieren Sie dort für ABlock die Ausführung im Inkognitomodus"
+    },
+    "pickLabel": {
+        "message": "Element ausblenden"
+    },
+    "pickTitle": {
+        "message": "Ein Element auf der Seite auswählen und auf dieser Website ausblenden"
+    },
+    "pickCountTitle": {
+        "message": "Auf dieser Website ausgeblendet: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Schutz für diese Website einschalten"
+    },
+    "pickTemp": {
+        "message": "Nur bis zum Neuladen"
+    },
+    "pickAllow": {
+        "message": "Für Website erlauben"
+    },
+    "pickAllowTitle": {
+        "message": "Elemente bleiben nach dem Neuladen ausgeblendet. Der Browser fragt nach Zugriff auf diese Website"
+    },
+    "pickAllowed": {
+        "message": "Bleibt nach Neuladen ausgeblendet"
+    },
+    "pickCleared": {
+        "message": "Alles ist wieder auf der Seite"
+    },
+    "hiddenTitle": {
+        "message": "Ausgeblendet auf $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Zurück"
+    },
+    "hiddenSelectAll": {
+        "message": "Alle auswählen"
+    },
+    "hiddenSelected": {
+        "message": "Ausgewählt: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Löschen"
+    },
+    "hiddenDeleteN": {
+        "message": "Löschen ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Alle entfernen"
+    },
+    "hiddenClearConfirm": {
+        "message": "Alle $COUNT$ entfernen?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Alle ausgeblendeten Elemente erscheinen wieder auf der Seite"
+    },
+    "hiddenHint": {
+        "message": "Mit der Maus auf eine Zeile zeigen, um das Element auf der Seite hervorzuheben"
+    },
+    "hiddenLit": {
+        "message": "Element auf der Seite hervorgehoben"
+    },
+    "hiddenMissing": {
+        "message": "nicht auf dieser Seite"
+    },
+    "hiddenMissingHint": {
+        "message": "Nicht auf dieser Seite — nichts hervorzuheben"
+    },
+    "hiddenOffHint": {
+        "message": "Website-Schutz ist aus — ausgeblendete Elemente sind jetzt sichtbar"
+    },
+    "kindImage": {
+        "message": "Bild"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Eingebetteter Block"
+    },
+    "kindBanner": {
+        "message": "Leiste"
+    },
+    "kindDialog": {
+        "message": "Fenster"
+    },
+    "kindBlock": {
+        "message": "Block"
+    },
+    "pickQuote": {
+        "message": "„$TEXT$“",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Klicken Sie auf das Element, das Sie ausblenden möchten"
+    },
+    "pickHintTouch": {
+        "message": "Tippen Sie auf das Element, das Sie ausblenden möchten"
+    },
+    "pickEsc": {
+        "message": "Esc — Abbrechen"
+    },
+    "pickWider": {
+        "message": "Breiter"
+    },
+    "pickNarrower": {
+        "message": "Schmaler"
+    },
+    "pickHide": {
+        "message": "Ausblenden"
+    },
+    "pickCancel": {
+        "message": "Abbrechen"
+    },
+    "pickMatches": {
+        "message": "Treffer: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Treffer: $COUNT$ — alle werden ausgeblendet",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Ausgeblendet"
+    },
+    "pickDoneList": {
+        "message": "Liste — im ABlock-Fenster"
+    },
+    "pickDoneTemp": {
+        "message": "Bis zum Neuladen ausgeblendet"
+    },
+    "pickDoneTempSave": {
+        "message": "Speichern — im ABlock-Fenster"
+    },
+    "pickLimit": {
+        "message": "Auf dieser Website sind bereits 100 Elemente ausgeblendet — entfernen Sie einige im ABlock-Fenster"
     }
 }

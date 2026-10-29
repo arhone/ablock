@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Magbubukas ang mga setting ng extension ng browser — i-on doon ang pahintulot ng ABlock sa Incognito mode"
+    },
+    "pickLabel": {
+        "message": "Itago ang elemento"
+    },
+    "pickTitle": {
+        "message": "Pumili ng elemento sa pahina at itago ito sa site na ito"
+    },
+    "pickCountTitle": {
+        "message": "Nakatago sa site na ito: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "I-on ang proteksyon sa site na ito"
+    },
+    "pickTemp": {
+        "message": "Hanggang sa pag-reload lang"
+    },
+    "pickAllow": {
+        "message": "Payagan sa site na ito"
+    },
+    "pickAllowTitle": {
+        "message": "Mananatiling nakatago ang mga elemento pagkatapos mag-reload. Hihingi ang browser ng access sa site na ito"
+    },
+    "pickAllowed": {
+        "message": "Nakatago pa rin pag nag-reload"
+    },
+    "pickCleared": {
+        "message": "Nasa pahina na ulit ang lahat"
+    },
+    "hiddenTitle": {
+        "message": "Nakatago sa $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Bumalik"
+    },
+    "hiddenSelectAll": {
+        "message": "Piliin lahat"
+    },
+    "hiddenSelected": {
+        "message": "Napili: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Tanggalin"
+    },
+    "hiddenDeleteN": {
+        "message": "Tanggalin ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "I-clear lahat"
+    },
+    "hiddenClearConfirm": {
+        "message": "I-clear ang lahat ng $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Muling lilitaw sa pahina ang lahat ng nakatagong elemento"
+    },
+    "hiddenHint": {
+        "message": "Itapat ang cursor sa isang row upang i-highlight ang elemento sa pahina"
+    },
+    "hiddenLit": {
+        "message": "Naka-highlight ang elemento sa pahina"
+    },
+    "hiddenMissing": {
+        "message": "wala sa pahinang ito"
+    },
+    "hiddenMissingHint": {
+        "message": "Wala sa pahinang ito — walang iha-highlight"
+    },
+    "hiddenOffHint": {
+        "message": "Naka-off ang proteksyon ng site — nakikita na ang mga nakatagong elemento"
+    },
+    "kindImage": {
+        "message": "Larawan"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Naka-embed na block"
+    },
+    "kindBanner": {
+        "message": "Banner"
+    },
+    "kindDialog": {
+        "message": "Window"
+    },
+    "kindBlock": {
+        "message": "Block"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "I-click ang elementong gusto mong itago"
+    },
+    "pickHintTouch": {
+        "message": "I-tap ang elementong gusto mong itago"
+    },
+    "pickEsc": {
+        "message": "Esc — kanselahin"
+    },
+    "pickWider": {
+        "message": "Mas malawak"
+    },
+    "pickNarrower": {
+        "message": "Mas makitid"
+    },
+    "pickHide": {
+        "message": "Itago"
+    },
+    "pickCancel": {
+        "message": "Kanselahin"
+    },
+    "pickMatches": {
+        "message": "Tugma: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Tugma: $COUNT$ — itatago ang lahat",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Nakatago"
+    },
+    "pickDoneList": {
+        "message": "listahan — sa window ng ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Nakatago hanggang mag-reload"
+    },
+    "pickDoneTempSave": {
+        "message": "i-save — sa window ng ABlock"
+    },
+    "pickLimit": {
+        "message": "May 100 nakatagong elemento na sa site — tanggalin ang ilan sa window ng ABlock"
     }
 }

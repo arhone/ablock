@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "S'obrirà la configuració d'extensions del navegador: activa-hi el permís en mode d'incògnit per a ABlock"
+    },
+    "pickLabel": {
+        "message": "Amaga un element"
+    },
+    "pickTitle": {
+        "message": "Tria un element de la pàgina i amaga’l en aquest lloc"
+    },
+    "pickCountTitle": {
+        "message": "Amagats en aquest lloc: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Activa la protecció en aquest lloc"
+    },
+    "pickTemp": {
+        "message": "Només fins que es recarregui"
+    },
+    "pickAllow": {
+        "message": "Permet en aquest lloc"
+    },
+    "pickAllowTitle": {
+        "message": "Els elements continuaran amagats després de recarregar. El navegador demanarà accés a aquest lloc"
+    },
+    "pickAllowed": {
+        "message": "Continua amagat en recarregar"
+    },
+    "pickCleared": {
+        "message": "Tot torna a ser a la pàgina"
+    },
+    "hiddenTitle": {
+        "message": "Amagats a $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Enrere"
+    },
+    "hiddenSelectAll": {
+        "message": "Selecciona-ho tot"
+    },
+    "hiddenSelected": {
+        "message": "Seleccionats: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Suprimeix"
+    },
+    "hiddenDeleteN": {
+        "message": "Suprimeix ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Esborra-ho tot"
+    },
+    "hiddenClearConfirm": {
+        "message": "Vols esborrar-los tots ($COUNT$)?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Tots els elements amagats tornaran a aparèixer a la pàgina"
+    },
+    "hiddenHint": {
+        "message": "Passa el cursor per una fila per ressaltar l’element a la pàgina"
+    },
+    "hiddenLit": {
+        "message": "Element ressaltat a la pàgina"
+    },
+    "hiddenMissing": {
+        "message": "no és en aquesta pàgina"
+    },
+    "hiddenMissingHint": {
+        "message": "No és en aquesta pàgina — no hi ha res a ressaltar"
+    },
+    "hiddenOffHint": {
+        "message": "La protecció del lloc està desactivada — els elements amagats ara són visibles"
+    },
+    "kindImage": {
+        "message": "Imatge"
+    },
+    "kindVideo": {
+        "message": "Vídeo"
+    },
+    "kindFrame": {
+        "message": "Bloc incrustat"
+    },
+    "kindBanner": {
+        "message": "Franja"
+    },
+    "kindDialog": {
+        "message": "Finestra"
+    },
+    "kindBlock": {
+        "message": "Bloc"
+    },
+    "pickQuote": {
+        "message": "«$TEXT$»",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Fes clic a l’element que vols amagar"
+    },
+    "pickHintTouch": {
+        "message": "Toca l’element que vols amagar"
+    },
+    "pickEsc": {
+        "message": "Esc — cancel·la"
+    },
+    "pickWider": {
+        "message": "Més ample"
+    },
+    "pickNarrower": {
+        "message": "Més estret"
+    },
+    "pickHide": {
+        "message": "Amaga"
+    },
+    "pickCancel": {
+        "message": "Cancel·la"
+    },
+    "pickMatches": {
+        "message": "Coincidències: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Coincidències: $COUNT$ — s’amagaran totes",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Amagat"
+    },
+    "pickDoneList": {
+        "message": "llista — a la finestra d’ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Amagat fins que es recarregui"
+    },
+    "pickDoneTempSave": {
+        "message": "desa — a la finestra d’ABlock"
+    },
+    "pickLimit": {
+        "message": "Aquest lloc ja té 100 elements amagats — suprimeix-ne alguns a la finestra d’ABlock"
     }
 }

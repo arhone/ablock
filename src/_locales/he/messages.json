@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "ייפתחו הגדרות התוספים של הדפדפן — הפעילו שם עבור ABlock את ההרשאה במצב גלישה בסתר"
+    },
+    "pickLabel": {
+        "message": "הסתרת רכיב"
+    },
+    "pickTitle": {
+        "message": "בחירת רכיב בדף והסתרתו באתר הזה"
+    },
+    "pickCountTitle": {
+        "message": "מוסתרים באתר הזה: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "יש להפעיל הגנה באתר הזה"
+    },
+    "pickTemp": {
+        "message": "רק עד לטעינה מחדש"
+    },
+    "pickAllow": {
+        "message": "אישור באתר הזה"
+    },
+    "pickAllowTitle": {
+        "message": "הרכיבים יישארו מוסתרים גם לאחר טעינה מחדש. הדפדפן יבקש גישה לאתר הזה"
+    },
+    "pickAllowed": {
+        "message": "נשאר מוסתר גם לאחר טעינה מחדש"
+    },
+    "pickCleared": {
+        "message": "הכול חזר לדף"
+    },
+    "hiddenTitle": {
+        "message": "מוסתרים ב־$HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "חזרה"
+    },
+    "hiddenSelectAll": {
+        "message": "בחירת הכול"
+    },
+    "hiddenSelected": {
+        "message": "נבחרו: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "מחיקה"
+    },
+    "hiddenDeleteN": {
+        "message": "מחיקה ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "ניקוי הכול"
+    },
+    "hiddenClearConfirm": {
+        "message": "לנקות את כל $COUNT$ הרכיבים?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "כל הרכיבים המוסתרים יופיעו שוב בדף"
+    },
+    "hiddenHint": {
+        "message": "העברת הסמן מעל שורה תדגיש את הרכיב בדף"
+    },
+    "hiddenLit": {
+        "message": "הרכיב מודגש בדף"
+    },
+    "hiddenMissing": {
+        "message": "לא נמצא בדף הזה"
+    },
+    "hiddenMissingHint": {
+        "message": "לא נמצא בדף הזה — אין מה להדגיש"
+    },
+    "hiddenOffHint": {
+        "message": "ההגנה באתר כבויה — הרכיבים המוסתרים גלויים כעת"
+    },
+    "kindImage": {
+        "message": "תמונה"
+    },
+    "kindVideo": {
+        "message": "וידאו"
+    },
+    "kindFrame": {
+        "message": "בלוק מוטמע"
+    },
+    "kindBanner": {
+        "message": "פס"
+    },
+    "kindDialog": {
+        "message": "חלון"
+    },
+    "kindBlock": {
+        "message": "בלוק"
+    },
+    "pickQuote": {
+        "message": "״$TEXT$״",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "יש ללחוץ על הרכיב שברצונך להסתיר"
+    },
+    "pickHintTouch": {
+        "message": "יש לגעת ברכיב שברצונך להסתיר"
+    },
+    "pickEsc": {
+        "message": "Esc — ביטול"
+    },
+    "pickWider": {
+        "message": "רחב יותר"
+    },
+    "pickNarrower": {
+        "message": "צר יותר"
+    },
+    "pickHide": {
+        "message": "הסתרה"
+    },
+    "pickCancel": {
+        "message": "ביטול"
+    },
+    "pickMatches": {
+        "message": "התאמות: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "התאמות: $COUNT$ — כולן יוסתרו",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "הוסתר"
+    },
+    "pickDoneList": {
+        "message": "הרשימה — בחלון ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "מוסתר עד לטעינה מחדש"
+    },
+    "pickDoneTempSave": {
+        "message": "לשמירה — בחלון ABlock"
+    },
+    "pickLimit": {
+        "message": "באתר כבר יש 100 רכיבים מוסתרים — יש למחוק מיותרים בחלון ABlock"
     }
 }
