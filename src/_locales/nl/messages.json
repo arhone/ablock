@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Oorspronkelijke documentlading; geen nieuwe meting na herstel uit de geschiedenis."
+    },
+    "causeClsTitle": {
+        "message": "Verschoven elementen"
+    },
+    "causeClsSession": {
+        "message": "Maximale CLS-sessie"
+    },
+    "causeClsShift": {
+        "message": "Verschuiving"
+    },
+    "causeClsRects": {
+        "message": "Voor → na (x, y, breedte, hoogte), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Element niet beschikbaar"
+    },
+    "causeClsImageGuess": {
+        "message": "De afbeelding heeft nu geen width/height-attributen; niet-gereserveerde ruimte is slechts een hypothese."
+    },
+    "causeClsScope": {
+        "message": "Deze elementen kunnen getroffen zijn zonder de oorzaak te zijn. Beschikbare bronnen verklaren niet noodzakelijk alle CLS."
     }
 }

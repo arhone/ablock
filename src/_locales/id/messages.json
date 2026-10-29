@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Pemuatan dokumen asli; bukan pengukuran baru setelah pemulihan riwayat."
+    },
+    "causeClsTitle": {
+        "message": "Elemen yang bergeser"
+    },
+    "causeClsSession": {
+        "message": "Sesi CLS maksimum"
+    },
+    "causeClsShift": {
+        "message": "Pergeseran"
+    },
+    "causeClsRects": {
+        "message": "Sebelum → sesudah (x, y, lebar, tinggi), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Elemen tidak tersedia"
+    },
+    "causeClsImageGuess": {
+        "message": "Gambar saat ini tidak memiliki atribut width/height; ruang yang tidak disediakan hanyalah hipotesis."
+    },
+    "causeClsScope": {
+        "message": "Elemen ini mungkin terdampak, bukan penyebabnya. Sumber yang tersedia belum tentu menjelaskan seluruh CLS."
     }
 }

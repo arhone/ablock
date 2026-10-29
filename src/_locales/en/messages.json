@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Original document load; not a new measurement after history restore."
+    },
+    "causeClsTitle": {
+        "message": "Shifted elements"
+    },
+    "causeClsSession": {
+        "message": "Maximum CLS session"
+    },
+    "causeClsShift": {
+        "message": "Shift"
+    },
+    "causeClsRects": {
+        "message": "Before → after (x, y, width, height), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Element unavailable"
+    },
+    "causeClsImageGuess": {
+        "message": "Image currently has no width/height attributes; unreserved space is only a hypothesis."
+    },
+    "causeClsScope": {
+        "message": "These elements may be affected rather than causes. Available sources need not explain all CLS."
     }
 }

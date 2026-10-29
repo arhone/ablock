@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Lần tải gốc của tài liệu; không phải phép đo mới sau khi khôi phục từ lịch sử."
+    },
+    "causeClsTitle": {
+        "message": "Phần tử bị dịch chuyển"
+    },
+    "causeClsSession": {
+        "message": "Phiên CLS lớn nhất"
+    },
+    "causeClsShift": {
+        "message": "Dịch chuyển"
+    },
+    "causeClsRects": {
+        "message": "Trước → sau (x, y, rộng, cao), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Phần tử không khả dụng"
+    },
+    "causeClsImageGuess": {
+        "message": "Ảnh hiện không có thuộc tính width/height; không dành sẵn chỗ chỉ là giả thuyết."
+    },
+    "causeClsScope": {
+        "message": "Các phần tử này có thể bị ảnh hưởng chứ không phải nguyên nhân. Nguồn hiện có không nhất thiết giải thích toàn bộ CLS."
     }
 }

@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "ದಾಖಲೆಯ ಮೂಲ ಲೋಡ್; ಇತಿಹಾಸದಿಂದ ಮರುಸ್ಥಾಪನೆಯ ನಂತರ ಹೊಸ ಅಳತೆಯಲ್ಲ."
+    },
+    "causeClsTitle": {
+        "message": "ಸ್ಥಳ ಬದಲಾದ ಅಂಶಗಳು"
+    },
+    "causeClsSession": {
+        "message": "ಗರಿಷ್ಠ CLS ಅವಧಿ"
+    },
+    "causeClsShift": {
+        "message": "ಸ್ಥಳ ಬದಲಾವಣೆ"
+    },
+    "causeClsRects": {
+        "message": "ಮೊದಲು → ನಂತರ (x, y, ಅಗಲ, ಎತ್ತರ), px"
+    },
+    "causeClsUnavailable": {
+        "message": "ಅಂಶ ಲಭ್ಯವಿಲ್ಲ"
+    },
+    "causeClsImageGuess": {
+        "message": "ಚಿತ್ರದಲ್ಲಿ ಈಗ width/height ಗುಣಲಕ್ಷಣಗಳಿಲ್ಲ; ಸ್ಥಳ ಕಾಯ್ದಿರಿಸದಿರುವುದು ಕೇವಲ ಊಹೆ."
+    },
+    "causeClsScope": {
+        "message": "ಈ ಅಂಶಗಳು ಕಾರಣವಾಗದೆ ಪರಿಣಾಮಕ್ಕೆ ಒಳಗಾಗಿರಬಹುದು. ಲಭ್ಯವಿರುವ ಮೂಲಗಳು ಸಂಪೂರ್ಣ CLS ಅನ್ನು ವಿವರಿಸಬೇಕೆಂದಿಲ್ಲ."
     }
 }

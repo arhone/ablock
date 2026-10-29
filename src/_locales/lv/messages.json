@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Dokumenta sākotnējā ielāde; nav jauna mērījuma pēc atjaunošanas no vēstures."
+    },
+    "causeClsTitle": {
+        "message": "Nobīdītie elementi"
+    },
+    "causeClsSession": {
+        "message": "Lielākā CLS sesija"
+    },
+    "causeClsShift": {
+        "message": "Nobīde"
+    },
+    "causeClsRects": {
+        "message": "Pirms → pēc (x, y, platums, augstums), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Elements nav pieejams"
+    },
+    "causeClsImageGuess": {
+        "message": "Attēlam pašlaik nav width/height atribūtu; nerezervēta vieta ir tikai pieņēmums."
+    },
+    "causeClsScope": {
+        "message": "Šie elementi var būt skarti, nevis cēlonis. Pieejamie avoti ne vienmēr izskaidro visu CLS."
     }
 }

@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "การโหลดเอกสารครั้งแรก ไม่ใช่การวัดใหม่หลังคืนค่าจากประวัติ"
+    },
+    "causeClsTitle": {
+        "message": "องค์ประกอบที่เลื่อน"
+    },
+    "causeClsSession": {
+        "message": "เซสชัน CLS สูงสุด"
+    },
+    "causeClsShift": {
+        "message": "การเลื่อน"
+    },
+    "causeClsRects": {
+        "message": "ก่อน → หลัง (x, y, ความกว้าง, ความสูง), px"
+    },
+    "causeClsUnavailable": {
+        "message": "องค์ประกอบไม่พร้อมใช้งาน"
+    },
+    "causeClsImageGuess": {
+        "message": "รูปภาพไม่มีแอตทริบิวต์ width/height ในขณะนี้ การไม่ได้จองพื้นที่เป็นเพียงสมมติฐาน"
+    },
+    "causeClsScope": {
+        "message": "องค์ประกอบเหล่านี้อาจได้รับผลกระทบโดยไม่ได้เป็นสาเหตุ แหล่งที่มีอยู่อาจอธิบาย CLS ทั้งหมดไม่ได้"
     }
 }

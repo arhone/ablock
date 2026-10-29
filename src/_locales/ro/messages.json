@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Încărcarea inițială a documentului; nu o măsurare nouă după restaurarea din istoric."
+    },
+    "causeClsTitle": {
+        "message": "Elemente deplasate"
+    },
+    "causeClsSession": {
+        "message": "Sesiune CLS maximă"
+    },
+    "causeClsShift": {
+        "message": "Deplasare"
+    },
+    "causeClsRects": {
+        "message": "Înainte → după (x, y, lățime, înălțime), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Element indisponibil"
+    },
+    "causeClsImageGuess": {
+        "message": "Imaginea nu are acum atribute width/height; spațiul nerezervat este doar o ipoteză."
+    },
+    "causeClsScope": {
+        "message": "Aceste elemente pot fi afectate, fără a fi cauza. Sursele disponibile nu explică neapărat întregul CLS."
     }
 }

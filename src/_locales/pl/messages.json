@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Pierwotne ładowanie dokumentu; nie nowy pomiar po przywróceniu z historii."
+    },
+    "causeClsTitle": {
+        "message": "Przesunięte elementy"
+    },
+    "causeClsSession": {
+        "message": "Maksymalna sesja CLS"
+    },
+    "causeClsShift": {
+        "message": "Przesunięcie"
+    },
+    "causeClsRects": {
+        "message": "Przed → po (x, y, szerokość, wysokość), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Element niedostępny"
+    },
+    "causeClsImageGuess": {
+        "message": "Obraz nie ma obecnie atrybutów width/height; brak zarezerwowanego miejsca to tylko hipoteza."
+    },
+    "causeClsScope": {
+        "message": "Te elementy mogą być dotknięte przesunięciem, a nie jego przyczyną. Dostępne źródła nie muszą wyjaśniać całego CLS."
     }
 }

@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Belgenin ilk yüklemesi; geçmişten geri dönüş sonrası yeni bir ölçüm değildir."
+    },
+    "causeClsTitle": {
+        "message": "Kayan öğeler"
+    },
+    "causeClsSession": {
+        "message": "En büyük CLS oturumu"
+    },
+    "causeClsShift": {
+        "message": "Kayma"
+    },
+    "causeClsRects": {
+        "message": "Önce → sonra (x, y, genişlik, yükseklik), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Öğe kullanılamıyor"
+    },
+    "causeClsImageGuess": {
+        "message": "Görselde şu anda width/height öznitelikleri yok; yer ayrılmamış olması yalnızca bir varsayım."
+    },
+    "causeClsScope": {
+        "message": "Bu öğeler neden olmaktan çok etkilenmiş olabilir. Mevcut kaynaklar tüm CLS değerini açıklamayabilir."
     }
 }

@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Pradinis dokumento įkėlimas; ne naujas matavimas atkūrus iš istorijos."
+    },
+    "causeClsTitle": {
+        "message": "Pasislinkę elementai"
+    },
+    "causeClsSession": {
+        "message": "Didžiausias CLS seansas"
+    },
+    "causeClsShift": {
+        "message": "Poslinkis"
+    },
+    "causeClsRects": {
+        "message": "Prieš → po (x, y, plotis, aukštis), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Elementas nepasiekiamas"
+    },
+    "causeClsImageGuess": {
+        "message": "Vaizdas dabar neturi width/height atributų; nerezervuota vieta yra tik hipotezė."
+    },
+    "causeClsScope": {
+        "message": "Šie elementai gali būti paveikti, o ne priežastis. Prieinami šaltiniai nebūtinai paaiškina visą CLS."
     }
 }

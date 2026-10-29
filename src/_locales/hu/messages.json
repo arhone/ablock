@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "A dokumentum eredeti betöltése; nem új mérés az előzményekből való visszaállítás után."
+    },
+    "causeClsTitle": {
+        "message": "Elmozdult elemek"
+    },
+    "causeClsSession": {
+        "message": "Legnagyobb CLS-munkamenet"
+    },
+    "causeClsShift": {
+        "message": "Elmozdulás"
+    },
+    "causeClsRects": {
+        "message": "Előtte → utána (x, y, szélesség, magasság), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Az elem nem érhető el"
+    },
+    "causeClsImageGuess": {
+        "message": "A képnek jelenleg nincs width/height attribútuma; a le nem foglalt hely csak feltételezés."
+    },
+    "causeClsScope": {
+        "message": "Ezek az elemek érintettek lehetnek anélkül, hogy az okot jelentenék. Az elérhető források nem feltétlenül magyarázzák a teljes CLS-t."
     }
 }

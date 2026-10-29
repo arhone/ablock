@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "文件的原始載入，並非從歷史記錄還原後的新測量。"
+    },
+    "causeClsTitle": {
+        "message": "發生位移的元素"
+    },
+    "causeClsSession": {
+        "message": "最大 CLS 工作階段"
+    },
+    "causeClsShift": {
+        "message": "版面位移"
+    },
+    "causeClsRects": {
+        "message": "之前 → 之後（x、y、寬、高），px"
+    },
+    "causeClsUnavailable": {
+        "message": "元素無法取得"
+    },
+    "causeClsImageGuess": {
+        "message": "圖片目前沒有 width/height 屬性；未預留空間僅是一種假設。"
+    },
+    "causeClsScope": {
+        "message": "這些元素可能是受影響者，而非原因。可用來源不一定能解釋全部 CLS。"
     }
 }

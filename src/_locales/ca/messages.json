@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Càrrega original del document; no és una mesura nova després de restaurar des de l’historial."
+    },
+    "causeClsTitle": {
+        "message": "Elements desplaçats"
+    },
+    "causeClsSession": {
+        "message": "Sessió CLS màxima"
+    },
+    "causeClsShift": {
+        "message": "Desplaçament"
+    },
+    "causeClsRects": {
+        "message": "Abans → després (x, y, amplada, alçada), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Element no disponible"
+    },
+    "causeClsImageGuess": {
+        "message": "La imatge ara no té atributs width/height; la manca d’espai reservat és només una hipòtesi."
+    },
+    "causeClsScope": {
+        "message": "Aquests elements poden estar afectats sense ser la causa. Les fonts disponibles no expliquen necessàriament tot el CLS."
     }
 }

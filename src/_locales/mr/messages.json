@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "दस्तावेजाचे मूळ लोड; इतिहासातून पुनर्स्थापनेनंतरचे नवीन मोजमाप नाही."
+    },
+    "causeClsTitle": {
+        "message": "सरकलेले घटक"
+    },
+    "causeClsSession": {
+        "message": "कमाल CLS सत्र"
+    },
+    "causeClsShift": {
+        "message": "सरकणे"
+    },
+    "causeClsRects": {
+        "message": "आधी → नंतर (x, y, रुंदी, उंची), px"
+    },
+    "causeClsUnavailable": {
+        "message": "घटक उपलब्ध नाही"
+    },
+    "causeClsImageGuess": {
+        "message": "चित्राला सध्या width/height गुणधर्म नाहीत; जागा राखीव नसणे हा केवळ अंदाज आहे."
+    },
+    "causeClsScope": {
+        "message": "हे घटक कारण नसून प्रभावित असू शकतात. उपलब्ध स्रोत संपूर्ण CLS स्पष्ट करतीलच असे नाही."
     }
 }

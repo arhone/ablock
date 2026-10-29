@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "文档的原始加载，并非从历史记录恢复后的新测量。"
+    },
+    "causeClsTitle": {
+        "message": "发生偏移的元素"
+    },
+    "causeClsSession": {
+        "message": "最大 CLS 会话"
+    },
+    "causeClsShift": {
+        "message": "布局偏移"
+    },
+    "causeClsRects": {
+        "message": "之前 → 之后（x、y、宽、高），px"
+    },
+    "causeClsUnavailable": {
+        "message": "元素不可用"
+    },
+    "causeClsImageGuess": {
+        "message": "图片目前没有 width/height 属性；未预留空间仅是一种假设。"
+    },
+    "causeClsScope": {
+        "message": "这些元素可能是受影响者，而非原因。可用来源不一定能解释全部 CLS。"
     }
 }

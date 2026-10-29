@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "የሰነዱ የመጀመሪያ ጭነት፤ ከታሪክ መመለስ በኋላ አዲስ ልኬት አይደለም።"
+    },
+    "causeClsTitle": {
+        "message": "የተንቀሳቀሱ አባላት"
+    },
+    "causeClsSession": {
+        "message": "ከፍተኛው የCLS ክፍለ ጊዜ"
+    },
+    "causeClsShift": {
+        "message": "መንቀሳቀስ"
+    },
+    "causeClsRects": {
+        "message": "በፊት → በኋላ (x፣ y፣ ስፋት፣ ቁመት)፣ px"
+    },
+    "causeClsUnavailable": {
+        "message": "አባሉ አይገኝም"
+    },
+    "causeClsImageGuess": {
+        "message": "ምስሉ አሁን width/height ባህሪያት የሉትም፤ ያልተያዘ ቦታ ግምት ብቻ ነው።"
+    },
+    "causeClsScope": {
+        "message": "እነዚህ አባላት መንስኤ ሳይሆኑ የተጎዱ ሊሆኑ ይችላሉ። ያሉት ምንጮች ሙሉውን CLS ላያብራሩ ይችላሉ።"
     }
 }

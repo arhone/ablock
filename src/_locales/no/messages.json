@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Dokumentets opprinnelige lasting; ingen ny måling etter gjenoppretting fra historikken."
+    },
+    "causeClsTitle": {
+        "message": "Forskjøvne elementer"
+    },
+    "causeClsSession": {
+        "message": "Største CLS-økt"
+    },
+    "causeClsShift": {
+        "message": "Forskyvning"
+    },
+    "causeClsRects": {
+        "message": "Før → etter (x, y, bredde, høyde), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Elementet er utilgjengelig"
+    },
+    "causeClsImageGuess": {
+        "message": "Bildet har nå ingen width/height-attributter; manglende reservert plass er bare en hypotese."
+    },
+    "causeClsScope": {
+        "message": "Disse elementene kan være berørt uten å være årsaken. Tilgjengelige kilder forklarer ikke nødvendigvis hele CLS."
     }
 }

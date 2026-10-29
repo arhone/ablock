@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Pôvodné načítanie dokumentu; nejde o nové meranie po obnovení z histórie."
+    },
+    "causeClsTitle": {
+        "message": "Posunuté prvky"
+    },
+    "causeClsSession": {
+        "message": "Najväčšia relácia CLS"
+    },
+    "causeClsShift": {
+        "message": "Posun"
+    },
+    "causeClsRects": {
+        "message": "Pred → po (x, y, šírka, výška), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Prvok nie je dostupný"
+    },
+    "causeClsImageGuess": {
+        "message": "Obrázok teraz nemá atribúty width/height; nevyhradené miesto je iba hypotéza."
+    },
+    "causeClsScope": {
+        "message": "Tieto prvky môžu byť zasiahnuté, nie príčinou. Dostupné zdroje nemusia vysvetľovať celé CLS."
     }
 }

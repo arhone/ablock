@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "పత్రం అసలు లోడ్; చరిత్ర నుంచి పునరుద్ధరించిన తర్వాత కొత్త కొలత కాదు."
+    },
+    "causeClsTitle": {
+        "message": "స్థానం మారిన అంశాలు"
+    },
+    "causeClsSession": {
+        "message": "గరిష్ఠ CLS సెషన్"
+    },
+    "causeClsShift": {
+        "message": "స్థానమార్పు"
+    },
+    "causeClsRects": {
+        "message": "ముందు → తర్వాత (x, y, వెడల్పు, ఎత్తు), px"
+    },
+    "causeClsUnavailable": {
+        "message": "అంశం అందుబాటులో లేదు"
+    },
+    "causeClsImageGuess": {
+        "message": "చిత్రానికి ఇప్పుడు width/height లక్షణాలు లేవు; స్థలం కేటాయించకపోవడం కేవలం ఊహ మాత్రమే."
+    },
+    "causeClsScope": {
+        "message": "ఈ అంశాలు కారణం కాకుండా ప్రభావితమైనవి కావచ్చు. అందుబాటులో ఉన్న మూలాలు మొత్తం CLSను వివరించకపోవచ్చు."
     }
 }

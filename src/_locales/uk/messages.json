@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Початкове завантаження документа; не новий вимір після повернення з історії."
+    },
+    "causeClsTitle": {
+        "message": "Зсунуті елементи"
+    },
+    "causeClsSession": {
+        "message": "Максимальна серія CLS"
+    },
+    "causeClsShift": {
+        "message": "Зсув"
+    },
+    "causeClsRects": {
+        "message": "До → після (x, y, ширина, висота), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Елемент недоступний"
+    },
+    "causeClsImageGuess": {
+        "message": "Зображення зараз не має атрибутів width/height; незарезервоване місце — лише гіпотеза."
+    },
+    "causeClsScope": {
+        "message": "Елементи можуть бути постраждалими, а не причиною. Доступні джерела не обов’язково пояснюють увесь CLS."
     }
 }

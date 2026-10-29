@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Hujjatning dastlabki yuklanishi; tarixdan qaytgandan keyingi yangi o‘lchov emas."
+    },
+    "causeClsTitle": {
+        "message": "Siljigan elementlar"
+    },
+    "causeClsSession": {
+        "message": "Eng katta CLS seansi"
+    },
+    "causeClsShift": {
+        "message": "Siljish"
+    },
+    "causeClsRects": {
+        "message": "Oldin → keyin (x, y, kenglik, balandlik), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Element mavjud emas"
+    },
+    "causeClsImageGuess": {
+        "message": "Rasmda hozir width/height atributlari yo‘q; joy ajratilmagani faqat taxmin."
+    },
+    "causeClsScope": {
+        "message": "Bu elementlar sabab emas, ta’sirlangan bo‘lishi mumkin. Mavjud manbalar butun CLSni tushuntirishi shart emas."
     }
 }

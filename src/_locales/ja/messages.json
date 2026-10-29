@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "ドキュメントの元の読み込みです。履歴からの復元後の新しい測定ではありません。"
+    },
+    "causeClsTitle": {
+        "message": "移動した要素"
+    },
+    "causeClsSession": {
+        "message": "最大のCLSセッション"
+    },
+    "causeClsShift": {
+        "message": "レイアウトシフト"
+    },
+    "causeClsRects": {
+        "message": "前 → 後（x, y, 幅, 高さ）、px"
+    },
+    "causeClsUnavailable": {
+        "message": "要素を取得できません"
+    },
+    "causeClsImageGuess": {
+        "message": "画像には現在 width/height 属性がありません。領域の未確保は仮説にすぎません。"
+    },
+    "causeClsScope": {
+        "message": "これらの要素は原因ではなく影響を受けた可能性があります。取得できたソースだけでCLS全体を説明できるとは限りません。"
     }
 }

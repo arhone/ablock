@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "بارگیری اولیهٔ سند؛ نه اندازه‌گیری جدید پس از بازیابی از تاریخچه."
+    },
+    "causeClsTitle": {
+        "message": "عناصر جابه‌جاشده"
+    },
+    "causeClsSession": {
+        "message": "بازهٔ بیشینهٔ CLS"
+    },
+    "causeClsShift": {
+        "message": "جابه‌جایی"
+    },
+    "causeClsRects": {
+        "message": "قبل → بعد (x، y، عرض، ارتفاع)، px"
+    },
+    "causeClsUnavailable": {
+        "message": "عنصر در دسترس نیست"
+    },
+    "causeClsImageGuess": {
+        "message": "تصویر اکنون ویژگی‌های width/height ندارد؛ فضای رزرو‌نشده فقط یک فرضیه است."
+    },
+    "causeClsScope": {
+        "message": "این عناصر ممکن است تحت تأثیر باشند، نه علت. منابع در دسترس لزوماً تمام CLS را توضیح نمی‌دهند."
     }
 }

@@ -46,9 +46,11 @@
      * Для text/неполного timing неизвестные сетевые фазы null. Фазы неотрицательны,
      * при полном разложении их сумма равна value; prerender/bfcache не раскладываем механически.
      * cls: {value, session: {startTime, endTime}|null, shifts: [
-     *   {startTime, value, sources: [{element, previousRect, currentRect}]}]}.
+     *   {startTime, value, sources: [{element, previousRect, currentRect, imageWithoutDimensions}]}]}.
      * rect: {x,y,width,height}|null; shifts — только максимальная серия, без hadRecentInput.
-     * До 10 источников суммарно; value принадлежит сдвигу, не дублируется у его источников.
+     * До 200 сдвигов и 10 источников суммарно (повторный узел — отдельное наблюдение); value принадлежит сдвигу, не дублируется у его источников.
+     * imageWithoutDimensions: boolean|null — у img сейчас нет обоих атрибутов размеров;
+     * только гипотеза о незарезервированном месте, CSS и прежняя разметка неизвестны.
      * Сдвинувшийся элемент — факт, а не доказанный виновник; отсутствующий узел — null.
      * ttfb: {value, phases: {redirect, dns, connection, tls, requestWait, unaccounted},
      *   responseStart, finalResponseHeadersStart, firstInterimResponseStart, workerStart, deliveryType, browserCache,
@@ -206,7 +208,10 @@
     let session = 0;
     let first = 0;
     let last = 0;
-    for (const shift of shifts) {
+    let sessionStart = 0;
+    let bestStart = 0;
+    let bestEnd = -1;
+    for (const [index, shift] of shifts.entries()) {
         if (shift.hadRecentInput) {
             continue;
         }
@@ -215,8 +220,13 @@
         } else {
             session = shift.value;
             first = shift.startTime;
+            sessionStart = index;
         }
         last = shift.startTime;
+        if (session > cls) {
+            bestStart = sessionStart;
+            bestEnd = index;
+        }
         cls = Math.max(cls, session);
     }
 
@@ -584,6 +594,83 @@
         }
         return section;
     };
+    // Индексы максимальной серии сохранены прежним проходом: её value не зависит от лимитов причин.
+    const collectCls = () => {
+        const section = {status: 'ok', reasons: [], truncated: false, data: null};
+        if (typeof PerformanceObserver === 'undefined'
+            || !PerformanceObserver.supportedEntryTypes?.includes('layout-shift')) {
+            return {...section, status: 'unsupported', reasons: ['api-unsupported']};
+        }
+        if (vitals.cls === null) {
+            return {...section, status: 'unavailable', reasons: ['no-entry']};
+        }
+        const data = section.data = {value: cls, session: bestEnd < 0 ? null : {
+            startTime: shifts[bestStart].startTime, endTime: shifts[bestEnd].startTime
+        }, shifts: []};
+        if (shifts.dropped > 0) {
+            reason(section, 'buffer-dropped');
+        }
+        specialNavigation(section);
+        // Координаты могут быть отрицательными; нулевая площадь — доступный факт, не отсутствие rect.
+        const rect = (value) => {
+            if (!value || !['x', 'y', 'width', 'height'].every((key) =>
+                typeof value[key] === 'number' && Number.isFinite(value[key]))
+                || value.width < 0 || value.height < 0) {
+                return null;
+            }
+            return {x: value.x, y: value.y, width: value.width, height: value.height};
+        };
+        let sourceCount = 0;
+        for (let index = bestStart; index <= bestEnd; index++) {
+            if (!budget(section)) {
+                break;
+            }
+            const shift = shifts[index];
+            if (shift.hadRecentInput) {
+                continue;
+            }
+            if (data.shifts.length >= 200) {
+                limited(section, 'result-limit');
+                break;
+            }
+            const item = {startTime: finite(shift.startTime), value: finite(shift.value), sources: []};
+            data.shifts.push(item);
+            if (!shift.sources?.length) {
+                reason(section, 'sources-unavailable');
+                continue;
+            }
+            for (const source of shift.sources) {
+                if (!budget(section)) {
+                    break;
+                }
+                if (sourceCount >= 10) {
+                    limited(section, 'result-limit');
+                    break;
+                }
+                sourceCount++;
+                const node = source.node;
+                const tag = node?.isConnected && typeof node.localName === 'string'
+                    && /^[a-z][a-z0-9-]{0,63}$/i.test(node.localName) ? node.localName : null;
+                const previousRect = rect(source.previousRect);
+                const currentRect = rect(source.currentRect);
+                const element = tag ? {tag} : null;
+                if (!element) {
+                    reason(section, 'element-unavailable');
+                }
+                if (!previousRect || !currentRect) {
+                    reason(section, 'sources-unavailable');
+                }
+                // Только гипотеза: нынешние атрибуты не говорят о CSS или разметке во время сдвига.
+                const imageWithoutDimensions = tag === 'img'
+                    ? !node.hasAttribute('width') && !node.hasAttribute('height') : null;
+                item.sources.push({element, previousRect, currentRect, imageWithoutDimensions});
+            }
+            if (section.reasons.includes('budget-exceeded')) {
+                break;
+            }
+        }
+        return section;
+    };
     const collectSafely = (collect) => {
         try {
             return collect();
@@ -594,6 +681,7 @@
     };
     causes.ttfb = collectSafely(collectTtfb);
     causes.lcp = collectSafely(collectLcp);
+    causes.cls = collectSafely(collectCls);
 
     // SEO
     const meta = (selector) => document.querySelector(selector)?.getAttribute('content')?.trim() ?? null;

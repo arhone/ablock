@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Исходная загрузка документа; не новый замер после возврата по истории."
+    },
+    "causeClsTitle": {
+        "message": "Сдвинувшиеся элементы"
+    },
+    "causeClsSession": {
+        "message": "Максимальная серия CLS"
+    },
+    "causeClsShift": {
+        "message": "Сдвиг"
+    },
+    "causeClsRects": {
+        "message": "До → после (x, y, ширина, высота), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Элемент недоступен"
+    },
+    "causeClsImageGuess": {
+        "message": "У картинки сейчас нет атрибутов width/height; незарезервированное место — лишь гипотеза."
+    },
+    "causeClsScope": {
+        "message": "Элементы могут быть пострадавшими, а не причиной. Доступные источники не обязательно объясняют весь CLS."
     }
 }

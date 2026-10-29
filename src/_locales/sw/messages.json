@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Upakiaji wa awali wa hati; si kipimo kipya baada ya kurejesha kutoka historia."
+    },
+    "causeClsTitle": {
+        "message": "Vipengele vilivyohama"
+    },
+    "causeClsSession": {
+        "message": "Kipindi cha juu cha CLS"
+    },
+    "causeClsShift": {
+        "message": "Mhamo"
+    },
+    "causeClsRects": {
+        "message": "Kabla → baada (x, y, upana, urefu), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Kipengele hakipatikani"
+    },
+    "causeClsImageGuess": {
+        "message": "Picha sasa haina sifa za width/height; nafasi isiyohifadhiwa ni dhana tu."
+    },
+    "causeClsScope": {
+        "message": "Vipengele hivi vinaweza kuathiriwa bila kuwa chanzo. Vyanzo vinavyopatikana huenda havielezi CLS yote."
     }
 }

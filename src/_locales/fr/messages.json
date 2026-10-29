@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Chargement initial du document ; pas de nouvelle mesure après restauration depuis l’historique."
+    },
+    "causeClsTitle": {
+        "message": "Éléments déplacés"
+    },
+    "causeClsSession": {
+        "message": "Session CLS maximale"
+    },
+    "causeClsShift": {
+        "message": "Déplacement"
+    },
+    "causeClsRects": {
+        "message": "Avant → après (x, y, largeur, hauteur), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Élément indisponible"
+    },
+    "causeClsImageGuess": {
+        "message": "L’image n’a actuellement aucun attribut width/height ; l’absence d’espace réservé est une hypothèse."
+    },
+    "causeClsScope": {
+        "message": "Ces éléments peuvent subir le déplacement sans le causer. Les sources disponibles n’expliquent pas forcément tout le CLS."
     }
 }

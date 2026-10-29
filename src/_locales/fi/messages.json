@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Asiakirjan alkuperäinen lataus; ei uutta mittausta historiasta palautettaessa."
+    },
+    "causeClsTitle": {
+        "message": "Siirtyneet elementit"
+    },
+    "causeClsSession": {
+        "message": "Suurin CLS-jakso"
+    },
+    "causeClsShift": {
+        "message": "Siirtymä"
+    },
+    "causeClsRects": {
+        "message": "Ennen → jälkeen (x, y, leveys, korkeus), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Elementti ei ole saatavilla"
+    },
+    "causeClsImageGuess": {
+        "message": "Kuvalla ei nyt ole width/height-attribuutteja; varaamaton tila on vain oletus."
+    },
+    "causeClsScope": {
+        "message": "Nämä elementit voivat kärsiä siirtymästä aiheuttamatta sitä. Saatavilla olevat lähteet eivät välttämättä selitä kaikkea CLS:ää."
     }
 }

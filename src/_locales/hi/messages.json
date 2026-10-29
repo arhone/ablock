@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "दस्तावेज़ का मूल लोड; इतिहास से बहाली के बाद नया माप नहीं।"
+    },
+    "causeClsTitle": {
+        "message": "खिसके हुए तत्व"
+    },
+    "causeClsSession": {
+        "message": "अधिकतम CLS सत्र"
+    },
+    "causeClsShift": {
+        "message": "खिसकाव"
+    },
+    "causeClsRects": {
+        "message": "पहले → बाद (x, y, चौड़ाई, ऊँचाई), px"
+    },
+    "causeClsUnavailable": {
+        "message": "तत्व उपलब्ध नहीं"
+    },
+    "causeClsImageGuess": {
+        "message": "चित्र में अभी width/height विशेषताएँ नहीं हैं; जगह आरक्षित न होना केवल अनुमान है।"
+    },
+    "causeClsScope": {
+        "message": "ये तत्व कारण होने के बजाय प्रभावित हो सकते हैं। उपलब्ध स्रोत पूरे CLS की व्याख्या नहीं भी कर सकते हैं।"
     }
 }

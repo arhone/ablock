@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "تحميل المستند الأصلي؛ ليس قياسًا جديدًا بعد الاستعادة من السجل."
+    },
+    "causeClsTitle": {
+        "message": "العناصر المتحركة"
+    },
+    "causeClsSession": {
+        "message": "جلسة CLS القصوى"
+    },
+    "causeClsShift": {
+        "message": "إزاحة"
+    },
+    "causeClsRects": {
+        "message": "قبل → بعد (x، y، العرض، الارتفاع)، px"
+    },
+    "causeClsUnavailable": {
+        "message": "العنصر غير متاح"
+    },
+    "causeClsImageGuess": {
+        "message": "لا تحتوي الصورة حاليًا على سمات width/height؛ عدم حجز مساحة مجرد فرضية."
+    },
+    "causeClsScope": {
+        "message": "قد تتأثر هذه العناصر دون أن تكون السبب. لا تفسر المصادر المتاحة بالضرورة قيمة CLS بالكامل."
     }
 }

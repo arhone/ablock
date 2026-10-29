@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "દસ્તાવેજનું મૂળ લોડ; ઇતિહાસમાંથી પુનઃસ્થાપન પછીનું નવું માપ નહીં."
+    },
+    "causeClsTitle": {
+        "message": "ખસેલા તત્વો"
+    },
+    "causeClsSession": {
+        "message": "મહત્તમ CLS સત્ર"
+    },
+    "causeClsShift": {
+        "message": "ખસેડો"
+    },
+    "causeClsRects": {
+        "message": "પહેલાં → પછી (x, y, પહોળાઈ, ઊંચાઈ), px"
+    },
+    "causeClsUnavailable": {
+        "message": "તત્વ ઉપલબ્ધ નથી"
+    },
+    "causeClsImageGuess": {
+        "message": "ચિત્રમાં અત્યારે width/height લક્ષણો નથી; જગ્યા અનામત ન હોવી માત્ર અનુમાન છે."
+    },
+    "causeClsScope": {
+        "message": "આ તત્વો કારણને બદલે અસરગ્રસ્ત હોઈ શકે છે. ઉપલબ્ધ સ્ત્રોતો સમગ્ર CLS સમજાવે તે જરૂરી નથી."
     }
 }

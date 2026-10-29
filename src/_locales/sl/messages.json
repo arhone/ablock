@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Prvotno nalaganje dokumenta; ne nova meritev po obnovitvi iz zgodovine."
+    },
+    "causeClsTitle": {
+        "message": "Premaknjeni elementi"
+    },
+    "causeClsSession": {
+        "message": "Največja seja CLS"
+    },
+    "causeClsShift": {
+        "message": "Premik"
+    },
+    "causeClsRects": {
+        "message": "Prej → potem (x, y, širina, višina), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Element ni na voljo"
+    },
+    "causeClsImageGuess": {
+        "message": "Slika trenutno nima atributov width/height; nerezerviran prostor je le hipoteza."
+    },
+    "causeClsScope": {
+        "message": "Ti elementi so lahko prizadeti in niso vzrok. Razpoložljivi viri ne pojasnijo nujno celotnega CLS."
     }
 }

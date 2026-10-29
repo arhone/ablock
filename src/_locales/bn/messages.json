@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "নথির মূল লোড; ইতিহাস থেকে পুনরুদ্ধারের পর নতুন পরিমাপ নয়।"
+    },
+    "causeClsTitle": {
+        "message": "সরে যাওয়া উপাদান"
+    },
+    "causeClsSession": {
+        "message": "সর্বোচ্চ CLS সেশন"
+    },
+    "causeClsShift": {
+        "message": "স্থানান্তর"
+    },
+    "causeClsRects": {
+        "message": "আগে → পরে (x, y, প্রস্থ, উচ্চতা), px"
+    },
+    "causeClsUnavailable": {
+        "message": "উপাদান অনুপলব্ধ"
+    },
+    "causeClsImageGuess": {
+        "message": "ছবিতে এখন width/height অ্যাট্রিবিউট নেই; জায়গা সংরক্ষিত না থাকা কেবল অনুমান।"
+    },
+    "causeClsScope": {
+        "message": "এই উপাদানগুলি কারণ না হয়ে প্রভাবিত হতে পারে। উপলব্ধ উৎস সব CLS ব্যাখ্যা নাও করতে পারে।"
     }
 }

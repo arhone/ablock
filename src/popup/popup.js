@@ -1084,6 +1084,57 @@ function formatTime(ms) {
 }
 
 /**
+ * Время причин с точностью до ms; положительное меньше 1 не превращаем в ноль.
+ * @param {?number} value
+ * @returns {string}
+ */
+function formatCauseTime(value) {
+    if (typeof value !== 'number' || !Number.isFinite(value) || value < 0) {
+        return '—';
+    }
+    const ms = formatNumber(value > 0 && value < 1 ? 1 : Math.round(value),
+        {style: 'unit', unit: 'millisecond', unitDisplay: 'short', maximumFractionDigits: 0});
+    return value > 0 && value < 1 ? `<${ms}` : ms;
+}
+
+/**
+ * Сдвиги и источники максимальной серии; величина принадлежит сдвигу, не каждому узлу.
+ * @param {?Object} section
+ * @returns {Array<{label: string, value: string}>}
+ */
+function formatClsCauses(section) {
+    const data = section?.data;
+    if (!data) {
+        return [];
+    }
+    const items = [{label: t('causeClsTitle'), value: t('causeClsScope')}];
+    const number = (value) => typeof value === 'number' && Number.isFinite(value)
+        ? formatNumber(value, {maximumFractionDigits: 3}) : '—';
+    const rect = (value) => value ? [value.x, value.y, value.width, value.height].map(number).join(', ') : '—';
+    if (data.session) {
+        items.push({label: t('causeClsSession'), value: `${formatCauseTime(data.session.startTime)} – ${formatCauseTime(data.session.endTime)} · ${number(data.value)}`});
+    } else {
+        items.push({label: t('causeClsSession'), value: t('auditDetailsEmpty')});
+    }
+    for (const shift of data.shifts || []) {
+        items.push({label: t('causeClsShift'), value: `${formatCauseTime(shift.startTime)} · ${number(shift.value)}`});
+        if (!shift.sources?.length) {
+            items.push({label: t('causeElement'), value: t('causeClsUnavailable')});
+        }
+        for (const source of shift.sources || []) {
+            items.push({label: source.element?.tag || t('causeClsUnavailable'),
+                value: `${t('causeClsRects')}: ${rect(source.previousRect)} → ${rect(source.currentRect)}`
+                    + (source.imageWithoutDimensions === true ? ` · ${t('causeClsImageGuess')}` : '')});
+        }
+    }
+    if (section.reasons.some((code) => ['prerender', 'history-navigation'].includes(code))) {
+        items.push({label: t('auditDetails'), value: t('causeSpecialNavigation')});
+    }
+    items.push({label: t('auditDetails'), value: t('causeScope')});
+    return items;
+}
+
+/**
  * Переведённые факты LCP/TTFB для общего компонента. Неизвестное показываем «—»,
  * причины не создают строк оценки и не попадают в экспорт. Неизвестные коды не выводим сырыми.
  * @param {string} key
@@ -1097,14 +1148,7 @@ function formatLoadCauses(key, section) {
     }
     const items = [];
     const add = (label, value) => items.push({label: t(label), value});
-    const time = (value) => {
-        if (typeof value !== 'number' || !Number.isFinite(value) || value < 0) {
-            return '—';
-        }
-        const ms = formatNumber(value > 0 && value < 1 ? 1 : Math.round(value),
-            {style: 'unit', unit: 'millisecond', unitDisplay: 'short', maximumFractionDigits: 0});
-        return value > 0 && value < 1 ? `<${ms}` : ms;
-    };
+    const time = formatCauseTime;
     const phases = key === 'lcp' ? {
         ttfb: 'auditTtfb', resourceLoadDelay: 'causeLoadDelay', resourceLoadDuration: 'causeLoadDuration', elementRenderDelay: 'causeRenderDelay'
     } : {
@@ -1225,7 +1269,8 @@ function renderAudit(audit, server, extended, info, companies) {
         group.append(el);
         const causeKey = {auditLcp: 'lcp', auditCls: 'cls', auditTtfb: 'ttfb'}[key];
         if (causeKey && audit?.causes?.version === 1) {
-            renderAuditCauses(el, audit.causes[causeKey], formatLoadCauses(causeKey, audit.causes[causeKey]));
+            renderAuditCauses(el, audit.causes[causeKey], causeKey === 'cls' ? formatClsCauses(audit.causes.cls)
+                : formatLoadCauses(causeKey, audit.causes[causeKey]));
         }
         rows.set(key, {name, state});
         return el;

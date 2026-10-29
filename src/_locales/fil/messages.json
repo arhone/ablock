@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Orihinal na pag-load ng dokumento; hindi bagong sukat matapos ibalik mula sa kasaysayan."
+    },
+    "causeClsTitle": {
+        "message": "Mga elementong lumipat"
+    },
+    "causeClsSession": {
+        "message": "Pinakamalaking sesyon ng CLS"
+    },
+    "causeClsShift": {
+        "message": "Paglipat"
+    },
+    "causeClsRects": {
+        "message": "Bago → pagkatapos (x, y, lapad, taas), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Hindi available ang elemento"
+    },
+    "causeClsImageGuess": {
+        "message": "Walang width/height attribute ang larawan ngayon; palagay lamang ang hindi nakalaang espasyo."
+    },
+    "causeClsScope": {
+        "message": "Maaaring naapektuhan ang mga elementong ito at hindi sila ang sanhi. Hindi tiyak na naipapaliwanag ng mga available na source ang buong CLS."
     }
 }

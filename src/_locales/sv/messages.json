@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Dokumentets ursprungliga laddning; ingen ny mätning efter återställning från historiken."
+    },
+    "causeClsTitle": {
+        "message": "Förskjutna element"
+    },
+    "causeClsSession": {
+        "message": "Största CLS-session"
+    },
+    "causeClsShift": {
+        "message": "Förskjutning"
+    },
+    "causeClsRects": {
+        "message": "Före → efter (x, y, bredd, höjd), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Elementet är inte tillgängligt"
+    },
+    "causeClsImageGuess": {
+        "message": "Bilden saknar nu width/height-attribut; oreserverat utrymme är bara en hypotes."
+    },
+    "causeClsScope": {
+        "message": "Dessa element kan påverkas utan att vara orsaken. Tillgängliga källor förklarar inte nödvändigtvis hela CLS."
     }
 }

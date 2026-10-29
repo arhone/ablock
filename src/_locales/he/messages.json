@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "טעינת המסמך המקורית; לא מדידה חדשה לאחר שחזור מההיסטוריה."
+    },
+    "causeClsTitle": {
+        "message": "רכיבים שזזו"
+    },
+    "causeClsSession": {
+        "message": "מקטע CLS מרבי"
+    },
+    "causeClsShift": {
+        "message": "תזוזה"
+    },
+    "causeClsRects": {
+        "message": "לפני → אחרי (x, y, רוחב, גובה), px"
+    },
+    "causeClsUnavailable": {
+        "message": "הרכיב אינו זמין"
+    },
+    "causeClsImageGuess": {
+        "message": "לתמונה אין כעת מאפייני width/height; היעדר מקום שמור הוא השערה בלבד."
+    },
+    "causeClsScope": {
+        "message": "רכיבים אלה עשויים להיות מושפעים ולא הגורם. המקורות הזמינים אינם בהכרח מסבירים את כל ה-CLS."
     }
 }

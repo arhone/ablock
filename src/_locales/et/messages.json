@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Dokumendi algne laadimine; pärast ajaloost taastamist uut mõõtmist ei tehta."
+    },
+    "causeClsTitle": {
+        "message": "Nihkunud elemendid"
+    },
+    "causeClsSession": {
+        "message": "Suurim CLS-seanss"
+    },
+    "causeClsShift": {
+        "message": "Nihe"
+    },
+    "causeClsRects": {
+        "message": "Enne → pärast (x, y, laius, kõrgus), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Element pole saadaval"
+    },
+    "causeClsImageGuess": {
+        "message": "Pildil puuduvad praegu width/height-atribuudid; reserveerimata ruum on vaid oletus."
+    },
+    "causeClsScope": {
+        "message": "Need elemendid võivad olla mõjutatud, mitte põhjuseks. Saadaolevad allikad ei pruugi selgitada kogu CLS-i."
     }
 }

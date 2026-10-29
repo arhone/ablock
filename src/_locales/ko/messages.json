@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "문서의 원래 로드이며 방문 기록 복원 후의 새 측정이 아닙니다."
+    },
+    "causeClsTitle": {
+        "message": "이동한 요소"
+    },
+    "causeClsSession": {
+        "message": "최대 CLS 세션"
+    },
+    "causeClsShift": {
+        "message": "레이아웃 이동"
+    },
+    "causeClsRects": {
+        "message": "이전 → 이후 (x, y, 너비, 높이), px"
+    },
+    "causeClsUnavailable": {
+        "message": "요소를 사용할 수 없음"
+    },
+    "causeClsImageGuess": {
+        "message": "이미지에 현재 width/height 속성이 없습니다. 공간이 예약되지 않았다는 것은 가설일 뿐입니다."
+    },
+    "causeClsScope": {
+        "message": "이 요소는 원인이 아니라 영향을 받은 것일 수 있습니다. 사용 가능한 소스가 전체 CLS를 설명하지는 않을 수 있습니다."
     }
 }

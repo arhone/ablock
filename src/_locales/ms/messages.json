@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Muatan asal dokumen; bukan ukuran baharu selepas pemulihan sejarah."
+    },
+    "causeClsTitle": {
+        "message": "Elemen yang beralih"
+    },
+    "causeClsSession": {
+        "message": "Sesi CLS maksimum"
+    },
+    "causeClsShift": {
+        "message": "Anjakan"
+    },
+    "causeClsRects": {
+        "message": "Sebelum → selepas (x, y, lebar, tinggi), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Elemen tidak tersedia"
+    },
+    "causeClsImageGuess": {
+        "message": "Imej kini tiada atribut width/height; ruang yang tidak dikhaskan hanyalah hipotesis."
+    },
+    "causeClsScope": {
+        "message": "Elemen ini mungkin terjejas, bukan puncanya. Sumber yang tersedia tidak semestinya menjelaskan keseluruhan CLS."
     }
 }

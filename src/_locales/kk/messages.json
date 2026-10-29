@@ -1217,5 +1217,26 @@
     },
     "causeScope": {
         "message": "Құжаттың бастапқы жүктелуі; тарихтан қайтқаннан кейінгі жаңа өлшем емес."
+    },
+    "causeClsTitle": {
+        "message": "Жылжыған элементтер"
+    },
+    "causeClsSession": {
+        "message": "Ең үлкен CLS сеансы"
+    },
+    "causeClsShift": {
+        "message": "Жылжу"
+    },
+    "causeClsRects": {
+        "message": "Дейін → кейін (x, y, ені, биіктігі), px"
+    },
+    "causeClsUnavailable": {
+        "message": "Элемент қолжетімсіз"
+    },
+    "causeClsImageGuess": {
+        "message": "Суретте қазір width/height атрибуттары жоқ; орын сақталмағаны — тек болжам."
+    },
+    "causeClsScope": {
+        "message": "Бұл элементтер себеп емес, зардап шеккен болуы мүмкін. Қолжетімді көздер бүкіл CLS-ті түсіндірмеуі мүмкін."
     }
 }
