@@ -304,8 +304,8 @@
         },
         a11y,
         security: {
-            // Каждый <meta> CSP — отдельная политика, браузер применяет все
-            csp: [...document.querySelectorAll('meta[http-equiv="Content-Security-Policy" i]')]
+            // Каждый <meta> CSP — отдельная политика, браузер применяет все, но только из <head>
+            csp: [...document.querySelectorAll('head > meta[http-equiv="Content-Security-Policy" i]')]
                 .map((meta) => meta.content).filter(Boolean),
             securityTxt: typeof securityTxt === 'string' && /contact\s*:/i.test(securityTxt),
             // Cookie входа, которые видит JavaScript (без HttpOnly), — по названию, это догадка.
