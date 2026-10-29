@@ -2210,11 +2210,16 @@ async function setupPicker(tab, host, active) {
         button.disabled = !enabled;
         document.getElementById('pick-label').dataset.off = String(!enabled);
         button.title = t(enabled ? 'pickTitle' : 'pickOff');
+        const hidePermission = !enabled || access || !count || Boolean(notice);
+        if ((!count && countButton.contains(document.activeElement))
+            || (hidePermission && permission.contains(document.activeElement))) {
+            (button.disabled ? document.getElementById('button') : button).focus();
+        }
         countButton.hidden = !count;
         countButton.textContent = `${count} ›`;
         countButton.title = t('pickCountTitle', count);
         countButton.setAttribute('aria-label', countButton.title);
-        permission.hidden = !enabled || access || !count || Boolean(notice);
+        permission.hidden = hidePermission;
         message.textContent = !enabled ? t('pickOff') : notice || (!access && count ? t('pickTemp') : '');
         hint.hidden = !message.textContent;
     }
