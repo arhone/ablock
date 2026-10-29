@@ -1805,13 +1805,24 @@ function reportText(host, short = false) {
     }
     // HSTS и смешанный контент — строки раздела «Безопасность»: «HSTS: нет»
     const rows = [...document.querySelectorAll('.audit-row:is([data-key="auditHsts"], [data-key="auditMixed"])')];
+    const summary = {};
     for (const [state, mark] of Object.entries(marks)) {
         const list = [...items.filter((el) => el.dataset.state === state).map(text),
             ...rows.filter((el) => el.dataset.state === state).map((el) => el.dataset.note)];
         if (list.length) {
-            lines.push(`${mark} ${list.join(', ')}`);
+            summary[state] = `${mark} ${list.join(', ')}`;
         }
     }
+    if (short) {
+        // X: не больше 280 знаков вместе со ссылкой — оценка, баллы групп и итоги по значкам. Не влезает — обрезается
+        // с конца, поэтому проблемы раньше хорошего: ❌, ⚠️, затем ✅
+        let text = [...lines, summary.bad, summary.warn, summary.good].filter(Boolean).join('\n');
+        while (text.length > 230 && text.includes('\n')) {
+            text = text.slice(0, text.lastIndexOf('\n'));
+        }
+        return text;
+    }
+    lines.push(...[summary.good, summary.warn, summary.bad].filter(Boolean));
     for (const [label, id] of [['serverLabel', 'server'], ['techLabel', 'tech']]) {
         const list = [...document.querySelectorAll(`#${id} .chip`)].map(text);
         if (list.length) {
@@ -1820,14 +1831,6 @@ function reportText(host, short = false) {
     }
     const companies = document.querySelector('.audit-row[data-key="auditTracking"]')?.dataset.names;
     lines.push(`${t('companiesLabel')}: ${companies || t('companiesNone')}`);
-    if (short) {
-        // X: не больше 280 знаков вместе со ссылкой — только оценка, баллы групп и итоги по значкам
-        let text = lines.slice(0, 4).join('\n');
-        while (text.length > 230 && text.includes('\n')) {
-            text = text.slice(0, text.lastIndexOf('\n'));
-        }
-        return text;
-    }
     lines.push('', t('reportShareFoot'));
     return lines.join('\n');
 }
