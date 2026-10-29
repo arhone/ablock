@@ -1832,19 +1832,36 @@ function reportText(host, short = false) {
         const list = [...items.filter((el) => el.dataset.state === state).map(text),
             ...rows.filter((el) => el.dataset.state === state).map((el) => el.dataset.note)];
         if (list.length) {
-            summary[state] = `${mark} ${list.join(', ')}`;
+            summary[state] = [mark, list];
         }
     }
     if (short) {
         // X: не больше 280 знаков вместе со ссылкой — оценка, баллы групп и итоги по значкам. Не влезает — обрезается
-        // с конца, поэтому проблемы раньше хорошего: ❌, ⚠️, затем ✅
-        let text = [...lines, summary.bad, summary.warn, summary.good].filter(Boolean).join('\n');
-        while (text.length > 230 && text.includes('\n')) {
-            text = text.slice(0, text.lastIndexOf('\n'));
+        // с конца, поэтому проблемы раньше хорошего: ❌, ⚠️, затем ✅. Строку, которая не влезла целиком,
+        // сокращаем по пунктам с «…», чтобы длинный список проблем не пропал совсем
+        const LIMIT = 230;
+        let text = lines.join('\n');
+        if (text.length > LIMIT) {
+            return lines[0];
+        }
+        for (const [mark, list] of [summary.bad, summary.warn, summary.good].filter(Boolean)) {
+            const line = `${mark} ${list.join(', ')}`;
+            if (text.length + 1 + line.length <= LIMIT) {
+                text += '\n' + line;
+                continue;
+            }
+            for (let count = list.length - 1; count > 0; count--) {
+                const part = `${mark} ${list.slice(0, count).join(', ')}, …`;
+                if (text.length + 1 + part.length <= LIMIT) {
+                    text += '\n' + part;
+                    break;
+                }
+            }
+            break;
         }
         return text;
     }
-    lines.push(...[summary.good, summary.warn, summary.bad].filter(Boolean));
+    lines.push(...[summary.good, summary.warn, summary.bad].filter(Boolean).map(([mark, list]) => `${mark} ${list.join(', ')}`));
     for (const [label, id] of [['serverLabel', 'server'], ['techLabel', 'tech']]) {
         const list = [...document.querySelectorAll(`#${id} .chip`)].map(text);
         if (list.length) {
