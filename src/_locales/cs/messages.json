@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Na webu už je 100 skrytých prvků — nepotřebné smažte v okně ABlock"
+    },
+    "auditDetails": {
+        "message": "Podrobnosti"
+    },
+    "auditDetailsMore": {
+        "message": "Další: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Připomínky: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "V tomto snímku nejsou podrobnosti."
+    },
+    "auditDetailsPartial": {
+        "message": "Zobrazují se pouze dostupná pozorování."
     }
 }

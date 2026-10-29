@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Saytda allaqachon 100 ta element yashirilgan — keraksizlarini ABlock oynasida oʻchiring"
+    },
+    "auditDetails": {
+        "message": "Tafsilotlar"
+    },
+    "auditDetailsMore": {
+        "message": "Yana $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Izohlar: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Bu lahzalik nusxada tafsilotlar yo‘q."
+    },
+    "auditDetailsPartial": {
+        "message": "Faqat mavjud kuzatuvlar ko‘rsatilgan."
     }
 }

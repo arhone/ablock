@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Aquest lloc ja té 100 elements amagats — suprimeix-ne alguns a la finestra d’ABlock"
+    },
+    "auditDetails": {
+        "message": "Detalls"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ més",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Observacions: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "No hi ha detalls en aquesta captura."
+    },
+    "auditDetailsPartial": {
+        "message": "Només es mostren les observacions disponibles."
     }
 }

@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Webstedet har allerede 100 skjulte elementer — fjern nogle i ABlock-vinduet"
+    },
+    "auditDetails": {
+        "message": "Detaljer"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ flere",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Bemærkninger: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Der er ingen detaljer i dette øjebliksbillede."
+    },
+    "auditDetailsPartial": {
+        "message": "Kun tilgængelige observationer vises."
     }
 }

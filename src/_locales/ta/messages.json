@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "தளத்தில் ஏற்கெனவே 100 உறுப்புகள் மறைக்கப்பட்டுள்ளன — தேவையற்றவற்றை ABlock சாளரத்தில் நீக்கவும்"
+    },
+    "auditDetails": {
+        "message": "விவரங்கள்"
+    },
+    "auditDetailsMore": {
+        "message": "மேலும் $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "குறிப்புகள்: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "இந்த நிலைப்பதிவில் விவரங்கள் இல்லை."
+    },
+    "auditDetailsPartial": {
+        "message": "கிடைக்கும் அவதானிப்புகள் மட்டுமே காட்டப்படுகின்றன."
     }
 }

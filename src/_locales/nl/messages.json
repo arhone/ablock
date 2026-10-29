@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Er zijn al 100 elementen verborgen op deze site — verwijder overbodige in het ABlock-venster"
+    },
+    "auditDetails": {
+        "message": "Details"
+    },
+    "auditDetailsMore": {
+        "message": "Nog $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Opmerkingen: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Er zijn geen details beschikbaar in deze momentopname."
+    },
+    "auditDetailsPartial": {
+        "message": "Alleen beschikbare waarnemingen worden getoond."
     }
 }

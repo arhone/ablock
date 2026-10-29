@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "આ સાઇટ પર પહેલેથી 100 એલિમેન્ટ છુપાવેલા છે — ABlock વિન્ડોમાંથી વધારાના કાઢી નાખો"
+    },
+    "auditDetails": {
+        "message": "વિગતો"
+    },
+    "auditDetailsMore": {
+        "message": "વધુ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "સૂચનો: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "આ સ્નેપશોટમાં વિગતો ઉપલબ્ધ નથી."
+    },
+    "auditDetailsPartial": {
+        "message": "ફક્ત ઉપલબ્ધ અવલોકનો બતાવવામાં આવે છે."
     }
 }

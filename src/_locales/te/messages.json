@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "ఈ సైట్‌లో ఇప్పటికే 100 అంశాలు దాచబడ్డాయి — అవసరం లేనివి ABlock విండోలో తొలగించండి"
+    },
+    "auditDetails": {
+        "message": "వివరాలు"
+    },
+    "auditDetailsMore": {
+        "message": "మరో $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "సూచనలు: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "ఈ స్నాప్‌షాట్‌లో వివరాలు అందుబాటులో లేవు."
+    },
+    "auditDetailsPartial": {
+        "message": "అందుబాటులో ఉన్న పరిశీలనలు మాత్రమే చూపబడతాయి."
     }
 }

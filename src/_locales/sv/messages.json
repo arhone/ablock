@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Webbplatsen har redan 100 dolda element — ta bort onödiga i ABlock-fönstret"
+    },
+    "auditDetails": {
+        "message": "Detaljer"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ till",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Anmärkningar: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Det finns inga detaljer i den här ögonblicksbilden."
+    },
+    "auditDetailsPartial": {
+        "message": "Endast tillgängliga observationer visas."
     }
 }

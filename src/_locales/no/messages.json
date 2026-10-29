@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Nettstedet har allerede 100 skjulte elementer — slett unødvendige i ABlock-vinduet"
+    },
+    "auditDetails": {
+        "message": "Detaljer"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ til",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Merknader: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Ingen detaljer er tilgjengelige i dette øyeblikksbildet."
+    },
+    "auditDetailsPartial": {
+        "message": "Bare tilgjengelige observasjoner vises."
     }
 }

@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "На сайті вже 100 прихованих елементів — видаліть зайві у вікні ABlock"
+    },
+    "auditDetails": {
+        "message": "Подробиці"
+    },
+    "auditDetailsMore": {
+        "message": "Ще $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Зауваження: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "У цьому знімку немає подробиць."
+    },
+    "auditDetailsPartial": {
+        "message": "Показано лише доступні спостереження."
     }
 }

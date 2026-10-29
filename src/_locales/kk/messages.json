@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Сайтта 100 элемент жасырылған — артығын ABlock терезесінде жойыңыз"
+    },
+    "auditDetails": {
+        "message": "Толығырақ"
+    },
+    "auditDetailsMore": {
+        "message": "Тағы $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Ескертулер: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Бұл сәттік көшірмеде толық мәліметтер жоқ."
+    },
+    "auditDetailsPartial": {
+        "message": "Тек қолжетімді бақылаулар көрсетілген."
     }
 }

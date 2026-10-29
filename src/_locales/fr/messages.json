@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Ce site a déjà 100 éléments masqués — supprimez-en dans la fenêtre ABlock"
+    },
+    "auditDetails": {
+        "message": "Détails"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ de plus",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Remarques : $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Aucun détail disponible dans cet instantané."
+    },
+    "auditDetailsPartial": {
+        "message": "Seules les observations disponibles sont affichées."
     }
 }

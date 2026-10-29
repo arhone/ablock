@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Ο ιστότοπος έχει ήδη 100 κρυμμένα στοιχεία — διαγράψτε μερικά στο παράθυρο ABlock"
+    },
+    "auditDetails": {
+        "message": "Λεπτομέρειες"
+    },
+    "auditDetailsMore": {
+        "message": "Άλλα $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Παρατηρήσεις: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Δεν υπάρχουν λεπτομέρειες σε αυτό το στιγμιότυπο."
+    },
+    "auditDetailsPartial": {
+        "message": "Εμφανίζονται μόνο οι διαθέσιμες παρατηρήσεις."
     }
 }

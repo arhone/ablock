@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Ci sono già 100 elementi nascosti sul sito — elimina quelli superflui nella finestra di ABlock"
+    },
+    "auditDetails": {
+        "message": "Dettagli"
+    },
+    "auditDetailsMore": {
+        "message": "Altri $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Osservazioni: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Nessun dettaglio disponibile in questa istantanea."
+    },
+    "auditDetailsPartial": {
+        "message": "Sono mostrate solo le osservazioni disponibili."
     }
 }

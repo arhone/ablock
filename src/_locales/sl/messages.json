@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Na mestu je že 100 skritih elementov — nepotrebne izbrišite v oknu ABlock"
+    },
+    "auditDetails": {
+        "message": "Podrobnosti"
+    },
+    "auditDetailsMore": {
+        "message": "Še $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Pripombe: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "V tem posnetku ni podrobnosti."
+    },
+    "auditDetailsPartial": {
+        "message": "Prikazana so samo razpoložljiva opažanja."
     }
 }

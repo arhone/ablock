@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "This site already has 100 hidden elements — remove some in the ABlock popup"
+    },
+    "auditDetails": {
+        "message": "Details"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ more",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Issues: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "No details are available in this snapshot."
+    },
+    "auditDetailsPartial": {
+        "message": "Only available observations are shown."
     }
 }

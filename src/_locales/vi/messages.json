@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Trang web đã có 100 phần tử bị ẩn — hãy xóa các mục không cần trong cửa sổ ABlock"
+    },
+    "auditDetails": {
+        "message": "Chi tiết"
+    },
+    "auditDetailsMore": {
+        "message": "Thêm $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Nhận xét: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Không có chi tiết trong bản chụp này."
+    },
+    "auditDetailsPartial": {
+        "message": "Chỉ hiển thị các quan sát có sẵn."
     }
 }

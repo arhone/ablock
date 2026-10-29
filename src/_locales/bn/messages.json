@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "এই সাইটে ইতিমধ্যে 100টি এলিমেন্ট লুকানো — ABlock উইন্ডো থেকে অপ্রয়োজনীয়গুলো মুছুন"
+    },
+    "auditDetails": {
+        "message": "বিস্তারিত"
+    },
+    "auditDetailsMore": {
+        "message": "আরও $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "সমস্যা: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "এই স্ন্যাপশটে বিস্তারিত তথ্য নেই।"
+    },
+    "auditDetailsPartial": {
+        "message": "শুধু উপলব্ধ পর্যবেক্ষণ দেখানো হয়েছে।"
     }
 }

@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "इस साइट पर पहले से 100 छिपे एलिमेंट हैं — ABlock विंडो में अनचाहे एलिमेंट हटाएँ"
+    },
+    "auditDetails": {
+        "message": "विवरण"
+    },
+    "auditDetailsMore": {
+        "message": "और $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "समस्याएँ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "इस स्नैपशॉट में विवरण उपलब्ध नहीं हैं।"
+    },
+    "auditDetailsPartial": {
+        "message": "केवल उपलब्ध अवलोकन दिखाए गए हैं।"
     }
 }

@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "ಸೈಟ್‌ನಲ್ಲಿ ಈಗಾಗಲೇ 100 ಅಂಶಗಳು ಮರೆಯಾಗಿವೆ — ಅನಗತ್ಯವಾದವುಗಳನ್ನು ABlock ವಿಂಡೋದಲ್ಲಿ ಅಳಿಸಿ"
+    },
+    "auditDetails": {
+        "message": "ವಿವರಗಳು"
+    },
+    "auditDetailsMore": {
+        "message": "ಇನ್ನೂ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "ಸೂಚನೆಗಳು: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "ಈ ಸ್ನ್ಯಾಪ್‌ಶಾಟ್‌ನಲ್ಲಿ ವಿವರಗಳು ಲಭ್ಯವಿಲ್ಲ."
+    },
+    "auditDetailsPartial": {
+        "message": "ಲಭ್ಯವಿರುವ ಅವಲೋಕನಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸಲಾಗಿದೆ."
     }
 }

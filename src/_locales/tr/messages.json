@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Sitede zaten 100 gizli öğe var — gereksiz olanları ABlock penceresinden silin"
+    },
+    "auditDetails": {
+        "message": "Ayrıntılar"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ tane daha",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Notlar: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Bu anlık görüntüde ayrıntı yok."
+    },
+    "auditDetailsPartial": {
+        "message": "Yalnızca mevcut gözlemler gösteriliyor."
     }
 }

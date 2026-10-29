@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Sudah ada 100 elemen tersembunyi di situs ini — hapus yang tidak perlu di jendela ABlock"
+    },
+    "auditDetails": {
+        "message": "Detail"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ lagi",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Catatan: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Tidak ada detail dalam cuplikan ini."
+    },
+    "auditDetailsPartial": {
+        "message": "Hanya pengamatan yang tersedia yang ditampilkan."
     }
 }

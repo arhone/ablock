@@ -1148,6 +1148,10 @@ function renderAudit(audit, server, extended, info, companies) {
         result.textContent = value;
         el.append(label, result);
         group.append(el);
+        const causeKey = {auditLcp: 'lcp', auditCls: 'cls', auditTtfb: 'ttfb'}[key];
+        if (causeKey && audit?.causes?.version === 1) {
+            renderAuditCauses(el, audit.causes[causeKey]);
+        }
         rows.set(key, {name, state});
         return el;
     };
@@ -1367,7 +1371,153 @@ function renderAudit(audit, server, extended, info, companies) {
         // Google llms.txt не использует — есть файл или нет, только для сведения
         row('auditLlms', unchecked.llms ? '—' : seo.llms ? yes : no, 'none');
     }
+    setupAuditGroups();
     return rows;
+}
+
+/**
+ * Общее раскрытие: скрытый контент не удерживает фокус и открытое пояснение.
+ * @param {HTMLButtonElement} button
+ * @param {HTMLElement} panel
+ * @param {boolean} open
+ */
+function setAuditDisclosure(button, panel, open) {
+    if (!open) {
+        if (panel.contains(document.activeElement)) {
+            button.focus();
+        }
+        if (panel.contains(document.querySelector('[aria-describedby="tip"]'))) {
+            document.getElementById('tip').dispatchEvent(new Event('close'));
+        }
+    }
+    panel.hidden = !open;
+    button.setAttribute('aria-expanded', String(open));
+}
+
+/**
+ * Группы остаются в DOM и в модели оценки. Одновременно открыт один раздел, включая «О сайте».
+ */
+function setupAuditGroups() {
+    const body = document.getElementById('audit-body');
+    for (const [index, group] of [...body.children].entries()) {
+        if (group.querySelector('.group-toggle')) {
+            continue;
+        }
+        const title = group.querySelector('h3');
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'group-toggle';
+        button.id = `audit-group-toggle-${index}`;
+        const name = document.createElement('span');
+        name.className = 'group-name';
+        name.append(...title.childNodes);
+        button.append(name);
+        if (group.id !== 'about') {
+            const note = document.createElement('span');
+            note.className = 'h-issues';
+            note.textContent = t('auditGroupIssues', formatNumber(group.querySelectorAll('.audit-row:is([data-state="bad"], [data-state="warn"])').length));
+            button.append(note);
+        }
+        title.append(button);
+        const panel = document.createElement('div');
+        panel.className = 'group-body';
+        panel.id = `audit-group-body-${index}`;
+        panel.setAttribute('role', 'region');
+        panel.setAttribute('aria-labelledby', button.id);
+        panel.append(...[...group.children].filter((el) => el !== title));
+        group.append(panel);
+        button.setAttribute('aria-controls', panel.id);
+        setAuditDisclosure(button, panel, false);
+        button.addEventListener('click', () => openAuditGroup(group, panel.hidden));
+        group.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !event.defaultPrevented
+                && !document.querySelector('[aria-describedby="tip"]') && document.getElementById('share-menu').hidden && !panel.hidden) {
+                event.preventDefault();
+                setAuditDisclosure(button, panel, false);
+                button.focus();
+            }
+        });
+    }
+}
+
+/**
+ * @param {HTMLElement} group
+ * @param {boolean} [open]
+ */
+function openAuditGroup(group, open = true) {
+    for (const other of document.querySelectorAll('#audit-body > .audit-group')) {
+        setAuditDisclosure(other.querySelector('.group-toggle'), other.querySelector('.group-body'), other === group && open);
+    }
+}
+
+/**
+ * Общий компонент причин для следующих сборщиков. Форматтер передаёт переведённые факты
+ * [{label, value}], а не сырые data/reasons: неизвестные поля и коды сами в интерфейс не попадают.
+ * Пять фактов видны сразу, остальные раскрываются в общем потоке. Ни одного .audit-row внутри.
+ * @param {HTMLElement} row
+ * @param {?Object} section раздел causes v1
+ * @param {Array<{label: string, value: string}>} [items] подготовленные подписи и значения
+ */
+function renderAuditCauses(row, section, items = []) {
+    if (!['ok', 'partial'].includes(section?.status)) {
+        return;
+    }
+    const line = document.createElement('div');
+    line.className = 'audit-line';
+    row.replaceWith(line);
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'causes-toggle';
+    button.textContent = t('auditDetails');
+    button.setAttribute('aria-label', `${t('auditDetails')}: ${row.querySelector('span').textContent}`);
+    const panel = document.createElement('div');
+    panel.className = 'audit-causes';
+    panel.id = `causes-${row.dataset.key}`;
+    button.setAttribute('aria-controls', panel.id);
+    setAuditDisclosure(button, panel, false);
+    line.append(row, button, panel);
+    button.addEventListener('click', () => setAuditDisclosure(button, panel, panel.hidden));
+    line.addEventListener('keydown', (event) => {
+        if (!panel.hidden && event.key === 'Escape' && !event.defaultPrevented
+            && !document.querySelector('[aria-describedby="tip"]') && document.getElementById('share-menu').hidden) {
+            event.preventDefault();
+            setAuditDisclosure(button, panel, false);
+            button.focus();
+        }
+    });
+    if (section.status === 'partial' || section.truncated) {
+        const note = document.createElement('p');
+        note.textContent = t('auditDetailsPartial');
+        panel.append(note);
+    }
+    if (!items.length) {
+        const empty = document.createElement('p');
+        empty.textContent = t('auditDetailsEmpty');
+        panel.append(empty);
+        return;
+    }
+    const list = document.createElement('ul');
+    const append = ({label, value}) => {
+        const item = document.createElement('li');
+        const text = document.createElement('bdi');
+        text.textContent = value;
+        item.append(label + ': ', text);
+        list.append(item);
+    };
+    items.slice(0, 5).forEach(append);
+    panel.append(list);
+    if (items.length > 5) {
+        const more = document.createElement('button');
+        more.type = 'button';
+        more.className = 'causes-more';
+        more.textContent = t('auditDetailsMore', formatNumber(items.length - 5));
+        more.addEventListener('click', () => {
+            items.slice(5).forEach(append);
+            button.focus();
+            more.remove();
+        });
+        panel.append(more);
+    }
 }
 
 /**
@@ -1587,9 +1737,6 @@ function renderScore(info, companies, audit, rows, server) {
             group.sure ? '' : t(group.id === 'speed' ? 'scoreSpeedUnsure' : 'scoreUnsure'),
             group.id === 'speed' && info.loadTime === null ? t('loadingTitle') : ''
         ].filter(Boolean).join('\n');
-        if (item.title) {
-            item.tabIndex = 0;
-        }
         const label = document.createElement('span');
         label.className = 'label';
         label.textContent = group.name;
@@ -1607,11 +1754,30 @@ function renderScore(info, companies, audit, rows, server) {
         item.append(label, meter, num);
         list.append(item);
 
-        // Балл в заголовке раздела
-        const title = document.querySelector(`.audit-group[data-group="${group.id}"] h3`);
+        // Балл в заголовке раздела; закрытая группа всё ещё находится в DOM.
+        const section = document.querySelector(`.audit-group[data-group="${group.id}"]`);
+        const title = section?.querySelector('.group-toggle');
+        if (section) {
+            const jump = document.createElement('button');
+            jump.type = 'button';
+            jump.className = 'board-jump';
+            jump.setAttribute('aria-label', item.title || group.name);
+            jump.setAttribute('aria-controls', section.querySelector('.group-body').id);
+            jump.addEventListener('click', () => {
+                openAuditGroup(section);
+                section.querySelector('.group-toggle').focus();
+                section.scrollIntoView({block: 'nearest'});
+            });
+            item.append(jump);
+        } else if (item.title) {
+            // Без аудита раздела может не быть: пояснение балла остаётся доступно с клавиатуры.
+            item.tabIndex = 0;
+        }
         if (title) {
             title.querySelector('.ring')?.remove();
             title.querySelector('.h-num')?.remove();
+            title.querySelector('.h-issues')?.remove();
+            delete title.dataset.sure;
             title.dataset.state = item.dataset.state;
             if (!group.sure) {
                 title.dataset.sure = 'false';
@@ -1628,13 +1794,22 @@ function renderScore(info, companies, audit, rows, server) {
             small.className = /^\/\S/.test(small.textContent) ? 'of tight' : 'of';
             h.append(v, small);
             title.append(h);
+            const issues = section.querySelectorAll('.audit-row:is([data-state="bad"], [data-state="warn"])').length;
+            const note = document.createElement('span');
+            note.className = 'h-issues';
+            note.textContent = t('auditGroupIssues', formatNumber(issues));
+            title.append(note);
         }
     }
+    const focusedGroup = board.contains(document.activeElement) ? document.activeElement.getAttribute('aria-controls') : null;
     // Пересчёт заменяет табло целиком: открытое пояснение к его строке осталось бы висеть от старой
     if (board.contains(document.querySelector('[aria-describedby="tip"]'))) {
         document.getElementById('tip').dispatchEvent(new Event('close'));
     }
     board.replaceChildren(ring, list);
+    if (focusedGroup) {
+        board.querySelector(`[aria-controls="${focusedGroup}"]`)?.focus();
+    }
     return result;
 }
 
@@ -1653,6 +1828,18 @@ function setupScoreToggle() {
         score.toggleAttribute('data-open', !body.hidden);
         if (body.hidden) {
             document.getElementById('share-menu').hidden = true;
+            if (body.contains(document.activeElement)) {
+                button.focus();
+            }
+            document.getElementById('tip').dispatchEvent(new Event('close'));
+        }
+    });
+    body.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !event.defaultPrevented
+            && !document.querySelector('[aria-describedby="tip"]') && document.getElementById('share-menu').hidden) {
+            event.preventDefault();
+            head.click();
+            button.focus();
         }
     });
 }
@@ -1664,7 +1851,7 @@ function setupScoreToggle() {
  */
 function setupTips() {
     const tip = document.getElementById('tip');
-    const SELECTOR = '.badge[tabindex], .chip[tabindex], .audit-row[tabindex], .board [tabindex], #stats-text';
+    const SELECTOR = '.badge[tabindex], .chip[tabindex], .audit-row[tabindex], .board [tabindex]:not(button), #stats-text';
     let owner = null;
 
     const hide = () => {
@@ -1701,7 +1888,7 @@ function setupTips() {
     // Владелец пояснения исчезает (табло пересчитано) — закрыть
     tip.addEventListener('close', hide);
     document.addEventListener('click', (event) => {
-        const el = event.target.closest(SELECTOR);
+        const el = event.target.closest('button') ? null : event.target.closest(SELECTOR);
         if (el && el !== owner) {
             show(el);
         } else {
@@ -1778,6 +1965,7 @@ async function renderReport(host) {
     // Табло — сразу раскрытое: свёрнутой полосы на картинке нет
     const board = document.getElementById('board').cloneNode(true);
     board.removeAttribute('id');
+    board.querySelectorAll('.board-jump').forEach((button) => button.remove());
 
     const details = document.getElementById('details').cloneNode(true);
     const copy = details.querySelector('#server .icon-button');

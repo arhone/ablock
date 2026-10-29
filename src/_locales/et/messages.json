@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Sellel saidil on juba 100 peidetud elementi — kustutage liigsed ABlocki aknas"
+    },
+    "auditDetails": {
+        "message": "Üksikasjad"
+    },
+    "auditDetailsMore": {
+        "message": "Veel $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Märkusi: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Selles hetktõmmises pole üksikasju."
+    },
+    "auditDetailsPartial": {
+        "message": "Kuvatakse ainult saadaolevad vaatlused."
     }
 }

@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Sudah ada 100 elemen tersembunyi di tapak ini — padam yang tidak diperlukan dalam tetingkap ABlock"
+    },
+    "auditDetails": {
+        "message": "Butiran"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ lagi",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Catatan: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Tiada butiran dalam petikan ini."
+    },
+    "auditDetailsPartial": {
+        "message": "Hanya pemerhatian yang tersedia dipaparkan."
     }
 }

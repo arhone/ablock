@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "На сайте уже 100 скрытых элементов — удалите лишние в окне ABlock"
+    },
+    "auditDetails": {
+        "message": "Подробности"
+    },
+    "auditDetailsMore": {
+        "message": "Ещё $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Замечания: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "В этом снимке нет подробностей."
+    },
+    "auditDetailsPartial": {
+        "message": "Показаны только доступные наблюдения."
     }
 }

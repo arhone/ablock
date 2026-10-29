@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Sivustolla on jo 100 piilotettua elementtiä — poista turhat ABlockin ikkunassa"
+    },
+    "auditDetails": {
+        "message": "Lisätiedot"
+    },
+    "auditDetailsMore": {
+        "message": "Vielä $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Huomautuksia: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Tässä tilannekuvassa ei ole lisätietoja."
+    },
+    "auditDetailsPartial": {
+        "message": "Vain saatavilla olevat havainnot näytetään."
     }
 }

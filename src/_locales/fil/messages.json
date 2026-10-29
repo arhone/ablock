@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "May 100 nakatagong elemento na sa site — tanggalin ang ilan sa window ng ABlock"
+    },
+    "auditDetails": {
+        "message": "Mga detalye"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ pa",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Mga puna: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Walang mga detalye sa snapshot na ito."
+    },
+    "auditDetailsPartial": {
+        "message": "Mga available na obserbasyon lang ang ipinapakita."
     }
 }

@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Na stranici je već 100 skrivenih elemenata — izbrišite nepotrebne u prozoru ABlocka"
+    },
+    "auditDetails": {
+        "message": "Pojedinosti"
+    },
+    "auditDetailsMore": {
+        "message": "Još $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Napomene: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "U ovoj snimci nema pojedinosti."
+    },
+    "auditDetailsPartial": {
+        "message": "Prikazana su samo dostupna opažanja."
     }
 }

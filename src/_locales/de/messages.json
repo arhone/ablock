@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Auf dieser Website sind bereits 100 Elemente ausgeblendet — entfernen Sie einige im ABlock-Fenster"
+    },
+    "auditDetails": {
+        "message": "Details"
+    },
+    "auditDetailsMore": {
+        "message": "Weitere $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Hinweise: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "In dieser Momentaufnahme sind keine Details verfügbar."
+    },
+    "auditDetailsPartial": {
+        "message": "Es werden nur verfügbare Beobachtungen angezeigt."
     }
 }

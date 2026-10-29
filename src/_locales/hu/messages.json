@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "A webhelyen már 100 rejtett elem van — törölje a feleslegeseket az ABlock ablakában"
+    },
+    "auditDetails": {
+        "message": "Részletek"
+    },
+    "auditDetailsMore": {
+        "message": "További $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Észrevételek: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Ebben a pillanatképben nincsenek részletek."
+    },
+    "auditDetailsPartial": {
+        "message": "Csak a rendelkezésre álló megfigyelések láthatók."
     }
 }

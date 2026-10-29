@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "เว็บไซต์นี้มีองค์ประกอบที่ซ่อนอยู่แล้ว 100 รายการ — ลบรายการที่ไม่ต้องการในหน้าต่าง ABlock"
+    },
+    "auditDetails": {
+        "message": "รายละเอียด"
+    },
+    "auditDetailsMore": {
+        "message": "อีก $COUNT$ รายการ",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "ข้อสังเกต: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "ไม่มีรายละเอียดในภาพรวมขณะนี้"
+    },
+    "auditDetailsPartial": {
+        "message": "แสดงเฉพาะข้อมูลที่สังเกตได้เท่านั้น"
     }
 }

@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "このサイトではすでに100個の要素が非表示です。ABlock のウィンドウで不要な項目を削除してください"
+    },
+    "auditDetails": {
+        "message": "詳細"
+    },
+    "auditDetailsMore": {
+        "message": "さらに $COUNT$ 件",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "指摘事項: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "このスナップショットには詳細がありません。"
+    },
+    "auditDetailsPartial": {
+        "message": "取得できた観測結果のみ表示しています。"
     }
 }

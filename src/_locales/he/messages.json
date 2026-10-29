@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "באתר כבר יש 100 רכיבים מוסתרים — יש למחוק מיותרים בחלון ABlock"
+    },
+    "auditDetails": {
+        "message": "פרטים"
+    },
+    "auditDetailsMore": {
+        "message": "עוד $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "הערות: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "אין פרטים זמינים בתמונת המצב הזו."
+    },
+    "auditDetailsPartial": {
+        "message": "מוצגות רק התצפיות הזמינות."
     }
 }

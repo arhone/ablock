@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "이 사이트에서 이미 100개를 숨겼습니다. ABlock 창에서 불필요한 항목을 삭제하세요"
+    },
+    "auditDetails": {
+        "message": "세부 정보"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$개 더 보기",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "지적 사항: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "이 스냅샷에는 세부 정보가 없습니다."
+    },
+    "auditDetailsPartial": {
+        "message": "확인 가능한 관측 결과만 표시됩니다."
     }
 }

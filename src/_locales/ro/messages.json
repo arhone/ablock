@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Site-ul are deja 100 de elemente ascunse — șterge-le pe cele inutile din fereastra ABlock"
+    },
+    "auditDetails": {
+        "message": "Detalii"
+    },
+    "auditDetailsMore": {
+        "message": "Încă $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Observații: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Nu sunt disponibile detalii în această captură."
+    },
+    "auditDetailsPartial": {
+        "message": "Sunt afișate doar observațiile disponibile."
     }
 }

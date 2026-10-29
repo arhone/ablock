@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "На сайта вече има 100 скрити елемента — изтрийте излишните в прозореца на ABlock"
+    },
+    "auditDetails": {
+        "message": "Подробности"
+    },
+    "auditDetailsMore": {
+        "message": "Още $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Забележки: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "В тази моментна снимка няма подробности."
+    },
+    "auditDetailsPartial": {
+        "message": "Показани са само наличните наблюдения."
     }
 }

@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "此網站已有100個隱藏的元素，請在 ABlock 視窗中刪除不需要的項目"
+    },
+    "auditDetails": {
+        "message": "詳細資料"
+    },
+    "auditDetailsMore": {
+        "message": "還有 $COUNT$ 項",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "建議：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "此快照中沒有可用的詳細資料。"
+    },
+    "auditDetailsPartial": {
+        "message": "僅顯示可用的觀測結果。"
     }
 }

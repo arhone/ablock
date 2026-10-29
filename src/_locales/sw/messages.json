@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Tayari kuna vipengele 100 vilivyofichwa kwenye tovuti — futa visivyohitajika kwenye dirisha la ABlock"
+    },
+    "auditDetails": {
+        "message": "Maelezo"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ zaidi",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Maoni: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Hakuna maelezo katika picha hii ya hali."
+    },
+    "auditDetailsPartial": {
+        "message": "Uchunguzi unaopatikana pekee ndio unaoonyeshwa."
     }
 }

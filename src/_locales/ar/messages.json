@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "يوجد بالفعل 100 عنصر مخفي على الموقع — احذف بعضها من نافذة ABlock"
+    },
+    "auditDetails": {
+        "message": "التفاصيل"
+    },
+    "auditDetailsMore": {
+        "message": "المزيد: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "ملاحظات: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "لا توجد تفاصيل في هذه اللقطة."
+    },
+    "auditDetailsPartial": {
+        "message": "تُعرض الملاحظات المتاحة فقط."
     }
 }

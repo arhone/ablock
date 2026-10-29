@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "በጣቢያው ላይ 100 የተደበቁ አባላት አሉ — በABlock መስኮት የማያስፈልጉትን ያስወግዱ"
+    },
+    "auditDetails": {
+        "message": "ዝርዝሮች"
+    },
+    "auditDetailsMore": {
+        "message": "ተጨማሪ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "ማስተካከያዎች፦ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "በዚህ ቅጽበታዊ ቅጂ ዝርዝሮች የሉም።"
+    },
+    "auditDetailsPartial": {
+        "message": "የሚገኙት ምልከታዎች ብቻ ይታያሉ።"
     }
 }

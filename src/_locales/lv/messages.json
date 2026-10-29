@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Vietnē jau paslēpti 100 elementi — nevajadzīgos dzēsiet ABlock logā"
+    },
+    "auditDetails": {
+        "message": "Sīkāka informācija"
+    },
+    "auditDetailsMore": {
+        "message": "Vēl $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Piezīmes: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Šajā momentuzņēmumā nav sīkākas informācijas."
+    },
+    "auditDetailsPartial": {
+        "message": "Tiek rādīti tikai pieejamie novērojumi."
     }
 }

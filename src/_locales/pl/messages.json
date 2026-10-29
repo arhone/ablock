@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Na stronie ukryto już 100 elementów — usuń zbędne w oknie ABlock"
+    },
+    "auditDetails": {
+        "message": "Szczegóły"
+    },
+    "auditDetailsMore": {
+        "message": "Jeszcze $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Uwagi: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "W tym zrzucie nie ma szczegółów."
+    },
+    "auditDetailsPartial": {
+        "message": "Wyświetlane są tylko dostępne obserwacje."
     }
 }

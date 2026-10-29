@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "സൈറ്റിൽ ഇതിനകം 100 ഘടകങ്ങൾ മറച്ചിട്ടുണ്ട് — ആവശ്യമില്ലാത്തവ ABlock വിൻഡോയിൽ ഇല്ലാതാക്കുക"
+    },
+    "auditDetails": {
+        "message": "വിശദാംശങ്ങൾ"
+    },
+    "auditDetailsMore": {
+        "message": "കൂടുതൽ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "നിർദ്ദേശങ്ങൾ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "ഈ സ്നാപ്‌ഷോട്ടിൽ വിശദാംശങ്ങൾ ലഭ്യമല്ല."
+    },
+    "auditDetailsPartial": {
+        "message": "ലഭ്യമായ നിരീക്ഷണങ്ങൾ മാത്രം കാണിക്കുന്നു."
     }
 }

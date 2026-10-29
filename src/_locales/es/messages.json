@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Este sitio ya tiene 100 elementos ocultos — elimina algunos en la ventana de ABlock"
+    },
+    "auditDetails": {
+        "message": "Detalles"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ más",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Observaciones: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "No hay detalles en esta captura."
+    },
+    "auditDetailsPartial": {
+        "message": "Solo se muestran las observaciones disponibles."
     }
 }

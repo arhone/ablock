@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "На сајту је већ сакривено 100 елемената — обришите непотребне у прозору ABlock"
+    },
+    "auditDetails": {
+        "message": "Детаљи"
+    },
+    "auditDetailsMore": {
+        "message": "Још $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Напомене: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "У овом снимку нема детаља."
+    },
+    "auditDetailsPartial": {
+        "message": "Приказана су само доступна запажања."
     }
 }

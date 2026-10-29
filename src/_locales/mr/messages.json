@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "या साइटवर आधीच 100 घटक लपवले आहेत — नको असलेले ABlock विंडोमध्ये हटवा"
+    },
+    "auditDetails": {
+        "message": "तपशील"
+    },
+    "auditDetailsMore": {
+        "message": "आणखी $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "सूचना: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "या स्नॅपशॉटमध्ये तपशील उपलब्ध नाहीत."
+    },
+    "auditDetailsPartial": {
+        "message": "फक्त उपलब्ध निरीक्षणे दाखवली आहेत."
     }
 }

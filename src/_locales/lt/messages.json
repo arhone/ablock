@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "Svetainėje jau paslėpta 100 elementų — nereikalingus ištrinkite ABlock lange"
+    },
+    "auditDetails": {
+        "message": "Išsamiau"
+    },
+    "auditDetailsMore": {
+        "message": "Dar $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "Pastabos: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "Šioje momentinėje kopijoje išsamios informacijos nėra."
+    },
+    "auditDetailsPartial": {
+        "message": "Rodomi tik prieinami stebėjimai."
     }
 }

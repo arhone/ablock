@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "此网站已有100个隐藏的元素，请在 ABlock 窗口中删除不需要的项"
+    },
+    "auditDetails": {
+        "message": "详情"
+    },
+    "auditDetailsMore": {
+        "message": "另有 $COUNT$ 项",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "建议：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "此快照中没有可用的详情。"
+    },
+    "auditDetailsPartial": {
+        "message": "仅显示可用的观测结果。"
     }
 }

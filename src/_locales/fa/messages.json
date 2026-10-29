@@ -1129,5 +1129,30 @@
     },
     "pickLimit": {
         "message": "این سایت از قبل 100 عنصر پنهان دارد — موارد اضافی را در پنجرهٔ ABlock حذف کنید"
+    },
+    "auditDetails": {
+        "message": "جزئیات"
+    },
+    "auditDetailsMore": {
+        "message": "$COUNT$ مورد دیگر",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditGroupIssues": {
+        "message": "نکته‌ها: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "auditDetailsEmpty": {
+        "message": "در این تصویر لحظه‌ای جزئیاتی موجود نیست."
+    },
+    "auditDetailsPartial": {
+        "message": "فقط مشاهدات موجود نمایش داده می‌شوند."
     }
 }
