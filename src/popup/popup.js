@@ -1097,7 +1097,14 @@ function formatLoadCauses(key, section) {
     }
     const items = [];
     const add = (label, value) => items.push({label: t(label), value});
-    const time = (value) => typeof value === 'number' && Number.isFinite(value) && value >= 0 ? formatTime(value) : '—';
+    const time = (value) => {
+        if (typeof value !== 'number' || !Number.isFinite(value) || value < 0) {
+            return '—';
+        }
+        const ms = formatNumber(value > 0 && value < 1 ? 1 : Math.round(value),
+            {style: 'unit', unit: 'millisecond', unitDisplay: 'short', maximumFractionDigits: 0});
+        return value > 0 && value < 1 ? `<${ms}` : ms;
+    };
     const phases = key === 'lcp' ? {
         ttfb: 'auditTtfb', resourceLoadDelay: 'causeLoadDelay', resourceLoadDuration: 'causeLoadDuration', elementRenderDelay: 'causeRenderDelay'
     } : {
@@ -1146,11 +1153,6 @@ function formatLoadCauses(key, section) {
     }
     if (section.reasons.some((code) => ['prerender', 'history-navigation'].includes(code))) {
         add('auditDetails', t('causeSpecialNavigation'));
-    }
-    if (section.reasons.some((code) => ['timing-incomplete', 'timing-inconsistent', 'timing-restricted', 'redirect-unavailable',
-        'element-unavailable', 'resource-unmatched', 'resource-ambiguous', 'render-time-unavailable', 'buffer-dropped',
-        'budget-exceeded', 'result-limit', 'navigation-missing', 'preload-unresolved'].includes(code))) {
-        add('auditDetails', t('causeLimited'));
     }
     add('auditDetails', t('causeScope'));
     return items;

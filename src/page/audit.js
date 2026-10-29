@@ -33,7 +33,8 @@
      * render-time-unavailable — нет времени отрисовки LCP; service-worker — участие SW;
      * browser-cache — доставка из кэша; interim-response — промежуточный ответ (код неизвестен);
      * history-navigation — переход по истории (попадание в bfcache не доказано);
-     * preload-unresolved — нельзя сопоставить responsive preload без догадки.
+     * preload-unresolved — нельзя сопоставить responsive preload/media без догадки;
+     * collection-failed — изолированный сбой сборщика, раздел недоступен, остальной аудит продолжается.
      * truncated=true только при отсечении фактов лимитом/бюджетом, не просто при unavailable.
      *
      * Формат data (у недоступного раздела целиком null):
@@ -415,8 +416,9 @@
             if (source.length > max) {
                 limited(section, 'result-limit');
             }
-            const text = source.slice(0, 4096).replace(/https?:\/\/[^\s]+/g, (url) => shortUrl(url) || '')
-                .replace(/\?[^\s]*/g, '').replace(/[<>\p{Cc}]/gu, '');
+            // Сначала целые URL (любой регистр схемы), затем обрезка: иначе можно оставить часть userinfo.
+            const text = source.replace(/\p{Cc}/gu, '').replace(/https?:[^\s]+/gi, (url) => shortUrl(url) || '')
+                .replace(/\?[^\s]*/g, '').replace(/[<>]/g, '');
             if (text.length > max) {
                 limited(section, 'result-limit');
             }
@@ -522,19 +524,41 @@
             // Нынешний preload в разметке — не доказательство его использования при загрузке.
             const links = document.getElementsByTagName('link');
             let complete = true;
-            let responsive = false;
+            let unresolved = false;
             for (let i = 0; i < Math.min(links.length, 100); i++) {
                 if (!budget(section)) {
                     complete = false;
                     break;
                 }
                 const link = links[i];
+                // В выборку попадает и SVG <link>: HTML-свойств у него нет.
+                if (link.namespaceURI !== 'http://www.w3.org/1999/xhtml'
+                    || typeof link.rel !== 'string' || typeof link.as !== 'string' || typeof link.href !== 'string') {
+                    continue;
+                }
                 if (link.rel.toLowerCase().split(/\s+/).includes('preload') && link.as.toLowerCase() === 'image') {
-                    const srcset = link.imageSrcset || link.getAttribute('imagesrcset');
-                    responsive ||= !!srcset;
+                    const srcset = typeof link.imageSrcset === 'string' ? link.imageSrcset : link.getAttribute('imagesrcset');
+                    const responsive = typeof srcset === 'string' && srcset.length > 0;
                     const matchesUrl = link.href === lcp.url || (data.resourceUrl && link.href.length <= 8192
                         && link.href.split('#', 1)[0] === resourceName);
-                    if (matchesUrl && !srcset) {
+                    let applies = null;
+                    if (typeof link.media === 'string') {
+                        if (!link.media.trim()) {
+                            applies = true;
+                        } else if (typeof matchMedia === 'function') {
+                            try {
+                                const result = matchMedia(link.media);
+                                applies = typeof result.matches === 'boolean' ? result.matches : null;
+                            } catch {
+                                // Неизвестное условие media не превращаем в подходящий preload.
+                            }
+                        }
+                    }
+                    if (applies === false) {
+                        continue;
+                    }
+                    unresolved ||= responsive || (applies === null && matchesUrl);
+                    if (applies === true && matchesUrl && !responsive) {
                         data.preload = true;
                     }
                 }
@@ -543,9 +567,9 @@
                 complete = false;
                 limited(section, 'result-limit');
             }
-            if (data.preload !== true && complete && !responsive) {
+            if (data.preload !== true && complete && !unresolved) {
                 data.preload = false;
-            } else if (data.preload !== true && responsive) {
+            } else if (data.preload !== true && unresolved) {
                 reason(section, 'preload-unresolved');
             }
         } else if (image) {
@@ -560,8 +584,16 @@
         }
         return section;
     };
-    causes.ttfb = collectTtfb();
-    causes.lcp = collectLcp();
+    const collectSafely = (collect) => {
+        try {
+            return collect();
+        } catch {
+            // Причины дополняют снимок: сбой одного раздела не лишает окно прежних показателей.
+            return {status: 'unavailable', reasons: ['collection-failed'], truncated: false, data: null};
+        }
+    };
+    causes.ttfb = collectSafely(collectTtfb);
+    causes.lcp = collectSafely(collectLcp);
 
     // SEO
     const meta = (selector) => document.querySelector(selector)?.getAttribute('content')?.trim() ?? null;
