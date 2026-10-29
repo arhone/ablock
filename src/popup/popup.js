@@ -282,7 +282,12 @@ async function setupNote(host) {
     const add = document.getElementById('note-add');
     const note = document.getElementById('note');
     const input = document.getElementById('note-input');
-    const {aBlockNotes} = await chrome.storage.local.get('aBlockNotes').catch(() => ({}));
+    const stored = await chrome.storage.local.get('aBlockNotes').catch(() => null);
+    // Заметка неизвестна — не даём случайно стереть её через пустую форму
+    if (!stored) {
+        return;
+    }
+    const {aBlockNotes} = stored;
     let text = aBlockNotes?.[host] || '';
 
     const show = () => {
