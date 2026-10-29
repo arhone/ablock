@@ -1247,7 +1247,7 @@ function renderAudit(audit, server, extended, info, companies) {
             .map((policy) => directive(policy, name) ?? directive(policy, 'script-src') ?? directive(policy, 'default-src'))
             .filter((value) => value !== undefined));
         const weak = sources.some((values) => values.length > 0 && values.every((value) => /'unsafe-inline'/i.test(value)
-            && !/'nonce-|'sha(256|384|512)-|'strict-dynamic'/i.test(value)));
+            && !/(?:^|\s)'(?:nonce|sha(?:256|384|512))-[a-z0-9+/_-]+={0,2}'(?:\s|$)|'strict-dynamic'/i.test(value)));
         // CSP только с frame-ancestors или upgrade-insecure-requests есть, но от XSS не защищает
         const loose = csp && sources.every((values) => values.length === 0);
         row('auditCsp', !csp ? no : loose ? t('auditCspNoScripts') : weak ? t('auditCspWeak') : yes,
