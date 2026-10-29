@@ -1576,6 +1576,10 @@ function renderScore(info, companies, audit, rows, server) {
             title.append(h);
         }
     }
+    // Пересчёт заменяет табло целиком: открытое пояснение к его строке осталось бы висеть от старой
+    if (board.contains(document.querySelector('[aria-describedby="tip"]'))) {
+        document.getElementById('tip').dispatchEvent(new Event('close'));
+    }
     board.replaceChildren(ring, list);
     return result;
 }
@@ -1645,6 +1649,8 @@ function setupTips() {
         tip.style.top = `${rect.bottom + 6 + scrollY}px`;
     };
 
+    // Владелец пояснения исчезает (табло пересчитано) — закрыть
+    tip.addEventListener('close', hide);
     document.addEventListener('click', (event) => {
         const el = event.target.closest(SELECTOR);
         if (el && el !== owner) {
