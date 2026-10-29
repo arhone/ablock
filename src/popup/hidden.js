@@ -18,6 +18,7 @@
         let closed = false;
         let changed = false;
         let busy = false;
+        let deletion = Promise.resolve();
         let confirmTimer = null;
         let current = null;
         let desired = null;
@@ -120,7 +121,7 @@
                 const next = desired;
                 if (closed || !next || !next.count || !documentId) {
                     if (!closed) {
-                        setHint(next && !next.count ? 'hiddenMissingHint' : defaultHint);
+                        setHint(next?.count === 0 ? 'hiddenMissingHint' : defaultHint);
                     }
                     return;
                 }
@@ -156,6 +157,7 @@
             window.removeEventListener('resize', resize);
             observer.disconnect();
             await highlight(null);
+            await deletion;
             port.disconnect();
             screen.hidden = true;
             screen.replaceChildren();
@@ -203,7 +205,7 @@
             return;
         }
         documentId = inspection?.documentId;
-        entries = entries.map((entry, i) => ({...entry, count: inspection?.result?.[i]?.count || 0,
+        entries = entries.map((entry, i) => ({...entry, count: inspection?.result?.[i]?.count ?? null,
             hidden: Boolean(enabled && inspection?.result?.[i]?.hidden)}));
         const updateSelection = () => {
             all.checked = entries.length > 0 && selected.size === entries.length;
@@ -233,7 +235,7 @@
             count.textContent = String(entries.length);
             for (const item of entries) {
                 const row = node('label', 'hidden-row');
-                row.classList.toggle('hidden-missing', !item.count);
+                row.classList.toggle('hidden-missing', item.count === 0);
                 const check = node('input', '');
                 check.type = 'checkbox';
                 check.value = item.s;
@@ -260,7 +262,7 @@
                     const text = node('bdi', 'hidden-text', t('pickQuote', item.t));
                     description.append(text);
                 }
-                if (!item.count) {
+                if (item.count === 0) {
                     description.append(node('span', 'hidden-absent', t('hiddenMissing')));
                 }
                 const selector = node('code', 'hidden-selector', item.s);
@@ -304,18 +306,28 @@
             }
             busy = true;
             updateSelection();
-            await highlight(null);
-            const selectors = [...selected];
-            const data = {host, tabId: tab.id, ...(documentId ? {documentId} : {})};
-            const saved = await chrome.runtime.sendMessage(everything ? {customClear: data}
-                : {customRemove: {...data, selectors}}).catch(() => false);
+            deletion = (async () => {
+                await highlight(null);
+                if (!documentId) {
+                    const [result] = await chrome.scripting.executeScript({
+                        target: {tabId: tab.id},
+                        func: () => null
+                    }).catch(() => []);
+                    documentId = result?.documentId;
+                }
+                const data = {host, tabId: tab.id, ...(documentId ? {documentId} : {})};
+                const saved = await chrome.runtime.sendMessage(everything ? {customClear: data}
+                    : {customRemove: {...data, selectors: [...selected]}}).catch(() => false);
+                changed ||= saved === true;
+                return saved;
+            })();
+            const saved = await deletion;
             if (closed) {
                 return;
             }
             busy = false;
             disarm();
             if (saved === true) {
-                changed = true;
                 entries = everything ? [] : entries.filter(({s}) => !selected.has(s));
                 selected.clear();
                 render();
