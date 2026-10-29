@@ -32,7 +32,7 @@ CLAUDE.md                           ← строка @AGENTS.md (нет файл
 .gitignore                          ← недостающие строки (ниже)
 .claude/
   skills → ../.agents/skills        ссылка (см. ниже)
-  agents/worker.md, reviewer.md     ← templates/claude-agents/ (только если таких нет)
+  agents/worker.md, reviewer.md     ← templates/claude-subagents/ (только если таких нет)
 .agents/
   docs/README.md                    ← templates/docs-README.md + разделы из разведки
   skills/orchestrator/              ← копия orchestrator/ (вся папка)
