@@ -259,7 +259,8 @@
                 }
                 description.append(line);
                 if (item.t) {
-                    const text = node('bdi', 'hidden-text', t('pickQuote', item.t));
+                    const text = node('span', 'hidden-text');
+                    text.append(node('bdi', '', t('pickQuote', item.t)));
                     description.append(text);
                 }
                 if (item.count === 0) {
