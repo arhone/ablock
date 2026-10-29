@@ -380,7 +380,7 @@
         "message": "Serverio antraštės nematomos — įvertinimas pagal neišsamius duomenis"
     },
     "scoreSpeedUnsure": {
-        "message": "Puslapis neleido patikrinti — Google metrikų nėra, greitis vertinamas tik pagal dydį, protokolą ir įkėlimo laiką"
+        "message": "Puslapis neleido patikrinti — Google metrikų nėra, greitis vertinamas tik pagal naršyklės duomenis"
     },
     "scoreCapHttps": {
         "message": "Be HTTPS įvertinimas ne didesnis nei 4"

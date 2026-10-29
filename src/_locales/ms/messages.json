@@ -380,7 +380,7 @@
         "message": "Pengepala pelayan tidak kelihatan — skor berdasarkan data yang tidak lengkap"
     },
     "scoreSpeedUnsure": {
-        "message": "Halaman tidak membenarkan audit — tiada metrik Google, kelajuan hanya berdasarkan saiz, protokol dan masa muat"
+        "message": "Halaman tidak membenarkan audit — tiada metrik Google, kelajuan hanya berdasarkan data pelayar"
     },
     "scoreCapHttps": {
         "message": "Tanpa HTTPS skor paling tinggi 4"

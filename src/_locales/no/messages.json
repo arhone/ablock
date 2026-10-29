@@ -380,7 +380,7 @@
         "message": "Serverens headere er ikke synlige — karakteren bygger på ufullstendige data"
     },
     "scoreSpeedUnsure": {
-        "message": "Siden tillot ikke sjekken — Googles målinger mangler, hastigheten bygger bare på størrelse, protokoll og lastetid"
+        "message": "Siden tillot ikke sjekken — Googles målinger mangler, hastigheten bygger bare på nettleserens data"
     },
     "scoreCapHttps": {
         "message": "Uten HTTPS er karakteren høyst 4"

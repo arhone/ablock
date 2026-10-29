@@ -380,7 +380,7 @@
         "message": "Serveri päised pole nähtavad — hinne põhineb puudulikel andmetel"
     },
     "scoreSpeedUnsure": {
-        "message": "Leht ei lubanud kontrolli — Google'i mõõdikuid pole, kiirus põhineb ainult mahul, protokollil ja laadimisajal"
+        "message": "Leht ei lubanud kontrolli — Google'i mõõdikuid pole, kiirus põhineb ainult brauseri andmetel"
     },
     "scoreCapHttps": {
         "message": "HTTPS-ita on hinne kuni 4"

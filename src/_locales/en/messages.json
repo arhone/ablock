@@ -380,7 +380,7 @@
         "message": "Server headers aren’t visible — the score is based on incomplete data"
     },
     "scoreSpeedUnsure": {
-        "message": "The page didn’t allow the audit — there are no Google metrics, so speed is based only on size, protocol and load time"
+        "message": "The page didn’t allow the audit — there are no Google metrics, so speed is based only on browser data"
     },
     "scoreCapHttps": {
         "message": "Without HTTPS the score is at most 4"

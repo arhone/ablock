@@ -380,7 +380,7 @@
         "message": "Os cabeçalhos do servidor não estão visíveis — classificação com dados incompletos"
     },
     "scoreSpeedUnsure": {
-        "message": "A página não permitiu a auditoria — não há métricas da Google, a velocidade usa só o peso, o protocolo e o tempo de carregamento"
+        "message": "A página não permitiu a auditoria — não há métricas da Google, a velocidade usa só dados do navegador"
     },
     "scoreCapHttps": {
         "message": "Sem HTTPS a classificação não passa de 4"

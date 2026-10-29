@@ -380,7 +380,7 @@
         "message": "Les en-têtes du serveur ne sont pas visibles — note fondée sur des données incomplètes"
     },
     "scoreSpeedUnsure": {
-        "message": "La page n’a pas permis l’audit — pas de métriques Google, la vitesse ne repose que sur le poids, le protocole et le temps de chargement"
+        "message": "La page n’a pas permis l’audit — pas de métriques Google, la vitesse ne repose que sur les données du navigateur"
     },
     "scoreCapHttps": {
         "message": "Sans HTTPS, la note ne dépasse pas 4"

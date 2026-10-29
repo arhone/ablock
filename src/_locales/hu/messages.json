@@ -380,7 +380,7 @@
         "message": "A szerver fejlécei nem láthatók — az értékelés hiányos adatokon alapul"
     },
     "scoreSpeedUnsure": {
-        "message": "Az oldal nem engedte az ellenőrzést — nincsenek Google-mérőszámok, a sebesség csak a méreten, a protokollon és a betöltési időn alapul"
+        "message": "Az oldal nem engedte az ellenőrzést — nincsenek Google-mérőszámok, a sebesség csak a böngésző adatain alapul"
     },
     "scoreCapHttps": {
         "message": "HTTPS nélkül legfeljebb 4"

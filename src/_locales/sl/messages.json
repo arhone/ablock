@@ -380,7 +380,7 @@
         "message": "Glave strežnika niso vidne — ocena temelji na nepopolnih podatkih"
     },
     "scoreSpeedUnsure": {
-        "message": "Stran ni dovolila preverjanja — Googlovih meritev ni, hitrost temelji le na velikosti, protokolu in času nalaganja"
+        "message": "Stran ni dovolila preverjanja — Googlovih meritev ni, hitrost temelji le na podatkih brskalnika"
     },
     "scoreCapHttps": {
         "message": "Brez HTTPS je ocena največ 4"

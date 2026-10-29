@@ -380,7 +380,7 @@
         "message": "Las cabeceras del servidor no se ven: la nota se basa en datos incompletos"
     },
     "scoreSpeedUnsure": {
-        "message": "La página no permitió la auditoría: no hay métricas de Google y la velocidad solo se basa en el peso, el protocolo y el tiempo de carga"
+        "message": "La página no permitió la auditoría: no hay métricas de Google y la velocidad solo se basa en datos del navegador"
     },
     "scoreCapHttps": {
         "message": "Sin HTTPS la nota no supera 4"
