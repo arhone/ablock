@@ -43,7 +43,7 @@
      */
     const siteFile = async (path) => {
         try {
-            const response = await fetch(path, {signal: AbortSignal.timeout(2000), credentials: 'omit', redirect: 'follow'});
+            const response = await fetch(new URL(path, location.origin), {signal: AbortSignal.timeout(2000), credentials: 'omit', redirect: 'follow'});
             const type = response.headers.get('content-type') || '';
             if (!response.ok || /html/i.test(type)) {
                 return null;
