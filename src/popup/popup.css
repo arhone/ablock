@@ -632,6 +632,12 @@ body.loading {
     font-size: 12px;
     font-variant-numeric: tabular-nums;
 }
+.h-num small {
+    margin-inline-start: 0.3em;
+}
+.h-num small.tight {
+    margin-inline-start: 0;
+}
 .h-note {
     margin: 0 0 3px;
     color: var(--muted);

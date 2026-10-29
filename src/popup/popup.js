@@ -1570,7 +1570,9 @@ function renderScore(info, companies, audit, rows, server) {
             v.textContent = value;
             const small = document.createElement('small');
             small.textContent = t('scoreOutOf');
-            h.append(v, ' ', small);
+            // Отступ — в CSS: «из 10» отдельно, а «/10» (финский, эстонский, венгерский…) — вплотную, как дробь
+            small.classList.toggle('tight', /^\/\S/.test(small.textContent));
+            h.append(v, small);
             title.append(h);
         }
     }
