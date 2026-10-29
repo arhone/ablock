@@ -632,10 +632,10 @@ body.loading {
     font-size: 12px;
     font-variant-numeric: tabular-nums;
 }
-.h-num small {
+.h-num .of {
     margin-inline-start: 0.3em;
 }
-.h-num small.tight {
+.h-num .of.tight {
     margin-inline-start: 0;
 }
 .h-note {
