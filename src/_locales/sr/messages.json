@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Отвориће се подешавања додатака прегледача — тамо укључите за ABlock дозволу у режиму без архивирања"
+    },
+    "pickLabel": {
+        "message": "Сакриј елемент"
+    },
+    "pickTitle": {
+        "message": "Изаберите елемент на страници и сакријте га на овом сајту"
+    },
+    "pickCountTitle": {
+        "message": "Сакривено на овом сајту: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Укључите заштиту на овом сајту"
+    },
+    "pickTemp": {
+        "message": "Само до поновног учитавања"
+    },
+    "pickAllow": {
+        "message": "Дозволи на овом сајту"
+    },
+    "pickAllowTitle": {
+        "message": "Елементи ће остати сакривени и после поновног учитавања. Прегледач ће затражити приступ овом сајту"
+    },
+    "pickAllowed": {
+        "message": "Сакривено и после учитавања"
+    },
+    "pickCleared": {
+        "message": "Све је поново на страници"
+    },
+    "hiddenTitle": {
+        "message": "Сакривено на $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Назад"
+    },
+    "hiddenSelectAll": {
+        "message": "Изабери све"
+    },
+    "hiddenSelected": {
+        "message": "Изабрано: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Обриши"
+    },
+    "hiddenDeleteN": {
+        "message": "Обриши ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Обриши све"
+    },
+    "hiddenClearConfirm": {
+        "message": "Обрисати свих $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Сви сакривени елементи ће се поново појавити на страници"
+    },
+    "hiddenHint": {
+        "message": "Пређите показивачем преко реда да истакнете елемент на страници"
+    },
+    "hiddenLit": {
+        "message": "Елемент је истакнут на страници"
+    },
+    "hiddenMissing": {
+        "message": "нема га на овој страници"
+    },
+    "hiddenMissingHint": {
+        "message": "Нема га на овој страници — нема шта да се истакне"
+    },
+    "hiddenOffHint": {
+        "message": "Заштита сајта је искључена — сакривени елементи су сада видљиви"
+    },
+    "kindImage": {
+        "message": "Слика"
+    },
+    "kindVideo": {
+        "message": "Видео"
+    },
+    "kindFrame": {
+        "message": "Уграђени блок"
+    },
+    "kindBanner": {
+        "message": "Банер"
+    },
+    "kindDialog": {
+        "message": "Прозор"
+    },
+    "kindBlock": {
+        "message": "Блок"
+    },
+    "pickQuote": {
+        "message": "„$TEXT$“",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Кликните на елемент који желите да сакријете"
+    },
+    "pickHintTouch": {
+        "message": "Додирните елемент који желите да сакријете"
+    },
+    "pickEsc": {
+        "message": "Esc — откажи"
+    },
+    "pickWider": {
+        "message": "Шире"
+    },
+    "pickNarrower": {
+        "message": "Уже"
+    },
+    "pickHide": {
+        "message": "Сакриј"
+    },
+    "pickCancel": {
+        "message": "Откажи"
+    },
+    "pickMatches": {
+        "message": "Подударања: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Подударања: $COUNT$ — сва ће бити сакривена",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Сакривено"
+    },
+    "pickDoneList": {
+        "message": "списак — у прозору ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Сакривено до поновног учитавања"
+    },
+    "pickDoneTempSave": {
+        "message": "сачувајте — у прозору ABlock"
+    },
+    "pickLimit": {
+        "message": "На сајту је већ сакривено 100 елемената — обришите непотребне у прозору ABlock"
     }
 }

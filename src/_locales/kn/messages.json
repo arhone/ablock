@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "ಬ್ರೌಸರ್‌ನ ವಿಸ್ತರಣೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು ತೆರೆಯುತ್ತವೆ — ಅಲ್ಲಿ ABlock ಗಾಗಿ ಅಜ್ಞಾತ ಮೋಡ್‌ನಲ್ಲಿ ಅನುಮತಿಯನ್ನು ಆನ್ ಮಾಡಿ"
+    },
+    "pickLabel": {
+        "message": "ಅಂಶ ಮರೆಮಾಡಿ"
+    },
+    "pickTitle": {
+        "message": "ಪುಟದಲ್ಲಿ ಅಂಶ ಆಯ್ಕೆಮಾಡಿ ಈ ಸೈಟ್‌ನಲ್ಲಿ ಮರೆಮಾಡಿ"
+    },
+    "pickCountTitle": {
+        "message": "ಈ ಸೈಟ್‌ನಲ್ಲಿ ಮರೆಮಾಡಿರುವುದು: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "ಈ ಸೈಟ್‌ನಲ್ಲಿ ರಕ್ಷಣೆ ಆನ್ ಮಾಡಿ"
+    },
+    "pickTemp": {
+        "message": "ಮತ್ತೆ ಲೋಡ್ ಮಾಡುವವರೆಗೆ ಮಾತ್ರ"
+    },
+    "pickAllow": {
+        "message": "ಈ ಸೈಟ್‌ನಲ್ಲಿ ಅನುಮತಿಸಿ"
+    },
+    "pickAllowTitle": {
+        "message": "ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿದರೂ ಅಂಶಗಳು ಮರೆಯಾಗಿರುತ್ತವೆ. ಬ್ರೌಸರ್ ಈ ಸೈಟ್‌ಗೆ ಪ್ರವೇಶ ಅನುಮತಿ ಕೇಳುತ್ತದೆ"
+    },
+    "pickAllowed": {
+        "message": "ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿದರೂ ಮರೆಯಾಗಿರುತ್ತದೆ"
+    },
+    "pickCleared": {
+        "message": "ಎಲ್ಲವೂ ಪುಟಕ್ಕೆ ಮರಳಿದೆ"
+    },
+    "hiddenTitle": {
+        "message": "$HOST$ ನಲ್ಲಿ ಮರೆಮಾಡಿರುವುದು",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "ಹಿಂದೆ"
+    },
+    "hiddenSelectAll": {
+        "message": "ಎಲ್ಲವನ್ನೂ ಆಯ್ಕೆಮಾಡಿ"
+    },
+    "hiddenSelected": {
+        "message": "ಆಯ್ಕೆಮಾಡಿದ್ದು: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "ಅಳಿಸಿ"
+    },
+    "hiddenDeleteN": {
+        "message": "ಅಳಿಸಿ ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "ಎಲ್ಲವನ್ನೂ ತೆರವುಗೊಳಿಸಿ"
+    },
+    "hiddenClearConfirm": {
+        "message": "ಎಲ್ಲ $COUNT$ ಅಂಶಗಳನ್ನು ತೆರವುಗೊಳಿಸಬೇಕೇ?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "ಮರೆಮಾಡಿದ ಎಲ್ಲ ಅಂಶಗಳು ಪುಟದಲ್ಲಿ ಮತ್ತೆ ಕಾಣಿಸುತ್ತವೆ"
+    },
+    "hiddenHint": {
+        "message": "ಸಾಲಿನ ಮೇಲೆ ಸೂಚಕ ಇರಿಸಿದರೆ ಪುಟದಲ್ಲಿ ಅಂಶ ಎದ್ದು ಕಾಣುತ್ತದೆ"
+    },
+    "hiddenLit": {
+        "message": "ಪುಟದಲ್ಲಿ ಅಂಶ ಎದ್ದು ಕಾಣುತ್ತಿದೆ"
+    },
+    "hiddenMissing": {
+        "message": "ಈ ಪುಟದಲ್ಲಿ ಇಲ್ಲ"
+    },
+    "hiddenMissingHint": {
+        "message": "ಈ ಪುಟದಲ್ಲಿ ಇಲ್ಲ — ಎತ್ತಿ ತೋರಿಸಲು ಏನೂ ಇಲ್ಲ"
+    },
+    "hiddenOffHint": {
+        "message": "ಸೈಟ್ ರಕ್ಷಣೆ ಆಫ್ ಆಗಿದೆ — ಮರೆಮಾಡಿದ ಅಂಶಗಳು ಈಗ ಕಾಣುತ್ತವೆ"
+    },
+    "kindImage": {
+        "message": "ಚಿತ್ರ"
+    },
+    "kindVideo": {
+        "message": "ವೀಡಿಯೊ"
+    },
+    "kindFrame": {
+        "message": "ಎಂಬೆಡ್ ಮಾಡಿದ ಬ್ಲಾಕ್"
+    },
+    "kindBanner": {
+        "message": "ಬ್ಯಾನರ್"
+    },
+    "kindDialog": {
+        "message": "ವಿಂಡೋ"
+    },
+    "kindBlock": {
+        "message": "ಬ್ಲಾಕ್"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "ಮರೆಮಾಡಬೇಕಾದ ಅಂಶ ಕ್ಲಿಕ್ ಮಾಡಿ"
+    },
+    "pickHintTouch": {
+        "message": "ಮರೆಮಾಡಬೇಕಾದ ಅಂಶ ಸ್ಪರ್ಶಿಸಿ"
+    },
+    "pickEsc": {
+        "message": "Esc — ರದ್ದು"
+    },
+    "pickWider": {
+        "message": "ವಿಸ್ತರಿಸಿ"
+    },
+    "pickNarrower": {
+        "message": "ಕುಗ್ಗಿಸಿ"
+    },
+    "pickHide": {
+        "message": "ಮರೆಮಾಡಿ"
+    },
+    "pickCancel": {
+        "message": "ರದ್ದು"
+    },
+    "pickMatches": {
+        "message": "ಹೊಂದಾಣಿಕೆಗಳು: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "ಹೊಂದಾಣಿಕೆಗಳು: $COUNT$ — ಎಲ್ಲವೂ ಮರೆಯಾಗುತ್ತವೆ",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "ಮರೆಮಾಡಲಾಗಿದೆ"
+    },
+    "pickDoneList": {
+        "message": "ಪಟ್ಟಿ — ABlock ವಿಂಡೋದಲ್ಲಿ"
+    },
+    "pickDoneTemp": {
+        "message": "ಮತ್ತೆ ಲೋಡ್ ಮಾಡುವವರೆಗೆ ಮರೆಯಾಗಿದೆ"
+    },
+    "pickDoneTempSave": {
+        "message": "ಉಳಿಸಲು — ABlock ವಿಂಡೋ ತೆರೆಯಿರಿ"
+    },
+    "pickLimit": {
+        "message": "ಸೈಟ್‌ನಲ್ಲಿ ಈಗಾಗಲೇ 100 ಅಂಶಗಳು ಮರೆಯಾಗಿವೆ — ಅನಗತ್ಯವಾದವುಗಳನ್ನು ABlock ವಿಂಡೋದಲ್ಲಿ ಅಳಿಸಿ"
     }
 }

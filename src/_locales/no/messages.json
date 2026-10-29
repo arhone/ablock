@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Nettleserens innstillinger for utvidelser åpnes – slå på tillatelse i inkognitomodus for ABlock der"
+    },
+    "pickLabel": {
+        "message": "Skjul element"
+    },
+    "pickTitle": {
+        "message": "Velg et element på siden og skjul det på dette nettstedet"
+    },
+    "pickCountTitle": {
+        "message": "Skjult på dette nettstedet: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Slå på beskyttelse på dette nettstedet"
+    },
+    "pickTemp": {
+        "message": "Bare til siden lastes inn på nytt"
+    },
+    "pickAllow": {
+        "message": "Tillat på nettstedet"
+    },
+    "pickAllowTitle": {
+        "message": "Elementene forblir skjult etter ny innlasting. Nettleseren ber om tilgang til dette nettstedet"
+    },
+    "pickAllowed": {
+        "message": "Skjult også etter ny innlasting"
+    },
+    "pickCleared": {
+        "message": "Alt er tilbake på siden"
+    },
+    "hiddenTitle": {
+        "message": "Skjult på $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Tilbake"
+    },
+    "hiddenSelectAll": {
+        "message": "Velg alle"
+    },
+    "hiddenSelected": {
+        "message": "Valgt: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Slett"
+    },
+    "hiddenDeleteN": {
+        "message": "Slett ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Fjern alle"
+    },
+    "hiddenClearConfirm": {
+        "message": "Fjerne alle $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Alle skjulte elementer vises på siden igjen"
+    },
+    "hiddenHint": {
+        "message": "Hold pekeren over en rad for å fremheve elementet på siden"
+    },
+    "hiddenLit": {
+        "message": "Elementet er fremhevet på siden"
+    },
+    "hiddenMissing": {
+        "message": "finnes ikke på denne siden"
+    },
+    "hiddenMissingHint": {
+        "message": "Finnes ikke på denne siden — ingenting å fremheve"
+    },
+    "hiddenOffHint": {
+        "message": "Nettstedsbeskyttelse er av — skjulte elementer er nå synlige"
+    },
+    "kindImage": {
+        "message": "Bilde"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Innebygd blokk"
+    },
+    "kindBanner": {
+        "message": "Banner"
+    },
+    "kindDialog": {
+        "message": "Vindu"
+    },
+    "kindBlock": {
+        "message": "Blokk"
+    },
+    "pickQuote": {
+        "message": "«$TEXT$»",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Klikk på elementet du vil skjule"
+    },
+    "pickHintTouch": {
+        "message": "Trykk på elementet du vil skjule"
+    },
+    "pickEsc": {
+        "message": "Esc — avbryt"
+    },
+    "pickWider": {
+        "message": "Bredere"
+    },
+    "pickNarrower": {
+        "message": "Smalere"
+    },
+    "pickHide": {
+        "message": "Skjul"
+    },
+    "pickCancel": {
+        "message": "Avbryt"
+    },
+    "pickMatches": {
+        "message": "Treff: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Treff: $COUNT$ — alle blir skjult",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Skjult"
+    },
+    "pickDoneList": {
+        "message": "listen er i ABlock-vinduet"
+    },
+    "pickDoneTemp": {
+        "message": "Skjult til ny innlasting"
+    },
+    "pickDoneTempSave": {
+        "message": "lagre i ABlock-vinduet"
+    },
+    "pickLimit": {
+        "message": "Nettstedet har allerede 100 skjulte elementer — slett unødvendige i ABlock-vinduet"
     }
 }

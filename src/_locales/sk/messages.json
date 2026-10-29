@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Otvoria sa nastavenia rozšírení prehliadača — zapnite tam pre ABlock povolenie v režime inkognito"
+    },
+    "pickLabel": {
+        "message": "Skryť prvok"
+    },
+    "pickTitle": {
+        "message": "Vyberte prvok na stránke a skryte ho na tomto webe"
+    },
+    "pickCountTitle": {
+        "message": "Skryté na tejto stránke: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Zapnite ochranu na tejto stránke"
+    },
+    "pickTemp": {
+        "message": "Len do opätovného načítania"
+    },
+    "pickAllow": {
+        "message": "Povoliť na tejto stránke"
+    },
+    "pickAllowTitle": {
+        "message": "Prvky zostanú skryté aj po opätovnom načítaní. Prehliadač požiada o prístup k tejto stránke"
+    },
+    "pickAllowed": {
+        "message": "Skryté aj po načítaní"
+    },
+    "pickCleared": {
+        "message": "Všetko je späť na stránke"
+    },
+    "hiddenTitle": {
+        "message": "Skryté na $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Späť"
+    },
+    "hiddenSelectAll": {
+        "message": "Vybrať všetko"
+    },
+    "hiddenSelected": {
+        "message": "Vybrané: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Odstrániť"
+    },
+    "hiddenDeleteN": {
+        "message": "Odstrániť ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Vymazať všetko"
+    },
+    "hiddenClearConfirm": {
+        "message": "Vymazať všetkých $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Všetky skryté prvky sa znova zobrazia na stránke"
+    },
+    "hiddenHint": {
+        "message": "Ukážte na riadok — prvok sa zvýrazní na stránke"
+    },
+    "hiddenLit": {
+        "message": "Prvok je zvýraznený na stránke"
+    },
+    "hiddenMissing": {
+        "message": "nie je na tejto stránke"
+    },
+    "hiddenMissingHint": {
+        "message": "Nie je na tejto stránke — niet čo zvýrazniť"
+    },
+    "hiddenOffHint": {
+        "message": "Ochrana stránky je vypnutá — skryté prvky sú teraz viditeľné"
+    },
+    "kindImage": {
+        "message": "Obrázok"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Vložený blok"
+    },
+    "kindBanner": {
+        "message": "Banner"
+    },
+    "kindDialog": {
+        "message": "Okno"
+    },
+    "kindBlock": {
+        "message": "Blok"
+    },
+    "pickQuote": {
+        "message": "„$TEXT$“",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Kliknite na prvok, ktorý chcete skryť"
+    },
+    "pickHintTouch": {
+        "message": "Dotknite sa prvku, ktorý chcete skryť"
+    },
+    "pickEsc": {
+        "message": "Esc — zrušiť"
+    },
+    "pickWider": {
+        "message": "Širšie"
+    },
+    "pickNarrower": {
+        "message": "Užšie"
+    },
+    "pickHide": {
+        "message": "Skryť"
+    },
+    "pickCancel": {
+        "message": "Zrušiť"
+    },
+    "pickMatches": {
+        "message": "Zhody: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Zhody: $COUNT$ — všetky sa skryjú",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Skryté"
+    },
+    "pickDoneList": {
+        "message": "zoznam — v okne ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Skryté do opätovného načítania"
+    },
+    "pickDoneTempSave": {
+        "message": "uložiť — v okne ABlock"
+    },
+    "pickLimit": {
+        "message": "Na stránke je už 100 skrytých prvkov — nepotrebné odstráňte v okne ABlock"
     }
 }

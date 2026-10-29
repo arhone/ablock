@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Brauzer kengaytmalari sozlamalari ochiladi — u yerda ABlock uchun inkognito rejimi ruxsatini yoqing"
+    },
+    "pickLabel": {
+        "message": "Elementni yashirish"
+    },
+    "pickTitle": {
+        "message": "Sahifadagi elementni tanlab, shu saytda yashiring"
+    },
+    "pickCountTitle": {
+        "message": "Bu saytda yashirilgan: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Bu saytda himoyani yoqing"
+    },
+    "pickTemp": {
+        "message": "Faqat qayta yuklashgacha"
+    },
+    "pickAllow": {
+        "message": "Bu saytda ruxsat berish"
+    },
+    "pickAllowTitle": {
+        "message": "Qayta yuklangandan keyin ham yashirin qoladi. Brauzer bu saytga kirish uchun ruxsat soʻraydi"
+    },
+    "pickAllowed": {
+        "message": "Qayta yuklanganda ham yashiriladi"
+    },
+    "pickCleared": {
+        "message": "Hammasi sahifaga qaytdi"
+    },
+    "hiddenTitle": {
+        "message": "$HOST$ saytida yashirilgan",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Orqaga"
+    },
+    "hiddenSelectAll": {
+        "message": "Hammasini tanlash"
+    },
+    "hiddenSelected": {
+        "message": "Tanlangan: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Oʻchirish"
+    },
+    "hiddenDeleteN": {
+        "message": "Oʻchirish ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Hammasini tozalash"
+    },
+    "hiddenClearConfirm": {
+        "message": "Barcha $COUNT$ tasi tozalansinmi?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Yashirilgan barcha elementlar sahifada yana koʻrinadi"
+    },
+    "hiddenHint": {
+        "message": "Qatorga kursorni olib boring — sahifadagi element ajratib koʻrsatiladi"
+    },
+    "hiddenLit": {
+        "message": "Element sahifada ajratib koʻrsatilgan"
+    },
+    "hiddenMissing": {
+        "message": "bu sahifada yoʻq"
+    },
+    "hiddenMissingHint": {
+        "message": "Bu sahifada yoʻq — ajratib koʻrsatadigan element yoʻq"
+    },
+    "hiddenOffHint": {
+        "message": "Sayt himoyasi oʻchirilgan — yashirilgan elementlar hozir koʻrinadi"
+    },
+    "kindImage": {
+        "message": "Rasm"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Joylangan blok"
+    },
+    "kindBanner": {
+        "message": "Banner"
+    },
+    "kindDialog": {
+        "message": "Oyna"
+    },
+    "kindBlock": {
+        "message": "Blok"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Yashirmoqchi boʻlgan elementni bosing"
+    },
+    "pickHintTouch": {
+        "message": "Yashirmoqchi boʻlgan elementga teging"
+    },
+    "pickEsc": {
+        "message": "Esc — bekor qilish"
+    },
+    "pickWider": {
+        "message": "Kengroq"
+    },
+    "pickNarrower": {
+        "message": "Torroq"
+    },
+    "pickHide": {
+        "message": "Yashirish"
+    },
+    "pickCancel": {
+        "message": "Bekor qilish"
+    },
+    "pickMatches": {
+        "message": "Mosliklar: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Mosliklar: $COUNT$ — hammasi yashiriladi",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Yashirildi"
+    },
+    "pickDoneList": {
+        "message": "roʻyxat — ABlock oynasida"
+    },
+    "pickDoneTemp": {
+        "message": "Qayta yuklashgacha yashirildi"
+    },
+    "pickDoneTempSave": {
+        "message": "saqlash — ABlock oynasida"
+    },
+    "pickLimit": {
+        "message": "Saytda allaqachon 100 ta element yashirilgan — keraksizlarini ABlock oynasida oʻchiring"
     }
 }

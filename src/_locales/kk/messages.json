@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Браузердің кеңейтімдер параметрлері ашылады — сол жерде ABlock үшін инкогнито режиміне рұқсатты қосыңыз"
+    },
+    "pickLabel": {
+        "message": "Элементті жасыру"
+    },
+    "pickTitle": {
+        "message": "Беттен элементті таңдап, осы сайтта жасырыңыз"
+    },
+    "pickCountTitle": {
+        "message": "Осы сайтта жасырылған: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Осы сайтта қорғауды қосыңыз"
+    },
+    "pickTemp": {
+        "message": "Қайта жүктегенге дейін ғана"
+    },
+    "pickAllow": {
+        "message": "Осы сайтта рұқсат беру"
+    },
+    "pickAllowTitle": {
+        "message": "Қайта жүктегеннен кейін де жасырын қалады. Браузер осы сайтқа кіруге рұқсат сұрайды"
+    },
+    "pickAllowed": {
+        "message": "Қайта жүктегеннен кейін де жасырын"
+    },
+    "pickCleared": {
+        "message": "Бәрі бетке қайтарылды"
+    },
+    "hiddenTitle": {
+        "message": "$HOST$ сайтында жасырылған",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Артқа"
+    },
+    "hiddenSelectAll": {
+        "message": "Бәрін таңдау"
+    },
+    "hiddenSelected": {
+        "message": "Таңдалған: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Жою"
+    },
+    "hiddenDeleteN": {
+        "message": "Жою ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Бәрін тазалау"
+    },
+    "hiddenClearConfirm": {
+        "message": "Барлық $COUNT$ элементті тазалау керек пе?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Барлық жасырын элемент бетте қайта көрінеді"
+    },
+    "hiddenHint": {
+        "message": "Жолға меңзесеңіз, беттегі элемент ерекшеленеді"
+    },
+    "hiddenLit": {
+        "message": "Элемент бетте ерекшеленген"
+    },
+    "hiddenMissing": {
+        "message": "бұл бетте жоқ"
+    },
+    "hiddenMissingHint": {
+        "message": "Бұл бетте жоқ — ерекшелейтін элемент жоқ"
+    },
+    "hiddenOffHint": {
+        "message": "Сайттағы қорғау өшірулі — жасырын элементтер қазір көрінеді"
+    },
+    "kindImage": {
+        "message": "Сурет"
+    },
+    "kindVideo": {
+        "message": "Бейне"
+    },
+    "kindFrame": {
+        "message": "Ендірілген блок"
+    },
+    "kindBanner": {
+        "message": "Баннер"
+    },
+    "kindDialog": {
+        "message": "Терезе"
+    },
+    "kindBlock": {
+        "message": "Блок"
+    },
+    "pickQuote": {
+        "message": "«$TEXT$»",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Жасыратын элементті басыңыз"
+    },
+    "pickHintTouch": {
+        "message": "Жасыратын элементті түртіңіз"
+    },
+    "pickEsc": {
+        "message": "Esc — бас тарту"
+    },
+    "pickWider": {
+        "message": "Кеңірек"
+    },
+    "pickNarrower": {
+        "message": "Тарлау"
+    },
+    "pickHide": {
+        "message": "Жасыру"
+    },
+    "pickCancel": {
+        "message": "Бас тарту"
+    },
+    "pickMatches": {
+        "message": "Сәйкестік: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Сәйкестік: $COUNT$ — бәрі жасырылады",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Жасырылды"
+    },
+    "pickDoneList": {
+        "message": "тізім — ABlock терезесінде"
+    },
+    "pickDoneTemp": {
+        "message": "Қайта жүктегенге дейін жасырылды"
+    },
+    "pickDoneTempSave": {
+        "message": "сақтау — ABlock терезесінде"
+    },
+    "pickLimit": {
+        "message": "Сайтта 100 элемент жасырылған — артығын ABlock терезесінде жойыңыз"
     }
 }

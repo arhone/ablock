@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "การตั้งค่าส่วนขยายของเบราว์เซอร์จะเปิดขึ้น เปิดสิทธิ์ในโหมดไม่ระบุตัวตนสำหรับ ABlock ที่นั่น"
+    },
+    "pickLabel": {
+        "message": "ซ่อนองค์ประกอบ"
+    },
+    "pickTitle": {
+        "message": "เลือกองค์ประกอบบนหน้าและซ่อนในเว็บไซต์นี้"
+    },
+    "pickCountTitle": {
+        "message": "ซ่อนในเว็บไซต์นี้: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "เปิดการป้องกันในเว็บไซต์นี้"
+    },
+    "pickTemp": {
+        "message": "จนกว่าจะโหลดใหม่เท่านั้น"
+    },
+    "pickAllow": {
+        "message": "อนุญาตในเว็บไซต์นี้"
+    },
+    "pickAllowTitle": {
+        "message": "องค์ประกอบจะยังถูกซ่อนหลังโหลดใหม่ เบราว์เซอร์จะขอสิทธิ์เข้าถึงเว็บไซต์นี้"
+    },
+    "pickAllowed": {
+        "message": "ยังซ่อนหลังโหลดใหม่"
+    },
+    "pickCleared": {
+        "message": "ทุกอย่างกลับมาบนหน้าแล้ว"
+    },
+    "hiddenTitle": {
+        "message": "ซ่อนใน $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "กลับ"
+    },
+    "hiddenSelectAll": {
+        "message": "เลือกทั้งหมด"
+    },
+    "hiddenSelected": {
+        "message": "เลือกแล้ว: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "ลบ"
+    },
+    "hiddenDeleteN": {
+        "message": "ลบ ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "ล้างทั้งหมด"
+    },
+    "hiddenClearConfirm": {
+        "message": "ล้างทั้งหมด $COUNT$ รายการไหม?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "องค์ประกอบที่ซ่อนทั้งหมดจะกลับมาบนหน้า"
+    },
+    "hiddenHint": {
+        "message": "วางตัวชี้บนแถวเพื่อเน้นองค์ประกอบบนหน้า"
+    },
+    "hiddenLit": {
+        "message": "กำลังเน้นองค์ประกอบบนหน้า"
+    },
+    "hiddenMissing": {
+        "message": "ไม่มีในหน้านี้"
+    },
+    "hiddenMissingHint": {
+        "message": "ไม่มีในหน้านี้ — ไม่มีองค์ประกอบให้เน้น"
+    },
+    "hiddenOffHint": {
+        "message": "การป้องกันเว็บไซต์ปิดอยู่ — ตอนนี้องค์ประกอบที่ซ่อนจะแสดง"
+    },
+    "kindImage": {
+        "message": "รูปภาพ"
+    },
+    "kindVideo": {
+        "message": "วิดีโอ"
+    },
+    "kindFrame": {
+        "message": "บล็อกฝังตัว"
+    },
+    "kindBanner": {
+        "message": "แบนเนอร์"
+    },
+    "kindDialog": {
+        "message": "หน้าต่าง"
+    },
+    "kindBlock": {
+        "message": "บล็อก"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "คลิกองค์ประกอบที่ต้องการซ่อน"
+    },
+    "pickHintTouch": {
+        "message": "แตะองค์ประกอบที่ต้องการซ่อน"
+    },
+    "pickEsc": {
+        "message": "Esc — ยกเลิก"
+    },
+    "pickWider": {
+        "message": "กว้างขึ้น"
+    },
+    "pickNarrower": {
+        "message": "แคบลง"
+    },
+    "pickHide": {
+        "message": "ซ่อน"
+    },
+    "pickCancel": {
+        "message": "ยกเลิก"
+    },
+    "pickMatches": {
+        "message": "ตรงกัน: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "ตรงกัน: $COUNT$ — จะซ่อนทั้งหมด",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "ซ่อนแล้ว"
+    },
+    "pickDoneList": {
+        "message": "ดูรายการในหน้าต่าง ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "ซ่อนจนกว่าจะโหลดใหม่"
+    },
+    "pickDoneTempSave": {
+        "message": "บันทึกในหน้าต่าง ABlock"
+    },
+    "pickLimit": {
+        "message": "เว็บไซต์นี้มีองค์ประกอบที่ซ่อนอยู่แล้ว 100 รายการ — ลบรายการที่ไม่ต้องการในหน้าต่าง ABlock"
     }
 }

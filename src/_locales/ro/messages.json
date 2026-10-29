@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Se vor deschide setările pentru extensii ale browserului — activați acolo permisiunea ABlock în modul incognito"
+    },
+    "pickLabel": {
+        "message": "Ascunde elementul"
+    },
+    "pickTitle": {
+        "message": "Selectează un element din pagină și ascunde-l pe acest site"
+    },
+    "pickCountTitle": {
+        "message": "Ascunse pe acest site: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Activează protecția pe acest site"
+    },
+    "pickTemp": {
+        "message": "Doar până la reîncărcare"
+    },
+    "pickAllow": {
+        "message": "Permite pe acest site"
+    },
+    "pickAllowTitle": {
+        "message": "Elementele vor rămâne ascunse după reîncărcare. Browserul va cere acces la acest site"
+    },
+    "pickAllowed": {
+        "message": "Ascunse și după reîncărcare"
+    },
+    "pickCleared": {
+        "message": "Totul este din nou pe pagină"
+    },
+    "hiddenTitle": {
+        "message": "Ascunse pe $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Înapoi"
+    },
+    "hiddenSelectAll": {
+        "message": "Selectează tot"
+    },
+    "hiddenSelected": {
+        "message": "Selectate: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Șterge"
+    },
+    "hiddenDeleteN": {
+        "message": "Șterge ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Golește lista"
+    },
+    "hiddenClearConfirm": {
+        "message": "Ștergi toate cele $COUNT$ elemente?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Toate elementele ascunse vor reapărea pe pagină"
+    },
+    "hiddenHint": {
+        "message": "Treci cu cursorul peste un rând pentru a evidenția elementul pe pagină"
+    },
+    "hiddenLit": {
+        "message": "Element evidențiat pe pagină"
+    },
+    "hiddenMissing": {
+        "message": "nu se află pe această pagină"
+    },
+    "hiddenMissingHint": {
+        "message": "Nu se află pe această pagină — nimic de evidențiat"
+    },
+    "hiddenOffHint": {
+        "message": "Protecția site-ului este dezactivată — elementele ascunse sunt vizibile"
+    },
+    "kindImage": {
+        "message": "Imagine"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Bloc încorporat"
+    },
+    "kindBanner": {
+        "message": "Banner"
+    },
+    "kindDialog": {
+        "message": "Fereastră"
+    },
+    "kindBlock": {
+        "message": "Bloc"
+    },
+    "pickQuote": {
+        "message": "„$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Fă clic pe elementul de ascuns"
+    },
+    "pickHintTouch": {
+        "message": "Atinge elementul de ascuns"
+    },
+    "pickEsc": {
+        "message": "Esc — anulează"
+    },
+    "pickWider": {
+        "message": "Mai larg"
+    },
+    "pickNarrower": {
+        "message": "Mai restrâns"
+    },
+    "pickHide": {
+        "message": "Ascunde"
+    },
+    "pickCancel": {
+        "message": "Anulează"
+    },
+    "pickMatches": {
+        "message": "Potriviri: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Potriviri: $COUNT$ — toate vor fi ascunse",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Ascuns"
+    },
+    "pickDoneList": {
+        "message": "lista — în fereastra ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Ascuns până la reîncărcare"
+    },
+    "pickDoneTempSave": {
+        "message": "salvează — în fereastra ABlock"
+    },
+    "pickLimit": {
+        "message": "Site-ul are deja 100 de elemente ascunse — șterge-le pe cele inutile din fereastra ABlock"
     }
 }

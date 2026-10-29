@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Otworzą się ustawienia rozszerzeń przeglądarki — włącz tam dla ABlock zezwolenie w trybie incognito"
+    },
+    "pickLabel": {
+        "message": "Ukryj element"
+    },
+    "pickTitle": {
+        "message": "Wybierz element na stronie i ukryj go w tej witrynie"
+    },
+    "pickCountTitle": {
+        "message": "Ukryte na tej stronie: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Włącz ochronę na tej stronie"
+    },
+    "pickTemp": {
+        "message": "Tylko do przeładowania"
+    },
+    "pickAllow": {
+        "message": "Zezwól na tej stronie"
+    },
+    "pickAllowTitle": {
+        "message": "Elementy pozostaną ukryte po przeładowaniu. Przeglądarka poprosi o dostęp do tej strony"
+    },
+    "pickAllowed": {
+        "message": "Ukryte także po przeładowaniu"
+    },
+    "pickCleared": {
+        "message": "Wszystko znów jest na stronie"
+    },
+    "hiddenTitle": {
+        "message": "Ukryte na $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Wstecz"
+    },
+    "hiddenSelectAll": {
+        "message": "Zaznacz wszystko"
+    },
+    "hiddenSelected": {
+        "message": "Zaznaczono: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Usuń"
+    },
+    "hiddenDeleteN": {
+        "message": "Usuń ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Wyczyść wszystko"
+    },
+    "hiddenClearConfirm": {
+        "message": "Wyczyścić wszystkie ($COUNT$)?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Wszystkie ukryte elementy znów pojawią się na stronie"
+    },
+    "hiddenHint": {
+        "message": "Najedź na wiersz, aby wyróżnić element na stronie"
+    },
+    "hiddenLit": {
+        "message": "Element jest wyróżniony na stronie"
+    },
+    "hiddenMissing": {
+        "message": "brak na tej stronie"
+    },
+    "hiddenMissingHint": {
+        "message": "Brak na tej stronie — nie ma czego wyróżnić"
+    },
+    "hiddenOffHint": {
+        "message": "Ochrona strony jest wyłączona — ukryte elementy są teraz widoczne"
+    },
+    "kindImage": {
+        "message": "Obraz"
+    },
+    "kindVideo": {
+        "message": "Wideo"
+    },
+    "kindFrame": {
+        "message": "Osadzony blok"
+    },
+    "kindBanner": {
+        "message": "Baner"
+    },
+    "kindDialog": {
+        "message": "Okno"
+    },
+    "kindBlock": {
+        "message": "Blok"
+    },
+    "pickQuote": {
+        "message": "„$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Kliknij element, który chcesz ukryć"
+    },
+    "pickHintTouch": {
+        "message": "Dotknij elementu, który chcesz ukryć"
+    },
+    "pickEsc": {
+        "message": "Esc — anuluj"
+    },
+    "pickWider": {
+        "message": "Szerzej"
+    },
+    "pickNarrower": {
+        "message": "Węziej"
+    },
+    "pickHide": {
+        "message": "Ukryj"
+    },
+    "pickCancel": {
+        "message": "Anuluj"
+    },
+    "pickMatches": {
+        "message": "Dopasowania: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Dopasowania: $COUNT$ — wszystkie zostaną ukryte",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Ukryto"
+    },
+    "pickDoneList": {
+        "message": "lista — w oknie ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Ukryto do przeładowania"
+    },
+    "pickDoneTempSave": {
+        "message": "zapisz — w oknie ABlock"
+    },
+    "pickLimit": {
+        "message": "Na stronie ukryto już 100 elementów — usuń zbędne w oknie ABlock"
     }
 }

@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "உலாவியின் நீட்டிப்பு அமைப்புகள் திறக்கும் — அங்கே ABlock-க்கு மறைநிலைக்கான அனுமதியை இயக்கவும்"
+    },
+    "pickLabel": {
+        "message": "உறுப்பை மறை"
+    },
+    "pickTitle": {
+        "message": "பக்கத்தில் ஓர் உறுப்பைத் தேர்ந்து இந்தத் தளத்தில் மறைக்கவும்"
+    },
+    "pickCountTitle": {
+        "message": "இந்தத் தளத்தில் மறைத்தவை: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "இந்தத் தளத்தில் பாதுகாப்பை இயக்கு"
+    },
+    "pickTemp": {
+        "message": "மீண்டும் ஏற்றும் வரை மட்டும்"
+    },
+    "pickAllow": {
+        "message": "இந்தத் தளத்தில் அனுமதி"
+    },
+    "pickAllowTitle": {
+        "message": "மீண்டும் ஏற்றிய பிறகும் மறைந்திருக்கும். இந்தத் தளத்தை அணுக உலாவி அனுமதி கேட்கும்"
+    },
+    "pickAllowed": {
+        "message": "மீண்டும் ஏற்றினாலும் மறையும்"
+    },
+    "pickCleared": {
+        "message": "அனைத்தும் பக்கத்தில் மீண்டும் தெரிகின்றன"
+    },
+    "hiddenTitle": {
+        "message": "$HOST$-இல் மறைத்தவை",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "பின்செல்"
+    },
+    "hiddenSelectAll": {
+        "message": "அனைத்தையும் தேர்ந்தெடு"
+    },
+    "hiddenSelected": {
+        "message": "தேர்ந்தெடுத்தவை: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "நீக்கு"
+    },
+    "hiddenDeleteN": {
+        "message": "நீக்கு ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "அனைத்தையும் அழி"
+    },
+    "hiddenClearConfirm": {
+        "message": "அனைத்து $COUNT$ பதிவுகளையும் அழிக்கவா?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "மறைத்த உறுப்புகள் அனைத்தும் பக்கத்தில் மீண்டும் தோன்றும்"
+    },
+    "hiddenHint": {
+        "message": "வரியில் சுட்டியை வைத்தால் பக்கத்தில் உறுப்பு முன்னிலைப்படும்"
+    },
+    "hiddenLit": {
+        "message": "பக்கத்தில் உறுப்பு முன்னிலைப்படுத்தப்பட்டுள்ளது"
+    },
+    "hiddenMissing": {
+        "message": "இந்தப் பக்கத்தில் இல்லை"
+    },
+    "hiddenMissingHint": {
+        "message": "இந்தப் பக்கத்தில் இல்லை — முன்னிலைப்படுத்த ஏதுமில்லை"
+    },
+    "hiddenOffHint": {
+        "message": "தளப் பாதுகாப்பு நிறுத்தப்பட்டுள்ளது — மறைத்த உறுப்புகள் இப்போது தெரிகின்றன"
+    },
+    "kindImage": {
+        "message": "படம்"
+    },
+    "kindVideo": {
+        "message": "வீடியோ"
+    },
+    "kindFrame": {
+        "message": "உட்பொதித்த தொகுதி"
+    },
+    "kindBanner": {
+        "message": "பதாகை"
+    },
+    "kindDialog": {
+        "message": "சாளரம்"
+    },
+    "kindBlock": {
+        "message": "தொகுதி"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "மறைக்க வேண்டிய உறுப்பைக் கிளிக் செய்யவும்"
+    },
+    "pickHintTouch": {
+        "message": "மறைக்க வேண்டிய உறுப்பைத் தொடவும்"
+    },
+    "pickEsc": {
+        "message": "Esc — ரத்து"
+    },
+    "pickWider": {
+        "message": "விரிவாக்கு"
+    },
+    "pickNarrower": {
+        "message": "சுருக்கு"
+    },
+    "pickHide": {
+        "message": "மறை"
+    },
+    "pickCancel": {
+        "message": "ரத்து"
+    },
+    "pickMatches": {
+        "message": "பொருத்தங்கள்: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "பொருத்தங்கள்: $COUNT$ — அனைத்தும் மறையும்",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "மறைக்கப்பட்டது"
+    },
+    "pickDoneList": {
+        "message": "பட்டியல் — ABlock சாளரத்தில்"
+    },
+    "pickDoneTemp": {
+        "message": "மீண்டும் ஏற்றும் வரை மறைந்திருக்கும்"
+    },
+    "pickDoneTempSave": {
+        "message": "சேமிக்க — ABlock சாளரத்தில்"
+    },
+    "pickLimit": {
+        "message": "தளத்தில் ஏற்கெனவே 100 உறுப்புகள் மறைக்கப்பட்டுள்ளன — தேவையற்றவற்றை ABlock சாளரத்தில் நீக்கவும்"
     }
 }

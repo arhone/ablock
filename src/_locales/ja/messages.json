@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "ブラウザの拡張機能の設定が開きます。そこで ABlock のシークレット モードでの実行を許可してください"
+    },
+    "pickLabel": {
+        "message": "要素を非表示"
+    },
+    "pickTitle": {
+        "message": "ページ上の要素を選び、このサイトで非表示にします"
+    },
+    "pickCountTitle": {
+        "message": "このサイトで非表示: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "このサイトの保護をオンにしてください"
+    },
+    "pickTemp": {
+        "message": "再読み込みまで有効"
+    },
+    "pickAllow": {
+        "message": "このサイトで許可"
+    },
+    "pickAllowTitle": {
+        "message": "再読み込み後も非表示になります。ブラウザがこのサイトへのアクセス許可を求めます"
+    },
+    "pickAllowed": {
+        "message": "再読み込み後も非表示"
+    },
+    "pickCleared": {
+        "message": "すべてページに戻りました"
+    },
+    "hiddenTitle": {
+        "message": "$HOST$ で非表示",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "戻る"
+    },
+    "hiddenSelectAll": {
+        "message": "すべて選択"
+    },
+    "hiddenSelected": {
+        "message": "選択済み: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "削除"
+    },
+    "hiddenDeleteN": {
+        "message": "削除 ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "すべて解除"
+    },
+    "hiddenClearConfirm": {
+        "message": "$COUNT$ 件すべて解除しますか？",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "非表示の要素がすべてページに戻ります"
+    },
+    "hiddenHint": {
+        "message": "行にカーソルを合わせるとページの要素を強調表示します"
+    },
+    "hiddenLit": {
+        "message": "ページの要素を強調表示中"
+    },
+    "hiddenMissing": {
+        "message": "このページにはありません"
+    },
+    "hiddenMissingHint": {
+        "message": "このページにはないため強調表示できません"
+    },
+    "hiddenOffHint": {
+        "message": "サイトの保護がオフのため、非表示の要素が見えています"
+    },
+    "kindImage": {
+        "message": "画像"
+    },
+    "kindVideo": {
+        "message": "動画"
+    },
+    "kindFrame": {
+        "message": "埋め込みブロック"
+    },
+    "kindBanner": {
+        "message": "バナー"
+    },
+    "kindDialog": {
+        "message": "ウィンドウ"
+    },
+    "kindBlock": {
+        "message": "ブロック"
+    },
+    "pickQuote": {
+        "message": "「$TEXT$」",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "非表示にする要素をクリックしてください"
+    },
+    "pickHintTouch": {
+        "message": "非表示にする要素をタップしてください"
+    },
+    "pickEsc": {
+        "message": "Esc — キャンセル"
+    },
+    "pickWider": {
+        "message": "広く"
+    },
+    "pickNarrower": {
+        "message": "狭く"
+    },
+    "pickHide": {
+        "message": "非表示"
+    },
+    "pickCancel": {
+        "message": "キャンセル"
+    },
+    "pickMatches": {
+        "message": "一致: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "一致: $COUNT$ — すべて非表示になります",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "非表示にしました"
+    },
+    "pickDoneList": {
+        "message": "一覧は ABlock のウィンドウにあります"
+    },
+    "pickDoneTemp": {
+        "message": "再読み込みまで非表示"
+    },
+    "pickDoneTempSave": {
+        "message": "保存は ABlock のウィンドウから"
+    },
+    "pickLimit": {
+        "message": "このサイトではすでに100個の要素が非表示です。ABlock のウィンドウで不要な項目を削除してください"
     }
 }

@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Phần cài đặt tiện ích của trình duyệt sẽ mở ra — hãy bật quyền ở chế độ ẩn danh cho ABlock tại đó"
+    },
+    "pickLabel": {
+        "message": "Ẩn phần tử"
+    },
+    "pickTitle": {
+        "message": "Chọn phần tử trên trang và ẩn trên trang web này"
+    },
+    "pickCountTitle": {
+        "message": "Đã ẩn trên trang web này: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Bật bảo vệ trên trang web này"
+    },
+    "pickTemp": {
+        "message": "Chỉ đến khi tải lại"
+    },
+    "pickAllow": {
+        "message": "Cho phép trên trang web"
+    },
+    "pickAllowTitle": {
+        "message": "Các phần tử vẫn bị ẩn sau khi tải lại. Trình duyệt sẽ yêu cầu quyền truy cập trang web này"
+    },
+    "pickAllowed": {
+        "message": "Vẫn ẩn sau khi tải lại"
+    },
+    "pickCleared": {
+        "message": "Tất cả đã trở lại trên trang"
+    },
+    "hiddenTitle": {
+        "message": "Đã ẩn trên $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Quay lại"
+    },
+    "hiddenSelectAll": {
+        "message": "Chọn tất cả"
+    },
+    "hiddenSelected": {
+        "message": "Đã chọn: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Xóa"
+    },
+    "hiddenDeleteN": {
+        "message": "Xóa ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Xóa tất cả"
+    },
+    "hiddenClearConfirm": {
+        "message": "Xóa tất cả $COUNT$ mục?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Tất cả phần tử đã ẩn sẽ xuất hiện lại trên trang"
+    },
+    "hiddenHint": {
+        "message": "Di chuột lên một dòng để làm nổi bật phần tử trên trang"
+    },
+    "hiddenLit": {
+        "message": "Phần tử đang được làm nổi bật trên trang"
+    },
+    "hiddenMissing": {
+        "message": "không có trên trang này"
+    },
+    "hiddenMissingHint": {
+        "message": "Không có trên trang này — không có gì để làm nổi bật"
+    },
+    "hiddenOffHint": {
+        "message": "Bảo vệ trang web đang tắt — các phần tử đã ẩn hiện đang hiển thị"
+    },
+    "kindImage": {
+        "message": "Hình ảnh"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Khối nhúng"
+    },
+    "kindBanner": {
+        "message": "Biểu ngữ"
+    },
+    "kindDialog": {
+        "message": "Cửa sổ"
+    },
+    "kindBlock": {
+        "message": "Khối"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Nhấp vào phần tử muốn ẩn"
+    },
+    "pickHintTouch": {
+        "message": "Chạm vào phần tử muốn ẩn"
+    },
+    "pickEsc": {
+        "message": "Esc — hủy"
+    },
+    "pickWider": {
+        "message": "Rộng hơn"
+    },
+    "pickNarrower": {
+        "message": "Hẹp hơn"
+    },
+    "pickHide": {
+        "message": "Ẩn"
+    },
+    "pickCancel": {
+        "message": "Hủy"
+    },
+    "pickMatches": {
+        "message": "Khớp: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Khớp: $COUNT$ — tất cả sẽ bị ẩn",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Đã ẩn"
+    },
+    "pickDoneList": {
+        "message": "danh sách — trong cửa sổ ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Ẩn đến khi tải lại"
+    },
+    "pickDoneTempSave": {
+        "message": "lưu — trong cửa sổ ABlock"
+    },
+    "pickLimit": {
+        "message": "Trang web đã có 100 phần tử bị ẩn — hãy xóa các mục không cần trong cửa sổ ABlock"
     }
 }

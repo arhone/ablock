@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Mipangilio ya viendelezi vya kivinjari itafunguka — washa huko ruhusa ya ABlock katika hali fiche"
+    },
+    "pickLabel": {
+        "message": "Ficha kipengele"
+    },
+    "pickTitle": {
+        "message": "Chagua kipengele kwenye ukurasa na ukifiche kwenye tovuti hii"
+    },
+    "pickCountTitle": {
+        "message": "Vilivyofichwa kwenye tovuti hii: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Washa ulinzi kwenye tovuti hii"
+    },
+    "pickTemp": {
+        "message": "Hadi kupakia upya tu"
+    },
+    "pickAllow": {
+        "message": "Ruhusu kwenye tovuti"
+    },
+    "pickAllowTitle": {
+        "message": "Vipengele vitabaki vimefichwa baada ya kupakia upya. Kivinjari kitaomba ufikiaji wa tovuti hii"
+    },
+    "pickAllowed": {
+        "message": "Vimefichwa hata baada ya kupakia upya"
+    },
+    "pickCleared": {
+        "message": "Vyote vimerudi kwenye ukurasa"
+    },
+    "hiddenTitle": {
+        "message": "Vilivyofichwa kwenye $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Rudi"
+    },
+    "hiddenSelectAll": {
+        "message": "Chagua vyote"
+    },
+    "hiddenSelected": {
+        "message": "Vilivyochaguliwa: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Futa"
+    },
+    "hiddenDeleteN": {
+        "message": "Futa ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Futa vyote"
+    },
+    "hiddenClearConfirm": {
+        "message": "Futa vyote $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Vipengele vyote vilivyofichwa vitaonekana tena kwenye ukurasa"
+    },
+    "hiddenHint": {
+        "message": "Elekeza kishale kwenye mstari kuangazia kipengele kwenye ukurasa"
+    },
+    "hiddenLit": {
+        "message": "Kipengele kimeangaziwa kwenye ukurasa"
+    },
+    "hiddenMissing": {
+        "message": "hakipo kwenye ukurasa huu"
+    },
+    "hiddenMissingHint": {
+        "message": "Hakipo kwenye ukurasa huu — hakuna cha kuangazia"
+    },
+    "hiddenOffHint": {
+        "message": "Ulinzi wa tovuti umezimwa — vipengele vilivyofichwa vinaonekana sasa"
+    },
+    "kindImage": {
+        "message": "Picha"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Sehemu iliyopachikwa"
+    },
+    "kindBanner": {
+        "message": "Bango"
+    },
+    "kindDialog": {
+        "message": "Dirisha"
+    },
+    "kindBlock": {
+        "message": "Sehemu"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Bofya kipengele unachotaka kuficha"
+    },
+    "pickHintTouch": {
+        "message": "Gusa kipengele unachotaka kuficha"
+    },
+    "pickEsc": {
+        "message": "Esc — ghairi"
+    },
+    "pickWider": {
+        "message": "Panua"
+    },
+    "pickNarrower": {
+        "message": "Punguza"
+    },
+    "pickHide": {
+        "message": "Ficha"
+    },
+    "pickCancel": {
+        "message": "Ghairi"
+    },
+    "pickMatches": {
+        "message": "Vinavyolingana: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Vinavyolingana: $COUNT$ — vyote vitafichwa",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Kimefichwa"
+    },
+    "pickDoneList": {
+        "message": "orodha — kwenye dirisha la ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Kimefichwa hadi kupakia upya"
+    },
+    "pickDoneTempSave": {
+        "message": "hifadhi — kwenye dirisha la ABlock"
+    },
+    "pickLimit": {
+        "message": "Tayari kuna vipengele 100 vilivyofichwa kwenye tovuti — futa visivyohitajika kwenye dirisha la ABlock"
     }
 }

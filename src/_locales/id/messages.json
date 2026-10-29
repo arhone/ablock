@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Setelan ekstensi browser akan terbuka — aktifkan izin ABlock di mode Samaran di sana"
+    },
+    "pickLabel": {
+        "message": "Sembunyikan elemen"
+    },
+    "pickTitle": {
+        "message": "Pilih elemen di halaman dan sembunyikan di situs ini"
+    },
+    "pickCountTitle": {
+        "message": "Disembunyikan di situs ini: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Aktifkan perlindungan di situs ini"
+    },
+    "pickTemp": {
+        "message": "Hanya sampai dimuat ulang"
+    },
+    "pickAllow": {
+        "message": "Izinkan di situs ini"
+    },
+    "pickAllowTitle": {
+        "message": "Elemen tetap tersembunyi setelah dimuat ulang. Browser akan meminta akses ke situs ini"
+    },
+    "pickAllowed": {
+        "message": "Tetap tersembunyi setelah dimuat ulang"
+    },
+    "pickCleared": {
+        "message": "Semua kembali di halaman"
+    },
+    "hiddenTitle": {
+        "message": "Disembunyikan di $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Kembali"
+    },
+    "hiddenSelectAll": {
+        "message": "Pilih semua"
+    },
+    "hiddenSelected": {
+        "message": "Dipilih: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Hapus"
+    },
+    "hiddenDeleteN": {
+        "message": "Hapus ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Hapus semua"
+    },
+    "hiddenClearConfirm": {
+        "message": "Hapus semua $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Semua elemen tersembunyi akan muncul kembali"
+    },
+    "hiddenHint": {
+        "message": "Arahkan ke baris untuk menyorot elemen di halaman"
+    },
+    "hiddenLit": {
+        "message": "Elemen disorot di halaman"
+    },
+    "hiddenMissing": {
+        "message": "tidak ada di halaman ini"
+    },
+    "hiddenMissingHint": {
+        "message": "Tidak ada di halaman ini — tak ada yang bisa disorot"
+    },
+    "hiddenOffHint": {
+        "message": "Perlindungan situs nonaktif — elemen tersembunyi kini terlihat"
+    },
+    "kindImage": {
+        "message": "Gambar"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Blok sematan"
+    },
+    "kindBanner": {
+        "message": "Banner"
+    },
+    "kindDialog": {
+        "message": "Jendela"
+    },
+    "kindBlock": {
+        "message": "Blok"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Klik elemen yang ingin disembunyikan"
+    },
+    "pickHintTouch": {
+        "message": "Ketuk elemen yang ingin disembunyikan"
+    },
+    "pickEsc": {
+        "message": "Esc — batal"
+    },
+    "pickWider": {
+        "message": "Lebih luas"
+    },
+    "pickNarrower": {
+        "message": "Lebih sempit"
+    },
+    "pickHide": {
+        "message": "Sembunyikan"
+    },
+    "pickCancel": {
+        "message": "Batal"
+    },
+    "pickMatches": {
+        "message": "Kecocokan: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Kecocokan: $COUNT$ — semua akan disembunyikan",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Disembunyikan"
+    },
+    "pickDoneList": {
+        "message": "daftar — di jendela ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Disembunyikan sampai dimuat ulang"
+    },
+    "pickDoneTempSave": {
+        "message": "simpan — di jendela ABlock"
+    },
+    "pickLimit": {
+        "message": "Sudah ada 100 elemen tersembunyi di situs ini — hapus yang tidak perlu di jendela ABlock"
     }
 }

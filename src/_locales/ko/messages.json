@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "브라우저의 확장 프로그램 설정이 열립니다. 그곳에서 ABlock의 시크릿 모드 허용을 켜세요"
+    },
+    "pickLabel": {
+        "message": "요소 숨기기"
+    },
+    "pickTitle": {
+        "message": "페이지에서 요소를 선택하여 이 사이트에서 숨깁니다"
+    },
+    "pickCountTitle": {
+        "message": "이 사이트에서 숨긴 항목: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "이 사이트의 보호를 켜세요"
+    },
+    "pickTemp": {
+        "message": "새로고침 전까지만"
+    },
+    "pickAllow": {
+        "message": "이 사이트에서 허용"
+    },
+    "pickAllowTitle": {
+        "message": "새로고침 후에도 숨겨집니다. 브라우저가 이 사이트에 대한 접근 권한을 요청합니다"
+    },
+    "pickAllowed": {
+        "message": "새로고침 후에도 숨겨짐"
+    },
+    "pickCleared": {
+        "message": "모든 요소가 페이지에 돌아왔습니다"
+    },
+    "hiddenTitle": {
+        "message": "$HOST$에서 숨긴 항목",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "뒤로"
+    },
+    "hiddenSelectAll": {
+        "message": "모두 선택"
+    },
+    "hiddenSelected": {
+        "message": "선택됨: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "삭제"
+    },
+    "hiddenDeleteN": {
+        "message": "삭제 ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "모두 지우기"
+    },
+    "hiddenClearConfirm": {
+        "message": "$COUNT$개를 모두 지울까요?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "숨긴 요소가 모두 페이지에 다시 나타납니다"
+    },
+    "hiddenHint": {
+        "message": "행에 마우스를 올리면 페이지의 요소가 강조됩니다"
+    },
+    "hiddenLit": {
+        "message": "페이지의 요소가 강조되어 있습니다"
+    },
+    "hiddenMissing": {
+        "message": "이 페이지에 없음"
+    },
+    "hiddenMissingHint": {
+        "message": "이 페이지에 없어 강조할 수 없습니다"
+    },
+    "hiddenOffHint": {
+        "message": "사이트 보호가 꺼져 있어 숨긴 요소가 보입니다"
+    },
+    "kindImage": {
+        "message": "이미지"
+    },
+    "kindVideo": {
+        "message": "동영상"
+    },
+    "kindFrame": {
+        "message": "삽입된 블록"
+    },
+    "kindBanner": {
+        "message": "배너"
+    },
+    "kindDialog": {
+        "message": "창"
+    },
+    "kindBlock": {
+        "message": "블록"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "숨길 요소를 클릭하세요"
+    },
+    "pickHintTouch": {
+        "message": "숨길 요소를 터치하세요"
+    },
+    "pickEsc": {
+        "message": "Esc — 취소"
+    },
+    "pickWider": {
+        "message": "넓게"
+    },
+    "pickNarrower": {
+        "message": "좁게"
+    },
+    "pickHide": {
+        "message": "숨기기"
+    },
+    "pickCancel": {
+        "message": "취소"
+    },
+    "pickMatches": {
+        "message": "일치: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "일치: $COUNT$ — 모두 숨겨집니다",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "숨겼습니다"
+    },
+    "pickDoneList": {
+        "message": "목록은 ABlock 창에 있습니다"
+    },
+    "pickDoneTemp": {
+        "message": "새로고침 전까지 숨겼습니다"
+    },
+    "pickDoneTempSave": {
+        "message": "저장은 ABlock 창에서"
+    },
+    "pickLimit": {
+        "message": "이 사이트에서 이미 100개를 숨겼습니다. ABlock 창에서 불필요한 항목을 삭제하세요"
     }
 }

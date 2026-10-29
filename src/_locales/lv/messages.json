@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Tiks atvērti pārlūka paplašinājumu iestatījumi — tur ieslēdziet ABlock atļauju inkognito režīmā"
+    },
+    "pickLabel": {
+        "message": "Paslēpt elementu"
+    },
+    "pickTitle": {
+        "message": "Izvēlieties elementu lapā un paslēpiet to šajā vietnē"
+    },
+    "pickCountTitle": {
+        "message": "Šajā vietnē paslēpti: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Ieslēdziet aizsardzību šajā vietnē"
+    },
+    "pickTemp": {
+        "message": "Tikai līdz pārlādei"
+    },
+    "pickAllow": {
+        "message": "Atļaut šajā vietnē"
+    },
+    "pickAllowTitle": {
+        "message": "Elementi paliks paslēpti arī pēc pārlādes. Pārlūks lūgs piekļuvi šai vietnei"
+    },
+    "pickAllowed": {
+        "message": "Paslēpti arī pēc pārlādes"
+    },
+    "pickCleared": {
+        "message": "Viss atkal redzams lapā"
+    },
+    "hiddenTitle": {
+        "message": "Paslēpts vietnē $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Atpakaļ"
+    },
+    "hiddenSelectAll": {
+        "message": "Atlasīt visu"
+    },
+    "hiddenSelected": {
+        "message": "Atlasīti: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Dzēst"
+    },
+    "hiddenDeleteN": {
+        "message": "Dzēst ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Notīrīt visu"
+    },
+    "hiddenClearConfirm": {
+        "message": "Notīrīt visus $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Visi paslēptie elementi atkal parādīsies lapā"
+    },
+    "hiddenHint": {
+        "message": "Novietojiet rādītāju uz rindas — elements lapā tiks izcelts"
+    },
+    "hiddenLit": {
+        "message": "Elements lapā ir izcelts"
+    },
+    "hiddenMissing": {
+        "message": "nav šajā lapā"
+    },
+    "hiddenMissingHint": {
+        "message": "Nav šajā lapā — nav ko izcelt"
+    },
+    "hiddenOffHint": {
+        "message": "Vietnes aizsardzība izslēgta — paslēptie elementi tagad ir redzami"
+    },
+    "kindImage": {
+        "message": "Attēls"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Iegults bloks"
+    },
+    "kindBanner": {
+        "message": "Josla"
+    },
+    "kindDialog": {
+        "message": "Logs"
+    },
+    "kindBlock": {
+        "message": "Bloks"
+    },
+    "pickQuote": {
+        "message": "„$TEXT$“",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Noklikšķiniet uz paslēpjamā elementa"
+    },
+    "pickHintTouch": {
+        "message": "Pieskarieties paslēpjamajam elementam"
+    },
+    "pickEsc": {
+        "message": "Esc — atcelt"
+    },
+    "pickWider": {
+        "message": "Plašāk"
+    },
+    "pickNarrower": {
+        "message": "Šaurāk"
+    },
+    "pickHide": {
+        "message": "Paslēpt"
+    },
+    "pickCancel": {
+        "message": "Atcelt"
+    },
+    "pickMatches": {
+        "message": "Atbilstības: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Atbilstības: $COUNT$ — visas tiks paslēptas",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Paslēpts"
+    },
+    "pickDoneList": {
+        "message": "saraksts — ABlock logā"
+    },
+    "pickDoneTemp": {
+        "message": "Paslēpts līdz pārlādei"
+    },
+    "pickDoneTempSave": {
+        "message": "saglabāt — ABlock logā"
+    },
+    "pickLimit": {
+        "message": "Vietnē jau paslēpti 100 elementi — nevajadzīgos dzēsiet ABlock logā"
     }
 }

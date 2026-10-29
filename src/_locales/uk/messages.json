@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Відкриються налаштування розширень браузера — увімкніть там для ABlock дозвіл у режимі анонімного перегляду"
+    },
+    "pickLabel": {
+        "message": "Приховати елемент"
+    },
+    "pickTitle": {
+        "message": "Вибрати елемент на сторінці й приховати його на цьому сайті"
+    },
+    "pickCountTitle": {
+        "message": "Приховано на цьому сайті: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Увімкніть захист на цьому сайті"
+    },
+    "pickTemp": {
+        "message": "Лише до перезавантаження"
+    },
+    "pickAllow": {
+        "message": "Дозволити на сайті"
+    },
+    "pickAllowTitle": {
+        "message": "Приховане залишиться й після перезавантаження. Браузер попросить доступ до цього сайту"
+    },
+    "pickAllowed": {
+        "message": "Приховано й після перезавантаження"
+    },
+    "pickCleared": {
+        "message": "Усе знову на сторінці"
+    },
+    "hiddenTitle": {
+        "message": "Приховано на $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Назад"
+    },
+    "hiddenSelectAll": {
+        "message": "Вибрати все"
+    },
+    "hiddenSelected": {
+        "message": "Вибрано: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Видалити"
+    },
+    "hiddenDeleteN": {
+        "message": "Видалити ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Очистити все"
+    },
+    "hiddenClearConfirm": {
+        "message": "Очистити всі $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Усе приховане знову з’явиться на сторінці"
+    },
+    "hiddenHint": {
+        "message": "Наведіть на рядок — елемент підсвітиться на сторінці"
+    },
+    "hiddenLit": {
+        "message": "Елемент підсвічено на сторінці"
+    },
+    "hiddenMissing": {
+        "message": "немає на цій сторінці"
+    },
+    "hiddenMissingHint": {
+        "message": "Немає на цій сторінці — нічого підсвічувати"
+    },
+    "hiddenOffHint": {
+        "message": "Захист на сайті вимкнено — приховане зараз видно"
+    },
+    "kindImage": {
+        "message": "Зображення"
+    },
+    "kindVideo": {
+        "message": "Відео"
+    },
+    "kindFrame": {
+        "message": "Вбудований блок"
+    },
+    "kindBanner": {
+        "message": "Плашка"
+    },
+    "kindDialog": {
+        "message": "Вікно"
+    },
+    "kindBlock": {
+        "message": "Блок"
+    },
+    "pickQuote": {
+        "message": "«$TEXT$»",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Клацніть елемент, який потрібно приховати"
+    },
+    "pickHintTouch": {
+        "message": "Торкніться елемента, який потрібно приховати"
+    },
+    "pickEsc": {
+        "message": "Esc — скасувати"
+    },
+    "pickWider": {
+        "message": "Ширше"
+    },
+    "pickNarrower": {
+        "message": "Вужче"
+    },
+    "pickHide": {
+        "message": "Приховати"
+    },
+    "pickCancel": {
+        "message": "Скасувати"
+    },
+    "pickMatches": {
+        "message": "Збігів: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Збігів: $COUNT$ — приховаються всі",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Приховано"
+    },
+    "pickDoneList": {
+        "message": "список — у вікні ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Приховано до перезавантаження"
+    },
+    "pickDoneTempSave": {
+        "message": "зберегти — у вікні ABlock"
+    },
+    "pickLimit": {
+        "message": "На сайті вже 100 прихованих елементів — видаліть зайві у вікні ABlock"
     }
 }

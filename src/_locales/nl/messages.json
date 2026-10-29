@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "De extensie-instellingen van de browser worden geopend — zet daar voor ABlock de toestemming voor de incognitomodus aan"
+    },
+    "pickLabel": {
+        "message": "Element verbergen"
+    },
+    "pickTitle": {
+        "message": "Kies een element op de pagina en verberg het op deze site"
+    },
+    "pickCountTitle": {
+        "message": "Verborgen op deze site: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Zet de bescherming op deze site aan"
+    },
+    "pickTemp": {
+        "message": "Alleen tot het herladen"
+    },
+    "pickAllow": {
+        "message": "Toestaan op deze site"
+    },
+    "pickAllowTitle": {
+        "message": "Elementen blijven ook na het herladen verborgen. De browser vraagt toegang tot deze site"
+    },
+    "pickAllowed": {
+        "message": "Ook na herladen verborgen"
+    },
+    "pickCleared": {
+        "message": "Alles staat weer op de pagina"
+    },
+    "hiddenTitle": {
+        "message": "Verborgen op $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Terug"
+    },
+    "hiddenSelectAll": {
+        "message": "Alles selecteren"
+    },
+    "hiddenSelected": {
+        "message": "Geselecteerd: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Verwijderen"
+    },
+    "hiddenDeleteN": {
+        "message": "Verwijderen ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Alles wissen"
+    },
+    "hiddenClearConfirm": {
+        "message": "Alle $COUNT$ wissen?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Alle verborgen elementen verschijnen weer op de pagina"
+    },
+    "hiddenHint": {
+        "message": "Wijs een rij aan om het element op de pagina te markeren"
+    },
+    "hiddenLit": {
+        "message": "Element gemarkeerd op de pagina"
+    },
+    "hiddenMissing": {
+        "message": "niet op deze pagina"
+    },
+    "hiddenMissingHint": {
+        "message": "Niet op deze pagina — niets om te markeren"
+    },
+    "hiddenOffHint": {
+        "message": "Sitebescherming staat uit — verborgen elementen zijn nu zichtbaar"
+    },
+    "kindImage": {
+        "message": "Afbeelding"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Ingesloten blok"
+    },
+    "kindBanner": {
+        "message": "Banner"
+    },
+    "kindDialog": {
+        "message": "Venster"
+    },
+    "kindBlock": {
+        "message": "Blok"
+    },
+    "pickQuote": {
+        "message": "‘$TEXT$’",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Klik op het element dat je wilt verbergen"
+    },
+    "pickHintTouch": {
+        "message": "Tik op het element dat je wilt verbergen"
+    },
+    "pickEsc": {
+        "message": "Esc — annuleren"
+    },
+    "pickWider": {
+        "message": "Ruimer"
+    },
+    "pickNarrower": {
+        "message": "Kleiner"
+    },
+    "pickHide": {
+        "message": "Verbergen"
+    },
+    "pickCancel": {
+        "message": "Annuleren"
+    },
+    "pickMatches": {
+        "message": "Overeenkomsten: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Overeenkomsten: $COUNT$ — ze worden allemaal verborgen",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Verborgen"
+    },
+    "pickDoneList": {
+        "message": "lijst — in het ABlock-venster"
+    },
+    "pickDoneTemp": {
+        "message": "Verborgen tot het herladen"
+    },
+    "pickDoneTempSave": {
+        "message": "opslaan — in het ABlock-venster"
+    },
+    "pickLimit": {
+        "message": "Er zijn al 100 elementen verborgen op deze site — verwijder overbodige in het ABlock-venster"
     }
 }

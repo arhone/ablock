@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Atsidarys naršyklės plėtinių nustatymai – ten įjunkite ABlock leidimą inkognito režimu"
+    },
+    "pickLabel": {
+        "message": "Slėpti elementą"
+    },
+    "pickTitle": {
+        "message": "Pasirinkite elementą puslapyje ir paslėpkite šioje svetainėje"
+    },
+    "pickCountTitle": {
+        "message": "Paslėpta šioje svetainėje: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Įjunkite apsaugą šioje svetainėje"
+    },
+    "pickTemp": {
+        "message": "Tik iki įkėlimo iš naujo"
+    },
+    "pickAllow": {
+        "message": "Leisti šioje svetainėje"
+    },
+    "pickAllowTitle": {
+        "message": "Elementai liks paslėpti ir įkėlus iš naujo. Naršyklė paprašys prieigos prie šios svetainės"
+    },
+    "pickAllowed": {
+        "message": "Paslėpta ir įkėlus iš naujo"
+    },
+    "pickCleared": {
+        "message": "Viskas vėl puslapyje"
+    },
+    "hiddenTitle": {
+        "message": "Paslėpta svetainėje $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Atgal"
+    },
+    "hiddenSelectAll": {
+        "message": "Pasirinkti viską"
+    },
+    "hiddenSelected": {
+        "message": "Pasirinkta: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Ištrinti"
+    },
+    "hiddenDeleteN": {
+        "message": "Ištrinti ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Išvalyti viską"
+    },
+    "hiddenClearConfirm": {
+        "message": "Išvalyti visus $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Visi paslėpti elementai vėl pasirodys puslapyje"
+    },
+    "hiddenHint": {
+        "message": "Užveskite žymeklį ant eilutės — elementas bus paryškintas puslapyje"
+    },
+    "hiddenLit": {
+        "message": "Elementas paryškintas puslapyje"
+    },
+    "hiddenMissing": {
+        "message": "šiame puslapyje nėra"
+    },
+    "hiddenMissingHint": {
+        "message": "Šiame puslapyje nėra — nėra ko paryškinti"
+    },
+    "hiddenOffHint": {
+        "message": "Svetainės apsauga išjungta — paslėpti elementai dabar matomi"
+    },
+    "kindImage": {
+        "message": "Paveikslėlis"
+    },
+    "kindVideo": {
+        "message": "Vaizdo įrašas"
+    },
+    "kindFrame": {
+        "message": "Įterptas blokas"
+    },
+    "kindBanner": {
+        "message": "Juosta"
+    },
+    "kindDialog": {
+        "message": "Langas"
+    },
+    "kindBlock": {
+        "message": "Blokas"
+    },
+    "pickQuote": {
+        "message": "„$TEXT$“",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Spustelėkite elementą, kurį norite paslėpti"
+    },
+    "pickHintTouch": {
+        "message": "Palieskite elementą, kurį norite paslėpti"
+    },
+    "pickEsc": {
+        "message": "Esc — atšaukti"
+    },
+    "pickWider": {
+        "message": "Plačiau"
+    },
+    "pickNarrower": {
+        "message": "Siauriau"
+    },
+    "pickHide": {
+        "message": "Slėpti"
+    },
+    "pickCancel": {
+        "message": "Atšaukti"
+    },
+    "pickMatches": {
+        "message": "Atitikmenų: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Atitikmenų: $COUNT$ — visi bus paslėpti",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Paslėpta"
+    },
+    "pickDoneList": {
+        "message": "sąrašas — ABlock lange"
+    },
+    "pickDoneTemp": {
+        "message": "Paslėpta iki įkėlimo iš naujo"
+    },
+    "pickDoneTempSave": {
+        "message": "išsaugoti — ABlock lange"
+    },
+    "pickLimit": {
+        "message": "Svetainėje jau paslėpta 100 elementų — nereikalingus ištrinkite ABlock lange"
     }
 }

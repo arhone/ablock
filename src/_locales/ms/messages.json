@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Tetapan sambungan penyemak imbas akan dibuka — hidupkan kebenaran ABlock dalam mod Inkognito di sana"
+    },
+    "pickLabel": {
+        "message": "Sembunyikan elemen"
+    },
+    "pickTitle": {
+        "message": "Pilih elemen pada halaman dan sembunyikannya di tapak ini"
+    },
+    "pickCountTitle": {
+        "message": "Disembunyikan di tapak ini: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Hidupkan perlindungan di tapak ini"
+    },
+    "pickTemp": {
+        "message": "Hingga dimuat semula sahaja"
+    },
+    "pickAllow": {
+        "message": "Benarkan di tapak ini"
+    },
+    "pickAllowTitle": {
+        "message": "Elemen kekal tersembunyi selepas dimuat semula. Pelayar akan meminta akses ke tapak ini"
+    },
+    "pickAllowed": {
+        "message": "Kekal tersembunyi selepas muat semula"
+    },
+    "pickCleared": {
+        "message": "Semua kembali pada halaman"
+    },
+    "hiddenTitle": {
+        "message": "Disembunyikan di $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Kembali"
+    },
+    "hiddenSelectAll": {
+        "message": "Pilih semua"
+    },
+    "hiddenSelected": {
+        "message": "Dipilih: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Padam"
+    },
+    "hiddenDeleteN": {
+        "message": "Padam ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Kosongkan semua"
+    },
+    "hiddenClearConfirm": {
+        "message": "Kosongkan semua $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Semua elemen tersembunyi akan muncul semula pada halaman"
+    },
+    "hiddenHint": {
+        "message": "Halakan penuding ke baris untuk menyerlahkan elemen pada halaman"
+    },
+    "hiddenLit": {
+        "message": "Elemen diserlahkan pada halaman"
+    },
+    "hiddenMissing": {
+        "message": "tiada pada halaman ini"
+    },
+    "hiddenMissingHint": {
+        "message": "Tiada pada halaman ini — tiada elemen untuk diserlahkan"
+    },
+    "hiddenOffHint": {
+        "message": "Perlindungan tapak dimatikan — elemen tersembunyi kini kelihatan"
+    },
+    "kindImage": {
+        "message": "Imej"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Blok terbenam"
+    },
+    "kindBanner": {
+        "message": "Sepanduk"
+    },
+    "kindDialog": {
+        "message": "Tetingkap"
+    },
+    "kindBlock": {
+        "message": "Blok"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Klik elemen yang ingin disembunyikan"
+    },
+    "pickHintTouch": {
+        "message": "Ketik elemen yang ingin disembunyikan"
+    },
+    "pickEsc": {
+        "message": "Esc — batal"
+    },
+    "pickWider": {
+        "message": "Lebih luas"
+    },
+    "pickNarrower": {
+        "message": "Lebih sempit"
+    },
+    "pickHide": {
+        "message": "Sembunyikan"
+    },
+    "pickCancel": {
+        "message": "Batal"
+    },
+    "pickMatches": {
+        "message": "Padanan: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Padanan: $COUNT$ — semuanya akan disembunyikan",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Disembunyikan"
+    },
+    "pickDoneList": {
+        "message": "senarai — dalam tetingkap ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Disembunyikan hingga muat semula"
+    },
+    "pickDoneTempSave": {
+        "message": "simpan — dalam tetingkap ABlock"
+    },
+    "pickLimit": {
+        "message": "Sudah ada 100 elemen tersembunyi di tapak ini — padam yang tidak diperlukan dalam tetingkap ABlock"
     }
 }

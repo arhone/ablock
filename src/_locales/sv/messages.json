@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Webbläsarens tilläggsinställningar öppnas – aktivera behörigheten i inkognitoläge för ABlock där"
+    },
+    "pickLabel": {
+        "message": "Dölj element"
+    },
+    "pickTitle": {
+        "message": "Välj ett element på sidan och dölj det på den här webbplatsen"
+    },
+    "pickCountTitle": {
+        "message": "Dolda på webbplatsen: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Slå på skyddet på webbplatsen"
+    },
+    "pickTemp": {
+        "message": "Bara tills sidan läses in igen"
+    },
+    "pickAllow": {
+        "message": "Tillåt på webbplatsen"
+    },
+    "pickAllowTitle": {
+        "message": "Elementen förblir dolda efter omladdning. Webbläsaren ber om åtkomst till webbplatsen"
+    },
+    "pickAllowed": {
+        "message": "Dolda även efter omladdning"
+    },
+    "pickCleared": {
+        "message": "Allt är tillbaka på sidan"
+    },
+    "hiddenTitle": {
+        "message": "Dolda på $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Tillbaka"
+    },
+    "hiddenSelectAll": {
+        "message": "Markera alla"
+    },
+    "hiddenSelected": {
+        "message": "Markerade: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Ta bort"
+    },
+    "hiddenDeleteN": {
+        "message": "Ta bort ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Rensa alla"
+    },
+    "hiddenClearConfirm": {
+        "message": "Rensa alla $COUNT$?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Alla dolda element visas på sidan igen"
+    },
+    "hiddenHint": {
+        "message": "Håll pekaren över en rad för att framhäva elementet på sidan"
+    },
+    "hiddenLit": {
+        "message": "Elementet är framhävt på sidan"
+    },
+    "hiddenMissing": {
+        "message": "finns inte på den här sidan"
+    },
+    "hiddenMissingHint": {
+        "message": "Finns inte på den här sidan — inget att framhäva"
+    },
+    "hiddenOffHint": {
+        "message": "Webbplatsens skydd är avstängt — dolda element är nu synliga"
+    },
+    "kindImage": {
+        "message": "Bild"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Inbäddat block"
+    },
+    "kindBanner": {
+        "message": "Banderoll"
+    },
+    "kindDialog": {
+        "message": "Fönster"
+    },
+    "kindBlock": {
+        "message": "Block"
+    },
+    "pickQuote": {
+        "message": "”$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Klicka på elementet du vill dölja"
+    },
+    "pickHintTouch": {
+        "message": "Tryck på elementet du vill dölja"
+    },
+    "pickEsc": {
+        "message": "Esc — avbryt"
+    },
+    "pickWider": {
+        "message": "Bredare"
+    },
+    "pickNarrower": {
+        "message": "Smalare"
+    },
+    "pickHide": {
+        "message": "Dölj"
+    },
+    "pickCancel": {
+        "message": "Avbryt"
+    },
+    "pickMatches": {
+        "message": "Träffar: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Träffar: $COUNT$ — alla döljs",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Dolt"
+    },
+    "pickDoneList": {
+        "message": "listan finns i ABlock-fönstret"
+    },
+    "pickDoneTemp": {
+        "message": "Dolt tills sidan läses in igen"
+    },
+    "pickDoneTempSave": {
+        "message": "spara i ABlock-fönstret"
+    },
+    "pickLimit": {
+        "message": "Webbplatsen har redan 100 dolda element — ta bort onödiga i ABlock-fönstret"
     }
 }

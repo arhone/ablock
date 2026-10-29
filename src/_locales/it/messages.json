@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "Si apriranno le impostazioni delle estensioni del browser: attiva lì per ABlock il permesso in modalità di navigazione in incognito"
+    },
+    "pickLabel": {
+        "message": "Nascondi elemento"
+    },
+    "pickTitle": {
+        "message": "Seleziona un elemento nella pagina e nascondilo su questo sito"
+    },
+    "pickCountTitle": {
+        "message": "Nascosti su questo sito: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "Attiva la protezione su questo sito"
+    },
+    "pickTemp": {
+        "message": "Solo fino al ricaricamento"
+    },
+    "pickAllow": {
+        "message": "Consenti su questo sito"
+    },
+    "pickAllowTitle": {
+        "message": "Gli elementi resteranno nascosti dopo il ricaricamento. Il browser chiederà l’accesso a questo sito"
+    },
+    "pickAllowed": {
+        "message": "Nascosti anche dopo il ricaricamento"
+    },
+    "pickCleared": {
+        "message": "Tutto è di nuovo nella pagina"
+    },
+    "hiddenTitle": {
+        "message": "Nascosti su $HOST$",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "Indietro"
+    },
+    "hiddenSelectAll": {
+        "message": "Seleziona tutto"
+    },
+    "hiddenSelected": {
+        "message": "Selezionati: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "Elimina"
+    },
+    "hiddenDeleteN": {
+        "message": "Elimina ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "Cancella tutto"
+    },
+    "hiddenClearConfirm": {
+        "message": "Cancellare tutti i $COUNT$ elementi?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "Tutti gli elementi nascosti riappariranno nella pagina"
+    },
+    "hiddenHint": {
+        "message": "Passa su una riga per evidenziare l’elemento nella pagina"
+    },
+    "hiddenLit": {
+        "message": "Elemento evidenziato nella pagina"
+    },
+    "hiddenMissing": {
+        "message": "assente in questa pagina"
+    },
+    "hiddenMissingHint": {
+        "message": "Assente in questa pagina — nulla da evidenziare"
+    },
+    "hiddenOffHint": {
+        "message": "Protezione disattivata sul sito — gli elementi nascosti sono visibili"
+    },
+    "kindImage": {
+        "message": "Immagine"
+    },
+    "kindVideo": {
+        "message": "Video"
+    },
+    "kindFrame": {
+        "message": "Blocco incorporato"
+    },
+    "kindBanner": {
+        "message": "Banner"
+    },
+    "kindDialog": {
+        "message": "Finestra"
+    },
+    "kindBlock": {
+        "message": "Blocco"
+    },
+    "pickQuote": {
+        "message": "«$TEXT$»",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "Fai clic sull’elemento da nascondere"
+    },
+    "pickHintTouch": {
+        "message": "Tocca l’elemento da nascondere"
+    },
+    "pickEsc": {
+        "message": "Esc — annulla"
+    },
+    "pickWider": {
+        "message": "Più ampio"
+    },
+    "pickNarrower": {
+        "message": "Più ristretto"
+    },
+    "pickHide": {
+        "message": "Nascondi"
+    },
+    "pickCancel": {
+        "message": "Annulla"
+    },
+    "pickMatches": {
+        "message": "Corrispondenze: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "Corrispondenze: $COUNT$ — tutte verranno nascoste",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "Nascosto"
+    },
+    "pickDoneList": {
+        "message": "elenco nella finestra di ABlock"
+    },
+    "pickDoneTemp": {
+        "message": "Nascosto fino al ricaricamento"
+    },
+    "pickDoneTempSave": {
+        "message": "salva nella finestra di ABlock"
+    },
+    "pickLimit": {
+        "message": "Ci sono già 100 elementi nascosti sul sito — elimina quelli superflui nella finestra di ABlock"
     }
 }

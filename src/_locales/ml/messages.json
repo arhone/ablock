@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "ബ്രൗസറിന്റെ എക്സ്റ്റൻഷൻ ക്രമീകരണങ്ങൾ തുറക്കും — അവിടെ ABlock-ന് ആൾമാറാട്ട മോഡിലെ അനുമതി ഓണാക്കുക"
+    },
+    "pickLabel": {
+        "message": "ഘടകം മറയ്ക്കുക"
+    },
+    "pickTitle": {
+        "message": "പേജിലെ ഘടകം തിരഞ്ഞെടുത്ത് ഈ സൈറ്റിൽ മറയ്ക്കുക"
+    },
+    "pickCountTitle": {
+        "message": "ഈ സൈറ്റിൽ മറച്ചവ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "ഈ സൈറ്റിൽ സംരക്ഷണം ഓൺ ചെയ്യുക"
+    },
+    "pickTemp": {
+        "message": "വീണ്ടും ലോഡ് ചെയ്യുന്നതുവരെ മാത്രം"
+    },
+    "pickAllow": {
+        "message": "ഈ സൈറ്റിൽ അനുവദിക്കുക"
+    },
+    "pickAllowTitle": {
+        "message": "വീണ്ടും ലോഡ് ചെയ്താലും മറഞ്ഞിരിക്കും. ബ്രൗസർ ഈ സൈറ്റിലേക്കുള്ള പ്രവേശനാനുമതി ചോദിക്കും"
+    },
+    "pickAllowed": {
+        "message": "വീണ്ടും ലോഡ് ചെയ്താലും മറയും"
+    },
+    "pickCleared": {
+        "message": "എല്ലാം പേജിൽ തിരിച്ചെത്തി"
+    },
+    "hiddenTitle": {
+        "message": "$HOST$-ൽ മറച്ചവ",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "തിരികെ"
+    },
+    "hiddenSelectAll": {
+        "message": "എല്ലാം തിരഞ്ഞെടുക്കുക"
+    },
+    "hiddenSelected": {
+        "message": "തിരഞ്ഞെടുത്തവ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "ഇല്ലാതാക്കുക"
+    },
+    "hiddenDeleteN": {
+        "message": "ഇല്ലാതാക്കുക ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "എല്ലാം മായ്ക്കുക"
+    },
+    "hiddenClearConfirm": {
+        "message": "എല്ലാ $COUNT$ എണ്ണവും മായ്ക്കണോ?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "മറച്ച ഘടകങ്ങളെല്ലാം പേജിൽ വീണ്ടും പ്രത്യക്ഷപ്പെടും"
+    },
+    "hiddenHint": {
+        "message": "വരിയിൽ മൗസ് വച്ചാൽ പേജിലെ ഘടകം എടുത്തുകാട്ടും"
+    },
+    "hiddenLit": {
+        "message": "പേജിലെ ഘടകം എടുത്തുകാട്ടുന്നു"
+    },
+    "hiddenMissing": {
+        "message": "ഈ പേജിൽ ഇല്ല"
+    },
+    "hiddenMissingHint": {
+        "message": "ഈ പേജിൽ ഇല്ല — എടുത്തുകാട്ടാൻ ഒന്നുമില്ല"
+    },
+    "hiddenOffHint": {
+        "message": "സൈറ്റ് സംരക്ഷണം ഓഫാണ് — മറച്ച ഘടകങ്ങൾ ഇപ്പോൾ കാണാം"
+    },
+    "kindImage": {
+        "message": "ചിത്രം"
+    },
+    "kindVideo": {
+        "message": "വീഡിയോ"
+    },
+    "kindFrame": {
+        "message": "എംബെഡ് ചെയ്ത ബ്ലോക്ക്"
+    },
+    "kindBanner": {
+        "message": "ബാനർ"
+    },
+    "kindDialog": {
+        "message": "വിൻഡോ"
+    },
+    "kindBlock": {
+        "message": "ബ്ലോക്ക്"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "മറയ്ക്കേണ്ട ഘടകത്തിൽ ക്ലിക്ക് ചെയ്യുക"
+    },
+    "pickHintTouch": {
+        "message": "മറയ്ക്കേണ്ട ഘടകത്തിൽ തൊടുക"
+    },
+    "pickEsc": {
+        "message": "Esc — റദ്ദാക്കുക"
+    },
+    "pickWider": {
+        "message": "വിശാലമാക്കുക"
+    },
+    "pickNarrower": {
+        "message": "ചുരുക്കുക"
+    },
+    "pickHide": {
+        "message": "മറയ്ക്കുക"
+    },
+    "pickCancel": {
+        "message": "റദ്ദാക്കുക"
+    },
+    "pickMatches": {
+        "message": "പൊരുത്തങ്ങൾ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "പൊരുത്തങ്ങൾ: $COUNT$ — എല്ലാം മറയും",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "മറച്ചു"
+    },
+    "pickDoneList": {
+        "message": "പട്ടിക — ABlock വിൻഡോയിൽ"
+    },
+    "pickDoneTemp": {
+        "message": "വീണ്ടും ലോഡ് ചെയ്യുന്നതുവരെ മറച്ചു"
+    },
+    "pickDoneTempSave": {
+        "message": "സൂക്ഷിക്കാൻ — ABlock വിൻഡോയിൽ"
+    },
+    "pickLimit": {
+        "message": "സൈറ്റിൽ ഇതിനകം 100 ഘടകങ്ങൾ മറച്ചിട്ടുണ്ട് — ആവശ്യമില്ലാത്തവ ABlock വിൻഡോയിൽ ഇല്ലാതാക്കുക"
     }
 }

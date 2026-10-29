@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "బ్రౌజర్ ఎక్స్‌టెన్షన్ సెట్టింగ్‌లు తెరుచుకుంటాయి — అక్కడ ABlock కోసం అజ్ఞాత మోడ్‌లో అనుమతిని ఆన్ చేయండి"
+    },
+    "pickLabel": {
+        "message": "అంశాన్ని దాచండి"
+    },
+    "pickTitle": {
+        "message": "పేజీలో అంశాన్ని ఎంచుకుని ఈ సైట్‌లో దాచండి"
+    },
+    "pickCountTitle": {
+        "message": "ఈ సైట్‌లో దాచినవి: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "ఈ సైట్‌లో రక్షణ ఆన్ చేయండి"
+    },
+    "pickTemp": {
+        "message": "మళ్లీ లోడ్ చేసే వరకే"
+    },
+    "pickAllow": {
+        "message": "ఈ సైట్‌లో అనుమతించండి"
+    },
+    "pickAllowTitle": {
+        "message": "మళ్లీ లోడ్ చేసినా అంశాలు దాగి ఉంటాయి. బ్రౌజర్ ఈ సైట్‌ను యాక్సెస్ చేయడానికి అనుమతి అడుగుతుంది"
+    },
+    "pickAllowed": {
+        "message": "మళ్లీ లోడ్ చేసినా దాగి ఉంటాయి"
+    },
+    "pickCleared": {
+        "message": "అన్నీ మళ్లీ పేజీలో కనిపిస్తున్నాయి"
+    },
+    "hiddenTitle": {
+        "message": "$HOST$ లో దాచినవి",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "వెనుకకు"
+    },
+    "hiddenSelectAll": {
+        "message": "అన్నీ ఎంచుకోండి"
+    },
+    "hiddenSelected": {
+        "message": "ఎంచుకున్నవి: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "తొలగించండి"
+    },
+    "hiddenDeleteN": {
+        "message": "తొలగించండి ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "అన్నీ క్లియర్ చేయండి"
+    },
+    "hiddenClearConfirm": {
+        "message": "మొత్తం $COUNT$ క్లియర్ చేయాలా?",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "దాచిన అంశాలన్నీ మళ్లీ పేజీలో కనిపిస్తాయి"
+    },
+    "hiddenHint": {
+        "message": "వరుసపై పాయింటర్ ఉంచితే పేజీలో అంశం హైలైట్ అవుతుంది"
+    },
+    "hiddenLit": {
+        "message": "పేజీలో అంశం హైలైట్ అయింది"
+    },
+    "hiddenMissing": {
+        "message": "ఈ పేజీలో లేదు"
+    },
+    "hiddenMissingHint": {
+        "message": "ఈ పేజీలో లేదు — హైలైట్ చేయడానికి ఏమీ లేదు"
+    },
+    "hiddenOffHint": {
+        "message": "సైట్ రక్షణ ఆఫ్‌లో ఉంది — దాచిన అంశాలు ఇప్పుడు కనిపిస్తున్నాయి"
+    },
+    "kindImage": {
+        "message": "చిత్రం"
+    },
+    "kindVideo": {
+        "message": "వీడియో"
+    },
+    "kindFrame": {
+        "message": "ఎంబెడ్ చేసిన బ్లాక్"
+    },
+    "kindBanner": {
+        "message": "బ్యానర్"
+    },
+    "kindDialog": {
+        "message": "విండో"
+    },
+    "kindBlock": {
+        "message": "బ్లాక్"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "దాచాల్సిన అంశాన్ని క్లిక్ చేయండి"
+    },
+    "pickHintTouch": {
+        "message": "దాచాల్సిన అంశాన్ని తాకండి"
+    },
+    "pickEsc": {
+        "message": "Esc — రద్దు"
+    },
+    "pickWider": {
+        "message": "విస్తరించండి"
+    },
+    "pickNarrower": {
+        "message": "కుదించండి"
+    },
+    "pickHide": {
+        "message": "దాచండి"
+    },
+    "pickCancel": {
+        "message": "రద్దు"
+    },
+    "pickMatches": {
+        "message": "సరిపోలికలు: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "సరిపోలికలు: $COUNT$ — అన్నీ దాచబడతాయి",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "దాచబడింది"
+    },
+    "pickDoneList": {
+        "message": "జాబితా — ABlock విండోలో"
+    },
+    "pickDoneTemp": {
+        "message": "మళ్లీ లోడ్ చేసే వరకు దాచబడింది"
+    },
+    "pickDoneTempSave": {
+        "message": "సేవ్ చేయండి — ABlock విండోలో"
+    },
+    "pickLimit": {
+        "message": "ఈ సైట్‌లో ఇప్పటికే 100 అంశాలు దాచబడ్డాయి — అవసరం లేనివి ABlock విండోలో తొలగించండి"
     }
 }

@@ -951,5 +951,177 @@
     },
     "incognitoTitle": {
         "message": "将打开浏览器的扩展程序设置，请在那里为 ABlock 开启无痕模式下的权限"
+    },
+    "pickLabel": {
+        "message": "隐藏元素"
+    },
+    "pickTitle": {
+        "message": "选择页面上的元素，在此网站上隐藏"
+    },
+    "pickCountTitle": {
+        "message": "在此网站上隐藏的元素：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickOff": {
+        "message": "请开启此网站的保护"
+    },
+    "pickTemp": {
+        "message": "仅在重新加载前有效"
+    },
+    "pickAllow": {
+        "message": "在此网站上允许"
+    },
+    "pickAllowTitle": {
+        "message": "重新加载后仍会隐藏。浏览器将请求此网站的访问权限"
+    },
+    "pickAllowed": {
+        "message": "重新加载后仍会隐藏"
+    },
+    "pickCleared": {
+        "message": "所有元素已恢复显示"
+    },
+    "hiddenTitle": {
+        "message": "在 $HOST$ 上隐藏的元素",
+        "placeholders": {
+            "host": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenBack": {
+        "message": "返回"
+    },
+    "hiddenSelectAll": {
+        "message": "全选"
+    },
+    "hiddenSelected": {
+        "message": "已选：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDelete": {
+        "message": "删除"
+    },
+    "hiddenDeleteN": {
+        "message": "删除 ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClear": {
+        "message": "清除全部"
+    },
+    "hiddenClearConfirm": {
+        "message": "清除全部 $COUNT$ 项？",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenClearHint": {
+        "message": "所有隐藏的元素将重新出现在页面上"
+    },
+    "hiddenHint": {
+        "message": "将鼠标悬停在行上可高亮显示页面中的元素"
+    },
+    "hiddenLit": {
+        "message": "元素已在页面上高亮显示"
+    },
+    "hiddenMissing": {
+        "message": "此页面上不存在"
+    },
+    "hiddenMissingHint": {
+        "message": "此页面上不存在，无法高亮显示"
+    },
+    "hiddenOffHint": {
+        "message": "此网站的保护已关闭，隐藏的元素当前可见"
+    },
+    "kindImage": {
+        "message": "图片"
+    },
+    "kindVideo": {
+        "message": "视频"
+    },
+    "kindFrame": {
+        "message": "嵌入块"
+    },
+    "kindBanner": {
+        "message": "横幅"
+    },
+    "kindDialog": {
+        "message": "窗口"
+    },
+    "kindBlock": {
+        "message": "区块"
+    },
+    "pickQuote": {
+        "message": "“$TEXT$”",
+        "placeholders": {
+            "text": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickHint": {
+        "message": "点击要隐藏的元素"
+    },
+    "pickHintTouch": {
+        "message": "轻触要隐藏的元素"
+    },
+    "pickEsc": {
+        "message": "Esc — 取消"
+    },
+    "pickWider": {
+        "message": "扩大"
+    },
+    "pickNarrower": {
+        "message": "缩小"
+    },
+    "pickHide": {
+        "message": "隐藏"
+    },
+    "pickCancel": {
+        "message": "取消"
+    },
+    "pickMatches": {
+        "message": "匹配：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickMatchesAll": {
+        "message": "匹配：$COUNT$ — 将全部隐藏",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "pickDone": {
+        "message": "已隐藏"
+    },
+    "pickDoneList": {
+        "message": "列表在 ABlock 窗口中"
+    },
+    "pickDoneTemp": {
+        "message": "已隐藏，重新加载后恢复"
+    },
+    "pickDoneTempSave": {
+        "message": "请在 ABlock 窗口中保存"
+    },
+    "pickLimit": {
+        "message": "此网站已有100个隐藏的元素，请在 ABlock 窗口中删除不需要的项"
     }
 }
