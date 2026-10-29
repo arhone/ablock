@@ -53,7 +53,7 @@
             const tag = CSS.escape(node.localName);
             const id = idSelector(node);
             if (id) return [id];
-            const result = [tag];
+            const result = [];
             let s = tag;
             for (const name of node.classList) {
                 if (!isStableClass(name)) continue;
@@ -98,7 +98,8 @@
         // Не поднимаемся до html/body и не строим цепочки длиннее пяти уровней.
         for (let depth = 0; node && depth < 5 && !/^(?:html|body)$/i.test(node.localName); depth++) {
             const variants = parts(node);
-            levels.push({node, part: variants[variants.length - 1]});
+            levels.push({node, part: variants[variants.length - 1] || CSS.escape(node.localName),
+                stable: variants.length > 0});
             for (const part of variants) {
                 if (consider(path ? `${part} > ${path}` : part)) return best;
             }
@@ -108,13 +109,18 @@
 
         // Позиция среди одноимённых соседей — только после устойчивых признаков.
         path = '';
+        let stablePath = false;
+        const hasStable = levels.some((level) => level.stable);
         for (const level of levels) {
+            stablePath ||= level.stable;
             const siblings = [...level.node.parentElement.children].filter((sibling) =>
                 sibling.localName === level.node.localName && sibling.namespaceURI === level.node.namespaceURI);
             const part = `${level.part}:nth-of-type(${siblings.indexOf(level.node) + 1})`;
             path = path ? `${part} > ${path}` : part;
-            if (consider(path)) return best;
+            if ((stablePath || !hasStable) && consider(path)) return best;
         }
+        // Голый тег допустим только при отсутствии устойчивых признаков во всей цепочке.
+        if (!levels.some((level) => level.stable)) consider(CSS.escape(el.localName));
         return best || empty;
     }
 
@@ -141,14 +147,34 @@
             }
         }
 
+        // Отбрасываем чувствительные поддеревья целиком, не читая их текст.
+        function safeText() {
+            const walker = doc.createTreeWalker(el, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
+                acceptNode(node) {
+                    if (node.nodeType === 3) return NodeFilter.FILTER_ACCEPT;
+                    if (node.isContentEditable || node.matches('input, textarea, select, [contenteditable], script, style, noscript, template')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    return NodeFilter.FILTER_SKIP;
+                }
+            });
+            const parts = [];
+            let node;
+            while ((node = walker.nextNode())) parts.push(node.nodeValue);
+            return parts.join(' ');
+        }
+
         let t = '';
-        if (!el.isContentEditable && !el.closest('input, textarea, select')) {
-            for (const value of [el.getAttribute('aria-label'), el.getAttribute('alt'),
-                el.getAttribute('title'), el.innerText]) {
-                const text = (value || '').replace(/\s+/g, ' ').trim();
+        if (!el.isContentEditable && !el.closest('input, textarea, select, [contenteditable]')) {
+            for (const read of [() => el.getAttribute('aria-label'), () => el.getAttribute('alt'),
+                () => el.getAttribute('title'), safeText]) {
+                const text = (read() || '').replace(/\s+/g, ' ').trim();
                 if (!text) continue;
-                const chars = [...text];
-                t = chars.length > 60 ? `${chars.slice(0, 59).join('')}…` : text;
+                if (text.length <= 60) t = text;
+                else {
+                    // Место под многоточие входит в лимит UTF-16; пару не разрываем.
+                    t = text.slice(0, 59).replace(/[\uD800-\uDBFF]$/, '') + '…';
+                }
                 break;
             }
         }
