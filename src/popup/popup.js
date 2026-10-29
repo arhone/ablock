@@ -111,7 +111,7 @@ let LANG = chrome.i18n.getMessage('locale') || chrome.i18n.getUILanguage();
  * @returns {Promise<void>}
  */
 async function loadLocale() {
-    const {aBlockLang} = await chrome.storage.local.get('aBlockLang');
+    const {aBlockLang} = await chrome.storage.local.get('aBlockLang').catch(() => ({}));
     if (!LOCALES.includes(aBlockLang)) {
         return;
     }
@@ -154,7 +154,7 @@ function initLanguage() {
         return new Option(name.charAt(0).toLocaleUpperCase(tag) + name.slice(1), code);
     }).sort((a, b) => a.text.localeCompare(b.text, LANG));
     select.append(auto, ...names);
-    chrome.storage.local.get('aBlockLang').then(({aBlockLang}) => {
+    chrome.storage.local.get('aBlockLang').catch(() => ({})).then(({aBlockLang}) => {
         select.value = LOCALES.includes(aBlockLang) ? aBlockLang : '';
     });
     select.addEventListener('change', async () => {
@@ -190,7 +190,7 @@ function isDark() {
 }
 
 // Тема до первой отрисовки, чтобы окно не мигало
-chrome.storage.local.get('aBlockTheme').then(({aBlockTheme}) => applyTheme(aBlockTheme));
+chrome.storage.local.get('aBlockTheme').catch(() => ({})).then(({aBlockTheme}) => applyTheme(aBlockTheme));
 
 /**
  * Кнопка темы: переключает светлую и тёмную. Совпавшая с системной тема не запоминается —
@@ -210,7 +210,7 @@ function initTheme() {
         render();
         report();
     });
-    chrome.storage.local.get('aBlockTheme').then(({aBlockTheme}) => {
+    chrome.storage.local.get('aBlockTheme').catch(() => ({})).then(({aBlockTheme}) => {
         applyTheme(aBlockTheme);
         render();
     });
@@ -282,7 +282,7 @@ async function setupNote(host) {
     const add = document.getElementById('note-add');
     const note = document.getElementById('note');
     const input = document.getElementById('note-input');
-    const {aBlockNotes} = await chrome.storage.local.get('aBlockNotes');
+    const {aBlockNotes} = await chrome.storage.local.get('aBlockNotes').catch(() => ({}));
     let text = aBlockNotes?.[host] || '';
 
     const show = () => {
