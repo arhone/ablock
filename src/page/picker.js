@@ -99,6 +99,7 @@
     let pointerY = -1;
     const listeners = [];
     const pressed = new Set();
+    let releaseKeys = () => {};
     function listen(target, type, fn) {
         target.addEventListener(type, fn, true);
         listeners.push(() => target.removeEventListener(type, fn, true));
@@ -123,6 +124,25 @@
     function detach() {
         listeners.splice(0).forEach((remove) => remove());
         cancelAnimationFrame(frame);
+        releaseKeys();
+        if (!pressed.size) return;
+        const keys = new Set(pressed);
+        pressed.clear();
+        // После выхода гасим только отпускание удерживаемых клавиш, не дольше секунды.
+        const release = (event) => {
+            if (!event.isTrusted || !keys.delete(event.key)) return;
+            block(event);
+            if (!keys.size) releaseKeys();
+        };
+        const timeout = setTimeout(() => releaseKeys(), 1000);
+        releaseKeys = () => {
+            clearTimeout(timeout);
+            window.removeEventListener('keyup', release, true);
+            window.removeEventListener('pagehide', releaseKeys, true);
+            releaseKeys = () => {};
+        };
+        window.addEventListener('keyup', release, true);
+        window.addEventListener('pagehide', releaseKeys, true);
     }
     function stop() {
         ended = true;
@@ -202,14 +222,16 @@
         narrower.disabled = busy || level === 0;
         hide.disabled = busy || !result.s;
         shade.hidden = false;
-        panel.replaceChildren(description, actions);
+        if (!panel.contains(actions)) panel.replaceChildren(description, actions);
         draw();
     }
     function change(delta) {
         if (busy || !chain[level + delta]) return;
         level += delta;
         selected = chain[level];
+        const active = root.activeElement;
         update();
+        if (active?.disabled) (delta > 0 ? narrower : wider).focus({preventScroll: true});
     }
     function candidate(event) {
         return document.elementsFromPoint(event.clientX, event.clientY).find((el) =>
@@ -264,6 +286,7 @@
         else if (event.key === 'Enter' || event.key === ' ') {
             // Сами активируем кнопку: клавиши не должны управлять страницей под панелью.
             block(event);
+            if (!event.isTrusted) return;
             pressed.add(event.key);
             const active = root.activeElement;
             if (!event.repeat && active?.localName === 'button') active.click();
@@ -289,13 +312,6 @@
             const rect = panel.getBoundingClientRect();
             const above = rect.top < innerHeight / 2;
             detach();
-            if (pressed.size) {
-                // Ответ фона может прийти до keyup; гасим только отпускание наших клавиш.
-                listen(window, 'keyup', (event) => {
-                    if (!pressed.delete(event.key)) return;
-                    block(event);
-                });
-            }
             restoreFocus();
             shade.hidden = true;
             frames.replaceChildren();
