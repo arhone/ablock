@@ -98,6 +98,7 @@
     let frame = 0;
     let pointerY = -1;
     const listeners = [];
+    const pressed = new Set();
     function listen(target, type, fn) {
         target.addEventListener(type, fn, true);
         listeners.push(() => target.removeEventListener(type, fn, true));
@@ -217,7 +218,9 @@
     function inPanel(event) {
         // На window закрытый Shadow DOM виден только как host; фон слоя тоже host.
         if (event.target !== host) return false;
-        if (!('clientX' in event)) return panel.contains(root.activeElement);
+        if (!('clientX' in event) || (event.type === 'click' && event.detail === 0)) {
+            return panel.contains(root.activeElement);
+        }
         const rect = panel.getBoundingClientRect();
         return event.clientX >= rect.left && event.clientX <= rect.right &&
             event.clientY >= rect.top && event.clientY <= rect.bottom;
@@ -258,7 +261,18 @@
             block(event);
             buttons[next].focus({preventScroll: true});
         } else if (!inPanel(event)) block(event);
-        // Не останавливаем перехват на window: событие должно дойти до кнопки.
+        else if (event.key === 'Enter' || event.key === ' ') {
+            // Сами активируем кнопку: клавиши не должны управлять страницей под панелью.
+            block(event);
+            pressed.add(event.key);
+            const active = root.activeElement;
+            if (!event.repeat && active?.localName === 'button') active.click();
+        } else event.stopPropagation();
+    }
+    function keyup(event) {
+        pressed.delete(event.key);
+        if (event.key === 'Enter' || event.key === ' ') block(event);
+        else event.stopPropagation();
     }
     async function save() {
         if (busy || !selected?.isConnected) return;
@@ -275,6 +289,13 @@
             const rect = panel.getBoundingClientRect();
             const above = rect.top < innerHeight / 2;
             detach();
+            if (pressed.size) {
+                // Ответ фона может прийти до keyup; гасим только отпускание наших клавиш.
+                listen(window, 'keyup', (event) => {
+                    if (!pressed.delete(event.key)) return;
+                    block(event);
+                });
+            }
             restoreFocus();
             shade.hidden = true;
             frames.replaceChildren();
@@ -299,6 +320,7 @@
     listen(window, 'pointerdown', down);
     listen(window, 'click', click);
     listen(window, 'keydown', key);
+    listen(window, 'keyup', keyup);
     listen(window, 'scroll', schedule);
     listen(window, 'resize', schedule);
     listen(window, 'pagehide', stop);
