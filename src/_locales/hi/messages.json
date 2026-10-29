@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Chrome Web Store में ABlock को रेटिंग दें"
+    },
+    "statsShare": {
+        "message": "ABlock का लिंक शेयर करें"
+    },
+    "copyLink": {
+        "message": "लिंक कॉपी करें"
+    },
     "reportText": {
         "message": "साइट की रिपोर्ट — चित्र या पाठ के रूप में"
     },

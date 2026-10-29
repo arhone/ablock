@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "ABlock’ni Chrome Web Store’da baholash"
+    },
+    "statsShare": {
+        "message": "ABlock havolasini ulashish"
+    },
+    "copyLink": {
+        "message": "Havola nusxasini olish"
+    },
     "reportText": {
         "message": "Sayt hisoboti — rasm yoki matn sifatida"
     },

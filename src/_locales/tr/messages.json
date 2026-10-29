@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "ABlock’a Chrome Web Mağazası’nda puan verin"
+    },
+    "statsShare": {
+        "message": "ABlock bağlantısını paylaş"
+    },
+    "copyLink": {
+        "message": "Bağlantıyı kopyala"
+    },
     "reportText": {
         "message": "Site raporu: görsel veya metin"
     },

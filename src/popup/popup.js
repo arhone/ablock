@@ -7,9 +7,9 @@ const EXTENDED = {permissions: ['webRequest'], origins: ['<all_urls>']};
 
 const STORE_URL = 'https://chromewebstore.google.com/detail/cmbihlcgenpbmdkipolfghkplheignfe';
 
-// Куда поделиться отчётом: ссылка из адреса расширения в магазине (link) и текста отчёта (text).
+// Куда поделиться отчётом или самим расширением: ссылка из адреса расширения в магазине (link) и текста (text).
 // kind: send — мессенджер, post — лента; short — короткий текст (лимит X), title — только первая строка,
-// linkOnly — сервис берёт только ссылку, текст отчёта не передать
+// linkOnly — сервис берёт только ссылку, текст не передать
 const enc = encodeURIComponent;
 const NETWORKS = {
     telegram: {name: 'Telegram', kind: 'send', url: (link, text) => `https://t.me/share/url?url=${enc(link)}&text=${enc(text)}`},
@@ -1627,7 +1627,7 @@ function setupScoreToggle() {
  */
 function setupTips() {
     const tip = document.getElementById('tip');
-    const SELECTOR = '.badge[tabindex], .chip[tabindex], .audit-row[tabindex], .board [tabindex], #stats';
+    const SELECTOR = '.badge[tabindex], .chip[tabindex], .audit-row[tabindex], .board [tabindex], #stats-text';
     let owner = null;
 
     const hide = () => {
@@ -1887,6 +1887,47 @@ function reportText(host, short = false) {
 }
 
 /**
+ * Значок действия ненадолго подсвечивается, подсказка сообщает результат и затем возвращается
+ * @param {HTMLElement} button
+ * @param {string} key ключ перевода
+ */
+function showDone(button, key) {
+    const title = button.dataset.title ??= button.title;
+    clearTimeout(button.doneTimer);
+    button.dataset.done = '';
+    button.title = t(key);
+    button.doneTimer = setTimeout(() => {
+        delete button.dataset.done;
+        button.title = title;
+    }, 1500);
+}
+
+/**
+ * Соцсети языка окна в меню «Поделиться» — значки из шаблона #networks по порядку NETWORKS_BY_LANG.
+ * Ссылка пересобирается при нажатии: текст к этому времени мог измениться
+ * @param {Element} box .networks меню
+ * @param {function(boolean): string} getText текст; true — короткий (лимит X) или нужна только первая строка
+ * @param {function(Object): string} [hint] вторая строка подсказки значка
+ */
+function setupNetworks(box, getText, hint = () => '') {
+    const template = document.getElementById('networks').content;
+    for (const id of NETWORKS_BY_LANG[LANG] || NETWORKS_BY_LANG[LANG.split('-')[0]] || NETWORKS_BY_LANG.en) {
+        const network = NETWORKS[id];
+        const link = template.querySelector(`[data-network="${id}"]`).cloneNode(true);
+        link.title = [t(network.kind === 'send' ? 'shareSend' : 'sharePost', network.name), hint(network)]
+            .filter(Boolean).join('\n');
+        // Ссылка есть сразу — значок доступен с клавиатуры
+        const update = () => {
+            const text = getText(network.short || network.title);
+            link.href = network.url(STORE_URL, network.title ? text.split('\n')[0] : text);
+        };
+        update();
+        link.addEventListener('click', update);
+        box.append(link);
+    }
+}
+
+/**
  * «Поделиться» отчётом о сайте: картинка (в буфер, файлом, системным меню) или текст (Telegram, VK, буфер).
  * Открывается значком в шапке раскрытой оценки и строкой в её конце — меню появляется под нажатым
  * @param {string} host
@@ -1904,17 +1945,6 @@ function setupReport(host, score) {
         return image;
     };
     const fileName = `ablock-${host}-${new Date().toISOString().slice(0, 10)}.png`;
-    // Иконка ненадолго подсвечивается, подсказка сообщает результат и затем возвращается
-    const done = (button, key) => {
-        const title = button.dataset.title ??= button.title;
-        clearTimeout(button.doneTimer);
-        button.dataset.done = '';
-        button.title = t(key);
-        button.doneTimer = setTimeout(() => {
-            delete button.dataset.done;
-            button.title = title;
-        }, 1500);
-    };
 
     // Меню — под строкой «Поделиться» в конце раскрытого вида
     const menu = document.getElementById('share-menu');
@@ -1929,7 +1959,7 @@ function setupReport(host, score) {
     copyImage.addEventListener('click', async () => {
         // Буфер — сразу в обработчике нажатия, пока браузер разрешает; картинка дорисуется
         await navigator.clipboard.write([new ClipboardItem({'image/png': getImage()})]);
-        done(copyImage, 'copied');
+        showDone(copyImage, 'copied');
     });
 
     const save = document.getElementById('share-save');
@@ -1938,29 +1968,16 @@ function setupReport(host, score) {
         link.href = URL.createObjectURL(await getImage());
         link.download = fileName;
         link.click();
-        done(save, 'reportDone');
+        showDone(save, 'reportDone');
     });
 
-    // Соцсети языка окна по порядку; текст собирается при нажатии: к этому времени страница могла догрузиться
-    const box = document.querySelector('.networks');
-    for (const id of NETWORKS_BY_LANG[LANG] || NETWORKS_BY_LANG[LANG.split('-')[0]] || NETWORKS_BY_LANG.en) {
-        const network = NETWORKS[id];
-        const link = box.querySelector(`[data-network="${id}"]`);
-        link.title = [
-            t(network.kind === 'send' ? 'shareSend' : 'sharePost', network.name),
-            t(network.linkOnly ? 'shareLinkOnly' : 'shareAsText')
-        ].join('\n');
-        link.addEventListener('click', () => {
-            const text = reportText(host, network.short || network.title);
-            link.href = network.url(STORE_URL, network.title ? text.split('\n')[0] : text);
-        });
-        link.hidden = false;
-        box.append(link);
-    }
+    // Текст собирается при нажатии: к этому времени страница могла догрузиться
+    setupNetworks(menu.querySelector('.networks'), (short) => reportText(host, short),
+        (network) => t(network.linkOnly ? 'shareLinkOnly' : 'shareAsText'));
     const copyText = document.getElementById('share-text');
     copyText.addEventListener('click', async () => {
         await navigator.clipboard.writeText(`${reportText(host)} ${STORE_URL}`);
-        done(copyText, 'copied');
+        showDone(copyText, 'copied');
     });
 
     // Системное меню «Поделиться» с файлом: Windows, macOS, ChromeOS (на Linux его нет)
@@ -2032,8 +2049,50 @@ function renderStats(stats) {
     document.getElementById('stats-text').textContent = t('stats',
         formatNumber(requests, requests >= 1e6 ? {notation: 'compact', maximumFractionDigits: 1} : {}),
         formatSize(stats?.bytes || 0));
-    document.getElementById('stats').title = t('statsTitle',
+    document.getElementById('stats-text').title = t('statsTitle',
         new Date(stats?.since || Date.now()).toLocaleDateString(LANG));
+}
+
+/**
+ * «Поделиться» ссылкой на расширение из карточки статистики: ссылка на магазин в буфер, системным меню
+ * или в соцсети языка окна. Текст — название и описание расширения; меню — под значками, в той же карточке
+ */
+function setupExtensionShare() {
+    const text = `${t('extName')}\n${t('extDescription')}`;
+    const card = document.getElementById('stats');
+    const button = document.getElementById('stats-share');
+    const menu = document.getElementById('stats-menu');
+    const toggle = (open) => {
+        menu.hidden = !open;
+        button.setAttribute('aria-expanded', String(open));
+    };
+    button.addEventListener('click', () => {
+        toggle(menu.hidden);
+        if (!menu.hidden) {
+            menu.scrollIntoView({block: 'nearest'});
+        }
+    });
+    // Escape закрывает открытое меню, а не окно; фокус — обратно на значок
+    card.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !menu.hidden) {
+            event.preventDefault();
+            toggle(false);
+            button.focus();
+        }
+    });
+
+    const copy = document.getElementById('stats-copy');
+    copy.addEventListener('click', async () => {
+        await navigator.clipboard.writeText(STORE_URL);
+        showDone(copy, 'copied');
+    });
+    // Системное меню «Поделиться»: Windows, macOS, ChromeOS (на Linux его нет)
+    const system = document.getElementById('stats-system');
+    system.hidden = !navigator.canShare?.({url: STORE_URL});
+    system.addEventListener('click', () => {
+        navigator.share({title: t('extName'), text, url: STORE_URL}).catch(() => null);
+    });
+    setupNetworks(menu.querySelector('.networks'), () => text);
 }
 
 /**
@@ -2056,7 +2115,7 @@ async function renderNotices(extended, stats) {
         ['stats', () => extended]
     ];
     // Главная кнопка карточки — куда перевести фокус, если закрыли предыдущую
-    const focusTarget = {rate: 'rate-button', ask: 'ask-button', extended: 'extended-button', stats: 'stats'};
+    const focusTarget = {rate: 'rate-button', ask: 'ask-button', extended: 'extended-button', stats: 'stats-text'};
     const show = () => {
         const [shown] = cards.find(([, when]) => when()) || [];
         for (const [id] of cards) {
@@ -2088,6 +2147,18 @@ async function renderNotices(extended, stats) {
     };
     once('rate', STORE_URL, 'aBlockRated');
     once('ask', DONATE_URL, 'aBlockAsked');
+    // Палец вверх в статистике — та же оценка в магазине: просьба оценить после него не появится.
+    // Время первой оценки не переписываем — от него считается просьба поддержать
+    const rate = document.getElementById('stats-rate');
+    rate.href = STORE_URL;
+    rate.addEventListener('click', async (event) => {
+        event.preventDefault();
+        if (!seen.aBlockRated) {
+            seen.aBlockRated = Date.now();
+            await chrome.storage.local.set({aBlockRated: seen.aBlockRated});
+        }
+        chrome.tabs.create({url: STORE_URL});
+    });
     document.getElementById('ask-text').textContent = (stats?.requests || 0) >= ASK_REQUESTS
         ? t('askStats', formatNumber(stats.requests), formatSize(stats.bytes || 0))
         : t('askTime');
@@ -2233,6 +2304,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (extended) {
         const response = await chrome.runtime.sendMessage({tabInfo: tab?.id ?? -1}).catch(() => null);
         renderStats(response?.stats);
+        setupExtensionShare();
         renderNotices(true, response?.stats).catch(console.error);
         // Данные относятся к этой странице, а не к предыдущей на вкладке
         if (isSite && response?.tab?.host === new URL(tab.url).hostname) {

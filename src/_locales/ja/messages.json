@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Chrome ウェブストアで ABlock を評価"
+    },
+    "statsShare": {
+        "message": "ABlock のリンクを共有"
+    },
+    "copyLink": {
+        "message": "リンクをコピー"
+    },
     "reportText": {
         "message": "サイトのレポート — 画像またはテキストで"
     },

@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Valora ABlock a la Chrome Web Store"
+    },
+    "statsShare": {
+        "message": "Comparteix l'enllaç a ABlock"
+    },
+    "copyLink": {
+        "message": "Copia l'enllaç"
+    },
     "reportText": {
         "message": "Informe del lloc — com a imatge o text"
     },

@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Az ABlock értékelése a Chrome Web Store-ban"
+    },
+    "statsShare": {
+        "message": "Hivatkozás megosztása az ABlockra"
+    },
+    "copyLink": {
+        "message": "Hivatkozás másolása"
+    },
     "reportText": {
         "message": "Jelentés a webhelyről — képként vagy szövegként"
     },

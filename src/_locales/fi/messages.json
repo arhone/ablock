@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Arvioi ABlock Chrome Web Storessa"
+    },
+    "statsShare": {
+        "message": "Jaa linkki ABlockiin"
+    },
+    "copyLink": {
+        "message": "Kopioi linkki"
+    },
     "reportText": {
         "message": "Sivustoraportti — kuvana tai tekstinä"
     },

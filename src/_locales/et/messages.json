@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Hinda ABlocki Chrome Web Store’is"
+    },
+    "statsShare": {
+        "message": "Jaga ABlocki linki"
+    },
+    "copyLink": {
+        "message": "Kopeeri link"
+    },
     "reportText": {
         "message": "Saidi aruanne — pildi või tekstina"
     },

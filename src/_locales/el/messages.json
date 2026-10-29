@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Βαθμολογήστε το ABlock στο Chrome Web Store"
+    },
+    "statsShare": {
+        "message": "Κοινοποίηση συνδέσμου για το ABlock"
+    },
+    "copyLink": {
+        "message": "Αντιγραφή συνδέσμου"
+    },
     "reportText": {
         "message": "Αναφορά ιστότοπου — ως εικόνα ή κείμενο"
     },

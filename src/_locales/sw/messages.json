@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Kadiria ABlock kwenye Chrome Web Store"
+    },
+    "statsShare": {
+        "message": "Shiriki kiungo cha ABlock"
+    },
+    "copyLink": {
+        "message": "Nakili kiungo"
+    },
     "reportText": {
         "message": "Ripoti ya tovuti — kama picha au maandishi"
     },

@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Įvertinti ABlock „Chrome Web Store“"
+    },
+    "statsShare": {
+        "message": "Bendrinti nuorodą į ABlock"
+    },
+    "copyLink": {
+        "message": "Kopijuoti nuorodą"
+    },
     "reportText": {
         "message": "Svetainės ataskaita — paveikslėliu arba tekstu"
     },

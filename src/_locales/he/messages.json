@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "דרגו את ABlock ב-Chrome Web Store"
+    },
+    "statsShare": {
+        "message": "שיתוף קישור ל-ABlock"
+    },
+    "copyLink": {
+        "message": "העתקת קישור"
+    },
     "reportText": {
         "message": "דוח על האתר — כתמונה או כטקסט"
     },

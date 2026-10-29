@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "ABlock-ты Chrome Web Store-да бағалау"
+    },
+    "statsShare": {
+        "message": "ABlock сілтемесімен бөлісу"
+    },
+    "copyLink": {
+        "message": "Сілтемені көшіру"
+    },
     "reportText": {
         "message": "Сайт туралы есеп — сурет немесе мәтін"
     },

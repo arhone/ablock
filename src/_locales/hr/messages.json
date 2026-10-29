@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Ocijenite ABlock u Chrome Web Storeu"
+    },
+    "statsShare": {
+        "message": "Podijeli poveznicu na ABlock"
+    },
+    "copyLink": {
+        "message": "Kopiraj poveznicu"
+    },
     "reportText": {
         "message": "Izvješće o stranici — kao slika ili tekst"
     },

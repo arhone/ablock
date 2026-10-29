@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Оцінити ABlock у Chrome Web Store"
+    },
+    "statsShare": {
+        "message": "Поділитися посиланням на ABlock"
+    },
+    "copyLink": {
+        "message": "Скопіювати посилання"
+    },
     "reportText": {
         "message": "Звіт про сайт — картинкою або текстом"
     },

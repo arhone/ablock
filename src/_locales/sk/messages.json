@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Ohodnotiť ABlock v Chrome Web Store"
+    },
+    "statsShare": {
+        "message": "Zdieľať odkaz na ABlock"
+    },
+    "copyLink": {
+        "message": "Kopírovať odkaz"
+    },
     "reportText": {
         "message": "Správa o stránke — obrázok alebo text"
     },

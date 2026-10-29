@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "በChrome Web Store ለABlock ደረጃ ይስጡ"
+    },
+    "statsShare": {
+        "message": "ወደ ABlock አገናኝ አጋራ"
+    },
+    "copyLink": {
+        "message": "አገናኙን ቅዳ"
+    },
     "reportText": {
         "message": "የጣቢያ ሪፖርት — በምስል ወይም በጽሑፍ"
     },

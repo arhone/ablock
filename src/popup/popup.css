@@ -711,6 +711,15 @@ body.loading {
     width: 22px;
     height: 22px;
 }
+/* Статистика: справа «Оценить» и «Поделиться» ссылкой на расширение, меню — второй строкой той же карточки */
+#stats {
+    flex-wrap: wrap;
+}
+#stats-menu {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
 .action {
     flex: none;
     padding: 4px 10px;
@@ -753,6 +762,7 @@ body.loading {
     gap: 8px;
 }
 .tool {
+    flex: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -980,14 +990,14 @@ body.loading {
 .chip[tabindex],
 .audit-row[tabindex],
 .board [tabindex],
-#stats {
+#stats-text {
     cursor: help;
 }
 .badge:focus-visible,
 .chip:focus-visible,
 .audit-row:focus-visible,
 .board [tabindex]:focus-visible,
-#stats:focus-visible,
+#stats-text:focus-visible,
 #score-more:focus-visible {
     outline: 2px solid var(--muted);
     outline-offset: 2px;
@@ -1082,6 +1092,12 @@ footer a:hover {
 #notices .close svg {
     width: 11px;
     height: 11px;
+}
+/* Градиенты значков соцсетей (popup.html): в раскладке не участвуют */
+#defs {
+    position: absolute;
+    width: 0;
+    height: 0;
 }
 #lang {
     position: absolute;

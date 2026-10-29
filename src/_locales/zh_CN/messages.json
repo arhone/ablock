@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "在 Chrome 应用商店中为 ABlock 评分"
+    },
+    "statsShare": {
+        "message": "分享 ABlock 的链接"
+    },
+    "copyLink": {
+        "message": "复制链接"
+    },
     "reportText": {
         "message": "网站报告：图片或文字"
     },

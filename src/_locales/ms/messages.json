@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Beri penilaian ABlock di Chrome Web Store"
+    },
+    "statsShare": {
+        "message": "Kongsi pautan ke ABlock"
+    },
+    "copyLink": {
+        "message": "Salin pautan"
+    },
     "reportText": {
         "message": "Laporan tapak — sebagai imej atau teks"
     },

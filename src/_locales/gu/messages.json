@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Chrome Web Store માં ABlock ને રેટિંગ આપો"
+    },
+    "statsShare": {
+        "message": "ABlock ની લિંક શેર કરો"
+    },
+    "copyLink": {
+        "message": "લિંક કૉપિ કરો"
+    },
     "reportText": {
         "message": "સાઇટ રિપોર્ટ — છબી અથવા ટેક્સ્ટ તરીકે"
     },

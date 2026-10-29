@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Chrome 웹 스토어에서 ABlock 평가하기"
+    },
+    "statsShare": {
+        "message": "ABlock 링크 공유"
+    },
+    "copyLink": {
+        "message": "링크 복사"
+    },
     "reportText": {
         "message": "사이트 보고서 — 이미지 또는 텍스트로"
     },

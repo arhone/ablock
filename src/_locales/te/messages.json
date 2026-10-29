@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Chrome Web Storeలో ABlockను రేట్ చేయండి"
+    },
+    "statsShare": {
+        "message": "ABlock లింక్‌ను షేర్ చేయండి"
+    },
+    "copyLink": {
+        "message": "లింక్‌ను కాపీ చేయండి"
+    },
     "reportText": {
         "message": "సైట్ నివేదిక — చిత్రంగా లేదా టెక్స్ట్‌గా"
     },

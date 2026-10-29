@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "I-rate ang ABlock sa Chrome Web Store"
+    },
+    "statsShare": {
+        "message": "Ibahagi ang link ng ABlock"
+    },
+    "copyLink": {
+        "message": "Kopyahin ang link"
+    },
     "reportText": {
         "message": "Ulat ng site — bilang larawan o text"
     },

@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Evaluează ABlock în Chrome Web Store"
+    },
+    "statsShare": {
+        "message": "Distribuie un link către ABlock"
+    },
+    "copyLink": {
+        "message": "Copiază linkul"
+    },
     "reportText": {
         "message": "Raport despre site — ca imagine sau text"
     },

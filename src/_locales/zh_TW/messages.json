@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "在 Chrome 線上應用程式商店為 ABlock 評分"
+    },
+    "statsShare": {
+        "message": "分享 ABlock 的連結"
+    },
+    "copyLink": {
+        "message": "複製連結"
+    },
     "reportText": {
         "message": "網站報告 — 圖片或文字"
     },

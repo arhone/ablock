@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Novērtēt ABlock Chrome Web Store"
+    },
+    "statsShare": {
+        "message": "Kopīgot saiti uz ABlock"
+    },
+    "copyLink": {
+        "message": "Kopēt saiti"
+    },
     "reportText": {
         "message": "Vietnes pārskats — kā attēls vai teksts"
     },

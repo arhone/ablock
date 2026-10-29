@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "به ABlock در Chrome Web Store امتیاز دهید"
+    },
+    "statsShare": {
+        "message": "اشتراک‌گذاری پیوند ABlock"
+    },
+    "copyLink": {
+        "message": "کپی پیوند"
+    },
     "reportText": {
         "message": "گزارش سایت — به‌صورت تصویر یا متن"
     },

@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Đánh giá ABlock trên Chrome Web Store"
+    },
+    "statsShare": {
+        "message": "Chia sẻ liên kết đến ABlock"
+    },
+    "copyLink": {
+        "message": "Sao chép liên kết"
+    },
     "reportText": {
         "message": "Báo cáo trang web — dạng ảnh hoặc văn bản"
     },

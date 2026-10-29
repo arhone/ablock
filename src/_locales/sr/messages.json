@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Оцените ABlock у Chrome Web Store-у"
+    },
+    "statsShare": {
+        "message": "Подели везу ка ABlock-у"
+    },
+    "copyLink": {
+        "message": "Копирај везу"
+    },
     "reportText": {
         "message": "Извештај о сајту — као слика или текст"
     },

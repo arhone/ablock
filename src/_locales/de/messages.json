@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "ABlock im Chrome Web Store bewerten"
+    },
+    "statsShare": {
+        "message": "Link zu ABlock teilen"
+    },
+    "copyLink": {
+        "message": "Link kopieren"
+    },
     "reportText": {
         "message": "Website-Bericht — als Bild oder Text"
     },

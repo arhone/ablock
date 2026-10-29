@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Chrome Web Store-ൽ ABlock റേറ്റ് ചെയ്യുക"
+    },
+    "statsShare": {
+        "message": "ABlock-ന്റെ ലിങ്ക് പങ്കിടുക"
+    },
+    "copyLink": {
+        "message": "ലിങ്ക് പകർത്തുക"
+    },
     "reportText": {
         "message": "സൈറ്റ് റിപ്പോർട്ട് — ചിത്രമായോ ടെക്സ്റ്റായോ"
     },

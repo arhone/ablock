@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Bedøm ABlock i Chrome Web Store"
+    },
+    "statsShare": {
+        "message": "Del et link til ABlock"
+    },
+    "copyLink": {
+        "message": "Kopiér link"
+    },
     "reportText": {
         "message": "Rapport om webstedet — som billede eller tekst"
     },

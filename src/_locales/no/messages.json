@@ -434,6 +434,15 @@
             }
         }
     },
+    "statsRate": {
+        "message": "Vurder ABlock i Chrome Nettmarked"
+    },
+    "statsShare": {
+        "message": "Del en lenke til ABlock"
+    },
+    "copyLink": {
+        "message": "Kopier lenke"
+    },
     "reportText": {
         "message": "Rapport om nettstedet — som bilde eller tekst"
     },
