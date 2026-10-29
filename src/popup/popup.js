@@ -2233,29 +2233,50 @@ document.addEventListener('DOMContentLoaded', async function () {
     site.checked = !allowedEntry;
     document.getElementById('site-text').textContent = t('siteLabel', allowedEntry || host);
 
+    // Пока настройка сохраняется и страница загружается, новое переключение недоступно
+    function setProtectionBusy(busy) {
+        shield.disabled = busy;
+        site.disabled = busy;
+    }
+
+    // Окно обновляется один раз после загрузки вкладки
+    async function reloadSite() {
+        function onUpdated(id, change) {
+            if (id === tab.id && change.status === 'complete') {
+                chrome.tabs.onUpdated.removeListener(onUpdated);
+                setTimeout(() => location.reload(), 1000);
+            }
+        }
+        chrome.tabs.onUpdated.addListener(onUpdated);
+        try {
+            await chrome.tabs.reload(tab.id);
+        } catch {
+            chrome.tabs.onUpdated.removeListener(onUpdated);
+            setProtectionBusy(false);
+        }
+    }
+
     /**
      * Включает или отключает защиту на этом сайте и перезагружает страницу: правила действуют на новые запросы.
      * Окно обновится вслед за страницей
      * @param {boolean} enabled
      */
     async function setSite(enabled) {
-        site.disabled = true;
+        if (shield.disabled) {
+            return;
+        }
+        setProtectionBusy(true);
         const saved = await chrome.runtime.sendMessage({site: allowedEntry || host, enabled}).catch(() => false);
         if (saved !== true) {
             // Фоновый скрипт не сохранил настройку (например, старая версия после обновления файлов)
             site.checked = !allowedEntry;
-            site.disabled = false;
+            setProtectionBusy(false);
             return;
         }
         allowedEntry = enabled ? undefined : allowedEntry || host;
         site.checked = enabled;
         render();
-        chrome.tabs.onUpdated.addListener((id, change) => {
-            if (id === tab.id && change.status === 'complete') {
-                setTimeout(() => location.reload(), 1000);
-            }
-        });
-        await chrome.tabs.reload(tab.id);
+        await reloadSite();
     }
     site.addEventListener('change', () => setSite(site.checked));
 
@@ -2293,29 +2314,27 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Нажатие на кнопку. Если защита отключена только на этом сайте — щит возвращает её сайту
     document.getElementById('button').addEventListener('click', async function () {
+        if (shield.disabled) {
+            return;
+        }
         if (status && allowedEntry) {
             setSite(true);
             return;
         }
-        shield.disabled = true;
+        setProtectionBusy(true);
         const saved = await chrome.runtime.sendMessage({status: !status}).catch(() => false);
         if (saved !== true) {
             // Фоновый скрипт не сохранил настройку
-            shield.disabled = false;
+            setProtectionBusy(false);
             return;
         }
         status = !status;
         render();
         if (isSite) {
             renderBlocked(tab, info, active(), server);
-            chrome.tabs.onUpdated.addListener((id, change) => {
-                if (id === tab.id && change.status === 'complete') {
-                    setTimeout(() => location.reload(), 1000);
-                }
-            });
-            await chrome.tabs.reload(tab.id);
+            await reloadSite();
         } else {
-            shield.disabled = false;
+            setProtectionBusy(false);
         }
     });
 
