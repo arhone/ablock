@@ -978,7 +978,9 @@ const TECH_ORDER = ['cms', 'framework', 'host', 'server', 'lang', 'lib'];
 function renderTech(detected, server) {
     const tech = new Map(detected.map((item) => [item.name, item]));
     for (const [header, re, name, kind] of HEADER_TECH) {
-        const match = re.exec(server?.headers[header] || '');
+        // Повторы склеены через запятую («GitHub.com, GitHub.com»): каждое значение проверяем отдельно,
+        // иначе не совпадут шаблоны на всю строку. Версия — из последнего подходящего
+        const match = (server?.headers[header] || '').split(',').map((value) => re.exec(value.trim())).findLast(Boolean);
         if (match) {
             const prev = tech.get(name);
             tech.set(name, {name, kind, sure: true, version: prev?.version || match[1] || ''});
