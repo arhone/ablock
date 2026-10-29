@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "لا توجد نطاقات لجهات خارجية"
     },
-    "blockedLine": {
-        "message": "الطلبات المحظورة: $COUNT$",
+    "blocked": {
+        "message": "المحظور $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "الطلبات المحظورة: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "نوافذ ملفات تعريف الارتباط: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "الحجم: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "ملفات من مواقع أخرى: كل منها يعرف عنوان IP الخاص بك والصفحة التي فتحتها"
-    },
-    "auditIssues": {
-        "message": "المشكلات: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "لا مشكلات"
     },
     "auditSpeed": {
         "message": "السرعة"

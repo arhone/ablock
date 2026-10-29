@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "മൂന്നാം കക്ഷി ഡൊമെയ്‌നുകളില്ല"
     },
-    "blockedLine": {
-        "message": "തടഞ്ഞ അഭ്യർത്ഥനകൾ: $COUNT$",
+    "blocked": {
+        "message": "തടഞ്ഞത് $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "തടഞ്ഞ അഭ്യർത്ഥനകൾ: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "കുക്കി പോപ്പ്-അപ്പുകൾ: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "വലുപ്പം: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "മറ്റ് സൈറ്റുകളിൽ നിന്നുള്ള ഫയലുകൾ: ഓരോന്നും നിങ്ങളുടെ IP വിലാസവും തുറന്ന പേജും അറിയുന്നു"
-    },
-    "auditIssues": {
-        "message": "പ്രശ്നങ്ങൾ: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "പ്രശ്നങ്ങളില്ല"
     },
     "auditSpeed": {
         "message": "വേഗത"

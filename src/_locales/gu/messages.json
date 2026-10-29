@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "કોઈ તૃતીય-પક્ષ ડોમેન નથી"
     },
-    "blockedLine": {
-        "message": "બ્લૉક કરેલી વિનંતીઓ: $COUNT$",
+    "blocked": {
+        "message": "બ્લૉક $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "બ્લૉક કરેલી વિનંતીઓ: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "કૂકી પૉપ-અપ: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "કદ: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "બીજી સાઇટ્સની ફાઇલો: દરેકને તમારું IP સરનામું અને તમે ખોલેલું પેજ ખબર પડે છે"
-    },
-    "auditIssues": {
-        "message": "સમસ્યાઓ: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "કોઈ સમસ્યા નથી"
     },
     "auditSpeed": {
         "message": "ઝડપ"

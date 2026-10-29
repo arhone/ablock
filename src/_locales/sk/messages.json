@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Žiadne domény tretích strán"
     },
-    "blockedLine": {
-        "message": "Zablokované požiadavky: $COUNT$",
+    "blocked": {
+        "message": "Blok $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Zablokované požiadavky: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Okná o cookies: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Objem: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Súbory z cudzích stránok: každá z nich zistí vašu IP adresu a akú stránku ste otvorili"
-    },
-    "auditIssues": {
-        "message": "pripomienky: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "bez pripomienok"
     },
     "auditSpeed": {
         "message": "Rýchlosť"

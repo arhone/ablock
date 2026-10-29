@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Бөгде домендер жоқ"
     },
-    "blockedLine": {
-        "message": "Бұғатталған сұраулар: $COUNT$",
+    "blocked": {
+        "message": "Блок $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Бұғатталған сұраулар: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Cookie терезелері: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Көлемі: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Бөгде сайттардағы файлдар: әрқайсысы IP мекенжайыңызды және ашқан бетіңізді біледі"
-    },
-    "auditIssues": {
-        "message": "ескертулер: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "ескерту жоқ"
     },
     "auditSpeed": {
         "message": "Жылдамдық"

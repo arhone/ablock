@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "மூன்றாம் தரப்பு டொமைன்கள் இல்லை"
     },
-    "blockedLine": {
-        "message": "தடுக்கப்பட்ட கோரிக்கைகள்: $COUNT$",
+    "blocked": {
+        "message": "தடுக்கப்பட்டவை $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "தடுக்கப்பட்ட கோரிக்கைகள்: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "குக்கீ சாளரங்கள்: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "அளவு: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "பிற தளங்களின் கோப்புகள்: ஒவ்வொன்றும் உங்கள் IP முகவரியையும் நீங்கள் திறந்த பக்கத்தையும் அறியும்"
-    },
-    "auditIssues": {
-        "message": "சிக்கல்கள்: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "சிக்கல்கள் இல்லை"
     },
     "auditSpeed": {
         "message": "வேகம்"

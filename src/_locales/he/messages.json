@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "אין דומיינים של צד שלישי"
     },
-    "blockedLine": {
-        "message": "בקשות שנחסמו: $COUNT$",
+    "blocked": {
+        "message": "נחסמו $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "בקשות שנחסמו: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "חלונות עוגיות: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "גודל: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "קבצים מאתרים אחרים: כל אחד מהם יודע את כתובת ה-IP שלכם ואיזה עמוד פתחתם"
-    },
-    "auditIssues": {
-        "message": "בעיות: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "אין בעיות"
     },
     "auditSpeed": {
         "message": "מהירות"

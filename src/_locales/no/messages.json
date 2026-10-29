@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Ingen tredjepartsdomener"
     },
-    "blockedLine": {
-        "message": "Blokkerte forespørsler: $COUNT$",
+    "blocked": {
+        "message": "Blokkert $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Blokkerte forespørsler: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Informasjonskapsel-vinduer: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Størrelse: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Filer fra andre nettsteder: hver av dem får vite IP-adressen din og hvilken side du åpnet"
-    },
-    "auditIssues": {
-        "message": "problemer: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "ingen problemer"
     },
     "auditSpeed": {
         "message": "Hastighet"

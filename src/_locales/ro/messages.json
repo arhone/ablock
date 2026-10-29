@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Niciun domeniu terț"
     },
-    "blockedLine": {
-        "message": "Cereri blocate: $COUNT$",
+    "blocked": {
+        "message": "Blocate $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Cereri blocate: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Ferestre despre cookie-uri: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Dimensiune: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Fișiere de pe alte site-uri: fiecare află adresa IP și pagina pe care ați deschis-o"
-    },
-    "auditIssues": {
-        "message": "probleme: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "fără probleme"
     },
     "auditSpeed": {
         "message": "Viteză"

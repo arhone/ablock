@@ -219,20 +219,6 @@ body.loading {
     box-shadow: 0 0 0 3px color-mix(in srgb, var(--off) 22%, transparent);
 }
 
-/* Статус и под ним мелко — сколько заблокировано на странице */
-#status-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-}
-#blocked {
-    color: var(--muted);
-    font-size: 11px;
-    text-align: center;
-    cursor: default;
-}
-
 /* Заметка к сайту */
 #status-row {
     display: flex;
@@ -315,7 +301,7 @@ body.loading {
 #score[data-open] #score-head {
     padding-block: 6px 4px;
 }
-/* Подпись, шкала, балл и замечания — одна кнопка: раскрывает оценку */
+/* Подпись, шкала и балл — одна кнопка: раскрывает оценку */
 #score-more {
     flex: 1;
     min-width: 0;
@@ -331,7 +317,7 @@ body.loading {
     text-align: start;
     cursor: pointer;
 }
-/* В раскрытом виде общая — в табло, есть «Поделиться» */
+/* В раскрытом виде общая — в табло */
 #score[data-open] :is(#meter, #score-value) {
     display: none;
 }
@@ -350,10 +336,6 @@ body.loading {
 #score[data-open] .chevron {
     margin-block: 3px 0;
     transform: rotate(-135deg);
-}
-#share-head {
-    width: 24px;
-    height: 22px;
 }
 /* Длинная подпись («Webstedets karakter») переносится по пробелу, а шкала остаётся видна */
 #score-label {
@@ -384,21 +366,6 @@ body.loading {
     font-weight: 700;
     font-variant-numeric: tabular-nums;
     color: var(--ink, var(--color));
-}
-#score-issues {
-    margin-inline-start: auto;
-    font-size: 11px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-#score-issues[data-state="warn"] {
-    color: var(--warn-text);
-}
-#score-issues[data-state="bad"] {
-    color: var(--off-text);
-}
-#score-issues[data-state="good"] {
-    color: var(--on-text);
 }
 
 /* Табло: круг общей слева, строки групп с пятью делениями справа */
@@ -964,13 +931,6 @@ body.loading {
 .sheet-head span {
     white-space: nowrap;
 }
-/* Сколько заблокировано — мелко под значками, ближе к ним, чем к табло */
-.sheet-blocked {
-    margin-top: -6px;
-    color: var(--muted);
-    font-size: 11px;
-    text-align: center;
-}
 /* Табло на картинке — отдельной плашкой, с подписью под кругом */
 .sheet .board {
     padding: 10px 12px;
@@ -1020,7 +980,6 @@ body.loading {
 .chip[tabindex],
 .audit-row[tabindex],
 .board [tabindex],
-#blocked[tabindex],
 #stats {
     cursor: help;
 }
@@ -1028,7 +987,6 @@ body.loading {
 .chip:focus-visible,
 .audit-row:focus-visible,
 .board [tabindex]:focus-visible,
-#blocked:focus-visible,
 #stats:focus-visible,
 #score-more:focus-visible {
     outline: 2px solid var(--muted);
@@ -1037,6 +995,14 @@ body.loading {
 .audit-row:focus-visible {
     outline-offset: 1px;
     border-radius: 3px;
+}
+
+/* Длинные подписи с обеих сторон щита не влезают — значки ближе к щиту и с полями уже (fitBadges) */
+#panel.tight {
+    gap: 4px;
+}
+#panel.tight .badge {
+    padding-inline: 6px;
 }
 
 /* Ссылки */

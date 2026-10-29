@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Kolmandate osapoolte domeene pole"
     },
-    "blockedLine": {
-        "message": "Blokeeritud päringuid: $COUNT$",
+    "blocked": {
+        "message": "Blokeeritud $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Blokeeritud päringuid: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Küpsiseaknad: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Suurus: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Failid teistelt saitidelt: igaüks neist saab teada teie IP-aadressi ja avatud lehe"
-    },
-    "auditIssues": {
-        "message": "probleeme: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "probleeme pole"
     },
     "auditSpeed": {
         "message": "Kiirus"

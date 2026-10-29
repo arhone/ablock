@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "دامنهٔ شخص ثالثی وجود ندارد"
     },
-    "blockedLine": {
-        "message": "درخواست‌های مسدودشده: $COUNT$",
+    "blocked": {
+        "message": "مسدودشده $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "درخواست‌های مسدودشده: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "پنجره‌های کوکی: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "حجم: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "فایل‌هایی از سایت‌های دیگر: هر کدام IP شما و صفحه‌ای را که باز کرده‌اید می‌فهمد"
-    },
-    "auditIssues": {
-        "message": "مشکلات: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "بدون مشکل"
     },
     "auditSpeed": {
         "message": "سرعت"

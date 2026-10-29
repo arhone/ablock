@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Κανένας τομέας τρίτων"
     },
-    "blockedLine": {
-        "message": "Αιτήματα που αποκλείστηκαν: $COUNT$",
+    "blocked": {
+        "message": "Αποκλείστηκαν $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Αιτήματα που αποκλείστηκαν: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Παράθυρα cookie: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Μέγεθος: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Αρχεία από ξένους ιστότοπους: ο καθένας μαθαίνει τη διεύθυνση IP σας και ποια σελίδα ανοίξατε"
-    },
-    "auditIssues": {
-        "message": "προβλήματα: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "χωρίς προβλήματα"
     },
     "auditSpeed": {
         "message": "Ταχύτητα"

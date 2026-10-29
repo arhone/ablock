@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Üçüncü taraf alan adı yok"
     },
-    "blockedLine": {
-        "message": "Engellenen istek: $COUNT$",
+    "blocked": {
+        "message": "Engel $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Engellenen istek: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Çerez pencereleri: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Boyut: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Başka sitelerden dosyalar: her biri IP adresinizi ve hangi sayfayı açtığınızı öğrenir"
-    },
-    "auditIssues": {
-        "message": "uyarı: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "uyarı yok"
     },
     "auditSpeed": {
         "message": "Hız"

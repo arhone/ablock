@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Сторонних доменов нет"
     },
-    "blockedLine": {
-        "message": "Заблокировано запросов: $COUNT$",
+    "blocked": {
+        "message": "Блок $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Заблокировано запросов: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Окна про cookie: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Объём: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Файлы с чужих сайтов: каждый из них узнаёт ваш IP-адрес и какую страницу вы открыли"
-    },
-    "auditIssues": {
-        "message": "замечаний: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "замечаний нет"
     },
     "auditSpeed": {
         "message": "Скорость"

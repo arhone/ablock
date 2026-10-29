@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Trečiųjų šalių domenų nėra"
     },
-    "blockedLine": {
-        "message": "Užblokuota užklausų: $COUNT$",
+    "blocked": {
+        "message": "Užblokuota $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Užblokuota užklausų: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Slapukų langai: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Dydis: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Failai iš kitų svetainių: kiekvienas sužino jūsų IP adresą ir kokį puslapį atidarėte"
-    },
-    "auditIssues": {
-        "message": "problemos: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "be problemų"
     },
     "auditSpeed": {
         "message": "Greitis"

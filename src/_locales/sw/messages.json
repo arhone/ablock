@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Hakuna vikoa vya wahusika wengine"
     },
-    "blockedLine": {
-        "message": "Maombi yaliyozuiwa: $COUNT$",
+    "blocked": {
+        "message": "Vilivyozuiwa $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Maombi yaliyozuiwa: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Madirisha ya vidakuzi: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Ukubwa: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Faili kutoka tovuti nyingine: kila moja hujua anwani yako ya IP na ukurasa uliofungua"
-    },
-    "auditIssues": {
-        "message": "matatizo: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "hakuna matatizo"
     },
     "auditSpeed": {
         "message": "Kasi"

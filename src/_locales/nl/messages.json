@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Geen domeinen van derden"
     },
-    "blockedLine": {
-        "message": "Geblokkeerde verzoeken: $COUNT$",
+    "blocked": {
+        "message": "Geblokkeerd $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Geblokkeerde verzoeken: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Cookiepop-ups: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Grootte: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Bestanden van andere sites: elk ervan ziet je IP-adres en welke pagina je hebt geopend"
-    },
-    "auditIssues": {
-        "message": "problemen: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "geen problemen"
     },
     "auditSpeed": {
         "message": "Snelheid"

@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Không có tên miền bên thứ ba"
     },
-    "blockedLine": {
-        "message": "Yêu cầu đã chặn: $COUNT$",
+    "blocked": {
+        "message": "Đã chặn $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Yêu cầu đã chặn: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Cửa sổ cookie: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Dung lượng: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Tệp từ trang web khác: mỗi trang đều biết địa chỉ IP của bạn và trang bạn đã mở"
-    },
-    "auditIssues": {
-        "message": "lưu ý: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "không có lưu ý"
     },
     "auditSpeed": {
         "message": "Tốc độ"

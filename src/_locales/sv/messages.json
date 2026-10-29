@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Inga tredjepartsdomäner"
     },
-    "blockedLine": {
-        "message": "Blockerade förfrågningar: $COUNT$",
+    "blocked": {
+        "message": "Blockerade $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Blockerade förfrågningar: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Cookie-rutor: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Storlek: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Filer från andra webbplatser: var och en får veta din IP-adress och vilken sida du öppnade"
-    },
-    "auditIssues": {
-        "message": "problem: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "inga problem"
     },
     "auditSpeed": {
         "message": "Hastighet"

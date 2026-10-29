@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Nenhum domínio de terceiros"
     },
-    "blockedLine": {
-        "message": "Solicitações bloqueadas: $COUNT$",
+    "blocked": {
+        "message": "Bloqueios $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Solicitações bloqueadas: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Avisos de cookies: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Tamanho: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Arquivos de outros sites: cada um descobre seu IP e qual página você abriu"
-    },
-    "auditIssues": {
-        "message": "avisos: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "sem avisos"
     },
     "auditSpeed": {
         "message": "Velocidade"

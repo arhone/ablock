@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Nincsenek külső domainek"
     },
-    "blockedLine": {
-        "message": "Blokkolt kérések: $COUNT$",
+    "blocked": {
+        "message": "Blokkolva $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Blokkolt kérések: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Sütiablakok: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Méret: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Más webhelyek fájljai: mindegyik megtudja az IP-címét és hogy melyik oldalt nyitotta meg"
-    },
-    "auditIssues": {
-        "message": "problémák: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "nincs probléma"
     },
     "auditSpeed": {
         "message": "Sebesség"

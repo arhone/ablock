@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "No hi ha dominis de tercers"
     },
-    "blockedLine": {
-        "message": "Sol·licituds bloquejades: $COUNT$",
+    "blocked": {
+        "message": "Bloquejats $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Sol·licituds bloquejades: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Avisos de galetes: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Mida: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Fitxers d’altres llocs: cadascun sap la vostra IP i quina pàgina heu obert"
-    },
-    "auditIssues": {
-        "message": "problemes: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "sense problemes"
     },
     "auditSpeed": {
         "message": "Velocitat"

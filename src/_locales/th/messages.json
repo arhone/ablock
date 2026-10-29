@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "ไม่มีโดเมนของบุคคลที่สาม"
     },
-    "blockedLine": {
-        "message": "คำขอที่บล็อก: $COUNT$",
+    "blocked": {
+        "message": "บล็อกแล้ว $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "คำขอที่บล็อก: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "หน้าต่างคุกกี้: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "ขนาด: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "ไฟล์จากเว็บไซต์อื่น แต่ละแห่งจะรู้ที่อยู่ IP ของคุณและหน้าที่คุณเปิด"
-    },
-    "auditIssues": {
-        "message": "ปัญหา: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "ไม่มีปัญหา"
     },
     "auditSpeed": {
         "message": "ความเร็ว"

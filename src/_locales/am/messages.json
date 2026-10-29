@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "የሶስተኛ ወገን ጎራዎች የሉም"
     },
-    "blockedLine": {
-        "message": "የታገዱ ጥያቄዎች: $COUNT$",
+    "blocked": {
+        "message": "የታገዱ $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "የታገዱ ጥያቄዎች: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "የኩኪ መስኮቶች: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "መጠን: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "ከሌሎች ጣቢያዎች የሚመጡ ፋይሎች፦ እያንዳንዳቸው የእርስዎን IP እና የከፈቱትን ገጽ ያውቃሉ"
-    },
-    "auditIssues": {
-        "message": "ችግሮች: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "ምንም ችግር የለም"
     },
     "auditSpeed": {
         "message": "ፍጥነት"

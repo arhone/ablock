@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಡೊಮೇನ್‌ಗಳಿಲ್ಲ"
     },
-    "blockedLine": {
-        "message": "ನಿರ್ಬಂಧಿಸಿದ ವಿನಂತಿಗಳು: $COUNT$",
+    "blocked": {
+        "message": "ನಿರ್ಬಂಧಿತ $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "ನಿರ್ಬಂಧಿಸಿದ ವಿನಂತಿಗಳು: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "ಕುಕೀ ಪಾಪ್-ಅಪ್‌ಗಳು: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "ಗಾತ್ರ: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "ಇತರ ಸೈಟ್‌ಗಳ ಫೈಲ್‌ಗಳು: ಪ್ರತಿಯೊಂದೂ ನಿಮ್ಮ IP ವಿಳಾಸ ಮತ್ತು ನೀವು ತೆರೆದ ಪುಟವನ್ನು ತಿಳಿಯುತ್ತದೆ"
-    },
-    "auditIssues": {
-        "message": "ಸಮಸ್ಯೆಗಳು: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "ಸಮಸ್ಯೆಗಳಿಲ್ಲ"
     },
     "auditSpeed": {
         "message": "ವೇಗ"

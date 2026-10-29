@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Walang third-party na domain"
     },
-    "blockedLine": {
-        "message": "Na-block na request: $COUNT$",
+    "blocked": {
+        "message": "Na-block $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Na-block na request: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Mga cookie pop-up: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Laki: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Mga file mula sa ibang site: nalalaman ng bawat isa ang iyong IP address at kung anong page ang binuksan mo"
-    },
-    "auditIssues": {
-        "message": "mga isyu: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "walang isyu"
     },
     "auditSpeed": {
         "message": "Bilis"

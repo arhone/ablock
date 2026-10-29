@@ -268,7 +268,7 @@ function translatePage() {
     for (const el of document.querySelectorAll('[data-i18n-placeholder]')) {
         el.placeholder = t(el.dataset.i18nPlaceholder);
     }
-    setBadge('blocked', t('blockedLine', '—'), 'none', '');
+    setBadge('blocked', t('blocked', '—'), 'none', '');
     setBadge('trackers', t('trackers', '—'), 'none', '');
     setBadge('domains', t('domains', '—'), 'none', '');
     document.getElementById('meter').append(...Array.from({length: 10}, () => document.createElement('i')));
@@ -504,9 +504,10 @@ function setBadge(id, text, state, title) {
 
 /**
  * Длинный перевод («Verkkotunnukset 10», «Ohne Komprimierung») не должен выталкивать значки за окно.
- * Пока ряд со щитом шире окна, у самого широкого значка шрифт на полпикселя меньше (не мельче 9,5px), затем
- * перенос по пробелу (и снова до 9,5px). Слова не рвутся: если и так не влезает, нужен перевод покороче.
- * Обычные значки не меняются
+ * Длинные подписи теперь с обеих сторон щита («Домены» слева, «Блок» и «Трекеры» справа), поэтому сначала
+ * значки ближе к щиту и с полями уже (#panel.tight). Если и так ряд шире окна, у самого широкого значка шрифт
+ * на полпикселя меньше (не мельче 9,5px), затем перенос по пробелу (и снова до 9,5px). Слова не рвутся:
+ * если и так не влезает, нужен перевод покороче. Обычные значки не меняются
  */
 function fitBadges() {
     const panel = document.getElementById('panel');
@@ -515,6 +516,10 @@ function fitBadges() {
         badge.removeAttribute('style');
     }
     const overflows = () => panel.scrollWidth > panel.clientWidth + 0.5;
+    panel.classList.remove('tight');
+    if (overflows()) {
+        panel.classList.add('tight');
+    }
     // Перенесённый значок занимает всю колонку: при равной ширине колонку держит тот, что в одну строку
     const width = (badge) => badge.offsetWidth - (badge.style.whiteSpace === 'normal' ? 0.5 : 0);
     const left = new Set(badges);
@@ -743,8 +748,8 @@ function renderSpeed({loadTime, ready, age}) {
 }
 
 /**
- * Заблокированное на вкладке: строка под статусом (обновляется так же, как значки) и значок трекеров.
- * В строке — число, в расширенном режиме и вес: его считает sw.js по webRequest, без расширенного режима веса нет
+ * Значки заблокированного на вкладке. В подсказке «Блок» в расширенном режиме и объём: его считает sw.js
+ * по webRequest, без расширенного режима объёма нет
  * @param {chrome.tabs.Tab} tab
  * @param {?Object} info
  * @param {boolean} status
@@ -760,7 +765,7 @@ async function renderBlocked(tab, info, status, server) {
     };
     setWeightTitle(false);
     if (!status) {
-        setBadge('blocked', t('blockedLine', '—'), 'none', t('statusOff'));
+        setBadge('blocked', t('blocked', '—'), 'none', t('statusOff'));
         setBadge('trackers', t('trackers', '—'), 'none', t('statusOff'));
         return;
     }
@@ -778,9 +783,11 @@ async function renderBlocked(tab, info, status, server) {
     const trackers = matched.filter((m) => TRACKER_RULESETS.includes(m.rule.rulesetId)).length;
     const cookies = matched.filter((m) => m.rule.rulesetId === COOKIE_RULESET).length;
     const ads = matched.length - trackers - cookies;
-    const count = formatNumber(matched.length);
-    setBadge('blocked', server?.bytes ? t('blockedLineSize', count, formatSize(server.bytes)) : t('blockedLine', count),
-        'good', [t('blockedTitle', ads, trackers), cookies ? t('blockedCookies', cookies) : ''].filter(Boolean).join('\n'));
+    setBadge('blocked', t('blocked', formatNumber(matched.length)), 'good', [
+        t('blockedTitle', ads, trackers),
+        cookies ? t('blockedCookies', cookies) : '',
+        server?.bytes ? t('blockedSize', formatSize(server.bytes)) : ''
+    ].filter(Boolean).join('\n'));
     // Трекеры заблокированы: сайт пытался следить, но защита это остановила — жёлтый, а не красный
     setBadge('trackers', t('trackers', trackers), trackers ? 'warn' : 'good',
         trackers ? t('trackersFound', trackers) : t('trackersNone'));
@@ -1323,11 +1330,6 @@ function renderAudit(audit, server, extended, info, companies) {
         // Google llms.txt не использует — есть файл или нет, только для сведения
         row('auditLlms', unchecked.llms ? '—' : seo.llms ? yes : no, 'none');
     }
-
-    const issues = body.querySelectorAll('.audit-row[data-state="warn"], .audit-row[data-state="bad"]').length;
-    const counter = document.getElementById('score-issues');
-    counter.textContent = issues ? t('auditIssues', formatNumber(issues)) : t('auditNoIssues');
-    counter.dataset.state = body.querySelector('.audit-row[data-state="bad"]') ? 'bad' : issues ? 'warn' : 'good';
     return rows;
 }
 
@@ -1600,23 +1602,18 @@ function renderScore(info, companies, audit, rows, server) {
 }
 
 /**
- * Нажатие на полосу оценки раскрывает табло и разделы по группам. В раскрытом виде в шапке —
- * значок «Поделиться»
+ * Нажатие на полосу оценки раскрывает табло и разделы по группам
  */
 function setupScoreToggle() {
     const score = document.getElementById('score');
     const head = document.getElementById('score-head');
     const button = document.getElementById('score-more');
     const body = document.getElementById('score-body');
-    // Стрелка — тоже часть полосы; «Поделиться» — своя кнопка
-    head.addEventListener('click', (event) => {
-        if (event.target.closest('#share-head')) {
-            return;
-        }
+    // Стрелка — тоже часть полосы
+    head.addEventListener('click', () => {
         body.hidden = !body.hidden;
         button.setAttribute('aria-expanded', String(!body.hidden));
         score.toggleAttribute('data-open', !body.hidden);
-        document.getElementById('share-head').hidden = body.hidden;
         if (body.hidden) {
             document.getElementById('share-menu').hidden = true;
         }
@@ -1630,7 +1627,7 @@ function setupScoreToggle() {
  */
 function setupTips() {
     const tip = document.getElementById('tip');
-    const SELECTOR = '.badge[tabindex], .chip[tabindex], .audit-row[tabindex], .board [tabindex], #blocked[tabindex], #stats';
+    const SELECTOR = '.badge[tabindex], .chip[tabindex], .audit-row[tabindex], .board [tabindex], #stats';
     let owner = null;
 
     const hide = () => {
@@ -1741,8 +1738,6 @@ async function renderReport(host) {
     for (const img of panel.querySelectorAll('img')) {
         img.src = await toDataUrl(img.src);
     }
-    // «Блок» больше не метка, а строка под статусом — на картинке она под значками
-    const blocked = make('div', 'sheet-blocked', document.getElementById('blocked').textContent);
     // Табло — сразу раскрытое: свёрнутой полосы на картинке нет
     const board = document.getElementById('board').cloneNode(true);
     board.removeAttribute('id');
@@ -1772,12 +1767,12 @@ async function renderReport(host) {
     const guess = Boolean(details.querySelector('[data-sure="false"]'));
     const unsure = Boolean(board.querySelector('[data-sure="false"]'));
     const legendText = [guess && unsure ? t('reportLegendQuestion') : guess ? t('reportLegendGuess') : unsure ? t('reportLegendUnsure') : '',
-        /≈/.test(panel.textContent + blocked.textContent) ? t('reportLegendEstimate') : ''].filter(Boolean).join(' · ');
+        /≈/.test(panel.textContent) ? t('reportLegendEstimate') : ''].filter(Boolean).join(' · ');
     const legend = legendText ? make('div', 'sheet-legend', legendText) : null;
     const foot = make('div', 'sheet-foot');
     foot.append(make('span', '', 'ABlock'), make('span', '', 'github.com/arhone/ablock'));
 
-    sheet.append(head, panel, blocked, board, details);
+    sheet.append(head, panel, board, details);
     if (notes.childElementCount) {
         sheet.append(notes);
     }
@@ -1921,25 +1916,14 @@ function setupReport(host, score) {
         }, 1500);
     };
 
-    // Из шапки меню открывается над табло, из строки в конце — под ней
+    // Меню — под строкой «Поделиться» в конце раскрытого вида
     const menu = document.getElementById('share-menu');
-    let opened = '';
-    const toggle = (where) => {
-        if (!menu.hidden && opened === where) {
-            menu.hidden = true;
-            return;
+    document.getElementById('share').addEventListener('click', () => {
+        menu.hidden = !menu.hidden;
+        if (!menu.hidden) {
+            menu.scrollIntoView({block: 'nearest'});
         }
-        opened = where;
-        if (where === 'head') {
-            document.getElementById('board').before(menu);
-        } else {
-            document.getElementById('report').after(menu);
-        }
-        menu.hidden = false;
-        menu.scrollIntoView({block: 'nearest'});
-    };
-    document.getElementById('share-head').addEventListener('click', () => toggle('head'));
-    document.getElementById('share').addEventListener('click', () => toggle('foot'));
+    });
 
     const copyImage = document.getElementById('share-image');
     copyImage.addEventListener('click', async () => {
@@ -2146,8 +2130,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         label.textContent = t(!status ? 'statusOff' : allowedEntry ? 'statusSiteOff' : 'statusOn');
     }
     render();
-    // Сколько заблокировано на странице — строкой под статусом (renderBlocked)
-    document.getElementById('blocked').hidden = !isSite;
 
     // Для IP-адресов не показываем: правила браузера задаются по доменам
     const siteRow = document.getElementById('site-row');
@@ -2277,9 +2259,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     let rescore = null;
     info = await renderSite(tab, server, () => rescore?.());
     if (!info) {
-        // Страница недоступна для расширений (магазин, настройки): блокировок не узнать
-        document.getElementById('blocked').hidden = true;
-        return;
+        return; // Страница недоступна для расширений (магазин, настройки)
     }
     setupClear(tab);
     await renderBlocked(tab, info, active(), server);

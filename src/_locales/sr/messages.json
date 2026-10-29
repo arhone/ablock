@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "Нема спољних домена"
     },
-    "blockedLine": {
-        "message": "Блокирано захтева: $COUNT$",
+    "blocked": {
+        "message": "Блок $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "Блокирано захтева: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Прозори о колачићима: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "Обим: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "Датотеке са туђих сајтова: свака сазна вашу IP адресу и коју сте страницу отворили"
-    },
-    "auditIssues": {
-        "message": "примедби: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "нема примедби"
     },
     "auditSpeed": {
         "message": "Брзина"

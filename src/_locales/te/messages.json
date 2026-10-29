@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "థర్డ్-పార్టీ డొమైన్‌లు లేవు"
     },
-    "blockedLine": {
-        "message": "బ్లాక్ చేసిన అభ్యర్థనలు: $COUNT$",
+    "blocked": {
+        "message": "బ్లాక్ $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "బ్లాక్ చేసిన అభ్యర్థనలు: $COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "కుకీ పాప్-అప్‌లు: $COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "పరిమాణం: ≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "ఇతర సైట్‌ల ఫైల్‌లు: ప్రతి ఒక్కటీ మీ IP చిరునామాను, మీరు తెరిచిన పేజీని తెలుసుకుంటుంది"
-    },
-    "auditIssues": {
-        "message": "సమస్యలు: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "సమస్యలు లేవు"
     },
     "auditSpeed": {
         "message": "వేగం"

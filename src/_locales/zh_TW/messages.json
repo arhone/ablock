@@ -94,22 +94,11 @@
     "domainsNone": {
         "message": "沒有第三方網域"
     },
-    "blockedLine": {
-        "message": "已攔截請求：$COUNT$",
+    "blocked": {
+        "message": "已攔截 $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
-            }
-        }
-    },
-    "blockedLineSize": {
-        "message": "已攔截請求：$COUNT$ · ≈ $SIZE$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            },
-            "size": {
-                "content": "$2"
             }
         }
     },
@@ -248,6 +237,14 @@
         "message": "Cookie 彈出視窗：$COUNT$",
         "placeholders": {
             "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedSize": {
+        "message": "大小：≈ $SIZE$",
+        "placeholders": {
+            "size": {
                 "content": "$1"
             }
         }
@@ -582,17 +579,6 @@
     },
     "auditDomainsHint": {
         "message": "來自其他網站的檔案：每個都會得知您的 IP 位址和您開啟的頁面"
-    },
-    "auditIssues": {
-        "message": "問題：$COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "auditNoIssues": {
-        "message": "沒有問題"
     },
     "auditSpeed": {
         "message": "速度"

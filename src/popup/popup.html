@@ -10,27 +10,25 @@
         <div class="badges left">
             <div class="badge" id="https">HTTPS</div>
             <div class="badge" id="protocol">HTTP</div>
-            <div class="badge" id="speed">—</div>
-            <div class="badge" id="weight">—</div>
+            <div class="badge" id="compression">—</div>
+            <div class="badge" id="domains"></div>
         </div>
         <button id="button" type="button" autofocus data-i18n-title="toggle">
             <img id="bg" data-status="true" src="/images/ablock-128-bg.webp" alt="">
             <img id="logo" src="/images/ablock-128-empty.webp" alt="">
         </button>
         <div class="badges right">
+            <div class="badge" id="blocked"></div>
             <div class="badge" id="trackers"></div>
-            <div class="badge" id="domains"></div>
-            <div class="badge" id="compression">—</div>
+            <div class="badge" id="speed">—</div>
+            <div class="badge" id="weight">—</div>
         </div>
     </div>
-    <div id="status-block">
-        <div id="status-row">
-            <div id="status" data-status="true"></div>
-            <button class="icon-button" id="note-add" type="button" hidden data-i18n-title="noteTitle">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.5 2.5l3 3L6 13H3v-3z M8.5 4.5l3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-            </button>
-        </div>
-        <div id="blocked" hidden></div>
+    <div id="status-row">
+        <div id="status" data-status="true"></div>
+        <button class="icon-button" id="note-add" type="button" hidden data-i18n-title="noteTitle">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.5 2.5l3 3L6 13H3v-3z M8.5 4.5l3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </button>
     </div>
     <p id="note" hidden tabindex="0" role="button" data-i18n-title="noteTitle"></p>
     <textarea id="note-input" hidden rows="2" maxlength="200" data-i18n-placeholder="notePlaceholder" data-i18n-title="noteTitle"></textarea>
@@ -40,10 +38,6 @@
                 <span id="score-label" data-i18n="scoreLabel"></span>
                 <span id="meter" aria-hidden="true"></span>
                 <span id="score-value">—</span>
-                <span id="score-issues"></span>
-            </button>
-            <button class="tool" id="share-head" type="button" hidden data-i18n-title="reportTitle">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 4h7v7M20 4l-9 9"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></svg>
             </button>
             <span class="chevron" aria-hidden="true"></span>
         </div>
