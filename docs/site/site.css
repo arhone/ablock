@@ -76,7 +76,7 @@ h1 em { font-style: normal; color: var(--on-text); }
 .report { position: relative; }
 .report img { display: block; width: 100%; max-width: 360px; height: 560px; object-fit: cover; object-position: top; border-radius: 18px; box-shadow: 0 30px 60px -20px rgba(10, 20, 40, 0.45), 0 0 0 1px var(--border); margin-left: auto; }
 .report::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 120px; border-radius: 0 0 18px 18px; background: linear-gradient(transparent, var(--bg)); max-width: 360px; margin-left: auto; }
-.report figcaption { position: absolute; left: -40px; top: 120px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; font-size: 14px; box-shadow: 0 10px 30px -10px rgba(10, 20, 40, 0.35); max-width: 200px; }
+.report figcaption { position: absolute; left: -40px; top: 320px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; font-size: 14px; box-shadow: 0 10px 30px -10px rgba(10, 20, 40, 0.35); max-width: 200px; }
 .report figcaption b { display: block; font-size: 15px; }
 
 section { padding: 72px 0; }
