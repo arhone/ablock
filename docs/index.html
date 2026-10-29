@@ -177,7 +177,9 @@
         link.hreflang = link.lang;
         banner.hidden = false;
         document.getElementById('language-suggestion-close').addEventListener('click', () => {
+            const hadFocus = banner.contains(document.activeElement);
             banner.hidden = true;
+            if (hadFocus) document.querySelector('.language summary').focus();
             try { localStorage.setItem(key, '1'); } catch { /* Closing still works. */ }
         });
         break;
