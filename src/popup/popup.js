@@ -2138,15 +2138,21 @@ async function renderNotices(extended, stats) {
             if (focused && shown) {
                 document.getElementById(focusTarget[shown]).focus();
             }
-            await chrome.storage.local.set({[key]: seen[key]});
+            await chrome.storage.local.set({[key]: seen[key]}).catch(() => null);
         };
         const link = document.getElementById(`${id}-button`);
         link.href = url;
-        link.addEventListener('click', async (event) => {
+        const open = async (event) => {
+            if (event.type === 'auxclick' && event.button !== 1) {
+                return;
+            }
             event.preventDefault();
             await done();
-            chrome.tabs.create({url});
-        });
+            // Средняя кнопка открывает фоновую вкладку, оставляя окно и новую карточку видимыми
+            chrome.tabs.create({url, active: event.type !== 'auxclick'});
+        };
+        link.addEventListener('click', open);
+        link.addEventListener('auxclick', open);
         document.getElementById(`${id}-close`).addEventListener('click', done);
     };
     once('rate', STORE_URL, 'aBlockRated');
@@ -2156,14 +2162,19 @@ async function renderNotices(extended, stats) {
     // не пишем вовсе: оценка могла уже быть. Магазин открывается, даже если запись не удалась
     const rate = document.getElementById('stats-rate');
     rate.href = STORE_URL;
-    rate.addEventListener('click', async (event) => {
+    const openRate = async (event) => {
+        if (event.type === 'auxclick' && event.button !== 1) {
+            return;
+        }
         event.preventDefault();
         if (stored && !seen.aBlockRated) {
             seen.aBlockRated = Date.now();
             await chrome.storage.local.set({aBlockRated: seen.aBlockRated}).catch(() => null);
         }
-        chrome.tabs.create({url: STORE_URL});
-    });
+        chrome.tabs.create({url: STORE_URL, active: event.type !== 'auxclick'});
+    };
+    rate.addEventListener('click', openRate);
+    rate.addEventListener('auxclick', openRate);
     document.getElementById('ask-text').textContent = (stats?.requests || 0) >= ASK_REQUESTS
         ? t('askStats', formatNumber(stats.requests), formatSize(stats.bytes || 0))
         : t('askTime');
@@ -2187,7 +2198,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Текущие настройки (по умолчанию всё включено)
     const {aBlockStorage, aBlockSettings, aBlockAllowed} = await chrome.storage.local.get(
-        ['aBlockStorage', 'aBlockSettings', 'aBlockAllowed']);
+        ['aBlockStorage', 'aBlockSettings', 'aBlockAllowed']).catch(() => ({}));
     let status = aBlockStorage?.status ?? true;
 
     const [tab] = await chrome.tabs.query({active: true, currentWindow: true});
