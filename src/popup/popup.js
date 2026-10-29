@@ -1851,7 +1851,7 @@ function setupScoreToggle() {
  */
 function setupTips() {
     const tip = document.getElementById('tip');
-    const SELECTOR = '.badge[tabindex], .chip[tabindex], .audit-row[tabindex], .board [tabindex]:not(button), #stats-text';
+    const SELECTOR = '.badge[tabindex], .chip[tabindex], .audit-row[tabindex], .board [tabindex]:not(button), .board-jump, #stats-text';
     let owner = null;
 
     const hide = () => {
@@ -1869,12 +1869,13 @@ function setupTips() {
     };
     const show = (el) => {
         hide();
-        if (!el.title) {
+        const text = el.title || (el.matches('.board-jump') ? el.closest('.board-row').title : '');
+        if (!text) {
             return;
         }
         owner = el;
-        // Пока открыто пояснение, подсказка при наведении его не дублирует
-        el.dataset.tip = el.title;
+        // У кнопки табло текст берём из строки: расчёт и экспорт табло не меняются.
+        el.dataset.tip = text;
         el.removeAttribute('title');
         el.setAttribute('aria-describedby', 'tip');
         tip.textContent = el.dataset.tip;
@@ -1887,6 +1888,26 @@ function setupTips() {
 
     // Владелец пояснения исчезает (табло пересчитано) — закрыть
     tip.addEventListener('close', hide);
+    // На сенсорном экране первый тап объясняет балл, второй открывает группу.
+    // Запоминаем состояние до фокуса: браузер может сфокусировать кнопку между pointerdown и click.
+    let touch = null;
+    document.addEventListener('pointerdown', (event) => {
+        const button = event.pointerType === 'touch' ? event.target.closest('.board-jump') : null;
+        touch = button ? {button, open: owner === button} : null;
+    }, true);
+    document.addEventListener('pointercancel', () => { touch = null; }, true);
+    document.addEventListener('click', (event) => {
+        const button = event.target.closest('.board-jump');
+        const firstTap = button && touch?.button === button && !touch.open
+            && (button.title || button.closest('.board-row').title);
+        touch = null;
+        if (firstTap) {
+            // Capture останавливает только первый тап до обработчика перехода на самой кнопке.
+            event.preventDefault();
+            event.stopPropagation();
+            show(button);
+        }
+    }, true);
     document.addEventListener('click', (event) => {
         const el = event.target.closest('button') ? null : event.target.closest(SELECTOR);
         if (el && el !== owner) {
@@ -1906,12 +1927,13 @@ function setupTips() {
         }
     });
     document.addEventListener('keydown', (event) => {
+        touch = null;
         const el = document.activeElement;
         if (event.key === 'Escape' && owner) {
             // preventDefault — чтобы Escape закрыл пояснение, а не окно
             event.preventDefault();
             hide();
-        } else if ((event.key === 'Enter' || event.key === ' ') && el?.matches(SELECTOR)) {
+        } else if ((event.key === 'Enter' || event.key === ' ') && el?.matches(SELECTOR) && !el.matches('.board-jump')) {
             event.preventDefault();
             if (el === owner) {
                 hide();
