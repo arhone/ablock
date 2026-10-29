@@ -1156,7 +1156,9 @@ function renderAudit(audit, server, extended, info, companies) {
         if (vitals.browserCache) {
             row('auditCache', t('auditCacheBrowser'), 'none');
         } else if (cacheHeader) {
-            const value = server.headers[cacheHeader];
+            // Повторы склеены через запятую (два X-Cache, у Fastly с щитом — «MISS, HIT» одной строкой): каждое
+            // значение — свой уровень кэша, последнее — ближайший к посетителю. По нему и подпись, и цвет
+            const value = server.headers[cacheHeader].split(',').at(-1).trim();
             const hit = /\bhit\b/i.test(value);
             row('auditCache', (/\b(hit|miss|expired|stale|bypass|dynamic|updating|revalidated)\b/i.exec(value)?.[1] || value)
                 .toUpperCase() + (cacheSource ? ` · ${cacheSource}` : ''), hit ? 'good' : 'none');
