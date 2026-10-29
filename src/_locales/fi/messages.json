@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Ei kolmansien osapuolten verkkotunnuksia"
     },
-    "blocked": {
-        "message": "Estetty $COUNT$",
+    "blockedLine": {
+        "message": "Estettyjä pyyntöjä: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Estettyjä pyyntöjä: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Evästeikkunat: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Koko: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Älä näytä uudelleen"
     },
+    "rateText": {
+        "message": "Pidätkö ABlockista? Arvioi se Chrome Web Storessa – se auttaa muita löytämään laajennuksen"
+    },
+    "rateButton": {
+        "message": "Arvioi"
+    },
     "reportLegendGuess": {
         "message": "? — tunnistettu epäsuorista merkeistä"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Tyhjennä sivuston tiedot"
     },
     "clearTitle": {
         "message": "Poista sivuston tiedot ja lataa uudelleen: evästeet, välimuisti ja tallennustila. Merkit ja arvosana näyttävät sivuston sellaisena kuin uusi kävijä sen näkee. Sinut kirjataan ulos tältä sivustolta"

@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Tidak ada domain pihak ketiga"
     },
-    "blocked": {
-        "message": "Diblokir $COUNT$",
+    "blockedLine": {
+        "message": "Permintaan diblokir: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Permintaan diblokir: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Jendela cookie: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Ukuran: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Jangan tampilkan lagi"
     },
+    "rateText": {
+        "message": "Suka ABlock? Beri rating di Chrome Web Store — ini membantu orang lain menemukan ekstensi ini"
+    },
+    "rateButton": {
+        "message": "Beri rating"
+    },
     "reportLegendGuess": {
         "message": "? — terdeteksi dari tanda tidak langsung"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Hapus data situs"
     },
     "clearTitle": {
         "message": "Hapus data situs dan muat ulang: cookie, cache, dan penyimpanan. Lencana dan nilai akan menampilkan situs seperti bagi pengunjung baru. Anda akan keluar dari akun di situs ini"

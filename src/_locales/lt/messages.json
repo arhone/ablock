@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Trečiųjų šalių domenų nėra"
     },
-    "blocked": {
-        "message": "Užblokuota $COUNT$",
+    "blockedLine": {
+        "message": "Užblokuota užklausų: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Užblokuota užklausų: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Slapukų langai: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Dydis: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Daugiau nerodyti"
     },
+    "rateText": {
+        "message": "Patinka ABlock? Įvertinkite jį „Chrome Web Store“ – tai padeda kitiems rasti plėtinį"
+    },
+    "rateButton": {
+        "message": "Įvertinti"
+    },
     "reportLegendGuess": {
         "message": "? — nustatyta pagal netiesioginius požymius"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Išvalyti svetainės duomenis"
     },
     "clearTitle": {
         "message": "Ištrinti svetainės duomenis ir įkelti iš naujo: slapukus, talpyklą ir saugyklą. Ženkleliai ir įvertinimas parodys svetainę taip, kaip ją mato naujas lankytojas. Būsite atjungti nuo šios svetainės"

@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "サードパーティのドメインはありません"
     },
-    "blocked": {
-        "message": "ブロック $COUNT$",
+    "blockedLine": {
+        "message": "ブロックしたリクエスト: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "ブロックしたリクエスト: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Cookie ポップアップ: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "サイズ: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "今後表示しない"
     },
+    "rateText": {
+        "message": "ABlock を気に入っていただけましたか？ Chrome ウェブストアで評価してください。ほかの人が拡張機能を見つけやすくなります"
+    },
+    "rateButton": {
+        "message": "評価する"
+    },
     "reportLegendGuess": {
         "message": "? — 間接的な兆候から検出"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "サイトのデータを削除"
     },
     "clearTitle": {
         "message": "サイトのデータを削除して再読み込み: Cookie、キャッシュ、ストレージ。バッジと評価は新しい訪問者から見たサイトを表示します。このサイトからはログアウトされます"

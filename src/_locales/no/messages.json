@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Ingen tredjepartsdomener"
     },
-    "blocked": {
-        "message": "Blokkert $COUNT$",
+    "blockedLine": {
+        "message": "Blokkerte forespørsler: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Blokkerte forespørsler: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Informasjonskapsel-vinduer: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Størrelse: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Ikke vis igjen"
     },
+    "rateText": {
+        "message": "Liker du ABlock? Gi den en vurdering i Chrome Nettmarked – det hjelper andre å finne utvidelsen"
+    },
+    "rateButton": {
+        "message": "Vurder"
+    },
     "reportLegendGuess": {
         "message": "? — funnet ut fra indirekte tegn"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Fjern nettstedsdata"
     },
     "clearTitle": {
         "message": "Slett nettstedsdata og last inn på nytt: informasjonskapsler, hurtigbuffer og lagring. Merker og karakter viser nettstedet slik en ny besøkende ser det. Du blir logget ut av nettstedet"

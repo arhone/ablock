@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Nincsenek külső domainek"
     },
-    "blocked": {
-        "message": "Blokkolva $COUNT$",
+    "blockedLine": {
+        "message": "Blokkolt kérések: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Blokkolt kérések: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Sütiablakok: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Méret: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Ne mutasd többé"
     },
+    "rateText": {
+        "message": "Tetszik az ABlock? Értékelje a Chrome Web Store-ban – ezzel segít másoknak megtalálni a bővítményt"
+    },
+    "rateButton": {
+        "message": "Értékelés"
+    },
     "reportLegendGuess": {
         "message": "? — közvetett jelek alapján észlelve"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Webhelyadatok törlése"
     },
     "clearTitle": {
         "message": "A webhely adatainak törlése és újratöltés: sütik, gyorsítótár és tárhely. A jelvények és az értékelés úgy mutatják a webhelyet, ahogy egy új látogató látja. Ki lesz jelentkeztetve erről a webhelyről"

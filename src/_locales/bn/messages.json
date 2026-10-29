@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "কোনো তৃতীয় পক্ষের ডোমেন নেই"
     },
-    "blocked": {
-        "message": "ব্লক $COUNT$",
+    "blockedLine": {
+        "message": "ব্লক করা অনুরোধ: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "ব্লক করা অনুরোধ: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "কুকি পপ-আপ: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "আকার: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "আর দেখাবেন না"
     },
+    "rateText": {
+        "message": "ABlock ভালো লাগছে? Chrome Web Store-এ রেটিং দিন — এতে অন্যরা এক্সটেনশনটি খুঁজে পান"
+    },
+    "rateButton": {
+        "message": "রেটিং দিন"
+    },
     "reportLegendGuess": {
         "message": "? — পরোক্ষ লক্ষণ থেকে শনাক্ত"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "সাইটের ডেটা মুছুন"
     },
     "clearTitle": {
         "message": "সাইটের ডেটা মুছে আবার লোড করুন: কুকি, ক্যাশ ও স্টোরেজ। ব্যাজ ও স্কোর সাইটটিকে নতুন দর্শক যেভাবে দেখে সেভাবে দেখাবে। এই সাইট থেকে আপনি লগ আউট হয়ে যাবেন"

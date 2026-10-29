@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "لا توجد نطاقات لجهات خارجية"
     },
-    "blocked": {
-        "message": "المحظور $COUNT$",
+    "blockedLine": {
+        "message": "الطلبات المحظورة: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "الطلبات المحظورة: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "نوافذ ملفات تعريف الارتباط: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "الحجم: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "عدم الإظهار مرة أخرى"
     },
+    "rateText": {
+        "message": "هل أعجبك ABlock؟ قيّمه في Chrome Web Store — هذا يساعد الآخرين على العثور على الإضافة"
+    },
+    "rateButton": {
+        "message": "تقييم"
+    },
     "reportLegendGuess": {
         "message": "? — اكتُشف بعلامات غير مباشرة"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "مسح بيانات الموقع"
     },
     "clearTitle": {
         "message": "حذف بيانات الموقع وإعادة التحميل: ملفات تعريف الارتباط وذاكرة التخزين المؤقت والتخزين. ستعرض الشارات والتقييم الموقع كما يراه زائر جديد. سيتم تسجيل خروجك من هذا الموقع"

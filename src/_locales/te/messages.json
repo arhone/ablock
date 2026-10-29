@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "థర్డ్-పార్టీ డొమైన్‌లు లేవు"
     },
-    "blocked": {
-        "message": "బ్లాక్ $COUNT$",
+    "blockedLine": {
+        "message": "బ్లాక్ చేసిన అభ్యర్థనలు: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "బ్లాక్ చేసిన అభ్యర్థనలు: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "కుకీ పాప్-అప్‌లు: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "పరిమాణం: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "మళ్లీ చూపవద్దు"
     },
+    "rateText": {
+        "message": "ABlock నచ్చిందా? Chrome Web Storeలో రేట్ చేయండి — ఇతరులు ఎక్స్‌టెన్షన్‌ను కనుగొనడానికి ఇది సహాయపడుతుంది"
+    },
+    "rateButton": {
+        "message": "రేట్ చేయండి"
+    },
     "reportLegendGuess": {
         "message": "? — పరోక్ష సంకేతాల ద్వారా గుర్తించబడింది"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "సైట్ డేటాను క్లియర్ చేయండి"
     },
     "clearTitle": {
         "message": "సైట్ డేటాను తొలగించి మళ్లీ లోడ్ చేయండి: కుకీలు, కాష్, స్టోరేజ్. బ్యాడ్జ్‌లు, స్కోర్ కొత్త సందర్శకుడికి కనిపించే విధంగా సైట్‌ను చూపుతాయి. మీరు ఈ సైట్ నుండి లాగ్ అవుట్ అవుతారు"

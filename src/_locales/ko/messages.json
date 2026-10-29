@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "서드파티 도메인 없음"
     },
-    "blocked": {
-        "message": "차단 $COUNT$",
+    "blockedLine": {
+        "message": "차단된 요청: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "차단된 요청: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "쿠키 팝업: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "크기: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "다시 표시 안 함"
     },
+    "rateText": {
+        "message": "ABlock이 마음에 드시나요? Chrome 웹 스토어에서 평가해 주세요. 다른 사람이 확장 프로그램을 찾는 데 도움이 됩니다"
+    },
+    "rateButton": {
+        "message": "평가하기"
+    },
     "reportLegendGuess": {
         "message": "? — 간접적인 징후로 감지됨"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "사이트 데이터 삭제"
     },
     "clearTitle": {
         "message": "사이트 데이터를 삭제하고 새로고침: 쿠키, 캐시, 저장소. 배지와 점수가 새 방문자가 보는 사이트를 보여 줍니다. 이 사이트에서 로그아웃됩니다"

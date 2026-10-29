@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "മൂന്നാം കക്ഷി ഡൊമെയ്‌നുകളില്ല"
     },
-    "blocked": {
-        "message": "തടഞ്ഞത് $COUNT$",
+    "blockedLine": {
+        "message": "തടഞ്ഞ അഭ്യർത്ഥനകൾ: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "തടഞ്ഞ അഭ്യർത്ഥനകൾ: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "കുക്കി പോപ്പ്-അപ്പുകൾ: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "വലുപ്പം: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "വീണ്ടും കാണിക്കരുത്"
     },
+    "rateText": {
+        "message": "ABlock ഇഷ്ടമായോ? Chrome Web Store-ൽ റേറ്റ് ചെയ്യൂ — മറ്റുള്ളവർക്ക് എക്സ്റ്റൻഷൻ കണ്ടെത്താൻ ഇത് സഹായിക്കും"
+    },
+    "rateButton": {
+        "message": "റേറ്റ് ചെയ്യുക"
+    },
     "reportLegendGuess": {
         "message": "? — പരോക്ഷ സൂചനകളിലൂടെ കണ്ടെത്തിയത്"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "സൈറ്റ് ഡാറ്റ മായ്ക്കുക"
     },
     "clearTitle": {
         "message": "സൈറ്റ് ഡാറ്റ ഇല്ലാതാക്കി വീണ്ടും ലോഡ് ചെയ്യുക: കുക്കികൾ, കാഷ്, സ്റ്റോറേജ്. ബാഡ്ജുകളും സ്കോറും ഒരു പുതിയ സന്ദർശകൻ കാണുന്നതുപോലെ സൈറ്റ് കാണിക്കും. ഈ സൈറ്റിൽ നിന്ന് നിങ്ങൾ ലോഗ് ഔട്ട് ആകും"

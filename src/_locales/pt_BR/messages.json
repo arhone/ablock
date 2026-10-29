@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Nenhum domínio de terceiros"
     },
-    "blocked": {
-        "message": "Bloqueios $COUNT$",
+    "blockedLine": {
+        "message": "Solicitações bloqueadas: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Solicitações bloqueadas: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Avisos de cookies: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Tamanho: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Não mostrar novamente"
     },
+    "rateText": {
+        "message": "Gosta do ABlock? Avalie na Chrome Web Store — isso ajuda outras pessoas a encontrar a extensão"
+    },
+    "rateButton": {
+        "message": "Avaliar"
+    },
     "reportLegendGuess": {
         "message": "? — detectado por sinais indiretos"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Limpar dados do site"
     },
     "clearTitle": {
         "message": "Apagar os dados do site e recarregar: cookies, cache e armazenamento. Os selos e a nota mostrarão o site como um visitante novo o vê. Você sairá da sua conta neste site"

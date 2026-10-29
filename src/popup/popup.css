@@ -219,6 +219,20 @@ body.loading {
     box-shadow: 0 0 0 3px color-mix(in srgb, var(--off) 22%, transparent);
 }
 
+/* Статус и под ним мелко — сколько заблокировано на странице */
+#status-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+#blocked {
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+    cursor: default;
+}
+
 /* Заметка к сайту */
 #status-row {
     display: flex;
@@ -295,7 +309,7 @@ body.loading {
     display: flex;
     align-items: center;
     gap: 6px;
-    padding: 9px 10px 9px 12px;
+    padding: 9px 12px;
     cursor: pointer;
 }
 #score[data-open] #score-head {
@@ -317,8 +331,8 @@ body.loading {
     text-align: start;
     cursor: pointer;
 }
-/* В раскрытом виде общая — в табло, корзины нет (её не нажать случайно), есть «Поделиться» */
-#score[data-open] :is(#meter, #score-value, #clear) {
+/* В раскрытом виде общая — в табло, есть «Поделиться» */
+#score[data-open] :is(#meter, #score-value) {
     display: none;
 }
 /* Стрелка, как у раскрывающихся строк */
@@ -702,23 +716,30 @@ body.loading {
     color: var(--muted);
     font-size: 11px;
 }
-/* Предложения: расширенный режим и одноразовая просьба о поддержке */
-#extended,
-#ask {
+/* Область оповещений: одна карточка за раз, все одного вида — текст слева, кнопка справа, крестик где есть.
+   Сама область в раскладке не участвует: пустая не добавляет отступа */
+#notices {
+    display: contents;
+}
+.notice {
     padding: 10px 12px;
     border-radius: 8px;
     background: var(--tint);
 }
-#ask-text {
+.notice > span {
     flex: 1;
 }
-#ask-donate {
+#rate-button,
+#ask-button {
     text-decoration: none;
 }
-#ask-donate::before {
+#rate-button::before {
+    content: "★ ";
+}
+#ask-button::before {
     content: "♥ ";
 }
-#ask-close {
+.notice .close {
     flex: none;
     width: 22px;
     height: 22px;
@@ -736,14 +757,16 @@ body.loading {
 }
 /* Главные кнопки — монохромные, контрастом к фону */
 #extended-button,
-#ask-donate {
+#rate-button,
+#ask-button {
     padding: 5px 14px;
     background: var(--text);
     color: var(--bg);
     transition: opacity 0.15s ease;
 }
 #extended-button:hover,
-#ask-donate:hover {
+#rate-button:hover,
+#ask-button:hover {
     opacity: 0.85;
 }
 /* «Поделиться» в конце раскрытой оценки и меню под ним (или над табло — из шапки) */
@@ -802,7 +825,8 @@ body.loading {
 /* Настройки: подпись слева, переключатель справа */
 #site-row,
 #cookies-row,
-#incognito-row {
+#incognito-row,
+#clear-row {
     padding: 2px 0;
     color: var(--text);
     font-size: 12px;
@@ -882,13 +906,16 @@ body.loading {
 #server .icon-button {
     margin-inline-start: auto;
 }
-/* Удаление данных: второе нажатие подтверждает */
+/* Удаление данных: строка после переключателей, кнопка шириной с переключатель; второе нажатие подтверждает */
+#clear-row {
+    cursor: default;
+}
+#clear {
+    min-width: 32px;
+}
 #clear[data-confirm] {
     background: var(--off-text);
     color: var(--bg);
-}
-#score:has(#clear[data-confirm]) :is(#score-label, #score-issues) {
-    display: none;
 }
 #clear:disabled {
     opacity: 0.5;
@@ -936,6 +963,13 @@ body.loading {
 }
 .sheet-head span {
     white-space: nowrap;
+}
+/* Сколько заблокировано — мелко под значками, ближе к ним, чем к табло */
+.sheet-blocked {
+    margin-top: -6px;
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
 }
 /* Табло на картинке — отдельной плашкой, с подписью под кругом */
 .sheet .board {
@@ -986,6 +1020,7 @@ body.loading {
 .chip[tabindex],
 .audit-row[tabindex],
 .board [tabindex],
+#blocked[tabindex],
 #stats {
     cursor: help;
 }
@@ -993,6 +1028,7 @@ body.loading {
 .chip:focus-visible,
 .audit-row:focus-visible,
 .board [tabindex]:focus-visible,
+#blocked:focus-visible,
 #stats:focus-visible,
 #score-more:focus-visible {
     outline: 2px solid var(--muted);
@@ -1077,7 +1113,7 @@ footer a:hover {
 #theme[data-dark="false"] .sun {
     display: none;
 }
-#ask-close svg {
+#notices .close svg {
     width: 11px;
     height: 11px;
 }

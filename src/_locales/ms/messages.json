@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Tiada domain pihak ketiga"
     },
-    "blocked": {
-        "message": "Disekat $COUNT$",
+    "blockedLine": {
+        "message": "Permintaan disekat: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Permintaan disekat: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Tetingkap kuki: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Saiz: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Jangan tunjukkan lagi"
     },
+    "rateText": {
+        "message": "Suka ABlock? Beri penilaian di Chrome Web Store — ini membantu orang lain menemui sambungan ini"
+    },
+    "rateButton": {
+        "message": "Beri penilaian"
+    },
     "reportLegendGuess": {
         "message": "? — dikesan melalui tanda tidak langsung"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Kosongkan data tapak"
     },
     "clearTitle": {
         "message": "Padam data tapak dan muat semula: kuki, cache dan storan. Lencana dan skor akan menunjukkan tapak seperti yang dilihat oleh pelawat baharu. Anda akan dilog keluar daripada tapak ini"

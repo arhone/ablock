@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Kolmandate osapoolte domeene pole"
     },
-    "blocked": {
-        "message": "Blokeeritud $COUNT$",
+    "blockedLine": {
+        "message": "Blokeeritud päringuid: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Blokeeritud päringuid: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Küpsiseaknad: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Suurus: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Ära enam näita"
     },
+    "rateText": {
+        "message": "Meeldib ABlock? Hinda seda Chrome Web Store’is — see aitab teistel laiendust leida"
+    },
+    "rateButton": {
+        "message": "Hinda"
+    },
     "reportLegendGuess": {
         "message": "? — tuvastatud kaudsete tunnuste järgi"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Kustuta saidi andmed"
     },
     "clearTitle": {
         "message": "Kustuta saidi andmed ja laadi uuesti: küpsised, vahemälu ja salvestusruum. Märgid ja hinne näitavad saiti nii, nagu uus külastaja seda näeb. Teid logitakse sellelt saidilt välja"

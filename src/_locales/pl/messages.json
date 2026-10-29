@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Brak domen zewnętrznych"
     },
-    "blocked": {
-        "message": "Blok $COUNT$",
+    "blockedLine": {
+        "message": "Zablokowane żądania: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Zablokowane żądania: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Okna o cookies: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Rozmiar: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Nie pokazuj ponownie"
     },
+    "rateText": {
+        "message": "Podoba ci się ABlock? Oceń go w Chrome Web Store — to pomaga innym znaleźć rozszerzenie"
+    },
+    "rateButton": {
+        "message": "Oceń"
+    },
     "reportLegendGuess": {
         "message": "? — ustalono na podstawie pośrednich oznak"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Wyczyść dane strony"
     },
     "clearTitle": {
         "message": "Usuń dane strony i przeładuj: cookies, pamięć podręczną i magazyny. Znaczki i ocena pokażą stronę tak, jak widzi ją nowy użytkownik. Zostaniesz wylogowany z tej strony"

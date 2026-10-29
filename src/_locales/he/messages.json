@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "אין דומיינים של צד שלישי"
     },
-    "blocked": {
-        "message": "נחסמו $COUNT$",
+    "blockedLine": {
+        "message": "בקשות שנחסמו: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "בקשות שנחסמו: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "חלונות עוגיות: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "גודל: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "אל תציג שוב"
     },
+    "rateText": {
+        "message": "אוהבים את ABlock? דרגו אותו ב-Chrome Web Store — זה עוזר לאחרים למצוא את התוסף"
+    },
+    "rateButton": {
+        "message": "דירוג"
+    },
     "reportLegendGuess": {
         "message": "? — זוהה לפי סימנים עקיפים"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "ניקוי נתוני האתר"
     },
     "clearTitle": {
         "message": "מחיקת נתוני האתר וטעינה מחדש: עוגיות, מטמון ואחסון. התגים והציון יציגו את האתר כפי שמבקר חדש רואה אותו. תנותקו מהחשבון באתר זה"

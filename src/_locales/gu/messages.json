@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "કોઈ તૃતીય-પક્ષ ડોમેન નથી"
     },
-    "blocked": {
-        "message": "બ્લૉક $COUNT$",
+    "blockedLine": {
+        "message": "બ્લૉક કરેલી વિનંતીઓ: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "બ્લૉક કરેલી વિનંતીઓ: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "કૂકી પૉપ-અપ: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "કદ: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "ફરી બતાવશો નહીં"
     },
+    "rateText": {
+        "message": "ABlock ગમે છે? Chrome Web Store માં તેને રેટિંગ આપો — તેનાથી બીજાને એક્સ્ટેંશન શોધવામાં મદદ મળે છે"
+    },
+    "rateButton": {
+        "message": "રેટિંગ આપો"
+    },
     "reportLegendGuess": {
         "message": "? — પરોક્ષ સંકેતો પરથી શોધાયું"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "સાઇટનો ડેટા સાફ કરો"
     },
     "clearTitle": {
         "message": "સાઇટનો ડેટા કાઢી નાખો અને ફરી લોડ કરો: કૂકીઝ, કૅશ અને સ્ટોરેજ. બૅજ અને સ્કોર સાઇટને નવા મુલાકાતીની નજરે બતાવશે. તમે આ સાઇટમાંથી લૉગ આઉટ થઈ જશો"

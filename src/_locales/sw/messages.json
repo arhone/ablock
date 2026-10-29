@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Hakuna vikoa vya wahusika wengine"
     },
-    "blocked": {
-        "message": "Vilivyozuiwa $COUNT$",
+    "blockedLine": {
+        "message": "Maombi yaliyozuiwa: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Maombi yaliyozuiwa: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Madirisha ya vidakuzi: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Ukubwa: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Usionyeshe tena"
     },
+    "rateText": {
+        "message": "Unapenda ABlock? Ipe ukadiriaji kwenye Chrome Web Store — inawasaidia wengine kupata kiendelezi"
+    },
+    "rateButton": {
+        "message": "Kadiria"
+    },
     "reportLegendGuess": {
         "message": "? — imegunduliwa kwa ishara zisizo za moja kwa moja"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Futa data ya tovuti"
     },
     "clearTitle": {
         "message": "Futa data ya tovuti na upakie upya: vidakuzi, akiba na hifadhi. Beji na alama zitaonyesha tovuti jinsi mgeni mpya anavyoiona. Utaondolewa kwenye akaunti ya tovuti hii"

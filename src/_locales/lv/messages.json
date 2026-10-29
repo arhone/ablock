@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Nav trešo pušu domēnu"
     },
-    "blocked": {
-        "message": "Bloķēti $COUNT$",
+    "blockedLine": {
+        "message": "Bloķēti pieprasījumi: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Bloķēti pieprasījumi: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Sīkfailu logi: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Izmērs: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Vairs nerādīt"
     },
+    "rateText": {
+        "message": "Patīk ABlock? Novērtējiet to Chrome Web Store — tas palīdz citiem atrast paplašinājumu"
+    },
+    "rateButton": {
+        "message": "Novērtēt"
+    },
     "reportLegendGuess": {
         "message": "? — noteikts pēc netiešām pazīmēm"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Notīrīt vietnes datus"
     },
     "clearTitle": {
         "message": "Dzēst vietnes datus un pārlādēt: sīkfailus, kešatmiņu un krātuvi. Žetoni un vērtējums parādīs vietni tā, kā to redz jauns apmeklētājs. Jūs tiksiet izrakstīts no šīs vietnes"

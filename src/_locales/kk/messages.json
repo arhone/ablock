@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Бөгде домендер жоқ"
     },
-    "blocked": {
-        "message": "Блок $COUNT$",
+    "blockedLine": {
+        "message": "Бұғатталған сұраулар: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Бұғатталған сұраулар: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Cookie терезелері: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Көлемі: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Қайта көрсетпеу"
     },
+    "rateText": {
+        "message": "ABlock ұнай ма? Оны Chrome Web Store-да бағалаңыз — бұл басқаларға кеңейтуді табуға көмектеседі"
+    },
+    "rateButton": {
+        "message": "Бағалау"
+    },
     "reportLegendGuess": {
         "message": "? — жанама белгілер бойынша анықталған"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Сайт деректерін тазалау"
     },
     "clearTitle": {
         "message": "Сайт деректерін жойып, қайта жүктеу: cookie, кэш және қоймалар. Белгілер мен баға сайтты жаңа келушіге көрінетіндей көрсетеді. Осы сайттағы аккаунттан шығасыз"

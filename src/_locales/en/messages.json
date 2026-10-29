@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "No third-party domains"
     },
-    "blocked": {
-        "message": "Blocked $COUNT$",
+    "blockedLine": {
+        "message": "Requests blocked: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Requests blocked: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Cookie pop-ups: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Size: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Don’t show again"
     },
+    "rateText": {
+        "message": "Like ABlock? Rate it in the Chrome Web Store — it helps others find the extension"
+    },
+    "rateButton": {
+        "message": "Rate"
+    },
     "reportLegendGuess": {
         "message": "? — detected by indirect signs"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Clear site data"
     },
     "clearTitle": {
         "message": "Delete site data and reload: cookies, cache and storage. Badges and score will show the site as a new visitor sees it. You will be logged out of this site"

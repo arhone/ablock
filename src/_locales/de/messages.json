@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Keine fremden Domains"
     },
-    "blocked": {
-        "message": "Blockiert $COUNT$",
+    "blockedLine": {
+        "message": "Blockierte Anfragen: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Blockierte Anfragen: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Cookie-Fenster: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Volumen: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Nicht mehr anzeigen"
     },
+    "rateText": {
+        "message": "Gefällt dir ABlock? Bewerte es im Chrome Web Store – so finden andere die Erweiterung"
+    },
+    "rateButton": {
+        "message": "Bewerten"
+    },
     "reportLegendGuess": {
         "message": "? — anhand indirekter Merkmale erkannt"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Website-Daten löschen"
     },
     "clearTitle": {
         "message": "Website-Daten löschen und neu laden: Cookies, Cache und Speicher. Symbole und Bewertung zeigen die Website wie für einen neuen Besucher. Sie werden auf dieser Website abgemeldet"

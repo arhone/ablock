@@ -277,7 +277,7 @@ function update(changes = {}) {
 
 chrome.runtime.onInstalled.addListener(async () => {
     update();
-    // Дата установки — для одноразовой просьбы о поддержке. У обновившихся отсчёт идёт с обновления
+    // Дата установки — для одноразовых просьб оценить и поддержать. У обновившихся отсчёт идёт с обновления
     const {aBlockInstalled} = await chrome.storage.local.get('aBlockInstalled');
     if (!aBlockInstalled) {
         await chrome.storage.local.set({aBlockInstalled: Date.now()});

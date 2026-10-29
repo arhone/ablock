@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Нема спољних домена"
     },
-    "blocked": {
-        "message": "Блок $COUNT$",
+    "blockedLine": {
+        "message": "Блокирано захтева: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Блокирано захтева: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Прозори о колачићима: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Обим: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Не приказуј више"
     },
+    "rateText": {
+        "message": "Свиђа вам се ABlock? Оцените га у Chrome Web Store-у — то помаже другима да пронађу додатак"
+    },
+    "rateButton": {
+        "message": "Оцени"
+    },
     "reportLegendGuess": {
         "message": "? — одређено по посредним знацима"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Обриши податке сајта"
     },
     "clearTitle": {
         "message": "Обриши податке сајта и поново учитај: колачиће, кеш и складишта. Значке и оцена ће приказати сајт као за новог посетиоца. Бићете одјављени са налога на овом сајту"

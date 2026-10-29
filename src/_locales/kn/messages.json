@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಡೊಮೇನ್‌ಗಳಿಲ್ಲ"
     },
-    "blocked": {
-        "message": "ನಿರ್ಬಂಧಿತ $COUNT$",
+    "blockedLine": {
+        "message": "ನಿರ್ಬಂಧಿಸಿದ ವಿನಂತಿಗಳು: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "ನಿರ್ಬಂಧಿಸಿದ ವಿನಂತಿಗಳು: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "ಕುಕೀ ಪಾಪ್-ಅಪ್‌ಗಳು: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "ಗಾತ್ರ: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "ಮತ್ತೆ ತೋರಿಸಬೇಡಿ"
     },
+    "rateText": {
+        "message": "ABlock ಇಷ್ಟವಾಯಿತೇ? Chrome Web Store ನಲ್ಲಿ ರೇಟ್ ಮಾಡಿ — ಇದು ಇತರರಿಗೆ ವಿಸ್ತರಣೆಯನ್ನು ಹುಡುಕಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ"
+    },
+    "rateButton": {
+        "message": "ರೇಟ್ ಮಾಡಿ"
+    },
     "reportLegendGuess": {
         "message": "? — ಪರೋಕ್ಷ ಚಿಹ್ನೆಗಳಿಂದ ಪತ್ತೆಯಾಗಿದೆ"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "ಸೈಟ್ ಡೇಟಾ ತೆರವುಗೊಳಿಸಿ"
     },
     "clearTitle": {
         "message": "ಸೈಟ್ ಡೇಟಾ ಅಳಿಸಿ ಮತ್ತು ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿ: ಕುಕೀಗಳು, ಕ್ಯಾಶ್ ಮತ್ತು ಸಂಗ್ರಹಣೆ. ಬ್ಯಾಡ್ಜ್‌ಗಳು ಮತ್ತು ಸ್ಕೋರ್ ಹೊಸ ಸಂದರ್ಶಕರು ನೋಡುವಂತೆ ಸೈಟ್ ಅನ್ನು ತೋರಿಸುತ್ತವೆ. ನೀವು ಈ ಸೈಟ್‌ನಿಂದ ಲಾಗ್ ಔಟ್ ಆಗುತ್ತೀರಿ"

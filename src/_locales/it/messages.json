@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Nessun dominio di terze parti"
     },
-    "blocked": {
-        "message": "Bloccati $COUNT$",
+    "blockedLine": {
+        "message": "Richieste bloccate: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Richieste bloccate: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Pop-up sui cookie: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Dimensione: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Non mostrare più"
     },
+    "rateText": {
+        "message": "Ti piace ABlock? Valutalo sul Chrome Web Store: aiuta altri a trovare l’estensione"
+    },
+    "rateButton": {
+        "message": "Valuta"
+    },
     "reportLegendGuess": {
         "message": "? — rilevato da indizi indiretti"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Cancella i dati del sito"
     },
     "clearTitle": {
         "message": "Elimina i dati del sito e ricarica: cookie, cache e archivi. Badge e voto mostreranno il sito come lo vede un nuovo visitatore. Verrai disconnesso da questo sito"

@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Tashqi domenlar yoʻq"
     },
-    "blocked": {
-        "message": "Blok $COUNT$",
+    "blockedLine": {
+        "message": "Bloklangan soʻrovlar: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Bloklangan soʻrovlar: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Cookie oynalari: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Hajmi: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Boshqa koʻrsatilmasin"
     },
+    "rateText": {
+        "message": "ABlock yoqdimi? Uni Chrome Web Store’da baholang — bu boshqalarga kengaytmani topishga yordam beradi"
+    },
+    "rateButton": {
+        "message": "Baholash"
+    },
     "reportLegendGuess": {
         "message": "? — bilvosita belgilar boʻyicha aniqlangan"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Sayt maʼlumotlarini tozalash"
     },
     "clearTitle": {
         "message": "Sayt maʼlumotlarini oʻchirib, qayta yuklash: cookie, kesh va xotiralar. Belgilar va baho saytni yangi tashrif buyuruvchi koʻrganidek koʻrsatadi. Bu saytdagi akkauntingizdan chiqasiz"

@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "மூன்றாம் தரப்பு டொமைன்கள் இல்லை"
     },
-    "blocked": {
-        "message": "தடுக்கப்பட்டவை $COUNT$",
+    "blockedLine": {
+        "message": "தடுக்கப்பட்ட கோரிக்கைகள்: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "தடுக்கப்பட்ட கோரிக்கைகள்: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "குக்கீ சாளரங்கள்: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "அளவு: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "மீண்டும் காட்ட வேண்டாம்"
     },
+    "rateText": {
+        "message": "ABlock பிடித்திருக்கிறதா? Chrome Web Store-இல் மதிப்பிடுங்கள் — மற்றவர்கள் நீட்டிப்பைக் கண்டறிய இது உதவும்"
+    },
+    "rateButton": {
+        "message": "மதிப்பிடு"
+    },
     "reportLegendGuess": {
         "message": "? — மறைமுக அறிகுறிகளால் கண்டறியப்பட்டது"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "தளத் தரவை அழி"
     },
     "clearTitle": {
         "message": "தளத் தரவை நீக்கி மீண்டும் ஏற்று: குக்கீகள், தற்காலிக சேமிப்பு மற்றும் சேமிப்பகம். பேட்ஜ்களும் மதிப்பெண்ணும் புதிய பார்வையாளர் பார்ப்பது போல் தளத்தைக் காட்டும். இந்தத் தளத்திலிருந்து நீங்கள் வெளியேற்றப்படுவீர்கள்"

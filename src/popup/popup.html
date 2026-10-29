@@ -18,17 +18,19 @@
             <img id="logo" src="/images/ablock-128-empty.webp" alt="">
         </button>
         <div class="badges right">
-            <div class="badge" id="blocked"></div>
             <div class="badge" id="trackers"></div>
             <div class="badge" id="domains"></div>
             <div class="badge" id="compression">—</div>
         </div>
     </div>
-    <div id="status-row">
-        <div id="status" data-status="true"></div>
-        <button class="icon-button" id="note-add" type="button" hidden data-i18n-title="noteTitle">
-            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.5 2.5l3 3L6 13H3v-3z M8.5 4.5l3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-        </button>
+    <div id="status-block">
+        <div id="status-row">
+            <div id="status" data-status="true"></div>
+            <button class="icon-button" id="note-add" type="button" hidden data-i18n-title="noteTitle">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.5 2.5l3 3L6 13H3v-3z M8.5 4.5l3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+        <div id="blocked" hidden></div>
     </div>
     <p id="note" hidden tabindex="0" role="button" data-i18n-title="noteTitle"></p>
     <textarea id="note-input" hidden rows="2" maxlength="200" data-i18n-placeholder="notePlaceholder" data-i18n-title="noteTitle"></textarea>
@@ -44,10 +46,6 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 4h7v7M20 4l-9 9"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></svg>
             </button>
             <span class="chevron" aria-hidden="true"></span>
-            <button class="icon-button" id="clear" type="button" data-i18n-title="clearTitle">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4h11M6.5 4V2.5h3V4M4 4l.7 9.5h6.6L12 4M6.8 6.5v4.5M9.2 6.5v4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span id="clear-text" hidden data-i18n="clearConfirm"></span>
-            </button>
         </div>
         <div id="score-body" hidden>
             <div class="board" id="board"></div>
@@ -129,19 +127,29 @@
             </div>
         </div>
     </section>
-    <div class="card" id="extended" hidden>
-        <span data-i18n="extendedText"></span>
-        <button class="action" id="extended-button" type="button" data-i18n="extendedButton"></button>
-    </div>
-    <div class="card" id="stats" hidden tabindex="0">
-        <span id="stats-text"></span>
-    </div>
-    <div class="card" id="ask" hidden>
-        <span id="ask-text"></span>
-        <a class="action" id="ask-donate" target="_blank" data-i18n="donate" data-i18n-title="donateTitle"></a>
-        <button class="tool" id="ask-close" type="button" data-i18n-title="askClose">
-            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg>
-        </button>
+    <!-- Область оповещений: одна карточка за раз, порядок — в popup.js (renderNotices) -->
+    <div id="notices">
+        <div class="card notice" id="rate" hidden>
+            <span data-i18n="rateText"></span>
+            <a class="action" id="rate-button" target="_blank" data-i18n="rateButton"></a>
+            <button class="tool close" id="rate-close" type="button" data-i18n-title="askClose">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+            </button>
+        </div>
+        <div class="card notice" id="ask" hidden>
+            <span id="ask-text"></span>
+            <a class="action" id="ask-button" target="_blank" data-i18n="donate" data-i18n-title="donateTitle"></a>
+            <button class="tool close" id="ask-close" type="button" data-i18n-title="askClose">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+            </button>
+        </div>
+        <div class="card notice" id="extended" hidden>
+            <span data-i18n="extendedText"></span>
+            <button class="action" id="extended-button" type="button" data-i18n="extendedButton"></button>
+        </div>
+        <div class="card notice" id="stats" hidden tabindex="0">
+            <span id="stats-text"></span>
+        </div>
     </div>
     <label class="card" id="site-row" hidden data-i18n-title="siteTitle">
         <input type="checkbox" id="site">
@@ -155,6 +163,13 @@
         <input type="checkbox" id="incognito">
         <span data-i18n="incognitoLabel"></span>
     </label>
+    <div class="card" id="clear-row" hidden>
+        <span data-i18n="clearLabel"></span>
+        <button class="icon-button" id="clear" type="button" data-i18n-title="clearTitle">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4h11M6.5 4V2.5h3V4M4 4l.7 9.5h6.6L12 4M6.8 6.5v4.5M9.2 6.5v4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span id="clear-text" hidden data-i18n="clearConfirm"></span>
+        </button>
+    </div>
     <footer>
         <label class="lang">
             <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M1.75 8h12.5M8 1.75c-3.6 3.6-3.6 8.9 0 12.5M8 1.75c3.6 3.6 3.6 8.9 0 12.5"/></svg>

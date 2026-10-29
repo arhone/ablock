@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Walang third-party na domain"
     },
-    "blocked": {
-        "message": "Na-block $COUNT$",
+    "blockedLine": {
+        "message": "Na-block na request: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Na-block na request: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Mga cookie pop-up: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Laki: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Huwag nang ipakita"
     },
+    "rateText": {
+        "message": "Gusto mo ba ang ABlock? I-rate ito sa Chrome Web Store — nakakatulong ito sa iba na mahanap ang extension"
+    },
+    "rateButton": {
+        "message": "I-rate"
+    },
     "reportLegendGuess": {
         "message": "? — natukoy sa di-tuwirang palatandaan"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "I-clear ang data ng site"
     },
     "clearTitle": {
         "message": "Burahin ang data ng site at i-reload: cookies, cache at storage. Ipapakita ng mga badge at iskor ang site gaya ng nakikita ng bagong bisita. Mala-log out ka sa site na ito"

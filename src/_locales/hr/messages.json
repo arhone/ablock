@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Nema domena trećih strana"
     },
-    "blocked": {
-        "message": "Blokirano $COUNT$",
+    "blockedLine": {
+        "message": "Blokiranih zahtjeva: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Blokiranih zahtjeva: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Prozori o kolačićima: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Veličina: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Ne prikazuj više"
     },
+    "rateText": {
+        "message": "Sviđa vam se ABlock? Ocijenite ga u Chrome Web Storeu — to pomaže drugima da pronađu proširenje"
+    },
+    "rateButton": {
+        "message": "Ocijeni"
+    },
     "reportLegendGuess": {
         "message": "? — utvrđeno prema neizravnim znakovima"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Očisti podatke stranice"
     },
     "clearTitle": {
         "message": "Izbriši podatke stranice i ponovno učitaj: kolačiće, predmemoriju i pohranu. Oznake i ocjena prikazat će stranicu kakvu je vidi novi posjetitelj. Bit ćete odjavljeni s ove stranice"

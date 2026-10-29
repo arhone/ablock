@@ -86,10 +86,12 @@ const NETWORKS_BY_LANG = {
 // Страница для пожертвований (Boosty). Пустая строка — кнопка «Поддержать» скрыта
 const DONATE_URL = 'https://boosty.to/a.arh/donate';
 
-// Когда один раз попросить о поддержке: после стольких заблокированных запросов (расширенный режим)
-// или через столько дней после установки (без него счётчика нет)
-const ASK_REQUESTS = 30000;
+// Одноразовые просьбы (renderNotices): оценить в магазине — через столько дней после установки,
+// поддержать — после просьбы оценить и через столько дней. В расширенном режиме просьба поддержать
+// называет число заблокированного, если его набралось столько (статистика идёт с включения режима)
+const RATE_DAYS = 30;
 const ASK_DAYS = 90;
+const ASK_REQUESTS = 30000;
 
 // Переводы в _locales: язык можно выбрать в окне, не меняя язык браузера
 const LOCALES = ['am', 'ar', 'bg', 'bn', 'ca', 'cs', 'da', 'de', 'el', 'en', 'en_AU', 'en_GB', 'en_US', 'es', 'es_419',
@@ -266,7 +268,7 @@ function translatePage() {
     for (const el of document.querySelectorAll('[data-i18n-placeholder]')) {
         el.placeholder = t(el.dataset.i18nPlaceholder);
     }
-    setBadge('blocked', t('blocked', '—'), 'none', '');
+    setBadge('blocked', t('blockedLine', '—'), 'none', '');
     setBadge('trackers', t('trackers', '—'), 'none', '');
     setBadge('domains', t('domains', '—'), 'none', '');
     document.getElementById('meter').append(...Array.from({length: 10}, () => document.createElement('i')));
@@ -741,7 +743,8 @@ function renderSpeed({loadTime, ready, age}) {
 }
 
 /**
- * Значки заблокированного на вкладке
+ * Заблокированное на вкладке: строка под статусом (обновляется так же, как значки) и значок трекеров.
+ * В строке — число, в расширенном режиме и вес: его считает sw.js по webRequest, без расширенного режима веса нет
  * @param {chrome.tabs.Tab} tab
  * @param {?Object} info
  * @param {boolean} status
@@ -757,7 +760,7 @@ async function renderBlocked(tab, info, status, server) {
     };
     setWeightTitle(false);
     if (!status) {
-        setBadge('blocked', t('blocked', '—'), 'none', t('statusOff'));
+        setBadge('blocked', t('blockedLine', '—'), 'none', t('statusOff'));
         setBadge('trackers', t('trackers', '—'), 'none', t('statusOff'));
         return;
     }
@@ -775,11 +778,9 @@ async function renderBlocked(tab, info, status, server) {
     const trackers = matched.filter((m) => TRACKER_RULESETS.includes(m.rule.rulesetId)).length;
     const cookies = matched.filter((m) => m.rule.rulesetId === COOKIE_RULESET).length;
     const ads = matched.length - trackers - cookies;
-    setBadge('blocked', t('blocked', matched.length), 'good', [
-        t('blockedTitle', ads, trackers),
-        cookies ? t('blockedCookies', cookies) : '',
-        server?.bytes ? t('blockedSize', formatSize(server.bytes)) : ''
-    ].filter(Boolean).join('\n'));
+    const count = formatNumber(matched.length);
+    setBadge('blocked', server?.bytes ? t('blockedLineSize', count, formatSize(server.bytes)) : t('blockedLine', count),
+        'good', [t('blockedTitle', ads, trackers), cookies ? t('blockedCookies', cookies) : ''].filter(Boolean).join('\n'));
     // Трекеры заблокированы: сайт пытался следить, но защита это остановила — жёлтый, а не красный
     setBadge('trackers', t('trackers', trackers), trackers ? 'warn' : 'good',
         trackers ? t('trackersFound', trackers) : t('trackersNone'));
@@ -1599,17 +1600,17 @@ function renderScore(info, companies, audit, rows, server) {
 }
 
 /**
- * Нажатие на полосу оценки раскрывает табло и разделы по группам. В раскрытом виде вместо корзины —
- * значок «Поделиться»: корзину не нажать случайно, пока читаешь отчёт
+ * Нажатие на полосу оценки раскрывает табло и разделы по группам. В раскрытом виде в шапке —
+ * значок «Поделиться»
  */
 function setupScoreToggle() {
     const score = document.getElementById('score');
     const head = document.getElementById('score-head');
     const button = document.getElementById('score-more');
     const body = document.getElementById('score-body');
-    // Стрелка — тоже часть полосы; корзина и «Поделиться» — свои кнопки
+    // Стрелка — тоже часть полосы; «Поделиться» — своя кнопка
     head.addEventListener('click', (event) => {
-        if (event.target.closest('#clear, #share-head')) {
+        if (event.target.closest('#share-head')) {
             return;
         }
         body.hidden = !body.hidden;
@@ -1629,7 +1630,7 @@ function setupScoreToggle() {
  */
 function setupTips() {
     const tip = document.getElementById('tip');
-    const SELECTOR = '.badge[tabindex], .chip[tabindex], .audit-row[tabindex], .board [tabindex], #stats';
+    const SELECTOR = '.badge[tabindex], .chip[tabindex], .audit-row[tabindex], .board [tabindex], #blocked[tabindex], #stats';
     let owner = null;
 
     const hide = () => {
@@ -1740,6 +1741,8 @@ async function renderReport(host) {
     for (const img of panel.querySelectorAll('img')) {
         img.src = await toDataUrl(img.src);
     }
+    // «Блок» больше не метка, а строка под статусом — на картинке она под значками
+    const blocked = make('div', 'sheet-blocked', document.getElementById('blocked').textContent);
     // Табло — сразу раскрытое: свёрнутой полосы на картинке нет
     const board = document.getElementById('board').cloneNode(true);
     board.removeAttribute('id');
@@ -1769,12 +1772,12 @@ async function renderReport(host) {
     const guess = Boolean(details.querySelector('[data-sure="false"]'));
     const unsure = Boolean(board.querySelector('[data-sure="false"]'));
     const legendText = [guess && unsure ? t('reportLegendQuestion') : guess ? t('reportLegendGuess') : unsure ? t('reportLegendUnsure') : '',
-        /≈/.test(panel.textContent) ? t('reportLegendEstimate') : ''].filter(Boolean).join(' · ');
+        /≈/.test(panel.textContent + blocked.textContent) ? t('reportLegendEstimate') : ''].filter(Boolean).join(' · ');
     const legend = legendText ? make('div', 'sheet-legend', legendText) : null;
     const foot = make('div', 'sheet-foot');
     foot.append(make('span', '', 'ABlock'), make('span', '', 'github.com/arhone/ablock'));
 
-    sheet.append(head, panel, board, details);
+    sheet.append(head, panel, blocked, board, details);
     if (notes.childElementCount) {
         sheet.append(notes);
     }
@@ -1986,8 +1989,8 @@ function setupReport(host, score) {
 }
 
 /**
- * Корзина у оценки: удаляет всё, что браузер хранит для сайта, и перезагружает страницу —
- * значки и оценка покажут сайт таким, каким его видит новый посетитель.
+ * Строка «Очистить данные сайта» после переключателей: корзина удаляет всё, что браузер хранит для сайта,
+ * и перезагружает страницу — значки и оценка покажут сайт таким, каким его видит новый посетитель.
  * Первое нажатие просит подтверждения: человек выйдет из аккаунта на сайте
  * @param {chrome.tabs.Tab} tab
  */
@@ -1999,14 +2002,7 @@ function setupClear(tab) {
         delete button.dataset.confirm;
         text.hidden = true;
     };
-
-    // Нажатие на полосу (раскрытие оценки) отменяет подтверждение: в раскрытой шапке корзины нет
-    document.getElementById('score-head').addEventListener('click', (event) => {
-        if (!event.target.closest('#clear')) {
-            clearTimeout(timer);
-            reset();
-        }
-    });
+    document.getElementById('clear-row').hidden = false;
 
     button.addEventListener('click', async () => {
         if (!('confirm' in button.dataset)) {
@@ -2057,43 +2053,51 @@ function renderStats(stats) {
 }
 
 /**
- * Просьба о поддержке: один раз, пока её не закрыли или не перешли по ссылке.
+ * Область оповещений над переключателями: одна карточка за раз. По порядку — просьба оценить в магазине,
+ * просьба поддержать (когда просьбу оценить уже закрыли), плашка расширенного режима, без неё — статистика.
+ * Просьбы — один раз: после кнопки или крестика сразу видна следующая карточка.
  * Всё считается в браузере, наружу ничего не уходит
+ * @param {boolean} extended
  * @param {?Object} stats Статистика расширенного режима, null без него
  */
-async function renderAsk(stats) {
-    const {aBlockAsked, aBlockInstalled} = await chrome.storage.local.get(['aBlockAsked', 'aBlockInstalled']);
-    if (!DONATE_URL || aBlockAsked) {
-        return;
-    }
-    let text;
-    if (stats) {
-        if ((stats.requests || 0) < ASK_REQUESTS) {
-            return;
+async function renderNotices(extended, stats) {
+    const seen = await chrome.storage.local.get(['aBlockInstalled', 'aBlockRated', 'aBlockAsked']);
+    const days = seen.aBlockInstalled ? (Date.now() - seen.aBlockInstalled) / 86400000 : 0;
+    const cards = [
+        ['rate', () => !seen.aBlockRated && days >= RATE_DAYS],
+        ['ask', () => Boolean(DONATE_URL) && Boolean(seen.aBlockRated) && !seen.aBlockAsked && days > ASK_DAYS],
+        ['extended', () => !extended],
+        ['stats', () => extended]
+    ];
+    const show = () => {
+        const [shown] = cards.find(([, when]) => when()) || [];
+        for (const [id] of cards) {
+            document.getElementById(id).hidden = id !== shown;
         }
-        text = t('askStats', formatNumber(stats.requests), formatSize(stats.bytes || 0));
-    } else {
-        if (!aBlockInstalled || Date.now() - aBlockInstalled < ASK_DAYS * 86400000) {
-            return;
-        }
-        text = t('askTime');
-    }
-    const ask = document.getElementById('ask');
-    document.getElementById('ask-text').textContent = text;
-    const link = document.getElementById('ask-donate');
-    link.href = DONATE_URL;
-    const done = () => {
-        ask.hidden = true;
-        return chrome.storage.local.set({aBlockAsked: Date.now()});
     };
+    // Кнопка просьбы открывает ссылку, крестик — «больше не показывать»; то и другое запоминается.
     // Новая вкладка закрывает окно: сначала запоминаем, потом открываем
-    link.addEventListener('click', async (event) => {
-        event.preventDefault();
-        await done();
-        chrome.tabs.create({url: DONATE_URL});
-    });
-    document.getElementById('ask-close').addEventListener('click', done);
-    ask.hidden = false;
+    const once = (id, url, key) => {
+        const done = async () => {
+            seen[key] = Date.now();
+            show();
+            await chrome.storage.local.set({[key]: seen[key]});
+        };
+        const link = document.getElementById(`${id}-button`);
+        link.href = url;
+        link.addEventListener('click', async (event) => {
+            event.preventDefault();
+            await done();
+            chrome.tabs.create({url});
+        });
+        document.getElementById(`${id}-close`).addEventListener('click', done);
+    };
+    once('rate', STORE_URL, 'aBlockRated');
+    once('ask', DONATE_URL, 'aBlockAsked');
+    document.getElementById('ask-text').textContent = (stats?.requests || 0) >= ASK_REQUESTS
+        ? t('askStats', formatNumber(stats.requests), formatSize(stats.bytes || 0))
+        : t('askTime');
+    show();
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
@@ -2132,6 +2136,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         label.textContent = t(!status ? 'statusOff' : allowedEntry ? 'statusSiteOff' : 'statusOn');
     }
     render();
+    // Сколько заблокировано на странице — строкой под статусом (renderBlocked)
+    document.getElementById('blocked').hidden = !isSite;
 
     // Для IP-адресов не показываем: правила браузера задаются по доменам
     const siteRow = document.getElementById('site-row');
@@ -2217,7 +2223,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Расширенный режим: включение или статистика
     const extended = await chrome.permissions.contains(EXTENDED);
-    document.getElementById('extended').hidden = extended;
     // Выключение — внизу раскрытой оценки: заголовки, хостинг и статистика пропадут, доступ ко всем сайтам будет снят
     document.getElementById('audit-foot').hidden = !extended;
     // Без расширенного режима баннеры не прячутся, а сервисы баннеров блокируются всегда — переключать нечего
@@ -2236,14 +2241,13 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (extended) {
         const response = await chrome.runtime.sendMessage({tabInfo: tab?.id ?? -1}).catch(() => null);
         renderStats(response?.stats);
-        document.getElementById('stats').hidden = false;
-        renderAsk(response?.stats || {}).catch(console.error);
+        renderNotices(true, response?.stats).catch(console.error);
         // Данные относятся к этой странице, а не к предыдущей на вкладке
         if (isSite && response?.tab?.host === new URL(tab.url).hostname) {
             server = response.tab;
         }
     } else {
-        renderAsk(null).catch(console.error);
+        renderNotices(false, null).catch(console.error);
     }
 
     // Значки и подробности только для обычных сайтов
@@ -2265,6 +2269,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (!info) {
         return; // Страница недоступна для расширений (магазин, настройки)
     }
+    setupClear(tab);
     await renderBlocked(tab, info, active(), server);
     const companies = await findCompanies(info, server, active());
     await renderServer(server, extended);
@@ -2280,6 +2285,5 @@ document.addEventListener('DOMContentLoaded', async function () {
     document.getElementById('score').hidden = false;
     setupScoreToggle();
     setupReport(new URL(tab.url).hostname, score);
-    setupClear(tab);
 
 });

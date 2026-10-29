@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "कोई तृतीय-पक्ष डोमेन नहीं"
     },
-    "blocked": {
-        "message": "ब्लॉक $COUNT$",
+    "blockedLine": {
+        "message": "ब्लॉक किए गए अनुरोध: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "ब्लॉक किए गए अनुरोध: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "कुकी विंडो: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "आकार: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "फिर से न दिखाएँ"
     },
+    "rateText": {
+        "message": "ABlock पसंद है? Chrome Web Store में इसे रेटिंग दें — इससे दूसरों को एक्सटेंशन ढूँढने में मदद मिलती है"
+    },
+    "rateButton": {
+        "message": "रेटिंग दें"
+    },
     "reportLegendGuess": {
         "message": "? — अप्रत्यक्ष संकेतों से पता लगाया"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "साइट का डेटा साफ़ करें"
     },
     "clearTitle": {
         "message": "साइट का डेटा हटाएँ और पुनः लोड करें: कुकी, कैश और स्टोरेज। बैज और स्कोर साइट को नए आगंतुक की तरह दिखाएँगे। आप इस साइट के खाते से लॉग आउट हो जाएँगे"

@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "No hi ha dominis de tercers"
     },
-    "blocked": {
-        "message": "Bloquejats $COUNT$",
+    "blockedLine": {
+        "message": "Sol·licituds bloquejades: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Sol·licituds bloquejades: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Avisos de galetes: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Mida: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "No ho tornis a mostrar"
     },
+    "rateText": {
+        "message": "T’agrada ABlock? Valora’l a la Chrome Web Store: ajuda altres persones a trobar l’extensió"
+    },
+    "rateButton": {
+        "message": "Valora"
+    },
     "reportLegendGuess": {
         "message": "? — detectat per indicis indirectes"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Esborra les dades del lloc"
     },
     "clearTitle": {
         "message": "Esborra les dades del lloc i torna a carregar: galetes, memòria cau i emmagatzematge. Les insígnies i la nota mostraran el lloc tal com el veu un visitant nou. Tancaràs la sessió en aquest lloc"

@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Žiadne domény tretích strán"
     },
-    "blocked": {
-        "message": "Blok $COUNT$",
+    "blockedLine": {
+        "message": "Zablokované požiadavky: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Zablokované požiadavky: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Okná o cookies: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Objem: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Už nezobrazovať"
     },
+    "rateText": {
+        "message": "Páči sa vám ABlock? Ohodnoťte ho v Chrome Web Store — pomôže to ostatným nájsť rozšírenie"
+    },
+    "rateButton": {
+        "message": "Ohodnotiť"
+    },
     "reportLegendGuess": {
         "message": "? — určené podľa nepriamych znakov"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Vymazať údaje stránky"
     },
     "clearTitle": {
         "message": "Odstrániť údaje stránky a znova načítať: cookies, vyrovnávaciu pamäť a úložiská. Odznaky a hodnotenie ukážu stránku ako pre nového návštevníka. Odhlásite sa z účtu na tejto stránke"

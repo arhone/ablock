@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Niciun domeniu terț"
     },
-    "blocked": {
-        "message": "Blocate $COUNT$",
+    "blockedLine": {
+        "message": "Cereri blocate: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Cereri blocate: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Ferestre despre cookie-uri: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Dimensiune: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Nu mai afișa"
     },
+    "rateText": {
+        "message": "Îți place ABlock? Evaluează-l în Chrome Web Store — îi ajută pe alții să găsească extensia"
+    },
+    "rateButton": {
+        "message": "Evaluează"
+    },
     "reportLegendGuess": {
         "message": "? — detectat după semne indirecte"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Șterge datele site-ului"
     },
     "clearTitle": {
         "message": "Șterge datele site-ului și reîncarcă: cookie-uri, cache și stocare. Insignele și nota vor arăta site-ul așa cum îl vede un vizitator nou. Veți fi deconectat de pe acest site"

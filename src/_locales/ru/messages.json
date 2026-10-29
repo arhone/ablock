@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Сторонних доменов нет"
     },
-    "blocked": {
-        "message": "Блок $COUNT$",
+    "blockedLine": {
+        "message": "Заблокировано запросов: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Заблокировано запросов: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Окна про cookie: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Объём: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Больше не показывать"
     },
+    "rateText": {
+        "message": "Нравится ABlock? Оцените его в Chrome Web Store — это помогает другим найти расширение"
+    },
+    "rateButton": {
+        "message": "Оценить"
+    },
     "reportLegendGuess": {
         "message": "? — определено по косвенным признакам"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Очистить данные сайта"
     },
     "clearTitle": {
         "message": "Удалить данные сайта и перезагрузить: cookie, кэш и хранилища. Значки и оценка покажут сайт как для нового посетителя. Вы выйдете из аккаунта на этом сайте"

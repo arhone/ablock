@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "没有第三方域名"
     },
-    "blocked": {
-        "message": "已拦截 $COUNT$",
+    "blockedLine": {
+        "message": "已拦截请求：$COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "已拦截请求：$COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Cookie 弹窗：$COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "大小：≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "不再显示"
     },
+    "rateText": {
+        "message": "喜欢 ABlock 吗？请在 Chrome 应用商店中评分，帮助更多人找到这个扩展"
+    },
+    "rateButton": {
+        "message": "评分"
+    },
     "reportLegendGuess": {
         "message": "? — 根据间接迹象判断"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "清除网站数据"
     },
     "clearTitle": {
         "message": "删除网站数据并重新加载：Cookie、缓存和存储。徽章和评分将按新访客的视角显示网站。你将退出此网站的账号"

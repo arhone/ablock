@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "دامنهٔ شخص ثالثی وجود ندارد"
     },
-    "blocked": {
-        "message": "مسدودشده $COUNT$",
+    "blockedLine": {
+        "message": "درخواست‌های مسدودشده: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "درخواست‌های مسدودشده: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "پنجره‌های کوکی: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "حجم: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "دیگر نشان نده"
     },
+    "rateText": {
+        "message": "ABlock را دوست دارید؟ در Chrome Web Store به آن امتیاز دهید — این به دیگران کمک می‌کند افزونه را پیدا کنند"
+    },
+    "rateButton": {
+        "message": "امتیاز دادن"
+    },
     "reportLegendGuess": {
         "message": "? — از روی نشانه‌های غیرمستقیم تشخیص داده شد"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "پاک کردن داده‌های سایت"
     },
     "clearTitle": {
         "message": "حذف داده‌های سایت و بارگیری دوباره: کوکی‌ها، حافظهٔ پنهان و فضای ذخیره‌سازی. نشان‌ها و امتیاز، سایت را همان‌طور که بازدیدکنندهٔ تازه می‌بیند نشان می‌دهند. از حساب خود در این سایت خارج می‌شوید"

@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "तृतीय-पक्ष डोमेन नाहीत"
     },
-    "blocked": {
-        "message": "ब्लॉक $COUNT$",
+    "blockedLine": {
+        "message": "ब्लॉक केलेल्या विनंत्या: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "ब्लॉक केलेल्या विनंत्या: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "कुकी पॉप-अप: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "आकार: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "पुन्हा दाखवू नका"
     },
+    "rateText": {
+        "message": "ABlock आवडले? Chrome Web Store मध्ये त्याला रेटिंग द्या — यामुळे इतरांना एक्स्टेंशन शोधायला मदत होते"
+    },
+    "rateButton": {
+        "message": "रेटिंग द्या"
+    },
     "reportLegendGuess": {
         "message": "? — अप्रत्यक्ष लक्षणांवरून ओळखले"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "साइटचा डेटा साफ करा"
     },
     "clearTitle": {
         "message": "साइटचा डेटा हटवा आणि पुन्हा लोड करा: कुकीज, कॅश आणि स्टोरेज. बॅज आणि स्कोअर साइट नव्या अभ्यागताला दिसते तशी दाखवतील. तुम्ही या साइटवरून लॉग आउट व्हाल"

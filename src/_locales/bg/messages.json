@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Няма външни домейни"
     },
-    "blocked": {
-        "message": "Блок $COUNT$",
+    "blockedLine": {
+        "message": "Блокирани заявки: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Блокирани заявки: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Прозорци за бисквитки: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Обем: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Не показвай повече"
     },
+    "rateText": {
+        "message": "Харесва ли ви ABlock? Оценете го в Chrome Web Store — това помага на други да намерят разширението"
+    },
+    "rateButton": {
+        "message": "Оценка"
+    },
     "reportLegendGuess": {
         "message": "? — определено по косвени признаци"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Изчистване на данните на сайта"
     },
     "clearTitle": {
         "message": "Изтриване на данните на сайта и презареждане: бисквитки, кеш и хранилища. Значките и оценката ще покажат сайта като за нов посетител. Ще излезете от профила си в този сайт"

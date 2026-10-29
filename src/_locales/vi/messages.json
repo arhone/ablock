@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Không có tên miền bên thứ ba"
     },
-    "blocked": {
-        "message": "Đã chặn $COUNT$",
+    "blockedLine": {
+        "message": "Yêu cầu đã chặn: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Yêu cầu đã chặn: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Cửa sổ cookie: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Dung lượng: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Không hiển thị lại"
     },
+    "rateText": {
+        "message": "Bạn thích ABlock? Hãy đánh giá trên Chrome Web Store — điều đó giúp người khác tìm thấy tiện ích"
+    },
+    "rateButton": {
+        "message": "Đánh giá"
+    },
     "reportLegendGuess": {
         "message": "? — xác định qua dấu hiệu gián tiếp"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Xóa dữ liệu trang"
     },
     "clearTitle": {
         "message": "Xóa dữ liệu trang và tải lại: cookie, bộ nhớ đệm và kho lưu trữ. Huy hiệu và điểm sẽ hiển thị trang như với khách mới. Bạn sẽ bị đăng xuất khỏi trang này"

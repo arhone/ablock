@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "沒有第三方網域"
     },
-    "blocked": {
-        "message": "已攔截 $COUNT$",
+    "blockedLine": {
+        "message": "已攔截請求：$COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "已攔截請求：$COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Cookie 彈出視窗：$COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "大小：≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "不再顯示"
     },
+    "rateText": {
+        "message": "喜歡 ABlock 嗎？請在 Chrome 線上應用程式商店評分，幫助更多人找到這個擴充功能"
+    },
+    "rateButton": {
+        "message": "評分"
+    },
     "reportLegendGuess": {
         "message": "? — 依間接跡象判斷"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "清除網站資料"
     },
     "clearTitle": {
         "message": "刪除網站資料並重新載入：Cookie、快取和儲存空間。標章和評分會以新訪客的角度呈現網站。你將登出此網站"

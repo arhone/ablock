@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Сторонніх доменів немає"
     },
-    "blocked": {
-        "message": "Заблоковано $COUNT$",
+    "blockedLine": {
+        "message": "Заблоковано запитів: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Заблоковано запитів: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Вікна про cookie: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Обсяг: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Більше не показувати"
     },
+    "rateText": {
+        "message": "Подобається ABlock? Оцініть його в Chrome Web Store — це допомагає іншим знайти розширення"
+    },
+    "rateButton": {
+        "message": "Оцінити"
+    },
     "reportLegendGuess": {
         "message": "? — визначено за непрямими ознаками"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Очистити дані сайту"
     },
     "clearTitle": {
         "message": "Видалити дані сайту й перезавантажити: cookie, кеш і сховище. Значки та оцінка покажуть сайт таким, яким його бачить новий відвідувач. Ви вийдете з облікового запису на цьому сайті"

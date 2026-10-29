@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "የሶስተኛ ወገን ጎራዎች የሉም"
     },
-    "blocked": {
-        "message": "የታገዱ $COUNT$",
+    "blockedLine": {
+        "message": "የታገዱ ጥያቄዎች: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "የታገዱ ጥያቄዎች: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "የኩኪ መስኮቶች: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "መጠን: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "ዳግም አታሳይ"
     },
+    "rateText": {
+        "message": "ABlock ወደዱት? በChrome Web Store ደረጃ ይስጡት — ሌሎች ቅጥያውን እንዲያገኙ ይረዳል"
+    },
+    "rateButton": {
+        "message": "ደረጃ ስጥ"
+    },
     "reportLegendGuess": {
         "message": "? — በተዘዋዋሪ ምልክቶች የተገኘ"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "የጣቢያውን ውሂብ አጽዳ"
     },
     "clearTitle": {
         "message": "የጣቢያውን ውሂብ ሰርዝ እና እንደገና ጫን: ኩኪዎች፣ መሸጎጫ እና ማከማቻ። ባጆቹ እና ነጥቡ ጣቢያውን አዲስ ጎብኚ እንደሚያየው ያሳያሉ። ከዚህ ጣቢያ ይወጣሉ"

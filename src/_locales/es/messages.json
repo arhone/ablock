@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "No hay dominios de terceros"
     },
-    "blocked": {
-        "message": "Bloqueos $COUNT$",
+    "blockedLine": {
+        "message": "Solicitudes bloqueadas: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Solicitudes bloqueadas: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Avisos de cookies: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Tamaño: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "No volver a mostrar"
     },
+    "rateText": {
+        "message": "¿Te gusta ABlock? Valóralo en Chrome Web Store: ayuda a que otros encuentren la extensión"
+    },
+    "rateButton": {
+        "message": "Valorar"
+    },
     "reportLegendGuess": {
         "message": "? — detectado por indicios indirectos"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Borrar datos del sitio"
     },
     "clearTitle": {
         "message": "Borrar los datos del sitio y recargar: cookies, caché y almacenamiento. Las insignias y la puntuación mostrarán el sitio como lo ve un visitante nuevo. Se cerrará su sesión en este sitio"

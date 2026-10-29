@@ -94,11 +94,22 @@
     "domainsNone": {
         "message": "Üçüncü taraf alan adı yok"
     },
-    "blocked": {
-        "message": "Engel $COUNT$",
+    "blockedLine": {
+        "message": "Engellenen istek: $COUNT$",
         "placeholders": {
             "count": {
                 "content": "$1"
+            }
+        }
+    },
+    "blockedLineSize": {
+        "message": "Engellenen istek: $COUNT$ · ≈ $SIZE$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            },
+            "size": {
+                "content": "$2"
             }
         }
     },
@@ -237,14 +248,6 @@
         "message": "Çerez pencereleri: $COUNT$",
         "placeholders": {
             "count": {
-                "content": "$1"
-            }
-        }
-    },
-    "blockedSize": {
-        "message": "Boyut: ≈ $SIZE$",
-        "placeholders": {
-            "size": {
                 "content": "$1"
             }
         }
@@ -497,6 +500,12 @@
     "askClose": {
         "message": "Bir daha gösterme"
     },
+    "rateText": {
+        "message": "ABlock’u beğendiniz mi? Chrome Web Mağazası’nda puan verin — başkalarının uzantıyı bulmasına yardımcı olur"
+    },
+    "rateButton": {
+        "message": "Puan ver"
+    },
     "reportLegendGuess": {
         "message": "? — dolaylı işaretlerle belirlendi"
     },
@@ -527,6 +536,9 @@
                 "content": "$1"
             }
         }
+    },
+    "clearLabel": {
+        "message": "Site verilerini temizle"
     },
     "clearTitle": {
         "message": "Site verilerini silip yeniden yükle: çerezler, önbellek ve depolama. Rozetler ve puan siteyi yeni bir ziyaretçinin gördüğü gibi gösterir. Bu sitedeki hesabınızdan çıkış yapılır"
