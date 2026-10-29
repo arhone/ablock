@@ -268,6 +268,7 @@
                 }
                 const selector = node('code', 'hidden-selector', item.s);
                 selector.dir = 'ltr';
+                selector.title = item.s;
                 description.append(selector);
                 row.append(check, icon, description);
                 check.addEventListener('change', () => {

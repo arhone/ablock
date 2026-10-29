@@ -145,21 +145,21 @@ body[data-screen="hidden"] > footer {
 .hidden-absent {
     font-style: italic;
 }
-/* Селектор доступен и мышью, и с клавиатуры; текст никогда не становится HTML. */
+/* Селектор виден всегда в одну строку: раскрытие при наведении сдвигало кнопки под курсором. */
 .hidden-selector {
-    display: none;
-    overflow-wrap: anywhere;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font: 10px/1.4 monospace;
     text-align: start;
     color: var(--muted);
     user-select: text;
 }
-.hidden-row:hover .hidden-selector,
-.hidden-row:focus-within .hidden-selector {
-    display: block;
-}
+/* Место под две строки: смена подсказки не двигает кнопки ниже. */
 .hidden-hint {
     margin: 0;
+    line-height: 1.4;
+    min-height: 2.8em;
 }
 #hidden-screen .hidden-clear {
     background: transparent;
