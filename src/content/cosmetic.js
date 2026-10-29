@@ -73,7 +73,15 @@
             message.dark = matchMedia('(prefers-color-scheme: dark)').matches;
         }
         first = false;
-        chrome.runtime.sendMessage(message).then((count) => {
+        // После перезагрузки расширения sendMessage бросает исключение сразу, а не отклоняет промис
+        let sent;
+        try {
+            sent = chrome.runtime.sendMessage(message);
+        } catch {
+            stop();
+            return;
+        }
+        sent.then((count) => {
             misses = count ? 0 : misses + 1;
             if (misses >= MAX_MISSES) {
                 stop();
