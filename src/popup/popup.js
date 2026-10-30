@@ -1,3 +1,4 @@
+/* global CompanyOwner */
 // Наборы правил с трекерами и окнами про cookie, остальные считаем рекламой
 const TRACKER_RULESETS = ['trackers', 'easyprivacy', 'rus-1'];
 const COOKIE_RULESET = 'annoyances-cookies';
@@ -700,7 +701,7 @@ async function renderSite(tab, server, onLoadTime) {
 
     // Сайты и CDN той же компании (githubassets.com у github.com, userapi.com у vk.com) — не сторонние
     const host = new URL(tab.url).hostname;
-    const owner = (await loadData('companies')).find((company) => company.sites?.some((d) => matchesDomain(host, d)));
+    const owner = (await loadData('companies')).find((company) => CompanyOwner.find(host, [company], ['sites']));
     if (owner) {
         info.domains = info.domains.filter((domain) => !owner.sites.some((d) => matchesDomain(domain, d)));
     }
@@ -842,12 +843,7 @@ async function renderBlocked(tab, info, status, server) {
  * @returns {boolean}
  */
 function matchesDomain(key, pattern) {
-    const slash = key.indexOf('/');
-    const host = slash < 0 ? key : key.slice(0, slash);
-    const path = slash < 0 ? '/' : key.slice(slash);
-    const [patternHost, ...patternPath] = pattern.split('/');
-    const hostMatches = host === patternHost || host.endsWith('.' + patternHost);
-    return hostMatches && (!patternPath.length || path.startsWith('/' + patternPath.join('/')));
+    return CompanyOwner.matches(key, pattern);
 }
 
 /**
