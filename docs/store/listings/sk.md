@@ -34,4 +34,5 @@ Ak stránka prestane fungovať, vypnite ochranu len na nej.
 Zdrojový kód: https://github.com/arhone/ablock
 Spätná väzba: https://github.com/arhone/ablock/issues
 Podporte projekt: https://boosty.to/a.arh/donate
+Web: https://ablock.arh.one/
 ```

@@ -34,4 +34,5 @@ Dacă un site nu mai funcționează corect, dezactivați protecția doar pentru 
 Cod sursă deschis: https://github.com/arhone/ablock
 Feedback: https://github.com/arhone/ablock/issues
 Susțineți proiectul: https://boosty.to/a.arh/donate
+Site web: https://ablock.arh.one/
 ```

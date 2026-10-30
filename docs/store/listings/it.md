@@ -34,4 +34,5 @@ Se un sito smette di funzionare, disattiva la protezione solo lì.
 Codice sorgente: https://github.com/arhone/ablock
 Segnalazioni: https://github.com/arhone/ablock/issues
 Sostieni il progetto: https://boosty.to/a.arh/donate
+Sito web: https://ablock.arh.one/
 ```

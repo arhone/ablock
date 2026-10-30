@@ -34,4 +34,5 @@ ABlock บล็อกโฆษณาและตัวติดตาม แล
 โอเพนซอร์ส: https://github.com/arhone/ablock
 ข้อเสนอแนะ: https://github.com/arhone/ablock/issues
 สนับสนุนโปรเจกต์: https://boosty.to/a.arh/donate
+เว็บไซต์: https://ablock.arh.one/
 ```

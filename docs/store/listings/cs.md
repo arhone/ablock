@@ -34,4 +34,5 @@ Pokud se nějaký web rozbije, vypněte ochranu jen pro něj.
 Otevřený zdrojový kód: https://github.com/arhone/ablock
 Zpětná vazba: https://github.com/arhone/ablock/issues
 Podpořit projekt: https://boosty.to/a.arh/donate
+Web: https://ablock.arh.one/
 ```

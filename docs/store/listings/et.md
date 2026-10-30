@@ -34,4 +34,5 @@ Kui mõni sait läheb katki, lülitage kaitse välja ainult selle saidi jaoks.
 Avatud lähtekood: https://github.com/arhone/ablock
 Tagasiside: https://github.com/arhone/ablock/issues
 Toeta projekti: https://boosty.to/a.arh/donate
+Veebisait: https://ablock.arh.one/
 ```

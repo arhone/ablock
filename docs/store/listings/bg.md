@@ -34,4 +34,5 @@ ABlock блокира реклами и тракери и с едно кликв
 Отворен код: https://github.com/arhone/ablock
 Обратна връзка: https://github.com/arhone/ablock/issues
 Подкрепете проекта: https://boosty.to/a.arh/donate
+Уебсайт: https://ablock.arh.one/
 ```

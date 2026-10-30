@@ -34,4 +34,5 @@ ABlock 可封鎖廣告和追蹤器，並一鍵顯示你正在瀏覽的網站有�
 開放原始碼：https://github.com/arhone/ablock
 意見回饋：https://github.com/arhone/ablock/issues
 支持這個專案：https://boosty.to/a.arh/donate
+網站：https://ablock.arh.one/
 ```

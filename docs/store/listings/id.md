@@ -34,4 +34,5 @@ Jika sebuah situs rusak, matikan perlindungan hanya untuk situs itu.
 Kode sumber: https://github.com/arhone/ablock
 Masukan: https://github.com/arhone/ablock/issues
 Dukung proyek ini: https://boosty.to/a.arh/donate
+Situs web: https://ablock.arh.one/
 ```

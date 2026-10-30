@@ -34,4 +34,5 @@ Werkt een website niet goed? Zet de bescherming dan alleen voor die website uit.
 Open source: https://github.com/arhone/ablock
 Feedback: https://github.com/arhone/ablock/issues
 Steun het project: https://boosty.to/a.arh/donate
+Website: https://ablock.arh.one/
 ```

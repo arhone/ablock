@@ -34,4 +34,5 @@ Ja kāda vietne nedarbojas, izslēdziet aizsardzību tikai šai vietnei.
 Atvērtais pirmkods: https://github.com/arhone/ablock
 Atsauksmes: https://github.com/arhone/ablock/issues
 Atbalstīt projektu: https://boosty.to/a.arh/donate
+Vietne: https://ablock.arh.one/
 ```

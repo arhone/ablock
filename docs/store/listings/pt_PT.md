@@ -34,4 +34,5 @@ Se um site deixar de funcionar, desative a proteção apenas para esse site.
 Código aberto: https://github.com/arhone/ablock
 Comentários: https://github.com/arhone/ablock/issues
 Apoiar o projeto: https://boosty.to/a.arh/donate
+Site: https://ablock.arh.one/
 ```

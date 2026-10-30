@@ -34,4 +34,5 @@ Ako neko web-mjesto prestane raditi, isključite zaštitu samo za njega.
 Otvoreni kod: https://github.com/arhone/ablock
 Povratne informacije: https://github.com/arhone/ablock/issues
 Podržite projekt: https://boosty.to/a.arh/donate
+Web-stranica: https://ablock.arh.one/
 ```

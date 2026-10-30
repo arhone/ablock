@@ -34,4 +34,5 @@ If a site breaks, turn protection off for that site only.
 Open source: https://github.com/arhone/ablock
 Feedback: https://github.com/arhone/ablock/issues
 Support the project: https://boosty.to/a.arh/donate
+Website: https://ablock.arh.one/
 ```

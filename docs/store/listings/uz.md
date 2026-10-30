@@ -34,4 +34,5 @@ Sayt buzilsa, himoyani faqat o‘sha saytda o‘chiring.
 Ochiq kod: https://github.com/arhone/ablock
 Yangiliklar va fikr-mulohaza: https://t.me/ablockinfo
 Loyihani qo‘llab-quvvatlash: https://boosty.to/a.arh/donate
+Sayt: https://ablock.arh.one/
 ```

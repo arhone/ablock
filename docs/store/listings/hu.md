@@ -34,4 +34,5 @@ Ha egy oldal nem működik rendesen, kapcsolja ki a védelmet csak azon az oldal
 Nyílt forráskód: https://github.com/arhone/ablock
 Visszajelzés: https://github.com/arhone/ablock/issues
 A projekt támogatása: https://boosty.to/a.arh/donate
+Weboldal: https://ablock.arh.one/
 ```

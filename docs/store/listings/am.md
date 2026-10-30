@@ -34,4 +34,5 @@ ABlock ማስታወቂያዎችን እና መከታተያዎችን ያግዳል�
 ክፍት ምንጭ፦ https://github.com/arhone/ablock
 አስተያየት፦ https://github.com/arhone/ablock/issues
 ፕሮጀክቱን ይደግፉ፦ https://boosty.to/a.arh/donate
+ድረ ገጽ፦ https://ablock.arh.one/
 ```

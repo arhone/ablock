@@ -34,4 +34,5 @@ ABlock 拦截广告和跟踪器，一键查看网站有多快、多安全，以�
 开源代码：https://github.com/arhone/ablock
 反馈：https://github.com/arhone/ablock/issues
 赞助项目：https://boosty.to/a.arh/donate
+网站：https://ablock.arh.one/
 ```

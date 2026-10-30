@@ -34,4 +34,5 @@ ABlock жарнама мен трекерлерді бұғаттайды жән�
 Ашық код: https://github.com/arhone/ablock
 Жаңалықтар мен кері байланыс: https://t.me/ablockinfo
 Жобаны қолдау: https://boosty.to/a.arh/donate
+Сайт: https://ablock.arh.one/
 ```

@@ -34,4 +34,5 @@ Si un site ne fonctionne plus, désactivez la protection pour ce site seulement.
 Code source : https://github.com/arhone/ablock
 Retours : https://github.com/arhone/ablock/issues
 Soutenir le projet : https://boosty.to/a.arh/donate
+Site web : https://ablock.arh.one/
 ```

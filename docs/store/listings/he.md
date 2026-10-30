@@ -34,4 +34,5 @@ ABlock חוסם פרסומות ורכיבי מעקב ומראה בלחיצה א�
 קוד פתוח: https://github.com/arhone/ablock
 משוב: https://github.com/arhone/ablock/issues
 תמיכה בפרויקט: https://boosty.to/a.arh/donate
+אתר: https://ablock.arh.one/
 ```

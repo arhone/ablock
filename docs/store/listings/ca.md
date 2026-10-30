@@ -34,4 +34,5 @@ Si un lloc deixa de funcionar, desactiva la protecció només per a aquell lloc.
 Codi obert: https://github.com/arhone/ablock
 Comentaris: https://github.com/arhone/ablock/issues
 Dona suport al projecte: https://boosty.to/a.arh/donate
+Lloc web: https://ablock.arh.one/
 ```

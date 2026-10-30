@@ -34,4 +34,5 @@ ABlock блокує рекламу й трекери та одним кліко�
 Відкритий код: https://github.com/arhone/ablock
 Відгуки: https://github.com/arhone/ablock/issues
 Підтримати проєкт: https://boosty.to/a.arh/donate
+Сайт: https://ablock.arh.one/
 ```

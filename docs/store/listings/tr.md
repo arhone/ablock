@@ -34,4 +34,5 @@ Bir site bozulursa korumayı yalnızca o sitede kapatın.
 Açık kaynak: https://github.com/arhone/ablock
 Geri bildirim: https://github.com/arhone/ablock/issues
 Projeyi destekleyin: https://boosty.to/a.arh/donate
+Web sitesi: https://ablock.arh.one/
 ```

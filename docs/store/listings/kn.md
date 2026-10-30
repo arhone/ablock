@@ -34,4 +34,5 @@ ABlock ಜಾಹೀರಾತುಗಳು ಮತ್ತು ಟ್ರ್ಯಾಕ�
 ಮುಕ್ತ ಮೂಲ: https://github.com/arhone/ablock
 ಪ್ರತಿಕ್ರಿಯೆ: https://github.com/arhone/ablock/issues
 ಯೋಜನೆಯನ್ನು ಬೆಂಬಲಿಸಿ: https://boosty.to/a.arh/donate
+ವೆಬ್‌ಸೈಟ್: https://ablock.arh.one/
 ```

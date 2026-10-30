@@ -34,4 +34,5 @@ Hvis et websted ikke virker, så slå beskyttelsen fra kun for det websted.
 Åben kildekode: https://github.com/arhone/ablock
 Feedback: https://github.com/arhone/ablock/issues
 Støt projektet: https://boosty.to/a.arh/donate
+Websted: https://ablock.arh.one/
 ```

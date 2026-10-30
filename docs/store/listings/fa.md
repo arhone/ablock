@@ -34,4 +34,5 @@ ABlock تبلیغات و ردیاب‌ها را مسدود می‌کند و با
 متن‌باز: https://github.com/arhone/ablock
 بازخورد: https://github.com/arhone/ablock/issues
 حمایت از پروژه: https://boosty.to/a.arh/donate
+وب‌سایت: https://ablock.arh.one/
 ```

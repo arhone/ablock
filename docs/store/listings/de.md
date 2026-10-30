@@ -34,4 +34,5 @@ Funktioniert eine Website nicht richtig, schalten Sie den Schutz nur dort aus.
 Quellcode: https://github.com/arhone/ablock
 Feedback: https://github.com/arhone/ablock/issues
 Projekt unterstützen: https://boosty.to/a.arh/donate
+Website: https://ablock.arh.one/de/
 ```

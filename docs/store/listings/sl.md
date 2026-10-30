@@ -34,4 +34,5 @@ Vse deluje v vašem brskalniku. Brez analitike, brez računov, brez lastnih stre
 Odprta koda: https://github.com/arhone/ablock
 Povratne informacije: https://github.com/arhone/ablock/issues
 Podprite projekt: https://boosty.to/a.arh/donate
+Spletno mesto: https://ablock.arh.one/
 ```

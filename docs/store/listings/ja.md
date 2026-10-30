@@ -34,4 +34,5 @@ ABlock は広告とトラッカーをブロックし、開いているサイト�
 ソースコード：https://github.com/arhone/ablock
 フィードバック：https://github.com/arhone/ablock/issues
 プロジェクトを支援：https://boosty.to/a.arh/donate
+ウェブサイト：https://ablock.arh.one/
 ```

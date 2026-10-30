@@ -34,4 +34,5 @@ Jei svetainė neveikia, išjunkite apsaugą tik tai svetainei.
 Atvirasis kodas: https://github.com/arhone/ablock
 Atsiliepimai: https://github.com/arhone/ablock/issues
 Paremti projektą: https://boosty.to/a.arh/donate
+Svetainė: https://ablock.arh.one/
 ```

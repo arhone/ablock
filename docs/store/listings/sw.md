@@ -34,4 +34,5 @@ Tovuti ikiharibika, zima ulinzi kwa tovuti hiyo pekee.
 Msimbo huria: https://github.com/arhone/ablock
 Maoni: https://github.com/arhone/ablock/issues
 Saidia mradi: https://boosty.to/a.arh/donate
+Tovuti: https://ablock.arh.one/
 ```

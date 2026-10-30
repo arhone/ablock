@@ -34,4 +34,5 @@ Om en webbplats slutar fungera kan du stänga av skyddet bara för den.
 Öppen källkod: https://github.com/arhone/ablock
 Feedback: https://github.com/arhone/ablock/issues
 Stöd projektet: https://boosty.to/a.arh/donate
+Webbplats: https://ablock.arh.one/
 ```

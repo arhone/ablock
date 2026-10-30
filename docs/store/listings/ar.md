@@ -34,4 +34,5 @@
 مفتوح المصدر: https://github.com/arhone/ablock
 الملاحظات: https://github.com/arhone/ablock/issues
 ادعم المشروع: https://boosty.to/a.arh/donate
+الموقع الإلكتروني: https://ablock.arh.one/
 ```

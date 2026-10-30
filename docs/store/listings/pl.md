@@ -34,4 +34,5 @@ Jeśli strona przestanie działać, wyłącz ochronę tylko na niej.
 Kod źródłowy: https://github.com/arhone/ablock
 Zgłoszenia: https://github.com/arhone/ablock/issues
 Wesprzyj projekt: https://boosty.to/a.arh/donate
+Strona internetowa: https://ablock.arh.one/
 ```
