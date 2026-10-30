@@ -35,8 +35,8 @@
         .esc { color:var(--muted); }
         button { font:inherit; color:inherit; background:var(--bg); border:1px solid var(--line); border-radius:5px; padding:7px 12px; cursor:pointer; }
         .actions button { min-width:88px; min-height:36px; }
-        .actions .resize { min-width:36px; width:36px; height:36px; padding:0 3px; font-size:28px; line-height:1; direction:ltr; }
-        .resize.narrower { font-size:18px; letter-spacing:-2px; }
+        .actions .resize { min-width:36px; width:36px; height:36px; padding:0; display:inline-flex; align-items:center; justify-content:center; direction:ltr; }
+        .resize svg { display:block; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
         button:focus-visible { outline:2px solid #12a86b; outline-offset:2px; }
         button:disabled { opacity:.45; cursor:default; }
         .hide { background:#087c54; border-color:#087c54; color:#fff; font-weight:600; }
@@ -70,9 +70,16 @@
     panel.setAttribute('role', 'region');
     const description = node('div', 'description');
     const actions = node('div', 'actions');
-    function button(key, className, action, symbol) {
-        const el = node('button', className, symbol || strings[key]);
-        if (symbol) {
+    function button(key, className, action, iconPath) {
+        const el = node('button', className, iconPath ? undefined : strings[key]);
+        if (iconPath) {
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('viewBox', '0 0 18 18');
+            svg.setAttribute('aria-hidden', 'true');
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', iconPath);
+            svg.append(path);
+            el.append(svg);
             el.title = strings[key];
             el.setAttribute('aria-label', strings[key]);
         }
@@ -80,8 +87,8 @@
         el.addEventListener('click', action);
         return el;
     }
-    const wider = button('pickWider', 'resize', () => change(1), '↔');
-    const narrower = button('pickNarrower', 'resize narrower', () => change(-1), '→←');
+    const wider = button('pickWider', 'resize', () => change(1), 'M8 9H1m4-4L1 9l4 4M10 9h7m-4-4 4 4-4 4');
+    const narrower = button('pickNarrower', 'resize', () => change(-1), 'M1 9h6M3 5l4 4-4 4M17 9h-6m4-4-4 4 4 4');
     const matches = node('span', 'matches');
     const cancel = button('pickCancel', 'cancel', () => stop());
     const hide = button('pickHide', 'hide', save);
