@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Sudah ada 100 elemen tersembunyi di situs ini — hapus yang tidak perlu di jendela ABlock"
     },
+    "redirectsTitle": {
+        "message": "Rantai HTTP terakhir tab"
+    },
+    "redirectsCaveat": {
+        "message": "Mungkin milik pemuatan lain; kaitannya dengan laporan ini belum dikonfirmasi. Tidak termasuk skor, TTFB, dan ekspor."
+    },
+    "redirectsPermission": {
+        "message": "Aktifkan mode lanjutan untuk mengamati pengalihan HTTP."
+    },
+    "redirectsUnavailable": {
+        "message": "Data tidak tersedia."
+    },
+    "redirectsAbsent": {
+        "message": "Tidak ada catatan. Muat ulang setelah mengaktifkan mode lanjutan; pengalihan sebelumnya tidak dapat dipulihkan."
+    },
+    "redirectsError": {
+        "message": "Permintaan yang diamati gagal."
+    },
+    "redirectsPending": {
+        "message": "Permintaan yang diamati masih berlangsung."
+    },
+    "redirectsCompleted": {
+        "message": "Pengalihan HTTP yang diamati"
+    },
+    "redirectsEmpty": {
+        "message": "Tidak ada pengalihan HTTP yang diamati dalam catatan ini."
+    },
     "auditDetails": {
         "message": "Detail"
     },

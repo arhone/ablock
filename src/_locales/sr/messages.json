@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "На сајту је већ сакривено 100 елемената — обришите непотребне у прозору ABlock"
     },
+    "redirectsTitle": {
+        "message": "Последњи HTTP ланац картице"
+    },
+    "redirectsCaveat": {
+        "message": "Може се односити на друго учитавање; веза са овим извештајем није потврђена. Изван оцене, TTFB-а и извоза."
+    },
+    "redirectsPermission": {
+        "message": "Укључите проширени режим за праћење HTTP преусмеравања."
+    },
+    "redirectsUnavailable": {
+        "message": "Подаци нису доступни."
+    },
+    "redirectsAbsent": {
+        "message": "Нема записа. Освежите након укључивања проширеног режима; ранија преусмеравања није могуће обновити."
+    },
+    "redirectsError": {
+        "message": "Праћени захтев није успео."
+    },
+    "redirectsPending": {
+        "message": "Праћени захтев још траје."
+    },
+    "redirectsCompleted": {
+        "message": "Уочена HTTP преусмеравања"
+    },
+    "redirectsEmpty": {
+        "message": "У овом запису нису уочена HTTP преусмеравања."
+    },
     "auditDetails": {
         "message": "Детаљи"
     },

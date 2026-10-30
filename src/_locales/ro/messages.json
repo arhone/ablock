@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Site-ul are deja 100 de elemente ascunse — șterge-le pe cele inutile din fereastra ABlock"
     },
+    "redirectsTitle": {
+        "message": "Ultimul lanț HTTP al filei"
+    },
+    "redirectsCaveat": {
+        "message": "Poate aparține altei încărcări; legătura cu acest raport nu este confirmată. Exclus din scor, TTFB și export."
+    },
+    "redirectsPermission": {
+        "message": "Activați modul extins pentru a observa redirecționările HTTP."
+    },
+    "redirectsUnavailable": {
+        "message": "Date indisponibile."
+    },
+    "redirectsAbsent": {
+        "message": "Nicio înregistrare. Reîncărcați după activarea modului extins; redirecționările anterioare nu pot fi recuperate."
+    },
+    "redirectsError": {
+        "message": "Cererea observată a eșuat."
+    },
+    "redirectsPending": {
+        "message": "Cererea observată este încă în curs."
+    },
+    "redirectsCompleted": {
+        "message": "Redirecționări HTTP observate"
+    },
+    "redirectsEmpty": {
+        "message": "Nu s-au observat redirecționări HTTP în această înregistrare."
+    },
     "auditDetails": {
         "message": "Detalii"
     },

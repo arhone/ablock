@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Nettstedet har allerede 100 skjulte elementer — slett unødvendige i ABlock-vinduet"
     },
+    "redirectsTitle": {
+        "message": "Fanens siste HTTP-kjede"
+    },
+    "redirectsCaveat": {
+        "message": "Kan tilhøre en annen innlasting; koblingen til denne rapporten er ikke bekreftet. Inngår ikke i poeng, TTFB eller eksport."
+    },
+    "redirectsPermission": {
+        "message": "Aktiver utvidet modus for å observere HTTP-viderekoblinger."
+    },
+    "redirectsUnavailable": {
+        "message": "Data er utilgjengelige."
+    },
+    "redirectsAbsent": {
+        "message": "Ingen oppføring. Last inn på nytt etter aktivering av utvidet modus; tidligere viderekoblinger kan ikke gjenopprettes."
+    },
+    "redirectsError": {
+        "message": "Den observerte forespørselen mislyktes."
+    },
+    "redirectsPending": {
+        "message": "Den observerte forespørselen pågår fortsatt."
+    },
+    "redirectsCompleted": {
+        "message": "Observerte HTTP-viderekoblinger"
+    },
+    "redirectsEmpty": {
+        "message": "Ingen HTTP-viderekoblinger observert i denne oppføringen."
+    },
     "auditDetails": {
         "message": "Detaljer"
     },

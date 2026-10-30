@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "ఈ సైట్‌లో ఇప్పటికే 100 అంశాలు దాచబడ్డాయి — అవసరం లేనివి ABlock విండోలో తొలగించండి"
     },
+    "redirectsTitle": {
+        "message": "ట్యాబ్ చివరి HTTP గొలుసు"
+    },
+    "redirectsCaveat": {
+        "message": "వేరే లోడ్‌కు చెందినది కావచ్చు; ఈ నివేదికతో సంబంధం నిర్ధారించబడలేదు. స్కోరు, TTFB మరియు ఎగుమతిలో చేరదు."
+    },
+    "redirectsPermission": {
+        "message": "HTTP మళ్లింపులను గమనించడానికి అధునాతన మోడ్‌ను ఆన్ చేయండి."
+    },
+    "redirectsUnavailable": {
+        "message": "డేటా అందుబాటులో లేదు."
+    },
+    "redirectsAbsent": {
+        "message": "రికార్డు లేదు. అధునాతన మోడ్‌ను ఆన్ చేసిన తర్వాత మళ్లీ లోడ్ చేయండి; గత మళ్లింపులను పునరుద్ధరించలేరు."
+    },
+    "redirectsError": {
+        "message": "గమనించిన అభ్యర్థన విఫలమైంది."
+    },
+    "redirectsPending": {
+        "message": "గమనించిన అభ్యర్థన ఇంకా పూర్తికాలేదు."
+    },
+    "redirectsCompleted": {
+        "message": "గమనించిన HTTP మళ్లింపులు"
+    },
+    "redirectsEmpty": {
+        "message": "ఈ రికార్డులో HTTP మళ్లింపులు గమనించబడలేదు."
+    },
     "auditDetails": {
         "message": "వివరాలు"
     },

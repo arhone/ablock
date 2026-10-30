@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "เว็บไซต์นี้มีองค์ประกอบที่ซ่อนอยู่แล้ว 100 รายการ — ลบรายการที่ไม่ต้องการในหน้าต่าง ABlock"
     },
+    "redirectsTitle": {
+        "message": "ลำดับ HTTP ล่าสุดของแท็บ"
+    },
+    "redirectsCaveat": {
+        "message": "อาจเป็นของการโหลดครั้งอื่น ยังไม่ยืนยันความเชื่อมโยงกับรายงานนี้ ไม่รวมในคะแนน TTFB และการส่งออก"
+    },
+    "redirectsPermission": {
+        "message": "เปิดโหมดขั้นสูงเพื่อสังเกตการเปลี่ยนเส้นทาง HTTP"
+    },
+    "redirectsUnavailable": {
+        "message": "ไม่มีข้อมูล"
+    },
+    "redirectsAbsent": {
+        "message": "ไม่มีบันทึก โหลดใหม่หลังเปิดโหมดขั้นสูง ไม่สามารถกู้คืนการเปลี่ยนเส้นทางก่อนหน้านี้ได้"
+    },
+    "redirectsError": {
+        "message": "คำขอที่สังเกตล้มเหลว"
+    },
+    "redirectsPending": {
+        "message": "คำขอที่สังเกตยังไม่เสร็จสิ้น"
+    },
+    "redirectsCompleted": {
+        "message": "การเปลี่ยนเส้นทาง HTTP ที่สังเกตพบ"
+    },
+    "redirectsEmpty": {
+        "message": "ไม่พบการเปลี่ยนเส้นทาง HTTP ในบันทึกนี้"
+    },
     "auditDetails": {
         "message": "รายละเอียด"
     },

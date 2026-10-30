@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "এই সাইটে ইতিমধ্যে 100টি এলিমেন্ট লুকানো — ABlock উইন্ডো থেকে অপ্রয়োজনীয়গুলো মুছুন"
     },
+    "redirectsTitle": {
+        "message": "ট্যাবের সর্বশেষ HTTP শৃঙ্খল"
+    },
+    "redirectsCaveat": {
+        "message": "অন্য লোডের হতে পারে; এই প্রতিবেদনের সঙ্গে সম্পর্ক নিশ্চিত নয়। স্কোর, TTFB ও রপ্তানিতে অন্তর্ভুক্ত নয়।"
+    },
+    "redirectsPermission": {
+        "message": "HTTP পুনর্নির্দেশ দেখতে উন্নত মোড চালু করুন।"
+    },
+    "redirectsUnavailable": {
+        "message": "তথ্য অনুপলব্ধ।"
+    },
+    "redirectsAbsent": {
+        "message": "কোনো রেকর্ড নেই। উন্নত মোড চালুর পর পুনরায় লোড করুন; আগের পুনর্নির্দেশ পুনরুদ্ধার করা যায় না।"
+    },
+    "redirectsError": {
+        "message": "পর্যবেক্ষিত অনুরোধ ব্যর্থ হয়েছে।"
+    },
+    "redirectsPending": {
+        "message": "পর্যবেক্ষিত অনুরোধ এখনো শেষ হয়নি।"
+    },
+    "redirectsCompleted": {
+        "message": "পর্যবেক্ষিত HTTP পুনর্নির্দেশ"
+    },
+    "redirectsEmpty": {
+        "message": "এই রেকর্ডে কোনো HTTP পুনর্নির্দেশ দেখা যায়নি।"
+    },
     "auditDetails": {
         "message": "বিস্তারিত"
     },

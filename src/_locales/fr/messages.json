@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Ce site a déjà 100 éléments masqués — supprimez-en dans la fenêtre ABlock"
     },
+    "redirectsTitle": {
+        "message": "Dernière chaîne HTTP de l’onglet"
+    },
+    "redirectsCaveat": {
+        "message": "Peut concerner un autre chargement ; son lien avec ce rapport n’est pas confirmé. Exclue du score, du TTFB et de l’export."
+    },
+    "redirectsPermission": {
+        "message": "Activez le mode avancé pour observer les redirections HTTP."
+    },
+    "redirectsUnavailable": {
+        "message": "Données indisponibles."
+    },
+    "redirectsAbsent": {
+        "message": "Aucun relevé. Rechargez après activation du mode avancé ; les redirections antérieures ne peuvent pas être récupérées."
+    },
+    "redirectsError": {
+        "message": "La requête observée a échoué."
+    },
+    "redirectsPending": {
+        "message": "La requête observée est encore en cours."
+    },
+    "redirectsCompleted": {
+        "message": "Redirections HTTP observées"
+    },
+    "redirectsEmpty": {
+        "message": "Aucune redirection HTTP observée dans ce relevé."
+    },
     "auditDetails": {
         "message": "Détails"
     },

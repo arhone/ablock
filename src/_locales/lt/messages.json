@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Svetainėje jau paslėpta 100 elementų — nereikalingus ištrinkite ABlock lange"
     },
+    "redirectsTitle": {
+        "message": "Paskutinė kortelės HTTP grandinė"
+    },
+    "redirectsCaveat": {
+        "message": "Gali priklausyti kitam įkėlimui; ryšys su šia ataskaita nepatvirtintas. Neįtraukiama į balą, TTFB ir eksportą."
+    },
+    "redirectsPermission": {
+        "message": "Įjunkite išplėstinį režimą HTTP peradresavimams stebėti."
+    },
+    "redirectsUnavailable": {
+        "message": "Duomenys nepasiekiami."
+    },
+    "redirectsAbsent": {
+        "message": "Įrašo nėra. Įjungę išplėstinį režimą įkelkite iš naujo; ankstesnių peradresavimų atkurti negalima."
+    },
+    "redirectsError": {
+        "message": "Stebėta užklausa nepavyko."
+    },
+    "redirectsPending": {
+        "message": "Stebėta užklausa dar vykdoma."
+    },
+    "redirectsCompleted": {
+        "message": "Stebėti HTTP peradresavimai"
+    },
+    "redirectsEmpty": {
+        "message": "Šiame įraše HTTP peradresavimų nepastebėta."
+    },
     "auditDetails": {
         "message": "Išsamiau"
     },

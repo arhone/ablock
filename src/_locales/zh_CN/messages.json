@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "此网站已有100个隐藏的元素，请在 ABlock 窗口中删除不需要的项"
     },
+    "redirectsTitle": {
+        "message": "标签页的最近 HTTP 链"
+    },
+    "redirectsCaveat": {
+        "message": "可能属于另一次加载；尚未确认与此报告的关联。不计入评分、TTFB 或导出。"
+    },
+    "redirectsPermission": {
+        "message": "启用增强模式以观察 HTTP 重定向。"
+    },
+    "redirectsUnavailable": {
+        "message": "数据不可用。"
+    },
+    "redirectsAbsent": {
+        "message": "没有记录。启用增强模式后请重新加载；无法恢复之前的重定向。"
+    },
+    "redirectsError": {
+        "message": "观察到的请求失败。"
+    },
+    "redirectsPending": {
+        "message": "观察到的请求尚未完成。"
+    },
+    "redirectsCompleted": {
+        "message": "观察到的 HTTP 重定向"
+    },
+    "redirectsEmpty": {
+        "message": "此记录中未观察到 HTTP 重定向。"
+    },
     "auditDetails": {
         "message": "详情"
     },

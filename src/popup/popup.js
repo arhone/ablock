@@ -1601,6 +1601,89 @@ function renderAudit(audit, server, extended, info, companies, catalog = []) {
 }
 
 /**
+ * Снимок после аудита, независимо от host/идентичности документа.
+ * Повторная проверка прав защищает от отзыва режима во время ожидания ответа.
+ * @param {number} tabId
+ * @returns {Promise<?Object>}
+ */
+async function readTabRedirects(tabId) {
+    const basic = {redirectsStatus: 'permission-required'};
+    if (!await chrome.permissions.contains(EXTENDED).catch(() => false)) {
+        return basic;
+    }
+    const response = await chrome.runtime.sendMessage({tabInfo: tabId}).catch(() => null);
+    return await chrome.permissions.contains(EXTENDED).catch(() => false) ? response : basic;
+}
+
+/**
+ * Последняя запись вкладки, без предположений о её связи с документом аудита.
+ * Времена webRequest не участвуют ни в TTFB, ни в оценке.
+ * @param {?Object} response ответ tabInfo
+ * @returns {{value: string, section: Object, items: Array<{label: string, value: string}>}}
+ */
+function formatRedirectCauses(response) {
+    const empty = (key) => ({value: t(key), section: {status: 'unavailable'}, items: []});
+    if (response?.redirectsStatus === 'permission-required') {
+        return empty('redirectsPermission');
+    }
+    if (!['observed', 'not-observed'].includes(response?.redirectsStatus)) {
+        return empty('redirectsUnavailable');
+    }
+    const chain = response.tab?.pendingRedirects || response.tab?.redirects;
+    if (!chain) {
+        return empty('redirectsAbsent');
+    }
+    if (chain.version !== 1 || !Array.isArray(chain.hops)
+        || !['pending', 'completed', 'error'].includes(chain.outcome)) {
+        return empty('redirectsUnavailable');
+    }
+    // Повторная защита границы вывода: даже испорченный снимок не выводит query/credentials.
+    const address = (value) => {
+        try {
+            const url = new URL(value);
+            return /^https?:$/.test(url.protocol) ? url.origin + url.pathname.slice(0, 160) : '—';
+        } catch {
+            return '—';
+        }
+    };
+    const hops = chain.hops.slice(0, 20);
+    const partial = !chain.complete || chain.truncated || chain.hops.length > 20 || chain.outcome !== 'completed';
+    const items = hops.map((hop, index) => ({
+        label: `${formatNumber(index + 1)} · HTTP ${Number.isInteger(hop.statusCode) && hop.statusCode >= 300 && hop.statusCode <= 399 ? hop.statusCode : '—'}`,
+        value: `${address(hop.from)} → ${address(hop.to)}`
+    }));
+    return {
+        value: t(chain.outcome === 'error' ? 'redirectsError' : chain.outcome === 'pending' ? 'redirectsPending'
+            : partial ? 'auditDetailsPartial' : hops.length ? 'redirectsCompleted' : 'redirectsEmpty'),
+        section: {status: partial ? 'partial' : 'ok', truncated: !!chain.truncated}, items
+    };
+}
+
+/**
+ * Отдельный блок без audit-row/модели оценки. Оговорка не скрывается с подробностями.
+ * @param {?Object} response
+ */
+function renderRedirectCauses(response) {
+    document.getElementById('tab-redirects')?.remove();
+    const block = document.createElement('section');
+    block.id = 'tab-redirects';
+    const title = document.createElement('h3');
+    title.textContent = t('redirectsTitle');
+    const caveat = document.createElement('p');
+    caveat.className = 'tab-redirects-note';
+    caveat.textContent = t('redirectsCaveat');
+    const data = formatRedirectCauses(response);
+    const summary = document.createElement('div');
+    summary.dataset.key = 'tabRedirects';
+    const value = document.createElement('span');
+    value.textContent = data.value;
+    summary.append(value);
+    block.append(title, caveat, summary);
+    document.getElementById('audit-body').append(block);
+    renderAuditCauses(summary, data.section, data.items);
+}
+
+/**
  * Общее раскрытие: скрытый контент не удерживает фокус и открытое пояснение.
  * @param {HTMLButtonElement} button
  * @param {HTMLElement} panel
@@ -3005,6 +3088,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const audit = await acceptAudit(tab.id, auditInjection, info);
     renderTech(tech, server);
     const rows = renderAudit(audit, server, extended, info, companies, await loadData('companies').catch(() => []));
+    renderRedirectCauses(await readTabRedirects(tab.id));
     rescore = () => {
         score.result = renderScore(info, companies, audit, rows, server);
     };

@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "این سایت از قبل 100 عنصر پنهان دارد — موارد اضافی را در پنجرهٔ ABlock حذف کنید"
     },
+    "redirectsTitle": {
+        "message": "آخرین زنجیرهٔ HTTP زبانه"
+    },
+    "redirectsCaveat": {
+        "message": "ممکن است مربوط به بارگذاری دیگری باشد؛ ارتباط آن با این گزارش تأیید نشده است. در امتیاز، TTFB و خروجی لحاظ نمی‌شود."
+    },
+    "redirectsPermission": {
+        "message": "برای مشاهدهٔ هدایت‌های HTTP حالت پیشرفته را فعال کنید."
+    },
+    "redirectsUnavailable": {
+        "message": "داده‌ها در دسترس نیستند."
+    },
+    "redirectsAbsent": {
+        "message": "رکوردی نیست. پس از فعال‌سازی حالت پیشرفته دوباره بارگذاری کنید؛ هدایت‌های قبلی بازیابی نمی‌شوند."
+    },
+    "redirectsError": {
+        "message": "درخواست مشاهده‌شده ناموفق بود."
+    },
+    "redirectsPending": {
+        "message": "درخواست مشاهده‌شده هنوز پایان نیافته است."
+    },
+    "redirectsCompleted": {
+        "message": "هدایت‌های HTTP مشاهده‌شده"
+    },
+    "redirectsEmpty": {
+        "message": "در این رکورد هدایت HTTP مشاهده نشد."
+    },
     "auditDetails": {
         "message": "جزئیات"
     },

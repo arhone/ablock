@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "या साइटवर आधीच 100 घटक लपवले आहेत — नको असलेले ABlock विंडोमध्ये हटवा"
     },
+    "redirectsTitle": {
+        "message": "टॅबची शेवटची HTTP साखळी"
+    },
+    "redirectsCaveat": {
+        "message": "दुसऱ्या लोडची असू शकते; या अहवालाशी संबंध पुष्ट झालेला नाही. गुण, TTFB आणि निर्यातीत समाविष्ट नाही."
+    },
+    "redirectsPermission": {
+        "message": "HTTP पुनर्निर्देशने पाहण्यासाठी प्रगत मोड सुरू करा."
+    },
+    "redirectsUnavailable": {
+        "message": "डेटा उपलब्ध नाही."
+    },
+    "redirectsAbsent": {
+        "message": "नोंद नाही. प्रगत मोड सुरू केल्यानंतर पुन्हा लोड करा; आधीची पुनर्निर्देशने परत मिळवता येत नाहीत."
+    },
+    "redirectsError": {
+        "message": "पाहिलेली विनंती अयशस्वी झाली."
+    },
+    "redirectsPending": {
+        "message": "पाहिलेली विनंती अद्याप पूर्ण झालेली नाही."
+    },
+    "redirectsCompleted": {
+        "message": "पाहिलेली HTTP पुनर्निर्देशने"
+    },
+    "redirectsEmpty": {
+        "message": "या नोंदीत HTTP पुनर्निर्देशने दिसली नाहीत."
+    },
     "auditDetails": {
         "message": "तपशील"
     },

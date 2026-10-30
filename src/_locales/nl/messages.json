@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Er zijn al 100 elementen verborgen op deze site — verwijder overbodige in het ABlock-venster"
     },
+    "redirectsTitle": {
+        "message": "Laatste HTTP-keten van het tabblad"
+    },
+    "redirectsCaveat": {
+        "message": "Kan bij een andere laadactie horen; de koppeling met dit rapport is niet bevestigd. Telt niet mee voor score, TTFB en export."
+    },
+    "redirectsPermission": {
+        "message": "Schakel de uitgebreide modus in om HTTP-omleidingen waar te nemen."
+    },
+    "redirectsUnavailable": {
+        "message": "Gegevens niet beschikbaar."
+    },
+    "redirectsAbsent": {
+        "message": "Geen registratie. Herlaad na het inschakelen van de uitgebreide modus; eerdere omleidingen kunnen niet worden hersteld."
+    },
+    "redirectsError": {
+        "message": "Waargenomen verzoek mislukt."
+    },
+    "redirectsPending": {
+        "message": "Waargenomen verzoek loopt nog."
+    },
+    "redirectsCompleted": {
+        "message": "Waargenomen HTTP-omleidingen"
+    },
+    "redirectsEmpty": {
+        "message": "Geen HTTP-omleidingen waargenomen in deze registratie."
+    },
     "auditDetails": {
         "message": "Details"
     },

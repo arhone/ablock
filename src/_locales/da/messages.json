@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Webstedet har allerede 100 skjulte elementer — fjern nogle i ABlock-vinduet"
     },
+    "redirectsTitle": {
+        "message": "Fanens seneste HTTP-kæde"
+    },
+    "redirectsCaveat": {
+        "message": "Kan høre til en anden indlæsning; forbindelsen til denne rapport er ikke bekræftet. Indgår ikke i score, TTFB eller eksport."
+    },
+    "redirectsPermission": {
+        "message": "Aktivér udvidet tilstand for at observere HTTP-omdirigeringer."
+    },
+    "redirectsUnavailable": {
+        "message": "Data er ikke tilgængelige."
+    },
+    "redirectsAbsent": {
+        "message": "Ingen registrering. Genindlæs efter aktivering af udvidet tilstand; tidligere omdirigeringer kan ikke genskabes."
+    },
+    "redirectsError": {
+        "message": "Den observerede anmodning mislykkedes."
+    },
+    "redirectsPending": {
+        "message": "Den observerede anmodning er stadig i gang."
+    },
+    "redirectsCompleted": {
+        "message": "Observerede HTTP-omdirigeringer"
+    },
+    "redirectsEmpty": {
+        "message": "Ingen HTTP-omdirigeringer observeret i denne registrering."
+    },
     "auditDetails": {
         "message": "Detaljer"
     },

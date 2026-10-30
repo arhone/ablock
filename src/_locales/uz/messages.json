@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Saytda allaqachon 100 ta element yashirilgan — keraksizlarini ABlock oynasida oʻchiring"
     },
+    "redirectsTitle": {
+        "message": "Varaqning oxirgi HTTP zanjiri"
+    },
+    "redirectsCaveat": {
+        "message": "Boshqa yuklashga tegishli bo‘lishi mumkin; bu hisobot bilan bog‘liqligi tasdiqlanmagan. Baho, TTFB va eksportga kirmaydi."
+    },
+    "redirectsPermission": {
+        "message": "HTTP yo‘naltirishlarini kuzatish uchun kengaytirilgan rejimni yoqing."
+    },
+    "redirectsUnavailable": {
+        "message": "Ma’lumotlar mavjud emas."
+    },
+    "redirectsAbsent": {
+        "message": "Yozuv yo‘q. Kengaytirilgan rejimni yoqqach qayta yuklang; avvalgi yo‘naltirishlarni tiklab bo‘lmaydi."
+    },
+    "redirectsError": {
+        "message": "Kuzatilgan so‘rov xato bilan tugadi."
+    },
+    "redirectsPending": {
+        "message": "Kuzatilgan so‘rov hali tugamagan."
+    },
+    "redirectsCompleted": {
+        "message": "Kuzatilgan HTTP yo‘naltirishlari"
+    },
+    "redirectsEmpty": {
+        "message": "Bu yozuvda HTTP yo‘naltirishlari kuzatilmadi."
+    },
     "auditDetails": {
         "message": "Tafsilotlar"
     },

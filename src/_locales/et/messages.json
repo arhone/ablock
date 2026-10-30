@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Sellel saidil on juba 100 peidetud elementi — kustutage liigsed ABlocki aknas"
     },
+    "redirectsTitle": {
+        "message": "Vahekaardi viimane HTTP-ahel"
+    },
+    "redirectsCaveat": {
+        "message": "Võib kuuluda teisele laadimisele; seos selle aruandega pole kinnitatud. Ei kuulu hinde, TTFB ega ekspordi hulka."
+    },
+    "redirectsPermission": {
+        "message": "HTTP ümbersuunamiste jälgimiseks lülitage sisse laiendatud režiim."
+    },
+    "redirectsUnavailable": {
+        "message": "Andmed pole saadaval."
+    },
+    "redirectsAbsent": {
+        "message": "Kirjet pole. Pärast laiendatud režiimi sisselülitamist laadige uuesti; varasemaid ümbersuunamisi ei saa taastada."
+    },
+    "redirectsError": {
+        "message": "Vaadeldud päring ebaõnnestus."
+    },
+    "redirectsPending": {
+        "message": "Vaadeldud päring on veel pooleli."
+    },
+    "redirectsCompleted": {
+        "message": "Vaadeldud HTTP ümbersuunamised"
+    },
+    "redirectsEmpty": {
+        "message": "Selles kirjes HTTP ümbersuunamisi ei täheldatud."
+    },
     "auditDetails": {
         "message": "Üksikasjad"
     },

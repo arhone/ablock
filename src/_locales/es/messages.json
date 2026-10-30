@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Este sitio ya tiene 100 elementos ocultos — elimina algunos en la ventana de ABlock"
     },
+    "redirectsTitle": {
+        "message": "Última cadena HTTP de la pestaña"
+    },
+    "redirectsCaveat": {
+        "message": "Puede corresponder a otra carga; su relación con este informe no está confirmada. Excluida de la puntuación, TTFB y exportación."
+    },
+    "redirectsPermission": {
+        "message": "Activa el modo avanzado para observar redirecciones HTTP."
+    },
+    "redirectsUnavailable": {
+        "message": "Datos no disponibles."
+    },
+    "redirectsAbsent": {
+        "message": "Sin registro. Recarga tras activar el modo avanzado; no se pueden recuperar redirecciones anteriores."
+    },
+    "redirectsError": {
+        "message": "La solicitud observada falló."
+    },
+    "redirectsPending": {
+        "message": "La solicitud observada sigue pendiente."
+    },
+    "redirectsCompleted": {
+        "message": "Redirecciones HTTP observadas"
+    },
+    "redirectsEmpty": {
+        "message": "No se observaron redirecciones HTTP en este registro."
+    },
     "auditDetails": {
         "message": "Detalles"
     },

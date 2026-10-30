@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Na webu už je 100 skrytých prvků — nepotřebné smažte v okně ABlock"
     },
+    "redirectsTitle": {
+        "message": "Poslední HTTP řetězec karty"
+    },
+    "redirectsCaveat": {
+        "message": "Může patřit k jinému načtení; spojení s tímto přehledem není potvrzeno. Mimo hodnocení, TTFB a export."
+    },
+    "redirectsPermission": {
+        "message": "Zapněte rozšířený režim pro sledování HTTP přesměrování."
+    },
+    "redirectsUnavailable": {
+        "message": "Data nejsou dostupná."
+    },
+    "redirectsAbsent": {
+        "message": "Žádný záznam. Po zapnutí rozšířeného režimu obnovte stránku; dřívější přesměrování nelze obnovit."
+    },
+    "redirectsError": {
+        "message": "Sledovaný požadavek selhal."
+    },
+    "redirectsPending": {
+        "message": "Sledovaný požadavek stále probíhá."
+    },
+    "redirectsCompleted": {
+        "message": "Pozorovaná HTTP přesměrování"
+    },
+    "redirectsEmpty": {
+        "message": "V tomto záznamu nebyla pozorována HTTP přesměrování."
+    },
     "auditDetails": {
         "message": "Podrobnosti"
     },

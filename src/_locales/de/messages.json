@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Auf dieser Website sind bereits 100 Elemente ausgeblendet — entfernen Sie einige im ABlock-Fenster"
     },
+    "redirectsTitle": {
+        "message": "Letzte HTTP-Kette des Tabs"
+    },
+    "redirectsCaveat": {
+        "message": "Kann zu einem anderen Ladevorgang gehören; die Verbindung zu diesem Bericht ist unbestätigt. Ohne Einfluss auf Bewertung, TTFB und Export."
+    },
+    "redirectsPermission": {
+        "message": "Erweiterten Modus aktivieren, um HTTP-Weiterleitungen zu beobachten."
+    },
+    "redirectsUnavailable": {
+        "message": "Daten nicht verfügbar."
+    },
+    "redirectsAbsent": {
+        "message": "Kein Eintrag. Nach Aktivierung des erweiterten Modus neu laden; frühere Weiterleitungen lassen sich nicht wiederherstellen."
+    },
+    "redirectsError": {
+        "message": "Beobachtete Anfrage fehlgeschlagen."
+    },
+    "redirectsPending": {
+        "message": "Beobachtete Anfrage noch nicht abgeschlossen."
+    },
+    "redirectsCompleted": {
+        "message": "Beobachtete HTTP-Weiterleitungen"
+    },
+    "redirectsEmpty": {
+        "message": "In diesem Eintrag wurden keine HTTP-Weiterleitungen beobachtet."
+    },
     "auditDetails": {
         "message": "Details"
     },

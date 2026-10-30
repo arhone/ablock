@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "ಸೈಟ್‌ನಲ್ಲಿ ಈಗಾಗಲೇ 100 ಅಂಶಗಳು ಮರೆಯಾಗಿವೆ — ಅನಗತ್ಯವಾದವುಗಳನ್ನು ABlock ವಿಂಡೋದಲ್ಲಿ ಅಳಿಸಿ"
     },
+    "redirectsTitle": {
+        "message": "ಟ್ಯಾಬ್‌ನ ಕೊನೆಯ HTTP ಸರಣಿ"
+    },
+    "redirectsCaveat": {
+        "message": "ಬೇರೊಂದು ಲೋಡ್‌ಗೆ ಸೇರಿರಬಹುದು; ಈ ವರದಿಯೊಂದಿಗಿನ ಸಂಬಂಧ ದೃಢಪಟ್ಟಿಲ್ಲ. ಅಂಕ, TTFB ಮತ್ತು ರಫ್ತಿನಲ್ಲಿ ಸೇರಿಲ್ಲ."
+    },
+    "redirectsPermission": {
+        "message": "HTTP ಮರುನಿರ್ದೇಶನಗಳನ್ನು ಗಮನಿಸಲು ಸುಧಾರಿತ ಮೋಡ್ ಆನ್ ಮಾಡಿ."
+    },
+    "redirectsUnavailable": {
+        "message": "ಡೇಟಾ ಲಭ್ಯವಿಲ್ಲ."
+    },
+    "redirectsAbsent": {
+        "message": "ದಾಖಲೆ ಇಲ್ಲ. ಸುಧಾರಿತ ಮೋಡ್ ಆನ್ ಮಾಡಿದ ಬಳಿಕ ಮರುಲೋಡ್ ಮಾಡಿ; ಹಿಂದಿನ ಮರುನಿರ್ದೇಶನಗಳನ್ನು ಮರಳಿ ಪಡೆಯಲಾಗದು."
+    },
+    "redirectsError": {
+        "message": "ಗಮನಿಸಿದ ವಿನಂತಿ ವಿಫಲವಾಗಿದೆ."
+    },
+    "redirectsPending": {
+        "message": "ಗಮನಿಸಿದ ವಿನಂತಿ ಇನ್ನೂ ಪೂರ್ಣಗೊಂಡಿಲ್ಲ."
+    },
+    "redirectsCompleted": {
+        "message": "ಗಮನಿಸಿದ HTTP ಮರುನಿರ್ದೇಶನಗಳು"
+    },
+    "redirectsEmpty": {
+        "message": "ಈ ದಾಖಲೆಯಲ್ಲಿ HTTP ಮರುನಿರ್ದೇಶನಗಳು ಕಂಡುಬಂದಿಲ್ಲ."
+    },
     "auditDetails": {
         "message": "ವಿವರಗಳು"
     },

@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "A webhelyen már 100 rejtett elem van — törölje a feleslegeseket az ABlock ablakában"
     },
+    "redirectsTitle": {
+        "message": "A lap utolsó HTTP-lánca"
+    },
+    "redirectsCaveat": {
+        "message": "Másik betöltéshez tartozhat; kapcsolata ezzel a jelentéssel nem igazolt. Nem része a pontszámnak, a TTFB-nek és az exportnak."
+    },
+    "redirectsPermission": {
+        "message": "Kapcsolja be a bővített módot a HTTP-átirányítások megfigyeléséhez."
+    },
+    "redirectsUnavailable": {
+        "message": "Az adatok nem érhetők el."
+    },
+    "redirectsAbsent": {
+        "message": "Nincs bejegyzés. A bővített mód bekapcsolása után töltse újra; a korábbi átirányítások nem állíthatók vissza."
+    },
+    "redirectsError": {
+        "message": "A megfigyelt kérés sikertelen volt."
+    },
+    "redirectsPending": {
+        "message": "A megfigyelt kérés még folyamatban van."
+    },
+    "redirectsCompleted": {
+        "message": "Megfigyelt HTTP-átirányítások"
+    },
+    "redirectsEmpty": {
+        "message": "Ebben a bejegyzésben nem volt megfigyelt HTTP-átirányítás."
+    },
     "auditDetails": {
         "message": "Részletek"
     },

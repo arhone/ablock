@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "此網站已有100個隱藏的元素，請在 ABlock 視窗中刪除不需要的項目"
     },
+    "redirectsTitle": {
+        "message": "分頁的最近 HTTP 鏈"
+    },
+    "redirectsCaveat": {
+        "message": "可能屬於另一次載入；尚未確認與此報告的關聯。不計入評分、TTFB 或匯出。"
+    },
+    "redirectsPermission": {
+        "message": "啟用進階模式以觀察 HTTP 重新導向。"
+    },
+    "redirectsUnavailable": {
+        "message": "資料無法使用。"
+    },
+    "redirectsAbsent": {
+        "message": "沒有紀錄。啟用進階模式後請重新載入；無法還原之前的重新導向。"
+    },
+    "redirectsError": {
+        "message": "觀察到的請求失敗。"
+    },
+    "redirectsPending": {
+        "message": "觀察到的請求尚未完成。"
+    },
+    "redirectsCompleted": {
+        "message": "觀察到的 HTTP 重新導向"
+    },
+    "redirectsEmpty": {
+        "message": "此紀錄中未觀察到 HTTP 重新導向。"
+    },
     "auditDetails": {
         "message": "詳細資料"
     },

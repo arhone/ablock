@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Na mestu je že 100 skritih elementov — nepotrebne izbrišite v oknu ABlock"
     },
+    "redirectsTitle": {
+        "message": "Zadnja veriga HTTP zavihka"
+    },
+    "redirectsCaveat": {
+        "message": "Lahko se nanaša na drugo nalaganje; povezava s tem poročilom ni potrjena. Izključena iz ocene, TTFB in izvoza."
+    },
+    "redirectsPermission": {
+        "message": "Vklopite razširjeni način za opazovanje preusmeritev HTTP."
+    },
+    "redirectsUnavailable": {
+        "message": "Podatki niso na voljo."
+    },
+    "redirectsAbsent": {
+        "message": "Ni zapisa. Po vklopu razširjenega načina osvežite stran; prejšnjih preusmeritev ni mogoče obnoviti."
+    },
+    "redirectsError": {
+        "message": "Opazovana zahteva ni uspela."
+    },
+    "redirectsPending": {
+        "message": "Opazovana zahteva še poteka."
+    },
+    "redirectsCompleted": {
+        "message": "Opažene preusmeritve HTTP"
+    },
+    "redirectsEmpty": {
+        "message": "V tem zapisu ni bilo opaženih preusmeritev HTTP."
+    },
     "auditDetails": {
         "message": "Podrobnosti"
     },

@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Aquest lloc ja té 100 elements amagats — suprimeix-ne alguns a la finestra d’ABlock"
     },
+    "redirectsTitle": {
+        "message": "Última cadena HTTP de la pestanya"
+    },
+    "redirectsCaveat": {
+        "message": "Pot correspondre a una altra càrrega; la relació amb aquest informe no està confirmada. Exclosa de la puntuació, TTFB i exportació."
+    },
+    "redirectsPermission": {
+        "message": "Activa el mode ampliat per observar redireccions HTTP."
+    },
+    "redirectsUnavailable": {
+        "message": "Dades no disponibles."
+    },
+    "redirectsAbsent": {
+        "message": "Cap registre. Recarrega després d’activar el mode ampliat; les redireccions anteriors no es poden recuperar."
+    },
+    "redirectsError": {
+        "message": "La petició observada ha fallat."
+    },
+    "redirectsPending": {
+        "message": "La petició observada encara està en curs."
+    },
+    "redirectsCompleted": {
+        "message": "Redireccions HTTP observades"
+    },
+    "redirectsEmpty": {
+        "message": "No s’han observat redireccions HTTP en aquest registre."
+    },
     "auditDetails": {
         "message": "Detalls"
     },

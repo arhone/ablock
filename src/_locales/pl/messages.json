@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Na stronie ukryto już 100 elementów — usuń zbędne w oknie ABlock"
     },
+    "redirectsTitle": {
+        "message": "Ostatni łańcuch HTTP karty"
+    },
+    "redirectsCaveat": {
+        "message": "Może dotyczyć innego ładowania; powiązanie z tym raportem nie zostało potwierdzone. Poza oceną, TTFB i eksportem."
+    },
+    "redirectsPermission": {
+        "message": "Włącz tryb rozszerzony, aby obserwować przekierowania HTTP."
+    },
+    "redirectsUnavailable": {
+        "message": "Dane niedostępne."
+    },
+    "redirectsAbsent": {
+        "message": "Brak zapisu. Odśwież po włączeniu trybu rozszerzonego; wcześniejszych przekierowań nie można odtworzyć."
+    },
+    "redirectsError": {
+        "message": "Obserwowane żądanie zakończyło się błędem."
+    },
+    "redirectsPending": {
+        "message": "Obserwowane żądanie nadal trwa."
+    },
+    "redirectsCompleted": {
+        "message": "Zaobserwowane przekierowania HTTP"
+    },
+    "redirectsEmpty": {
+        "message": "W tym zapisie nie zaobserwowano przekierowań HTTP."
+    },
     "auditDetails": {
         "message": "Szczegóły"
     },

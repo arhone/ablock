@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "このサイトではすでに100個の要素が非表示です。ABlock のウィンドウで不要な項目を削除してください"
     },
+    "redirectsTitle": {
+        "message": "タブの最新の HTTP チェーン"
+    },
+    "redirectsCaveat": {
+        "message": "別の読み込みに属する可能性があり、このレポートとの関連は未確認です。スコア、TTFB、エクスポートには含まれません。"
+    },
+    "redirectsPermission": {
+        "message": "HTTP リダイレクトを観測するには拡張モードを有効にしてください。"
+    },
+    "redirectsUnavailable": {
+        "message": "データを利用できません。"
+    },
+    "redirectsAbsent": {
+        "message": "記録がありません。拡張モードを有効にしてから再読み込みしてください。過去のリダイレクトは復元できません。"
+    },
+    "redirectsError": {
+        "message": "観測されたリクエストは失敗しました。"
+    },
+    "redirectsPending": {
+        "message": "観測されたリクエストはまだ完了していません。"
+    },
+    "redirectsCompleted": {
+        "message": "観測された HTTP リダイレクト"
+    },
+    "redirectsEmpty": {
+        "message": "この記録では HTTP リダイレクトは観測されませんでした。"
+    },
     "auditDetails": {
         "message": "詳細"
     },

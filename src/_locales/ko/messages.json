@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "이 사이트에서 이미 100개를 숨겼습니다. ABlock 창에서 불필요한 항목을 삭제하세요"
     },
+    "redirectsTitle": {
+        "message": "탭의 마지막 HTTP 체인"
+    },
+    "redirectsCaveat": {
+        "message": "다른 로드에 속할 수 있으며 이 보고서와의 연결은 확인되지 않았습니다. 점수, TTFB 및 내보내기에 포함되지 않습니다."
+    },
+    "redirectsPermission": {
+        "message": "HTTP 리디렉션을 관찰하려면 확장 모드를 켜세요."
+    },
+    "redirectsUnavailable": {
+        "message": "데이터를 사용할 수 없습니다."
+    },
+    "redirectsAbsent": {
+        "message": "기록이 없습니다. 확장 모드를 켠 후 새로고침하세요. 이전 리디렉션은 복원할 수 없습니다."
+    },
+    "redirectsError": {
+        "message": "관찰된 요청이 실패했습니다."
+    },
+    "redirectsPending": {
+        "message": "관찰된 요청이 아직 완료되지 않았습니다."
+    },
+    "redirectsCompleted": {
+        "message": "관찰된 HTTP 리디렉션"
+    },
+    "redirectsEmpty": {
+        "message": "이 기록에서 HTTP 리디렉션이 관찰되지 않았습니다."
+    },
     "auditDetails": {
         "message": "세부 정보"
     },

@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Sitede zaten 100 gizli öğe var — gereksiz olanları ABlock penceresinden silin"
     },
+    "redirectsTitle": {
+        "message": "Sekmenin son HTTP zinciri"
+    },
+    "redirectsCaveat": {
+        "message": "Başka bir yüklemeye ait olabilir; bu raporla bağlantısı doğrulanmamıştır. Puan, TTFB ve dışa aktarmaya dahil değildir."
+    },
+    "redirectsPermission": {
+        "message": "HTTP yönlendirmelerini gözlemlemek için gelişmiş modu açın."
+    },
+    "redirectsUnavailable": {
+        "message": "Veriler kullanılamıyor."
+    },
+    "redirectsAbsent": {
+        "message": "Kayıt yok. Gelişmiş modu açtıktan sonra yeniden yükleyin; önceki yönlendirmeler geri getirilemez."
+    },
+    "redirectsError": {
+        "message": "Gözlemlenen istek başarısız oldu."
+    },
+    "redirectsPending": {
+        "message": "Gözlemlenen istek henüz tamamlanmadı."
+    },
+    "redirectsCompleted": {
+        "message": "Gözlemlenen HTTP yönlendirmeleri"
+    },
+    "redirectsEmpty": {
+        "message": "Bu kayıtta HTTP yönlendirmesi gözlemlenmedi."
+    },
     "auditDetails": {
         "message": "Ayrıntılar"
     },

@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "يوجد بالفعل 100 عنصر مخفي على الموقع — احذف بعضها من نافذة ABlock"
     },
+    "redirectsTitle": {
+        "message": "آخر سلسلة HTTP لعلامة التبويب"
+    },
+    "redirectsCaveat": {
+        "message": "قد تخص تحميلاً آخر؛ لم تُؤكّد صلتها بهذا التقرير. لا تدخل في التقييم أو TTFB أو التصدير."
+    },
+    "redirectsPermission": {
+        "message": "فعّل الوضع الموسّع لرصد عمليات إعادة توجيه HTTP."
+    },
+    "redirectsUnavailable": {
+        "message": "البيانات غير متاحة."
+    },
+    "redirectsAbsent": {
+        "message": "لا يوجد سجل. أعد التحميل بعد تفعيل الوضع الموسّع؛ لا يمكن استعادة عمليات إعادة التوجيه السابقة."
+    },
+    "redirectsError": {
+        "message": "فشل الطلب المرصود."
+    },
+    "redirectsPending": {
+        "message": "الطلب المرصود لم يكتمل بعد."
+    },
+    "redirectsCompleted": {
+        "message": "عمليات إعادة توجيه HTTP المرصودة"
+    },
+    "redirectsEmpty": {
+        "message": "لم تُرصد عمليات إعادة توجيه HTTP في هذا السجل."
+    },
     "auditDetails": {
         "message": "التفاصيل"
     },

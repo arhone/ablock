@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Trang web đã có 100 phần tử bị ẩn — hãy xóa các mục không cần trong cửa sổ ABlock"
     },
+    "redirectsTitle": {
+        "message": "Chuỗi HTTP gần nhất của thẻ"
+    },
+    "redirectsCaveat": {
+        "message": "Có thể thuộc lần tải khác; chưa xác nhận liên hệ với báo cáo này. Không tính vào điểm, TTFB và bản xuất."
+    },
+    "redirectsPermission": {
+        "message": "Bật chế độ nâng cao để quan sát chuyển hướng HTTP."
+    },
+    "redirectsUnavailable": {
+        "message": "Không có dữ liệu."
+    },
+    "redirectsAbsent": {
+        "message": "Chưa có bản ghi. Tải lại sau khi bật chế độ nâng cao; không thể khôi phục chuyển hướng trước đó."
+    },
+    "redirectsError": {
+        "message": "Yêu cầu được quan sát đã thất bại."
+    },
+    "redirectsPending": {
+        "message": "Yêu cầu được quan sát vẫn đang diễn ra."
+    },
+    "redirectsCompleted": {
+        "message": "Chuyển hướng HTTP đã quan sát"
+    },
+    "redirectsEmpty": {
+        "message": "Không quan sát thấy chuyển hướng HTTP trong bản ghi này."
+    },
     "auditDetails": {
         "message": "Chi tiết"
     },

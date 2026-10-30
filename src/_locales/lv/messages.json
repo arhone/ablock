@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Vietnē jau paslēpti 100 elementi — nevajadzīgos dzēsiet ABlock logā"
     },
+    "redirectsTitle": {
+        "message": "Cilnes pēdējā HTTP ķēde"
+    },
+    "redirectsCaveat": {
+        "message": "Var attiekties uz citu ielādi; saikne ar šo pārskatu nav apstiprināta. Neietilpst vērtējumā, TTFB un eksportā."
+    },
+    "redirectsPermission": {
+        "message": "Ieslēdziet paplašināto režīmu, lai novērotu HTTP pāradresācijas."
+    },
+    "redirectsUnavailable": {
+        "message": "Dati nav pieejami."
+    },
+    "redirectsAbsent": {
+        "message": "Ieraksta nav. Pēc paplašinātā režīma ieslēgšanas pārlādējiet; agrākas pāradresācijas nevar atjaunot."
+    },
+    "redirectsError": {
+        "message": "Novērotais pieprasījums neizdevās."
+    },
+    "redirectsPending": {
+        "message": "Novērotais pieprasījums vēl turpinās."
+    },
+    "redirectsCompleted": {
+        "message": "Novērotās HTTP pāradresācijas"
+    },
+    "redirectsEmpty": {
+        "message": "Šajā ierakstā HTTP pāradresācijas netika novērotas."
+    },
     "auditDetails": {
         "message": "Sīkāka informācija"
     },

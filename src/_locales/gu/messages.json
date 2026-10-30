@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "આ સાઇટ પર પહેલેથી 100 એલિમેન્ટ છુપાવેલા છે — ABlock વિન્ડોમાંથી વધારાના કાઢી નાખો"
     },
+    "redirectsTitle": {
+        "message": "ટૅબની છેલ્લી HTTP શૃંખલા"
+    },
+    "redirectsCaveat": {
+        "message": "બીજા લોડની હોઈ શકે; આ અહેવાલ સાથેનો સંબંધ પુષ્ટિ પામ્યો નથી. સ્કોર, TTFB અને નિકાસમાં સામેલ નથી."
+    },
+    "redirectsPermission": {
+        "message": "HTTP રીડાયરેક્ટ જોવા અદ્યતન મોડ ચાલુ કરો."
+    },
+    "redirectsUnavailable": {
+        "message": "ડેટા ઉપલબ્ધ નથી."
+    },
+    "redirectsAbsent": {
+        "message": "કોઈ રેકોર્ડ નથી. અદ્યતન મોડ ચાલુ કર્યા પછી ફરી લોડ કરો; જૂના રીડાયરેક્ટ પુનઃપ્રાપ્ત થઈ શકતા નથી."
+    },
+    "redirectsError": {
+        "message": "જોવાયેલી વિનંતી નિષ્ફળ ગઈ."
+    },
+    "redirectsPending": {
+        "message": "જોવાયેલી વિનંતી હજી પૂર્ણ થઈ નથી."
+    },
+    "redirectsCompleted": {
+        "message": "જોવાયેલા HTTP રીડાયરેક્ટ"
+    },
+    "redirectsEmpty": {
+        "message": "આ રેકોર્ડમાં HTTP રીડાયરેક્ટ જોવા મળ્યા નથી."
+    },
     "auditDetails": {
         "message": "વિગતો"
     },

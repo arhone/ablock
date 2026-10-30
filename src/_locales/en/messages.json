@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "This site already has 100 hidden elements — remove some in the ABlock popup"
     },
+    "redirectsTitle": {
+        "message": "Last HTTP chain of the tab"
+    },
+    "redirectsCaveat": {
+        "message": "May belong to another load; its link to this report is unconfirmed. Excluded from score, TTFB and sharing."
+    },
+    "redirectsPermission": {
+        "message": "Enable extended mode to observe HTTP redirects."
+    },
+    "redirectsUnavailable": {
+        "message": "Data unavailable."
+    },
+    "redirectsAbsent": {
+        "message": "No record. Reload after enabling extended mode; earlier redirects cannot be restored."
+    },
+    "redirectsError": {
+        "message": "Observed request failed."
+    },
+    "redirectsPending": {
+        "message": "Observed request is still pending."
+    },
+    "redirectsCompleted": {
+        "message": "Observed HTTP redirects"
+    },
+    "redirectsEmpty": {
+        "message": "No HTTP redirects observed in this record."
+    },
     "auditDetails": {
         "message": "Details"
     },

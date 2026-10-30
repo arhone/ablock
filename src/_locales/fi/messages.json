@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Sivustolla on jo 100 piilotettua elementtiä — poista turhat ABlockin ikkunassa"
     },
+    "redirectsTitle": {
+        "message": "Välilehden viimeisin HTTP-ketju"
+    },
+    "redirectsCaveat": {
+        "message": "Voi kuulua toiseen lataukseen; yhteyttä tähän raporttiin ei ole vahvistettu. Ei sisälly pisteisiin, TTFB:hen tai vientiin."
+    },
+    "redirectsPermission": {
+        "message": "Ota laajennettu tila käyttöön HTTP-uudelleenohjausten havainnointia varten."
+    },
+    "redirectsUnavailable": {
+        "message": "Tietoja ei ole saatavilla."
+    },
+    "redirectsAbsent": {
+        "message": "Ei tallennetta. Lataa uudelleen laajennetun tilan käyttöönoton jälkeen; aiempia uudelleenohjauksia ei voi palauttaa."
+    },
+    "redirectsError": {
+        "message": "Havaittu pyyntö epäonnistui."
+    },
+    "redirectsPending": {
+        "message": "Havaittu pyyntö on yhä kesken."
+    },
+    "redirectsCompleted": {
+        "message": "Havaitut HTTP-uudelleenohjaukset"
+    },
+    "redirectsEmpty": {
+        "message": "Tässä tallenteessa ei havaittu HTTP-uudelleenohjauksia."
+    },
     "auditDetails": {
         "message": "Lisätiedot"
     },

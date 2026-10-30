@@ -1239,6 +1239,25 @@ footer a:hover {
     background: none;
     cursor: pointer;
 }
+/* Запись вкладки отделена от сворачиваемых групп текущего отчёта. */
+#tab-redirects {
+    margin-block-start: 12px;
+    padding-block-start: 8px;
+    border-block-start: 1px solid var(--border);
+    overflow-wrap: anywhere;
+}
+#tab-redirects h3 {
+    margin: 0 0 6px;
+    font-size: 12px;
+}
+.tab-redirects-note {
+    margin: 6px 0;
+    color: var(--muted);
+    font-size: 11px;
+}
+#tab-redirects .audit-line > div:first-child {
+    min-width: 0;
+}
 .audit-line {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;

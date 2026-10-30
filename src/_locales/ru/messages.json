@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "На сайте уже 100 скрытых элементов — удалите лишние в окне ABlock"
     },
+    "redirectsTitle": {
+        "message": "Последняя HTTP-цепочка вкладки"
+    },
+    "redirectsCaveat": {
+        "message": "Может относиться к другой загрузке; связь с этим отчётом не подтверждена. Не входит в оценку, TTFB и экспорт."
+    },
+    "redirectsPermission": {
+        "message": "Включите расширенный режим для наблюдения HTTP-переходов."
+    },
+    "redirectsUnavailable": {
+        "message": "Данные недоступны."
+    },
+    "redirectsAbsent": {
+        "message": "Записи нет. Перезагрузите после включения расширенного режима; прежние переходы не восстанавливаются."
+    },
+    "redirectsError": {
+        "message": "Наблюдавшийся запрос завершился ошибкой."
+    },
+    "redirectsPending": {
+        "message": "Наблюдавшийся запрос ещё не завершён."
+    },
+    "redirectsCompleted": {
+        "message": "Наблюдавшиеся HTTP-переходы"
+    },
+    "redirectsEmpty": {
+        "message": "В этой записи HTTP-переходы не наблюдались."
+    },
     "auditDetails": {
         "message": "Подробности"
     },

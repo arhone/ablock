@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Сайтта 100 элемент жасырылған — артығын ABlock терезесінде жойыңыз"
     },
+    "redirectsTitle": {
+        "message": "Қойындының соңғы HTTP тізбегі"
+    },
+    "redirectsCaveat": {
+        "message": "Басқа жүктеуге қатысты болуы мүмкін; осы есеппен байланысы расталмаған. Бағаға, TTFB мен экспортқа кірмейді."
+    },
+    "redirectsPermission": {
+        "message": "HTTP бағыттауларын бақылау үшін кеңейтілген режимді қосыңыз."
+    },
+    "redirectsUnavailable": {
+        "message": "Деректер қолжетімсіз."
+    },
+    "redirectsAbsent": {
+        "message": "Жазба жоқ. Кеңейтілген режимді қосқаннан кейін қайта жүктеңіз; бұрынғы бағыттаулар қалпына келтірілмейді."
+    },
+    "redirectsError": {
+        "message": "Бақыланған сұрау қатемен аяқталды."
+    },
+    "redirectsPending": {
+        "message": "Бақыланған сұрау әлі аяқталған жоқ."
+    },
+    "redirectsCompleted": {
+        "message": "Бақыланған HTTP бағыттаулары"
+    },
+    "redirectsEmpty": {
+        "message": "Бұл жазбада HTTP бағыттаулары байқалмады."
+    },
     "auditDetails": {
         "message": "Толығырақ"
     },

@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "May 100 nakatagong elemento na sa site — tanggalin ang ilan sa window ng ABlock"
     },
+    "redirectsTitle": {
+        "message": "Huling HTTP chain ng tab"
+    },
+    "redirectsCaveat": {
+        "message": "Maaaring mula sa ibang pag-load; hindi kumpirmado ang kaugnayan sa ulat na ito. Hindi kasama sa marka, TTFB at pag-export."
+    },
+    "redirectsPermission": {
+        "message": "I-enable ang advanced mode upang obserbahan ang mga HTTP redirect."
+    },
+    "redirectsUnavailable": {
+        "message": "Hindi available ang data."
+    },
+    "redirectsAbsent": {
+        "message": "Walang tala. I-reload matapos i-enable ang advanced mode; hindi maibabalik ang mga naunang redirect."
+    },
+    "redirectsError": {
+        "message": "Nabigo ang naobserbahang request."
+    },
+    "redirectsPending": {
+        "message": "Hindi pa tapos ang naobserbahang request."
+    },
+    "redirectsCompleted": {
+        "message": "Mga naobserbahang HTTP redirect"
+    },
+    "redirectsEmpty": {
+        "message": "Walang naobserbahang HTTP redirect sa talang ito."
+    },
     "auditDetails": {
         "message": "Mga detalye"
     },

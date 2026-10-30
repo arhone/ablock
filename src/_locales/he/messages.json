@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "באתר כבר יש 100 רכיבים מוסתרים — יש למחוק מיותרים בחלון ABlock"
     },
+    "redirectsTitle": {
+        "message": "שרשרת HTTP האחרונה של הכרטיסייה"
+    },
+    "redirectsCaveat": {
+        "message": "ייתכן ששייכת לטעינה אחרת; הקשר לדוח זה לא אומת. אינה נכללת בציון, ב־TTFB ובייצוא."
+    },
+    "redirectsPermission": {
+        "message": "יש להפעיל מצב מורחב כדי לצפות בהפניות HTTP."
+    },
+    "redirectsUnavailable": {
+        "message": "הנתונים אינם זמינים."
+    },
+    "redirectsAbsent": {
+        "message": "אין רישום. יש לטעון מחדש לאחר הפעלת מצב מורחב; לא ניתן לשחזר הפניות קודמות."
+    },
+    "redirectsError": {
+        "message": "הבקשה שנצפתה נכשלה."
+    },
+    "redirectsPending": {
+        "message": "הבקשה שנצפתה עדיין לא הסתיימה."
+    },
+    "redirectsCompleted": {
+        "message": "הפניות HTTP שנצפו"
+    },
+    "redirectsEmpty": {
+        "message": "לא נצפו הפניות HTTP ברישום זה."
+    },
     "auditDetails": {
         "message": "פרטים"
     },

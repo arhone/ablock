@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Tayari kuna vipengele 100 vilivyofichwa kwenye tovuti — futa visivyohitajika kwenye dirisha la ABlock"
     },
+    "redirectsTitle": {
+        "message": "Mlolongo wa mwisho wa HTTP wa kichupo"
+    },
+    "redirectsCaveat": {
+        "message": "Huenda ni wa upakiaji mwingine; uhusiano na ripoti hii haujathibitishwa. Hauhusishwi katika alama, TTFB na uhamishaji."
+    },
+    "redirectsPermission": {
+        "message": "Washa hali ya kina ili kutazama uelekezaji wa HTTP."
+    },
+    "redirectsUnavailable": {
+        "message": "Data haipatikani."
+    },
+    "redirectsAbsent": {
+        "message": "Hakuna rekodi. Pakia upya baada ya kuwasha hali ya kina; uelekezaji wa awali hauwezi kurejeshwa."
+    },
+    "redirectsError": {
+        "message": "Ombi lililoangaliwa limeshindwa."
+    },
+    "redirectsPending": {
+        "message": "Ombi lililoangaliwa bado linaendelea."
+    },
+    "redirectsCompleted": {
+        "message": "Uelekezaji wa HTTP ulioonekana"
+    },
+    "redirectsEmpty": {
+        "message": "Hakuna uelekezaji wa HTTP ulioonekana katika rekodi hii."
+    },
     "auditDetails": {
         "message": "Maelezo"
     },

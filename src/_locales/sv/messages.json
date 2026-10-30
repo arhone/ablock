@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Webbplatsen har redan 100 dolda element — ta bort onödiga i ABlock-fönstret"
     },
+    "redirectsTitle": {
+        "message": "Flikens senaste HTTP-kedja"
+    },
+    "redirectsCaveat": {
+        "message": "Kan tillhöra en annan inläsning; kopplingen till denna rapport är inte bekräftad. Ingår inte i poäng, TTFB eller export."
+    },
+    "redirectsPermission": {
+        "message": "Aktivera utökat läge för att observera HTTP-omdirigeringar."
+    },
+    "redirectsUnavailable": {
+        "message": "Data är inte tillgängliga."
+    },
+    "redirectsAbsent": {
+        "message": "Ingen post. Ladda om efter aktivering av utökat läge; tidigare omdirigeringar kan inte återskapas."
+    },
+    "redirectsError": {
+        "message": "Den observerade begäran misslyckades."
+    },
+    "redirectsPending": {
+        "message": "Den observerade begäran pågår fortfarande."
+    },
+    "redirectsCompleted": {
+        "message": "Observerade HTTP-omdirigeringar"
+    },
+    "redirectsEmpty": {
+        "message": "Inga HTTP-omdirigeringar observerades i denna post."
+    },
     "auditDetails": {
         "message": "Detaljer"
     },

@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "በጣቢያው ላይ 100 የተደበቁ አባላት አሉ — በABlock መስኮት የማያስፈልጉትን ያስወግዱ"
     },
+    "redirectsTitle": {
+        "message": "የትሩ የመጨረሻ HTTP ሰንሰለት"
+    },
+    "redirectsCaveat": {
+        "message": "የሌላ ጭነት ሊሆን ይችላል፤ ከዚህ ሪፖርት ጋር ያለው ግንኙነት አልተረጋገጠም። በነጥብ፣ TTFB እና ወደ ውጭ መላክ ውስጥ አይካተትም።"
+    },
+    "redirectsPermission": {
+        "message": "የHTTP አቅጣጫ ለውጦችን ለማየት የላቀ ሁነታን ያብሩ።"
+    },
+    "redirectsUnavailable": {
+        "message": "ውሂብ አይገኝም።"
+    },
+    "redirectsAbsent": {
+        "message": "መዝገብ የለም። የላቀ ሁነታን ካበሩ በኋላ እንደገና ይጫኑ፤ ያለፉ አቅጣጫ ለውጦችን መመለስ አይቻልም።"
+    },
+    "redirectsError": {
+        "message": "የታየው ጥያቄ አልተሳካም።"
+    },
+    "redirectsPending": {
+        "message": "የታየው ጥያቄ ገና አልተጠናቀቀም።"
+    },
+    "redirectsCompleted": {
+        "message": "የታዩ HTTP አቅጣጫ ለውጦች"
+    },
+    "redirectsEmpty": {
+        "message": "በዚህ መዝገብ HTTP አቅጣጫ ለውጦች አልታዩም።"
+    },
     "auditDetails": {
         "message": "ዝርዝሮች"
     },

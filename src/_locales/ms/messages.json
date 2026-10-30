@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "Sudah ada 100 elemen tersembunyi di tapak ini — padam yang tidak diperlukan dalam tetingkap ABlock"
     },
+    "redirectsTitle": {
+        "message": "Rantaian HTTP terakhir tab"
+    },
+    "redirectsCaveat": {
+        "message": "Mungkin milik pemuatan lain; kaitannya dengan laporan ini belum disahkan. Tidak termasuk skor, TTFB dan eksport."
+    },
+    "redirectsPermission": {
+        "message": "Aktifkan mod lanjutan untuk memerhatikan ubah hala HTTP."
+    },
+    "redirectsUnavailable": {
+        "message": "Data tidak tersedia."
+    },
+    "redirectsAbsent": {
+        "message": "Tiada rekod. Muat semula selepas mengaktifkan mod lanjutan; ubah hala terdahulu tidak dapat dipulihkan."
+    },
+    "redirectsError": {
+        "message": "Permintaan yang diperhatikan gagal."
+    },
+    "redirectsPending": {
+        "message": "Permintaan yang diperhatikan masih berlangsung."
+    },
+    "redirectsCompleted": {
+        "message": "Ubah hala HTTP yang diperhatikan"
+    },
+    "redirectsEmpty": {
+        "message": "Tiada ubah hala HTTP diperhatikan dalam rekod ini."
+    },
     "auditDetails": {
         "message": "Butiran"
     },

@@ -1130,6 +1130,33 @@
     "pickLimit": {
         "message": "इस साइट पर पहले से 100 छिपे एलिमेंट हैं — ABlock विंडो में अनचाहे एलिमेंट हटाएँ"
     },
+    "redirectsTitle": {
+        "message": "टैब की पिछली HTTP शृंखला"
+    },
+    "redirectsCaveat": {
+        "message": "यह किसी अन्य लोड की हो सकती है; इस रिपोर्ट से इसका संबंध अपुष्ट है। स्कोर, TTFB और निर्यात में शामिल नहीं है।"
+    },
+    "redirectsPermission": {
+        "message": "HTTP रीडायरेक्ट देखने के लिए उन्नत मोड चालू करें।"
+    },
+    "redirectsUnavailable": {
+        "message": "डेटा उपलब्ध नहीं है।"
+    },
+    "redirectsAbsent": {
+        "message": "कोई रिकॉर्ड नहीं। उन्नत मोड चालू करने के बाद फिर लोड करें; पुराने रीडायरेक्ट वापस नहीं मिल सकते।"
+    },
+    "redirectsError": {
+        "message": "देखा गया अनुरोध विफल हुआ।"
+    },
+    "redirectsPending": {
+        "message": "देखा गया अनुरोध अभी पूरा नहीं हुआ है।"
+    },
+    "redirectsCompleted": {
+        "message": "देखे गए HTTP रीडायरेक्ट"
+    },
+    "redirectsEmpty": {
+        "message": "इस रिकॉर्ड में कोई HTTP रीडायरेक्ट नहीं देखा गया।"
+    },
     "auditDetails": {
         "message": "विवरण"
     },
