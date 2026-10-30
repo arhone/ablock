@@ -34,6 +34,7 @@
      * browser-cache — доставка из кэша; interim-response — промежуточный ответ (код неизвестен);
      * history-navigation — переход по истории (попадание в bfcache не доказано);
      * preload-unresolved — нельзя сопоставить responsive preload/media без догадки;
+     * scripts-excluded — записи скриптов вне подтверждённой атрибуции self исключены;
      * attribution-unavailable — у кадра нет скриптов или у скрипта нет безопасного источника;
      * collection-failed — изолированный сбой сборщика, раздел недоступен, остальной аудит продолжается.
      * truncated=true только при отсечении фактов лимитом/бюджетом, не просто при unavailable.
@@ -74,16 +75,20 @@
      * при превышении partial + budget-exceeded + truncated. Необязательные API — по наличию.
      * LCP: до 2000 ресурсов и 100 link, общий бюджет причин 20 ms; TTFB: до 5 Server-Timing.
      * loaf: {version: 1, availableFrames, processedFrames, blockingDuration, droppedEntries,
-     *   scripts: [{kind: url|inline|unknown, url: string|null, duration: number|null, count}]}.
+     *   excludedScripts: {count, duration}, scripts: [{kind: url|inline|unknown, url: string|null, duration: number|null, count}]}.
      * Только доступный буфер long-animation-frame, не TBT и не полное время главного потока.
      * availableFrames — число полученных записей до лимита, processedFrames — обработанных;
-     * blockingDuration — сумма по обработанным кадрам, не распределяется между скриптами;
+     * blockingDuration — сумма по обработанным кадрам целиком, включая работу других окон;
+     * не ограничивается главным документом и не распределяется между скриптами;
      * null, если кадры есть, но ни один не обработан, или длительность неизвестна.
-     * scripts — суммы scripts[].duration по безопасному URL (без query/hash, путь до 512),
+     * scripts — только записи с windowAttribution === 'self', суммы duration по безопасному URL (без query/hash, путь до 512),
      * inline — sourceURL совпадает с адресом документа, пустой/небезопасный URL — unknown.
      * Это атрибуция браузера, не доказанная причина; имена функций/код/позиции не сохраняются.
      * count — число записей скрипта, не кадров; интервалы могут перекрываться, не складывать
      * с blockingDuration. Неизвестная длительность делает соответствующую сумму null.
+     * excludedScripts — число и сумма duration обработанных записей с любой другой
+     * windowAttribution (включая отсутствующую), без сохранения их URL/окон. Счётчик
+     * входит в общий лимит 2000 записей; исключение даёт partial/scripts-excluded.
      * droppedEntries: number|null — потери, сообщённые callback, null если браузер не сообщил.
      * До 200 кадров, 100 источников, 2000 записей скриптов суммарно; лимиты дают partial.
      * Пустой поддерживаемый буфер: ok + no-entry, нулевые счётчики и суммы, scripts: [].
@@ -712,6 +717,7 @@
             processedFrames: 0,
             blockingDuration: 0,
             droppedEntries: loafEntries.dropped,
+            excludedScripts: {count: 0, duration: 0},
             scripts: []
         };
         if (!data.availableFrames) {
@@ -751,6 +757,18 @@
                     break;
                 }
                 scriptCount++;
+                if (script.windowAttribution !== 'self') {
+                    data.excludedScripts.count++;
+                    const duration = finite(script.duration);
+                    if (duration === null) {
+                        data.excludedScripts.duration = null;
+                        reason(section, 'timing-incomplete');
+                    } else if (data.excludedScripts.duration !== null) {
+                        data.excludedScripts.duration += duration;
+                    }
+                    reason(section, 'scripts-excluded');
+                    continue;
+                }
                 const url = shortUrl(script.sourceURL);
                 const kind = !url ? 'unknown' : script.sourceURL.split('#', 1)[0] === location.href.split('#', 1)[0] ? 'inline' : 'url';
                 const key = kind === 'url' ? url : kind;
