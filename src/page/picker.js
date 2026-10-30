@@ -35,7 +35,8 @@
         .esc { color:var(--muted); }
         button { font:inherit; color:inherit; background:var(--bg); border:1px solid var(--line); border-radius:5px; padding:7px 12px; cursor:pointer; }
         .actions button { min-width:88px; min-height:36px; }
-        .resize { font-size:20px; line-height:18px; direction:ltr; }
+        .actions .resize { min-width:36px; width:36px; height:36px; padding:0 3px; font-size:28px; line-height:1; direction:ltr; }
+        .resize.narrower { font-size:18px; letter-spacing:-2px; }
         button:focus-visible { outline:2px solid #12a86b; outline-offset:2px; }
         button:disabled { opacity:.45; cursor:default; }
         .hide { background:#087c54; border-color:#087c54; color:#fff; font-weight:600; }
@@ -80,7 +81,7 @@
         return el;
     }
     const wider = button('pickWider', 'resize', () => change(1), '↔');
-    const narrower = button('pickNarrower', 'resize', () => change(-1), '→←');
+    const narrower = button('pickNarrower', 'resize narrower', () => change(-1), '→←');
     const matches = node('span', 'matches');
     const cancel = button('pickCancel', 'cancel', () => stop());
     const hide = button('pickHide', 'hide', save);
