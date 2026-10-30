@@ -65,7 +65,7 @@ Blocks ads, trackers and malicious sites, and shows how the current website perf
 Отметить все три подтверждения (не продаю данные, не использую не по назначению, не для кредитоспособности).
 
 **Privacy policy URL:** `https://github.com/arhone/ablock#readme` — раздел «Приватность» в README
-(на GitHub он не заголовок, поэтому отдельного якоря нет).
+(прямой якорь раздела: `https://github.com/arhone/ablock#приватность`).
 
 ## Обновление скриншотов
 
@@ -76,6 +76,9 @@ Blocks ads, trackers and malicious sites, and shows how the current website perf
 `POPJS` заменяет домен в «Блокировать на …» на «этом сайте». Слева — `mockup/<язык>.html`, снятый в 780×800;
 цифры в статье правятся под окно. `compose.py <страница> <окно> <png>` собирает кадр 1280×800 с тенью и рамкой.
 
-`docs/img/report.webp` (картинка в README) — настоящая картинка «Поделиться» для github.com в тёмной теме:
-`SHARE=<png>` у `store.mjs` перехватывает файл кнопки «Сохранить картинкой»; WebP без потерь.
-Дата в шапке скрыта: `POPJS="const s=document.styleSheets[0]; s.insertRule('.sheet-head > span:last-child{visibility:hidden}', s.cssRules.length)"`.
+Баннеры README и превью GitHub: HTML-исходники и команда снимка — [banner/README.md](banner/README.md).
+Используют настоящие отчёты «Поделиться» для ya.ru из `docs/site/img/report.webp` и `report-en.webp`.
+Старый `docs/img/report.webp` — архивная картинка отчёта для github.com, в README больше не используется.
+Для повторного получения архивного отчёта: `SHARE=<png>` у `store.mjs` перехватывает файл
+кнопки «Сохранить картинкой»; WebP без потерь. Дата в шапке скрывалась:
+`POPJS="const s=document.styleSheets[0]; s.insertRule('.sheet-head > span:last-child{visibility:hidden}', s.cssRules.length)"`.

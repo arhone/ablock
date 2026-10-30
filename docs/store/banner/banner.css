@@ -1,0 +1,24 @@
+@import url('../../site/site.css');
+/* Фиксированная светлая палитра сайта: баннер одинаков в обеих темах GitHub. */
+:root {
+    color-scheme: light;
+    --bg: #f3f4f7;
+    --text: #1b1f27;
+    --muted: #5d6574;
+    --on-text: #066245;
+    --cells: rgba(30, 40, 70, 0.09);
+    --glow: radial-gradient(50% 40% at 70% 10%, rgba(18, 163, 114, 0.14), transparent 70%), radial-gradient(40% 40% at 0% 40%, rgba(20, 184, 190, 0.12), transparent 70%), radial-gradient(40% 40% at 100% 70%, rgba(245, 140, 40, 0.1), transparent 70%);
+}
+html, body { width: 1280px; height: 640px; overflow: hidden; }
+.banner { width: 1280px; height: 640px; padding: 42px 64px; display: grid; grid-template-columns: 760px 300px; gap: 76px; align-items: center; }
+.copy { align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; }
+.brand { font-size: 30px; gap: 14px; }
+.brand img { width: 48px; height: 48px; filter: none; }
+h1 { font-size: 58px; line-height: 1.08; margin: 24px 0 18px; letter-spacing: -0.035em; }
+.points { list-style: none; padding: 0; margin: 0; font-size: 22px; line-height: 1.55; color: var(--muted); }
+.points li::before { content: '✓'; color: var(--on-text); margin-right: 12px; }
+.browsers { margin: auto 0 0; font-size: 21px; font-weight: 600; color: var(--on-text); }
+.address { font-size: 17px; color: var(--muted); margin: 8px 0 0; }
+.sample { margin: 0; width: 300px; }
+.sample img { display: block; width: 300px; height: 530px; object-fit: contain; border-radius: 15px; box-shadow: 0 24px 50px -20px rgba(10, 20, 40, 0.45); }
+.sample figcaption { text-align: center; color: var(--muted); font-size: 14px; margin-top: 8px; }
