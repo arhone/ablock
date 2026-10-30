@@ -1265,7 +1265,9 @@ function formatLoafCauses(section, catalog = [], documentUrl = '') {
         const address = script.kind === 'url' ? CompanyOwner.normalize(script.url) : null;
         const owner = address ? CompanyOwner.find(script.url, catalog)?.company : null;
         const own = address && (address.host === page?.host || (owner && owner === pageOwner));
-        const key = owner || (own ? 'own' : address ? `host:${address.host}` : `kind:${script.kind}`);
+        // Источники одной компании могут быть собственными и сторонними: суммы разделяем.
+        const key = owner ? `company:${catalog.indexOf(owner)}:${Boolean(own)}`
+            : own ? 'own' : address ? `host:${address.host}` : `kind:${script.kind}`;
         const label = owner ? owner.name + (own ? ` · ${t('loafOwn')}` : '')
             : own ? t('loafOwn') : script.kind === 'inline' ? t('loafInline')
                 : t('loafUnknown') + (address ? ` · ${address.host}` : '');
