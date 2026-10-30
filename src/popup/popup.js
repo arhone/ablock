@@ -580,6 +580,44 @@ async function loadData(name) {
 }
 
 /**
+ * Каталог остаётся данными расширения; аудит запускается в документе bootstrap.
+ * @param {number} tabId
+ * @returns {Promise<?chrome.scripting.InjectionResult>}
+ */
+async function runAudit(tabId) {
+    let tokens = null;
+    try {
+        const catalog = await loadData('ai-bots');
+        const seen = new Set();
+        if (catalog.schemaVersion !== 1 || !Array.isArray(catalog.bots)) {
+            throw new Error('catalog');
+        }
+        tokens = catalog.bots.flatMap((bot) => ['tokens', 'unverifiedTokens'].flatMap((key) => bot[key].map((token) => {
+            if (!/^[a-z0-9-]{1,80}$/i.test(bot.id) || !/^[a-z0-9_-]{1,80}$/i.test(token) || seen.has(token.toLowerCase())) {
+                throw new Error('token');
+            }
+            seen.add(token.toLowerCase());
+            return {id: bot.id, token, status: key === 'tokens' ? 'verified' : 'unverified'};
+        })));
+        if (tokens.length > 128) {
+            tokens = null;
+        }
+    } catch {
+        tokens = null;
+    }
+    const [bootstrap] = await chrome.scripting.executeScript({target: {tabId}, world: 'ISOLATED',
+        func: (tokens) => {
+            globalThis.__ablockAuditAi = tokens ? {tokens, timeOrigin: performance.timeOrigin} : null;
+        }, args: [tokens]});
+    if (!bootstrap?.documentId) {
+        return null;
+    }
+    const [injection] = await chrome.scripting.executeScript({target: {tabId, documentIds: [bootstrap.documentId]},
+        files: ['page/audit.js'], world: 'ISOLATED'});
+    return injection?.documentId === bootstrap.documentId ? injection : null;
+}
+
+/**
  * Принимаем аудит только для документа исходного снимка и всё ещё открытого документа.
  * Повторная короткая инъекция не читает DOM и не ждёт загрузки. Ошибка доступа — отказ.
  * @param {number} tabId
@@ -2879,8 +2917,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const techResult = chrome.scripting.executeScript({target: {tabId: tab.id}, files: ['page/inspect.js'], world: 'MAIN'})
         .then(([{result}]) => result || [])
         .catch(() => []);
-    const auditResult = chrome.scripting.executeScript({target: {tabId: tab.id}, files: ['page/audit.js']})
-        .then(([injection]) => injection || null)
+    const auditResult = runAudit(tab.id)
         .catch(() => null);
     // Оценка по группам; пересчитывается, если время загрузки придёт позже
     const score = {result: null};

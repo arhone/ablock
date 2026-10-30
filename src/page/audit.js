@@ -141,24 +141,30 @@
             resolve(Object.assign([], {failed: true}));
         }
     });
-    // Известные ИИ-боты: по имени в robots.txt больше никак не понять, что бот собирает тексты для нейросетей
-    const AI_BOTS = ['GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'ClaudeBot', 'Claude-Web', 'anthropic-ai',
-        'Google-Extended', 'PerplexityBot', 'CCBot', 'Bytespider', 'Applebot-Extended', 'meta-externalagent',
-        'Amazonbot', 'cohere-ai', 'Diffbot', 'YandexAdditional'];
+    // Одноразовые данные из ISOLATED world того же документа. Код сайта их не видит.
+    const aiCatalog = globalThis.__ablockAuditAi;
+    delete globalThis.__ablockAuditAi;
 
     /**
      * Текстовый файл сайта. SPA часто отвечают на любой адрес своей главной — такой ответ не считаем
      * @param {string} path
      * @returns {Promise<?string|undefined>} null — файла нет, undefined — сайт не ответил вовремя (не знаем)
      */
+    let robotsFileState = 'unavailable';
     const siteFile = async (path) => {
         try {
             const response = await fetch(new URL(path, location.origin), {signal: AbortSignal.timeout(2000), credentials: 'omit', redirect: 'follow'});
             const type = response.headers.get('content-type') || '';
+            if (path === '/robots.txt') {
+                robotsFileState = [404, 410].includes(response.status) ? 'missing' : 'unavailable';
+            }
             if (!response.ok || /html/i.test(type)) {
                 return null;
             }
             const text = (await response.text()).slice(0, 100000);
+            if (path === '/robots.txt' && !/^\s*</.test(text)) {
+                robotsFileState = 'present';
+            }
             return /^\s*</.test(text) ? null : text;
         } catch {
             return undefined;
@@ -210,15 +216,140 @@
         };
         const all = rulesFor('*');
         // ИИ-боты, названные в robots.txt по имени. Общий запрет «User-agent: *» — не правило для ИИ
-        const named = AI_BOTS.filter((bot) => rulesFor(bot.toLowerCase()).length);
+        const named = (aiCatalog?.tokens || []).filter((bot) => rulesFor(bot.token.toLowerCase()).length);
         return {
             blocked: blocked(all, location.pathname + location.search),
             closed: blocked(all, '/'),
             sitemap,
             aiNamed: named.length,
             // Запрещён — закрыт весь сайт
-            aiBlocked: named.filter((bot) => blocked(rulesFor(bot.toLowerCase()), '/'))
+            aiBlocked: named.filter((bot) => blocked(rulesFor(bot.token.toLowerCase()), '/')).map((bot) => bot.token)
         };
+    };
+
+    /**
+     * Правила по токенам каталога, без передачи текста/путей сайта в окно.
+     * data: {file: present|missing, tokens: [{id, token, status,
+     * group: named|wildcard|none, current: allowed|disallowed|null,
+     * restrictions: boolean|null, rootDisallowed: boolean|null, exceptions: boolean|null}],
+     * bots: [{id, current: allowed|disallowed|null}]}.
+     * allowed описывает только совпадение правил с текущим адресом, не согласие на использование.
+     * Нет применимой группы — current=null. Сводка бота: disallowed > allowed > null.
+     * До 128 токенов, 10000 строк, 2000 правил, 2048 символов на правило, адрес до 8192.
+     * Кооперативный бюджет 20 ms; reasons: catalog-unavailable, file-missing, file-unavailable,
+     * result-limit, budget-exceeded, collection-failed. Отсутствующий файл не означает разрешение.
+     * При отсечении правил весь раздел недоступен: неполный набор не доказывает разрешение.
+     */
+    const collectRobotsAi = (text) => {
+        const empty = (reason, truncated = false) => ({status: 'unavailable', reasons: [reason], truncated, data: null});
+        if (!aiCatalog || aiCatalog.timeOrigin !== performance.timeOrigin || !Array.isArray(aiCatalog.tokens)) {
+            return empty('catalog-unavailable');
+        }
+        if (typeof text !== 'string') {
+            return {status: robotsFileState === 'missing' ? 'ok' : 'unavailable',
+                reasons: [robotsFileState === 'missing' ? 'file-missing' : 'file-unavailable'],
+                truncated: false, data: robotsFileState === 'missing' ? {file: 'missing', tokens: [], bots: []} : null};
+        }
+        const deadline = performance.now() + 20;
+        const lines = text.split(/\r?\n/);
+        if (lines.length > 10000 || text.length >= 100000) {
+            return empty('result-limit', true);
+        }
+        const groups = [];
+        let group = null;
+        let rules = 0;
+        for (const raw of lines) {
+            if (performance.now() > deadline) {
+                return empty('budget-exceeded', true);
+            }
+            const [, key, value = ''] = /^\s*([\w-]+)\s*:\s*(.*?)\s*$/.exec(raw.replace(/#.*/, '')) || [];
+            const name = key?.toLowerCase();
+            if (name === 'user-agent') {
+                if (!group || group.started) {
+                    group = {agents: [], rules: [], started: false};
+                    groups.push(group);
+                }
+                group.agents.push(value.toLowerCase());
+            } else if ((name === 'allow' || name === 'disallow') && group) {
+                group.started = true;
+                if (++rules > 2000 || value.length > 2048) {
+                    return empty('result-limit', true);
+                }
+                if (value) {
+                    group.rules.push({allow: name === 'allow', path: value});
+                }
+            }
+        }
+        const results = [];
+        const target = location.pathname + location.search;
+        // Линейное glob-сопоставление: без регулярных выражений из недоверенного файла.
+        const matches = (pattern, path) => {
+            const anchored = pattern.endsWith('$');
+            const glob = anchored ? pattern.slice(0, -1) : pattern + '*';
+            let i = 0;
+            let j = 0;
+            let star = -1;
+            let retry = 0;
+            let steps = 0;
+            while (j < path.length) {
+                if (++steps % 256 === 0 && performance.now() > deadline) {
+                    throw new Error('robots-budget');
+                }
+                if (glob[i] === '*') {
+                    star = i++;
+                    retry = j;
+                } else if (glob[i] === path[j]) {
+                    i++;
+                    j++;
+                } else if (star >= 0) {
+                    i = star + 1;
+                    j = ++retry;
+                } else {
+                    return false;
+                }
+            }
+            while (glob[i] === '*') {
+                i++;
+            }
+            return i === glob.length;
+        };
+        const disallowed = (list, path) => {
+            let best = null;
+            let length = -1;
+            for (const rule of list) {
+                if (performance.now() > deadline) {
+                    throw new Error('robots-budget');
+                }
+                const specificity = rule.path.replace(/\*/g, '').replace(/\$$/, '').length;
+                if (matches(rule.path, path) && (specificity > length || (specificity === length && rule.allow))) {
+                    best = rule;
+                    length = specificity;
+                }
+            }
+            return !!best && !best.allow;
+        };
+        if (target.length > 8192 || aiCatalog.tokens.length > 128) {
+            return empty('result-limit', true);
+        }
+        for (const bot of aiCatalog.tokens) {
+            if (performance.now() > deadline) {
+                return empty('budget-exceeded', true);
+            }
+            const named = groups.filter((g) => g.agents.includes(bot.token.toLowerCase()));
+            const selected = named.length ? named : groups.filter((g) => g.agents.includes('*'));
+            const list = selected.flatMap((g) => g.rules);
+            results.push({id: bot.id, token: bot.token, status: bot.status,
+                group: named.length ? 'named' : selected.length ? 'wildcard' : 'none',
+                current: selected.length ? disallowed(list, target) ? 'disallowed' : 'allowed' : null,
+                restrictions: selected.length ? list.some((r) => !r.allow) : null,
+                rootDisallowed: selected.length ? disallowed(list, '/') : null,
+                exceptions: selected.length ? list.some((r) => r.allow) : null});
+        }
+        const bots = [...new Set(results.map((r) => r.id))].map((id) => {
+            const values = results.filter((r) => r.id === id).map((r) => r.current);
+            return {id, current: values.includes('disallowed') ? 'disallowed' : values.includes('allowed') ? 'allowed' : null};
+        });
+        return {status: 'ok', reasons: [], truncated: false, data: {file: 'present', tokens: results, bots}};
     };
 
     // Всё ожидание — параллельно: окно ждёт не дольше самого медленного (обычно 60 мс, файлы сайта — до 2 с)
@@ -234,6 +365,12 @@
         siteFile('/.well-known/security.txt')
     ]);
     const robots = parseRobots(robotsText);
+    try {
+        causes.robotsAi = collectRobotsAi(robotsText);
+    } catch (error) {
+        const budget = error.message === 'robots-budget';
+        causes.robotsAi = {status: 'unavailable', reasons: [budget ? 'budget-exceeded' : 'collection-failed'], truncated: budget, data: null};
+    }
 
     // CLS — самая «прыгучая» серия сдвигов: перерывы меньше 1 с, вся серия не дольше 5 с (как у Google)
     let cls = 0;
