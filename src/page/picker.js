@@ -34,6 +34,8 @@
         .hint { max-width:620px; }
         .esc { color:var(--muted); }
         button { font:inherit; color:inherit; background:var(--bg); border:1px solid var(--line); border-radius:5px; padding:7px 12px; cursor:pointer; }
+        .actions button { min-width:88px; min-height:36px; }
+        .resize { font-size:20px; line-height:18px; direction:ltr; }
         button:focus-visible { outline:2px solid #12a86b; outline-offset:2px; }
         button:disabled { opacity:.45; cursor:default; }
         .hide { background:#087c54; border-color:#087c54; color:#fff; font-weight:600; }
@@ -67,14 +69,18 @@
     panel.setAttribute('role', 'region');
     const description = node('div', 'description');
     const actions = node('div', 'actions');
-    function button(key, className, action) {
-        const el = node('button', className, strings[key]);
+    function button(key, className, action, symbol) {
+        const el = node('button', className, symbol || strings[key]);
+        if (symbol) {
+            el.title = strings[key];
+            el.setAttribute('aria-label', strings[key]);
+        }
         el.type = 'button';
         el.addEventListener('click', action);
         return el;
     }
-    const wider = button('pickWider', '', () => change(1));
-    const narrower = button('pickNarrower', '', () => change(-1));
+    const wider = button('pickWider', 'resize', () => change(1), '↔');
+    const narrower = button('pickNarrower', 'resize', () => change(-1), '→←');
     const matches = node('span', 'matches');
     const cancel = button('pickCancel', 'cancel', () => stop());
     const hide = button('pickHide', 'hide', save);

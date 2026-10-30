@@ -1088,10 +1088,10 @@
         "message": "Esc — отмена"
     },
     "pickWider": {
-        "message": "Шире"
+        "message": "Расширить выделение"
     },
     "pickNarrower": {
-        "message": "Уже"
+        "message": "Сузить выделение"
     },
     "pickHide": {
         "message": "Скрыть"
