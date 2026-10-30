@@ -7,7 +7,18 @@ import path from 'node:path';
 import {fileURLToPath, pathToFileURL} from 'node:url';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
-const out = path.resolve(here, '../../img');
+const mode = process.argv[2] || 'all';
+if (!['all', 'readme', 'og'].includes(mode)) throw new Error('Usage: node capture.mjs [all|readme|og]');
+const jobs = [
+    ...(mode !== 'og' ? ['ru', 'en'].map(lang => ({
+        input: `${lang}.html`, width: 1280, height: 640,
+        out: path.resolve(here, '../../img'), name: `banner-${lang}`, formats: ['png', 'webp']
+    })) : []),
+    ...(mode !== 'readme' ? ['ru', 'en', 'es', 'pt-br', 'de'].map(lang => ({
+        input: `og-${lang}.html`, width: 1200, height: 630,
+        out: path.resolve(here, '../../site/img'), name: `og-${lang}`, formats: ['png']
+    })) : [])
+];
 const profile = await mkdtemp(path.join(tmpdir(), 'ablock-banner-'));
 const chrome = spawn(process.env.CHROME || 'google-chrome', [
     '--headless=new', '--remote-debugging-pipe', `--user-data-dir=${profile}`,
@@ -53,17 +64,17 @@ function send(method, params = {}, sessionId) {
     });
 }
 try {
-    await mkdir(out, {recursive: true});
     const {targetId} = await send('Target.createTarget', {url: 'about:blank'});
     const {sessionId} = await send('Target.attachToTarget', {targetId, flatten: true});
     const call = (method, params) => send(method, params, sessionId);
     await call('Page.enable');
     await call('Network.enable');
     await call('Network.setBlockedURLs', {urls: ['http://*', 'https://*']});
-    await call('Emulation.setDeviceMetricsOverride', {width: 1280, height: 640, deviceScaleFactor: 1, mobile: false});
     await call('Emulation.setEmulatedMedia', {features: [{name: 'prefers-color-scheme', value: 'light'}]});
-    for (const lang of ['ru', 'en']) {
-        const url = pathToFileURL(path.join(here, `${lang}.html`)).href;
+    for (const {input, width, height, out, name, formats} of jobs) {
+        await mkdir(out, {recursive: true});
+        await call('Emulation.setDeviceMetricsOverride', {width, height, deviceScaleFactor: 1, mobile: false});
+        const url = pathToFileURL(path.join(here, input)).href;
         const nav = await call('Page.navigate', {url});
         if (nav.errorText) throw new Error(nav.errorText);
         let ready = false;
@@ -72,26 +83,26 @@ try {
             if (result.value) { ready = true; break; }
             await new Promise(resolve => setTimeout(resolve, 50));
         }
-        if (!ready) throw new Error(`Page not ready: ${lang}`);
+        if (!ready) throw new Error(`Page not ready: ${input}`);
         const check = await call('Runtime.evaluate', {awaitPromise: true, returnByValue: true, expression: `(async () => {
             await document.fonts.ready;
             await Promise.all(Array.from(document.images, image => image.decode()));
             await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
             const bounds = element => { const r = element.getBoundingClientRect(); return {x:r.x,y:r.y,right:r.right,bottom:r.bottom}; };
             return {width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,scrollHeight:document.documentElement.scrollHeight,
-                boxes:Array.from(document.querySelectorAll('.brand,h1,.points,.browsers,.address,.sample'),bounds)};
+                boxes:Array.from(document.querySelectorAll('.brand,h1,.points,.og-lead,.og-note,.browsers,.address,.sample'),bounds)};
         })()`});
         if (check.exceptionDetails) throw new Error(JSON.stringify(check.exceptionDetails));
         const geometry = check.result.value;
-        if (geometry.scrollWidth !== 1280 || geometry.scrollHeight !== 640 || geometry.boxes.some(r => r.x < 0 || r.y < 0 || r.right > 1280 || r.bottom > 640)) {
+        if (geometry.width !== width || geometry.height !== height || geometry.scrollWidth !== width || geometry.scrollHeight !== height || geometry.boxes.some(r => r.x < 0 || r.y < 0 || r.right > width || r.bottom > height)) {
             throw new Error(`Banner overflow: ${JSON.stringify(geometry)}`);
         }
-        for (const format of ['png', 'webp']) {
+        for (const format of formats) {
             const {data} = await call('Page.captureScreenshot', {format, ...(format === 'webp' ? {quality: 90} : {}), captureBeyondViewport: false,
-                clip: {x: 0, y: 0, width: 1280, height: 640, scale: 1}});
+                clip: {x: 0, y: 0, width, height, scale: 1}});
             const bytes = Buffer.from(data, 'base64');
             if (format === 'png' && bytes.length > 1000000) throw new Error(`PNG exceeds 1 MB: ${bytes.length}`);
-            const file = path.join(out, `banner-${lang}.${format}`);
+            const file = path.join(out, `${name}.${format}`);
             await writeFile(file, bytes);
             console.log(`${file}: ${bytes.length} bytes`);
         }

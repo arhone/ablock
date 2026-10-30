@@ -1,0 +1,9 @@
+@import url('banner.css');
+/* Отдельный размер для Open Graph; баннеры README остаются 1280×640. */
+html, body { width: 1200px; height: 630px; }
+.banner { width: 1200px; height: 630px; padding: 38px 52px; grid-template-columns: 720px 280px; gap: 44px; }
+h1 { font-size: 50px; margin: 24px 0 22px; }
+.og-lead { font-size: 23px; line-height: 1.45; color: var(--muted); margin: 0 0 18px; max-width: 660px; }
+.og-note { font-size: 20px; color: var(--on-text); margin: 0 0 20px; }
+.sample { width: 280px; }
+.sample img { width: 280px; height: 520px; }
