@@ -184,7 +184,7 @@
         const groups = [];
         let group = null;
         let sitemap = false;
-        for (const raw of text.split(/\r?\n/)) {
+        for (const raw of text.split(/\r\n|[\r\n]/g)) {
             const [, key, value = ''] = /^\s*([\w-]+)\s*:\s*(.*?)\s*$/.exec(raw.replace(/#.*/, '')) || [];
             const name = key?.toLowerCase();
             if (name === 'sitemap') {
@@ -221,9 +221,11 @@
             blocked: blocked(all, location.pathname + location.search),
             closed: blocked(all, '/'),
             sitemap,
-            aiNamed: named.length,
+            // Без каталога неизвестность: окно показывает «—», а не отсутствие правил.
+            aiNamed: aiCatalog ? new Set(named.map((bot) => bot.id)).size : null,
             // Запрещён — закрыт весь сайт
-            aiBlocked: named.filter((bot) => blocked(rulesFor(bot.token.toLowerCase()), '/')).map((bot) => bot.token)
+            aiBlocked: aiCatalog ? [...new Map(named.filter((bot) => blocked(rulesFor(bot.token.toLowerCase()), '/'))
+                .map((bot) => [bot.id, bot.token])).values()] : null
         };
     };
 
@@ -251,10 +253,19 @@
                 truncated: false, data: robotsFileState === 'missing' ? {file: 'missing', tokens: [], bots: []} : null};
         }
         const deadline = performance.now() + 20;
-        const lines = text.split(/\r?\n/);
+        const lines = text.split(/\r\n|[\r\n]/g);
         if (lines.length > 10000 || text.length >= 100000) {
             return empty('result-limit', true);
         }
+        // RFC 9309 §2.2.2: ASCII unreserved декодируем, остальные escape сохраняем.
+        // Не-ASCII переводим в UTF-8 percent-encoding; %2F и / остаются разными.
+        const normalizePath = (path) => path.replace(/%[0-9a-f]{2}|[^\p{ASCII}]/giu, (part) => {
+            if (part.startsWith('%')) {
+                const character = String.fromCharCode(parseInt(part.slice(1), 16));
+                return /^[a-z0-9._~-]$/i.test(character) ? character : part.toUpperCase();
+            }
+            return encodeURIComponent(part);
+        });
         const groups = [];
         let group = null;
         let rules = 0;
@@ -276,12 +287,14 @@
                     return empty('result-limit', true);
                 }
                 if (value) {
-                    group.rules.push({allow: name === 'allow', path: value});
+                    const path = normalizePath(value);
+                    const specificity = path.replace(/\*/g, '').replace(/\$$/, '').replace(/%[0-9a-f]{2}/gi, 'x').length;
+                    group.rules.push({allow: name === 'allow', path, specificity});
                 }
             }
         }
         const results = [];
-        const target = location.pathname + location.search;
+        const target = normalizePath(location.pathname + location.search);
         // Линейное glob-сопоставление: без регулярных выражений из недоверенного файла.
         const matches = (pattern, path) => {
             const anchored = pattern.endsWith('$');
@@ -320,7 +333,7 @@
                 if (performance.now() > deadline) {
                     throw new Error('robots-budget');
                 }
-                const specificity = rule.path.replace(/\*/g, '').replace(/\$$/, '').length;
+                const specificity = rule.specificity;
                 if (matches(rule.path, path) && (specificity > length || (specificity === length && rule.allow))) {
                     best = rule;
                     length = specificity;

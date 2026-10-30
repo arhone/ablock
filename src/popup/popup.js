@@ -1527,8 +1527,8 @@ function renderAudit(audit, server, extended, info, companies) {
         if (robots) {
             row('auditSitemap', robots.sitemap ? yes : no, robots.sitemap ? 'good' : 'none');
             // Считаем только ботов, названных по имени: «User-agent: *» закрывает сайт всем, а не именно ИИ
-            const blockedBots = robots.aiBlocked;
-            const ai = row('auditAi', blockedBots.length ? t('auditAiBlocked', formatNumber(blockedBots.length))
+            const blockedBots = robots.aiBlocked || [];
+            const ai = row('auditAi', robots.aiNamed === null ? '—' : blockedBots.length ? t('auditAiBlocked', formatNumber(blockedBots.length))
                 : robots.aiNamed ? t('auditAiAllowed') : robots.closed ? t('auditAiAll') : t('auditAiNone'), 'none');
             if (blockedBots.length) {
                 ai.title += '\n' + blockedBots.join(', ');
