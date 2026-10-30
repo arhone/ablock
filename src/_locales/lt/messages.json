@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domenai matomi išplėstiniu režimu"
+    },
+    "blockedOtherDomains": {
+        "message": "Kiti užblokuoti domenai"
+    },
+    "blockedTrackerDomains": {
+        "message": "Domenai iš sekimo sąrašų"
+    },
+    "blockedDomainsMore": {
+        "message": "ir dar $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domenai nepasiekiami"
+    },
     "trackersFound": {
         "message": "Ši svetainė jus seka. Užblokuota sekiklių: $COUNT$",
         "placeholders": {

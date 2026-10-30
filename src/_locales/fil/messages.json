@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Makikita ang mga domain sa pinalawak na mode"
+    },
+    "blockedOtherDomains": {
+        "message": "Iba pang naka-block na domain"
+    },
+    "blockedTrackerDomains": {
+        "message": "Mga domain mula sa mga listahan ng tracker"
+    },
+    "blockedDomainsMore": {
+        "message": "at $COUNT$ pa",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Hindi available ang mga domain"
+    },
     "trackersFound": {
         "message": "Sinusubaybayan ka ng site na ito. Mga na-block na tracker: $COUNT$",
         "placeholders": {

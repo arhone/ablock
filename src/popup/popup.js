@@ -826,6 +826,57 @@ function renderSpeed({loadTime, ready, age}) {
     return true;
 }
 
+// Только локальные списки: это принадлежность домена к списку, не причина конкретной блокировки.
+let blockedTrackerDomains;
+async function blockedDomainTitles(server) {
+    if (!server) {
+        return [t('blockedDomainsExtended'), t('blockedDomainsExtended')];
+    }
+    try {
+        blockedTrackerDomains ??= Promise.all(chrome.runtime.getManifest().declarative_net_request.rule_resources
+            .filter((set) => TRACKER_RULESETS.includes(set.id))
+            .map(async (set) => {
+                const response = await fetch(chrome.runtime.getURL(set.path));
+                if (!response.ok) {
+                    throw new Error('Tracker rules unavailable');
+                }
+                return {id: set.id, rules: await response.json()};
+            }));
+        const [sets, enabled] = await Promise.all([blockedTrackerDomains,
+            chrome.declarativeNetRequest.getEnabledRulesets()]);
+        const domains = new Set(sets.filter((set) => enabled.includes(set.id))
+            .flatMap((set) => set.rules.filter((rule) => rule.action.type === 'block')
+                .flatMap((rule) => rule.condition.requestDomains || [])));
+        const hosts = new Map();
+        for (const [key, count] of Object.entries(server.blocked || {})) {
+            const host = key.split('/')[0];
+            hosts.set(host, (hosts.get(host) || 0) + count);
+        }
+        const groups = [[], []];
+        for (const [host, count] of hosts) {
+            let domain = host;
+            while (domain && !domains.has(domain)) {
+                const dot = domain.indexOf('.');
+                domain = dot < 0 ? '' : domain.slice(dot + 1);
+            }
+            groups[domain ? 1 : 0].push([host, count]);
+        }
+        return groups.map((group, i) => {
+            if (!group.length) {
+                return '';
+            }
+            group.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+            return [t(i ? 'blockedTrackerDomains' : 'blockedOtherDomains'),
+                ...group.slice(0, 8).map(([host, count]) => `${host} — ${formatNumber(count)}`),
+                group.length > 8 ? t('blockedDomainsMore', formatNumber(group.length - 8)) : ''
+            ].filter(Boolean).join('\n');
+        });
+    } catch {
+        blockedTrackerDomains = undefined; // Ошибка чтения не должна скрыть прежние счётчики.
+        return [t('blockedDomainsUnavailable'), t('blockedDomainsUnavailable')];
+    }
+}
+
 /**
  * Значки заблокированного на вкладке. В подсказке «Реклама» в расширенном режиме и объём: его считает sw.js
  * по webRequest, без расширенного режима объёма нет
@@ -859,17 +910,19 @@ async function renderBlocked(tab, info, status, server) {
         return; // Превышен лимит запросов
     }
 
+    const [adDomains, trackerDomains] = await blockedDomainTitles(server);
     const trackers = matched.filter((m) => TRACKER_RULESETS.includes(m.rule.rulesetId)).length;
     const cookies = matched.filter((m) => m.rule.rulesetId === COOKIE_RULESET).length;
     const ads = matched.length - trackers - cookies;
     setBadge('blocked', t('ads', formatNumber(ads + cookies)), 'good', [
         t('blockedTitle', ads),
         cookies ? t('blockedCookies', cookies) : '',
-        server?.bytes ? t('blockedSize', formatSize(server.bytes)) : ''
+        server?.bytes ? t('blockedSize', formatSize(server.bytes)) : '',
+        adDomains
     ].filter(Boolean).join('\n'));
     // Трекеры заблокированы: сайт пытался следить, но защита это остановила — жёлтый, а не красный
     setBadge('trackers', t('trackers', trackers), trackers ? 'warn' : 'good',
-        trackers ? t('trackersFound', trackers) : t('trackersNone'));
+        [trackers ? t('trackersFound', trackers) : t('trackersNone'), trackerDomains].filter(Boolean).join('\n'));
     // Заблокированное не загрузилось — без защиты страница весила бы больше
     setWeightTitle(ads || trackers);
 }

@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domeny są widoczne w trybie rozszerzonym"
+    },
+    "blockedOtherDomains": {
+        "message": "Inne zablokowane domeny"
+    },
+    "blockedTrackerDomains": {
+        "message": "Domeny z list śledzących"
+    },
+    "blockedDomainsMore": {
+        "message": "i jeszcze $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domeny są niedostępne"
+    },
     "trackersFound": {
         "message": "Strona Cię śledzi, zablokowane trackery: $COUNT$",
         "placeholders": {

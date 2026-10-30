@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "دامنه‌ها در حالت پیشرفته دیده می‌شوند"
+    },
+    "blockedOtherDomains": {
+        "message": "سایر دامنه‌های مسدودشده"
+    },
+    "blockedTrackerDomains": {
+        "message": "دامنه‌های فهرست‌های ردیاب"
+    },
+    "blockedDomainsMore": {
+        "message": "و $COUNT$ مورد دیگر",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "دامنه‌ها در دسترس نیستند"
+    },
     "trackersFound": {
         "message": "این سایت شما را ردیابی می‌کند. ردیاب‌های مسدودشده: $COUNT$",
         "placeholders": {

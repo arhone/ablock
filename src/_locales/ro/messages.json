@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domeniile sunt vizibile în modul extins"
+    },
+    "blockedOtherDomains": {
+        "message": "Alte domenii blocate"
+    },
+    "blockedTrackerDomains": {
+        "message": "Domenii din listele de urmărire"
+    },
+    "blockedDomainsMore": {
+        "message": "și încă $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domenii indisponibile"
+    },
     "trackersFound": {
         "message": "Acest site vă urmărește. Urmăritori blocați: $COUNT$",
         "placeholders": {

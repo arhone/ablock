@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "โดเมนจะแสดงในโหมดขยาย"
+    },
+    "blockedOtherDomains": {
+        "message": "โดเมนอื่นที่ถูกบล็อก"
+    },
+    "blockedTrackerDomains": {
+        "message": "โดเมนจากรายการตัวติดตาม"
+    },
+    "blockedDomainsMore": {
+        "message": "และอีก $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "ไม่สามารถดูโดเมนได้"
+    },
     "trackersFound": {
         "message": "เว็บไซต์นี้ติดตามคุณ บล็อกตัวติดตามแล้ว: $COUNT$",
         "placeholders": {

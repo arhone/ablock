@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "تظهر النطاقات في الوضع الموسّع"
+    },
+    "blockedOtherDomains": {
+        "message": "النطاقات المحظورة الأخرى"
+    },
+    "blockedTrackerDomains": {
+        "message": "نطاقات من قوائم التتبع"
+    },
+    "blockedDomainsMore": {
+        "message": "و$COUNT$ أخرى",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "النطاقات غير متاحة"
+    },
     "trackersFound": {
         "message": "هذا الموقع يتتبعك. أدوات التتبع المحظورة: $COUNT$",
         "placeholders": {

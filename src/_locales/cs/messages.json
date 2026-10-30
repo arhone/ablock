@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domény jsou viditelné v rozšířeném režimu"
+    },
+    "blockedOtherDomains": {
+        "message": "Ostatní blokované domény"
+    },
+    "blockedTrackerDomains": {
+        "message": "Domény ze seznamů sledovačů"
+    },
+    "blockedDomainsMore": {
+        "message": "a dalších $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domény nejsou dostupné"
+    },
     "trackersFound": {
         "message": "Tento web vás sleduje. Blokováno sledovacích prvků: $COUNT$",
         "placeholders": {

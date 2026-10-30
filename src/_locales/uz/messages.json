@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domenlar kengaytirilgan rejimda ko‘rinadi"
+    },
+    "blockedOtherDomains": {
+        "message": "Boshqa bloklangan domenlar"
+    },
+    "blockedTrackerDomains": {
+        "message": "Treker ro‘yxatlaridagi domenlar"
+    },
+    "blockedDomainsMore": {
+        "message": "va yana $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domenlar mavjud emas"
+    },
     "trackersFound": {
         "message": "Sayt sizni kuzatmoqda, blokirovka qilingan kuzatuvchilar: $COUNT$",
         "placeholders": {

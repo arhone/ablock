@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "ವಿಸ್ತೃತ ಮೋಡ್‌ನಲ್ಲಿ ಡೊಮೇನ್‌ಗಳು ಕಾಣುತ್ತವೆ"
+    },
+    "blockedOtherDomains": {
+        "message": "ಇತರ ನಿರ್ಬಂಧಿತ ಡೊಮೇನ್‌ಗಳು"
+    },
+    "blockedTrackerDomains": {
+        "message": "ಟ್ರ್ಯಾಕರ್ ಪಟ್ಟಿಗಳ ಡೊಮೇನ್‌ಗಳು"
+    },
+    "blockedDomainsMore": {
+        "message": "ಮತ್ತು ಇನ್ನೂ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "ಡೊಮೇನ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ"
+    },
     "trackersFound": {
         "message": "ಈ ಸೈಟ್ ನಿಮ್ಮನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡುತ್ತದೆ. ನಿರ್ಬಂಧಿಸಿದ ಟ್ರ್ಯಾಕರ್‌ಗಳು: $COUNT$",
         "placeholders": {

@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Els dominis es veuen en mode ampliat"
+    },
+    "blockedOtherDomains": {
+        "message": "Altres dominis bloquejats"
+    },
+    "blockedTrackerDomains": {
+        "message": "Dominis de les llistes de seguiment"
+    },
+    "blockedDomainsMore": {
+        "message": "i $COUNT$ més",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Dominis no disponibles"
+    },
     "trackersFound": {
         "message": "Aquest lloc et rastreja. Rastrejadors bloquejats: $COUNT$",
         "placeholders": {

@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Домендер кеңейтілген режимде көрінеді"
+    },
+    "blockedOtherDomains": {
+        "message": "Басқа бұғатталған домендер"
+    },
+    "blockedTrackerDomains": {
+        "message": "Трекер тізімдеріндегі домендер"
+    },
+    "blockedDomainsMore": {
+        "message": "және тағы $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Домендер қолжетімсіз"
+    },
     "trackersFound": {
         "message": "Сайт сізді бақылайды, бұғатталған трекерлер: $COUNT$",
         "placeholders": {

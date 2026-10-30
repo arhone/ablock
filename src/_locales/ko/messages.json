@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "도메인은 확장 모드에서 표시됩니다"
+    },
+    "blockedOtherDomains": {
+        "message": "기타 차단된 도메인"
+    },
+    "blockedTrackerDomains": {
+        "message": "추적기 목록의 도메인"
+    },
+    "blockedDomainsMore": {
+        "message": "외 $COUNT$개",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "도메인을 사용할 수 없음"
+    },
     "trackersFound": {
         "message": "이 사이트는 사용자를 추적합니다. 차단된 추적기: $COUNT$",
         "placeholders": {

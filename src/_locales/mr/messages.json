@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "विस्तारित मोडमध्ये डोमेन दिसतात"
+    },
+    "blockedOtherDomains": {
+        "message": "इतर अवरोधित डोमेन"
+    },
+    "blockedTrackerDomains": {
+        "message": "ट्रॅकर याद्यांमधील डोमेन"
+    },
+    "blockedDomainsMore": {
+        "message": "आणखी $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "डोमेन उपलब्ध नाहीत"
+    },
     "trackersFound": {
         "message": "ही साइट तुमचा मागोवा घेते. ब्लॉक केलेले ट्रॅकर्स: $COUNT$",
         "placeholders": {

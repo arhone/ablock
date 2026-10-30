@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domain terlihat dalam mode lanjutan"
+    },
+    "blockedOtherDomains": {
+        "message": "Domain lain yang diblokir"
+    },
+    "blockedTrackerDomains": {
+        "message": "Domain dari daftar pelacak"
+    },
+    "blockedDomainsMore": {
+        "message": "dan $COUNT$ lainnya",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domain tidak tersedia"
+    },
     "trackersFound": {
         "message": "Situs ini melacak Anda, pelacak diblokir: $COUNT$",
         "placeholders": {

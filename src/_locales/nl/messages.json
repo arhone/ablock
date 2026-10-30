@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domeinen zijn zichtbaar in de uitgebreide modus"
+    },
+    "blockedOtherDomains": {
+        "message": "Andere geblokkeerde domeinen"
+    },
+    "blockedTrackerDomains": {
+        "message": "Domeinen uit trackerlijsten"
+    },
+    "blockedDomainsMore": {
+        "message": "en nog $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domeinen niet beschikbaar"
+    },
     "trackersFound": {
         "message": "Deze site volgt je. Trackers geblokkeerd: $COUNT$",
         "placeholders": {

@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domeenid on nähtavad laiendatud režiimis"
+    },
+    "blockedOtherDomains": {
+        "message": "Muud blokeeritud domeenid"
+    },
+    "blockedTrackerDomains": {
+        "message": "Jälgimisloendite domeenid"
+    },
+    "blockedDomainsMore": {
+        "message": "ja veel $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domeenid pole saadaval"
+    },
     "trackersFound": {
         "message": "See sait jälgib teid. Blokeeritud jälgijaid: $COUNT$",
         "placeholders": {

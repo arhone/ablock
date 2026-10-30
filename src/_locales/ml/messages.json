@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "വിപുലമായ മോഡിൽ ഡൊമെയ്‌നുകൾ കാണാം"
+    },
+    "blockedOtherDomains": {
+        "message": "തടഞ്ഞ മറ്റ് ഡൊമെയ്‌നുകൾ"
+    },
+    "blockedTrackerDomains": {
+        "message": "ട്രാക്കർ പട്ടികകളിലെ ഡൊമെയ്‌നുകൾ"
+    },
+    "blockedDomainsMore": {
+        "message": "കൂടാതെ $COUNT$ എണ്ണം",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "ഡൊമെയ്‌നുകൾ ലഭ്യമല്ല"
+    },
     "trackersFound": {
         "message": "ഈ സൈറ്റ് നിങ്ങളെ ട്രാക്ക് ചെയ്യുന്നു. തടഞ്ഞ ട്രാക്കറുകൾ: $COUNT$",
         "placeholders": {

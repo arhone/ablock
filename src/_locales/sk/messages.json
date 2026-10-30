@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domény sú viditeľné v rozšírenom režime"
+    },
+    "blockedOtherDomains": {
+        "message": "Ostatné blokované domény"
+    },
+    "blockedTrackerDomains": {
+        "message": "Domény zo zoznamov sledovačov"
+    },
+    "blockedDomainsMore": {
+        "message": "a ďalších $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domény nie sú dostupné"
+    },
     "trackersFound": {
         "message": "Stránka vás sleduje, zablokované sledovače: $COUNT$",
         "placeholders": {

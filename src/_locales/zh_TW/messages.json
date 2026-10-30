@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "網域在擴充模式下可見"
+    },
+    "blockedOtherDomains": {
+        "message": "其他已封鎖的網域"
+    },
+    "blockedTrackerDomains": {
+        "message": "追蹤器清單中的網域"
+    },
+    "blockedDomainsMore": {
+        "message": "以及另外 $COUNT$ 個",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "網域無法使用"
+    },
     "trackersFound": {
         "message": "此網站在追蹤你。已攔截追蹤器：$COUNT$",
         "placeholders": {

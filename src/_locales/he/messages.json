@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "הדומיינים מוצגים במצב מורחב"
+    },
+    "blockedOtherDomains": {
+        "message": "דומיינים חסומים אחרים"
+    },
+    "blockedTrackerDomains": {
+        "message": "דומיינים מרשימות מעקב"
+    },
+    "blockedDomainsMore": {
+        "message": "ועוד $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "הדומיינים אינם זמינים"
+    },
     "trackersFound": {
         "message": "האתר הזה עוקב אחריך. רכיבי מעקב שנחסמו: $COUNT$",
         "placeholders": {

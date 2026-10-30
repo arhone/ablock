@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "విస్తరించిన మోడ్‌లో డొమైన్‌లు కనిపిస్తాయి"
+    },
+    "blockedOtherDomains": {
+        "message": "నిరోధించిన ఇతర డొమైన్‌లు"
+    },
+    "blockedTrackerDomains": {
+        "message": "ట్రాకర్ జాబితాల్లోని డొమైన్‌లు"
+    },
+    "blockedDomainsMore": {
+        "message": "ఇంకా $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "డొమైన్‌లు అందుబాటులో లేవు"
+    },
     "trackersFound": {
         "message": "ఈ సైట్ మిమ్మల్ని ట్రాక్ చేస్తోంది. బ్లాక్ చేసిన ట్రాకర్లు: $COUNT$",
         "placeholders": {

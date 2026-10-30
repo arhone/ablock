@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domene so vidne v razširjenem načinu"
+    },
+    "blockedOtherDomains": {
+        "message": "Druge blokirane domene"
+    },
+    "blockedTrackerDomains": {
+        "message": "Domene s seznamov sledilnikov"
+    },
+    "blockedDomainsMore": {
+        "message": "in še $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domene niso na voljo"
+    },
     "trackersFound": {
         "message": "To spletno mesto vam sledi. Blokiranih sledilnikov: $COUNT$",
         "placeholders": {

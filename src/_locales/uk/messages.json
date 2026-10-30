@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Домени видно в розширеному режимі"
+    },
+    "blockedOtherDomains": {
+        "message": "Інші заблоковані домени"
+    },
+    "blockedTrackerDomains": {
+        "message": "Домени зі списків трекерів"
+    },
+    "blockedDomainsMore": {
+        "message": "і ще $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Домени недоступні"
+    },
     "trackersFound": {
         "message": "Сайт стежить за вами. Заблоковано трекерів: $COUNT$",
         "placeholders": {

@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Домены видны в расширенном режиме"
+    },
+    "blockedOtherDomains": {
+        "message": "Остальные заблокированные домены"
+    },
+    "blockedTrackerDomains": {
+        "message": "Домены из списков трекеров"
+    },
+    "blockedDomainsMore": {
+        "message": "и ещё $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Домены недоступны"
+    },
     "trackersFound": {
         "message": "Сайт следит за вами, заблокировано трекеров: $COUNT$",
         "placeholders": {

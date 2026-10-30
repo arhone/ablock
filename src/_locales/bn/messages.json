@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "বর্ধিত মোডে ডোমেন দেখা যায়"
+    },
+    "blockedOtherDomains": {
+        "message": "অন্যান্য অবরুদ্ধ ডোমেন"
+    },
+    "blockedTrackerDomains": {
+        "message": "ট্র্যাকার তালিকার ডোমেন"
+    },
+    "blockedDomainsMore": {
+        "message": "আরও $COUNT$টি",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "ডোমেন অনুপলব্ধ"
+    },
     "trackersFound": {
         "message": "এই সাইট আপনাকে ট্র্যাক করে। ব্লক করা ট্র্যাকার: $COUNT$",
         "placeholders": {

@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domēni ir redzami paplašinātajā režīmā"
+    },
+    "blockedOtherDomains": {
+        "message": "Citi bloķētie domēni"
+    },
+    "blockedTrackerDomains": {
+        "message": "Domēni no izsekotāju sarakstiem"
+    },
+    "blockedDomainsMore": {
+        "message": "un vēl $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domēni nav pieejami"
+    },
     "trackersFound": {
         "message": "Šī vietne jūs izseko. Bloķēti izsekotāji: $COUNT$",
         "placeholders": {

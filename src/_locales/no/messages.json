@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domener vises i utvidet modus"
+    },
+    "blockedOtherDomains": {
+        "message": "Andre blokkerte domener"
+    },
+    "blockedTrackerDomains": {
+        "message": "Domener fra sporingslister"
+    },
+    "blockedDomainsMore": {
+        "message": "og $COUNT$ til",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domener er utilgjengelige"
+    },
     "trackersFound": {
         "message": "Dette nettstedet sporer deg. Blokkerte sporere: $COUNT$",
         "placeholders": {

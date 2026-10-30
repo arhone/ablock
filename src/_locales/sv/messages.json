@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Domäner visas i utökat läge"
+    },
+    "blockedOtherDomains": {
+        "message": "Andra blockerade domäner"
+    },
+    "blockedTrackerDomains": {
+        "message": "Domäner från spårningslistor"
+    },
+    "blockedDomainsMore": {
+        "message": "och $COUNT$ till",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Domäner är inte tillgängliga"
+    },
     "trackersFound": {
         "message": "Den här webbplatsen spårar dig. Blockerade spårare: $COUNT$",
         "placeholders": {

@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Οι τομείς εμφανίζονται στην εκτεταμένη λειτουργία"
+    },
+    "blockedOtherDomains": {
+        "message": "Άλλοι αποκλεισμένοι τομείς"
+    },
+    "blockedTrackerDomains": {
+        "message": "Τομείς από λίστες ιχνηλατών"
+    },
+    "blockedDomainsMore": {
+        "message": "και $COUNT$ ακόμη",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Οι τομείς δεν είναι διαθέσιμοι"
+    },
     "trackersFound": {
         "message": "Αυτός ο ιστότοπος σας παρακολουθεί. Ιχνηλάτες που αποκλείστηκαν: $COUNT$",
         "placeholders": {

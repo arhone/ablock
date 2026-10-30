@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Домени су видљиви у проширеном режиму"
+    },
+    "blockedOtherDomains": {
+        "message": "Остали блокирани домени"
+    },
+    "blockedTrackerDomains": {
+        "message": "Домени са спискова праћења"
+    },
+    "blockedDomainsMore": {
+        "message": "и још $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Домени нису доступни"
+    },
     "trackersFound": {
         "message": "Сајт вас прати, блокирано трекера: $COUNT$",
         "placeholders": {

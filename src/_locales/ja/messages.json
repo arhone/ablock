@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "ドメインは拡張モードで表示されます"
+    },
+    "blockedOtherDomains": {
+        "message": "その他のブロックされたドメイン"
+    },
+    "blockedTrackerDomains": {
+        "message": "トラッカーリストのドメイン"
+    },
+    "blockedDomainsMore": {
+        "message": "ほか $COUNT$ 件",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "ドメインを取得できません"
+    },
     "trackersFound": {
         "message": "このサイトはあなたを追跡しています。ブロックしたトラッカー: $COUNT$",
         "placeholders": {

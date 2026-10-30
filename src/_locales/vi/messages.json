@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "Tên miền hiển thị trong chế độ mở rộng"
+    },
+    "blockedOtherDomains": {
+        "message": "Các tên miền khác bị chặn"
+    },
+    "blockedTrackerDomains": {
+        "message": "Tên miền từ danh sách trình theo dõi"
+    },
+    "blockedDomainsMore": {
+        "message": "và $COUNT$ tên miền nữa",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "Không có dữ liệu tên miền"
+    },
     "trackersFound": {
         "message": "Trang này theo dõi bạn, đã chặn trình theo dõi: $COUNT$",
         "placeholders": {

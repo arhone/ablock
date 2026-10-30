@@ -118,6 +118,26 @@
             }
         }
     },
+    "blockedDomainsExtended": {
+        "message": "域名在扩展模式下可见"
+    },
+    "blockedOtherDomains": {
+        "message": "其他已拦截的域名"
+    },
+    "blockedTrackerDomains": {
+        "message": "跟踪器列表中的域名"
+    },
+    "blockedDomainsMore": {
+        "message": "以及另外 $COUNT$ 个",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "blockedDomainsUnavailable": {
+        "message": "域名不可用"
+    },
     "trackersFound": {
         "message": "此网站在跟踪您，已拦截跟踪器：$COUNT$",
         "placeholders": {
