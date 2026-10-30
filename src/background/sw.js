@@ -329,6 +329,8 @@ chrome.permissions.onRemoved.addListener(() => {
         const s = await load();
         for (const tab of Object.values(s.tabs)) {
             delete tab.redirects;
+            delete tab.pendingRedirects;
+            delete tab.retiredRedirectRequests;
         }
         await saveTabs();
     });
@@ -400,7 +402,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             const s = await load();
             const extended = await chrome.permissions.contains(EXTENDED);
             const tab = s.tabs[request.tabInfo] || null;
-            sendResponse({tab: tab && !extended ? {...tab, redirects: undefined} : tab, stats: s.stats,
+            sendResponse({tab: tab && !extended ? {...tab, redirects: undefined, pendingRedirects: undefined, retiredRedirectRequests: undefined} : tab, stats: s.stats,
                 redirectsStatus: extended ? (tab?.redirects ? 'observed' : 'not-observed') : 'permission-required'});
         }).catch(() => sendResponse(null));
         return true;
@@ -837,6 +839,7 @@ function saveTabs() {
 }
 
 const MAX_REDIRECTS = 20;
+const MAX_RETIRED_REQUESTS = 8;
 let redirectEpoch = 0;
 let redirectQueue = Promise.resolve();
 
@@ -852,6 +855,9 @@ function redirectAddress(value) {
 
 /**
  * redirects v1 — только наблюдавшиеся HTTP-переходы главной навигации.
+ * До принятия headers новая цепочка находится в pendingRedirects; данные открытого
+ * документа и redirects сохраняются. 204/205 и attachment не заменяют документ.
+ * retiredRedirectRequests — последние 8 вытесненных requestId, включая после сна worker.
  * generation — UUID новой навигации, requestId — идентификатор браузера (не URL).
  * hops: {from,to,statusCode,timeStamp}, максимум 20; initialUrl/finalUrl безопасные.
  * outcome: pending/completed/error; complete — вся ли HTTP-цепочка наблюдалась.
@@ -872,7 +878,10 @@ function queueRedirect(kind, details) {
             return;
         }
         let tab = s.tabs[details.tabId];
-        let chain = tab?.redirects;
+        let chain = tab?.pendingRedirects || tab?.redirects;
+        if (tab?.retiredRedirectRequests?.includes(details.requestId)) {
+            return;
+        }
         if (kind === 'start') {
             // onBeforeRequest повторяется после HTTP-перехода с тем же requestId.
             if (chain?.requestId === details.requestId || chain?.startedAt > details.timeStamp) {
@@ -881,6 +890,12 @@ function queueRedirect(kind, details) {
             if (details.documentId) {
                 return; // Предзагрузка от имени существующего документа.
             }
+            tab ??= {};
+            const retired = tab.retiredRedirectRequests || [];
+            if (chain) {
+                retired.push(chain.requestId);
+            }
+            tab.retiredRedirectRequests = retired.slice(-MAX_RETIRED_REQUESTS);
             chain = {
                 version: 1, generation: crypto.randomUUID(), requestId: details.requestId,
                 initialUrl: redirectAddress(details.url), finalUrl: null,
@@ -891,10 +906,15 @@ function queueRedirect(kind, details) {
                 chain.complete = false;
                 chain.reasons.push('unsafe-url');
             }
-            s.tabs[details.tabId] = {host: new URL(details.url).hostname, ip: '', headers: {},
-                blocked: {}, bytes: 0, redirects: chain};
+            tab.pendingRedirects = chain;
+            s.tabs[details.tabId] = tab;
         } else {
-            if (!chain || chain.requestId !== details.requestId || chain.outcome !== 'pending') {
+            if (kind === 'headers' && (!chain || chain.requestId !== details.requestId)
+                && (!chain || details.timeStamp >= chain.startedAt)) {
+                // Режим могли включить между началом запроса и ответом. Сохраняем
+                // прежний сбор IP/заголовков, но не придумываем начало цепочки.
+                chain = null;
+            } else if (!chain || chain.requestId !== details.requestId || chain.outcome !== 'pending') {
                 return;
             }
             if (kind === 'redirect') {
@@ -923,6 +943,11 @@ function queueRedirect(kind, details) {
                     }
                 }
             } else if (kind === 'headers') {
+                const attachment = details.responseHeaders?.some(({name, value}) =>
+                    name.toLowerCase() === 'content-disposition' && /^attachment(?:\s*;|\s*$)/i.test(value || ''));
+                if (details.statusCode === 204 || details.statusCode === 205 || attachment) {
+                    return;
+                }
                 const headers = {};
                 for (const {name, value} of details.responseHeaders || []) {
                     const key = name.toLowerCase();
@@ -930,7 +955,20 @@ function queueRedirect(kind, details) {
                         headers[key] = key in headers ? `${headers[key]}, ${value}` : value;
                     }
                 }
-                Object.assign(tab, {host: new URL(details.url).hostname, ip: details.ip || '', headers});
+                const retired = tab?.retiredRedirectRequests || [];
+                if (!chain) {
+                    for (const previous of [tab?.redirects, tab?.pendingRedirects]) {
+                        if (previous && !retired.includes(previous.requestId)) {
+                            retired.push(previous.requestId);
+                        }
+                    }
+                }
+                tab = {host: new URL(details.url).hostname, ip: details.ip || '', headers,
+                    blocked: {}, bytes: 0, retiredRedirectRequests: retired.slice(-MAX_RETIRED_REQUESTS)};
+                if (chain) {
+                    tab.redirects = chain;
+                }
+                s.tabs[details.tabId] = tab;
             } else {
                 chain.finalUrl = redirectAddress(details.url);
                 chain.endedAt = details.timeStamp;
