@@ -159,7 +159,7 @@
             "source": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
             "sourceStatus": "verified",
             "checkedAt": "2026-10-30",
-            "notes": "Управляет использованием данных для обучения Gemini и grounding в Gemini/Vertex AI; своего HTTP User-Agent и самостоятельного обхода нет."
+            "notes": "Управляет использованием данных для обучения Gemini и ответов Gemini/Vertex AI с grounding; mixed объединяет обучение и ответы. Своего HTTP User-Agent и самостоятельного обхода нет."
         },
         {
             "id": "google-cloud-vertexbot",
@@ -168,14 +168,14 @@
             "tokens": [
                 "Google-CloudVertexBot"
             ],
-            "category": "user",
+            "category": "mixed",
             "type": "crawler",
             "historicalTokens": [],
             "unverifiedTokens": [],
             "source": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
             "sourceStatus": "verified",
             "checkedAt": "2026-10-30",
-            "notes": "Обходы для Vertex AI Agents по запросам владельцев сайтов; не влияет на Google Search."
+            "notes": "Обход по заказу владельца сайта для построения Vertex AI Agents, а не получение страницы по запросу пользователя ассистента; поэтому mixed. Не влияет на Google Search."
         },
         {
             "id": "apple-applebot",
