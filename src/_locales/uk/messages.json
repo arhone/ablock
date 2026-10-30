@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Домени видно в розширеному режимі"
     },
-    "blockedOtherDomains": {
-        "message": "Інші заблоковані домени"
-    },
-    "blockedTrackerDomains": {
-        "message": "Домени зі списків трекерів"
-    },
     "blockedDomainsMore": {
         "message": "і ще $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Домени недоступні"
+    "blockedDomainsTitle": {
+        "message": "Заблоковані домени"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Компанії стеження із заблокованими доменами"
+    },
+    "blockedDomainsPartial": {
+        "message": "Список і числа запитів можуть бути неповними: досягнуто ліміту запису"
     },
     "trackersFound": {
         "message": "Сайт стежить за вами. Заблоковано трекерів: $COUNT$",

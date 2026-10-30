@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "વિસ્તૃત મોડમાં ડોમેન દેખાય છે"
     },
-    "blockedOtherDomains": {
-        "message": "અન્ય અવરોધિત ડોમેન"
-    },
-    "blockedTrackerDomains": {
-        "message": "ટ્રેકર સૂચિઓનાં ડોમેન"
-    },
     "blockedDomainsMore": {
         "message": "અને વધુ $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "ડોમેન ઉપલબ્ધ નથી"
+    "blockedDomainsTitle": {
+        "message": "અવરોધિત ડોમેન"
+    },
+    "blockedCompaniesTitle": {
+        "message": "અવરોધિત ડોમેન ધરાવતી ટ્રેકિંગ કંપનીઓ"
+    },
+    "blockedDomainsPartial": {
+        "message": "નોંધણી મર્યાદા પહોંચી: સૂચિ અને વિનંતીઓની સંખ્યા અધૂરી હોઈ શકે છે"
     },
     "trackersFound": {
         "message": "આ સાઇટ તમને ટ્રૅક કરે છે. બ્લૉક કરેલા ટ્રેકર્સ: $COUNT$",

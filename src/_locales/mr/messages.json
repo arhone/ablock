@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "विस्तारित मोडमध्ये डोमेन दिसतात"
     },
-    "blockedOtherDomains": {
-        "message": "इतर अवरोधित डोमेन"
-    },
-    "blockedTrackerDomains": {
-        "message": "ट्रॅकर याद्यांमधील डोमेन"
-    },
     "blockedDomainsMore": {
         "message": "आणखी $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "डोमेन उपलब्ध नाहीत"
+    "blockedDomainsTitle": {
+        "message": "अवरोधित डोमेन"
+    },
+    "blockedCompaniesTitle": {
+        "message": "अवरोधित डोमेन असलेल्या ट्रॅकिंग कंपन्या"
+    },
+    "blockedDomainsPartial": {
+        "message": "नोंद मर्यादा गाठली: यादी आणि विनंत्यांची संख्या अपूर्ण असू शकते"
     },
     "trackersFound": {
         "message": "ही साइट तुमचा मागोवा घेते. ब्लॉक केलेले ट्रॅकर्स: $COUNT$",

@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domain terlihat dalam mode lanjutan"
     },
-    "blockedOtherDomains": {
-        "message": "Domain lain yang diblokir"
-    },
-    "blockedTrackerDomains": {
-        "message": "Domain dari daftar pelacak"
-    },
     "blockedDomainsMore": {
         "message": "dan $COUNT$ lainnya",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domain tidak tersedia"
+    "blockedDomainsTitle": {
+        "message": "Domain yang diblokir"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Perusahaan pelacak dengan domain yang diblokir"
+    },
+    "blockedDomainsPartial": {
+        "message": "Daftar dan jumlah permintaan mungkin tidak lengkap: batas pencatatan tercapai"
     },
     "trackersFound": {
         "message": "Situs ini melacak Anda, pelacak diblokir: $COUNT$",

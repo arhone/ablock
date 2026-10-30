@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "โดเมนจะแสดงในโหมดขยาย"
     },
-    "blockedOtherDomains": {
-        "message": "โดเมนอื่นที่ถูกบล็อก"
-    },
-    "blockedTrackerDomains": {
-        "message": "โดเมนจากรายการตัวติดตาม"
-    },
     "blockedDomainsMore": {
         "message": "และอีก $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "ไม่สามารถดูโดเมนได้"
+    "blockedDomainsTitle": {
+        "message": "โดเมนที่ถูกบล็อก"
+    },
+    "blockedCompaniesTitle": {
+        "message": "บริษัทติดตามที่มีโดเมนถูกบล็อก"
+    },
+    "blockedDomainsPartial": {
+        "message": "รายการและจำนวนคำขออาจไม่ครบถ้วน: ถึงขีดจำกัดการบันทึกแล้ว"
     },
     "trackersFound": {
         "message": "เว็บไซต์นี้ติดตามคุณ บล็อกตัวติดตามแล้ว: $COUNT$",

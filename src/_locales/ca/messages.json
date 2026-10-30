@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Els dominis es veuen en mode ampliat"
     },
-    "blockedOtherDomains": {
-        "message": "Altres dominis bloquejats"
-    },
-    "blockedTrackerDomains": {
-        "message": "Dominis de les llistes de seguiment"
-    },
     "blockedDomainsMore": {
         "message": "i $COUNT$ més",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Dominis no disponibles"
+    "blockedDomainsTitle": {
+        "message": "Dominis bloquejats"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Empreses de seguiment amb dominis bloquejats"
+    },
+    "blockedDomainsPartial": {
+        "message": "La llista i el recompte de peticions poden ser incomplets: s’ha assolit el límit de registre"
     },
     "trackersFound": {
         "message": "Aquest lloc et rastreja. Rastrejadors bloquejats: $COUNT$",

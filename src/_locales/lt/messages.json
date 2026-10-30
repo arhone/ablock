@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domenai matomi išplėstiniu režimu"
     },
-    "blockedOtherDomains": {
-        "message": "Kiti užblokuoti domenai"
-    },
-    "blockedTrackerDomains": {
-        "message": "Domenai iš sekimo sąrašų"
-    },
     "blockedDomainsMore": {
         "message": "ir dar $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domenai nepasiekiami"
+    "blockedDomainsTitle": {
+        "message": "Užblokuoti domenai"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Sekimo įmonės su užblokuotais domenais"
+    },
+    "blockedDomainsPartial": {
+        "message": "Sąrašas ir užklausų skaičiai gali būti neišsamūs: pasiekta įrašymo riba"
     },
     "trackersFound": {
         "message": "Ši svetainė jus seka. Užblokuota sekiklių: $COUNT$",

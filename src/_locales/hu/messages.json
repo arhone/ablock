@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "A domainek kibővített módban láthatók"
     },
-    "blockedOtherDomains": {
-        "message": "Egyéb blokkolt domainek"
-    },
-    "blockedTrackerDomains": {
-        "message": "Követőlistákban szereplő domainek"
-    },
     "blockedDomainsMore": {
         "message": "és további $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "A domainek nem érhetők el"
+    "blockedDomainsTitle": {
+        "message": "Blokkolt domainek"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Blokkolt domainekkel rendelkező követőcégek"
+    },
+    "blockedDomainsPartial": {
+        "message": "A lista és a kérésszámok hiányosak lehetnek: elértük a rögzítési korlátot"
     },
     "trackersFound": {
         "message": "Ez a webhely követi Önt. Blokkolt nyomkövetők: $COUNT$",

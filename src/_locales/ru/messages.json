@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Домены видны в расширенном режиме"
     },
-    "blockedOtherDomains": {
-        "message": "Остальные заблокированные домены"
-    },
-    "blockedTrackerDomains": {
-        "message": "Домены из списков трекеров"
-    },
     "blockedDomainsMore": {
         "message": "и ещё $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Домены недоступны"
+    "blockedDomainsTitle": {
+        "message": "Заблокированные домены"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Компании слежки с заблокированными доменами"
+    },
+    "blockedDomainsPartial": {
+        "message": "Список и числа запросов могут быть неполными: достигнут лимит записи"
     },
     "trackersFound": {
         "message": "Сайт следит за вами, заблокировано трекеров: $COUNT$",

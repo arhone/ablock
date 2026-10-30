@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "تظهر النطاقات في الوضع الموسّع"
     },
-    "blockedOtherDomains": {
-        "message": "النطاقات المحظورة الأخرى"
-    },
-    "blockedTrackerDomains": {
-        "message": "نطاقات من قوائم التتبع"
-    },
     "blockedDomainsMore": {
         "message": "و$COUNT$ أخرى",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "النطاقات غير متاحة"
+    "blockedDomainsTitle": {
+        "message": "النطاقات المحظورة"
+    },
+    "blockedCompaniesTitle": {
+        "message": "شركات التتبع ذات النطاقات المحظورة"
+    },
+    "blockedDomainsPartial": {
+        "message": "قد تكون القائمة وأعداد الطلبات غير مكتملة: تم بلوغ حد التسجيل"
     },
     "trackersFound": {
         "message": "هذا الموقع يتتبعك. أدوات التتبع المحظورة: $COUNT$",

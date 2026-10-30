@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Οι τομείς εμφανίζονται στην εκτεταμένη λειτουργία"
     },
-    "blockedOtherDomains": {
-        "message": "Άλλοι αποκλεισμένοι τομείς"
-    },
-    "blockedTrackerDomains": {
-        "message": "Τομείς από λίστες ιχνηλατών"
-    },
     "blockedDomainsMore": {
         "message": "και $COUNT$ ακόμη",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Οι τομείς δεν είναι διαθέσιμοι"
+    "blockedDomainsTitle": {
+        "message": "Αποκλεισμένοι τομείς"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Εταιρείες παρακολούθησης με αποκλεισμένους τομείς"
+    },
+    "blockedDomainsPartial": {
+        "message": "Η λίστα και οι αριθμοί αιτημάτων ενδέχεται να είναι ελλιπείς: συμπληρώθηκε το όριο καταγραφής"
     },
     "trackersFound": {
         "message": "Αυτός ο ιστότοπος σας παρακολουθεί. Ιχνηλάτες που αποκλείστηκαν: $COUNT$",

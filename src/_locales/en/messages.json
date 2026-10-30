@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domains are available in extended mode"
     },
-    "blockedOtherDomains": {
-        "message": "Other blocked domains"
-    },
-    "blockedTrackerDomains": {
-        "message": "Domains from tracker lists"
-    },
     "blockedDomainsMore": {
         "message": "and $COUNT$ more",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domains unavailable"
+    "blockedDomainsTitle": {
+        "message": "Blocked domains"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Tracking companies with blocked domains"
+    },
+    "blockedDomainsPartial": {
+        "message": "The list and request counts may be incomplete: recording limit reached"
     },
     "trackersFound": {
         "message": "This site tracks you. Trackers blocked: $COUNT$",

@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domene su vidljive u proširenom načinu"
     },
-    "blockedOtherDomains": {
-        "message": "Ostale blokirane domene"
-    },
-    "blockedTrackerDomains": {
-        "message": "Domene s popisa za praćenje"
-    },
     "blockedDomainsMore": {
         "message": "i još $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domene nisu dostupne"
+    "blockedDomainsTitle": {
+        "message": "Blokirane domene"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Tvrtke za praćenje s blokiranim domenama"
+    },
+    "blockedDomainsPartial": {
+        "message": "Popis i broj zahtjeva mogu biti nepotpuni: dosegnuto je ograničenje bilježenja"
     },
     "trackersFound": {
         "message": "Ova stranica vas prati. Blokirano alata za praćenje: $COUNT$",

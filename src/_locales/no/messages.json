@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domener vises i utvidet modus"
     },
-    "blockedOtherDomains": {
-        "message": "Andre blokkerte domener"
-    },
-    "blockedTrackerDomains": {
-        "message": "Domener fra sporingslister"
-    },
     "blockedDomainsMore": {
         "message": "og $COUNT$ til",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domener er utilgjengelige"
+    "blockedDomainsTitle": {
+        "message": "Blokkerte domener"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Sporingsselskaper med blokkerte domener"
+    },
+    "blockedDomainsPartial": {
+        "message": "Listen og antall forespørsler kan være ufullstendige: registreringsgrensen er nådd"
     },
     "trackersFound": {
         "message": "Dette nettstedet sporer deg. Blokkerte sporere: $COUNT$",

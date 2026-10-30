@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Домейните се виждат в разширен режим"
     },
-    "blockedOtherDomains": {
-        "message": "Други блокирани домейни"
-    },
-    "blockedTrackerDomains": {
-        "message": "Домейни от списъците за проследяване"
-    },
     "blockedDomainsMore": {
         "message": "и още $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Домейните са недостъпни"
+    "blockedDomainsTitle": {
+        "message": "Блокирани домейни"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Проследяващи компании с блокирани домейни"
+    },
+    "blockedDomainsPartial": {
+        "message": "Списъкът и броят заявки може да са непълни: достигнат е лимитът за запис"
     },
     "trackersFound": {
         "message": "Сайтът ви следи, блокирани тракери: $COUNT$",

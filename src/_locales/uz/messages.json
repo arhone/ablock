@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domenlar kengaytirilgan rejimda ko‘rinadi"
     },
-    "blockedOtherDomains": {
-        "message": "Boshqa bloklangan domenlar"
-    },
-    "blockedTrackerDomains": {
-        "message": "Treker ro‘yxatlaridagi domenlar"
-    },
     "blockedDomainsMore": {
         "message": "va yana $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domenlar mavjud emas"
+    "blockedDomainsTitle": {
+        "message": "Bloklangan domenlar"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Domenlari bloklangan kuzatuv kompaniyalari"
+    },
+    "blockedDomainsPartial": {
+        "message": "Ro‘yxat va so‘rovlar soni to‘liq bo‘lmasligi mumkin: yozuv chegarasiga yetildi"
     },
     "trackersFound": {
         "message": "Sayt sizni kuzatmoqda, blokirovka qilingan kuzatuvchilar: $COUNT$",

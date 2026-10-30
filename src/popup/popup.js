@@ -826,54 +826,41 @@ function renderSpeed({loadTime, ready, age}) {
     return true;
 }
 
-// Только локальные списки: это принадлежность домена к списку, не причина конкретной блокировки.
-let blockedTrackerDomains;
+// Счётчики — по правилам DNR, домены — все наблюдения sw.js, компании — по справочнику слежки.
 async function blockedDomainTitles(server) {
     if (!server) {
         return [t('blockedDomainsExtended'), t('blockedDomainsExtended')];
     }
+    const entries = Object.entries(server.blocked || {});
+    if (!entries.length) {
+        return ['', ''];
+    }
+    const hosts = new Map();
+    for (const [key, count] of entries) {
+        const host = key.split('/')[0];
+        hosts.set(host, (hosts.get(host) || 0) + count);
+    }
+    const sorted = [...hosts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    // MAX_HOSTS в sw.js ограничивает ключи хост+путь. При достижении лимита числа могут быть неполными.
+    const partial = entries.length >= 300 ? t('blockedDomainsPartial') : '';
+    const domains = [t('blockedDomainsTitle'),
+        ...sorted.slice(0, 8).map(([host, count]) => `${host} — ${formatNumber(count)}`),
+        sorted.length > 8 ? t('blockedDomainsMore', formatNumber(sorted.length - 8)) : '', partial
+    ].filter(Boolean).join('\n');
     try {
-        blockedTrackerDomains ??= Promise.all(chrome.runtime.getManifest().declarative_net_request.rule_resources
-            .filter((set) => TRACKER_RULESETS.includes(set.id))
-            .map(async (set) => {
-                const response = await fetch(chrome.runtime.getURL(set.path));
-                if (!response.ok) {
-                    throw new Error('Tracker rules unavailable');
-                }
-                return {id: set.id, rules: await response.json()};
-            }));
-        const [sets, enabled] = await Promise.all([blockedTrackerDomains,
-            chrome.declarativeNetRequest.getEnabledRulesets()]);
-        const domains = new Set(sets.filter((set) => enabled.includes(set.id))
-            .flatMap((set) => set.rules.filter((rule) => rule.action.type === 'block')
-                .flatMap((rule) => rule.condition.requestDomains || [])));
-        const hosts = new Map();
-        for (const [key, count] of Object.entries(server.blocked || {})) {
-            const host = key.split('/')[0];
-            hosts.set(host, (hosts.get(host) || 0) + count);
-        }
-        const groups = [[], []];
-        for (const [host, count] of hosts) {
-            let domain = host;
-            while (domain && !domains.has(domain)) {
-                const dot = domain.indexOf('.');
-                domain = dot < 0 ? '' : domain.slice(dot + 1);
-            }
-            groups[domain ? 1 : 0].push([host, count]);
-        }
-        return groups.map((group, i) => {
-            if (!group.length) {
-                return '';
-            }
-            group.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-            return [t(i ? 'blockedTrackerDomains' : 'blockedOtherDomains'),
-                ...group.slice(0, 8).map(([host, count]) => `${host} — ${formatNumber(count)}`),
-                group.length > 8 ? t('blockedDomainsMore', formatNumber(group.length - 8)) : ''
-            ].filter(Boolean).join('\n');
+        const companies = await findCompanies({requests: []}, server, true);
+        const total = (company) => company.hosts.reduce((sum, host) => sum + hosts.get(host), 0);
+        companies.sort((a, b) => total(b) - total(a) || a.name.localeCompare(b.name));
+        const lines = companies.slice(0, 8).map((company) => {
+            const list = company.hosts.sort((a, b) => hosts.get(b) - hosts.get(a) || a.localeCompare(b));
+            return `${company.name}: ` + list.slice(0, 3).join(', ')
+                + (list.length > 3 ? ` (${t('blockedDomainsMore', formatNumber(list.length - 3))})` : '');
         });
+        return [domains, lines.length ? [t('blockedCompaniesTitle'), ...lines,
+            companies.length > 8 ? t('blockedDomainsMore', formatNumber(companies.length - 8)) : '', partial
+        ].filter(Boolean).join('\n') : ''];
     } catch {
-        blockedTrackerDomains = undefined; // Ошибка чтения не должна скрыть прежние счётчики.
-        return [t('blockedDomainsUnavailable'), t('blockedDomainsUnavailable')];
+        return [domains, '']; // Сбой справочника не скрывает наблюдаемые домены и прежние счётчики.
     }
 }
 

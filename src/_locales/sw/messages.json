@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Vikoa vinaonekana katika hali iliyopanuliwa"
     },
-    "blockedOtherDomains": {
-        "message": "Vikoa vingine vilivyozuiwa"
-    },
-    "blockedTrackerDomains": {
-        "message": "Vikoa kutoka orodha za vifuatiliaji"
-    },
     "blockedDomainsMore": {
         "message": "na vingine $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Vikoa havipatikani"
+    "blockedDomainsTitle": {
+        "message": "Vikoa vilivyozuiwa"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Kampuni za ufuatiliaji zenye vikoa vilivyozuiwa"
+    },
+    "blockedDomainsPartial": {
+        "message": "Orodha na idadi ya maombi huenda hazijakamilika: kikomo cha kurekodi kimefikiwa"
     },
     "trackersFound": {
         "message": "Tovuti hii inakufuatilia. Vifuatiliaji vilivyozuiwa: $COUNT$",

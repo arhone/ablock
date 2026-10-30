@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domain dipaparkan dalam mod lanjutan"
     },
-    "blockedOtherDomains": {
-        "message": "Domain lain yang disekat"
-    },
-    "blockedTrackerDomains": {
-        "message": "Domain daripada senarai penjejak"
-    },
     "blockedDomainsMore": {
         "message": "dan $COUNT$ lagi",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domain tidak tersedia"
+    "blockedDomainsTitle": {
+        "message": "Domain yang disekat"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Syarikat penjejakan dengan domain yang disekat"
+    },
+    "blockedDomainsPartial": {
+        "message": "Senarai dan bilangan permintaan mungkin tidak lengkap: had rekod dicapai"
     },
     "trackersFound": {
         "message": "Tapak ini menjejaki anda. Penjejak disekat: $COUNT$",

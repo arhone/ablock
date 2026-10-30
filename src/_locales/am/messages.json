@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "ጎራዎች በተራዘመ ሁነታ ይታያሉ"
     },
-    "blockedOtherDomains": {
-        "message": "ሌሎች የታገዱ ጎራዎች"
-    },
-    "blockedTrackerDomains": {
-        "message": "ከመከታተያ ዝርዝሮች የመጡ ጎራዎች"
-    },
     "blockedDomainsMore": {
         "message": "እና $COUNT$ ተጨማሪ",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "ጎራዎች አይገኙም"
+    "blockedDomainsTitle": {
+        "message": "የታገዱ ጎራዎች"
+    },
+    "blockedCompaniesTitle": {
+        "message": "የታገዱ ጎራዎች ያሏቸው የክትትል ኩባንያዎች"
+    },
+    "blockedDomainsPartial": {
+        "message": "የመዝገብ ገደቡ ስለደረሰ ዝርዝሩ እና የጥያቄ ብዛቶች ያልተሟሉ ሊሆኑ ይችላሉ"
     },
     "trackersFound": {
         "message": "ይህ ጣቢያ እርስዎን ይከታተላል። የታገዱ መከታተያዎች: $COUNT$",

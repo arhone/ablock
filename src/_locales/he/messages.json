@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "הדומיינים מוצגים במצב מורחב"
     },
-    "blockedOtherDomains": {
-        "message": "דומיינים חסומים אחרים"
-    },
-    "blockedTrackerDomains": {
-        "message": "דומיינים מרשימות מעקב"
-    },
     "blockedDomainsMore": {
         "message": "ועוד $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "הדומיינים אינם זמינים"
+    "blockedDomainsTitle": {
+        "message": "דומיינים חסומים"
+    },
+    "blockedCompaniesTitle": {
+        "message": "חברות מעקב עם דומיינים חסומים"
+    },
+    "blockedDomainsPartial": {
+        "message": "הרשימה ומספרי הבקשות עשויים להיות חלקיים: הגעת למגבלת הרישום"
     },
     "trackersFound": {
         "message": "האתר הזה עוקב אחריך. רכיבי מעקב שנחסמו: $COUNT$",

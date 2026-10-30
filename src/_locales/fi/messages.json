@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Verkkotunnukset näkyvät laajennetussa tilassa"
     },
-    "blockedOtherDomains": {
-        "message": "Muut estetyt verkkotunnukset"
-    },
-    "blockedTrackerDomains": {
-        "message": "Seurantalistojen verkkotunnukset"
-    },
     "blockedDomainsMore": {
         "message": "ja $COUNT$ muuta",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Verkkotunnuksia ei saatavilla"
+    "blockedDomainsTitle": {
+        "message": "Estetyt verkkotunnukset"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Seurantayritykset, joiden verkkotunnuksia on estetty"
+    },
+    "blockedDomainsPartial": {
+        "message": "Luettelo ja pyyntömäärät voivat olla puutteellisia: tallennusraja saavutettu"
     },
     "trackersFound": {
         "message": "Tämä sivusto seuraa sinua. Estettyjä seurantoja: $COUNT$",

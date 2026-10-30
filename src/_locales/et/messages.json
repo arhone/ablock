@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domeenid on nähtavad laiendatud režiimis"
     },
-    "blockedOtherDomains": {
-        "message": "Muud blokeeritud domeenid"
-    },
-    "blockedTrackerDomains": {
-        "message": "Jälgimisloendite domeenid"
-    },
     "blockedDomainsMore": {
         "message": "ja veel $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domeenid pole saadaval"
+    "blockedDomainsTitle": {
+        "message": "Blokeeritud domeenid"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Blokeeritud domeenidega jälgimisettevõtted"
+    },
+    "blockedDomainsPartial": {
+        "message": "Loend ja päringute arvud võivad olla puudulikud: salvestuspiir on saavutatud"
     },
     "trackersFound": {
         "message": "See sait jälgib teid. Blokeeritud jälgijaid: $COUNT$",

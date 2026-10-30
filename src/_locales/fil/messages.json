@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Makikita ang mga domain sa pinalawak na mode"
     },
-    "blockedOtherDomains": {
-        "message": "Iba pang naka-block na domain"
-    },
-    "blockedTrackerDomains": {
-        "message": "Mga domain mula sa mga listahan ng tracker"
-    },
     "blockedDomainsMore": {
         "message": "at $COUNT$ pa",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Hindi available ang mga domain"
+    "blockedDomainsTitle": {
+        "message": "Mga naka-block na domain"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Mga kompanya ng pagsubaybay na may naka-block na domain"
+    },
+    "blockedDomainsPartial": {
+        "message": "Maaaring hindi kumpleto ang listahan at bilang ng kahilingan: naabot ang limitasyon sa pagtatala"
     },
     "trackersFound": {
         "message": "Sinusubaybayan ka ng site na ito. Mga na-block na tracker: $COUNT$",

@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Alan adları genişletilmiş modda görünür"
     },
-    "blockedOtherDomains": {
-        "message": "Engellenen diğer alan adları"
-    },
-    "blockedTrackerDomains": {
-        "message": "İzleyici listelerindeki alan adları"
-    },
     "blockedDomainsMore": {
         "message": "ve $COUNT$ tane daha",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Alan adları kullanılamıyor"
+    "blockedDomainsTitle": {
+        "message": "Engellenen alan adları"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Alan adları engellenen izleme şirketleri"
+    },
+    "blockedDomainsPartial": {
+        "message": "Liste ve istek sayıları eksik olabilir: kayıt sınırına ulaşıldı"
     },
     "trackersFound": {
         "message": "Bu site sizi izliyor, engellenen izleyici: $COUNT$",

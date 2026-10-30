@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "域名在扩展模式下可见"
     },
-    "blockedOtherDomains": {
-        "message": "其他已拦截的域名"
-    },
-    "blockedTrackerDomains": {
-        "message": "跟踪器列表中的域名"
-    },
     "blockedDomainsMore": {
         "message": "以及另外 $COUNT$ 个",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "域名不可用"
+    "blockedDomainsTitle": {
+        "message": "已拦截的域名"
+    },
+    "blockedCompaniesTitle": {
+        "message": "有域名被拦截的跟踪公司"
+    },
+    "blockedDomainsPartial": {
+        "message": "已达到记录上限，列表和请求次数可能不完整"
     },
     "trackersFound": {
         "message": "此网站在跟踪您，已拦截跟踪器：$COUNT$",

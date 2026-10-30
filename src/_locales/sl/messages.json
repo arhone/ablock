@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domene so vidne v razširjenem načinu"
     },
-    "blockedOtherDomains": {
-        "message": "Druge blokirane domene"
-    },
-    "blockedTrackerDomains": {
-        "message": "Domene s seznamov sledilnikov"
-    },
     "blockedDomainsMore": {
         "message": "in še $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domene niso na voljo"
+    "blockedDomainsTitle": {
+        "message": "Blokirane domene"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Sledilna podjetja z blokiranimi domenami"
+    },
+    "blockedDomainsPartial": {
+        "message": "Seznam in števila zahtev so lahko nepopolni: dosežena je omejitev beleženja"
     },
     "trackersFound": {
         "message": "To spletno mesto vam sledi. Blokiranih sledilnikov: $COUNT$",

@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "বর্ধিত মোডে ডোমেন দেখা যায়"
     },
-    "blockedOtherDomains": {
-        "message": "অন্যান্য অবরুদ্ধ ডোমেন"
-    },
-    "blockedTrackerDomains": {
-        "message": "ট্র্যাকার তালিকার ডোমেন"
-    },
     "blockedDomainsMore": {
         "message": "আরও $COUNT$টি",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "ডোমেন অনুপলব্ধ"
+    "blockedDomainsTitle": {
+        "message": "অবরুদ্ধ ডোমেন"
+    },
+    "blockedCompaniesTitle": {
+        "message": "অবরুদ্ধ ডোমেনসহ ট্র্যাকিং কোম্পানি"
+    },
+    "blockedDomainsPartial": {
+        "message": "রেকর্ডের সীমা পূর্ণ: তালিকা ও অনুরোধের সংখ্যা অসম্পূর্ণ হতে পারে"
     },
     "trackersFound": {
         "message": "এই সাইট আপনাকে ট্র্যাক করে। ব্লক করা ট্র্যাকার: $COUNT$",

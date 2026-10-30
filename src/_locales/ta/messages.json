@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "விரிவாக்கப்பட்ட பயன்முறையில் களங்கள் தெரியும்"
     },
-    "blockedOtherDomains": {
-        "message": "தடுக்கப்பட்ட பிற களங்கள்"
-    },
-    "blockedTrackerDomains": {
-        "message": "கண்காணிப்புப் பட்டியல்களின் களங்கள்"
-    },
     "blockedDomainsMore": {
         "message": "மேலும் $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "களங்கள் கிடைக்கவில்லை"
+    "blockedDomainsTitle": {
+        "message": "தடுக்கப்பட்ட களங்கள்"
+    },
+    "blockedCompaniesTitle": {
+        "message": "தடுக்கப்பட்ட களங்களைக் கொண்ட கண்காணிப்பு நிறுவனங்கள்"
+    },
+    "blockedDomainsPartial": {
+        "message": "பதிவு வரம்பை எட்டியது: பட்டியலும் கோரிக்கைகளின் எண்ணிக்கையும் முழுமையற்றதாக இருக்கலாம்"
     },
     "trackersFound": {
         "message": "இந்தத் தளம் உங்களைக் கண்காணிக்கிறது. தடுக்கப்பட்ட டிராக்கர்கள்: $COUNT$",

@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domēni ir redzami paplašinātajā režīmā"
     },
-    "blockedOtherDomains": {
-        "message": "Citi bloķētie domēni"
-    },
-    "blockedTrackerDomains": {
-        "message": "Domēni no izsekotāju sarakstiem"
-    },
     "blockedDomainsMore": {
         "message": "un vēl $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domēni nav pieejami"
+    "blockedDomainsTitle": {
+        "message": "Bloķētie domēni"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Izsekošanas uzņēmumi ar bloķētiem domēniem"
+    },
+    "blockedDomainsPartial": {
+        "message": "Saraksts un pieprasījumu skaits var būt nepilnīgs: sasniegts reģistrēšanas limits"
     },
     "trackersFound": {
         "message": "Šī vietne jūs izseko. Bloķēti izsekotāji: $COUNT$",

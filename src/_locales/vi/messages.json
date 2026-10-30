@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Tên miền hiển thị trong chế độ mở rộng"
     },
-    "blockedOtherDomains": {
-        "message": "Các tên miền khác bị chặn"
-    },
-    "blockedTrackerDomains": {
-        "message": "Tên miền từ danh sách trình theo dõi"
-    },
     "blockedDomainsMore": {
         "message": "và $COUNT$ tên miền nữa",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Không có dữ liệu tên miền"
+    "blockedDomainsTitle": {
+        "message": "Tên miền bị chặn"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Công ty theo dõi có tên miền bị chặn"
+    },
+    "blockedDomainsPartial": {
+        "message": "Danh sách và số lượng yêu cầu có thể không đầy đủ: đã đạt giới hạn ghi nhận"
     },
     "trackersFound": {
         "message": "Trang này theo dõi bạn, đã chặn trình theo dõi: $COUNT$",

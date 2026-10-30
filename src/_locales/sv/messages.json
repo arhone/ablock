@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domäner visas i utökat läge"
     },
-    "blockedOtherDomains": {
-        "message": "Andra blockerade domäner"
-    },
-    "blockedTrackerDomains": {
-        "message": "Domäner från spårningslistor"
-    },
     "blockedDomainsMore": {
         "message": "och $COUNT$ till",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domäner är inte tillgängliga"
+    "blockedDomainsTitle": {
+        "message": "Blockerade domäner"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Spårningsföretag med blockerade domäner"
+    },
+    "blockedDomainsPartial": {
+        "message": "Listan och antalet förfrågningar kan vara ofullständiga: registreringsgränsen har nåtts"
     },
     "trackersFound": {
         "message": "Den här webbplatsen spårar dig. Blockerade spårare: $COUNT$",

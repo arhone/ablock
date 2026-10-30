@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domeinen zijn zichtbaar in de uitgebreide modus"
     },
-    "blockedOtherDomains": {
-        "message": "Andere geblokkeerde domeinen"
-    },
-    "blockedTrackerDomains": {
-        "message": "Domeinen uit trackerlijsten"
-    },
     "blockedDomainsMore": {
         "message": "en nog $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domeinen niet beschikbaar"
+    "blockedDomainsTitle": {
+        "message": "Geblokkeerde domeinen"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Trackingbedrijven met geblokkeerde domeinen"
+    },
+    "blockedDomainsPartial": {
+        "message": "De lijst en aantallen verzoeken kunnen onvolledig zijn: registratielimiet bereikt"
     },
     "trackersFound": {
         "message": "Deze site volgt je. Trackers geblokkeerd: $COUNT$",

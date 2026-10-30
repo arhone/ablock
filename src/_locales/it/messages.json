@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "I domini sono visibili in modalità estesa"
     },
-    "blockedOtherDomains": {
-        "message": "Altri domini bloccati"
-    },
-    "blockedTrackerDomains": {
-        "message": "Domini dagli elenchi di tracciamento"
-    },
     "blockedDomainsMore": {
         "message": "e altri $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domini non disponibili"
+    "blockedDomainsTitle": {
+        "message": "Domini bloccati"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Società di tracciamento con domini bloccati"
+    },
+    "blockedDomainsPartial": {
+        "message": "L’elenco e il numero di richieste potrebbero essere incompleti: limite di registrazione raggiunto"
     },
     "trackersFound": {
         "message": "Il sito ti traccia, tracker bloccati: $COUNT$",

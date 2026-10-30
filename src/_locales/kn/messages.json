@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "ವಿಸ್ತೃತ ಮೋಡ್‌ನಲ್ಲಿ ಡೊಮೇನ್‌ಗಳು ಕಾಣುತ್ತವೆ"
     },
-    "blockedOtherDomains": {
-        "message": "ಇತರ ನಿರ್ಬಂಧಿತ ಡೊಮೇನ್‌ಗಳು"
-    },
-    "blockedTrackerDomains": {
-        "message": "ಟ್ರ್ಯಾಕರ್ ಪಟ್ಟಿಗಳ ಡೊಮೇನ್‌ಗಳು"
-    },
     "blockedDomainsMore": {
         "message": "ಮತ್ತು ಇನ್ನೂ $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "ಡೊಮೇನ್‌ಗಳು ಲಭ್ಯವಿಲ್ಲ"
+    "blockedDomainsTitle": {
+        "message": "ನಿರ್ಬಂಧಿತ ಡೊಮೇನ್‌ಗಳು"
+    },
+    "blockedCompaniesTitle": {
+        "message": "ನಿರ್ಬಂಧಿತ ಡೊಮೇನ್‌ಗಳಿರುವ ಟ್ರ್ಯಾಕಿಂಗ್ ಕಂಪನಿಗಳು"
+    },
+    "blockedDomainsPartial": {
+        "message": "ದಾಖಲೆಯ ಮಿತಿ ತಲುಪಿದೆ: ಪಟ್ಟಿ ಮತ್ತು ವಿನಂತಿಗಳ ಎಣಿಕೆ ಅಪೂರ್ಣವಾಗಿರಬಹುದು"
     },
     "trackersFound": {
         "message": "ಈ ಸೈಟ್ ನಿಮ್ಮನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡುತ್ತದೆ. ನಿರ್ಬಂಧಿಸಿದ ಟ್ರ್ಯಾಕರ್‌ಗಳು: $COUNT$",

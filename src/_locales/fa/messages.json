@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "دامنه‌ها در حالت پیشرفته دیده می‌شوند"
     },
-    "blockedOtherDomains": {
-        "message": "سایر دامنه‌های مسدودشده"
-    },
-    "blockedTrackerDomains": {
-        "message": "دامنه‌های فهرست‌های ردیاب"
-    },
     "blockedDomainsMore": {
         "message": "و $COUNT$ مورد دیگر",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "دامنه‌ها در دسترس نیستند"
+    "blockedDomainsTitle": {
+        "message": "دامنه‌های مسدودشده"
+    },
+    "blockedCompaniesTitle": {
+        "message": "شرکت‌های ردیابی با دامنه‌های مسدودشده"
+    },
+    "blockedDomainsPartial": {
+        "message": "فهرست و تعداد درخواست‌ها ممکن است ناقص باشند: سقف ثبت رسیده است"
     },
     "trackersFound": {
         "message": "این سایت شما را ردیابی می‌کند. ردیاب‌های مسدودشده: $COUNT$",

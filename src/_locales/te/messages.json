@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "విస్తరించిన మోడ్‌లో డొమైన్‌లు కనిపిస్తాయి"
     },
-    "blockedOtherDomains": {
-        "message": "నిరోధించిన ఇతర డొమైన్‌లు"
-    },
-    "blockedTrackerDomains": {
-        "message": "ట్రాకర్ జాబితాల్లోని డొమైన్‌లు"
-    },
     "blockedDomainsMore": {
         "message": "ఇంకా $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "డొమైన్‌లు అందుబాటులో లేవు"
+    "blockedDomainsTitle": {
+        "message": "నిరోధించిన డొమైన్‌లు"
+    },
+    "blockedCompaniesTitle": {
+        "message": "నిరోధించిన డొమైన్‌లు ఉన్న ట్రాకింగ్ కంపెనీలు"
+    },
+    "blockedDomainsPartial": {
+        "message": "రికార్డింగ్ పరిమితి చేరుకుంది: జాబితా మరియు అభ్యర్థనల సంఖ్య అసంపూర్ణంగా ఉండవచ్చు"
     },
     "trackersFound": {
         "message": "ఈ సైట్ మిమ్మల్ని ట్రాక్ చేస్తోంది. బ్లాక్ చేసిన ట్రాకర్లు: $COUNT$",

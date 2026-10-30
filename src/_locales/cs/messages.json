@@ -121,12 +121,6 @@
     "blockedDomainsExtended": {
         "message": "Domény jsou viditelné v rozšířeném režimu"
     },
-    "blockedOtherDomains": {
-        "message": "Ostatní blokované domény"
-    },
-    "blockedTrackerDomains": {
-        "message": "Domény ze seznamů sledovačů"
-    },
     "blockedDomainsMore": {
         "message": "a dalších $COUNT$",
         "placeholders": {
@@ -135,8 +129,14 @@
             }
         }
     },
-    "blockedDomainsUnavailable": {
-        "message": "Domény nejsou dostupné"
+    "blockedDomainsTitle": {
+        "message": "Blokované domény"
+    },
+    "blockedCompaniesTitle": {
+        "message": "Sledovací společnosti s blokovanými doménami"
+    },
+    "blockedDomainsPartial": {
+        "message": "Seznam a počty požadavků mohou být neúplné: byl dosažen limit záznamů"
     },
     "trackersFound": {
         "message": "Tento web vás sleduje. Blokováno sledovacích prvků: $COUNT$",
