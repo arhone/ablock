@@ -34,6 +34,7 @@
      * browser-cache — доставка из кэша; interim-response — промежуточный ответ (код неизвестен);
      * history-navigation — переход по истории (попадание в bfcache не доказано);
      * preload-unresolved — нельзя сопоставить responsive preload/media без догадки;
+     * attribution-unavailable — у кадра нет скриптов или у скрипта нет безопасного источника;
      * collection-failed — изолированный сбой сборщика, раздел недоступен, остальной аудит продолжается.
      * truncated=true только при отсечении фактов лимитом/бюджетом, не просто при unavailable.
      *
@@ -72,7 +73,22 @@
      * отключать по завершении/тайм-ауту. Проверять бюджет в ограниченных проходах;
      * при превышении partial + budget-exceeded + truncated. Необязательные API — по наличию.
      * LCP: до 2000 ресурсов и 100 link, общий бюджет причин 20 ms; TTFB: до 5 Server-Timing.
-     * Нет новых наблюдателей, таймеров и запросов; превышение лимитов отмечается явно.
+     * loaf: {version: 1, availableFrames, processedFrames, blockingDuration, droppedEntries,
+     *   scripts: [{kind: url|inline|unknown, url: string|null, duration: number|null, count}]}.
+     * Только доступный буфер long-animation-frame, не TBT и не полное время главного потока.
+     * availableFrames — число полученных записей до лимита, processedFrames — обработанных;
+     * blockingDuration — сумма по обработанным кадрам, не распределяется между скриптами;
+     * null, если кадры есть, но ни один не обработан, или длительность неизвестна.
+     * scripts — суммы scripts[].duration по безопасному URL (без query/hash, путь до 512),
+     * inline — sourceURL совпадает с адресом документа, пустой/небезопасный URL — unknown.
+     * Это атрибуция браузера, не доказанная причина; имена функций/код/позиции не сохраняются.
+     * count — число записей скрипта, не кадров; интервалы могут перекрываться, не складывать
+     * с blockingDuration. Неизвестная длительность делает соответствующую сумму null.
+     * droppedEntries: number|null — потери, сообщённые callback, null если браузер не сообщил.
+     * До 200 кадров, 100 источников, 2000 записей скриптов суммарно; лимиты дают partial.
+     * Пустой поддерживаемый буфер: ok + no-entry, нулевые счётчики и суммы, scripts: [].
+     * Нет API: unsupported/api-unsupported; ошибка наблюдения: unavailable/collection-failed.
+     * Наблюдатель LoAF разделяет короткое ожидание recorded(), новых запросов нет.
      */
     const documentUrl = new URL(location.href);
     const causes = {
@@ -87,28 +103,37 @@
         },
         lcp: {status: 'unavailable', reasons: ['not-collected'], truncated: false, data: null},
         cls: {status: 'unavailable', reasons: ['not-collected'], truncated: false, data: null},
-        ttfb: {status: 'unavailable', reasons: ['not-collected'], truncated: false, data: null}
+        ttfb: {status: 'unavailable', reasons: ['not-collected'], truncated: false, data: null},
+        loaf: {status: 'unavailable', reasons: ['not-collected'], truncated: false, data: null}
     };
 
     /**
      * Уже записанные браузером замеры. Если замеров нет, обработчик не вызывается — ждём недолго.
-     * В свойстве dropped — сколько замеров браузер не сохранил: буфер полон, новые отбрасываются
+     * dropped — сообщённые браузером потери (null, если не сообщил); failed — ошибка наблюдения.
+     * available — число полученных записей до ограничения результата.
      * @param {Object} options
+     * @param {number} limit
      * @returns {Promise<PerformanceEntry[]>}
      */
-    const recorded = (options) => new Promise((resolve) => {
+    const recorded = (options, limit = Infinity) => new Promise((resolve) => {
+        let observer;
+        let timer;
+        const finish = (entries, info) => {
+            observer?.disconnect();
+            clearTimeout(timer);
+            resolve(Object.assign(limit === Infinity ? entries : entries.slice(0, limit), {
+                available: entries.length,
+                dropped: info?.droppedEntriesCount ?? null
+            }));
+        };
         try {
-            const observer = new PerformanceObserver((list, self, info) => {
-                observer.disconnect();
-                resolve(Object.assign(list.getEntries(), {dropped: info?.droppedEntriesCount || 0}));
-            });
+            observer = new PerformanceObserver((list, self, info) => finish(list.getEntries(), info));
             observer.observe({...options, buffered: true});
-            setTimeout(() => {
-                observer.disconnect();
-                resolve([]);
-            }, 60);
+            timer = setTimeout(() => finish(limit === Infinity ? [] : observer.takeRecords()), 60);
         } catch {
-            resolve([]); // Тип замеров не поддерживается
+            observer?.disconnect();
+            clearTimeout(timer);
+            resolve(Object.assign([], {failed: true}));
         }
     });
     // Известные ИИ-боты: по имени в robots.txt больше никак не понять, что бот собирает тексты для нейросетей
@@ -192,11 +217,13 @@
     };
 
     // Всё ожидание — параллельно: окно ждёт не дольше самого медленного (обычно 60 мс, файлы сайта — до 2 с)
-    const [lcpEntries, shifts, events, firstInput, robotsText, llms, securityTxt] = await Promise.all([
+    const [lcpEntries, shifts, events, firstInput, loafEntries, robotsText, llms, securityTxt] = await Promise.all([
         recorded({type: 'largest-contentful-paint'}),
         recorded({type: 'layout-shift'}),
         recorded({type: 'event', durationThreshold: 16}),
         recorded({type: 'first-input'}),
+        typeof PerformanceObserver !== 'undefined' && PerformanceObserver.supportedEntryTypes?.includes('long-animation-frame')
+            ? recorded({type: 'long-animation-frame'}, 200) : null,
         siteFile('/robots.txt'),
         siteFile('/llms.txt'),
         siteFile('/.well-known/security.txt')
@@ -671,6 +698,93 @@
         }
         return section;
     };
+    const collectLoaf = () => {
+        const section = {status: 'ok', reasons: [], truncated: false, data: null};
+        if (loafEntries === null) {
+            return {...section, status: 'unsupported', reasons: ['api-unsupported']};
+        }
+        if (loafEntries.failed) {
+            return {...section, status: 'unavailable', reasons: ['collection-failed']};
+        }
+        const data = section.data = {
+            version: 1,
+            availableFrames: loafEntries.available,
+            processedFrames: 0,
+            blockingDuration: 0,
+            droppedEntries: loafEntries.dropped,
+            scripts: []
+        };
+        if (!data.availableFrames) {
+            reason(section, 'no-entry', false);
+        }
+        if (data.droppedEntries > 0) {
+            reason(section, 'buffer-dropped');
+        }
+        if (data.availableFrames > loafEntries.length) {
+            limited(section, 'result-limit');
+        }
+        specialNavigation(section);
+        const sources = new Map();
+        let scriptCount = 0;
+        for (const frame of loafEntries) {
+            if (!budget(section)) {
+                break;
+            }
+            data.processedFrames++;
+            const blocking = finite(frame.blockingDuration);
+            if (blocking === null) {
+                data.blockingDuration = null;
+                reason(section, 'timing-incomplete');
+            } else if (data.blockingDuration !== null) {
+                data.blockingDuration += blocking;
+            }
+            if (!frame.scripts?.length) {
+                reason(section, 'attribution-unavailable');
+                continue;
+            }
+            for (const script of frame.scripts) {
+                if (!budget(section)) {
+                    break;
+                }
+                if (scriptCount >= 2000) {
+                    limited(section, 'result-limit');
+                    break;
+                }
+                scriptCount++;
+                const url = shortUrl(script.sourceURL);
+                const kind = !url ? 'unknown' : script.sourceURL.split('#', 1)[0] === location.href.split('#', 1)[0] ? 'inline' : 'url';
+                const key = kind === 'url' ? url : kind;
+                if (kind === 'unknown') {
+                    reason(section, 'attribution-unavailable');
+                }
+                let item = sources.get(key);
+                if (!item) {
+                    if (sources.size >= 100) {
+                        limited(section, 'result-limit');
+                        continue;
+                    }
+                    item = {kind, url: kind === 'url' ? url : null, duration: 0, count: 0};
+                    sources.set(key, item);
+                    data.scripts.push(item);
+                }
+                item.count++;
+                const duration = finite(script.duration);
+                if (duration === null) {
+                    item.duration = null;
+                    reason(section, 'timing-incomplete');
+                } else if (item.duration !== null) {
+                    item.duration += duration;
+                }
+            }
+            if (section.reasons.includes('budget-exceeded')) {
+                break;
+            }
+        }
+        if (data.availableFrames > 0 && data.processedFrames === 0) {
+            data.blockingDuration = null;
+        }
+        return section;
+    };
     const collectSafely = (collect) => {
         try {
             return collect();
@@ -682,6 +796,7 @@
     causes.ttfb = collectSafely(collectTtfb);
     causes.lcp = collectSafely(collectLcp);
     causes.cls = collectSafely(collectCls);
+    causes.loaf = collectSafely(collectLoaf);
 
     // SEO
     const meta = (selector) => document.querySelector(selector)?.getAttribute('content')?.trim() ?? null;
