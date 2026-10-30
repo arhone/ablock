@@ -1,0 +1,406 @@
+{
+    "schemaVersion": 1,
+    "bots": [
+        {
+            "id": "openai-gptbot",
+            "name": "GPTBot",
+            "operator": "OpenAI",
+            "tokens": [
+                "GPTBot"
+            ],
+            "category": "training",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://developers.openai.com/api/docs/bots",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Сбор контента, который может использоваться для обучения фундаментальных моделей."
+        },
+        {
+            "id": "openai-searchbot",
+            "name": "OAI-SearchBot",
+            "operator": "OpenAI",
+            "tokens": [
+                "OAI-SearchBot"
+            ],
+            "category": "search",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://developers.openai.com/api/docs/bots",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Появление сайтов в поисковых ответах ChatGPT."
+        },
+        {
+            "id": "openai-chatgpt-user",
+            "name": "ChatGPT-User",
+            "operator": "OpenAI",
+            "tokens": [
+                "ChatGPT-User"
+            ],
+            "category": "user",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://developers.openai.com/api/docs/bots",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Получение страниц по действию пользователя; robots.txt может не применяться. Не автоматический обход."
+        },
+        {
+            "id": "openai-adsbot",
+            "name": "OAI-AdsBot",
+            "operator": "OpenAI",
+            "tokens": [
+                "OAI-AdsBot"
+            ],
+            "category": "mixed",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://developers.openai.com/api/docs/bots",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Проверка безопасности и релевантности рекламных посадочных страниц; не обучение моделей. Ни одна из трёх узких категорий не подходит."
+        },
+        {
+            "id": "anthropic-claudebot",
+            "name": "ClaudeBot",
+            "operator": "Anthropic",
+            "tokens": [
+                "ClaudeBot"
+            ],
+            "category": "training",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Сбор контента для возможного обучения моделей."
+        },
+        {
+            "id": "anthropic-searchbot",
+            "name": "Claude-SearchBot",
+            "operator": "Anthropic",
+            "tokens": [
+                "Claude-SearchBot"
+            ],
+            "category": "search",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Индексация для качества и релевантности поисковых ответов."
+        },
+        {
+            "id": "anthropic-user",
+            "name": "Claude-User",
+            "operator": "Anthropic",
+            "tokens": [
+                "Claude-User"
+            ],
+            "category": "user",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Получение страниц по запросу пользователя."
+        },
+        {
+            "id": "anthropic-claude-web",
+            "name": "Claude-Web",
+            "operator": "Anthropic",
+            "tokens": [],
+            "category": "mixed",
+            "type": null,
+            "historicalTokens": [],
+            "unverifiedTokens": [
+                "Claude-Web"
+            ],
+            "source": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+            "sourceStatus": "unverified",
+            "checkedAt": "2026-10-30",
+            "notes": "Имя из прежнего списка ABlock. Текущая официальная страница перечисляет только ClaudeBot, Claude-User, Claude-SearchBot. Исторический статус, назначение и соответствие преемнику не подтверждены; не считать действующим токеном."
+        },
+        {
+            "id": "anthropic-ai",
+            "name": "anthropic-ai",
+            "operator": "Anthropic",
+            "tokens": [],
+            "category": "mixed",
+            "type": null,
+            "historicalTokens": [],
+            "unverifiedTokens": [
+                "anthropic-ai"
+            ],
+            "source": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+            "sourceStatus": "unverified",
+            "checkedAt": "2026-10-30",
+            "notes": "Имя из прежнего списка ABlock. Текущая официальная страница перечисляет только ClaudeBot, Claude-User, Claude-SearchBot. Исторический статус, назначение и соответствие преемнику не подтверждены; не считать действующим токеном."
+        },
+        {
+            "id": "google-extended",
+            "name": "Google-Extended",
+            "operator": "Google",
+            "tokens": [
+                "Google-Extended"
+            ],
+            "category": "mixed",
+            "type": "control",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Управляет использованием данных для обучения Gemini и grounding в Gemini/Vertex AI; своего HTTP User-Agent и самостоятельного обхода нет."
+        },
+        {
+            "id": "google-cloud-vertexbot",
+            "name": "Google-CloudVertexBot",
+            "operator": "Google",
+            "tokens": [
+                "Google-CloudVertexBot"
+            ],
+            "category": "user",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Обходы для Vertex AI Agents по запросам владельцев сайтов; не влияет на Google Search."
+        },
+        {
+            "id": "apple-applebot",
+            "name": "Applebot",
+            "operator": "Apple",
+            "tokens": [
+                "Applebot"
+            ],
+            "category": "mixed",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://support.apple.com/en-us/119829",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Поиск Spotlight/Siri/Safari, возможное обучение и контекст для генеративных ответов. Applebot-Extended отдельно управляет обучением."
+        },
+        {
+            "id": "apple-extended",
+            "name": "Applebot-Extended",
+            "operator": "Apple",
+            "tokens": [
+                "Applebot-Extended"
+            ],
+            "category": "training",
+            "type": "control",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://support.apple.com/en-us/119829",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Не обходит страницы; управляет использованием собранных Applebot данных для обучения фундаментальных моделей."
+        },
+        {
+            "id": "perplexity-bot",
+            "name": "PerplexityBot",
+            "operator": "Perplexity",
+            "tokens": [
+                "PerplexityBot"
+            ],
+            "category": "search",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Поисковые результаты и ссылки; не сбор для обучения фундаментальных моделей."
+        },
+        {
+            "id": "perplexity-user",
+            "name": "Perplexity-User",
+            "operator": "Perplexity",
+            "tokens": [
+                "Perplexity-User"
+            ],
+            "category": "user",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://docs.perplexity.ai/docs/resources/perplexity-crawlers",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Получение страницы по действию пользователя; обычно игнорирует robots.txt; не обучение."
+        },
+        {
+            "id": "meta-externalagent",
+            "name": "meta-externalagent",
+            "operator": "Meta",
+            "tokens": [],
+            "category": "mixed",
+            "type": null,
+            "historicalTokens": [],
+            "unverifiedTokens": [
+                "meta-externalagent"
+            ],
+            "source": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/",
+            "sourceStatus": "unverified",
+            "checkedAt": "2026-10-30",
+            "notes": "Официальная страница недоступна при проверке (429). Токен, назначение и тип требуют подтверждения; не считать действующим по этому справочнику."
+        },
+        {
+            "id": "meta-externalfetcher",
+            "name": "meta-externalfetcher",
+            "operator": "Meta",
+            "tokens": [],
+            "category": "mixed",
+            "type": null,
+            "historicalTokens": [],
+            "unverifiedTokens": [
+                "meta-externalfetcher"
+            ],
+            "source": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/",
+            "sourceStatus": "unverified",
+            "checkedAt": "2026-10-30",
+            "notes": "Официальная страница недоступна при проверке (429). Токен, назначение и тип требуют подтверждения; не считать действующим по этому справочнику."
+        },
+        {
+            "id": "amazon-amazonbot",
+            "name": "Amazonbot",
+            "operator": "Amazon",
+            "tokens": [
+                "Amazonbot"
+            ],
+            "category": "mixed",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://developer.amazon.com/amazonbot",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Улучшение продуктов и сервисов, предоставление информации; данные могут использоваться для обучения AI-моделей."
+        },
+        {
+            "id": "amazon-searchbot",
+            "name": "Amzn-SearchBot",
+            "operator": "Amazon",
+            "tokens": [
+                "Amzn-SearchBot"
+            ],
+            "category": "search",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://developer.amazon.com/amazonbot",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Поиск, включая Alexa; не обучение генеративных моделей. Оператор описывает fallback к правилам других поисковых ботов."
+        },
+        {
+            "id": "amazon-user",
+            "name": "Amzn-User",
+            "operator": "Amazon",
+            "tokens": [
+                "Amzn-User"
+            ],
+            "category": "user",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://developer.amazon.com/amazonbot",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Получение актуальных данных для запросов пользователя Alexa; не обучение; может соблюдать не все правила robots.txt."
+        },
+        {
+            "id": "bytedance-bytespider",
+            "name": "Bytespider",
+            "operator": "ByteDance",
+            "tokens": [],
+            "category": "mixed",
+            "type": null,
+            "historicalTokens": [],
+            "unverifiedTokens": [
+                "Bytespider"
+            ],
+            "source": "https://www.bytedance.com/bytespider",
+            "sourceStatus": "unverified",
+            "checkedAt": "2026-10-30",
+            "notes": "Имя из прежнего списка ABlock. Официальная документация токена и назначения не получена; принадлежность и тип не перепроверены по первичному источнику."
+        },
+        {
+            "id": "common-crawl-ccbot",
+            "name": "CCBot",
+            "operator": "Common Crawl",
+            "tokens": [
+                "CCBot"
+            ],
+            "category": "mixed",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://commoncrawl.org/ccbot",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Общедоступный веб-архив для различных исследований и применений, не исключительно обучение AI."
+        },
+        {
+            "id": "cohere-ai",
+            "name": "cohere-ai",
+            "operator": "Cohere",
+            "tokens": [],
+            "category": "mixed",
+            "type": null,
+            "historicalTokens": [],
+            "unverifiedTokens": [
+                "cohere-ai"
+            ],
+            "source": "https://docs.cohere.com/v2/docs/cohere-web-crawlers",
+            "sourceStatus": "unverified",
+            "checkedAt": "2026-10-30",
+            "notes": "Имя из прежнего списка ABlock. Оператор сообщает, что сейчас не использует ботов для сбора обучающих данных; таблица ботов пуста. Coherebot на странице — условный пример, не действующий токен. Исторический статус cohere-ai не подтверждён."
+        },
+        {
+            "id": "diffbot",
+            "name": "Diffbot",
+            "operator": "Diffbot",
+            "tokens": [
+                "Diffbot"
+            ],
+            "category": "mixed",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://www.diffbot.com/docs/crawl/",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Crawl API обходит сайты и извлекает структурированные данные; исключительное назначение для обучения AI не заявлено. Возможен согласованный обход robots.txt."
+        },
+        {
+            "id": "yandex-additional",
+            "name": "YandexAdditional",
+            "operator": "Яндекс",
+            "tokens": [
+                "YandexAdditional",
+                "YandexAdditionalBot"
+            ],
+            "category": "search",
+            "type": "control",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://yandex.ru/support/webmaster/ru/robot-workings/check-yandex-robots.html",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-10-30",
+            "notes": "Управление отображением уже проиндексированных страниц в быстрых ответах с YandexGPT и Поиске с Алисой; не совершает запросов для индексирования. Оба обозначения приведены оператором."
+        }
+    ]
+}
