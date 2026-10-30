@@ -840,37 +840,9 @@ function saveTabs() {
 }
 
 const MAX_REDIRECTS = 20;
-const MAX_RETIRED_REQUESTS = 8;
+const MAX_RETIRED_REQUESTS = 32;
 let redirectEpoch = 0;
 let redirectQueue = Promise.resolve();
-
-// Фильтр без удаления битов: вытесненный ID не становится новым после переполнения
-// короткого списка. Максимум 65536 бит (2048 слов) на вкладку, только session.
-// Коллизия может консервативно отклонить НОВЫЙ запрос, но никогда не принимает
-// старый как новый. При долгой жизни вкладки сбор может стать менее полным;
-// очищать фильтр до закрытия вкладки/отзыва прав нельзя — это вернуло бы старые ID.
-function redirectRequestBits(requestId) {
-    return [2166136261, 2246822519, 3266489917, 668265263].map((seed) => {
-        let hash = seed;
-        for (let i = 0; i < requestId.length; i++) {
-            hash = Math.imul(hash ^ requestId.charCodeAt(i), 16777619);
-        }
-        return (hash ^ (hash >>> 16)) & 65535;
-    });
-}
-
-function retireRedirectRequest(tab, requestId) {
-    tab.retiredRedirectFilter ??= {};
-    for (const bit of redirectRequestBits(requestId)) {
-        const word = bit >>> 5;
-        tab.retiredRedirectFilter[word] = (tab.retiredRedirectFilter[word] || 0) | (1 << (bit & 31));
-    }
-}
-
-function isRetiredRedirectRequest(tab, requestId) {
-    return !!tab?.retiredRedirectFilter && redirectRequestBits(requestId).every((bit) =>
-        (tab.retiredRedirectFilter[bit >>> 5] & (1 << (bit & 31))) !== 0);
-}
 
 /** Только безопасный HTTP(S) origin и первые 160 символов пути, без credentials/query/hash. */
 function redirectAddress(value) {
@@ -886,8 +858,8 @@ function redirectAddress(value) {
  * redirects v1 — только наблюдавшиеся HTTP-переходы главной навигации.
  * До принятия headers новая цепочка находится в pendingRedirects; данные открытого
  * документа и redirects сохраняются. 204/205 и attachment не заменяют документ.
- * retiredRedirectRequests — последние 8 вытесненных requestId; retiredRedirectFilter
- * не забывает более старые ID до закрытия вкладки/отзыва прав, включая после сна worker.
+ * retiredRedirectRequests — последние 32 вытесненных requestId, включая после сна worker.
+ * Список защищает только цепочки; сбор IP/заголовков и сброс счётчиков от него не зависят.
  * generation — UUID новой навигации, requestId — идентификатор браузера (не URL).
  * hops: {from,to,statusCode,timeStamp}, максимум 20; initialUrl/finalUrl безопасные.
  * outcome: pending/completed/error; complete — вся ли HTTP-цепочка наблюдалась.
@@ -908,11 +880,12 @@ function queueRedirect(kind, details) {
         }
         let tab = s.tabs[details.tabId];
         let chain = tab?.pendingRedirects || tab?.redirects;
-        // Совместимость с session предыдущей версии: переносим известные ID в фильтр.
-        for (const requestId of tab?.retiredRedirectRequests || []) {
-            retireRedirectRequest(tab, requestId);
+        // Удаляем служебные данные отменённого фильтра из старой session.
+        if (tab) {
+            delete tab.retiredRedirectFilter;
         }
-        if (isRetiredRedirectRequest(tab, details.requestId)) {
+        const isRetired = tab?.retiredRedirectRequests?.includes(details.requestId);
+        if (isRetired && kind !== 'headers') {
             return;
         }
         if (kind === 'start') {
@@ -925,7 +898,6 @@ function queueRedirect(kind, details) {
             tab.bytes ??= 0;
             const retired = tab.retiredRedirectRequests || [];
             if (chain) {
-                retireRedirectRequest(tab, chain.requestId);
                 retired.push(chain.requestId);
             }
             tab.retiredRedirectRequests = retired.slice(-MAX_RETIRED_REQUESTS);
@@ -942,11 +914,12 @@ function queueRedirect(kind, details) {
             tab.pendingRedirects = chain;
             s.tabs[details.tabId] = tab;
         } else {
-            if (kind === 'headers' && (!chain || chain.requestId !== details.requestId)
-                && (!chain || details.timeStamp >= chain.startedAt)) {
-                // Режим могли включить между началом запроса и ответом. Сохраняем
-                // прежний сбор IP/заголовков, но не придумываем начало цепочки.
-                chain = null;
+            if (kind === 'headers') {
+                // Заголовки собираем независимо от start и списка вытесненных ID.
+                // Вытесненный запрос при этом не получает право менять цепочки.
+                if (isRetired || !chain || chain.requestId !== details.requestId) {
+                    chain = null;
+                }
             } else if (!chain || chain.requestId !== details.requestId || chain.outcome !== 'pending') {
                 return;
             }
@@ -989,17 +962,24 @@ function queueRedirect(kind, details) {
                     }
                 }
                 const retired = tab?.retiredRedirectRequests || [];
-                if (!chain) {
+                if (!chain && !isRetired) {
                     for (const previous of [tab?.redirects, tab?.pendingRedirects]) {
                         if (previous && !retired.includes(previous.requestId)) {
-                            retireRedirectRequest(tab, previous.requestId);
                             retired.push(previous.requestId);
                         }
                     }
                 }
+                const previousTab = tab;
                 tab = {host: new URL(details.url).hostname, ip: details.ip || '', headers,
-                    blocked: {}, bytes: 0, retiredRedirectRequests: retired.slice(-MAX_RETIRED_REQUESTS),
-                    retiredRedirectFilter: tab?.retiredRedirectFilter || {}};
+                    blocked: {}, bytes: 0, retiredRedirectRequests: retired.slice(-MAX_RETIRED_REQUESTS)};
+                if (isRetired) {
+                    if (previousTab.redirects) {
+                        tab.redirects = previousTab.redirects;
+                    }
+                    if (previousTab.pendingRedirects) {
+                        tab.pendingRedirects = previousTab.pendingRedirects;
+                    }
+                }
                 if (chain) {
                     chain.responseStartedAt = details.timeStamp;
                     tab.redirects = chain;
