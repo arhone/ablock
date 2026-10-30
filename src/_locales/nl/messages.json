@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Een lijst met pagina's voor zoekmachines. Wordt in robots.txt aangegeven met een regel Sitemap:"
     },
-    "auditAi": {
-        "message": "Regels voor AI-bots"
+    "auditAiTraining": {
+        "message": "AI: training"
+    },
+    "auditAiSearch": {
+        "message": "AI: zoeken"
+    },
+    "auditAiUser": {
+        "message": "AI: gebruikersverzoeken"
+    },
+    "auditAiMixed": {
+        "message": "AI: gemengd / onbevestigd"
     },
     "auditAiHint": {
-        "message": "Of AI-bots de teksten van de site mogen verzamelen voor neurale netwerken — op basis van regels in robots.txt die de bot bij naam noemen. De extensie kent 16 zulke bots (GPTBot, ClaudeBot, Google-Extended enz.); bots met andere namen worden niet meegeteld. ‘Gesloten voor iedereen’ — de site is via User-agent: * gesloten voor alle robots, zonder aparte regels voor AI"
+        "message": "Getallen tellen catalogusvermeldingen. robots.txt bewijst geen naleving of datagebruik; een niet verboden adres is geen toestemming voor training."
     },
-    "auditAiBlocked": {
-        "message": "geblokkeerd: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Eigen groep"
     },
-    "auditAiAllowed": {
-        "message": "toegestaan"
+    "aiWildcard": {
+        "message": "Groep *"
     },
-    "auditAiNone": {
-        "message": "niet ingesteld"
+    "aiNoGroup": {
+        "message": "Geen toepasselijke groep"
     },
-    "auditAiAll": {
-        "message": "gesloten voor iedereen"
+    "aiUnknown": {
+        "message": "Huidig adres: onbekend"
+    },
+    "aiCurrentAllowed": {
+        "message": "Huidig adres: geen passend verbod"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Huidig adres: verboden volgens regels"
+    },
+    "aiRestrictions": {
+        "message": "Padbeperkingen aanwezig"
+    },
+    "aiExceptions": {
+        "message": "Allow-uitzonderingen aanwezig"
+    },
+    "aiUnverified": {
+        "message": "Token of doel onbevestigd"
+    },
+    "aiControl": {
+        "message": "Token voor datagebruik; geen zelfstandige crawler"
+    },
+    "aiUserHint": {
+        "message": "Ophalen op gebruikersverzoek verschilt van automatisch crawlen; robots.txt is mogelijk niet van toepassing."
+    },
+    "aiMissing": {
+        "message": "robots.txt ontbreekt; resultaat onbekend."
+    },
+    "aiUnavailable": {
+        "message": "Regels niet beschikbaar; resultaat onbekend."
     },
     "auditLlms": {
         "message": "llms.txt"

@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "En liste over sider til søgemaskiner. Angives i robots.txt med en Sitemap:-linje"
     },
-    "auditAi": {
-        "message": "Regler for AI-bots"
+    "auditAiTraining": {
+        "message": "AI: træning"
+    },
+    "auditAiSearch": {
+        "message": "AI: søgning"
+    },
+    "auditAiUser": {
+        "message": "AI: brugeranmodninger"
+    },
+    "auditAiMixed": {
+        "message": "AI: blandet / ubekræftet"
     },
     "auditAiHint": {
-        "message": "Om AI-bots må indsamle webstedets tekster til neurale netværk — ud fra regler i robots.txt, der nævner botten ved navn. Udvidelsen kender 16 sådanne bots (GPTBot, ClaudeBot, Google-Extended m.fl.); bots med andre navne tælles ikke med. »Lukket for alle« — webstedet er lukket for alle robotter via User-agent: *, uden separate regler for AI"
+        "message": "Tallene tæller katalogposter. robots.txt beviser hverken overholdelse eller databrug; en ikke forbudt adresse er ikke samtykke til træning."
     },
-    "auditAiBlocked": {
-        "message": "blokeret: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Egen gruppe"
     },
-    "auditAiAllowed": {
-        "message": "tilladt"
+    "aiWildcard": {
+        "message": "Gruppe *"
     },
-    "auditAiNone": {
-        "message": "ikke angivet"
+    "aiNoGroup": {
+        "message": "Ingen gældende gruppe"
     },
-    "auditAiAll": {
-        "message": "lukket for alle"
+    "aiUnknown": {
+        "message": "Aktuel adresse: ukendt"
+    },
+    "aiCurrentAllowed": {
+        "message": "Aktuel adresse: intet tilsvarende forbud"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Aktuel adresse: forbudt af reglerne"
+    },
+    "aiRestrictions": {
+        "message": "Stibegrænsninger findes"
+    },
+    "aiExceptions": {
+        "message": "Allow-undtagelser findes"
+    },
+    "aiUnverified": {
+        "message": "Token eller formål ubekræftet"
+    },
+    "aiControl": {
+        "message": "Token til styring af databrug; ingen selvstændig crawler"
+    },
+    "aiUserHint": {
+        "message": "Hentning på brugerens anmodning adskiller sig fra automatisk crawling; robots.txt gælder muligvis ikke."
+    },
+    "aiMissing": {
+        "message": "robots.txt mangler; resultat ukendt."
+    },
+    "aiUnavailable": {
+        "message": "Reglerne er utilgængelige; resultat ukendt."
     },
     "auditLlms": {
         "message": "llms.txt"

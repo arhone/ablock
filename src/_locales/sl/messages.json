@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Seznam strani za iskalnike. Navede se v robots.txt z vrstico Sitemap:"
     },
-    "auditAi": {
-        "message": "Pravila za UI-bote"
+    "auditAiTraining": {
+        "message": "UI: učenje"
+    },
+    "auditAiSearch": {
+        "message": "UI: iskanje"
+    },
+    "auditAiUser": {
+        "message": "UI: zahteve uporabnikov"
+    },
+    "auditAiMixed": {
+        "message": "UI: mešano / nepotrjeno"
     },
     "auditAiHint": {
-        "message": "Ali smejo UI-boti zbirati besedila spletnega mesta za nevronske mreže — po pravilih v robots.txt, ki bota navajajo po imenu. Razširitev pozna 16 takih botov (GPTBot, ClaudeBot, Google-Extended itd.); boti z drugimi imeni se ne štejejo. »Zaprto za vse« — spletno mesto je zaprto za vse robote prek User-agent: *, brez posebnih pravil za UI"
+        "message": "Številke pomenijo vnose v katalogu. robots.txt ne dokazuje spoštovanja pravil ali uporabe podatkov; naslov brez prepovedi ne pomeni soglasja za učenje."
     },
-    "auditAiBlocked": {
-        "message": "prepovedano: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Ločena skupina"
     },
-    "auditAiAllowed": {
-        "message": "dovoljeno"
+    "aiWildcard": {
+        "message": "Skupina *"
     },
-    "auditAiNone": {
-        "message": "ni nastavljeno"
+    "aiNoGroup": {
+        "message": "Ni ustrezne skupine"
     },
-    "auditAiAll": {
-        "message": "zaprto za vse"
+    "aiUnknown": {
+        "message": "Trenutni naslov: neznano"
+    },
+    "aiCurrentAllowed": {
+        "message": "Trenutni naslov: ni ustrezne prepovedi"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Trenutni naslov: prepovedan s pravili"
+    },
+    "aiRestrictions": {
+        "message": "Obstajajo omejitve poti"
+    },
+    "aiExceptions": {
+        "message": "Obstajajo izjeme Allow"
+    },
+    "aiUnverified": {
+        "message": "Žeton ali namen ni potrjen"
+    },
+    "aiControl": {
+        "message": "Žeton za upravljanje uporabe podatkov; ni samostojnega pajka"
+    },
+    "aiUserHint": {
+        "message": "Pridobivanje na zahtevo uporabnika se razlikuje od samodejnega pregledovanja; robots.txt se morda ne uporablja."
+    },
+    "aiMissing": {
+        "message": "robots.txt manjka; rezultat je neznan."
+    },
+    "aiUnavailable": {
+        "message": "Pravila niso na voljo; rezultat je neznan."
     },
     "auditLlms": {
         "message": "llms.txt"

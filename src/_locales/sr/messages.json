@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Списак страница за претраживаче. Наводи се у robots.txt редом Sitemap:"
     },
-    "auditAi": {
-        "message": "Правила за ВИ ботове"
+    "auditAiTraining": {
+        "message": "ВИ: обучавање"
+    },
+    "auditAiSearch": {
+        "message": "ВИ: претрага"
+    },
+    "auditAiUser": {
+        "message": "ВИ: захтеви корисника"
+    },
+    "auditAiMixed": {
+        "message": "ВИ: мешовито / непотврђено"
     },
     "auditAiHint": {
-        "message": "Да ли ВИ ботови смеју да прикупљају текстове сајта за неуронске мреже — по правилима у robots.txt где је бот наведен по имену. Проширење зна 16 таквих ботова (GPTBot, ClaudeBot, Google-Extended и др.); ботови са другим именима се не рачунају. „Затворено за све“ — сајт је затворен за све роботе преко User-agent: *, посебних правила за ВИ нема"
+        "message": "Бројеви означавају ставке каталога. robots.txt не доказује поштовање правила нити употребу података; незабрањена адреса није пристанак на обучавање."
     },
-    "auditAiBlocked": {
-        "message": "забрањено: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Посебна група"
     },
-    "auditAiAllowed": {
-        "message": "дозвољено"
+    "aiWildcard": {
+        "message": "Група *"
     },
-    "auditAiNone": {
-        "message": "нису задата"
+    "aiNoGroup": {
+        "message": "Нема применљиве групе"
     },
-    "auditAiAll": {
-        "message": "затворено за све"
+    "aiUnknown": {
+        "message": "Тренутна адреса: непознато"
+    },
+    "aiCurrentAllowed": {
+        "message": "Тренутна адреса: нема одговарајуће забране"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Тренутна адреса: забрањена правилима"
+    },
+    "aiRestrictions": {
+        "message": "Постоје ограничења путања"
+    },
+    "aiExceptions": {
+        "message": "Постоје изузеци Allow"
+    },
+    "aiUnverified": {
+        "message": "Токен или намена нису потврђени"
+    },
+    "aiControl": {
+        "message": "Токен за управљање употребом података; нема самосталног робота"
+    },
+    "aiUserHint": {
+        "message": "Преузимање на захтев корисника разликује се од аутоматског обиласка; robots.txt се можда не примењује."
+    },
+    "aiMissing": {
+        "message": "robots.txt недостаје; резултат је непознат."
+    },
+    "aiUnavailable": {
+        "message": "Правила нису доступна; резултат је непознат."
     },
     "auditLlms": {
         "message": "llms.txt"

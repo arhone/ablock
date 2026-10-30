@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Orodha ya kurasa kwa injini za utafutaji. Hutajwa kwenye robots.txt kwa mstari wa Sitemap:"
     },
-    "auditAi": {
-        "message": "Kanuni za boti za AI"
+    "auditAiTraining": {
+        "message": "AI: mafunzo"
+    },
+    "auditAiSearch": {
+        "message": "AI: utafutaji"
+    },
+    "auditAiUser": {
+        "message": "AI: maombi ya watumiaji"
+    },
+    "auditAiMixed": {
+        "message": "AI: mchanganyiko / haijathibitishwa"
     },
     "auditAiHint": {
-        "message": "Kama boti za AI zinaruhusiwa kukusanya maandishi ya tovuti kwa mitandao ya neva — kulingana na kanuni za robots.txt zinazotaja boti kwa jina. Kiendelezi kinajua boti 16 kama hizo (GPTBot, ClaudeBot, Google-Extended n.k.); boti zenye majina mengine hazihesabiwi. “Imefungwa kwa wote” — tovuti imefungwa kwa roboti zote kupitia User-agent: *, bila kanuni maalum za AI"
+        "message": "Nambari ni vipengee vya katalogi. robots.txt haithibitishi kufuatwa kwa sheria au matumizi ya data; anwani isiyokatazwa si idhini ya mafunzo."
     },
-    "auditAiBlocked": {
-        "message": "zimezuiwa: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Kundi maalumu"
     },
-    "auditAiAllowed": {
-        "message": "zinaruhusiwa"
+    "aiWildcard": {
+        "message": "Kundi *"
     },
-    "auditAiNone": {
-        "message": "haijawekwa"
+    "aiNoGroup": {
+        "message": "Hakuna kundi linalotumika"
     },
-    "auditAiAll": {
-        "message": "imefungwa kwa wote"
+    "aiUnknown": {
+        "message": "Anwani ya sasa: haijulikani"
+    },
+    "aiCurrentAllowed": {
+        "message": "Anwani ya sasa: hakuna katazo linalolingana"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Anwani ya sasa: imekatazwa na sheria"
+    },
+    "aiRestrictions": {
+        "message": "Kuna vizuizi vya njia"
+    },
+    "aiExceptions": {
+        "message": "Kuna vighairi vya Allow"
+    },
+    "aiUnverified": {
+        "message": "Tokeni au kusudi halijathibitishwa"
+    },
+    "aiControl": {
+        "message": "Tokeni ya kudhibiti matumizi ya data; si kitambazaji huru"
+    },
+    "aiUserHint": {
+        "message": "Kuchukua ukurasa kwa ombi la mtumiaji ni tofauti na utambazaji wa kiotomatiki; robots.txt huenda isitumike."
+    },
+    "aiMissing": {
+        "message": "Hakuna robots.txt; matokeo hayajulikani."
+    },
+    "aiUnavailable": {
+        "message": "Sheria hazipatikani; matokeo hayajulikani."
     },
     "auditLlms": {
         "message": "llms.txt"

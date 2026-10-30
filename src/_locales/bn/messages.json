@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "সার্চ ইঞ্জিনের জন্য পৃষ্ঠার তালিকা। robots.txt-এ Sitemap: লাইনে উল্লেখ করা হয়"
     },
-    "auditAi": {
-        "message": "AI বটের নিয়ম"
+    "auditAiTraining": {
+        "message": "AI: প্রশিক্ষণ"
+    },
+    "auditAiSearch": {
+        "message": "AI: অনুসন্ধান"
+    },
+    "auditAiUser": {
+        "message": "AI: ব্যবহারকারীর অনুরোধ"
+    },
+    "auditAiMixed": {
+        "message": "AI: মিশ্র / অনিশ্চিত"
     },
     "auditAiHint": {
-        "message": "AI বট নিউরাল নেটওয়ার্কের জন্য সাইটের টেক্সট সংগ্রহ করতে পারবে কি না — robots.txt-এর যেসব নিয়মে বটের নাম আছে সেগুলোর ভিত্তিতে। এক্সটেনশন এমন ১৬টি বট চেনে (GPTBot, ClaudeBot, Google-Extended ইত্যাদি); অন্য নামের বট গোনা হয় না। «সবার জন্য বন্ধ» — User-agent: * দিয়ে সাইটটি সব রোবটের জন্য বন্ধ, AI-এর জন্য আলাদা নিয়ম নেই"
+        "message": "সংখ্যাগুলি তালিকার এন্ট্রি। robots.txt নিয়ম মানা বা ডেটা ব্যবহারের প্রমাণ নয়; ঠিকানা নিষিদ্ধ না হওয়া প্রশিক্ষণের সম্মতি নয়।"
     },
-    "auditAiBlocked": {
-        "message": "নিষিদ্ধ: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "আলাদা গোষ্ঠী"
     },
-    "auditAiAllowed": {
-        "message": "অনুমোদিত"
+    "aiWildcard": {
+        "message": "গোষ্ঠী *"
     },
-    "auditAiNone": {
-        "message": "নির্ধারিত নয়"
+    "aiNoGroup": {
+        "message": "প্রযোজ্য গোষ্ঠী নেই"
     },
-    "auditAiAll": {
-        "message": "সবার জন্য বন্ধ"
+    "aiUnknown": {
+        "message": "বর্তমান ঠিকানা: অজানা"
+    },
+    "aiCurrentAllowed": {
+        "message": "বর্তমান ঠিকানা: মিলে যাওয়া নিষেধ নেই"
+    },
+    "aiCurrentDisallowed": {
+        "message": "বর্তমান ঠিকানা: নিয়মে নিষিদ্ধ"
+    },
+    "aiRestrictions": {
+        "message": "পথের সীমাবদ্ধতা আছে"
+    },
+    "aiExceptions": {
+        "message": "Allow ব্যতিক্রম আছে"
+    },
+    "aiUnverified": {
+        "message": "টোকেন বা উদ্দেশ্য নিশ্চিত নয়"
+    },
+    "aiControl": {
+        "message": "ডেটা ব্যবহার নিয়ন্ত্রণের টোকেন; স্বতন্ত্র ক্রলার নয়"
+    },
+    "aiUserHint": {
+        "message": "ব্যবহারকারীর অনুরোধে পৃষ্ঠা আনা স্বয়ংক্রিয় ক্রলিং থেকে আলাদা; robots.txt প্রযোজ্য নাও হতে পারে।"
+    },
+    "aiMissing": {
+        "message": "robots.txt নেই; ফলাফল অজানা।"
+    },
+    "aiUnavailable": {
+        "message": "নিয়ম অনুপলব্ধ; ফলাফল অজানা।"
     },
     "auditLlms": {
         "message": "llms.txt"

@@ -581,11 +581,13 @@ async function loadData(name) {
 
 /**
  * Каталог остаётся данными расширения; аудит запускается в документе bootstrap.
+ * Подписи каталога сохраняем рядом с инъекцией только в окне — без второго чтения JSON.
  * @param {number} tabId
- * @returns {Promise<?chrome.scripting.InjectionResult>}
+ * @returns {Promise<?(chrome.scripting.InjectionResult & {aiBots: Object[]})>}
  */
 async function runAudit(tabId) {
     let tokens = null;
+    let bots = [];
     try {
         const catalog = await loadData('ai-bots');
         const seen = new Set();
@@ -601,6 +603,8 @@ async function runAudit(tabId) {
         })));
         if (tokens.length > 128) {
             tokens = null;
+        } else {
+            bots = catalog.bots.map(({id, name, category, type}) => ({id, name, category, type}));
         }
     } catch {
         tokens = null;
@@ -614,7 +618,7 @@ async function runAudit(tabId) {
     }
     const [injection] = await chrome.scripting.executeScript({target: {tabId, documentIds: [bootstrap.documentId]},
         files: ['page/audit.js'], world: 'ISOLATED'});
-    return injection?.documentId === bootstrap.documentId ? injection : null;
+    return injection?.documentId === bootstrap.documentId ? {...injection, aiBots: bots} : null;
 }
 
 /**
@@ -1402,6 +1406,41 @@ function formatMarketingCauses(result) {
 }
 
 /**
+ * Категория каталога, а не оценка поведения ботов. Каждый токен сохраняет своё
+ * происхождение правила и результат для адреса; aliases не смешиваем в один вердикт.
+ * @param {?Object} section
+ * @param {Object[]} bots
+ * @param {string} category
+ * @returns {{value: string, section: Object, items: Object[], notes: string[]}}
+ */
+function formatAiCauses(section, bots, category) {
+    const valid = ['ok', 'partial'].includes(section?.status) && section?.data?.file === 'present'
+        && Array.isArray(section.data.tokens);
+    const selected = bots.filter(bot => bot.category === category);
+    const items = selected.map(bot => {
+        const tokens = valid ? section.data.tokens.filter(token => token.id === bot.id) : [];
+        const facts = tokens.map(token => [token.token,
+            t({named: 'aiNamed', wildcard: 'aiWildcard', none: 'aiNoGroup'}[token.group] || 'aiUnknown'),
+            t({allowed: 'aiCurrentAllowed', disallowed: 'aiCurrentDisallowed'}[token.current] || 'aiUnknown'),
+            token.restrictions === true ? t('aiRestrictions') : '',
+            token.exceptions === true ? t('aiExceptions') : '',
+            token.status === 'unverified' ? t('aiUnverified') : ''].filter(Boolean).join(' · '));
+        return {label: bot.name, value: [bot.type === 'control' ? t('aiControl') : '',
+            ...facts, ...(!tokens.length ? [t('aiUnknown')] : [])].filter(Boolean).join(' · ')};
+    });
+    const notes = [t('auditAiHint')];
+    if (category === 'user') {
+        notes.push(t('aiUserHint'));
+    }
+    if (!valid) {
+        notes.push(t(section?.data?.file === 'missing' ? 'aiMissing' : 'aiUnavailable'));
+    }
+    return {value: valid && selected.length ? formatNumber(selected.length) : '—',
+        // Даже при недоступном сборщике оставляем раскрытие с объяснением неизвестности.
+        section: {status: 'ok', truncated: Boolean(section?.truncated || section?.status === 'partial')}, items, notes};
+}
+
+/**
  * Разделы под табло оценки: строки по группам оценки (приватность, скорость, безопасность, SEO, доступность)
  * и «Роботы и ИИ» без оценки. Строка — название, значение и цвет; пояснение — при наведении.
  * Замечания — жёлтые и красные строки. Балл группы в заголовке раздела ставит renderScore
@@ -1412,9 +1451,10 @@ function formatMarketingCauses(result) {
  * @param {Array<{name: string, hosts: string[], state: string}>} companies кто следит
  * @param {Array<Object>} [catalog] полный справочник владельцев источников
  * @param {?Object} [marketing] принятый снимок настроек того же документа
+ * @param {Array<Object>} [aiBots] локальный каталог ИИ
  * @returns {Map<string, {name: string, state: string}>} строки по ключам — для оценки
  */
-function renderAudit(audit, server, extended, info, companies, catalog = [], marketing = null) {
+function renderAudit(audit, server, extended, info, companies, catalog = [], marketing = null, aiBots = []) {
     const body = document.getElementById('audit-body');
     // «О сайте» — в разметке, остальное — заново
     for (const el of [...body.children].filter((el) => el.id !== 'about')) {
@@ -1690,13 +1730,12 @@ function renderAudit(audit, server, extended, info, companies, catalog = [], mar
         }
         if (robots) {
             row('auditSitemap', robots.sitemap ? yes : no, robots.sitemap ? 'good' : 'none');
-            // Считаем только ботов, названных по имени: «User-agent: *» закрывает сайт всем, а не именно ИИ
-            const blockedBots = robots.aiBlocked || [];
-            const ai = row('auditAi', robots.aiNamed === null ? '—' : blockedBots.length ? t('auditAiBlocked', formatNumber(blockedBots.length))
-                : robots.aiNamed ? t('auditAiAllowed') : robots.closed ? t('auditAiAll') : t('auditAiNone'), 'none');
-            if (blockedBots.length) {
-                ai.title += '\n' + blockedBots.join(', ');
-            }
+        }
+        for (const [category, key] of [['training', 'auditAiTraining'], ['search', 'auditAiSearch'],
+            ['user', 'auditAiUser'], ['mixed', 'auditAiMixed']]) {
+            const ai = formatAiCauses(audit.causes?.version === 1 ? audit.causes.robotsAi : null, aiBots, category);
+            const el = row(key, ai.value, 'none', true, {hint: t('auditAiHint')});
+            renderAuditCauses(el, ai.section, ai.items, ai.notes);
         }
         // Google llms.txt не использует — есть файл или нет, только для сведения
         row('auditLlms', unchecked.llms ? '—' : seo.llms ? yes : no, 'none');
@@ -3196,7 +3235,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         acceptAudit(tab.id, auditInjection, info), acceptMarketing(tab.id, marketingInjection, info)
     ]);
     renderTech(tech, server);
-    const rows = renderAudit(audit, server, extended, info, companies, catalog, marketing);
+    const rows = renderAudit(audit, server, extended, info, companies, catalog, marketing,
+        auditInjection?.aiBots || []);
     renderRedirectCauses(await readTabRedirects(tab.id));
     rescore = () => {
         score.result = renderScore(info, companies, audit, rows, server);

@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "提供給搜尋引擎的頁面清單。在 robots.txt 中以 Sitemap: 行指定"
     },
-    "auditAi": {
-        "message": "AI 機器人規則"
+    "auditAiTraining": {
+        "message": "AI：訓練"
+    },
+    "auditAiSearch": {
+        "message": "AI：搜尋"
+    },
+    "auditAiUser": {
+        "message": "AI：使用者請求"
+    },
+    "auditAiMixed": {
+        "message": "AI：混合／未確認"
     },
     "auditAiHint": {
-        "message": "AI 機器人是否可以為神經網路收集網站的文字 — 依據 robots.txt 中指名該機器人的規則。擴充功能認得 16 個這類機器人（GPTBot、ClaudeBot、Google-Extended 等）；其他名稱的機器人不計入。「全部封鎖」— 網站透過 User-agent: * 對所有機器人關閉，沒有針對 AI 的個別規則"
+        "message": "數字表示目錄項目數。robots.txt 規則不能證明規則受到遵守或資料被使用；網址未被禁止不代表同意用於訓練。"
     },
-    "auditAiBlocked": {
-        "message": "已封鎖：$COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "專用群組"
     },
-    "auditAiAllowed": {
-        "message": "允許"
+    "aiWildcard": {
+        "message": "* 群組"
     },
-    "auditAiNone": {
-        "message": "未設定"
+    "aiNoGroup": {
+        "message": "無適用群組"
     },
-    "auditAiAll": {
-        "message": "全部封鎖"
+    "aiUnknown": {
+        "message": "目前網址：未知"
+    },
+    "aiCurrentAllowed": {
+        "message": "目前網址：無相符的禁止規則"
+    },
+    "aiCurrentDisallowed": {
+        "message": "目前網址：被規則禁止"
+    },
+    "aiRestrictions": {
+        "message": "存在路徑限制"
+    },
+    "aiExceptions": {
+        "message": "存在 Allow 例外"
+    },
+    "aiUnverified": {
+        "message": "權杖或用途未確認"
+    },
+    "aiControl": {
+        "message": "資料使用控制權杖；不是獨立爬蟲"
+    },
+    "aiUserHint": {
+        "message": "依使用者請求擷取頁面不同於自動檢索；robots.txt 可能不適用。"
+    },
+    "aiMissing": {
+        "message": "robots.txt 不存在；結果未知。"
+    },
+    "aiUnavailable": {
+        "message": "規則無法使用；結果未知。"
     },
     "auditLlms": {
         "message": "llms.txt"

@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Seznam stránek pro vyhledávače. Uvádí se v robots.txt řádkem Sitemap:"
     },
-    "auditAi": {
-        "message": "Pravidla pro AI boty"
+    "auditAiTraining": {
+        "message": "AI: trénování"
+    },
+    "auditAiSearch": {
+        "message": "AI: vyhledávání"
+    },
+    "auditAiUser": {
+        "message": "AI: požadavky uživatelů"
+    },
+    "auditAiMixed": {
+        "message": "AI: smíšené / nepotvrzené"
     },
     "auditAiHint": {
-        "message": "Zda mohou AI boti sbírat texty webu pro neuronové sítě — podle pravidel robots.txt, která bota jmenují. Rozšíření zná 16 takových botů (GPTBot, ClaudeBot, Google-Extended atd.); boti s jinými jmény se nepočítají. „Zavřeno pro všechny“ — web je zavřený všem robotům přes User-agent: *, bez zvláštních pravidel pro AI"
+        "message": "Čísla označují položky katalogu. robots.txt nedokazuje dodržování pravidel ani využití dat; nezakázaná adresa není souhlasem s trénováním."
     },
-    "auditAiBlocked": {
-        "message": "zakázáno: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Vlastní skupina"
     },
-    "auditAiAllowed": {
-        "message": "povoleno"
+    "aiWildcard": {
+        "message": "Skupina *"
     },
-    "auditAiNone": {
-        "message": "nenastaveno"
+    "aiNoGroup": {
+        "message": "Žádná použitelná skupina"
     },
-    "auditAiAll": {
-        "message": "zavřeno pro všechny"
+    "aiUnknown": {
+        "message": "Aktuální adresa: neznámá"
+    },
+    "aiCurrentAllowed": {
+        "message": "Aktuální adresa: bez odpovídajícího zákazu"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Aktuální adresa: zakázaná pravidly"
+    },
+    "aiRestrictions": {
+        "message": "Existují omezení cest"
+    },
+    "aiExceptions": {
+        "message": "Existují výjimky Allow"
+    },
+    "aiUnverified": {
+        "message": "Token nebo účel nepotvrzen"
+    },
+    "aiControl": {
+        "message": "Token řízení využití dat; žádný samostatný robot"
+    },
+    "aiUserHint": {
+        "message": "Načítání na žádost uživatele se liší od automatického procházení; robots.txt se nemusí uplatnit."
+    },
+    "aiMissing": {
+        "message": "robots.txt chybí; výsledek neznámý."
+    },
+    "aiUnavailable": {
+        "message": "Pravidla nedostupná; výsledek neznámý."
     },
     "auditLlms": {
         "message": "llms.txt"

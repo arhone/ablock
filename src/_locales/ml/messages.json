@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "സെർച്ച് എഞ്ചിനുകൾക്കുള്ള പേജുകളുടെ പട്ടിക. robots.txt-ൽ Sitemap: വരി വഴി സൂചിപ്പിക്കുന്നു"
     },
-    "auditAi": {
-        "message": "AI ബോട്ടുകൾക്കുള്ള നിയമങ്ങൾ"
+    "auditAiTraining": {
+        "message": "AI: പരിശീലനം"
+    },
+    "auditAiSearch": {
+        "message": "AI: തിരയൽ"
+    },
+    "auditAiUser": {
+        "message": "AI: ഉപയോക്തൃ അഭ്യർത്ഥനകൾ"
+    },
+    "auditAiMixed": {
+        "message": "AI: മിശ്രം / സ്ഥിരീകരിക്കാത്തത്"
     },
     "auditAiHint": {
-        "message": "ന്യൂറൽ നെറ്റ്‌വർക്കുകൾക്കായി സൈറ്റിന്റെ ടെക്സ്റ്റുകൾ AI ബോട്ടുകൾക്ക് ശേഖരിക്കാമോ — ബോട്ടിന്റെ പേര് പറയുന്ന robots.txt നിയമങ്ങളുടെ അടിസ്ഥാനത്തിൽ. എക്സ്റ്റൻഷന് ഇത്തരം 16 ബോട്ടുകളെ അറിയാം (GPTBot, ClaudeBot, Google-Extended തുടങ്ങിയവ); മറ്റ് പേരുകളുള്ള ബോട്ടുകൾ കണക്കാക്കില്ല. «എല്ലാവർക്കും അടച്ചു» — User-agent: * വഴി സൈറ്റ് എല്ലാ റോബോട്ടുകൾക്കും അടച്ചിരിക്കുന്നു, AI-ക്ക് പ്രത്യേക നിയമങ്ങളില്ല"
+        "message": "സംഖ്യകൾ പട്ടികയിലെ എൻട്രികളാണ്. robots.txt പാലനമോ ഡാറ്റ ഉപയോഗമോ തെളിയിക്കുന്നില്ല; വിലക്കില്ലാത്ത വിലാസം പരിശീലനത്തിനുള്ള സമ്മതമല്ല."
     },
-    "auditAiBlocked": {
-        "message": "നിരോധിച്ചത്: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "പ്രത്യേക ഗ്രൂപ്പ്"
     },
-    "auditAiAllowed": {
-        "message": "അനുവദിച്ചു"
+    "aiWildcard": {
+        "message": "ഗ്രൂപ്പ് *"
     },
-    "auditAiNone": {
-        "message": "സജ്ജമാക്കിയിട്ടില്ല"
+    "aiNoGroup": {
+        "message": "ബാധകമായ ഗ്രൂപ്പില്ല"
     },
-    "auditAiAll": {
-        "message": "എല്ലാവർക്കും അടച്ചു"
+    "aiUnknown": {
+        "message": "നിലവിലെ വിലാസം: അജ്ഞാതം"
+    },
+    "aiCurrentAllowed": {
+        "message": "നിലവിലെ വിലാസം: പൊരുത്തപ്പെടുന്ന വിലക്കില്ല"
+    },
+    "aiCurrentDisallowed": {
+        "message": "നിലവിലെ വിലാസം: നിയമങ്ങൾ വിലക്കുന്നു"
+    },
+    "aiRestrictions": {
+        "message": "പാതാ നിയന്ത്രണങ്ങളുണ്ട്"
+    },
+    "aiExceptions": {
+        "message": "Allow ഒഴിവുകളുണ്ട്"
+    },
+    "aiUnverified": {
+        "message": "ടോക്കനോ ഉദ്ദേശ്യമോ സ്ഥിരീകരിച്ചിട്ടില്ല"
+    },
+    "aiControl": {
+        "message": "ഡാറ്റ ഉപയോഗ നിയന്ത്രണ ടോക്കൻ; സ്വതന്ത്ര ക്രോളർ അല്ല"
+    },
+    "aiUserHint": {
+        "message": "ഉപയോക്താവിന്റെ അഭ്യർത്ഥനപ്രകാരം ലഭ്യമാക്കുന്നത് സ്വയമേവയുള്ള ക്രോളിംഗിൽനിന്ന് വ്യത്യസ്തമാണ്; robots.txt ബാധകമാകണമെന്നില്ല."
+    },
+    "aiMissing": {
+        "message": "robots.txt ഇല്ല; ഫലം അജ്ഞാതം."
+    },
+    "aiUnavailable": {
+        "message": "നിയമങ്ങൾ ലഭ്യമല്ല; ഫലം അജ്ഞാതം."
     },
     "auditLlms": {
         "message": "llms.txt"

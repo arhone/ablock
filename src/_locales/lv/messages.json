@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Lapu saraksts meklētājiem. Norāda robots.txt ar rindu Sitemap:"
     },
-    "auditAi": {
-        "message": "Noteikumi MI robotiem"
+    "auditAiTraining": {
+        "message": "MI: apmācība"
+    },
+    "auditAiSearch": {
+        "message": "MI: meklēšana"
+    },
+    "auditAiUser": {
+        "message": "MI: lietotāju pieprasījumi"
+    },
+    "auditAiMixed": {
+        "message": "MI: jaukts / neapstiprināts"
     },
     "auditAiHint": {
-        "message": "Vai MI roboti drīkst vākt vietnes tekstus neironu tīkliem — pēc robots.txt noteikumiem, kuros robots nosaukts vārdā. Paplašinājums zina 16 šādus robotus (GPTBot, ClaudeBot, Google-Extended u. c.); roboti ar citiem nosaukumiem netiek ieskaitīti. “Slēgts visiem” — vietne ir slēgta visiem robotiem ar User-agent: *, bez atsevišķiem noteikumiem MI"
+        "message": "Skaitļi apzīmē kataloga ierakstus. robots.txt nepierāda noteikumu ievērošanu vai datu izmantošanu; neaizliegta adrese nav piekrišana apmācībai."
     },
-    "auditAiBlocked": {
-        "message": "aizliegti: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Atsevišķa grupa"
     },
-    "auditAiAllowed": {
-        "message": "atļauts"
+    "aiWildcard": {
+        "message": "Grupa *"
     },
-    "auditAiNone": {
-        "message": "nav norādīts"
+    "aiNoGroup": {
+        "message": "Nav piemērojamas grupas"
     },
-    "auditAiAll": {
-        "message": "slēgts visiem"
+    "aiUnknown": {
+        "message": "Pašreizējā adrese: nezināms"
+    },
+    "aiCurrentAllowed": {
+        "message": "Pašreizējā adrese: nav atbilstoša aizlieguma"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Pašreizējā adrese: aizliegta noteikumos"
+    },
+    "aiRestrictions": {
+        "message": "Ir ceļu ierobežojumi"
+    },
+    "aiExceptions": {
+        "message": "Ir Allow izņēmumi"
+    },
+    "aiUnverified": {
+        "message": "Marķieris vai mērķis nav apstiprināts"
+    },
+    "aiControl": {
+        "message": "Datu izmantošanas vadības marķieris; nav patstāvīgas rāpuļprogrammas"
+    },
+    "aiUserHint": {
+        "message": "Iegūšana pēc lietotāja pieprasījuma atšķiras no automātiskas pārmeklēšanas; robots.txt var nebūt piemērojams."
+    },
+    "aiMissing": {
+        "message": "Nav robots.txt; rezultāts nezināms."
+    },
+    "aiUnavailable": {
+        "message": "Noteikumi nav pieejami; rezultāts nezināms."
     },
     "auditLlms": {
         "message": "llms.txt"

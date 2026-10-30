@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "O listă de pagini pentru motoarele de căutare. Se indică în robots.txt cu o linie Sitemap:"
     },
-    "auditAi": {
-        "message": "Reguli pentru boții IA"
+    "auditAiTraining": {
+        "message": "IA: antrenare"
+    },
+    "auditAiSearch": {
+        "message": "IA: căutare"
+    },
+    "auditAiUser": {
+        "message": "IA: cereri ale utilizatorilor"
+    },
+    "auditAiMixed": {
+        "message": "IA: mixt / neconfirmat"
     },
     "auditAiHint": {
-        "message": "Dacă boții IA pot colecta textele site-ului pentru rețele neuronale — după regulile din robots.txt care numesc botul. Extensia cunoaște 16 astfel de boți (GPTBot, ClaudeBot, Google-Extended etc.); boții cu alte nume nu sunt luați în calcul. „Închis pentru toți” — site-ul este închis pentru toți roboții prin User-agent: *, fără reguli separate pentru IA"
+        "message": "Numerele reprezintă intrări din catalog. robots.txt nu dovedește respectarea regulilor sau utilizarea datelor; o adresă neinterzisă nu înseamnă consimțământ pentru antrenare."
     },
-    "auditAiBlocked": {
-        "message": "blocați: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Grup dedicat"
     },
-    "auditAiAllowed": {
-        "message": "permis"
+    "aiWildcard": {
+        "message": "Grup *"
     },
-    "auditAiNone": {
-        "message": "nespecificat"
+    "aiNoGroup": {
+        "message": "Niciun grup aplicabil"
     },
-    "auditAiAll": {
-        "message": "închis pentru toți"
+    "aiUnknown": {
+        "message": "Adresa curentă: necunoscută"
+    },
+    "aiCurrentAllowed": {
+        "message": "Adresa curentă: nicio interdicție corespunzătoare"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Adresa curentă: interzisă de reguli"
+    },
+    "aiRestrictions": {
+        "message": "Există restricții de căi"
+    },
+    "aiExceptions": {
+        "message": "Există excepții Allow"
+    },
+    "aiUnverified": {
+        "message": "Token sau scop neconfirmat"
+    },
+    "aiControl": {
+        "message": "Token de control al utilizării datelor; fără robot independent"
+    },
+    "aiUserHint": {
+        "message": "Preluarea la cererea utilizatorului diferă de accesarea automată; robots.txt poate să nu se aplice."
+    },
+    "aiMissing": {
+        "message": "robots.txt lipsește; rezultat necunoscut."
+    },
+    "aiUnavailable": {
+        "message": "Reguli indisponibile; rezultat necunoscut."
     },
     "auditLlms": {
         "message": "llms.txt"

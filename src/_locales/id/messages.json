@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Daftar halaman untuk mesin pencari. Ditulis di robots.txt dengan baris Sitemap:"
     },
-    "auditAi": {
-        "message": "Aturan untuk bot AI"
+    "auditAiTraining": {
+        "message": "AI: pelatihan"
+    },
+    "auditAiSearch": {
+        "message": "AI: pencarian"
+    },
+    "auditAiUser": {
+        "message": "AI: permintaan pengguna"
+    },
+    "auditAiMixed": {
+        "message": "AI: campuran / belum terverifikasi"
     },
     "auditAiHint": {
-        "message": "Apakah bot AI boleh mengumpulkan teks situs untuk jaringan saraf — menurut aturan di robots.txt yang menyebut nama bot. Ekstensi mengenal 16 bot seperti itu (GPTBot, ClaudeBot, Google-Extended, dll.); bot dengan nama lain tidak dihitung. “Tertutup untuk semua” — situs tertutup bagi semua robot melalui User-agent: *, tanpa aturan khusus untuk AI"
+        "message": "Angka adalah entri katalog. robots.txt tidak membuktikan kepatuhan atau penggunaan data; alamat yang tidak dilarang bukan persetujuan pelatihan."
     },
-    "auditAiBlocked": {
-        "message": "dilarang: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Grup khusus"
     },
-    "auditAiAllowed": {
-        "message": "diizinkan"
+    "aiWildcard": {
+        "message": "Grup *"
     },
-    "auditAiNone": {
-        "message": "tidak diatur"
+    "aiNoGroup": {
+        "message": "Tidak ada grup yang berlaku"
     },
-    "auditAiAll": {
-        "message": "tertutup untuk semua"
+    "aiUnknown": {
+        "message": "Alamat saat ini: tidak diketahui"
+    },
+    "aiCurrentAllowed": {
+        "message": "Alamat saat ini: tidak ada larangan yang cocok"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Alamat saat ini: dilarang oleh aturan"
+    },
+    "aiRestrictions": {
+        "message": "Ada pembatasan jalur"
+    },
+    "aiExceptions": {
+        "message": "Ada pengecualian Allow"
+    },
+    "aiUnverified": {
+        "message": "Token atau tujuan belum terverifikasi"
+    },
+    "aiControl": {
+        "message": "Token pengendali penggunaan data; bukan perayap mandiri"
+    },
+    "aiUserHint": {
+        "message": "Pengambilan atas permintaan pengguna berbeda dari perayapan otomatis; robots.txt mungkin tidak berlaku."
+    },
+    "aiMissing": {
+        "message": "robots.txt tidak ada; hasil tidak diketahui."
+    },
+    "aiUnavailable": {
+        "message": "Aturan tidak tersedia; hasil tidak diketahui."
     },
     "auditLlms": {
         "message": "llms.txt"

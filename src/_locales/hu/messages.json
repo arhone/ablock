@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Az oldalak listája a keresők számára. A robots.txt-ben egy Sitemap: sorral adható meg"
     },
-    "auditAi": {
-        "message": "Szabályok MI-robotoknak"
+    "auditAiTraining": {
+        "message": "MI: tanítás"
+    },
+    "auditAiSearch": {
+        "message": "MI: keresés"
+    },
+    "auditAiUser": {
+        "message": "MI: felhasználói kérések"
+    },
+    "auditAiMixed": {
+        "message": "MI: vegyes / nem igazolt"
     },
     "auditAiHint": {
-        "message": "Gyűjthetik-e az MI-robotok a webhely szövegeit neurális hálózatokhoz — a robots.txt azon szabályai alapján, amelyek néven nevezik a robotot. A bővítmény 16 ilyen robotot ismer (GPTBot, ClaudeBot, Google-Extended stb.); a más nevű robotok nem számítanak bele. „Mindenki elől zárva” — a webhely User-agent: * útján minden robot elől zárva van, külön MI-szabályok nélkül"
+        "message": "A számok a katalógus bejegyzései. A robots.txt nem bizonyítja a betartást vagy az adatfelhasználást; a nem tiltott cím nem hozzájárulás a tanításhoz."
     },
-    "auditAiBlocked": {
-        "message": "tiltva: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Saját csoport"
     },
-    "auditAiAllowed": {
-        "message": "engedélyezve"
+    "aiWildcard": {
+        "message": "* csoport"
     },
-    "auditAiNone": {
-        "message": "nincs megadva"
+    "aiNoGroup": {
+        "message": "Nincs alkalmazható csoport"
     },
-    "auditAiAll": {
-        "message": "mindenki elől zárva"
+    "aiUnknown": {
+        "message": "Jelenlegi cím: ismeretlen"
+    },
+    "aiCurrentAllowed": {
+        "message": "Jelenlegi cím: nincs illeszkedő tiltás"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Jelenlegi cím: szabályok tiltják"
+    },
+    "aiRestrictions": {
+        "message": "Vannak útvonalkorlátozások"
+    },
+    "aiExceptions": {
+        "message": "Vannak Allow-kivételek"
+    },
+    "aiUnverified": {
+        "message": "Nem igazolt token vagy rendeltetés"
+    },
+    "aiControl": {
+        "message": "Adatfelhasználást vezérlő token; nincs önálló robot"
+    },
+    "aiUserHint": {
+        "message": "A felhasználó kérésére történő lekérés eltér az automatikus feltérképezéstől; a robots.txt nem feltétlenül alkalmazható."
+    },
+    "aiMissing": {
+        "message": "Nincs robots.txt; az eredmény ismeretlen."
+    },
+    "aiUnavailable": {
+        "message": "A szabályok nem érhetők el; az eredmény ismeretlen."
     },
     "auditLlms": {
         "message": "llms.txt"

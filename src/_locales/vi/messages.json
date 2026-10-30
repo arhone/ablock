@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Danh sách trang cho công cụ tìm kiếm. Khai báo trong robots.txt bằng dòng Sitemap:"
     },
-    "auditAi": {
-        "message": "Quy tắc cho bot AI"
+    "auditAiTraining": {
+        "message": "AI: huấn luyện"
+    },
+    "auditAiSearch": {
+        "message": "AI: tìm kiếm"
+    },
+    "auditAiUser": {
+        "message": "AI: yêu cầu người dùng"
+    },
+    "auditAiMixed": {
+        "message": "AI: hỗn hợp / chưa xác nhận"
     },
     "auditAiHint": {
-        "message": "Bot AI có được thu thập văn bản của trang cho mạng nơ-ron hay không — theo quy tắc trong robots.txt có nêu tên bot. Tiện ích biết 16 bot như vậy (GPTBot, ClaudeBot, Google-Extended…); bot có tên khác không được tính. “Đóng với tất cả” — trang đóng với mọi robot qua User-agent: *, không có quy tắc riêng cho AI"
+        "message": "Số là các mục trong danh mục. robots.txt không chứng minh việc tuân thủ hay sử dụng dữ liệu; địa chỉ không bị cấm không phải là đồng ý cho huấn luyện."
     },
-    "auditAiBlocked": {
-        "message": "bị cấm: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Nhóm riêng"
     },
-    "auditAiAllowed": {
-        "message": "được phép"
+    "aiWildcard": {
+        "message": "Nhóm *"
     },
-    "auditAiNone": {
-        "message": "chưa đặt"
+    "aiNoGroup": {
+        "message": "Không có nhóm áp dụng"
     },
-    "auditAiAll": {
-        "message": "đóng với tất cả"
+    "aiUnknown": {
+        "message": "Địa chỉ hiện tại: chưa rõ"
+    },
+    "aiCurrentAllowed": {
+        "message": "Địa chỉ hiện tại: không có lệnh cấm khớp"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Địa chỉ hiện tại: bị cấm theo quy tắc"
+    },
+    "aiRestrictions": {
+        "message": "Có hạn chế đường dẫn"
+    },
+    "aiExceptions": {
+        "message": "Có ngoại lệ Allow"
+    },
+    "aiUnverified": {
+        "message": "Token hoặc mục đích chưa xác nhận"
+    },
+    "aiControl": {
+        "message": "Token kiểm soát việc dùng dữ liệu; không phải trình thu thập độc lập"
+    },
+    "aiUserHint": {
+        "message": "Lấy trang theo yêu cầu người dùng khác với thu thập tự động; robots.txt có thể không áp dụng."
+    },
+    "aiMissing": {
+        "message": "Không có robots.txt; kết quả chưa rõ."
+    },
+    "aiUnavailable": {
+        "message": "Không có quy tắc khả dụng; kết quả chưa rõ."
     },
     "auditLlms": {
         "message": "llms.txt"

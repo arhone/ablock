@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "A list of pages for search engines. Specified in robots.txt with a Sitemap: line"
     },
-    "auditAi": {
-        "message": "Rules for AI bots"
+    "auditAiTraining": {
+        "message": "AI: training"
+    },
+    "auditAiSearch": {
+        "message": "AI: search"
+    },
+    "auditAiUser": {
+        "message": "AI: user requests"
+    },
+    "auditAiMixed": {
+        "message": "AI: mixed / unverified"
     },
     "auditAiHint": {
-        "message": "Whether AI bots may collect the site's texts for neural networks — based on robots.txt rules that name the bot. The extension knows 16 such bots (GPTBot, ClaudeBot, Google-Extended, etc.); bots with other names are not counted. “Closed to all” — the site is closed to all robots via User-agent: *, with no separate rules for AI"
+        "message": "Counts are catalogue entries. robots.txt rules do not prove compliance or actual data use; an allowed address is not consent to training."
     },
-    "auditAiBlocked": {
-        "message": "blocked: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Named group"
     },
-    "auditAiAllowed": {
-        "message": "allowed"
+    "aiWildcard": {
+        "message": "Group *"
     },
-    "auditAiNone": {
-        "message": "not set"
+    "aiNoGroup": {
+        "message": "No applicable group"
     },
-    "auditAiAll": {
-        "message": "closed to all"
+    "aiUnknown": {
+        "message": "Current address: unknown"
+    },
+    "aiCurrentAllowed": {
+        "message": "Current address: no matching prohibition"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Current address: prohibited by rules"
+    },
+    "aiRestrictions": {
+        "message": "Path restrictions exist"
+    },
+    "aiExceptions": {
+        "message": "Allow exceptions exist"
+    },
+    "aiUnverified": {
+        "message": "Token or purpose unverified"
+    },
+    "aiControl": {
+        "message": "Data-use control token; no independent crawler"
+    },
+    "aiUserHint": {
+        "message": "User-triggered fetching differs from automatic crawling; robots.txt may not apply."
+    },
+    "aiMissing": {
+        "message": "robots.txt absent; result unknown."
+    },
+    "aiUnavailable": {
+        "message": "Rules unavailable; result unknown."
     },
     "auditLlms": {
         "message": "llms.txt"

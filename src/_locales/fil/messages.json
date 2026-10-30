@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Listahan ng mga page para sa mga search engine. Inilalagay sa robots.txt gamit ang linyang Sitemap:"
     },
-    "auditAi": {
-        "message": "Mga patakaran para sa AI bot"
+    "auditAiTraining": {
+        "message": "AI: pagsasanay"
+    },
+    "auditAiSearch": {
+        "message": "AI: paghahanap"
+    },
+    "auditAiUser": {
+        "message": "AI: mga hiling ng user"
+    },
+    "auditAiMixed": {
+        "message": "AI: halo / hindi kumpirmado"
     },
     "auditAiHint": {
-        "message": "Kung pinapayagan ang mga AI bot na kunin ang mga text ng site para sa mga neural network — batay sa mga patakaran sa robots.txt na nagbabanggit sa pangalan ng bot. Kilala ng extension ang 16 na ganitong bot (GPTBot, ClaudeBot, Google-Extended, atbp.); hindi binibilang ang mga bot na may ibang pangalan. “Sarado sa lahat” — sarado ang site sa lahat ng robot sa pamamagitan ng User-agent: *, nang walang hiwalay na patakaran para sa AI"
+        "message": "Mga entry sa katalogo ang mga bilang. Hindi patunay ng pagsunod o paggamit ng datos ang robots.txt; ang hindi bawal na address ay hindi pahintulot sa pagsasanay."
     },
-    "auditAiBlocked": {
-        "message": "na-block: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Sariling grupo"
     },
-    "auditAiAllowed": {
-        "message": "pinapayagan"
+    "aiWildcard": {
+        "message": "Grupong *"
     },
-    "auditAiNone": {
-        "message": "hindi nakatakda"
+    "aiNoGroup": {
+        "message": "Walang naaangkop na grupo"
     },
-    "auditAiAll": {
-        "message": "sarado sa lahat"
+    "aiUnknown": {
+        "message": "Kasalukuyang address: hindi alam"
+    },
+    "aiCurrentAllowed": {
+        "message": "Kasalukuyang address: walang tugmang pagbabawal"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Kasalukuyang address: bawal ayon sa mga tuntunin"
+    },
+    "aiRestrictions": {
+        "message": "May mga limitasyon sa path"
+    },
+    "aiExceptions": {
+        "message": "May mga eksepsiyong Allow"
+    },
+    "aiUnverified": {
+        "message": "Hindi kumpirmado ang token o layunin"
+    },
+    "aiControl": {
+        "message": "Token para sa pagkontrol ng paggamit ng datos; hindi hiwalay na crawler"
+    },
+    "aiUserHint": {
+        "message": "Ang pagkuha sa hiling ng user ay iba sa awtomatikong pag-crawl; maaaring hindi naaangkop ang robots.txt."
+    },
+    "aiMissing": {
+        "message": "Walang robots.txt; hindi alam ang resulta."
+    },
+    "aiUnavailable": {
+        "message": "Hindi makuha ang mga tuntunin; hindi alam ang resulta."
     },
     "auditLlms": {
         "message": "llms.txt"

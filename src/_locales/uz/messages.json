@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Qidiruv tizimlari uchun sahifalar roʻyxati. robots.txt da Sitemap: qatori bilan koʻrsatiladi"
     },
-    "auditAi": {
-        "message": "SI botlari uchun qoidalar"
+    "auditAiTraining": {
+        "message": "SI: o‘qitish"
+    },
+    "auditAiSearch": {
+        "message": "SI: qidiruv"
+    },
+    "auditAiUser": {
+        "message": "SI: foydalanuvchi so‘rovlari"
+    },
+    "auditAiMixed": {
+        "message": "SI: aralash / tasdiqlanmagan"
     },
     "auditAiHint": {
-        "message": "SI botlari sayt matnlarini neyron tarmoqlar uchun yigʻishi mumkinmi — robots.txt dagi bot nomi koʻrsatilgan qoidalar boʻyicha. Kengaytma 16 ta shunday botni biladi (GPTBot, ClaudeBot, Google-Extended va boshq.); boshqa nomli botlar hisobga olinmaydi. «Hammaga yopiq» — sayt User-agent: * orqali barcha robotlarga yopiq, SI uchun alohida qoidalar yoʻq"
+        "message": "Sonlar katalog yozuvlaridir. robots.txt qoidalarga amal qilinishini yoki ma’lumot ishlatilishini isbotlamaydi; taqiqlanmagan manzil o‘qitishga rozilik emas."
     },
-    "auditAiBlocked": {
-        "message": "taqiqlangan: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Alohida guruh"
     },
-    "auditAiAllowed": {
-        "message": "ruxsat berilgan"
+    "aiWildcard": {
+        "message": "* guruhi"
     },
-    "auditAiNone": {
-        "message": "belgilanmagan"
+    "aiNoGroup": {
+        "message": "Mos guruh yo‘q"
     },
-    "auditAiAll": {
-        "message": "hammaga yopiq"
+    "aiUnknown": {
+        "message": "Joriy manzil: noma’lum"
+    },
+    "aiCurrentAllowed": {
+        "message": "Joriy manzil: mos taqiq yo‘q"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Joriy manzil: qoidalar bilan taqiqlangan"
+    },
+    "aiRestrictions": {
+        "message": "Yo‘l cheklovlari bor"
+    },
+    "aiExceptions": {
+        "message": "Allow istisnolari bor"
+    },
+    "aiUnverified": {
+        "message": "Token yoki maqsad tasdiqlanmagan"
+    },
+    "aiControl": {
+        "message": "Ma’lumot ishlatilishini boshqaruvchi token; mustaqil skaner emas"
+    },
+    "aiUserHint": {
+        "message": "Foydalanuvchi so‘rovi bilan olish avtomatik skanerlashdan farq qiladi; robots.txt qo‘llanmasligi mumkin."
+    },
+    "aiMissing": {
+        "message": "robots.txt yo‘q; natija noma’lum."
+    },
+    "aiUnavailable": {
+        "message": "Qoidalar mavjud emas; natija noma’lum."
     },
     "auditLlms": {
         "message": "llms.txt"

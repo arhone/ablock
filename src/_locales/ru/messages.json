@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Список страниц для поисковиков. Указывается в robots.txt строкой Sitemap:"
     },
-    "auditAi": {
-        "message": "Правила для ИИ-ботов"
+    "auditAiTraining": {
+        "message": "ИИ: обучение"
+    },
+    "auditAiSearch": {
+        "message": "ИИ: поиск"
+    },
+    "auditAiUser": {
+        "message": "ИИ: обращения пользователей"
+    },
+    "auditAiMixed": {
+        "message": "ИИ: смешанное / неподтверждённое"
     },
     "auditAiHint": {
-        "message": "Можно ли ИИ-ботам собирать тексты сайта для нейросетей — по правилам в robots.txt, где бот назван по имени. Расширение знает 16 таких ботов (GPTBot, ClaudeBot, Google-Extended и др.); боты с другими именами не учитываются. «Закрыто всем» — сайт закрыт для всех роботов через User-agent: *, отдельных правил для ИИ нет"
+        "message": "Числа — записи каталога. Правила robots.txt не доказывают их соблюдение или использование данных; отсутствие запрета адреса не означает согласия на обучение."
     },
-    "auditAiBlocked": {
-        "message": "запрещено: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Отдельная группа"
     },
-    "auditAiAllowed": {
-        "message": "разрешено"
+    "aiWildcard": {
+        "message": "Группа *"
     },
-    "auditAiNone": {
-        "message": "не заданы"
+    "aiNoGroup": {
+        "message": "Нет применимой группы"
     },
-    "auditAiAll": {
-        "message": "закрыто всем"
+    "aiUnknown": {
+        "message": "Текущий адрес: неизвестно"
+    },
+    "aiCurrentAllowed": {
+        "message": "Текущий адрес: совпавшего запрета нет"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Текущий адрес: запрещён правилами"
+    },
+    "aiRestrictions": {
+        "message": "Есть ограничения путей"
+    },
+    "aiExceptions": {
+        "message": "Есть исключения Allow"
+    },
+    "aiUnverified": {
+        "message": "Токен или назначение не подтверждены"
+    },
+    "aiControl": {
+        "message": "Токен управления использованием данных; самостоятельного обходчика нет"
+    },
+    "aiUserHint": {
+        "message": "Получение страницы по действию пользователя отличается от автоматического обхода; robots.txt может не применяться."
+    },
+    "aiMissing": {
+        "message": "robots.txt отсутствует; результат неизвестен."
+    },
+    "aiUnavailable": {
+        "message": "Правила недоступны; результат неизвестен."
     },
     "auditLlms": {
         "message": "llms.txt"

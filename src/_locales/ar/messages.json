@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "قائمة الصفحات لمحركات البحث. تُحدَّد في robots.txt بسطر Sitemap:"
     },
-    "auditAi": {
-        "message": "قواعد روبوتات الذكاء الاصطناعي"
+    "auditAiTraining": {
+        "message": "الذكاء الاصطناعي: التدريب"
+    },
+    "auditAiSearch": {
+        "message": "الذكاء الاصطناعي: البحث"
+    },
+    "auditAiUser": {
+        "message": "الذكاء الاصطناعي: طلبات المستخدمين"
+    },
+    "auditAiMixed": {
+        "message": "الذكاء الاصطناعي: مختلط / غير مؤكد"
     },
     "auditAiHint": {
-        "message": "ما إذا كان يُسمح لروبوتات الذكاء الاصطناعي بجمع نصوص الموقع للشبكات العصبية — وفقًا لقواعد robots.txt التي تسمّي الروبوت. تعرف الإضافة 16 روبوتًا من هذا النوع (GPTBot وClaudeBot وGoogle-Extended وغيرها)؛ ولا تُحتسب الروبوتات بأسماء أخرى. «مغلق أمام الجميع» — الموقع مغلق أمام كل الروبوتات عبر User-agent: * دون قواعد خاصة بالذكاء الاصطناعي"
+        "message": "الأرقام هي إدخالات الدليل. لا تثبت قواعد robots.txt الالتزام بها أو استخدام البيانات؛ وعدم حظر العنوان ليس موافقة على التدريب."
     },
-    "auditAiBlocked": {
-        "message": "محظورة: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "مجموعة مسماة"
     },
-    "auditAiAllowed": {
-        "message": "مسموح"
+    "aiWildcard": {
+        "message": "المجموعة *"
     },
-    "auditAiNone": {
-        "message": "غير محدد"
+    "aiNoGroup": {
+        "message": "لا توجد مجموعة منطبقة"
     },
-    "auditAiAll": {
-        "message": "مغلق أمام الجميع"
+    "aiUnknown": {
+        "message": "العنوان الحالي: غير معروف"
+    },
+    "aiCurrentAllowed": {
+        "message": "العنوان الحالي: لا يوجد حظر مطابق"
+    },
+    "aiCurrentDisallowed": {
+        "message": "العنوان الحالي: محظور بالقواعد"
+    },
+    "aiRestrictions": {
+        "message": "توجد قيود على المسارات"
+    },
+    "aiExceptions": {
+        "message": "توجد استثناءات Allow"
+    },
+    "aiUnverified": {
+        "message": "الرمز أو الغرض غير مؤكد"
+    },
+    "aiControl": {
+        "message": "رمز للتحكم في استخدام البيانات؛ ليس زاحفًا مستقلاً"
+    },
+    "aiUserHint": {
+        "message": "الجلب بطلب المستخدم يختلف عن الزحف التلقائي؛ قد لا ينطبق robots.txt."
+    },
+    "aiMissing": {
+        "message": "ملف robots.txt غير موجود؛ النتيجة غير معروفة."
+    },
+    "aiUnavailable": {
+        "message": "القواعد غير متاحة؛ النتيجة غير معروفة."
     },
     "auditLlms": {
         "message": "llms.txt"

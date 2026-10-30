@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Una llista de pàgines per als cercadors. S'indica a robots.txt amb una línia Sitemap:"
     },
-    "auditAi": {
-        "message": "Regles per a bots d'IA"
+    "auditAiTraining": {
+        "message": "IA: entrenament"
+    },
+    "auditAiSearch": {
+        "message": "IA: cerca"
+    },
+    "auditAiUser": {
+        "message": "IA: peticions d’usuaris"
+    },
+    "auditAiMixed": {
+        "message": "IA: mixt / no confirmat"
     },
     "auditAiHint": {
-        "message": "Si els bots d'IA poden recollir els textos del lloc per a xarxes neuronals — segons les regles de robots.txt que anomenen el bot. L'extensió coneix 16 bots d'aquest tipus (GPTBot, ClaudeBot, Google-Extended, etc.); els bots amb altres noms no es compten. «Tancat per a tothom» — el lloc està tancat a tots els robots amb User-agent: *, sense regles pròpies per a la IA"
+        "message": "Les xifres compten entrades del catàleg. robots.txt no prova el compliment ni l’ús de dades; una adreça no prohibida no és consentiment per entrenar."
     },
-    "auditAiBlocked": {
-        "message": "bloquejats: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Grup específic"
     },
-    "auditAiAllowed": {
-        "message": "permès"
+    "aiWildcard": {
+        "message": "Grup *"
     },
-    "auditAiNone": {
-        "message": "sense definir"
+    "aiNoGroup": {
+        "message": "Cap grup aplicable"
     },
-    "auditAiAll": {
-        "message": "tancat per a tothom"
+    "aiUnknown": {
+        "message": "Adreça actual: desconeguda"
+    },
+    "aiCurrentAllowed": {
+        "message": "Adreça actual: sense prohibició coincident"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Adreça actual: prohibida per les regles"
+    },
+    "aiRestrictions": {
+        "message": "Hi ha restriccions de camins"
+    },
+    "aiExceptions": {
+        "message": "Hi ha excepcions Allow"
+    },
+    "aiUnverified": {
+        "message": "Token o finalitat no confirmats"
+    },
+    "aiControl": {
+        "message": "Token de control de l’ús de dades; sense rastrejador propi"
+    },
+    "aiUserHint": {
+        "message": "L’obtenció a petició de l’usuari difereix del rastreig automàtic; robots.txt pot no aplicar-s’hi."
+    },
+    "aiMissing": {
+        "message": "Falta robots.txt; resultat desconegut."
+    },
+    "aiUnavailable": {
+        "message": "Regles no disponibles; resultat desconegut."
     },
     "auditLlms": {
         "message": "llms.txt"

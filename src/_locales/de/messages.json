@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Liste der Seiten für Suchmaschinen. Wird in robots.txt mit der Zeile Sitemap: angegeben"
     },
-    "auditAi": {
-        "message": "Regeln für KI-Bots"
+    "auditAiTraining": {
+        "message": "KI: Training"
+    },
+    "auditAiSearch": {
+        "message": "KI: Suche"
+    },
+    "auditAiUser": {
+        "message": "KI: Nutzeranfragen"
+    },
+    "auditAiMixed": {
+        "message": "KI: gemischt / unbestätigt"
     },
     "auditAiHint": {
-        "message": "Ob KI-Bots die Texte der Website für neuronale Netze sammeln dürfen — laut Regeln in robots.txt, die den Bot beim Namen nennen. Die Erweiterung kennt 16 solcher Bots (GPTBot, ClaudeBot, Google-Extended u. a.); Bots mit anderen Namen werden nicht berücksichtigt. „Für alle gesperrt“ — die Website ist über User-agent: * für alle Robots gesperrt, eigene Regeln für KI gibt es nicht"
+        "message": "Zahlen zählen Katalogeinträge. robots.txt belegt weder die Einhaltung noch die Datennutzung; eine nicht gesperrte Adresse ist keine Zustimmung zum Training."
     },
-    "auditAiBlocked": {
-        "message": "gesperrt: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Eigene Gruppe"
     },
-    "auditAiAllowed": {
-        "message": "erlaubt"
+    "aiWildcard": {
+        "message": "Gruppe *"
     },
-    "auditAiNone": {
-        "message": "nicht festgelegt"
+    "aiNoGroup": {
+        "message": "Keine anwendbare Gruppe"
     },
-    "auditAiAll": {
-        "message": "für alle gesperrt"
+    "aiUnknown": {
+        "message": "Aktuelle Adresse: unbekannt"
+    },
+    "aiCurrentAllowed": {
+        "message": "Aktuelle Adresse: kein passendes Verbot"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Aktuelle Adresse: laut Regeln gesperrt"
+    },
+    "aiRestrictions": {
+        "message": "Pfadbeschränkungen vorhanden"
+    },
+    "aiExceptions": {
+        "message": "Allow-Ausnahmen vorhanden"
+    },
+    "aiUnverified": {
+        "message": "Token oder Zweck unbestätigt"
+    },
+    "aiControl": {
+        "message": "Steuert Datennutzung; kein eigenständiger Crawler"
+    },
+    "aiUserHint": {
+        "message": "Abrufe auf Nutzeranfrage unterscheiden sich vom automatischen Crawlen; robots.txt gilt möglicherweise nicht."
+    },
+    "aiMissing": {
+        "message": "robots.txt fehlt; Ergebnis unbekannt."
+    },
+    "aiUnavailable": {
+        "message": "Regeln nicht verfügbar; Ergebnis unbekannt."
     },
     "auditLlms": {
         "message": "llms.txt"

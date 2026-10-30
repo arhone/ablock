@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "సెర్చ్ ఇంజిన్‌ల కోసం పేజీల జాబితా. robots.txt‌లో Sitemap: పంక్తితో పేర్కొనబడుతుంది"
     },
-    "auditAi": {
-        "message": "AI బాట్‌ల కోసం నియమాలు"
+    "auditAiTraining": {
+        "message": "AI: శిక్షణ"
+    },
+    "auditAiSearch": {
+        "message": "AI: శోధన"
+    },
+    "auditAiUser": {
+        "message": "AI: వినియోగదారు అభ్యర్థనలు"
+    },
+    "auditAiMixed": {
+        "message": "AI: మిశ్రమ / నిర్ధారించనిది"
     },
     "auditAiHint": {
-        "message": "న్యూరల్ నెట్‌వర్క్‌ల కోసం సైట్ టెక్స్ట్‌లను AI బాట్‌లు సేకరించవచ్చా — బాట్ పేరు పేర్కొన్న robots.txt నియమాల ఆధారంగా. ఎక్స్‌టెన్షన్‌కు ఇలాంటి 16 బాట్‌లు తెలుసు (GPTBot, ClaudeBot, Google-Extended మొదలైనవి); ఇతర పేర్ల బాట్‌లు లెక్కలోకి రావు. «అందరికీ మూసివేయబడింది» — User-agent: * ద్వారా సైట్ అన్ని రోబోట్‌లకు మూసివేయబడింది, AI కోసం ప్రత్యేక నియమాలు లేవు"
+        "message": "సంఖ్యలు జాబితా నమోదులు. robots.txt పాటించడం లేదా డేటా వినియోగాన్ని నిరూపించదు; నిషేధించని చిరునామా శిక్షణకు సమ్మతి కాదు."
     },
-    "auditAiBlocked": {
-        "message": "నిషేధించబడినవి: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "ప్రత్యేక సమూహం"
     },
-    "auditAiAllowed": {
-        "message": "అనుమతించబడింది"
+    "aiWildcard": {
+        "message": "సమూహం *"
     },
-    "auditAiNone": {
-        "message": "సెట్ చేయలేదు"
+    "aiNoGroup": {
+        "message": "వర్తించే సమూహం లేదు"
     },
-    "auditAiAll": {
-        "message": "అందరికీ మూసివేయబడింది"
+    "aiUnknown": {
+        "message": "ప్రస్తుత చిరునామా: తెలియదు"
+    },
+    "aiCurrentAllowed": {
+        "message": "ప్రస్తుత చిరునామా: సరిపోలే నిషేధం లేదు"
+    },
+    "aiCurrentDisallowed": {
+        "message": "ప్రస్తుత చిరునామా: నియమాల ద్వారా నిషేధితం"
+    },
+    "aiRestrictions": {
+        "message": "పాత్ పరిమితులు ఉన్నాయి"
+    },
+    "aiExceptions": {
+        "message": "Allow మినహాయింపులు ఉన్నాయి"
+    },
+    "aiUnverified": {
+        "message": "టోకెన్ లేదా ఉద్దేశ్యం నిర్ధారించలేదు"
+    },
+    "aiControl": {
+        "message": "డేటా వినియోగ నియంత్రణ టోకెన్; స్వతంత్ర క్రాలర్ కాదు"
+    },
+    "aiUserHint": {
+        "message": "వినియోగదారు అభ్యర్థనపై పేజీ పొందడం స్వయంచాలక క్రాలింగ్‌కు భిన్నం; robots.txt వర్తించకపోవచ్చు."
+    },
+    "aiMissing": {
+        "message": "robots.txt లేదు; ఫలితం తెలియదు."
+    },
+    "aiUnavailable": {
+        "message": "నియమాలు అందుబాటులో లేవు; ఫలితం తెలియదు."
     },
     "auditLlms": {
         "message": "llms.txt"

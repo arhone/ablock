@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "ለፍለጋ ፕሮግራሞች የገጾች ዝርዝር። በrobots.txt ውስጥ በSitemap: መስመር ይገለጻል"
     },
-    "auditAi": {
-        "message": "ለAI ቦቶች ደንቦች"
+    "auditAiTraining": {
+        "message": "AI፦ ስልጠና"
+    },
+    "auditAiSearch": {
+        "message": "AI፦ ፍለጋ"
+    },
+    "auditAiUser": {
+        "message": "AI፦ የተጠቃሚ ጥያቄዎች"
+    },
+    "auditAiMixed": {
+        "message": "AI፦ ድብልቅ / ያልተረጋገጠ"
     },
     "auditAiHint": {
-        "message": "AI ቦቶች ለነርቭ አውታረ መረቦች የጣቢያውን ጽሑፎች መሰብሰብ ይችሉ እንደሆነ — ቦቱን በስም በሚጠሩ የrobots.txt ደንቦች መሠረት። ቅጥያው 16 እንደዚህ ያሉ ቦቶችን ያውቃል (GPTBot፣ ClaudeBot፣ Google-Extended ወዘተ)፤ ሌላ ስም ያላቸው ቦቶች አይቆጠሩም። «ለሁሉም ዝግ» — ጣቢያው በUser-agent: * ለሁሉም ሮቦቶች ዝግ ነው፣ ለAI የተለየ ደንብ የለውም"
+        "message": "ቁጥሮቹ የካታሎግ ግቤቶች ናቸው። robots.txt ደንቦቹ መከበራቸውን ወይም የውሂብ አጠቃቀምን አያረጋግጥም፤ ያልተከለከለ አድራሻ ለስልጠና ፈቃድ አይደለም።"
     },
-    "auditAiBlocked": {
-        "message": "የታገዱ: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "የተሰየመ ቡድን"
     },
-    "auditAiAllowed": {
-        "message": "ተፈቅዷል"
+    "aiWildcard": {
+        "message": "ቡድን *"
     },
-    "auditAiNone": {
-        "message": "አልተዘጋጀም"
+    "aiNoGroup": {
+        "message": "የሚተገበር ቡድን የለም"
     },
-    "auditAiAll": {
-        "message": "ለሁሉም ዝግ"
+    "aiUnknown": {
+        "message": "የአሁኑ አድራሻ፦ ያልታወቀ"
+    },
+    "aiCurrentAllowed": {
+        "message": "የአሁኑ አድራሻ፦ የሚዛመድ ክልከላ የለም"
+    },
+    "aiCurrentDisallowed": {
+        "message": "የአሁኑ አድራሻ፦ በደንቦች ተከልክሏል"
+    },
+    "aiRestrictions": {
+        "message": "የመንገድ ገደቦች አሉ"
+    },
+    "aiExceptions": {
+        "message": "የAllow ልዩ ፈቃዶች አሉ"
+    },
+    "aiUnverified": {
+        "message": "ቶከኑ ወይም ዓላማው አልተረጋገጠም"
+    },
+    "aiControl": {
+        "message": "የውሂብ አጠቃቀም መቆጣጠሪያ ቶከን፤ ራሱን የቻለ አሳሽ አይደለም"
+    },
+    "aiUserHint": {
+        "message": "በተጠቃሚ ጥያቄ ማምጣት ከራስ-ሰር ማሰስ ይለያል፤ robots.txt ላይተገበር ይችላል።"
+    },
+    "aiMissing": {
+        "message": "robots.txt የለም፤ ውጤቱ አይታወቅም።"
+    },
+    "aiUnavailable": {
+        "message": "ደንቦች አይገኙም፤ ውጤቱ አይታወቅም።"
     },
     "auditLlms": {
         "message": "llms.txt"

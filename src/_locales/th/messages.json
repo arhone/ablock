@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "รายการหน้าสำหรับเครื่องมือค้นหา ระบุใน robots.txt ด้วยบรรทัด Sitemap:"
     },
-    "auditAi": {
-        "message": "กฎสำหรับบอต AI"
+    "auditAiTraining": {
+        "message": "AI: การฝึก"
+    },
+    "auditAiSearch": {
+        "message": "AI: การค้นหา"
+    },
+    "auditAiUser": {
+        "message": "AI: คำขอของผู้ใช้"
+    },
+    "auditAiMixed": {
+        "message": "AI: แบบผสม / ยังไม่ยืนยัน"
     },
     "auditAiHint": {
-        "message": "บอต AI เก็บข้อความของเว็บไซต์ไปใช้กับโครงข่ายประสาทได้หรือไม่ — ตามกฎใน robots.txt ที่ระบุชื่อบอต ส่วนขยายรู้จักบอตแบบนี้ 16 ตัว (GPTBot, ClaudeBot, Google-Extended ฯลฯ) บอตที่ใช้ชื่ออื่นจะไม่นับ “ปิดสำหรับทุกตัว” — เว็บไซต์ปิดกั้นโรบอตทั้งหมดด้วย User-agent: * โดยไม่มีกฎเฉพาะสำหรับ AI"
+        "message": "ตัวเลขคือจำนวนรายการในแค็ตตาล็อก robots.txt ไม่พิสูจน์การปฏิบัติตามหรือการใช้ข้อมูล ที่อยู่ที่ไม่ถูกห้ามไม่ได้หมายถึงการยินยอมให้ฝึก"
     },
-    "auditAiBlocked": {
-        "message": "ห้าม: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "กลุ่มเฉพาะ"
     },
-    "auditAiAllowed": {
-        "message": "อนุญาต"
+    "aiWildcard": {
+        "message": "กลุ่ม *"
     },
-    "auditAiNone": {
-        "message": "ไม่ได้ตั้งค่า"
+    "aiNoGroup": {
+        "message": "ไม่มีกลุ่มที่ใช้ได้"
     },
-    "auditAiAll": {
-        "message": "ปิดสำหรับทุกตัว"
+    "aiUnknown": {
+        "message": "ที่อยู่ปัจจุบัน: ไม่ทราบ"
+    },
+    "aiCurrentAllowed": {
+        "message": "ที่อยู่ปัจจุบัน: ไม่มีข้อห้ามที่ตรงกัน"
+    },
+    "aiCurrentDisallowed": {
+        "message": "ที่อยู่ปัจจุบัน: ถูกห้ามตามกฎ"
+    },
+    "aiRestrictions": {
+        "message": "มีข้อจำกัดเส้นทาง"
+    },
+    "aiExceptions": {
+        "message": "มีข้อยกเว้น Allow"
+    },
+    "aiUnverified": {
+        "message": "ยังไม่ยืนยันโทเค็นหรือวัตถุประสงค์"
+    },
+    "aiControl": {
+        "message": "โทเค็นควบคุมการใช้ข้อมูล ไม่ใช่ตัวรวบรวมข้อมูลอิสระ"
+    },
+    "aiUserHint": {
+        "message": "การดึงข้อมูลตามคำขอผู้ใช้ต่างจากการรวบรวมอัตโนมัติ robots.txt อาจไม่มีผล"
+    },
+    "aiMissing": {
+        "message": "ไม่มี robots.txt ไม่ทราบผล"
+    },
+    "aiUnavailable": {
+        "message": "กฎไม่พร้อมใช้งาน ไม่ทราบผล"
     },
     "auditLlms": {
         "message": "llms.txt"

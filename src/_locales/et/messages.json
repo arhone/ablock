@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Lehtede loend otsingumootoritele. Märgitakse robots.txt-s reaga Sitemap:"
     },
-    "auditAi": {
-        "message": "Reeglid TI-robotitele"
+    "auditAiTraining": {
+        "message": "TI: treenimine"
+    },
+    "auditAiSearch": {
+        "message": "TI: otsing"
+    },
+    "auditAiUser": {
+        "message": "TI: kasutajapäringud"
+    },
+    "auditAiMixed": {
+        "message": "TI: segatud / kinnitamata"
     },
     "auditAiHint": {
-        "message": "Kas TI-robotid tohivad saidi tekste närvivõrkude jaoks koguda — robots.txt reeglite järgi, mis nimetavad robotit nimepidi. Laiendus tunneb 16 sellist robotit (GPTBot, ClaudeBot, Google-Extended jt); teiste nimedega roboteid ei arvestata. „Kõigile suletud” — sait on kõigile robotitele suletud User-agent: * kaudu, eraldi TI-reegliteta"
+        "message": "Arvud näitavad kataloogikirjeid. robots.txt ei tõenda järgimist ega andmekasutust; keelamata aadress ei tähenda nõusolekut treenimiseks."
     },
-    "auditAiBlocked": {
-        "message": "keelatud: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Eraldi rühm"
     },
-    "auditAiAllowed": {
-        "message": "lubatud"
+    "aiWildcard": {
+        "message": "Rühm *"
     },
-    "auditAiNone": {
-        "message": "määramata"
+    "aiNoGroup": {
+        "message": "Sobiv rühm puudub"
     },
-    "auditAiAll": {
-        "message": "kõigile suletud"
+    "aiUnknown": {
+        "message": "Praegune aadress: teadmata"
+    },
+    "aiCurrentAllowed": {
+        "message": "Praegune aadress: vastavat keeldu pole"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Praegune aadress: reeglitega keelatud"
+    },
+    "aiRestrictions": {
+        "message": "Esineb teepiiranguid"
+    },
+    "aiExceptions": {
+        "message": "Esineb Allow-erandeid"
+    },
+    "aiUnverified": {
+        "message": "Tunnus või otstarve kinnitamata"
+    },
+    "aiControl": {
+        "message": "Andmekasutuse juhtimise tunnus; eraldi roomajat pole"
+    },
+    "aiUserHint": {
+        "message": "Kasutaja soovil laadimine erineb automaatsest roomamisest; robots.txt ei pruugi rakenduda."
+    },
+    "aiMissing": {
+        "message": "robots.txt puudub; tulemus teadmata."
+    },
+    "aiUnavailable": {
+        "message": "Reeglid pole saadaval; tulemus teadmata."
     },
     "auditLlms": {
         "message": "llms.txt"

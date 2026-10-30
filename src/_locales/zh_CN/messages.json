@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "给搜索引擎的页面列表，在 robots.txt 中用 Sitemap: 行指定"
     },
-    "auditAi": {
-        "message": "AI 爬虫规则"
+    "auditAiTraining": {
+        "message": "AI：训练"
+    },
+    "auditAiSearch": {
+        "message": "AI：搜索"
+    },
+    "auditAiUser": {
+        "message": "AI：用户请求"
+    },
+    "auditAiMixed": {
+        "message": "AI：混合／未确认"
     },
     "auditAiHint": {
-        "message": "根据 robots.txt 中点名的规则，判断 AI 爬虫能否为神经网络收集网站文本。扩展认识 16 个此类爬虫（GPTBot、ClaudeBot、Google-Extended 等），其他名称的爬虫不计入。“对所有爬虫关闭”表示网站通过 User-agent: * 对所有爬虫关闭，没有专门针对 AI 的规则"
+        "message": "数字表示目录条目数。robots.txt 规则不能证明规则得到遵守或数据被使用；地址未被禁止不代表同意用于训练。"
     },
-    "auditAiBlocked": {
-        "message": "已禁止：$COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "专用组"
     },
-    "auditAiAllowed": {
-        "message": "已允许"
+    "aiWildcard": {
+        "message": "* 组"
     },
-    "auditAiNone": {
-        "message": "未设置"
+    "aiNoGroup": {
+        "message": "无适用组"
     },
-    "auditAiAll": {
-        "message": "对所有爬虫关闭"
+    "aiUnknown": {
+        "message": "当前地址：未知"
+    },
+    "aiCurrentAllowed": {
+        "message": "当前地址：无匹配的禁止规则"
+    },
+    "aiCurrentDisallowed": {
+        "message": "当前地址：被规则禁止"
+    },
+    "aiRestrictions": {
+        "message": "存在路径限制"
+    },
+    "aiExceptions": {
+        "message": "存在 Allow 例外"
+    },
+    "aiUnverified": {
+        "message": "令牌或用途未确认"
+    },
+    "aiControl": {
+        "message": "数据使用控制令牌；不是独立爬虫"
+    },
+    "aiUserHint": {
+        "message": "按用户请求获取页面不同于自动抓取；robots.txt 可能不适用。"
+    },
+    "aiMissing": {
+        "message": "robots.txt 不存在；结果未知。"
+    },
+    "aiUnavailable": {
+        "message": "规则不可用；结果未知。"
     },
     "auditLlms": {
         "message": "llms.txt"

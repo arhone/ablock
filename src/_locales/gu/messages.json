@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "સર્ચ એન્જિન માટે પેજની યાદી. robots.txt માં Sitemap: લાઇનથી દર્શાવાય છે"
     },
-    "auditAi": {
-        "message": "AI બૉટ માટેના નિયમો"
+    "auditAiTraining": {
+        "message": "AI: તાલીમ"
+    },
+    "auditAiSearch": {
+        "message": "AI: શોધ"
+    },
+    "auditAiUser": {
+        "message": "AI: વપરાશકર્તાની વિનંતીઓ"
+    },
+    "auditAiMixed": {
+        "message": "AI: મિશ્ર / અપ્રમાણિત"
     },
     "auditAiHint": {
-        "message": "AI બૉટ ન્યુરલ નેટવર્ક માટે સાઇટના ટેક્સ્ટ એકત્ર કરી શકે કે નહીં — બૉટનું નામ લેતા robots.txt નિયમોના આધારે. એક્સ્ટેંશન આવા 16 બૉટ જાણે છે (GPTBot, ClaudeBot, Google-Extended વગેરે); બીજા નામવાળા બૉટ ગણાતા નથી. «બધા માટે બંધ» — સાઇટ User-agent: * દ્વારા બધા રોબોટ માટે બંધ છે, AI માટે અલગ નિયમો નથી"
+        "message": "આંકડા સૂચિની નોંધો છે. robots.txt પાલન કે ડેટાના ઉપયોગનો પુરાવો નથી; સરનામું પ્રતિબંધિત ન હોવું તાલીમની સંમતિ નથી."
     },
-    "auditAiBlocked": {
-        "message": "પ્રતિબંધિત: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "અલગ જૂથ"
     },
-    "auditAiAllowed": {
-        "message": "મંજૂર"
+    "aiWildcard": {
+        "message": "જૂથ *"
     },
-    "auditAiNone": {
-        "message": "સેટ નથી"
+    "aiNoGroup": {
+        "message": "કોઈ લાગુ જૂથ નથી"
     },
-    "auditAiAll": {
-        "message": "બધા માટે બંધ"
+    "aiUnknown": {
+        "message": "વર્તમાન સરનામું: અજ્ઞાત"
+    },
+    "aiCurrentAllowed": {
+        "message": "વર્તમાન સરનામું: મેળ ખાતો પ્રતિબંધ નથી"
+    },
+    "aiCurrentDisallowed": {
+        "message": "વર્તમાન સરનામું: નિયમોથી પ્રતિબંધિત"
+    },
+    "aiRestrictions": {
+        "message": "પાથ પ્રતિબંધો છે"
+    },
+    "aiExceptions": {
+        "message": "Allow અપવાદો છે"
+    },
+    "aiUnverified": {
+        "message": "ટોકન કે હેતુ અપ્રમાણિત"
+    },
+    "aiControl": {
+        "message": "ડેટાના ઉપયોગના નિયંત્રણનું ટોકન; સ્વતંત્ર ક્રોલર નથી"
+    },
+    "aiUserHint": {
+        "message": "વપરાશકર્તાની વિનંતીથી પાનું મેળવવું આપમેળે ક્રોલિંગથી અલગ છે; robots.txt લાગુ ન પણ પડે."
+    },
+    "aiMissing": {
+        "message": "robots.txt નથી; પરિણામ અજ્ઞાત છે."
+    },
+    "aiUnavailable": {
+        "message": "નિયમો ઉપલબ્ધ નથી; પરિણામ અજ્ઞાત છે."
     },
     "auditLlms": {
         "message": "llms.txt"

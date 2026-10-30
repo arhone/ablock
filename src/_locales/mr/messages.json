@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "सर्च इंजिनसाठी पेजची यादी. robots.txt मध्ये Sitemap: ओळीने सांगितली जाते"
     },
-    "auditAi": {
-        "message": "AI बॉटसाठी नियम"
+    "auditAiTraining": {
+        "message": "AI: प्रशिक्षण"
+    },
+    "auditAiSearch": {
+        "message": "AI: शोध"
+    },
+    "auditAiUser": {
+        "message": "AI: वापरकर्त्याच्या विनंत्या"
+    },
+    "auditAiMixed": {
+        "message": "AI: मिश्र / अप्रमाणित"
     },
     "auditAiHint": {
-        "message": "AI बॉट न्यूरल नेटवर्कसाठी साइटचा मजकूर गोळा करू शकतात का — बॉटचे नाव घेणाऱ्या robots.txt नियमांवरून. एक्स्टेंशनला असे 16 बॉट माहीत आहेत (GPTBot, ClaudeBot, Google-Extended इ.); इतर नावांचे बॉट मोजले जात नाहीत. «सर्वांसाठी बंद» — साइट User-agent: * द्वारे सर्व रोबोटसाठी बंद आहे, AI साठी वेगळे नियम नाहीत"
+        "message": "संख्या या सूचीतील नोंदी आहेत. robots.txt पालन किंवा डेटाच्या वापराचा पुरावा नाही; पत्ता प्रतिबंधित नसणे म्हणजे प्रशिक्षणाची संमती नाही."
     },
-    "auditAiBlocked": {
-        "message": "प्रतिबंधित: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "स्वतंत्र गट"
     },
-    "auditAiAllowed": {
-        "message": "परवानगी"
+    "aiWildcard": {
+        "message": "गट *"
     },
-    "auditAiNone": {
-        "message": "सेट नाही"
+    "aiNoGroup": {
+        "message": "लागू गट नाही"
     },
-    "auditAiAll": {
-        "message": "सर्वांसाठी बंद"
+    "aiUnknown": {
+        "message": "सध्याचा पत्ता: अज्ञात"
+    },
+    "aiCurrentAllowed": {
+        "message": "सध्याचा पत्ता: जुळणारा प्रतिबंध नाही"
+    },
+    "aiCurrentDisallowed": {
+        "message": "सध्याचा पत्ता: नियमांनी प्रतिबंधित"
+    },
+    "aiRestrictions": {
+        "message": "पथ निर्बंध आहेत"
+    },
+    "aiExceptions": {
+        "message": "Allow अपवाद आहेत"
+    },
+    "aiUnverified": {
+        "message": "टोकन किंवा हेतू अप्रमाणित"
+    },
+    "aiControl": {
+        "message": "डेटा वापर नियंत्रित करणारे टोकन; स्वतंत्र क्रॉलर नाही"
+    },
+    "aiUserHint": {
+        "message": "वापरकर्त्याच्या विनंतीवर पृष्ठ मिळवणे स्वयंचलित क्रॉलिंगपेक्षा वेगळे आहे; robots.txt लागू नसेलही."
+    },
+    "aiMissing": {
+        "message": "robots.txt नाही; परिणाम अज्ञात आहे."
+    },
+    "aiUnavailable": {
+        "message": "नियम उपलब्ध नाहीत; परिणाम अज्ञात आहे."
     },
     "auditLlms": {
         "message": "llms.txt"

@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Lista stron dla wyszukiwarek. Podaje się ją w robots.txt wierszem Sitemap:"
     },
-    "auditAi": {
-        "message": "Reguły dla botów AI"
+    "auditAiTraining": {
+        "message": "AI: trenowanie"
+    },
+    "auditAiSearch": {
+        "message": "AI: wyszukiwanie"
+    },
+    "auditAiUser": {
+        "message": "AI: żądania użytkowników"
+    },
+    "auditAiMixed": {
+        "message": "AI: mieszane / niepotwierdzone"
     },
     "auditAiHint": {
-        "message": "Czy boty AI mogą zbierać teksty strony dla sieci neuronowych — według reguł w robots.txt, w których bot jest wymieniony z nazwy. Rozszerzenie zna 16 takich botów (GPTBot, ClaudeBot, Google-Extended i inne); boty o innych nazwach nie są uwzględniane. „Zamknięte dla wszystkich” — strona jest zamknięta dla wszystkich robotów przez User-agent: *, osobnych reguł dla AI nie ma"
+        "message": "Liczby oznaczają wpisy katalogu. robots.txt nie dowodzi przestrzegania reguł ani użycia danych; brak zakazu adresu nie jest zgodą na trenowanie."
     },
-    "auditAiBlocked": {
-        "message": "zablokowane: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Osobna grupa"
     },
-    "auditAiAllowed": {
-        "message": "dozwolone"
+    "aiWildcard": {
+        "message": "Grupa *"
     },
-    "auditAiNone": {
-        "message": "nie określono"
+    "aiNoGroup": {
+        "message": "Brak pasującej grupy"
     },
-    "auditAiAll": {
-        "message": "zamknięte dla wszystkich"
+    "aiUnknown": {
+        "message": "Bieżący adres: nieznany"
+    },
+    "aiCurrentAllowed": {
+        "message": "Bieżący adres: brak pasującego zakazu"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Bieżący adres: zabroniony regułami"
+    },
+    "aiRestrictions": {
+        "message": "Są ograniczenia ścieżek"
+    },
+    "aiExceptions": {
+        "message": "Są wyjątki Allow"
+    },
+    "aiUnverified": {
+        "message": "Token lub cel niepotwierdzone"
+    },
+    "aiControl": {
+        "message": "Token sterujący użyciem danych; bez samodzielnego robota"
+    },
+    "aiUserHint": {
+        "message": "Pobieranie na żądanie użytkownika różni się od automatycznego indeksowania; robots.txt może nie mieć zastosowania."
+    },
+    "aiMissing": {
+        "message": "Brak robots.txt; wynik nieznany."
+    },
+    "aiUnavailable": {
+        "message": "Reguły niedostępne; wynik nieznany."
     },
     "auditLlms": {
         "message": "llms.txt"

@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "فهرست صفحه‌ها برای موتورهای جستجو. در robots.txt با خط Sitemap: مشخص می‌شود"
     },
-    "auditAi": {
-        "message": "قواعد ربات‌های هوش مصنوعی"
+    "auditAiTraining": {
+        "message": "هوش مصنوعی: آموزش"
+    },
+    "auditAiSearch": {
+        "message": "هوش مصنوعی: جستجو"
+    },
+    "auditAiUser": {
+        "message": "هوش مصنوعی: درخواست کاربران"
+    },
+    "auditAiMixed": {
+        "message": "هوش مصنوعی: ترکیبی / تأییدنشده"
     },
     "auditAiHint": {
-        "message": "آیا ربات‌های هوش مصنوعی مجازند متن‌های سایت را برای شبکه‌های عصبی جمع کنند — بر اساس قواعد robots.txt که ربات را با نام ذکر می‌کنند. افزونه 16 ربات از این دست را می‌شناسد (GPTBot، ClaudeBot، Google-Extended و غیره)؛ ربات‌هایی با نام‌های دیگر شمرده نمی‌شوند. «بسته برای همه» — سایت با User-agent: * به روی همهٔ ربات‌ها بسته است و قاعدهٔ جداگانه‌ای برای هوش مصنوعی ندارد"
+        "message": "اعداد، ورودی‌های فهرست هستند. robots.txt رعایت قواعد یا استفاده از داده را ثابت نمی‌کند؛ نشانی ممنوع‌نشده به معنی رضایت برای آموزش نیست."
     },
-    "auditAiBlocked": {
-        "message": "مسدود: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "گروه نام‌دار"
     },
-    "auditAiAllowed": {
-        "message": "مجاز"
+    "aiWildcard": {
+        "message": "گروه *"
     },
-    "auditAiNone": {
-        "message": "تعیین نشده"
+    "aiNoGroup": {
+        "message": "گروه قابل اعمالی نیست"
     },
-    "auditAiAll": {
-        "message": "بسته برای همه"
+    "aiUnknown": {
+        "message": "نشانی فعلی: نامشخص"
+    },
+    "aiCurrentAllowed": {
+        "message": "نشانی فعلی: منع منطبقی نیست"
+    },
+    "aiCurrentDisallowed": {
+        "message": "نشانی فعلی: طبق قواعد ممنوع"
+    },
+    "aiRestrictions": {
+        "message": "محدودیت مسیر وجود دارد"
+    },
+    "aiExceptions": {
+        "message": "استثناهای Allow وجود دارد"
+    },
+    "aiUnverified": {
+        "message": "توکن یا هدف تأیید نشده"
+    },
+    "aiControl": {
+        "message": "توکن کنترل استفاده از داده؛ خزنده مستقل نیست"
+    },
+    "aiUserHint": {
+        "message": "دریافت به درخواست کاربر با خزش خودکار متفاوت است؛ ممکن است robots.txt اعمال نشود."
+    },
+    "aiMissing": {
+        "message": "robots.txt وجود ندارد؛ نتیجه نامشخص است."
+    },
+    "aiUnavailable": {
+        "message": "قواعد در دسترس نیست؛ نتیجه نامشخص است."
     },
     "auditLlms": {
         "message": "llms.txt"

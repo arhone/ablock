@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "தேடுபொறிகளுக்கான பக்கங்களின் பட்டியல். robots.txt-இல் Sitemap: வரியால் குறிப்பிடப்படுகிறது"
     },
-    "auditAi": {
-        "message": "AI பாட்களுக்கான விதிகள்"
+    "auditAiTraining": {
+        "message": "AI: பயிற்சி"
+    },
+    "auditAiSearch": {
+        "message": "AI: தேடல்"
+    },
+    "auditAiUser": {
+        "message": "AI: பயனர் கோரிக்கைகள்"
+    },
+    "auditAiMixed": {
+        "message": "AI: கலப்பு / உறுதிப்படுத்தாதது"
     },
     "auditAiHint": {
-        "message": "நரம்பியல் வலைப்பின்னல்களுக்காகத் தளத்தின் உரைகளை AI பாட்கள் சேகரிக்கலாமா — பாட்டைப் பெயரிட்டுக் குறிப்பிடும் robots.txt விதிகளின் அடிப்படையில். நீட்டிப்புக்கு இதுபோன்ற 16 பாட்கள் தெரியும் (GPTBot, ClaudeBot, Google-Extended முதலியன); வேறு பெயருள்ள பாட்கள் கணக்கில் கொள்ளப்படாது. «அனைவருக்கும் மூடப்பட்டது» — User-agent: * மூலம் தளம் எல்லா ரோபோக்களுக்கும் மூடப்பட்டுள்ளது, AI-க்கென்று தனி விதிகள் இல்லை"
+        "message": "எண்கள் பட்டியல் பதிவுகளைக் குறிக்கின்றன. robots.txt இணக்கத்தையோ தரவுப் பயன்பாட்டையோ நிரூபிக்காது; தடை இல்லாத முகவரி பயிற்சிக்கான ஒப்புதல் அல்ல."
     },
-    "auditAiBlocked": {
-        "message": "தடுக்கப்பட்டவை: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "தனிக் குழு"
     },
-    "auditAiAllowed": {
-        "message": "அனுமதிக்கப்பட்டது"
+    "aiWildcard": {
+        "message": "குழு *"
     },
-    "auditAiNone": {
-        "message": "அமைக்கப்படவில்லை"
+    "aiNoGroup": {
+        "message": "பொருந்தும் குழு இல்லை"
     },
-    "auditAiAll": {
-        "message": "அனைவருக்கும் மூடப்பட்டது"
+    "aiUnknown": {
+        "message": "தற்போதைய முகவரி: தெரியாது"
+    },
+    "aiCurrentAllowed": {
+        "message": "தற்போதைய முகவரி: பொருந்தும் தடை இல்லை"
+    },
+    "aiCurrentDisallowed": {
+        "message": "தற்போதைய முகவரி: விதிகளால் தடை"
+    },
+    "aiRestrictions": {
+        "message": "பாதைக் கட்டுப்பாடுகள் உள்ளன"
+    },
+    "aiExceptions": {
+        "message": "Allow விதிவிலக்குகள் உள்ளன"
+    },
+    "aiUnverified": {
+        "message": "டோக்கன் அல்லது நோக்கம் உறுதிப்படுத்தப்படவில்லை"
+    },
+    "aiControl": {
+        "message": "தரவுப் பயன்பாட்டைக் கட்டுப்படுத்தும் டோக்கன்; தனி கிராலர் அல்ல"
+    },
+    "aiUserHint": {
+        "message": "பயனர் கோரிக்கையில் பக்கத்தைப் பெறுவது தானியங்கித் திரட்டலிலிருந்து வேறுபடுகிறது; robots.txt பொருந்தாமல் இருக்கலாம்."
+    },
+    "aiMissing": {
+        "message": "robots.txt இல்லை; முடிவு தெரியாது."
+    },
+    "aiUnavailable": {
+        "message": "விதிகள் கிடைக்கவில்லை; முடிவு தெரியாது."
     },
     "auditLlms": {
         "message": "llms.txt"

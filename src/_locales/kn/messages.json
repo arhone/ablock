@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "ಸರ್ಚ್ ಎಂಜಿನ್‌ಗಳಿಗಾಗಿ ಪುಟಗಳ ಪಟ್ಟಿ. robots.txt ನಲ್ಲಿ Sitemap: ಸಾಲಿನಿಂದ ಸೂಚಿಸಲಾಗುತ್ತದೆ"
     },
-    "auditAi": {
-        "message": "AI ಬಾಟ್‌ಗಳಿಗೆ ನಿಯಮಗಳು"
+    "auditAiTraining": {
+        "message": "AI: ತರಬೇತಿ"
+    },
+    "auditAiSearch": {
+        "message": "AI: ಹುಡುಕಾಟ"
+    },
+    "auditAiUser": {
+        "message": "AI: ಬಳಕೆದಾರರ ವಿನಂತಿಗಳು"
+    },
+    "auditAiMixed": {
+        "message": "AI: ಮಿಶ್ರ / ದೃಢೀಕರಿಸದ"
     },
     "auditAiHint": {
-        "message": "ನ್ಯೂರಲ್ ನೆಟ್‌ವರ್ಕ್‌ಗಳಿಗಾಗಿ ಸೈಟ್‌ನ ಪಠ್ಯಗಳನ್ನು AI ಬಾಟ್‌ಗಳು ಸಂಗ್ರಹಿಸಬಹುದೇ — ಬಾಟ್‌ನ ಹೆಸರು ಉಲ್ಲೇಖಿಸುವ robots.txt ನಿಯಮಗಳ ಆಧಾರದಲ್ಲಿ. ಎಕ್ಸ್‌ಟೆನ್ಶನ್‌ಗೆ ಇಂತಹ 16 ಬಾಟ್‌ಗಳು ತಿಳಿದಿವೆ (GPTBot, ClaudeBot, Google-Extended ಇತ್ಯಾದಿ); ಬೇರೆ ಹೆಸರಿನ ಬಾಟ್‌ಗಳನ್ನು ಎಣಿಸುವುದಿಲ್ಲ. «ಎಲ್ಲರಿಗೂ ಮುಚ್ಚಲಾಗಿದೆ» — User-agent: * ಮೂಲಕ ಸೈಟ್ ಎಲ್ಲಾ ರೋಬೋಟ್‌ಗಳಿಗೆ ಮುಚ್ಚಿದೆ, AI ಗಾಗಿ ಪ್ರತ್ಯೇಕ ನಿಯಮಗಳಿಲ್ಲ"
+        "message": "ಸಂಖ್ಯೆಗಳು ಪಟ್ಟಿಯ ನಮೂದುಗಳು. robots.txt ಪಾಲನೆ ಅಥವಾ ಡೇಟಾ ಬಳಕೆಯ ಪುರಾವೆಯಲ್ಲ; ವಿಳಾಸವನ್ನು ನಿಷೇಧಿಸದಿರುವುದು ತರಬೇತಿಗೆ ಸಮ್ಮತಿಯಲ್ಲ."
     },
-    "auditAiBlocked": {
-        "message": "ನಿಷೇಧಿತ: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "ಪ್ರತ್ಯೇಕ ಗುಂಪು"
     },
-    "auditAiAllowed": {
-        "message": "ಅನುಮತಿಸಲಾಗಿದೆ"
+    "aiWildcard": {
+        "message": "ಗುಂಪು *"
     },
-    "auditAiNone": {
-        "message": "ಹೊಂದಿಸಿಲ್ಲ"
+    "aiNoGroup": {
+        "message": "ಅನ್ವಯಿಸುವ ಗುಂಪಿಲ್ಲ"
     },
-    "auditAiAll": {
-        "message": "ಎಲ್ಲರಿಗೂ ಮುಚ್ಚಲಾಗಿದೆ"
+    "aiUnknown": {
+        "message": "ಪ್ರಸ್ತುತ ವಿಳಾಸ: ತಿಳಿದಿಲ್ಲ"
+    },
+    "aiCurrentAllowed": {
+        "message": "ಪ್ರಸ್ತುತ ವಿಳಾಸ: ಹೊಂದುವ ನಿಷೇಧವಿಲ್ಲ"
+    },
+    "aiCurrentDisallowed": {
+        "message": "ಪ್ರಸ್ತುತ ವಿಳಾಸ: ನಿಯಮಗಳಿಂದ ನಿಷೇಧಿತ"
+    },
+    "aiRestrictions": {
+        "message": "ಮಾರ್ಗದ ನಿರ್ಬಂಧಗಳಿವೆ"
+    },
+    "aiExceptions": {
+        "message": "Allow ವಿನಾಯಿತಿಗಳಿವೆ"
+    },
+    "aiUnverified": {
+        "message": "ಟೋಕನ್ ಅಥವಾ ಉದ್ದೇಶ ದೃಢೀಕರಿಸಿಲ್ಲ"
+    },
+    "aiControl": {
+        "message": "ಡೇಟಾ ಬಳಕೆ ನಿಯಂತ್ರಣ ಟೋಕನ್; ಸ್ವತಂತ್ರ ಕ್ರಾಲರ್ ಅಲ್ಲ"
+    },
+    "aiUserHint": {
+        "message": "ಬಳಕೆದಾರರ ವಿನಂತಿಯ ಮೇರೆಗೆ ಪಡೆಯುವುದು ಸ್ವಯಂಚಾಲಿತ ಕ್ರಾಲಿಂಗ್‌ಗಿಂತ ಭಿನ್ನ; robots.txt ಅನ್ವಯಿಸದಿರಬಹುದು."
+    },
+    "aiMissing": {
+        "message": "robots.txt ಇಲ್ಲ; ಫಲಿತಾಂಶ ತಿಳಿದಿಲ್ಲ."
+    },
+    "aiUnavailable": {
+        "message": "ನಿಯಮಗಳು ಲಭ್ಯವಿಲ್ಲ; ಫಲಿತಾಂಶ ತಿಳಿದಿಲ್ಲ."
     },
     "auditLlms": {
         "message": "llms.txt"

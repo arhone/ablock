@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Іздеу жүйелеріне арналған беттер тізімі. robots.txt ішінде Sitemap: жолымен көрсетіледі"
     },
-    "auditAi": {
-        "message": "ЖИ боттарына арналған ережелер"
+    "auditAiTraining": {
+        "message": "ЖИ: оқыту"
+    },
+    "auditAiSearch": {
+        "message": "ЖИ: іздеу"
+    },
+    "auditAiUser": {
+        "message": "ЖИ: пайдаланушы сұраулары"
+    },
+    "auditAiMixed": {
+        "message": "ЖИ: аралас / расталмаған"
     },
     "auditAiHint": {
-        "message": "ЖИ-боттар сайт мәтіндерін нейрожелілер үшін жинай ала ма — robots.txt ішінде бот атымен аталған ережелер бойынша. Кеңейтпе мұндай 16 ботты біледі (GPTBot, ClaudeBot, Google-Extended т.б.); басқа атаулы боттар есептелмейді. «Барлығына жабық» — сайт User-agent: * арқылы барлық роботтарға жабық, ЖИ үшін бөлек ереже жоқ"
+        "message": "Сандар — каталог жазбалары. robots.txt ережелердің сақталуын не деректердің қолданылуын дәлелдемейді; тыйым салынбаған мекенжай оқытуға келісім емес."
     },
-    "auditAiBlocked": {
-        "message": "тыйым салынған: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Жеке топ"
     },
-    "auditAiAllowed": {
-        "message": "рұқсат"
+    "aiWildcard": {
+        "message": "* тобы"
     },
-    "auditAiNone": {
-        "message": "берілмеген"
+    "aiNoGroup": {
+        "message": "Қолданылатын топ жоқ"
     },
-    "auditAiAll": {
-        "message": "барлығына жабық"
+    "aiUnknown": {
+        "message": "Ағымдағы мекенжай: белгісіз"
+    },
+    "aiCurrentAllowed": {
+        "message": "Ағымдағы мекенжай: сәйкес тыйым жоқ"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Ағымдағы мекенжай: ережелермен тыйым салынған"
+    },
+    "aiRestrictions": {
+        "message": "Жол шектеулері бар"
+    },
+    "aiExceptions": {
+        "message": "Allow ерекшеліктері бар"
+    },
+    "aiUnverified": {
+        "message": "Токен не мақсат расталмаған"
+    },
+    "aiControl": {
+        "message": "Деректерді пайдалануды басқару токені; дербес сканер емес"
+    },
+    "aiUserHint": {
+        "message": "Пайдаланушы сұрауы бойынша алу автоматты шолудан өзгеше; robots.txt қолданылмауы мүмкін."
+    },
+    "aiMissing": {
+        "message": "robots.txt жоқ; нәтиже белгісіз."
+    },
+    "aiUnavailable": {
+        "message": "Ережелер қолжетімсіз; нәтиже белгісіз."
     },
     "auditLlms": {
         "message": "llms.txt"

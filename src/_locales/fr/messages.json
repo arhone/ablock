@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Liste des pages pour les moteurs de recherche. Indiqué dans robots.txt par une ligne Sitemap:"
     },
-    "auditAi": {
-        "message": "Règles pour les bots IA"
+    "auditAiTraining": {
+        "message": "IA : entraînement"
+    },
+    "auditAiSearch": {
+        "message": "IA : recherche"
+    },
+    "auditAiUser": {
+        "message": "IA : demandes des utilisateurs"
+    },
+    "auditAiMixed": {
+        "message": "IA : mixte / non confirmé"
     },
     "auditAiHint": {
-        "message": "Si les bots IA peuvent collecter les textes du site pour les réseaux de neurones — selon les règles de robots.txt qui nomment le bot. L'extension connaît 16 de ces bots (GPTBot, ClaudeBot, Google-Extended, etc.) ; les bots portant d'autres noms ne sont pas pris en compte. « Fermé à tous » — le site est fermé à tous les robots via User-agent: *, sans règles distinctes pour l'IA"
+        "message": "Les nombres comptent les entrées du catalogue. robots.txt ne prouve ni son respect ni l’utilisation des données ; une adresse non interdite ne vaut pas consentement à l’entraînement."
     },
-    "auditAiBlocked": {
-        "message": "interdit : $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Groupe spécifique"
     },
-    "auditAiAllowed": {
-        "message": "autorisé"
+    "aiWildcard": {
+        "message": "Groupe *"
     },
-    "auditAiNone": {
-        "message": "non définies"
+    "aiNoGroup": {
+        "message": "Aucun groupe applicable"
     },
-    "auditAiAll": {
-        "message": "fermé à tous"
+    "aiUnknown": {
+        "message": "Adresse actuelle : inconnue"
+    },
+    "aiCurrentAllowed": {
+        "message": "Adresse actuelle : aucune interdiction correspondante"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Adresse actuelle : interdite par les règles"
+    },
+    "aiRestrictions": {
+        "message": "Restrictions de chemins présentes"
+    },
+    "aiExceptions": {
+        "message": "Exceptions Allow présentes"
+    },
+    "aiUnverified": {
+        "message": "Jeton ou usage non confirmé"
+    },
+    "aiControl": {
+        "message": "Jeton de contrôle de l’usage des données ; aucun robot autonome"
+    },
+    "aiUserHint": {
+        "message": "La récupération à la demande d’un utilisateur diffère de l’exploration automatique ; robots.txt peut ne pas s’appliquer."
+    },
+    "aiMissing": {
+        "message": "robots.txt absent ; résultat inconnu."
+    },
+    "aiUnavailable": {
+        "message": "Règles indisponibles ; résultat inconnu."
     },
     "auditLlms": {
         "message": "llms.txt"

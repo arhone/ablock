@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Luettelo sivuista hakukoneille. Ilmoitetaan robots.txt-tiedostossa Sitemap:-rivillä"
     },
-    "auditAi": {
-        "message": "Säännöt tekoälyboteille"
+    "auditAiTraining": {
+        "message": "Tekoäly: koulutus"
+    },
+    "auditAiSearch": {
+        "message": "Tekoäly: haku"
+    },
+    "auditAiUser": {
+        "message": "Tekoäly: käyttäjäpyynnöt"
+    },
+    "auditAiMixed": {
+        "message": "Tekoäly: sekakäyttö / vahvistamaton"
     },
     "auditAiHint": {
-        "message": "Saavatko tekoälybotit kerätä sivuston tekstejä neuroverkoille — robots.txt-sääntöjen perusteella, joissa botti mainitaan nimeltä. Laajennus tuntee 16 tällaista bottia (GPTBot, ClaudeBot, Google-Extended jne.); muita nimiä käyttäviä botteja ei lasketa. ”Suljettu kaikilta” — sivusto on suljettu kaikilta roboteilta User-agent: * -säännöllä, ilman erillisiä sääntöjä tekoälylle"
+        "message": "Luvut ovat luettelon tietueita. robots.txt ei osoita sääntöjen noudattamista tai tietojen käyttöä; sallittu osoite ei merkitse suostumusta koulutukseen."
     },
-    "auditAiBlocked": {
-        "message": "estetty: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Nimetty ryhmä"
     },
-    "auditAiAllowed": {
-        "message": "sallittu"
+    "aiWildcard": {
+        "message": "Ryhmä *"
     },
-    "auditAiNone": {
-        "message": "ei määritetty"
+    "aiNoGroup": {
+        "message": "Ei soveltuvaa ryhmää"
     },
-    "auditAiAll": {
-        "message": "suljettu kaikilta"
+    "aiUnknown": {
+        "message": "Nykyinen osoite: tuntematon"
+    },
+    "aiCurrentAllowed": {
+        "message": "Nykyinen osoite: ei vastaavaa kieltoa"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Nykyinen osoite: säännöissä kielletty"
+    },
+    "aiRestrictions": {
+        "message": "Polkurajoituksia on"
+    },
+    "aiExceptions": {
+        "message": "Allow-poikkeuksia on"
+    },
+    "aiUnverified": {
+        "message": "Tunniste tai tarkoitus vahvistamatta"
+    },
+    "aiControl": {
+        "message": "Tietojen käytön ohjaustunniste; ei itsenäistä indeksoijaa"
+    },
+    "aiUserHint": {
+        "message": "Käyttäjän pyytämä nouto eroaa automaattisesta indeksoinnista; robots.txt ei välttämättä päde."
+    },
+    "aiMissing": {
+        "message": "robots.txt puuttuu; tulos tuntematon."
+    },
+    "aiUnavailable": {
+        "message": "Säännöt eivät ole saatavilla; tulos tuntematon."
     },
     "auditLlms": {
         "message": "llms.txt"

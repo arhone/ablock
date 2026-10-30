@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Списък със страници за търсачките. Посочва се в robots.txt с ред Sitemap:"
     },
-    "auditAi": {
-        "message": "Правила за ИИ ботове"
+    "auditAiTraining": {
+        "message": "ИИ: обучение"
+    },
+    "auditAiSearch": {
+        "message": "ИИ: търсене"
+    },
+    "auditAiUser": {
+        "message": "ИИ: заявки на потребители"
+    },
+    "auditAiMixed": {
+        "message": "ИИ: смесено / непотвърдено"
     },
     "auditAiHint": {
-        "message": "Дали ИИ ботовете могат да събират текстовете на сайта за невронни мрежи — по правилата в robots.txt, където ботът е посочен по име. Разширението познава 16 такива бота (GPTBot, ClaudeBot, Google-Extended и др.); ботове с други имена не се отчитат. „Затворено за всички“ — сайтът е затворен за всички роботи чрез User-agent: *, отделни правила за ИИ няма"
+        "message": "Числата са записи в каталога. robots.txt не доказва спазване или използване на данни; незабранен адрес не е съгласие за обучение."
     },
-    "auditAiBlocked": {
-        "message": "забранени: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Отделна група"
     },
-    "auditAiAllowed": {
-        "message": "разрешено"
+    "aiWildcard": {
+        "message": "Група *"
     },
-    "auditAiNone": {
-        "message": "не са зададени"
+    "aiNoGroup": {
+        "message": "Няма приложима група"
     },
-    "auditAiAll": {
-        "message": "затворено за всички"
+    "aiUnknown": {
+        "message": "Текущ адрес: неизвестно"
+    },
+    "aiCurrentAllowed": {
+        "message": "Текущ адрес: няма съответстваща забрана"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Текущ адрес: забранен от правилата"
+    },
+    "aiRestrictions": {
+        "message": "Има ограничения за пътища"
+    },
+    "aiExceptions": {
+        "message": "Има изключения Allow"
+    },
+    "aiUnverified": {
+        "message": "Токенът или целта не са потвърдени"
+    },
+    "aiControl": {
+        "message": "Токен за управление на използването на данни; няма самостоятелен робот"
+    },
+    "aiUserHint": {
+        "message": "Извличането по заявка на потребител се различава от автоматичното обхождане; robots.txt може да не се прилага."
+    },
+    "aiMissing": {
+        "message": "robots.txt липсва; резултатът е неизвестен."
+    },
+    "aiUnavailable": {
+        "message": "Правилата са недостъпни; резултатът е неизвестен."
     },
     "auditLlms": {
         "message": "llms.txt"

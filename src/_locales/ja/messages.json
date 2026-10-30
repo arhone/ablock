@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "検索エンジン向けのページ一覧。robots.txt に Sitemap: 行で指定します"
     },
-    "auditAi": {
-        "message": "AI ボットのルール"
+    "auditAiTraining": {
+        "message": "AI：学習"
+    },
+    "auditAiSearch": {
+        "message": "AI：検索"
+    },
+    "auditAiUser": {
+        "message": "AI：ユーザーのリクエスト"
+    },
+    "auditAiMixed": {
+        "message": "AI：混合／未確認"
     },
     "auditAiHint": {
-        "message": "AI ボットがニューラルネットワーク用にサイトのテキストを収集してよいか — ボット名を指定した robots.txt のルールに基づきます。拡張機能はこのようなボットを 16 種類(GPTBot、ClaudeBot、Google-Extended など)認識しています。それ以外の名前のボットは数えません。「すべて拒否」— サイトは User-agent: * ですべてのロボットを拒否しており、AI 向けの個別ルールはありません"
+        "message": "数値はカタログの項目数です。robots.txt は遵守やデータ利用を証明しません。禁止されていないアドレスも学習への同意を意味しません。"
     },
-    "auditAiBlocked": {
-        "message": "拒否: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "個別グループ"
     },
-    "auditAiAllowed": {
-        "message": "許可"
+    "aiWildcard": {
+        "message": "* グループ"
     },
-    "auditAiNone": {
-        "message": "未設定"
+    "aiNoGroup": {
+        "message": "適用グループなし"
     },
-    "auditAiAll": {
-        "message": "すべて拒否"
+    "aiUnknown": {
+        "message": "現在のアドレス：不明"
+    },
+    "aiCurrentAllowed": {
+        "message": "現在のアドレス：一致する禁止なし"
+    },
+    "aiCurrentDisallowed": {
+        "message": "現在のアドレス：ルールで禁止"
+    },
+    "aiRestrictions": {
+        "message": "パスの制限あり"
+    },
+    "aiExceptions": {
+        "message": "Allow の例外あり"
+    },
+    "aiUnverified": {
+        "message": "トークンまたは目的は未確認"
+    },
+    "aiControl": {
+        "message": "データ利用の制御トークン。独立したクローラーではありません"
+    },
+    "aiUserHint": {
+        "message": "ユーザーの操作による取得は自動クロールとは異なり、robots.txt が適用されない場合があります。"
+    },
+    "aiMissing": {
+        "message": "robots.txt がありません。結果は不明です。"
+    },
+    "aiUnavailable": {
+        "message": "ルールを取得できません。結果は不明です。"
     },
     "auditLlms": {
         "message": "llms.txt"

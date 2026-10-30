@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "En lista över sidor för sökmotorer. Anges i robots.txt med en rad Sitemap:"
     },
-    "auditAi": {
-        "message": "Regler för AI-botar"
+    "auditAiTraining": {
+        "message": "AI: träning"
+    },
+    "auditAiSearch": {
+        "message": "AI: sökning"
+    },
+    "auditAiUser": {
+        "message": "AI: användarförfrågningar"
+    },
+    "auditAiMixed": {
+        "message": "AI: blandat / obekräftat"
     },
     "auditAiHint": {
-        "message": "Om AI-botar får samla in webbplatsens texter till neurala nätverk — enligt regler i robots.txt som namnger boten. Tillägget känner till 16 sådana botar (GPTBot, ClaudeBot, Google-Extended m.fl.); botar med andra namn räknas inte. ”Stängd för alla” — webbplatsen är stängd för alla robotar via User-agent: *, utan separata regler för AI"
+        "message": "Talen räknar katalogposter. robots.txt bevisar varken efterlevnad eller dataanvändning; en inte förbjuden adress är inget samtycke till träning."
     },
-    "auditAiBlocked": {
-        "message": "blockerade: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Egen grupp"
     },
-    "auditAiAllowed": {
-        "message": "tillåtet"
+    "aiWildcard": {
+        "message": "Grupp *"
     },
-    "auditAiNone": {
-        "message": "inte angivet"
+    "aiNoGroup": {
+        "message": "Ingen tillämplig grupp"
     },
-    "auditAiAll": {
-        "message": "stängd för alla"
+    "aiUnknown": {
+        "message": "Aktuell adress: okänd"
+    },
+    "aiCurrentAllowed": {
+        "message": "Aktuell adress: inget matchande förbud"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Aktuell adress: förbjuden enligt reglerna"
+    },
+    "aiRestrictions": {
+        "message": "Sökvägsbegränsningar finns"
+    },
+    "aiExceptions": {
+        "message": "Allow-undantag finns"
+    },
+    "aiUnverified": {
+        "message": "Token eller syfte obekräftat"
+    },
+    "aiControl": {
+        "message": "Token för styrning av dataanvändning; ingen egen sökrobot"
+    },
+    "aiUserHint": {
+        "message": "Hämtning på användarens begäran skiljer sig från automatisk genomsökning; robots.txt kanske inte gäller."
+    },
+    "aiMissing": {
+        "message": "robots.txt saknas; resultat okänt."
+    },
+    "aiUnavailable": {
+        "message": "Reglerna är inte tillgängliga; resultat okänt."
     },
     "auditLlms": {
         "message": "llms.txt"

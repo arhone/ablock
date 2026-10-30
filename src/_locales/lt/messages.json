@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Puslapių sąrašas paieškos sistemoms. Nurodomas robots.txt eilute Sitemap:"
     },
-    "auditAi": {
-        "message": "Taisyklės DI robotams"
+    "auditAiTraining": {
+        "message": "DI: mokymas"
+    },
+    "auditAiSearch": {
+        "message": "DI: paieška"
+    },
+    "auditAiUser": {
+        "message": "DI: naudotojų užklausos"
+    },
+    "auditAiMixed": {
+        "message": "DI: mišru / nepatvirtinta"
     },
     "auditAiHint": {
-        "message": "Ar DI robotams leidžiama rinkti svetainės tekstus neuroniniams tinklams — pagal robots.txt taisykles, kuriose robotas įvardytas. Plėtinys žino 16 tokių robotų (GPTBot, ClaudeBot, Google-Extended ir kt.); kitais vardais vadinami robotai neskaičiuojami. „Uždaryta visiems“ — svetainė uždaryta visiems robotams per User-agent: *, be atskirų taisyklių DI"
+        "message": "Skaičiai reiškia katalogo įrašus. robots.txt neįrodo taisyklių laikymosi ar duomenų naudojimo; neuždraustas adresas nėra sutikimas mokyti."
     },
-    "auditAiBlocked": {
-        "message": "uždrausta: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Atskira grupė"
     },
-    "auditAiAllowed": {
-        "message": "leidžiama"
+    "aiWildcard": {
+        "message": "Grupė *"
     },
-    "auditAiNone": {
-        "message": "nenurodyta"
+    "aiNoGroup": {
+        "message": "Nėra taikytinos grupės"
     },
-    "auditAiAll": {
-        "message": "uždaryta visiems"
+    "aiUnknown": {
+        "message": "Dabartinis adresas: nežinoma"
+    },
+    "aiCurrentAllowed": {
+        "message": "Dabartinis adresas: nėra atitinkančio draudimo"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Dabartinis adresas: uždraustas taisyklėmis"
+    },
+    "aiRestrictions": {
+        "message": "Yra kelių apribojimų"
+    },
+    "aiExceptions": {
+        "message": "Yra Allow išimčių"
+    },
+    "aiUnverified": {
+        "message": "Žetonas ar paskirtis nepatvirtinti"
+    },
+    "aiControl": {
+        "message": "Duomenų naudojimo valdymo žetonas; nėra atskiro tikrintuvo"
+    },
+    "aiUserHint": {
+        "message": "Gavimas naudotojo prašymu skiriasi nuo automatinio tikrinimo; robots.txt gali būti netaikomas."
+    },
+    "aiMissing": {
+        "message": "Nėra robots.txt; rezultatas nežinomas."
+    },
+    "aiUnavailable": {
+        "message": "Taisyklės nepasiekiamos; rezultatas nežinomas."
     },
     "auditLlms": {
         "message": "llms.txt"

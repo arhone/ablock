@@ -1313,3 +1313,12 @@ footer a:hover {
     outline: 2px solid var(--muted);
     outline-offset: 2px;
 }
+
+/* Названия категорий и токенов переносятся в длинных переводах и RTL. */
+.audit-row[data-key^="auditAi"] {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.audit-row[data-key^="auditAi"] span {
+    min-width: 0;
+}

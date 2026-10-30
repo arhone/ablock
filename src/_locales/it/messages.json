@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Elenco delle pagine per i motori di ricerca. Si indica in robots.txt con la riga Sitemap:"
     },
-    "auditAi": {
-        "message": "Regole per i bot IA"
+    "auditAiTraining": {
+        "message": "IA: addestramento"
+    },
+    "auditAiSearch": {
+        "message": "IA: ricerca"
+    },
+    "auditAiUser": {
+        "message": "IA: richieste degli utenti"
+    },
+    "auditAiMixed": {
+        "message": "IA: misto / non confermato"
     },
     "auditAiHint": {
-        "message": "Se i bot IA possono raccogliere i testi del sito per le reti neurali — secondo le regole di robots.txt che nominano il bot. L'estensione conosce 16 bot di questo tipo (GPTBot, ClaudeBot, Google-Extended ecc.); i bot con altri nomi non sono considerati. «Chiuso a tutti» — il sito è chiuso a tutti i robot tramite User-agent: *, senza regole separate per l'IA"
+        "message": "I numeri contano le voci del catalogo. robots.txt non prova il rispetto delle regole né l’uso dei dati; un indirizzo non vietato non è consenso all’addestramento."
     },
-    "auditAiBlocked": {
-        "message": "vietato: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Gruppo specifico"
     },
-    "auditAiAllowed": {
-        "message": "consentito"
+    "aiWildcard": {
+        "message": "Gruppo *"
     },
-    "auditAiNone": {
-        "message": "non definite"
+    "aiNoGroup": {
+        "message": "Nessun gruppo applicabile"
     },
-    "auditAiAll": {
-        "message": "chiuso a tutti"
+    "aiUnknown": {
+        "message": "Indirizzo attuale: sconosciuto"
+    },
+    "aiCurrentAllowed": {
+        "message": "Indirizzo attuale: nessun divieto corrispondente"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Indirizzo attuale: vietato dalle regole"
+    },
+    "aiRestrictions": {
+        "message": "Presenti restrizioni dei percorsi"
+    },
+    "aiExceptions": {
+        "message": "Presenti eccezioni Allow"
+    },
+    "aiUnverified": {
+        "message": "Token o scopo non confermati"
+    },
+    "aiControl": {
+        "message": "Token di controllo dell’uso dei dati; nessun crawler autonomo"
+    },
+    "aiUserHint": {
+        "message": "Il recupero su richiesta dell’utente differisce dalla scansione automatica; robots.txt potrebbe non applicarsi."
+    },
+    "aiMissing": {
+        "message": "robots.txt assente; risultato sconosciuto."
+    },
+    "aiUnavailable": {
+        "message": "Regole non disponibili; risultato sconosciuto."
     },
     "auditLlms": {
         "message": "llms.txt"

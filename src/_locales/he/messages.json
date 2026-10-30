@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "רשימת דפים למנועי חיפוש. מצוינת ב-robots.txt בשורת Sitemap:"
     },
-    "auditAi": {
-        "message": "כללים לבוטים של בינה מלאכותית"
+    "auditAiTraining": {
+        "message": "בינה מלאכותית: אימון"
+    },
+    "auditAiSearch": {
+        "message": "בינה מלאכותית: חיפוש"
+    },
+    "auditAiUser": {
+        "message": "בינה מלאכותית: בקשות משתמשים"
+    },
+    "auditAiMixed": {
+        "message": "בינה מלאכותית: מעורב / לא מאומת"
     },
     "auditAiHint": {
-        "message": "האם בוטים של בינה מלאכותית רשאים לאסוף את טקסטי האתר לרשתות נוירונים — לפי כללי robots.txt שמזכירים את הבוט בשמו. התוסף מכיר 16 בוטים כאלה (GPTBot,‏ ClaudeBot,‏ Google-Extended ועוד); בוטים בשמות אחרים לא נספרים. „סגור לכולם” — האתר סגור לכל הרובוטים דרך User-agent: *, בלי כללים נפרדים לבינה מלאכותית"
+        "message": "המספרים מונים רשומות בקטלוג. robots.txt אינו מוכיח ציות או שימוש בנתונים; כתובת שאינה אסורה אינה הסכמה לאימון."
     },
-    "auditAiBlocked": {
-        "message": "חסומים: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "קבוצה ייעודית"
     },
-    "auditAiAllowed": {
-        "message": "מותר"
+    "aiWildcard": {
+        "message": "קבוצת *"
     },
-    "auditAiNone": {
-        "message": "לא הוגדר"
+    "aiNoGroup": {
+        "message": "אין קבוצה מתאימה"
     },
-    "auditAiAll": {
-        "message": "סגור לכולם"
+    "aiUnknown": {
+        "message": "הכתובת הנוכחית: לא ידוע"
+    },
+    "aiCurrentAllowed": {
+        "message": "הכתובת הנוכחית: אין איסור תואם"
+    },
+    "aiCurrentDisallowed": {
+        "message": "הכתובת הנוכחית: אסורה לפי הכללים"
+    },
+    "aiRestrictions": {
+        "message": "קיימות הגבלות נתיבים"
+    },
+    "aiExceptions": {
+        "message": "קיימים חריגי Allow"
+    },
+    "aiUnverified": {
+        "message": "האסימון או הייעוד לא אומתו"
+    },
+    "aiControl": {
+        "message": "אסימון לבקרת שימוש בנתונים; ללא סורק עצמאי"
+    },
+    "aiUserHint": {
+        "message": "שליפה לבקשת משתמש שונה מסריקה אוטומטית; ייתכן ש־robots.txt אינו חל."
+    },
+    "aiMissing": {
+        "message": "robots.txt חסר; התוצאה אינה ידועה."
+    },
+    "aiUnavailable": {
+        "message": "הכללים אינם זמינים; התוצאה אינה ידועה."
     },
     "auditLlms": {
         "message": "llms.txt"

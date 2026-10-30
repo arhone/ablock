@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Список сторінок для пошукових систем. Вказується в robots.txt рядком Sitemap:"
     },
-    "auditAi": {
-        "message": "Правила для ШІ-ботів"
+    "auditAiTraining": {
+        "message": "ШІ: навчання"
+    },
+    "auditAiSearch": {
+        "message": "ШІ: пошук"
+    },
+    "auditAiUser": {
+        "message": "ШІ: звернення користувачів"
+    },
+    "auditAiMixed": {
+        "message": "ШІ: змішане / непідтверджене"
     },
     "auditAiHint": {
-        "message": "Чи можна ШІ-ботам збирати тексти сайту для нейромереж — за правилами robots.txt, де бот названо на ім’я. Розширення знає 16 таких ботів (GPTBot, ClaudeBot, Google-Extended та інші); боти з іншими іменами не враховуються. «Закрито для всіх» — сайт закритий для всіх роботів через User-agent: *, окремих правил для ШІ немає"
+        "message": "Числа — записи каталогу. Правила robots.txt не доводять їх дотримання чи використання даних; відсутність заборони адреси не є згодою на навчання."
     },
-    "auditAiBlocked": {
-        "message": "заборонено: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Окрема група"
     },
-    "auditAiAllowed": {
-        "message": "дозволено"
+    "aiWildcard": {
+        "message": "Група *"
     },
-    "auditAiNone": {
-        "message": "не задано"
+    "aiNoGroup": {
+        "message": "Немає застосовної групи"
     },
-    "auditAiAll": {
-        "message": "закрито для всіх"
+    "aiUnknown": {
+        "message": "Поточна адреса: невідомо"
+    },
+    "aiCurrentAllowed": {
+        "message": "Поточна адреса: відповідної заборони немає"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Поточна адреса: заборонена правилами"
+    },
+    "aiRestrictions": {
+        "message": "Є обмеження шляхів"
+    },
+    "aiExceptions": {
+        "message": "Є винятки Allow"
+    },
+    "aiUnverified": {
+        "message": "Токен або призначення не підтверджені"
+    },
+    "aiControl": {
+        "message": "Токен керування використанням даних; окремого обхідника немає"
+    },
+    "aiUserHint": {
+        "message": "Отримання сторінки за дією користувача відрізняється від автоматичного обходу; robots.txt може не застосовуватися."
+    },
+    "aiMissing": {
+        "message": "robots.txt відсутній; результат невідомий."
+    },
+    "aiUnavailable": {
+        "message": "Правила недоступні; результат невідомий."
     },
     "auditLlms": {
         "message": "llms.txt"

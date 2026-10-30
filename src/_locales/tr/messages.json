@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Arama motorları için sayfa listesi. robots.txt içinde Sitemap: satırıyla belirtilir"
     },
-    "auditAi": {
-        "message": "YZ botları için kurallar"
+    "auditAiTraining": {
+        "message": "YZ: eğitim"
+    },
+    "auditAiSearch": {
+        "message": "YZ: arama"
+    },
+    "auditAiUser": {
+        "message": "YZ: kullanıcı istekleri"
+    },
+    "auditAiMixed": {
+        "message": "YZ: karma / doğrulanmamış"
     },
     "auditAiHint": {
-        "message": "Yapay zekâ botlarının sitenin metinlerini sinir ağları için toplayıp toplayamayacağı — robots.txt içinde botun adıyla anıldığı kurallara göre. Eklenti bu türden 16 bot tanır (GPTBot, ClaudeBot, Google-Extended vb.); başka adlı botlar sayılmaz. «Herkese kapalı»: site User-agent: * ile tüm robotlara kapalı, yapay zekâ için ayrı kural yok"
+        "message": "Sayılar katalog kayıtlarıdır. robots.txt uyumu veya veri kullanımını kanıtlamaz; yasaklanmamış bir adres eğitim izni değildir."
     },
-    "auditAiBlocked": {
-        "message": "engelli: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Özel grup"
     },
-    "auditAiAllowed": {
-        "message": "izin verilmiş"
+    "aiWildcard": {
+        "message": "* grubu"
     },
-    "auditAiNone": {
-        "message": "tanımlanmamış"
+    "aiNoGroup": {
+        "message": "Uygulanabilir grup yok"
     },
-    "auditAiAll": {
-        "message": "herkese kapalı"
+    "aiUnknown": {
+        "message": "Geçerli adres: bilinmiyor"
+    },
+    "aiCurrentAllowed": {
+        "message": "Geçerli adres: eşleşen yasak yok"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Geçerli adres: kurallarca yasak"
+    },
+    "aiRestrictions": {
+        "message": "Yol kısıtlamaları var"
+    },
+    "aiExceptions": {
+        "message": "Allow istisnaları var"
+    },
+    "aiUnverified": {
+        "message": "Belirteç veya amaç doğrulanmamış"
+    },
+    "aiControl": {
+        "message": "Veri kullanımını yöneten belirteç; bağımsız tarayıcı değil"
+    },
+    "aiUserHint": {
+        "message": "Kullanıcı isteğiyle getirme otomatik taramadan farklıdır; robots.txt uygulanmayabilir."
+    },
+    "aiMissing": {
+        "message": "robots.txt yok; sonuç bilinmiyor."
+    },
+    "aiUnavailable": {
+        "message": "Kurallar kullanılamıyor; sonuç bilinmiyor."
     },
     "auditLlms": {
         "message": "llms.txt"

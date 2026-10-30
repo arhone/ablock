@@ -875,28 +875,59 @@
     "auditSitemapHint": {
         "message": "Zoznam stránok pre vyhľadávače. Uvádza sa v robots.txt riadkom Sitemap:"
     },
-    "auditAi": {
-        "message": "Pravidlá pre AI boty"
+    "auditAiTraining": {
+        "message": "AI: trénovanie"
+    },
+    "auditAiSearch": {
+        "message": "AI: vyhľadávanie"
+    },
+    "auditAiUser": {
+        "message": "AI: požiadavky používateľov"
+    },
+    "auditAiMixed": {
+        "message": "AI: zmiešané / nepotvrdené"
     },
     "auditAiHint": {
-        "message": "Či môžu boty AI zbierať texty stránky pre neurónové siete — podľa pravidiel v robots.txt, kde je bot uvedený menom. Rozšírenie pozná 16 takých botov (GPTBot, ClaudeBot, Google-Extended a ďalšie); boty s inými menami sa nepočítajú. „Zatvorené pre všetkých“ — stránka je zatvorená pre všetky roboty cez User-agent: *, samostatné pravidlá pre AI nie sú"
+        "message": "Čísla označujú položky katalógu. robots.txt nedokazuje dodržiavanie pravidiel ani využitie údajov; nezakázaná adresa nie je súhlasom s trénovaním."
     },
-    "auditAiBlocked": {
-        "message": "zakázané: $COUNT$",
-        "placeholders": {
-            "count": {
-                "content": "$1"
-            }
-        }
+    "aiNamed": {
+        "message": "Vlastná skupina"
     },
-    "auditAiAllowed": {
-        "message": "povolené"
+    "aiWildcard": {
+        "message": "Skupina *"
     },
-    "auditAiNone": {
-        "message": "nenastavené"
+    "aiNoGroup": {
+        "message": "Žiadna použiteľná skupina"
     },
-    "auditAiAll": {
-        "message": "zatvorené pre všetkých"
+    "aiUnknown": {
+        "message": "Aktuálna adresa: neznáma"
+    },
+    "aiCurrentAllowed": {
+        "message": "Aktuálna adresa: bez zodpovedajúceho zákazu"
+    },
+    "aiCurrentDisallowed": {
+        "message": "Aktuálna adresa: zakázaná pravidlami"
+    },
+    "aiRestrictions": {
+        "message": "Existujú obmedzenia ciest"
+    },
+    "aiExceptions": {
+        "message": "Existujú výnimky Allow"
+    },
+    "aiUnverified": {
+        "message": "Token alebo účel nepotvrdený"
+    },
+    "aiControl": {
+        "message": "Token riadenia využitia údajov; žiadny samostatný robot"
+    },
+    "aiUserHint": {
+        "message": "Načítanie na žiadosť používateľa sa líši od automatického prechádzania; robots.txt sa nemusí uplatniť."
+    },
+    "aiMissing": {
+        "message": "robots.txt chýba; výsledok neznámy."
+    },
+    "aiUnavailable": {
+        "message": "Pravidlá nedostupné; výsledok neznámy."
     },
     "auditLlms": {
         "message": "llms.txt"
