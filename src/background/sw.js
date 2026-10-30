@@ -331,6 +331,7 @@ chrome.permissions.onRemoved.addListener(() => {
             delete tab.redirects;
             delete tab.pendingRedirects;
             delete tab.retiredRedirectRequests;
+            delete tab.retiredRedirectFilter;
         }
         await saveTabs();
     });
@@ -402,7 +403,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             const s = await load();
             const extended = await chrome.permissions.contains(EXTENDED);
             const tab = s.tabs[request.tabInfo] || null;
-            sendResponse({tab: tab && !extended ? {...tab, redirects: undefined, pendingRedirects: undefined, retiredRedirectRequests: undefined} : tab, stats: s.stats,
+            sendResponse({tab: tab && !extended ? {...tab, redirects: undefined, pendingRedirects: undefined, retiredRedirectRequests: undefined, retiredRedirectFilter: undefined} : tab, stats: s.stats,
                 redirectsStatus: extended ? (tab?.redirects ? 'observed' : 'not-observed') : 'permission-required'});
         }).catch(() => sendResponse(null));
         return true;
@@ -843,6 +844,34 @@ const MAX_RETIRED_REQUESTS = 8;
 let redirectEpoch = 0;
 let redirectQueue = Promise.resolve();
 
+// Фильтр без удаления битов: вытесненный ID не становится новым после переполнения
+// короткого списка. Максимум 65536 бит (2048 слов) на вкладку, только session.
+// Коллизия может консервативно отклонить НОВЫЙ запрос, но никогда не принимает
+// старый как новый. При долгой жизни вкладки сбор может стать менее полным;
+// очищать фильтр до закрытия вкладки/отзыва прав нельзя — это вернуло бы старые ID.
+function redirectRequestBits(requestId) {
+    return [2166136261, 2246822519, 3266489917, 668265263].map((seed) => {
+        let hash = seed;
+        for (let i = 0; i < requestId.length; i++) {
+            hash = Math.imul(hash ^ requestId.charCodeAt(i), 16777619);
+        }
+        return (hash ^ (hash >>> 16)) & 65535;
+    });
+}
+
+function retireRedirectRequest(tab, requestId) {
+    tab.retiredRedirectFilter ??= {};
+    for (const bit of redirectRequestBits(requestId)) {
+        const word = bit >>> 5;
+        tab.retiredRedirectFilter[word] = (tab.retiredRedirectFilter[word] || 0) | (1 << (bit & 31));
+    }
+}
+
+function isRetiredRedirectRequest(tab, requestId) {
+    return !!tab?.retiredRedirectFilter && redirectRequestBits(requestId).every((bit) =>
+        (tab.retiredRedirectFilter[bit >>> 5] & (1 << (bit & 31))) !== 0);
+}
+
 /** Только безопасный HTTP(S) origin и первые 160 символов пути, без credentials/query/hash. */
 function redirectAddress(value) {
     try {
@@ -857,7 +886,8 @@ function redirectAddress(value) {
  * redirects v1 — только наблюдавшиеся HTTP-переходы главной навигации.
  * До принятия headers новая цепочка находится в pendingRedirects; данные открытого
  * документа и redirects сохраняются. 204/205 и attachment не заменяют документ.
- * retiredRedirectRequests — последние 8 вытесненных requestId, включая после сна worker.
+ * retiredRedirectRequests — последние 8 вытесненных requestId; retiredRedirectFilter
+ * не забывает более старые ID до закрытия вкладки/отзыва прав, включая после сна worker.
  * generation — UUID новой навигации, requestId — идентификатор браузера (не URL).
  * hops: {from,to,statusCode,timeStamp}, максимум 20; initialUrl/finalUrl безопасные.
  * outcome: pending/completed/error; complete — вся ли HTTP-цепочка наблюдалась.
@@ -873,12 +903,16 @@ function queueRedirect(kind, details) {
         const s = await load();
         if (epoch !== redirectEpoch || !await chrome.permissions.contains(EXTENDED)
             || epoch !== redirectEpoch || details.tabId < 0 || details.frameId !== 0
-            || details.documentLifecycle === 'prerender' || details.documentLifecycle === 'cached') {
+            || isPrerender(details) || details.documentLifecycle === 'cached') {
             return;
         }
         let tab = s.tabs[details.tabId];
         let chain = tab?.pendingRedirects || tab?.redirects;
-        if (tab?.retiredRedirectRequests?.includes(details.requestId)) {
+        // Совместимость с session предыдущей версии: переносим известные ID в фильтр.
+        for (const requestId of tab?.retiredRedirectRequests || []) {
+            retireRedirectRequest(tab, requestId);
+        }
+        if (isRetiredRedirectRequest(tab, details.requestId)) {
             return;
         }
         if (kind === 'start') {
@@ -886,12 +920,12 @@ function queueRedirect(kind, details) {
             if (chain?.requestId === details.requestId || chain?.startedAt > details.timeStamp) {
                 return;
             }
-            if (details.documentId) {
-                return; // Предзагрузка от имени существующего документа.
-            }
-            tab ??= {};
+            tab ??= {blocked: {}, bytes: 0};
+            tab.blocked ??= {};
+            tab.bytes ??= 0;
             const retired = tab.retiredRedirectRequests || [];
             if (chain) {
+                retireRedirectRequest(tab, chain.requestId);
                 retired.push(chain.requestId);
             }
             tab.retiredRedirectRequests = retired.slice(-MAX_RETIRED_REQUESTS);
@@ -958,12 +992,14 @@ function queueRedirect(kind, details) {
                 if (!chain) {
                     for (const previous of [tab?.redirects, tab?.pendingRedirects]) {
                         if (previous && !retired.includes(previous.requestId)) {
+                            retireRedirectRequest(tab, previous.requestId);
                             retired.push(previous.requestId);
                         }
                     }
                 }
                 tab = {host: new URL(details.url).hostname, ip: details.ip || '', headers,
-                    blocked: {}, bytes: 0, retiredRedirectRequests: retired.slice(-MAX_RETIRED_REQUESTS)};
+                    blocked: {}, bytes: 0, retiredRedirectRequests: retired.slice(-MAX_RETIRED_REQUESTS),
+                    retiredRedirectFilter: tab?.retiredRedirectFilter || {}};
                 if (chain) {
                     chain.responseStartedAt = details.timeStamp;
                     tab.redirects = chain;
@@ -1038,6 +1074,7 @@ async function onBlocked(details) {
     s.stats.bytes += size;
     const tab = s.tabs[details.tabId];
     if (tab && details.type !== 'main_frame' && !isPrerender(details)) {
+        tab.blocked ??= {}; // В session могла остаться запись старой версии без blocked.
         tab.bytes = (tab.bytes || 0) + size;
         const url = new URL(details.url);
         const key = url.hostname + url.pathname.slice(0, 40);
