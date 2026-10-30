@@ -1,0 +1,14 @@
+@import url('banner.css');
+/* Отдельный кадр магазина: полный отчёт с сохранением пропорций. */
+html, body { width: 1280px; height: 800px; }
+.store { height: 800px; padding: 44px 64px; grid-template-columns: 740px 360px; gap: 52px; }
+.store .copy { padding: 12px 0; }
+.store .brand { font-size: 36px; gap: 16px; }
+.store .brand img { width: 56px; height: 56px; }
+.store h1 { font-size: 64px; margin: 40px 0 28px; }
+.store .points { font-size: 25px; line-height: 1.65; }
+.store .browsers { font-size: 25px; }
+.store .address { font-size: 21px; margin-top: 10px; }
+.store .sample { width: 360px; }
+.store .sample img { width: auto; height: auto; max-width: 360px; max-height: 680px; margin: 0 auto; }
+.store .sample figcaption { font-size: 16px; margin-top: 8px; }

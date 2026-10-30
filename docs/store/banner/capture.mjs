@@ -8,15 +8,19 @@ import {fileURLToPath, pathToFileURL} from 'node:url';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const mode = process.argv[2] || 'all';
-if (!['all', 'readme', 'og'].includes(mode)) throw new Error('Usage: node capture.mjs [all|readme|og]');
+if (!['all', 'readme', 'og', 'store'].includes(mode)) throw new Error('Usage: node capture.mjs [all|readme|og|store]');
 const jobs = [
-    ...(mode !== 'og' ? ['ru', 'en'].map(lang => ({
+    ...(['all', 'readme'].includes(mode) ? ['ru', 'en'].map(lang => ({
         input: `${lang}.html`, width: 1280, height: 640,
         out: path.resolve(here, '../../img'), name: `banner-${lang}`, formats: ['png', 'webp']
     })) : []),
-    ...(mode !== 'readme' ? ['ru', 'en', 'es', 'pt-br', 'de'].map(lang => ({
+    ...(['all', 'og'].includes(mode) ? ['ru', 'en', 'es', 'pt-br', 'de'].map(lang => ({
         input: `og-${lang}.html`, width: 1200, height: 630,
         out: path.resolve(here, '../../site/img'), name: `og-${lang}`, formats: ['png']
+    })) : []),
+    ...(['all', 'store'].includes(mode) ? ['en', 'ru', 'sr'].map(lang => ({
+        input: `store-${lang}.html`, width: 1280, height: 800,
+        out: path.resolve(here, '../img', lang), name: 'store-1', formats: ['png']
     })) : [])
 ];
 const profile = await mkdtemp(path.join(tmpdir(), 'ablock-banner-'));
@@ -90,7 +94,7 @@ try {
             await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
             const bounds = element => { const r = element.getBoundingClientRect(); return {x:r.x,y:r.y,right:r.right,bottom:r.bottom}; };
             return {width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,scrollHeight:document.documentElement.scrollHeight,
-                boxes:Array.from(document.querySelectorAll('.brand,h1,.points,.og-lead,.og-note,.browsers,.address,.sample'),bounds)};
+                boxes:Array.from(document.querySelectorAll('.brand,.brand img,h1,.points,.points li,.og-lead,.og-note,.browsers,.address,.sample,.sample img,.sample figcaption'),bounds)};
         })()`});
         if (check.exceptionDetails) throw new Error(JSON.stringify(check.exceptionDetails));
         const geometry = check.result.value;
@@ -101,6 +105,15 @@ try {
             const {data} = await call('Page.captureScreenshot', {format, ...(format === 'webp' ? {quality: 90} : {}), captureBeyondViewport: false,
                 clip: {x: 0, y: 0, width, height, scale: 1}});
             const bytes = Buffer.from(data, 'base64');
+            if (format === 'png') {
+                if (bytes.subarray(0, 8).toString('hex') !== '89504e470d0a1a0a' || bytes.toString('ascii', 12, 16) !== 'IHDR' ||
+                    bytes.readUInt32BE(16) !== width || bytes.readUInt32BE(20) !== height) {
+                    throw new Error(`Invalid PNG dimensions: ${input}`);
+                }
+                // Chrome выдаёт RGB PNG для непрозрачной страницы. Не принимаем RGBA
+                // даже с непрозрачными пикселями: магазин требует файл без альфа-канала.
+                if (input.startsWith('store-') && bytes[25] !== 2) throw new Error(`Store PNG must be RGB without alpha: ${input}`);
+            }
             if (format === 'png' && bytes.length > 1000000) throw new Error(`PNG exceeds 1 MB: ${bytes.length}`);
             const file = path.join(out, `${name}.${format}`);
             await writeFile(file, bytes);
