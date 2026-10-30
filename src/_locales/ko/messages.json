@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "이 사이트의 보호를 켜세요"
-    },
-    "pickTemp": {
-        "message": "새로고침 전까지만"
-    },
-    "pickAllow": {
-        "message": "이 사이트에서 허용"
-    },
-    "pickAllowTitle": {
-        "message": "새로고침 후에도 숨겨집니다. 브라우저가 이 사이트에 대한 접근 권한을 요청합니다"
-    },
-    "pickAllowed": {
-        "message": "새로고침 후에도 숨겨짐"
-    },
     "pickCleared": {
         "message": "모든 요소가 페이지에 돌아왔습니다"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "선택됨: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "끄기 ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "켜기 ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "이 페이지에 없어 강조할 수 없습니다"
-    },
-    "hiddenOffHint": {
-        "message": "사이트 보호가 꺼져 있어 숨긴 요소가 보입니다"
     },
     "kindImage": {
         "message": "이미지"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "목록은 ABlock 창에 있습니다"
-    },
-    "pickDoneTemp": {
-        "message": "새로고침 전까지 숨겼습니다"
-    },
-    "pickDoneTempSave": {
-        "message": "저장은 ABlock 창에서"
     },
     "pickLimit": {
         "message": "이 사이트에서 이미 100개를 숨겼습니다. ABlock 창에서 불필요한 항목을 삭제하세요"

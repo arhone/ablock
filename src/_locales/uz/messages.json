@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Bu saytda himoyani yoqing"
-    },
-    "pickTemp": {
-        "message": "Faqat qayta yuklashgacha"
-    },
-    "pickAllow": {
-        "message": "Bu saytda ruxsat berish"
-    },
-    "pickAllowTitle": {
-        "message": "Qayta yuklangandan keyin ham yashirin qoladi. Brauzer bu saytga kirish uchun ruxsat soʻraydi"
-    },
-    "pickAllowed": {
-        "message": "Qayta yuklanganda ham yashiriladi"
-    },
     "pickCleared": {
         "message": "Hammasi sahifaga qaytdi"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Tanlangan: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "O‘chirish ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Yoqish ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Bu sahifada yoʻq — ajratib koʻrsatadigan element yoʻq"
-    },
-    "hiddenOffHint": {
-        "message": "Sayt himoyasi oʻchirilgan — yashirilgan elementlar hozir koʻrinadi"
     },
     "kindImage": {
         "message": "Rasm"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "roʻyxat — ABlock oynasida"
-    },
-    "pickDoneTemp": {
-        "message": "Qayta yuklashgacha yashirildi"
-    },
-    "pickDoneTempSave": {
-        "message": "saqlash — ABlock oynasida"
     },
     "pickLimit": {
         "message": "Saytda allaqachon 100 ta element yashirilgan — keraksizlarini ABlock oynasida oʻchiring"

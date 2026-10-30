@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Schutz für diese Website einschalten"
-    },
-    "pickTemp": {
-        "message": "Nur bis zum Neuladen"
-    },
-    "pickAllow": {
-        "message": "Für Website erlauben"
-    },
-    "pickAllowTitle": {
-        "message": "Elemente bleiben nach dem Neuladen ausgeblendet. Der Browser fragt nach Zugriff auf diese Website"
-    },
-    "pickAllowed": {
-        "message": "Bleibt nach Neuladen ausgeblendet"
-    },
     "pickCleared": {
         "message": "Alles ist wieder auf der Seite"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Ausgewählt: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Deaktivieren ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Aktivieren ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Nicht auf dieser Seite — nichts hervorzuheben"
-    },
-    "hiddenOffHint": {
-        "message": "Website-Schutz ist aus — ausgeblendete Elemente sind jetzt sichtbar"
     },
     "kindImage": {
         "message": "Bild"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "Liste — im ABlock-Fenster"
-    },
-    "pickDoneTemp": {
-        "message": "Bis zum Neuladen ausgeblendet"
-    },
-    "pickDoneTempSave": {
-        "message": "Speichern — im ABlock-Fenster"
     },
     "pickLimit": {
         "message": "Auf dieser Website sind bereits 100 Elemente ausgeblendet — entfernen Sie einige im ABlock-Fenster"

@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Ota sivuston suojaus käyttöön"
-    },
-    "pickTemp": {
-        "message": "Vain uudelleenlataukseen asti"
-    },
-    "pickAllow": {
-        "message": "Salli tällä sivustolla"
-    },
-    "pickAllowTitle": {
-        "message": "Elementit pysyvät piilossa myös uudelleenlatauksen jälkeen. Selain pyytää pääsyä tälle sivustolle"
-    },
-    "pickAllowed": {
-        "message": "Pysyy piilossa uudelleenladattaessa"
-    },
     "pickCleared": {
         "message": "Kaikki on taas sivulla"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Valittu: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Poista käytöstä ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Ota käyttöön ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Ei tällä sivulla — ei korostettavaa"
-    },
-    "hiddenOffHint": {
-        "message": "Sivuston suojaus on pois käytöstä — piilotetut elementit näkyvät nyt"
     },
     "kindImage": {
         "message": "Kuva"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "luettelo — ABlockin ikkunassa"
-    },
-    "pickDoneTemp": {
-        "message": "Piilotettu uudelleenlataukseen asti"
-    },
-    "pickDoneTempSave": {
-        "message": "tallenna — ABlockin ikkunassa"
     },
     "pickLimit": {
         "message": "Sivustolla on jo 100 piilotettua elementtiä — poista turhat ABlockin ikkunassa"

@@ -116,23 +116,37 @@ async function getSettings() {
 }
 
 /**
- * Перерегистрирует скрипты сайтов (при выключенной защите только снимает)
+ * Перерегистрирует скрипты сайтов; пипетка не зависит от защиты
  * @param {{status: boolean, cookies: boolean, allowed: string[]}} settings
  * @param {boolean} extended
  */
 async function applyContentScripts({status, cookies, allowed}, extended) {
-    const registered = await chrome.scripting.getRegisteredContentScripts();
+    const registered = (await chrome.scripting.getRegisteredContentScripts()).filter((s) => s.id !== CUSTOM_SCRIPT.id);
     if (registered.length) {
         await chrome.scripting.unregisterContentScripts({ids: registered.map((s) => s.id)});
     }
     // На сайтах без защиты свои скрипты тоже не запускаем: сайт и его поддомены
     const excludeMatches = allowed.flatMap((host) => [`*://${host}/*`, `*://*.${host}/*`]);
     const protect = (script) => (excludeMatches.length ? {...script, excludeMatches} : script);
+    await refreshCustomScript(extended);
+    const scripts = [
+        ...(status ? CONTENT_SCRIPTS.map(protect) : []),
+        ...(extended ? [TIMING_SCRIPT] : []),
+        ...(extended && status ? [protect(ADS_SCRIPT)] : []),
+        ...(extended && status && cookies ? [protect(COOKIE_SCRIPT)] : [])
+    ];
+    if (scripts.length) {
+        await chrome.scripting.registerContentScripts(scripts);
+    }
+}
+
+/** Хосты с включёнными скрытиями: вызывается и внутри очереди изменений. */
+async function customMatches(extended) {
     const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
     const matches = [];
-    if (status) {
+    if (extended) {
         for (const host of Object.keys(aBlockCustom)) {
-            if (!aBlockCustom[host]?.length) {
+            if (!aBlockCustom[host]?.some((entry) => entry.enabled !== false)) {
                 continue;
             }
             for (const pattern of siteOrigins(host)) {
@@ -142,15 +156,22 @@ async function applyContentScripts({status, cookies, allowed}, extended) {
             }
         }
     }
-    const scripts = [
-        ...(matches.length ? [protect({...CUSTOM_SCRIPT, matches})] : []),
-        ...(status ? CONTENT_SCRIPTS.map(protect) : []),
-        ...(extended ? [TIMING_SCRIPT] : []),
-        ...(extended && status ? [protect(ADS_SCRIPT)] : []),
-        ...(extended && status && cookies ? [protect(COOKIE_SCRIPT)] : [])
-    ];
-    if (scripts.length) {
-        await chrome.scripting.registerContentScripts(scripts);
+    return matches;
+}
+
+/** Без вложенного enqueue: подтверждение изменения ждёт регистрации custom.js. */
+async function refreshCustomScript(extended) {
+    const matches = await customMatches(extended ?? await chrome.permissions.contains(EXTENDED));
+    const registered = (await chrome.scripting.getRegisteredContentScripts({ids: [CUSTOM_SCRIPT.id]}))[0];
+    if (!matches.length) {
+        if (registered) {
+            await chrome.scripting.unregisterContentScripts({ids: [CUSTOM_SCRIPT.id]});
+        }
+    } else if (registered) {
+        // Обновление существующего скрипта не создаёт промежутка без регистрации.
+        await chrome.scripting.updateContentScripts([{id: CUSTOM_SCRIPT.id, matches, excludeMatches: []}]);
+    } else {
+        await chrome.scripting.registerContentScripts([{...CUSTOM_SCRIPT, matches, excludeMatches: []}]);
     }
 }
 
@@ -367,6 +388,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (sender.id !== chrome.runtime.id || !sender.url?.startsWith(chrome.runtime.getURL(''))) {
         return;
     }
+    if (request?.customToggle) {
+        enqueue(() => toggleCustom(request.customToggle).then(() => true, () => false)).then(sendResponse);
+        return true;
+    }
     if (request?.customRemove || request?.customClear) {
         const data = request.customRemove || request.customClear;
         enqueue(() => removeCustom(data, !!request.customClear).then(() => true, () => false)).then(sendResponse);
@@ -434,12 +459,6 @@ function validCustomSelector(s) {
         && !/[{};]/.test(s) && !s.includes('/*') && !/^(html|body|:root|\*)$/i.test(s.trim());
 }
 
-/** Исключения действуют и на родительские домены, как в окне */
-async function customActive(host) {
-    const {status, allowed} = await getSettings();
-    return status && !allowed.some((site) => host === site || host.endsWith('.' + site));
-}
-
 function customCSS(tabId, documentId, s, highlight = false) {
     return {
         target: {tabId, documentIds: [documentId]},
@@ -450,7 +469,7 @@ function customCSS(tabId, documentId, s, highlight = false) {
 }
 
 async function saveCustom(sender, host, pick) {
-    if (!validCustomSelector(pick.s) || !await customActive(host)) {
+    if (!validCustomSelector(pick.s) || !await chrome.permissions.contains(EXTENDED)) {
         return {ok: false, error: 'invalid'};
     }
     const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
@@ -484,22 +503,27 @@ async function saveCustom(sender, host, pick) {
             await chrome.scripting.removeCSS(customCSS(sender.tab.id, sender.documentId, pick.s)).catch(() => {});
             return {ok: false, error: 'inject'};
         }
-        if (!entries.length) {
-            update();
+    }
+    if (exists && entries.find(({s}) => s === pick.s).enabled === false) {
+        try {
+            aBlockCustom[host] = entries.map((entry) => entry.s === pick.s ? {...entry, enabled: true} : entry);
+            await chrome.storage.local.set({aBlockCustom});
+        } catch {
+            await chrome.scripting.removeCSS(customCSS(sender.tab.id, sender.documentId, pick.s)).catch(() => {});
+            return {ok: false, error: 'inject'};
         }
     }
-    const permanent = await chrome.permissions.contains(EXTENDED)
-        || await chrome.permissions.contains({origins: [`*://${host}/*`]});
-    return {ok: true, count: entries.length + (exists ? 0 : 1), permanent};
+    await refreshCustomScript();
+    return {ok: true, count: entries.length + (exists ? 0 : 1)};
 }
 
 async function applyCustom(sender, host) {
-    if (!await customActive(host)) {
+    if (!await chrome.permissions.contains(EXTENDED)) {
         return;
     }
     const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
-    for (const {s} of own(aBlockCustom, host) || []) {
-        if (validCustomSelector(s)) {
+    for (const {s, enabled} of own(aBlockCustom, host) || []) {
+        if (enabled !== false && validCustomSelector(s)) {
             await chrome.scripting.insertCSS(customCSS(sender.tab.id, sender.documentId, s)).catch(() => {});
         }
     }
@@ -520,12 +544,34 @@ async function removeCustom(data, clear) {
         delete aBlockCustom[host];
     }
     await chrome.storage.local.set({aBlockCustom});
-    if (entries.length && !remaining.length) {
-        update();
-    }
+    await refreshCustomScript();
     if (Number.isInteger(data.tabId) && data.documentId) {
         for (const {s} of removed) {
             await chrome.scripting.removeCSS(customCSS(data.tabId, data.documentId, s)).catch(() => {});
+        }
+    }
+}
+
+async function toggleCustom(data) {
+    if (typeof data?.host !== 'string' || typeof data.enabled !== 'boolean' || !Array.isArray(data.selectors)) {
+        throw new Error('Invalid custom toggle');
+    }
+    const host = data.host.replace(/^www\./, '');
+    const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
+    const entries = own(aBlockCustom, host) || [];
+    const changed = entries.filter((entry) => data.selectors.includes(entry.s)
+        && (entry.enabled !== false) !== data.enabled);
+    aBlockCustom[host] = entries.map((entry) => changed.includes(entry) ? {...entry, enabled: data.enabled} : entry);
+    await chrome.storage.local.set({aBlockCustom});
+    await refreshCustomScript();
+    if (Number.isInteger(data.tabId) && data.documentId) {
+        const access = await chrome.permissions.contains(EXTENDED);
+        for (const {s} of changed) {
+            if (data.enabled && access) {
+                await chrome.scripting.insertCSS(customCSS(data.tabId, data.documentId, s)).catch(() => {});
+            } else {
+                await chrome.scripting.removeCSS(customCSS(data.tabId, data.documentId, s)).catch(() => {});
+            }
         }
     }
 }
@@ -546,12 +592,13 @@ chrome.runtime.onConnect.addListener((port) => {
         const {tabId, documentId, s, hidden} = item;
         await chrome.scripting.removeCSS(customCSS(tabId, documentId, s, true)).catch(() => {});
         if (hidden) {
-            // После удаления записи или выключения защиты скрытие не возвращаем
+            // После удаления или выключения записи скрытие не возвращаем
             try {
                 const tab = await chrome.tabs.get(tabId);
                 const host = new URL(tab.url).hostname.replace(/^www\./, '');
                 const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
-                if (await customActive(host) && own(aBlockCustom, host)?.some((entry) => entry.s === s)) {
+                if (await chrome.permissions.contains(EXTENDED)
+                    && own(aBlockCustom, host)?.some((entry) => entry.s === s && entry.enabled !== false)) {
                     await chrome.scripting.insertCSS(customCSS(tabId, documentId, s));
                 }
             } catch {

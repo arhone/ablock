@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "เปิดการป้องกันในเว็บไซต์นี้"
-    },
-    "pickTemp": {
-        "message": "จนกว่าจะโหลดใหม่เท่านั้น"
-    },
-    "pickAllow": {
-        "message": "อนุญาตในเว็บไซต์นี้"
-    },
-    "pickAllowTitle": {
-        "message": "องค์ประกอบจะยังถูกซ่อนหลังโหลดใหม่ เบราว์เซอร์จะขอสิทธิ์เข้าถึงเว็บไซต์นี้"
-    },
-    "pickAllowed": {
-        "message": "ยังซ่อนหลังโหลดใหม่"
-    },
     "pickCleared": {
         "message": "ทุกอย่างกลับมาบนหน้าแล้ว"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "เลือกแล้ว: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "ปิดใช้งาน ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "เปิดใช้งาน ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "ไม่มีในหน้านี้ — ไม่มีองค์ประกอบให้เน้น"
-    },
-    "hiddenOffHint": {
-        "message": "การป้องกันเว็บไซต์ปิดอยู่ — ตอนนี้องค์ประกอบที่ซ่อนจะแสดง"
     },
     "kindImage": {
         "message": "รูปภาพ"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "ดูรายการในหน้าต่าง ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "ซ่อนจนกว่าจะโหลดใหม่"
-    },
-    "pickDoneTempSave": {
-        "message": "บันทึกในหน้าต่าง ABlock"
     },
     "pickLimit": {
         "message": "เว็บไซต์นี้มีองค์ประกอบที่ซ่อนอยู่แล้ว 100 รายการ — ลบรายการที่ไม่ต้องการในหน้าต่าง ABlock"

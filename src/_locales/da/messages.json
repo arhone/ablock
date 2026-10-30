@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Slå beskyttelse til på dette websted"
-    },
-    "pickTemp": {
-        "message": "Kun indtil genindlæsning"
-    },
-    "pickAllow": {
-        "message": "Tillad på webstedet"
-    },
-    "pickAllowTitle": {
-        "message": "Elementer forbliver skjult efter genindlæsning. Browseren vil bede om adgang til dette websted"
-    },
-    "pickAllowed": {
-        "message": "Forbliver skjult efter genindlæsning"
-    },
     "pickCleared": {
         "message": "Alt er tilbage på siden"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Valgt: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Deaktivér ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Aktivér ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Ikke på denne side — intet at fremhæve"
-    },
-    "hiddenOffHint": {
-        "message": "Beskyttelsen er slået fra på webstedet — skjulte elementer er nu synlige"
     },
     "kindImage": {
         "message": "Billede"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "liste — i ABlock-vinduet"
-    },
-    "pickDoneTemp": {
-        "message": "Skjult indtil genindlæsning"
-    },
-    "pickDoneTempSave": {
-        "message": "gem — i ABlock-vinduet"
     },
     "pickLimit": {
         "message": "Webstedet har allerede 100 skjulte elementer — fjern nogle i ABlock-vinduet"

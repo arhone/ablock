@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "இந்தத் தளத்தில் பாதுகாப்பை இயக்கு"
-    },
-    "pickTemp": {
-        "message": "மீண்டும் ஏற்றும் வரை மட்டும்"
-    },
-    "pickAllow": {
-        "message": "இந்தத் தளத்தில் அனுமதி"
-    },
-    "pickAllowTitle": {
-        "message": "மீண்டும் ஏற்றிய பிறகும் மறைந்திருக்கும். இந்தத் தளத்தை அணுக உலாவி அனுமதி கேட்கும்"
-    },
-    "pickAllowed": {
-        "message": "மீண்டும் ஏற்றினாலும் மறையும்"
-    },
     "pickCleared": {
         "message": "அனைத்தும் பக்கத்தில் மீண்டும் தெரிகின்றன"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "தேர்ந்தெடுத்தவை: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "முடக்கு ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "இயக்கு ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "இந்தப் பக்கத்தில் இல்லை — முன்னிலைப்படுத்த ஏதுமில்லை"
-    },
-    "hiddenOffHint": {
-        "message": "தளப் பாதுகாப்பு நிறுத்தப்பட்டுள்ளது — மறைத்த உறுப்புகள் இப்போது தெரிகின்றன"
     },
     "kindImage": {
         "message": "படம்"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "பட்டியல் — ABlock சாளரத்தில்"
-    },
-    "pickDoneTemp": {
-        "message": "மீண்டும் ஏற்றும் வரை மறைந்திருக்கும்"
-    },
-    "pickDoneTempSave": {
-        "message": "சேமிக்க — ABlock சாளரத்தில்"
     },
     "pickLimit": {
         "message": "தளத்தில் ஏற்கெனவே 100 உறுப்புகள் மறைக்கப்பட்டுள்ளன — தேவையற்றவற்றை ABlock சாளரத்தில் நீக்கவும்"

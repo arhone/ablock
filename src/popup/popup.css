@@ -939,21 +939,8 @@ body.loading {
     font-size: 10.5px;
     overflow-wrap: anywhere;
 }
-#pick-allow {
-    display: inline;
-    padding: 0;
-    border: 0;
-    background: none;
-    color: var(--on-text);
-    font: inherit;
-    font-weight: 600;
-    text-align: start;
-    text-decoration: underline;
-    cursor: pointer;
-}
 #pick:focus-visible,
-#pick-count:focus-visible,
-#pick-allow:focus-visible {
+#pick-count:focus-visible {
     outline: 2px solid var(--on);
     outline-offset: 2px;
 }

@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Activez la protection sur ce site"
-    },
-    "pickTemp": {
-        "message": "Jusqu’au rechargement"
-    },
-    "pickAllow": {
-        "message": "Autoriser sur ce site"
-    },
-    "pickAllowTitle": {
-        "message": "Les éléments resteront masqués après rechargement. Le navigateur demandera l’accès à ce site"
-    },
-    "pickAllowed": {
-        "message": "Reste masqué après rechargement"
-    },
     "pickCleared": {
         "message": "Tout est de retour sur la page"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Sélectionnés : $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Désactiver ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Activer ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Absent de cette page — rien à mettre en évidence"
-    },
-    "hiddenOffHint": {
-        "message": "La protection du site est désactivée — les éléments masqués sont visibles"
     },
     "kindImage": {
         "message": "Image"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "liste — dans la fenêtre ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Masqué jusqu’au rechargement"
-    },
-    "pickDoneTempSave": {
-        "message": "enregistrer — dans la fenêtre ABlock"
     },
     "pickLimit": {
         "message": "Ce site a déjà 100 éléments masqués — supprimez-en dans la fenêtre ABlock"

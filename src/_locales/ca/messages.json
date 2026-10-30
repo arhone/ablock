@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Activa la protecció en aquest lloc"
-    },
-    "pickTemp": {
-        "message": "Només fins que es recarregui"
-    },
-    "pickAllow": {
-        "message": "Permet en aquest lloc"
-    },
-    "pickAllowTitle": {
-        "message": "Els elements continuaran amagats després de recarregar. El navegador demanarà accés a aquest lloc"
-    },
-    "pickAllowed": {
-        "message": "Continua amagat en recarregar"
-    },
     "pickCleared": {
         "message": "Tot torna a ser a la pàgina"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Seleccionats: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Desactiva ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Activa ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "No és en aquesta pàgina — no hi ha res a ressaltar"
-    },
-    "hiddenOffHint": {
-        "message": "La protecció del lloc està desactivada — els elements amagats ara són visibles"
     },
     "kindImage": {
         "message": "Imatge"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "llista — a la finestra d’ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Amagat fins que es recarregui"
-    },
-    "pickDoneTempSave": {
-        "message": "desa — a la finestra d’ABlock"
     },
     "pickLimit": {
         "message": "Aquest lloc ja té 100 elements amagats — suprimeix-ne alguns a la finestra d’ABlock"

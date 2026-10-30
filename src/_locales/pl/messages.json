@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Włącz ochronę na tej stronie"
-    },
-    "pickTemp": {
-        "message": "Tylko do przeładowania"
-    },
-    "pickAllow": {
-        "message": "Zezwól na tej stronie"
-    },
-    "pickAllowTitle": {
-        "message": "Elementy pozostaną ukryte po przeładowaniu. Przeglądarka poprosi o dostęp do tej strony"
-    },
-    "pickAllowed": {
-        "message": "Ukryte także po przeładowaniu"
-    },
     "pickCleared": {
         "message": "Wszystko znów jest na stronie"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Zaznaczono: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Wyłącz ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Włącz ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Brak na tej stronie — nie ma czego wyróżnić"
-    },
-    "hiddenOffHint": {
-        "message": "Ochrona strony jest wyłączona — ukryte elementy są teraz widoczne"
     },
     "kindImage": {
         "message": "Obraz"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "lista — w oknie ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Ukryto do przeładowania"
-    },
-    "pickDoneTempSave": {
-        "message": "zapisz — w oknie ABlock"
     },
     "pickLimit": {
         "message": "Na stronie ukryto już 100 elementów — usuń zbędne w oknie ABlock"

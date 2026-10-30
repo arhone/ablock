@@ -3,7 +3,7 @@
 // Отдельный экран: хранилище меняет только фон, окно управляет предпросмотром.
 (() => {
     let dispose = null;
-    globalThis.openHidden = async ({tab, host, active, access, onClose}) => {
+    globalThis.openHidden = async ({tab, host, onClose}) => {
         if (dispose) {
             await dispose();
         }
@@ -12,9 +12,6 @@
             return;
         }
         const previousFocus = document.activeElement;
-        const enabled = typeof active === 'function' ? active() : active;
-        // Доступ сам по себе не означает, что правила уже вставлены в этот документ.
-        void access;
         let closed = false;
         let changed = false;
         let busy = false;
@@ -73,7 +70,9 @@
         const actions = node('div', 'hidden-actions');
         const clear = button(t('hiddenClear'), 'hidden-clear');
         const remove = button(t('hiddenDelete'), 'hidden-delete');
-        actions.append(clear, remove);
+        const disable = button('', 'hidden-disable');
+        const enable = button('', 'hidden-enable');
+        actions.append(disable, enable, remove, clear);
         screen.append(head, toolbar, list, hint, actions);
         screen.hidden = false;
         document.body.dataset.screen = 'hidden';
@@ -88,7 +87,7 @@
             hint.textContent = t(confirmTimer ? 'hiddenClearHint' : key);
             resize();
         };
-        const defaultHint = enabled ? 'hiddenHint' : 'hiddenOffHint';
+        const defaultHint = 'hiddenHint';
         const css = (item, outline = false) => ({
             target: {tabId: tab.id, documentIds: [documentId]},
             css: outline ? `${item.s}{outline:2px solid #12a86b!important;outline-offset:-2px!important}`
@@ -206,7 +205,7 @@
         }
         documentId = inspection?.documentId;
         entries = entries.map((entry, i) => ({...entry, count: inspection?.result?.[i]?.count ?? null,
-            hidden: Boolean(enabled && inspection?.result?.[i]?.hidden)}));
+            hidden: Boolean(entry.enabled !== false && inspection?.result?.[i]?.hidden)}));
         const updateSelection = () => {
             all.checked = entries.length > 0 && selected.size === entries.length;
             all.indeterminate = selected.size > 0 && selected.size < entries.length;
@@ -215,6 +214,11 @@
             remove.textContent = selected.size ? t('hiddenDeleteN', selected.size) : t('hiddenDelete');
             remove.disabled = busy || !selected.size;
             clear.disabled = busy || !entries.length;
+            for (const [button, key, state] of [[disable, 'hiddenDisableN', true], [enable, 'hiddenEnableN', false]]) {
+                const n = entries.filter((item) => selected.has(item.s) && (item.enabled !== false) === state).length;
+                button.textContent = t(key, n);
+                button.disabled = busy || !n;
+            }
             for (const input of list.querySelectorAll('input')) {
                 input.checked = selected.has(input.value);
                 input.disabled = busy;
@@ -236,6 +240,8 @@
             for (const item of entries) {
                 const row = node('label', 'hidden-row');
                 row.classList.toggle('hidden-missing', item.count === 0);
+                row.classList.toggle('hidden-disabled', item.enabled === false);
+                if (item.enabled === false) row.title = t('hiddenEnableN', 1);
                 const check = node('input', '');
                 check.type = 'checkbox';
                 check.value = item.s;
@@ -342,6 +348,35 @@
                 updateSelection();
             }
         };
+        const toggle = async (enabled) => {
+            if (busy) return;
+            busy = true;
+            updateSelection();
+            deletion = (async () => {
+                await highlight(null);
+                const saved = await chrome.runtime.sendMessage({customToggle: {host, selectors: [...selected],
+                    enabled, tabId: tab.id, ...(documentId ? {documentId} : {})}}).catch(() => false);
+                changed ||= saved === true;
+                return saved;
+            })();
+            const saved = await deletion;
+            if (closed) return;
+            busy = false;
+            disarm();
+            if (saved === true) {
+                const access = await chrome.permissions.contains({permissions: ['webRequest'], origins: ['<all_urls>']})
+                    .catch(() => false);
+                if (closed) return;
+                entries = entries.map((item) => selected.has(item.s)
+                    ? {...item, enabled, hidden: enabled && access && !!documentId} : item);
+                render();
+                all.focus();
+            } else {
+                updateSelection();
+            }
+        };
+        disable.addEventListener('click', () => toggle(false));
+        enable.addEventListener('click', () => toggle(true));
         remove.addEventListener('click', () => erase(false));
         clear.addEventListener('click', () => {
             if (confirmTimer) {

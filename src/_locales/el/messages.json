@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Ενεργοποιήστε την προστασία εδώ"
-    },
-    "pickTemp": {
-        "message": "Μόνο μέχρι την ανανέωση"
-    },
-    "pickAllow": {
-        "message": "Να επιτρέπεται εδώ"
-    },
-    "pickAllowTitle": {
-        "message": "Τα στοιχεία θα παραμείνουν κρυμμένα μετά την ανανέωση. Το πρόγραμμα περιήγησης θα ζητήσει πρόσβαση σε αυτόν τον ιστότοπο"
-    },
-    "pickAllowed": {
-        "message": "Παραμένει κρυμμένο μετά την ανανέωση"
-    },
     "pickCleared": {
         "message": "Όλα επέστρεψαν στη σελίδα"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Επιλεγμένα: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Απενεργοποίηση ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Ενεργοποίηση ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Δεν υπάρχει σε αυτή τη σελίδα — τίποτα για επισήμανση"
-    },
-    "hiddenOffHint": {
-        "message": "Η προστασία του ιστότοπου είναι ανενεργή — τα κρυμμένα στοιχεία είναι τώρα ορατά"
     },
     "kindImage": {
         "message": "Εικόνα"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "λίστα — στο παράθυρο ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Κρυμμένο μέχρι την ανανέωση"
-    },
-    "pickDoneTempSave": {
-        "message": "αποθήκευση — στο παράθυρο ABlock"
     },
     "pickLimit": {
         "message": "Ο ιστότοπος έχει ήδη 100 κρυμμένα στοιχεία — διαγράψτε μερικά στο παράθυρο ABlock"

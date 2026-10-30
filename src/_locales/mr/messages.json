@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "या साइटवर संरक्षण चालू करा"
-    },
-    "pickTemp": {
-        "message": "पुन्हा लोड होईपर्यंतच"
-    },
-    "pickAllow": {
-        "message": "या साइटवर परवानगी द्या"
-    },
-    "pickAllowTitle": {
-        "message": "पुन्हा लोड केल्यानंतरही घटक लपलेले राहतील. ब्राउझर या साइटच्या प्रवेशाची परवानगी मागेल"
-    },
-    "pickAllowed": {
-        "message": "पुन्हा लोड केल्यावरही लपवलेले"
-    },
     "pickCleared": {
         "message": "सर्व पुन्हा पानावर दिसत आहे"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "निवडलेले: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "बंद करा ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "चालू करा ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "या पानावर नाही — ठळक करण्यास काही नाही"
-    },
-    "hiddenOffHint": {
-        "message": "साइटवरील संरक्षण बंद आहे — लपवलेले घटक आता दिसतात"
     },
     "kindImage": {
         "message": "चित्र"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "यादी — ABlock विंडोमध्ये"
-    },
-    "pickDoneTemp": {
-        "message": "पुन्हा लोड होईपर्यंत लपवले"
-    },
-    "pickDoneTempSave": {
-        "message": "जतन करा — ABlock विंडोमध्ये"
     },
     "pickLimit": {
         "message": "या साइटवर आधीच 100 घटक लपवले आहेत — नको असलेले ABlock विंडोमध्ये हटवा"

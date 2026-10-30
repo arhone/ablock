@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "I-on ang proteksyon sa site na ito"
-    },
-    "pickTemp": {
-        "message": "Hanggang sa pag-reload lang"
-    },
-    "pickAllow": {
-        "message": "Payagan sa site na ito"
-    },
-    "pickAllowTitle": {
-        "message": "Mananatiling nakatago ang mga elemento pagkatapos mag-reload. Hihingi ang browser ng access sa site na ito"
-    },
-    "pickAllowed": {
-        "message": "Nakatago pa rin pag nag-reload"
-    },
     "pickCleared": {
         "message": "Nasa pahina na ulit ang lahat"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Napili: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "I-disable ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "I-enable ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Wala sa pahinang ito — walang iha-highlight"
-    },
-    "hiddenOffHint": {
-        "message": "Naka-off ang proteksyon ng site — nakikita na ang mga nakatagong elemento"
     },
     "kindImage": {
         "message": "Larawan"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "listahan — sa window ng ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Nakatago hanggang mag-reload"
-    },
-    "pickDoneTempSave": {
-        "message": "i-save — sa window ng ABlock"
     },
     "pickLimit": {
         "message": "May 100 nakatagong elemento na sa site — tanggalin ang ilan sa window ng ABlock"

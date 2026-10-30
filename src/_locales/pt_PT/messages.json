@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Ative a proteção neste site"
-    },
-    "pickTemp": {
-        "message": "Só até recarregar"
-    },
-    "pickAllow": {
-        "message": "Permitir neste site"
-    },
-    "pickAllowTitle": {
-        "message": "Os elementos continuarão ocultos após recarregar. O navegador pedirá acesso a este site"
-    },
-    "pickAllowed": {
-        "message": "Ocultos mesmo após recarregar"
-    },
     "pickCleared": {
         "message": "Tudo está de volta na página"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Selecionados: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Desativar ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Ativar ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Não está nesta página — nada para realçar"
-    },
-    "hiddenOffHint": {
-        "message": "A proteção do site está desativada — os elementos ocultos estão visíveis"
     },
     "kindImage": {
         "message": "Imagem"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "lista — na janela do ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Oculto até recarregar"
-    },
-    "pickDoneTempSave": {
-        "message": "guardar — na janela do ABlock"
     },
     "pickLimit": {
         "message": "O site já tem 100 elementos ocultos — elimine os desnecessários na janela do ABlock"

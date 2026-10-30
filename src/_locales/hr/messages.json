@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Uključite zaštitu na ovoj stranici"
-    },
-    "pickTemp": {
-        "message": "Samo do ponovnog učitavanja"
-    },
-    "pickAllow": {
-        "message": "Dopusti na ovoj stranici"
-    },
-    "pickAllowTitle": {
-        "message": "Elementi će ostati skriveni i nakon ponovnog učitavanja. Preglednik će zatražiti pristup ovoj stranici"
-    },
-    "pickAllowed": {
-        "message": "Ostaje skriveno nakon učitavanja"
-    },
     "pickCleared": {
         "message": "Sve je ponovno na stranici"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Odabrano: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Isključi ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Uključi ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Nema ga na ovoj stranici — nema što istaknuti"
-    },
-    "hiddenOffHint": {
-        "message": "Zaštita stranice je isključena — skriveni elementi sada su vidljivi"
     },
     "kindImage": {
         "message": "Slika"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "popis — u prozoru ABlocka"
-    },
-    "pickDoneTemp": {
-        "message": "Skriveno do ponovnog učitavanja"
-    },
-    "pickDoneTempSave": {
-        "message": "spremanje — u prozoru ABlocka"
     },
     "pickLimit": {
         "message": "Na stranici je već 100 skrivenih elemenata — izbrišite nepotrebne u prozoru ABlocka"

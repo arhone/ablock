@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Aktifkan perlindungan di situs ini"
-    },
-    "pickTemp": {
-        "message": "Hanya sampai dimuat ulang"
-    },
-    "pickAllow": {
-        "message": "Izinkan di situs ini"
-    },
-    "pickAllowTitle": {
-        "message": "Elemen tetap tersembunyi setelah dimuat ulang. Browser akan meminta akses ke situs ini"
-    },
-    "pickAllowed": {
-        "message": "Tetap tersembunyi setelah dimuat ulang"
-    },
     "pickCleared": {
         "message": "Semua kembali di halaman"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Dipilih: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Nonaktifkan ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Aktifkan ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Tidak ada di halaman ini — tak ada yang bisa disorot"
-    },
-    "hiddenOffHint": {
-        "message": "Perlindungan situs nonaktif — elemen tersembunyi kini terlihat"
     },
     "kindImage": {
         "message": "Gambar"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "daftar — di jendela ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Disembunyikan sampai dimuat ulang"
-    },
-    "pickDoneTempSave": {
-        "message": "simpan — di jendela ABlock"
     },
     "pickLimit": {
         "message": "Sudah ada 100 elemen tersembunyi di situs ini — hapus yang tidak perlu di jendela ABlock"

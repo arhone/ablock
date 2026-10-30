@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Bu sitede korumayı açın"
-    },
-    "pickTemp": {
-        "message": "Yalnızca yeniden yüklemeye kadar"
-    },
-    "pickAllow": {
-        "message": "Bu sitede izin ver"
-    },
-    "pickAllowTitle": {
-        "message": "Yeniden yükledikten sonra da gizli kalır. Tarayıcı bu siteye erişim izni ister"
-    },
-    "pickAllowed": {
-        "message": "Yeniden yüklenince de gizli"
-    },
     "pickCleared": {
         "message": "Her şey tekrar sayfada"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Seçilen: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Devre dışı bırak ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Etkinleştir ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Bu sayfada yok — vurgulanacak öğe yok"
-    },
-    "hiddenOffHint": {
-        "message": "Site koruması kapalı — gizlenen öğeler şu an görünüyor"
     },
     "kindImage": {
         "message": "Resim"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "liste — ABlock penceresinde"
-    },
-    "pickDoneTemp": {
-        "message": "Yeniden yüklemeye kadar gizlendi"
-    },
-    "pickDoneTempSave": {
-        "message": "kaydetmek için ABlock penceresini açın"
     },
     "pickLimit": {
         "message": "Sitede zaten 100 gizli öğe var — gereksiz olanları ABlock penceresinden silin"

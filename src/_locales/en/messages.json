@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Turn on protection for this site"
-    },
-    "pickTemp": {
-        "message": "Only until reload"
-    },
-    "pickAllow": {
-        "message": "Allow on this site"
-    },
-    "pickAllowTitle": {
-        "message": "Elements will stay hidden after reload. The browser will ask for access to this site"
-    },
-    "pickAllowed": {
-        "message": "Stays hidden after reload"
-    },
     "pickCleared": {
         "message": "Everything is back on the page"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Selected: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Disable ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Enable ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Not on this page — nothing to highlight"
-    },
-    "hiddenOffHint": {
-        "message": "Site protection is off — hidden elements are now visible"
     },
     "kindImage": {
         "message": "Image"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "list — in the ABlock popup"
-    },
-    "pickDoneTemp": {
-        "message": "Hidden until reload"
-    },
-    "pickDoneTempSave": {
-        "message": "save — in the ABlock popup"
     },
     "pickLimit": {
         "message": "This site already has 100 hidden elements — remove some in the ABlock popup"

@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Attiva la protezione su questo sito"
-    },
-    "pickTemp": {
-        "message": "Solo fino al ricaricamento"
-    },
-    "pickAllow": {
-        "message": "Consenti su questo sito"
-    },
-    "pickAllowTitle": {
-        "message": "Gli elementi resteranno nascosti dopo il ricaricamento. Il browser chiederà l’accesso a questo sito"
-    },
-    "pickAllowed": {
-        "message": "Nascosti anche dopo il ricaricamento"
-    },
     "pickCleared": {
         "message": "Tutto è di nuovo nella pagina"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Selezionati: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Disattiva ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Attiva ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Assente in questa pagina — nulla da evidenziare"
-    },
-    "hiddenOffHint": {
-        "message": "Protezione disattivata sul sito — gli elementi nascosti sono visibili"
     },
     "kindImage": {
         "message": "Immagine"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "elenco nella finestra di ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Nascosto fino al ricaricamento"
-    },
-    "pickDoneTempSave": {
-        "message": "salva nella finestra di ABlock"
     },
     "pickLimit": {
         "message": "Ci sono già 100 elementi nascosti sul sito — elimina quelli superflui nella finestra di ABlock"

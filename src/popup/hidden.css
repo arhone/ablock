@@ -49,6 +49,8 @@ body[data-screen="hidden"] > footer {
     border: 0;
     border-radius: 7px;
     padding: 7px 10px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 #hidden-screen input {
     flex: 0 0 auto;
@@ -182,4 +184,12 @@ body[data-screen="hidden"] > footer {
 }
 #hidden-screen:has(.hidden-confirm) .hidden-hint {
     color: var(--off);
+}
+
+.hidden-actions {
+    flex-wrap: wrap;
+}
+.hidden-disabled .hidden-description,
+.hidden-disabled svg {
+    opacity: 0.5;
 }

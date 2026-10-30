@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "יש להפעיל הגנה באתר הזה"
-    },
-    "pickTemp": {
-        "message": "רק עד לטעינה מחדש"
-    },
-    "pickAllow": {
-        "message": "אישור באתר הזה"
-    },
-    "pickAllowTitle": {
-        "message": "הרכיבים יישארו מוסתרים גם לאחר טעינה מחדש. הדפדפן יבקש גישה לאתר הזה"
-    },
-    "pickAllowed": {
-        "message": "נשאר מוסתר גם לאחר טעינה מחדש"
-    },
     "pickCleared": {
         "message": "הכול חזר לדף"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "נבחרו: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "כיבוי ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "הפעלה ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "לא נמצא בדף הזה — אין מה להדגיש"
-    },
-    "hiddenOffHint": {
-        "message": "ההגנה באתר כבויה — הרכיבים המוסתרים גלויים כעת"
     },
     "kindImage": {
         "message": "תמונה"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "הרשימה — בחלון ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "מוסתר עד לטעינה מחדש"
-    },
-    "pickDoneTempSave": {
-        "message": "לשמירה — בחלון ABlock"
     },
     "pickLimit": {
         "message": "באתר כבר יש 100 רכיבים מוסתרים — יש למחוק מיותרים בחלון ABlock"

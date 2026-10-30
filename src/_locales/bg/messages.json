@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Включете защитата на този сайт"
-    },
-    "pickTemp": {
-        "message": "Само до презареждане"
-    },
-    "pickAllow": {
-        "message": "Разрешаване за сайта"
-    },
-    "pickAllowTitle": {
-        "message": "Елементите ще останат скрити и след презареждане. Браузърът ще поиска достъп до този сайт"
-    },
-    "pickAllowed": {
-        "message": "Остава скрито след презареждане"
-    },
     "pickCleared": {
         "message": "Всичко е отново на страницата"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Избрани: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Изключване ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Включване ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Няма го на тази страница — няма какво да се открои"
-    },
-    "hiddenOffHint": {
-        "message": "Защитата на сайта е изключена — скритото сега е видимо"
     },
     "kindImage": {
         "message": "Картинка"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "списъкът — в прозореца на ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Скрито до презареждане"
-    },
-    "pickDoneTempSave": {
-        "message": "запазване — в прозореца на ABlock"
     },
     "pickLimit": {
         "message": "На сайта вече има 100 скрити елемента — изтрийте излишните в прозореца на ABlock"

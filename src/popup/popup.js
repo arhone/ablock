@@ -2772,7 +2772,7 @@ function renderStats(stats) {
     const requests = stats?.requests || 0;
     document.getElementById('stats-text').textContent = t('stats',
         formatNumber(requests, requests >= 1e6 ? {notation: 'compact', maximumFractionDigits: 1} : {}),
-        formatSize(stats?.bytes || 0));
+        formatSize(stats?.bytes || 0).replace(/ /g, '\u00a0')).replace(/≈\s*/g, '≈\u00a0');
     document.getElementById('stats-text').title = t('statsTitle',
         new Date(stats?.since || Date.now()).toLocaleDateString(LANG));
 }
@@ -2902,41 +2902,34 @@ async function renderNotices(extended, stats) {
     show();
 }
 
-/** Доступ к своему хосту и варианту с www, без поддоменов */
-function siteOrigins(host) {
-    return (/^[\d.]+$|:/.test(host) ? [host] : [host, 'www.' + host]).map((h) => `*://${h}/*`);
-}
-
 /** Строка пипетки: открытие окна ничего не меняет на странице */
-async function setupPicker(tab, host, active) {
+async function setupPicker(tab, host) {
     const row = document.getElementById('pick-row');
     const button = document.getElementById('pick');
     const countButton = document.getElementById('pick-count');
     const hint = document.getElementById('pick-hint');
     const message = document.getElementById('pick-message');
-    const permission = document.getElementById('pick-permission');
     let count = 0;
-    let access = false;
+    let total = 0;
+    let extended = false;
     let notice = '';
     let timer;
     let revision = 0;
 
     function render() {
-        const enabled = active();
+        const enabled = extended;
         button.disabled = !enabled;
         document.getElementById('pick-label').dataset.off = String(!enabled);
-        button.title = t(enabled ? 'pickTitle' : 'pickOff');
-        const hidePermission = !enabled || access || !count || Boolean(notice);
-        if ((!count && countButton.contains(document.activeElement))
-            || (hidePermission && permission.contains(document.activeElement))) {
+        button.title = t(extended ? 'pickTitle' : 'serverExtended');
+        row.title = enabled ? '' : button.title;
+        if (!total && countButton.contains(document.activeElement)) {
             (button.disabled ? document.getElementById('button') : button).focus();
         }
-        countButton.hidden = !count;
+        countButton.hidden = !total;
         countButton.textContent = `${count} ›`;
         countButton.title = t('pickCountTitle', count);
         countButton.setAttribute('aria-label', countButton.title);
-        permission.hidden = hidePermission;
-        message.textContent = !enabled ? t('pickOff') : notice || (!access && count ? t('pickTemp') : '');
+        message.textContent = notice;
         hint.hidden = !message.textContent;
     }
 
@@ -2952,36 +2945,28 @@ async function setupPicker(tab, host, active) {
 
     async function refresh() {
         const current = ++revision;
-        const [stored, extended, siteAccess] = await Promise.all([
+        const [stored, extendedAccess] = await Promise.all([
             chrome.storage.local.get('aBlockCustom').catch(() => ({})),
-            chrome.permissions.contains(EXTENDED).catch(() => false),
-            chrome.permissions.contains({origins: [`*://${host}/*`]}).catch(() => false)
+            chrome.permissions.contains(EXTENDED).catch(() => false)
         ]);
         if (current !== revision) {
             return;
         }
-        count = stored.aBlockCustom?.[host]?.length || 0;
-        access = extended || siteAccess;
+        const entries = stored.aBlockCustom?.[host] || [];
+        total = entries.length;
+        count = entries.filter((entry) => entry.enabled !== false).length;
+        extended = extendedAccess;
         render();
     }
 
-    document.getElementById('pick-allow').addEventListener('click', async () => {
-        // Запрос первым вызовом: сохраняем пользовательский жест и при закрытии окна диалогом.
-        const granted = await chrome.permissions.request({origins: siteOrigins(host)}).catch(() => false);
-        await refresh();
-        if (granted && access) {
-            announce('pickAllowed');
-        }
-    });
     button.addEventListener('click', async () => {
-        if (!active() || button.disabled) {
+        if (!extended || button.disabled) {
             return;
         }
         button.disabled = true;
         const keys = ['pickHint', 'pickHintTouch', 'pickEsc', 'pickWider', 'pickNarrower', 'pickHide',
-            'pickCancel', 'pickMatches', 'pickMatchesAll', 'pickDone', 'pickDoneList', 'pickDoneTemp',
-            'pickDoneTempSave', 'pickLimit', 'kindImage', 'kindVideo', 'kindFrame', 'kindBanner',
-            'kindDialog', 'kindBlock', 'pickQuote'];
+            'pickCancel', 'pickMatches', 'pickMatchesAll', 'pickDone', 'pickDoneList', 'pickLimit',
+            'kindImage', 'kindVideo', 'kindFrame', 'kindBanner', 'kindDialog', 'kindBlock', 'pickQuote'];
         // Подстановки выполняет панель на странице, поэтому передаём шаблоны с $1.
         const cfg = {strings: Object.fromEntries(keys.map((key) => [key, t(key, '$1')])),
             dir: document.documentElement.dir === 'rtl' ? 'rtl' : 'ltr'};
@@ -2998,12 +2983,12 @@ async function setupPicker(tab, host, active) {
         if (typeof globalThis.openHidden !== 'function') {
             return;
         }
-        globalThis.openHidden({tab, host, active: active(), access, onClose: async (changed) => {
+        globalThis.openHidden({tab, host, onClose: async (changed) => {
             await refresh();
-            if (changed && !count) {
+            if (changed && !total) {
                 announce('pickCleared');
             }
-            (count ? countButton : active() ? button : document.getElementById('button')).focus();
+            (total ? countButton : extended ? button : document.getElementById('button')).focus();
         }});
     });
     chrome.storage.onChanged.addListener((changes, area) => {
@@ -3222,7 +3207,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (!info) {
         return; // Страница недоступна для расширений (магазин, настройки)
     }
-    renderPicker = await setupPicker(tab, host, active);
+    renderPicker = await setupPicker(tab, host);
     setupClear(tab);
     await renderBlocked(tab, info, active(), server);
     const companies = await findCompanies(info, server, active());

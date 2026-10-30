@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Осы сайтта қорғауды қосыңыз"
-    },
-    "pickTemp": {
-        "message": "Қайта жүктегенге дейін ғана"
-    },
-    "pickAllow": {
-        "message": "Осы сайтта рұқсат беру"
-    },
-    "pickAllowTitle": {
-        "message": "Қайта жүктегеннен кейін де жасырын қалады. Браузер осы сайтқа кіруге рұқсат сұрайды"
-    },
-    "pickAllowed": {
-        "message": "Қайта жүктегеннен кейін де жасырын"
-    },
     "pickCleared": {
         "message": "Бәрі бетке қайтарылды"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Таңдалған: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Өшіру ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Қосу ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Бұл бетте жоқ — ерекшелейтін элемент жоқ"
-    },
-    "hiddenOffHint": {
-        "message": "Сайттағы қорғау өшірулі — жасырын элементтер қазір көрінеді"
     },
     "kindImage": {
         "message": "Сурет"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "тізім — ABlock терезесінде"
-    },
-    "pickDoneTemp": {
-        "message": "Қайта жүктегенге дейін жасырылды"
-    },
-    "pickDoneTempSave": {
-        "message": "сақтау — ABlock терезесінде"
     },
     "pickLimit": {
         "message": "Сайтта 100 элемент жасырылған — артығын ABlock терезесінде жойыңыз"

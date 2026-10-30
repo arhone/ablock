@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Zapnite ochranu na tejto stránke"
-    },
-    "pickTemp": {
-        "message": "Len do opätovného načítania"
-    },
-    "pickAllow": {
-        "message": "Povoliť na tejto stránke"
-    },
-    "pickAllowTitle": {
-        "message": "Prvky zostanú skryté aj po opätovnom načítaní. Prehliadač požiada o prístup k tejto stránke"
-    },
-    "pickAllowed": {
-        "message": "Skryté aj po načítaní"
-    },
     "pickCleared": {
         "message": "Všetko je späť na stránke"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Vybrané: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Vypnúť ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Zapnúť ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Nie je na tejto stránke — niet čo zvýrazniť"
-    },
-    "hiddenOffHint": {
-        "message": "Ochrana stránky je vypnutá — skryté prvky sú teraz viditeľné"
     },
     "kindImage": {
         "message": "Obrázok"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "zoznam — v okne ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Skryté do opätovného načítania"
-    },
-    "pickDoneTempSave": {
-        "message": "uložiť — v okne ABlock"
     },
     "pickLimit": {
         "message": "Na stránke je už 100 skrytých prvkov — nepotrebné odstráňte v okne ABlock"

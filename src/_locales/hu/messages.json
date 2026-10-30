@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Kapcsolja be a webhely védelmét"
-    },
-    "pickTemp": {
-        "message": "Csak az újratöltésig"
-    },
-    "pickAllow": {
-        "message": "Engedélyezés itt"
-    },
-    "pickAllowTitle": {
-        "message": "Az elemek újratöltés után is rejtve maradnak. A böngésző hozzáférést kér ehhez a webhelyhez"
-    },
-    "pickAllowed": {
-        "message": "Újratöltés után is rejtve marad"
-    },
     "pickCleared": {
         "message": "Minden visszakerült az oldalra"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Kijelölve: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Kikapcsolás ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Bekapcsolás ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Nincs ezen az oldalon — nincs mit kiemelni"
-    },
-    "hiddenOffHint": {
-        "message": "A webhely védelme ki van kapcsolva — a rejtett elemek most láthatók"
     },
     "kindImage": {
         "message": "Kép"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "lista — az ABlock ablakában"
-    },
-    "pickDoneTemp": {
-        "message": "Elrejtve az újratöltésig"
-    },
-    "pickDoneTempSave": {
-        "message": "mentés — az ABlock ablakában"
     },
     "pickLimit": {
         "message": "A webhelyen már 100 rejtett elem van — törölje a feleslegeseket az ABlock ablakában"

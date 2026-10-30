@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "इस साइट की सुरक्षा चालू करें"
-    },
-    "pickTemp": {
-        "message": "सिर्फ़ दोबारा लोड होने तक"
-    },
-    "pickAllow": {
-        "message": "इस साइट पर अनुमति दें"
-    },
-    "pickAllowTitle": {
-        "message": "दोबारा लोड करने के बाद भी एलिमेंट छिपे रहेंगे। ब्राउज़र इस साइट तक पहुँच की अनुमति माँगेगा"
-    },
-    "pickAllowed": {
-        "message": "दोबारा लोड होने पर भी छिपा रहेगा"
-    },
     "pickCleared": {
         "message": "सब फिर पेज पर आ गया"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "चुने गए: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "बंद करें ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "चालू करें ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "इस पेज पर नहीं है — हाइलाइट करने को कुछ नहीं"
-    },
-    "hiddenOffHint": {
-        "message": "साइट की सुरक्षा बंद है — छिपे एलिमेंट अभी दिख रहे हैं"
     },
     "kindImage": {
         "message": "चित्र"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "सूची — ABlock विंडो में"
-    },
-    "pickDoneTemp": {
-        "message": "दोबारा लोड होने तक छिपा है"
-    },
-    "pickDoneTempSave": {
-        "message": "सहेजें — ABlock विंडो में"
     },
     "pickLimit": {
         "message": "इस साइट पर पहले से 100 छिपे एलिमेंट हैं — ABlock विंडो में अनचाहे एलिमेंट हटाएँ"

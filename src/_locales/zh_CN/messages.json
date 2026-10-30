@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "请开启此网站的保护"
-    },
-    "pickTemp": {
-        "message": "仅在重新加载前有效"
-    },
-    "pickAllow": {
-        "message": "在此网站上允许"
-    },
-    "pickAllowTitle": {
-        "message": "重新加载后仍会隐藏。浏览器将请求此网站的访问权限"
-    },
-    "pickAllowed": {
-        "message": "重新加载后仍会隐藏"
-    },
     "pickCleared": {
         "message": "所有元素已恢复显示"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "已选：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "停用 ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "启用 ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "此页面上不存在，无法高亮显示"
-    },
-    "hiddenOffHint": {
-        "message": "此网站的保护已关闭，隐藏的元素当前可见"
     },
     "kindImage": {
         "message": "图片"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "列表在 ABlock 窗口中"
-    },
-    "pickDoneTemp": {
-        "message": "已隐藏，重新加载后恢复"
-    },
-    "pickDoneTempSave": {
-        "message": "请在 ABlock 窗口中保存"
     },
     "pickLimit": {
         "message": "此网站已有100个隐藏的元素，请在 ABlock 窗口中删除不需要的项"

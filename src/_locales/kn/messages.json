@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "ಈ ಸೈಟ್‌ನಲ್ಲಿ ರಕ್ಷಣೆ ಆನ್ ಮಾಡಿ"
-    },
-    "pickTemp": {
-        "message": "ಮತ್ತೆ ಲೋಡ್ ಮಾಡುವವರೆಗೆ ಮಾತ್ರ"
-    },
-    "pickAllow": {
-        "message": "ಈ ಸೈಟ್‌ನಲ್ಲಿ ಅನುಮತಿಸಿ"
-    },
-    "pickAllowTitle": {
-        "message": "ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿದರೂ ಅಂಶಗಳು ಮರೆಯಾಗಿರುತ್ತವೆ. ಬ್ರೌಸರ್ ಈ ಸೈಟ್‌ಗೆ ಪ್ರವೇಶ ಅನುಮತಿ ಕೇಳುತ್ತದೆ"
-    },
-    "pickAllowed": {
-        "message": "ಮತ್ತೆ ಲೋಡ್ ಮಾಡಿದರೂ ಮರೆಯಾಗಿರುತ್ತದೆ"
-    },
     "pickCleared": {
         "message": "ಎಲ್ಲವೂ ಪುಟಕ್ಕೆ ಮರಳಿದೆ"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "ಆಯ್ಕೆಮಾಡಿದ್ದು: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "ಸಕ್ರಿಯಗೊಳಿಸಿ ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "ಈ ಪುಟದಲ್ಲಿ ಇಲ್ಲ — ಎತ್ತಿ ತೋರಿಸಲು ಏನೂ ಇಲ್ಲ"
-    },
-    "hiddenOffHint": {
-        "message": "ಸೈಟ್ ರಕ್ಷಣೆ ಆಫ್ ಆಗಿದೆ — ಮರೆಮಾಡಿದ ಅಂಶಗಳು ಈಗ ಕಾಣುತ್ತವೆ"
     },
     "kindImage": {
         "message": "ಚಿತ್ರ"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "ಪಟ್ಟಿ — ABlock ವಿಂಡೋದಲ್ಲಿ"
-    },
-    "pickDoneTemp": {
-        "message": "ಮತ್ತೆ ಲೋಡ್ ಮಾಡುವವರೆಗೆ ಮರೆಯಾಗಿದೆ"
-    },
-    "pickDoneTempSave": {
-        "message": "ಉಳಿಸಲು — ABlock ವಿಂಡೋ ತೆರೆಯಿರಿ"
     },
     "pickLimit": {
         "message": "ಸೈಟ್‌ನಲ್ಲಿ ಈಗಾಗಲೇ 100 ಅಂಶಗಳು ಮರೆಯಾಗಿವೆ — ಅನಗತ್ಯವಾದವುಗಳನ್ನು ABlock ವಿಂಡೋದಲ್ಲಿ ಅಳಿಸಿ"

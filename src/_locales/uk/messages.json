@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Увімкніть захист на цьому сайті"
-    },
-    "pickTemp": {
-        "message": "Лише до перезавантаження"
-    },
-    "pickAllow": {
-        "message": "Дозволити на сайті"
-    },
-    "pickAllowTitle": {
-        "message": "Приховане залишиться й після перезавантаження. Браузер попросить доступ до цього сайту"
-    },
-    "pickAllowed": {
-        "message": "Приховано й після перезавантаження"
-    },
     "pickCleared": {
         "message": "Усе знову на сторінці"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Вибрано: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Вимкнути ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Увімкнути ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Немає на цій сторінці — нічого підсвічувати"
-    },
-    "hiddenOffHint": {
-        "message": "Захист на сайті вимкнено — приховане зараз видно"
     },
     "kindImage": {
         "message": "Зображення"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "список — у вікні ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Приховано до перезавантаження"
-    },
-    "pickDoneTempSave": {
-        "message": "зберегти — у вікні ABlock"
     },
     "pickLimit": {
         "message": "На сайті вже 100 прихованих елементів — видаліть зайві у вікні ABlock"

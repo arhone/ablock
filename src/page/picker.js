@@ -332,8 +332,8 @@
             panel.classList.add('toast');
             panel.setAttribute('role', 'status');
             panel.setAttribute('aria-live', 'polite');
-            panel.replaceChildren(node('span', '', response.ok ? strings[response.permanent ? 'pickDone' : 'pickDoneTemp'] : strings.pickLimit));
-            if (response.ok) panel.append(document.createTextNode(' · '), node('span', 'esc', strings[response.permanent ? 'pickDoneList' : 'pickDoneTempSave']));
+            panel.replaceChildren(node('span', '', response.ok ? strings.pickDone : strings.pickLimit));
+            if (response.ok) panel.append(document.createTextNode(' · '), node('span', 'esc', strings.pickDoneList));
             panel.style.top = above ? '12px' : 'auto';
             panel.style.bottom = above ? 'auto' : '12px';
             // В тосте нет действий: страница снова получает указатель и клавиатуру.

@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Įjunkite apsaugą šioje svetainėje"
-    },
-    "pickTemp": {
-        "message": "Tik iki įkėlimo iš naujo"
-    },
-    "pickAllow": {
-        "message": "Leisti šioje svetainėje"
-    },
-    "pickAllowTitle": {
-        "message": "Elementai liks paslėpti ir įkėlus iš naujo. Naršyklė paprašys prieigos prie šios svetainės"
-    },
-    "pickAllowed": {
-        "message": "Paslėpta ir įkėlus iš naujo"
-    },
     "pickCleared": {
         "message": "Viskas vėl puslapyje"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Pasirinkta: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Išjungti ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Įjungti ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Šiame puslapyje nėra — nėra ko paryškinti"
-    },
-    "hiddenOffHint": {
-        "message": "Svetainės apsauga išjungta — paslėpti elementai dabar matomi"
     },
     "kindImage": {
         "message": "Paveikslėlis"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "sąrašas — ABlock lange"
-    },
-    "pickDoneTemp": {
-        "message": "Paslėpta iki įkėlimo iš naujo"
-    },
-    "pickDoneTempSave": {
-        "message": "išsaugoti — ABlock lange"
     },
     "pickLimit": {
         "message": "Svetainėje jau paslėpta 100 elementų — nereikalingus ištrinkite ABlock lange"

@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "شغّل الحماية لهذا الموقع"
-    },
-    "pickTemp": {
-        "message": "حتى إعادة التحميل فقط"
-    },
-    "pickAllow": {
-        "message": "السماح على هذا الموقع"
-    },
-    "pickAllowTitle": {
-        "message": "ستبقى العناصر مخفية بعد إعادة التحميل. سيطلب المتصفح الوصول إلى هذا الموقع"
-    },
-    "pickAllowed": {
-        "message": "يبقى مخفيًا بعد إعادة التحميل"
-    },
     "pickCleared": {
         "message": "عاد كل شيء إلى الصفحة"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "المحدد: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "إيقاف ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "تشغيل ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "غير موجود على هذه الصفحة — لا شيء لإبرازه"
-    },
-    "hiddenOffHint": {
-        "message": "حماية الموقع متوقفة — العناصر المخفية ظاهرة الآن"
     },
     "kindImage": {
         "message": "صورة"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "القائمة — في نافذة ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "مخفي حتى إعادة التحميل"
-    },
-    "pickDoneTempSave": {
-        "message": "للحفظ — من نافذة ABlock"
     },
     "pickLimit": {
         "message": "يوجد بالفعل 100 عنصر مخفي على الموقع — احذف بعضها من نافذة ABlock"

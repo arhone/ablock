@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Bật bảo vệ trên trang web này"
-    },
-    "pickTemp": {
-        "message": "Chỉ đến khi tải lại"
-    },
-    "pickAllow": {
-        "message": "Cho phép trên trang web"
-    },
-    "pickAllowTitle": {
-        "message": "Các phần tử vẫn bị ẩn sau khi tải lại. Trình duyệt sẽ yêu cầu quyền truy cập trang web này"
-    },
-    "pickAllowed": {
-        "message": "Vẫn ẩn sau khi tải lại"
-    },
     "pickCleared": {
         "message": "Tất cả đã trở lại trên trang"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Đã chọn: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Tắt ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Bật ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Không có trên trang này — không có gì để làm nổi bật"
-    },
-    "hiddenOffHint": {
-        "message": "Bảo vệ trang web đang tắt — các phần tử đã ẩn hiện đang hiển thị"
     },
     "kindImage": {
         "message": "Hình ảnh"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "danh sách — trong cửa sổ ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Ẩn đến khi tải lại"
-    },
-    "pickDoneTempSave": {
-        "message": "lưu — trong cửa sổ ABlock"
     },
     "pickLimit": {
         "message": "Trang web đã có 100 phần tử bị ẩn — hãy xóa các mục không cần trong cửa sổ ABlock"

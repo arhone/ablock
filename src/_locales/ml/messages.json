@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "ഈ സൈറ്റിൽ സംരക്ഷണം ഓൺ ചെയ്യുക"
-    },
-    "pickTemp": {
-        "message": "വീണ്ടും ലോഡ് ചെയ്യുന്നതുവരെ മാത്രം"
-    },
-    "pickAllow": {
-        "message": "ഈ സൈറ്റിൽ അനുവദിക്കുക"
-    },
-    "pickAllowTitle": {
-        "message": "വീണ്ടും ലോഡ് ചെയ്താലും മറഞ്ഞിരിക്കും. ബ്രൗസർ ഈ സൈറ്റിലേക്കുള്ള പ്രവേശനാനുമതി ചോദിക്കും"
-    },
-    "pickAllowed": {
-        "message": "വീണ്ടും ലോഡ് ചെയ്താലും മറയും"
-    },
     "pickCleared": {
         "message": "എല്ലാം പേജിൽ തിരിച്ചെത്തി"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "തിരഞ്ഞെടുത്തവ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "പ്രവർത്തനരഹിതമാക്കുക ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "പ്രവർത്തനക്ഷമമാക്കുക ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "ഈ പേജിൽ ഇല്ല — എടുത്തുകാട്ടാൻ ഒന്നുമില്ല"
-    },
-    "hiddenOffHint": {
-        "message": "സൈറ്റ് സംരക്ഷണം ഓഫാണ് — മറച്ച ഘടകങ്ങൾ ഇപ്പോൾ കാണാം"
     },
     "kindImage": {
         "message": "ചിത്രം"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "പട്ടിക — ABlock വിൻഡോയിൽ"
-    },
-    "pickDoneTemp": {
-        "message": "വീണ്ടും ലോഡ് ചെയ്യുന്നതുവരെ മറച്ചു"
-    },
-    "pickDoneTempSave": {
-        "message": "സൂക്ഷിക്കാൻ — ABlock വിൻഡോയിൽ"
     },
     "pickLimit": {
         "message": "സൈറ്റിൽ ഇതിനകം 100 ഘടകങ്ങൾ മറച്ചിട്ടുണ്ട് — ആവശ്യമില്ലാത്തവ ABlock വിൻഡോയിൽ ഇല്ലാതാക്കുക"

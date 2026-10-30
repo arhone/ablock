@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Vklopite zaščito na tem spletnem mestu"
-    },
-    "pickTemp": {
-        "message": "Le do ponovnega nalaganja"
-    },
-    "pickAllow": {
-        "message": "Dovoli na tem mestu"
-    },
-    "pickAllowTitle": {
-        "message": "Elementi bodo ostali skriti tudi po ponovnem nalaganju. Brskalnik bo zahteval dostop do tega spletnega mesta"
-    },
-    "pickAllowed": {
-        "message": "Skrito tudi po ponovnem nalaganju"
-    },
     "pickCleared": {
         "message": "Vse je spet na strani"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Izbrano: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Izklopi ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Vklopi ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Ni na tej strani — ničesar ni mogoče označiti"
-    },
-    "hiddenOffHint": {
-        "message": "Zaščita mesta je izklopljena — skriti elementi so zdaj vidni"
     },
     "kindImage": {
         "message": "Slika"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "seznam — v oknu ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Skrito do ponovnega nalaganja"
-    },
-    "pickDoneTempSave": {
-        "message": "shrani — v oknu ABlock"
     },
     "pickLimit": {
         "message": "Na mestu je že 100 skritih elementov — nepotrebne izbrišite v oknu ABlock"

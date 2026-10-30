@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Hidupkan perlindungan di tapak ini"
-    },
-    "pickTemp": {
-        "message": "Hingga dimuat semula sahaja"
-    },
-    "pickAllow": {
-        "message": "Benarkan di tapak ini"
-    },
-    "pickAllowTitle": {
-        "message": "Elemen kekal tersembunyi selepas dimuat semula. Pelayar akan meminta akses ke tapak ini"
-    },
-    "pickAllowed": {
-        "message": "Kekal tersembunyi selepas muat semula"
-    },
     "pickCleared": {
         "message": "Semua kembali pada halaman"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Dipilih: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Nyahaktifkan ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Aktifkan ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Tiada pada halaman ini — tiada elemen untuk diserlahkan"
-    },
-    "hiddenOffHint": {
-        "message": "Perlindungan tapak dimatikan — elemen tersembunyi kini kelihatan"
     },
     "kindImage": {
         "message": "Imej"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "senarai — dalam tetingkap ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Disembunyikan hingga muat semula"
-    },
-    "pickDoneTempSave": {
-        "message": "simpan — dalam tetingkap ABlock"
     },
     "pickLimit": {
         "message": "Sudah ada 100 elemen tersembunyi di tapak ini — padam yang tidak diperlukan dalam tetingkap ABlock"

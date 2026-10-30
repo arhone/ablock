@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "આ સાઇટ માટે સુરક્ષા ચાલુ કરો"
-    },
-    "pickTemp": {
-        "message": "ફરી લોડ થાય ત્યાં સુધી જ"
-    },
-    "pickAllow": {
-        "message": "આ સાઇટ પર મંજૂરી આપો"
-    },
-    "pickAllowTitle": {
-        "message": "ફરી લોડ કર્યા પછી પણ એલિમેન્ટ છુપાયેલા રહેશે. બ્રાઉઝર આ સાઇટની ઍક્સેસ માંગશે"
-    },
-    "pickAllowed": {
-        "message": "ફરી લોડ પછી પણ છુપાયેલું રહે છે"
-    },
     "pickCleared": {
         "message": "બધું ફરી પૃષ્ઠ પર આવી ગયું"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "પસંદ કરેલા: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "બંધ કરો ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "ચાલુ કરો ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "આ પૃષ્ઠ પર નથી — હાઇલાઇટ કરવા કંઈ નથી"
-    },
-    "hiddenOffHint": {
-        "message": "સાઇટની સુરક્ષા બંધ છે — છુપાવેલા એલિમેન્ટ હવે દેખાય છે"
     },
     "kindImage": {
         "message": "છબી"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "યાદી — ABlock વિન્ડોમાં"
-    },
-    "pickDoneTemp": {
-        "message": "ફરી લોડ થાય ત્યાં સુધી છુપાવ્યું"
-    },
-    "pickDoneTempSave": {
-        "message": "સાચવો — ABlock વિન્ડોમાં"
     },
     "pickLimit": {
         "message": "આ સાઇટ પર પહેલેથી 100 એલિમેન્ટ છુપાવેલા છે — ABlock વિન્ડોમાંથી વધારાના કાઢી નાખો"

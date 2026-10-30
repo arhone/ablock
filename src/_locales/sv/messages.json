@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Slå på skyddet på webbplatsen"
-    },
-    "pickTemp": {
-        "message": "Bara tills sidan läses in igen"
-    },
-    "pickAllow": {
-        "message": "Tillåt på webbplatsen"
-    },
-    "pickAllowTitle": {
-        "message": "Elementen förblir dolda efter omladdning. Webbläsaren ber om åtkomst till webbplatsen"
-    },
-    "pickAllowed": {
-        "message": "Dolda även efter omladdning"
-    },
     "pickCleared": {
         "message": "Allt är tillbaka på sidan"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Markerade: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Inaktivera ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Aktivera ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Finns inte på den här sidan — inget att framhäva"
-    },
-    "hiddenOffHint": {
-        "message": "Webbplatsens skydd är avstängt — dolda element är nu synliga"
     },
     "kindImage": {
         "message": "Bild"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "listan finns i ABlock-fönstret"
-    },
-    "pickDoneTemp": {
-        "message": "Dolt tills sidan läses in igen"
-    },
-    "pickDoneTempSave": {
-        "message": "spara i ABlock-fönstret"
     },
     "pickLimit": {
         "message": "Webbplatsen har redan 100 dolda element — ta bort onödiga i ABlock-fönstret"

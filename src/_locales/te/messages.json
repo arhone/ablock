@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "ఈ సైట్‌లో రక్షణ ఆన్ చేయండి"
-    },
-    "pickTemp": {
-        "message": "మళ్లీ లోడ్ చేసే వరకే"
-    },
-    "pickAllow": {
-        "message": "ఈ సైట్‌లో అనుమతించండి"
-    },
-    "pickAllowTitle": {
-        "message": "మళ్లీ లోడ్ చేసినా అంశాలు దాగి ఉంటాయి. బ్రౌజర్ ఈ సైట్‌ను యాక్సెస్ చేయడానికి అనుమతి అడుగుతుంది"
-    },
-    "pickAllowed": {
-        "message": "మళ్లీ లోడ్ చేసినా దాగి ఉంటాయి"
-    },
     "pickCleared": {
         "message": "అన్నీ మళ్లీ పేజీలో కనిపిస్తున్నాయి"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "ఎంచుకున్నవి: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "నిలిపివేయి ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "ప్రారంభించు ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "ఈ పేజీలో లేదు — హైలైట్ చేయడానికి ఏమీ లేదు"
-    },
-    "hiddenOffHint": {
-        "message": "సైట్ రక్షణ ఆఫ్‌లో ఉంది — దాచిన అంశాలు ఇప్పుడు కనిపిస్తున్నాయి"
     },
     "kindImage": {
         "message": "చిత్రం"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "జాబితా — ABlock విండోలో"
-    },
-    "pickDoneTemp": {
-        "message": "మళ్లీ లోడ్ చేసే వరకు దాచబడింది"
-    },
-    "pickDoneTempSave": {
-        "message": "సేవ్ చేయండి — ABlock విండోలో"
     },
     "pickLimit": {
         "message": "ఈ సైట్‌లో ఇప్పటికే 100 అంశాలు దాచబడ్డాయి — అవసరం లేనివి ABlock విండోలో తొలగించండి"

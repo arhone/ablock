@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Washa ulinzi kwenye tovuti hii"
-    },
-    "pickTemp": {
-        "message": "Hadi kupakia upya tu"
-    },
-    "pickAllow": {
-        "message": "Ruhusu kwenye tovuti"
-    },
-    "pickAllowTitle": {
-        "message": "Vipengele vitabaki vimefichwa baada ya kupakia upya. Kivinjari kitaomba ufikiaji wa tovuti hii"
-    },
-    "pickAllowed": {
-        "message": "Vimefichwa hata baada ya kupakia upya"
-    },
     "pickCleared": {
         "message": "Vyote vimerudi kwenye ukurasa"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Vilivyochaguliwa: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Zima ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Washa ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Hakipo kwenye ukurasa huu — hakuna cha kuangazia"
-    },
-    "hiddenOffHint": {
-        "message": "Ulinzi wa tovuti umezimwa — vipengele vilivyofichwa vinaonekana sasa"
     },
     "kindImage": {
         "message": "Picha"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "orodha — kwenye dirisha la ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Kimefichwa hadi kupakia upya"
-    },
-    "pickDoneTempSave": {
-        "message": "hifadhi — kwenye dirisha la ABlock"
     },
     "pickLimit": {
         "message": "Tayari kuna vipengele 100 vilivyofichwa kwenye tovuti — futa visivyohitajika kwenye dirisha la ABlock"

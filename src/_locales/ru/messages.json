@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Включите защиту на этом сайте"
-    },
-    "pickTemp": {
-        "message": "Только до перезагрузки"
-    },
-    "pickAllow": {
-        "message": "Разрешить на сайте"
-    },
-    "pickAllowTitle": {
-        "message": "Скрытое останется и после перезагрузки. Браузер спросит доступ к этому сайту"
-    },
-    "pickAllowed": {
-        "message": "Скрывается и после перезагрузки"
-    },
     "pickCleared": {
         "message": "Всё снова на странице"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Выбрано: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Выключить ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Включить ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Нет на этой странице — подсветить нечего"
-    },
-    "hiddenOffHint": {
-        "message": "Защита на сайте выключена — скрытое сейчас видно"
     },
     "kindImage": {
         "message": "Картинка"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "список — в окне ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Скрыто до перезагрузки"
-    },
-    "pickDoneTempSave": {
-        "message": "сохранить — в окне ABlock"
     },
     "pickLimit": {
         "message": "На сайте уже 100 скрытых элементов — удалите лишние в окне ABlock"

@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "በዚህ ጣቢያ ጥበቃን አብራ"
-    },
-    "pickTemp": {
-        "message": "እንደገና እስኪጫን ድረስ ብቻ"
-    },
-    "pickAllow": {
-        "message": "በዚህ ጣቢያ ፍቀድ"
-    },
-    "pickAllowTitle": {
-        "message": "የተደበቁት እንደገና ከተጫነም በኋላ ተደብቀው ይቆያሉ። አሳሹ ለዚህ ጣቢያ መዳረሻ ይጠይቃል"
-    },
-    "pickAllowed": {
-        "message": "እንደገና ከተጫነም በኋላ ይደበቃል"
-    },
     "pickCleared": {
         "message": "ሁሉም ወደ ገጹ ተመልሷል"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "የተመረጡ፦ $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "አሰናክል ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "አንቃ ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "በዚህ ገጽ ላይ የለም — ለማድመቅ ምንም የለም"
-    },
-    "hiddenOffHint": {
-        "message": "የጣቢያው ጥበቃ ጠፍቷል — የተደበቁት አሁን ይታያሉ"
     },
     "kindImage": {
         "message": "ምስል"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "ዝርዝሩ — በABlock መስኮት"
-    },
-    "pickDoneTemp": {
-        "message": "እንደገና እስኪጫን ድረስ ተደብቋል"
-    },
-    "pickDoneTempSave": {
-        "message": "ለማስቀመጥ — በABlock መስኮት"
     },
     "pickLimit": {
         "message": "በጣቢያው ላይ 100 የተደበቁ አባላት አሉ — በABlock መስኮት የማያስፈልጉትን ያስወግዱ"

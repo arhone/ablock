@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Slå på beskyttelse på dette nettstedet"
-    },
-    "pickTemp": {
-        "message": "Bare til siden lastes inn på nytt"
-    },
-    "pickAllow": {
-        "message": "Tillat på nettstedet"
-    },
-    "pickAllowTitle": {
-        "message": "Elementene forblir skjult etter ny innlasting. Nettleseren ber om tilgang til dette nettstedet"
-    },
-    "pickAllowed": {
-        "message": "Skjult også etter ny innlasting"
-    },
     "pickCleared": {
         "message": "Alt er tilbake på siden"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Valgt: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Deaktiver ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Aktiver ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Finnes ikke på denne siden — ingenting å fremheve"
-    },
-    "hiddenOffHint": {
-        "message": "Nettstedsbeskyttelse er av — skjulte elementer er nå synlige"
     },
     "kindImage": {
         "message": "Bilde"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "listen er i ABlock-vinduet"
-    },
-    "pickDoneTemp": {
-        "message": "Skjult til ny innlasting"
-    },
-    "pickDoneTempSave": {
-        "message": "lagre i ABlock-vinduet"
     },
     "pickLimit": {
         "message": "Nettstedet har allerede 100 skjulte elementer — slett unødvendige i ABlock-vinduet"

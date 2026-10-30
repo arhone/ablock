@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Lülitage selle saidi kaitse sisse"
-    },
-    "pickTemp": {
-        "message": "Ainult taaslaadimiseni"
-    },
-    "pickAllow": {
-        "message": "Luba sellel saidil"
-    },
-    "pickAllowTitle": {
-        "message": "Elemendid jäävad peidetuks ka pärast taaslaadimist. Brauser küsib sellele saidile juurdepääsu"
-    },
-    "pickAllowed": {
-        "message": "Peidetud ka pärast taaslaadimist"
-    },
     "pickCleared": {
         "message": "Kõik on jälle lehel"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Valitud: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Lülita välja ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Lülita sisse ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Pole sellel lehel — pole midagi esile tõsta"
-    },
-    "hiddenOffHint": {
-        "message": "Saidi kaitse on väljas — peidetud elemendid on praegu nähtavad"
     },
     "kindImage": {
         "message": "Pilt"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "loend — ABlocki aknas"
-    },
-    "pickDoneTemp": {
-        "message": "Peidetud taaslaadimiseni"
-    },
-    "pickDoneTempSave": {
-        "message": "salvesta — ABlocki aknas"
     },
     "pickLimit": {
         "message": "Sellel saidil on juba 100 peidetud elementi — kustutage liigsed ABlocki aknas"

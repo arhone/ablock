@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Activează protecția pe acest site"
-    },
-    "pickTemp": {
-        "message": "Doar până la reîncărcare"
-    },
-    "pickAllow": {
-        "message": "Permite pe acest site"
-    },
-    "pickAllowTitle": {
-        "message": "Elementele vor rămâne ascunse după reîncărcare. Browserul va cere acces la acest site"
-    },
-    "pickAllowed": {
-        "message": "Ascunse și după reîncărcare"
-    },
     "pickCleared": {
         "message": "Totul este din nou pe pagină"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Selectate: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Dezactivează ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Activează ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Nu se află pe această pagină — nimic de evidențiat"
-    },
-    "hiddenOffHint": {
-        "message": "Protecția site-ului este dezactivată — elementele ascunse sunt vizibile"
     },
     "kindImage": {
         "message": "Imagine"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "lista — în fereastra ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Ascuns până la reîncărcare"
-    },
-    "pickDoneTempSave": {
-        "message": "salvează — în fereastra ABlock"
     },
     "pickLimit": {
         "message": "Site-ul are deja 100 de elemente ascunse — șterge-le pe cele inutile din fereastra ABlock"

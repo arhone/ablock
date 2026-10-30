@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "Zapněte ochranu na tomto webu"
-    },
-    "pickTemp": {
-        "message": "Jen do obnovení stránky"
-    },
-    "pickAllow": {
-        "message": "Povolit na tomto webu"
-    },
-    "pickAllowTitle": {
-        "message": "Prvky zůstanou skryté i po obnovení. Prohlížeč požádá o přístup k tomuto webu"
-    },
-    "pickAllowed": {
-        "message": "Zůstává skryté i po obnovení"
-    },
     "pickCleared": {
         "message": "Vše je zpět na stránce"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "Vybráno: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "Vypnout ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "Zapnout ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "Není na této stránce — není co zvýraznit"
-    },
-    "hiddenOffHint": {
-        "message": "Ochrana webu je vypnutá — skryté prvky jsou nyní viditelné"
     },
     "kindImage": {
         "message": "Obrázek"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "seznam — v okně ABlock"
-    },
-    "pickDoneTemp": {
-        "message": "Skryto do obnovení stránky"
-    },
-    "pickDoneTempSave": {
-        "message": "uložit — v okně ABlock"
     },
     "pickLimit": {
         "message": "Na webu už je 100 skrytých prvků — nepotřebné smažte v okně ABlock"

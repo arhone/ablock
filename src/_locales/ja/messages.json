@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "このサイトの保護をオンにしてください"
-    },
-    "pickTemp": {
-        "message": "再読み込みまで有効"
-    },
-    "pickAllow": {
-        "message": "このサイトで許可"
-    },
-    "pickAllowTitle": {
-        "message": "再読み込み後も非表示になります。ブラウザがこのサイトへのアクセス許可を求めます"
-    },
-    "pickAllowed": {
-        "message": "再読み込み後も非表示"
-    },
     "pickCleared": {
         "message": "すべてページに戻りました"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "選択済み: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "無効にする ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "有効にする ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "このページにはないため強調表示できません"
-    },
-    "hiddenOffHint": {
-        "message": "サイトの保護がオフのため、非表示の要素が見えています"
     },
     "kindImage": {
         "message": "画像"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "一覧は ABlock のウィンドウにあります"
-    },
-    "pickDoneTemp": {
-        "message": "再読み込みまで非表示"
-    },
-    "pickDoneTempSave": {
-        "message": "保存は ABlock のウィンドウから"
     },
     "pickLimit": {
         "message": "このサイトではすでに100個の要素が非表示です。ABlock のウィンドウで不要な項目を削除してください"

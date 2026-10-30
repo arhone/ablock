@@ -1023,21 +1023,6 @@
             }
         }
     },
-    "pickOff": {
-        "message": "এই সাইটের সুরক্ষা চালু করুন"
-    },
-    "pickTemp": {
-        "message": "শুধু রিলোড পর্যন্ত"
-    },
-    "pickAllow": {
-        "message": "এই সাইটে অনুমতি দিন"
-    },
-    "pickAllowTitle": {
-        "message": "রিলোডের পরেও এলিমেন্ট লুকানো থাকবে। ব্রাউজার এই সাইটে অ্যাক্সেস চাইবে"
-    },
-    "pickAllowed": {
-        "message": "রিলোডের পরেও লুকানো থাকে"
-    },
     "pickCleared": {
         "message": "সব আবার পৃষ্ঠায় ফিরে এসেছে"
     },
@@ -1057,6 +1042,22 @@
     },
     "hiddenSelected": {
         "message": "বাছাই করা: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenDisableN": {
+        "message": "বন্ধ করুন ($COUNT$)",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "hiddenEnableN": {
+        "message": "চালু করুন ($COUNT$)",
         "placeholders": {
             "count": {
                 "content": "$1"
@@ -1099,9 +1100,6 @@
     },
     "hiddenMissingHint": {
         "message": "এই পৃষ্ঠায় নেই — হাইলাইট করার কিছু নেই"
-    },
-    "hiddenOffHint": {
-        "message": "সাইটের সুরক্ষা বন্ধ — লুকানো এলিমেন্ট এখন দেখা যাচ্ছে"
     },
     "kindImage": {
         "message": "ছবি"
@@ -1171,12 +1169,6 @@
     },
     "pickDoneList": {
         "message": "তালিকা — ABlock উইন্ডোতে"
-    },
-    "pickDoneTemp": {
-        "message": "রিলোড পর্যন্ত লুকানো"
-    },
-    "pickDoneTempSave": {
-        "message": "সংরক্ষণ — ABlock উইন্ডোতে"
     },
     "pickLimit": {
         "message": "এই সাইটে ইতিমধ্যে 100টি এলিমেন্ট লুকানো — ABlock উইন্ডো থেকে অপ্রয়োজনীয়গুলো মুছুন"
