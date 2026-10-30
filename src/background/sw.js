@@ -879,6 +879,11 @@ function queueRedirect(kind, details) {
             return;
         }
         let tab = s.tabs[details.tabId];
+        // Время принятого ответа хранится и без наблюдавшегося начала цепочки.
+        const responseStartedAt = tab?.responseStartedAt ?? tab?.redirects?.responseStartedAt;
+        if (kind === 'headers' && Number.isFinite(responseStartedAt) && details.timeStamp < responseStartedAt) {
+            return;
+        }
         let chain = tab?.pendingRedirects || tab?.redirects;
         // Удаляем служебные данные отменённого фильтра из старой session.
         if (tab) {
@@ -971,7 +976,7 @@ function queueRedirect(kind, details) {
                 }
                 const previousTab = tab;
                 tab = {host: new URL(details.url).hostname, ip: details.ip || '', headers,
-                    blocked: {}, bytes: 0, retiredRedirectRequests: retired.slice(-MAX_RETIRED_REQUESTS)};
+                    responseStartedAt: details.timeStamp, blocked: {}, bytes: 0, retiredRedirectRequests: retired.slice(-MAX_RETIRED_REQUESTS)};
                 if (isRetired) {
                     if (previousTab.redirects) {
                         tab.redirects = previousTab.redirects;
