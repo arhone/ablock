@@ -322,7 +322,18 @@ chrome.permissions.onAdded.addListener(async (permissions) => {
         }
     }
 });
-chrome.permissions.onRemoved.addListener(() => update());
+chrome.permissions.onRemoved.addListener(() => {
+    // Инвалидируем уже ожидающие load()/contains(), прежде чем начать очистку.
+    redirectEpoch++;
+    redirectQueue = redirectQueue.catch(console.error).then(async () => {
+        const s = await load();
+        for (const tab of Object.values(s.tabs)) {
+            delete tab.redirects;
+        }
+        await saveTabs();
+    });
+    update();
+});
 
 // Сообщения сайтов — косметика и пипетка; настройки и данные вкладок — только из окна расширения
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
@@ -385,7 +396,13 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         return true;
     }
     if (typeof request?.tabInfo === 'number') {
-        load().then((s) => sendResponse({tab: s.tabs[request.tabInfo] || null, stats: s.stats}));
+        redirectQueue.catch(console.error).then(async () => {
+            const s = await load();
+            const extended = await chrome.permissions.contains(EXTENDED);
+            const tab = s.tabs[request.tabInfo] || null;
+            sendResponse({tab: tab && !extended ? {...tab, redirects: undefined} : tab, stats: s.stats,
+                redirectsStatus: extended ? (tab?.redirects ? 'observed' : 'not-observed') : 'permission-required'});
+        }).catch(() => sendResponse(null));
         return true;
     }
 });
@@ -802,10 +819,146 @@ let saveTimer = null;
 function save() {
     saveTimer ??= setTimeout(async () => {
         saveTimer = null;
-        const {tabs, stats} = await load();
-        await chrome.storage.session.set({aBlockTabs: tabs});
+        const {stats} = await load();
+        await saveTabs();
         await chrome.storage.local.set({aBlockStats: stats});
     }, 1000);
+}
+
+// Все записи вкладок идут одной очередью, включая отложенную статистику.
+// Снимок делаем внутри очереди: старая запись не может затереть новую цепочку.
+let tabsWrite = Promise.resolve();
+function saveTabs() {
+    tabsWrite = tabsWrite.catch(console.error).then(async () => {
+        const {tabs} = await load();
+        await chrome.storage.session.set({aBlockTabs: structuredClone(tabs)});
+    });
+    return tabsWrite;
+}
+
+const MAX_REDIRECTS = 20;
+let redirectEpoch = 0;
+let redirectQueue = Promise.resolve();
+
+/** Только безопасный HTTP(S) origin и первые 160 символов пути, без credentials/query/hash. */
+function redirectAddress(value) {
+    try {
+        const url = new URL(value);
+        return /^https?:$/.test(url.protocol) ? url.origin + url.pathname.slice(0, 160) : null;
+    } catch {
+        return null;
+    }
+}
+
+/**
+ * redirects v1 — только наблюдавшиеся HTTP-переходы главной навигации.
+ * generation — UUID новой навигации, requestId — идентификатор браузера (не URL).
+ * hops: {from,to,statusCode,timeStamp}, максимум 20; initialUrl/finalUrl безопасные.
+ * outcome: pending/completed/error; complete — вся ли HTTP-цепочка наблюдалась.
+ * reasons: limit/non-http-redirect/unsafe-url/request-error. Ноль hops — измеренный ноль.
+ * document: null либо {documentId,timeOrigin}; только при точном совпадении ID события
+ * завершения и InjectionResult главного активного фрейма. Без ID НЕ выводить как историю
+ * документа. Потребитель обязан сверить documentId и timeOrigin с результатом своего аудита.
+ * Нет webNavigation: браузер может не дать ID главной навигации — это явная недоступность
+ * привязки, а не разрешение сопоставлять по хосту, сокращённому URL или времени.
+ */
+function queueRedirect(kind, details) {
+    const epoch = redirectEpoch;
+    redirectQueue = redirectQueue.catch(console.error).then(async () => {
+        const s = await load();
+        if (epoch !== redirectEpoch || !await chrome.permissions.contains(EXTENDED)
+            || epoch !== redirectEpoch || details.tabId < 0 || details.frameId !== 0
+            || details.documentLifecycle === 'prerender' || details.documentLifecycle === 'cached') {
+            return;
+        }
+        let tab = s.tabs[details.tabId];
+        let chain = tab?.redirects;
+        if (kind === 'start') {
+            // onBeforeRequest повторяется после HTTP-перехода с тем же requestId.
+            if (chain?.requestId === details.requestId || chain?.startedAt > details.timeStamp) {
+                return;
+            }
+            if (details.documentId) {
+                return; // Предзагрузка от имени существующего документа.
+            }
+            chain = {
+                version: 1, generation: crypto.randomUUID(), requestId: details.requestId,
+                initialUrl: redirectAddress(details.url), finalUrl: null,
+                startedAt: details.timeStamp, endedAt: null, outcome: 'pending',
+                complete: true, truncated: false, reasons: [], hops: [], document: null
+            };
+            if (!chain.initialUrl) {
+                chain.complete = false;
+                chain.reasons.push('unsafe-url');
+            }
+            s.tabs[details.tabId] = {host: new URL(details.url).hostname, ip: '', headers: {},
+                blocked: {}, bytes: 0, redirects: chain};
+        } else {
+            if (!chain || chain.requestId !== details.requestId || chain.outcome !== 'pending') {
+                return;
+            }
+            if (kind === 'redirect') {
+                // Внутренние переходы браузера (например, HSTS) не выдаём за HTTP-ответ.
+                if (details.statusCode < 300 || details.statusCode > 399
+                    || details.statusLine?.includes('Internal Redirect')) {
+                    chain.complete = false;
+                    if (!chain.reasons.includes('non-http-redirect')) {
+                        chain.reasons.push('non-http-redirect');
+                    }
+                } else if (chain.hops.length < MAX_REDIRECTS) {
+                    const from = redirectAddress(details.url);
+                    const to = redirectAddress(details.redirectUrl);
+                    chain.hops.push({from, to, statusCode: details.statusCode, timeStamp: details.timeStamp});
+                    if (!from || !to) {
+                        chain.complete = false;
+                        if (!chain.reasons.includes('unsafe-url')) {
+                            chain.reasons.push('unsafe-url');
+                        }
+                    }
+                } else {
+                    chain.complete = false;
+                    chain.truncated = true;
+                    if (!chain.reasons.includes('limit')) {
+                        chain.reasons.push('limit');
+                    }
+                }
+            } else if (kind === 'headers') {
+                const headers = {};
+                for (const {name, value} of details.responseHeaders || []) {
+                    const key = name.toLowerCase();
+                    if (HEADERS.includes(key)) {
+                        headers[key] = key in headers ? `${headers[key]}, ${value}` : value;
+                    }
+                }
+                Object.assign(tab, {host: new URL(details.url).hostname, ip: details.ip || '', headers});
+            } else {
+                chain.finalUrl = redirectAddress(details.url);
+                chain.endedAt = details.timeStamp;
+                chain.outcome = kind === 'completed' ? 'completed' : 'error';
+                chain.statusCode = details.statusCode ?? null;
+                if (kind === 'error') {
+                    chain.complete = false;
+                    chain.reasons.push('request-error');
+                }
+            }
+        }
+        await saveTabs();
+        if (kind === 'completed' && details.documentId && details.documentLifecycle === 'active') {
+            // Ограничиваем ожидание; поздний результат инъекции сам состояние не меняет.
+            const result = await Promise.race([
+                chrome.scripting.executeScript({target: {tabId: details.tabId, frameIds: [0]},
+                    func: () => performance.timeOrigin}).catch(() => []),
+                new Promise((resolve) => setTimeout(() => resolve([]), 400))
+            ]);
+            const main = result.find((entry) => entry.frameId === 0);
+            if (epoch === redirectEpoch && s.tabs[details.tabId]?.redirects === chain
+                && main?.documentId === details.documentId && Number.isFinite(main.result)) {
+                chain.document = {documentId: main.documentId, timeOrigin: main.result};
+                await saveTabs();
+            }
+        }
+    });
+    return redirectQueue;
 }
 
 /**
@@ -824,28 +977,8 @@ function isPrerender(details) {
  * Главный документ вкладки: IP сервера и заголовки
  * @param {chrome.webRequest.WebResponseCacheDetails} details
  */
-async function onMainFrame(details) {
-    if (isPrerender(details)) {
-        return;
-    }
-    const s = await load();
-    const headers = {};
-    for (const {name, value} of details.responseHeaders || []) {
-        const key = name.toLowerCase();
-        // Одноимённые заголовки склеиваем через запятую, как это делает HTTP: иначе остался бы только
-        // последний (два CSP, X-Robots-Tag с noindex в первом)
-        if (HEADERS.includes(key)) {
-            headers[key] = key in headers ? `${headers[key]}, ${value}` : value;
-        }
-    }
-    s.tabs[details.tabId] = {
-        host: new URL(details.url).hostname,
-        ip: details.ip || '',
-        headers,
-        blocked: {},
-        bytes: 0
-    };
-    save();
+function onMainFrame(details) {
+    return queueRedirect('headers', details);
 }
 
 /**
@@ -901,6 +1034,15 @@ function listenRequests() {
         return;
     }
     listening = true;
+    for (const [event, kind] of [
+        ['onBeforeRequest', 'start'], ['onBeforeRedirect', 'redirect'],
+        ['onCompleted', 'completed'], ['onErrorOccurred', 'error']
+    ]) {
+        chrome.webRequest[event].addListener(
+            (details) => queueRedirect(kind, details).catch(console.error),
+            {urls: ['<all_urls>'], types: ['main_frame']}
+        );
+    }
     chrome.webRequest.onResponseStarted.addListener(
         (details) => onMainFrame(details).catch(console.error),
         {urls: ['<all_urls>'], types: ['main_frame']},
@@ -923,10 +1065,10 @@ function listenRequests() {
 
 listenRequests();
 
-chrome.tabs.onRemoved.addListener(async (tabId) => {
-    const s = await load();
-    if (tabId in s.tabs) {
+chrome.tabs.onRemoved.addListener((tabId) => {
+    redirectQueue = redirectQueue.catch(console.error).then(async () => {
+        const s = await load();
         delete s.tabs[tabId];
-        save();
-    }
+        await saveTabs();
+    });
 });
