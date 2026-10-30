@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Verschuivingen die op deze pagina zijn verzameld bij het openen van de pop-up; geen aparte meting na terugkeer via de geschiedenis."
+    },
+    "auditLoaf": {
+        "message": "Scripts in lange frames"
+    },
+    "auditLoafHint": {
+        "message": "Browsertoewijzing in de beschikbare buffer van het hoofddocument, geen bewezen oorzaak van vertraging. Scripttijd wordt niet bij frameblokkering opgeteld."
+    },
+    "loafOwn": {
+        "message": "Eigen bronnen"
+    },
+    "loafInline": {
+        "message": "Ingesloten scripts"
+    },
+    "loafUnknown": {
+        "message": "Onbekende eigenaar"
+    },
+    "loafBlocking": {
+        "message": "Frameblokkering (alle vensters)"
+    },
+    "loafEmpty": {
+        "message": "Geen vermeldingen in de beschikbare buffer"
+    },
+    "loafUnsupported": {
+        "message": "Niet ondersteund"
+    },
+    "loafUnavailable": {
+        "message": "Gegevens niet beschikbaar"
+    },
+    "loafLimited": {
+        "message": "Maximaal 20 groepen; hun som is geen volledig totaal."
+    },
+    "loafExcluded": {
+        "message": "Scripts uit andere vensters of zonder venstertoewijzing zijn uitgesloten van de groepen."
     }
 }

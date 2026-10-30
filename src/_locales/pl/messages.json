@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Przesunięcia zgromadzone na tej stronie do otwarcia okna; brak osobnego pomiaru po powrocie przez historię."
+    },
+    "auditLoaf": {
+        "message": "Skrypty w długich klatkach"
+    },
+    "auditLoafHint": {
+        "message": "Przypisanie przeglądarki w dostępnym buforze głównego dokumentu, nie dowiedziona przyczyna opóźnień. Czasów skryptów nie dodaje się do blokowania klatek."
+    },
+    "loafOwn": {
+        "message": "Własne źródła"
+    },
+    "loafInline": {
+        "message": "Skrypty osadzone"
+    },
+    "loafUnknown": {
+        "message": "Nieznany właściciel"
+    },
+    "loafBlocking": {
+        "message": "Blokowanie klatek (wszystkie okna)"
+    },
+    "loafEmpty": {
+        "message": "Brak wpisów w dostępnym buforze"
+    },
+    "loafUnsupported": {
+        "message": "Nieobsługiwane"
+    },
+    "loafUnavailable": {
+        "message": "Dane niedostępne"
+    },
+    "loafLimited": {
+        "message": "Pokazano do 20 grup; ich suma nie jest pełnym wynikiem."
+    },
+    "loafExcluded": {
+        "message": "Skrypty innych okien lub bez przypisania okna wykluczono z grup."
     }
 }

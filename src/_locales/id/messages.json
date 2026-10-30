@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Pergeseran yang terkumpul di halaman ini saat popup dibuka; tidak ada pengukuran terpisah setelah kembali melalui riwayat."
+    },
+    "auditLoaf": {
+        "message": "Skrip dalam bingkai panjang"
+    },
+    "auditLoafHint": {
+        "message": "Atribusi browser dalam buffer yang tersedia pada dokumen utama, bukan bukti penyebab keterlambatan. Waktu skrip tidak ditambahkan ke waktu pemblokiran bingkai."
+    },
+    "loafOwn": {
+        "message": "Sumber sendiri"
+    },
+    "loafInline": {
+        "message": "Skrip sebaris"
+    },
+    "loafUnknown": {
+        "message": "Pemilik tidak diketahui"
+    },
+    "loafBlocking": {
+        "message": "Pemblokiran bingkai (semua jendela)"
+    },
+    "loafEmpty": {
+        "message": "Tidak ada entri dalam buffer yang tersedia"
+    },
+    "loafUnsupported": {
+        "message": "Tidak didukung"
+    },
+    "loafUnavailable": {
+        "message": "Data tidak tersedia"
+    },
+    "loafLimited": {
+        "message": "Hingga 20 grup ditampilkan; jumlahnya bukan total lengkap."
+    },
+    "loafExcluded": {
+        "message": "Skrip dari jendela lain atau tanpa atribusi jendela tidak disertakan dalam grup."
     }
 }

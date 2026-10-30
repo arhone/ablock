@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Oyna ochilguncha joriy sahifada to‘plangan siljishlar; tarix orqali qaytgandan keyin alohida o‘lchov yo‘q."
+    },
+    "auditLoaf": {
+        "message": "Uzun kadrlardagi skriptlar"
+    },
+    "auditLoafHint": {
+        "message": "Asosiy hujjatning mavjud buferidagi brauzer atributsiyasi, kechikishning isbotlangan sababi emas. Skript vaqti kadrlarni bloklash vaqtiga qo‘shilmaydi."
+    },
+    "loafOwn": {
+        "message": "O‘z manbalari"
+    },
+    "loafInline": {
+        "message": "Ichki skriptlar"
+    },
+    "loafUnknown": {
+        "message": "Egasi noma’lum"
+    },
+    "loafBlocking": {
+        "message": "Kadrlarni bloklash (barcha oynalar)"
+    },
+    "loafEmpty": {
+        "message": "Mavjud buferda yozuvlar yo‘q"
+    },
+    "loafUnsupported": {
+        "message": "Qo‘llab-quvvatlanmaydi"
+    },
+    "loafUnavailable": {
+        "message": "Ma’lumotlar mavjud emas"
+    },
+    "loafLimited": {
+        "message": "20 tagacha guruh ko‘rsatiladi; ularning yig‘indisi to‘liq yakun emas."
+    },
+    "loafExcluded": {
+        "message": "Boshqa oynalarning yoki oynaga atributsiyasi yo‘q skriptlar guruhlardan chiqarilgan."
     }
 }

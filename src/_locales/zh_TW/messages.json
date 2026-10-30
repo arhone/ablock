@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "開啟彈出視窗時目前頁面已累積的版面位移；透過歷史記錄返回後不會另外測量。"
+    },
+    "auditLoaf": {
+        "message": "長影格中的指令碼"
+    },
+    "auditLoafHint": {
+        "message": "瀏覽器對主文件可用緩衝區的歸因，並非延遲原因的證明。指令碼時間不與影格阻塞時間相加。"
+    },
+    "loafOwn": {
+        "message": "自有來源"
+    },
+    "loafInline": {
+        "message": "內嵌指令碼"
+    },
+    "loafUnknown": {
+        "message": "擁有者不明"
+    },
+    "loafBlocking": {
+        "message": "影格阻塞（所有視窗）"
+    },
+    "loafEmpty": {
+        "message": "可用緩衝區中沒有記錄"
+    },
+    "loafUnsupported": {
+        "message": "不支援"
+    },
+    "loafUnavailable": {
+        "message": "資料無法使用"
+    },
+    "loafLimited": {
+        "message": "最多顯示20組；各組之和並非完整總計。"
+    },
+    "loafExcluded": {
+        "message": "其他視窗或未歸屬於視窗的指令碼不計入分組。"
     }
 }

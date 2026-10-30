@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Deplasări acumulate pe această pagină la deschiderea ferestrei; fără măsurare separată după revenirea prin istoric."
+    },
+    "auditLoaf": {
+        "message": "Scripturi în cadre lungi"
+    },
+    "auditLoafHint": {
+        "message": "Atribuirea browserului în memoria tampon disponibilă a documentului principal, nu o cauză dovedită a întârzierilor. Timpul scripturilor nu se adună cu blocarea cadrelor."
+    },
+    "loafOwn": {
+        "message": "Surse proprii"
+    },
+    "loafInline": {
+        "message": "Scripturi încorporate"
+    },
+    "loafUnknown": {
+        "message": "Proprietar necunoscut"
+    },
+    "loafBlocking": {
+        "message": "Blocarea cadrelor (toate ferestrele)"
+    },
+    "loafEmpty": {
+        "message": "Nicio înregistrare în memoria tampon disponibilă"
+    },
+    "loafUnsupported": {
+        "message": "Neacceptat"
+    },
+    "loafUnavailable": {
+        "message": "Date indisponibile"
+    },
+    "loafLimited": {
+        "message": "Sunt afișate până la 20 de grupuri; suma lor nu este un total complet."
+    },
+    "loafExcluded": {
+        "message": "Scripturile din alte ferestre sau fără atribuire de fereastră sunt excluse din grupuri."
     }
 }

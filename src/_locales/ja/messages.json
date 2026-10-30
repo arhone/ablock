@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "ポップアップを開くまでにこのページで蓄積されたレイアウトシフトです。履歴から戻った後の個別の測定ではありません。"
+    },
+    "auditLoaf": {
+        "message": "長いフレーム内のスクリプト"
+    },
+    "auditLoafHint": {
+        "message": "メイン文書の利用可能なバッファに対するブラウザの帰属情報であり、遅延の原因を証明するものではありません。スクリプト時間とフレームのブロック時間は加算しません。"
+    },
+    "loafOwn": {
+        "message": "独自のソース"
+    },
+    "loafInline": {
+        "message": "インラインスクリプト"
+    },
+    "loafUnknown": {
+        "message": "所有者不明"
+    },
+    "loafBlocking": {
+        "message": "フレームのブロック（すべてのウィンドウ）"
+    },
+    "loafEmpty": {
+        "message": "利用可能なバッファに記録がありません"
+    },
+    "loafUnsupported": {
+        "message": "非対応"
+    },
+    "loafUnavailable": {
+        "message": "データを取得できません"
+    },
+    "loafLimited": {
+        "message": "最大20グループを表示しています。その合計は全体の合計ではありません。"
+    },
+    "loafExcluded": {
+        "message": "他のウィンドウのスクリプトやウィンドウへの帰属が不明なスクリプトはグループから除外されています。"
     }
 }

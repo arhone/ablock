@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Posuny shromážděné na této stránce do otevření okna; po návratu přes historii se samostatné měření neprovádí."
+    },
+    "auditLoaf": {
+        "message": "Skripty v dlouhých snímcích"
+    },
+    "auditLoafHint": {
+        "message": "Přiřazení prohlížeče v dostupné vyrovnávací paměti hlavního dokumentu, nikoli prokázaná příčina zpoždění. Časy skriptů se nepřičítají k blokování snímků."
+    },
+    "loafOwn": {
+        "message": "Vlastní zdroje"
+    },
+    "loafInline": {
+        "message": "Vložené skripty"
+    },
+    "loafUnknown": {
+        "message": "Neznámý vlastník"
+    },
+    "loafBlocking": {
+        "message": "Blokování snímků (všechna okna)"
+    },
+    "loafEmpty": {
+        "message": "V dostupné vyrovnávací paměti nejsou záznamy"
+    },
+    "loafUnsupported": {
+        "message": "Nepodporováno"
+    },
+    "loafUnavailable": {
+        "message": "Data nejsou dostupná"
+    },
+    "loafLimited": {
+        "message": "Zobrazeno nejvýše 20 skupin; jejich součet není úplný výsledek."
+    },
+    "loafExcluded": {
+        "message": "Skripty jiných oken nebo bez přiřazení okna jsou ze skupin vyloučeny."
     }
 }

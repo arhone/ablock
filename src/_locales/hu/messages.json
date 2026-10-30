@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Az ablak megnyitásáig ezen az oldalon összegyűlt elmozdulások; az előzményekből visszatérés után nincs külön mérés."
+    },
+    "auditLoaf": {
+        "message": "Szkriptek hosszú képkockákban"
+    },
+    "auditLoafHint": {
+        "message": "Böngésző általi hozzárendelés a fődokumentum elérhető pufferében, nem a késés bizonyított oka. A szkriptek ideje nem adódik a képkockák blokkolási idejéhez."
+    },
+    "loafOwn": {
+        "message": "Saját források"
+    },
+    "loafInline": {
+        "message": "Beágyazott szkriptek"
+    },
+    "loafUnknown": {
+        "message": "Ismeretlen tulajdonos"
+    },
+    "loafBlocking": {
+        "message": "Képkockák blokkolása (minden ablak)"
+    },
+    "loafEmpty": {
+        "message": "Nincs bejegyzés az elérhető pufferben"
+    },
+    "loafUnsupported": {
+        "message": "Nem támogatott"
+    },
+    "loafUnavailable": {
+        "message": "Az adatok nem érhetők el"
+    },
+    "loafLimited": {
+        "message": "Legfeljebb 20 csoport látható; összegük nem teljes összesítés."
+    },
+    "loafExcluded": {
+        "message": "Más ablakok vagy ablakhoz nem rendelt szkriptek nem szerepelnek a csoportokban."
     }
 }

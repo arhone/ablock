@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Premiki, zbrani na tej strani do odprtja okna; po vrnitvi prek zgodovine ni ločene meritve."
+    },
+    "auditLoaf": {
+        "message": "Skripti v dolgih sličicah"
+    },
+    "auditLoafHint": {
+        "message": "Pripis brskalnika v razpoložljivem medpomnilniku glavnega dokumenta, ne dokazan vzrok zamud. Časi skriptov se ne prištevajo blokiranju sličic."
+    },
+    "loafOwn": {
+        "message": "Lastni viri"
+    },
+    "loafInline": {
+        "message": "Vdelani skripti"
+    },
+    "loafUnknown": {
+        "message": "Neznan lastnik"
+    },
+    "loafBlocking": {
+        "message": "Blokiranje sličic (vsa okna)"
+    },
+    "loafEmpty": {
+        "message": "V razpoložljivem medpomnilniku ni zapisov"
+    },
+    "loafUnsupported": {
+        "message": "Ni podprto"
+    },
+    "loafUnavailable": {
+        "message": "Podatki niso na voljo"
+    },
+    "loafLimited": {
+        "message": "Prikazanih je do 20 skupin; njihova vsota ni celoten seštevek."
+    },
+    "loafExcluded": {
+        "message": "Skripti drugih oken ali brez pripisa oknu so izključeni iz skupin."
     }
 }

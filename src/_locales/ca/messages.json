@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Desplaçaments acumulats en aquesta pàgina en obrir la finestra; no hi ha cap mesurament separat després de tornar mitjançant l’historial."
+    },
+    "auditLoaf": {
+        "message": "Scripts en fotogrames llargs"
+    },
+    "auditLoafHint": {
+        "message": "Atribució del navegador al búfer disponible del document principal, no una causa provada dels retards. El temps dels scripts no se suma al bloqueig dels fotogrames."
+    },
+    "loafOwn": {
+        "message": "Fonts pròpies"
+    },
+    "loafInline": {
+        "message": "Scripts integrats"
+    },
+    "loafUnknown": {
+        "message": "Propietari desconegut"
+    },
+    "loafBlocking": {
+        "message": "Bloqueig dels fotogrames (totes les finestres)"
+    },
+    "loafEmpty": {
+        "message": "Sense registres al búfer disponible"
+    },
+    "loafUnsupported": {
+        "message": "No compatible"
+    },
+    "loafUnavailable": {
+        "message": "Dades no disponibles"
+    },
+    "loafLimited": {
+        "message": "Es mostren fins a 20 grups; la suma no és un total complet."
+    },
+    "loafExcluded": {
+        "message": "Els scripts d’altres finestres o sense atribució de finestra s’exclouen dels grups."
     }
 }

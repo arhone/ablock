@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Šiame puslapyje iki lango atidarymo sukaupti poslinkiai; grįžus per istoriją atskiras matavimas neatliekamas."
+    },
+    "auditLoaf": {
+        "message": "Scenarijai ilguose kadruose"
+    },
+    "auditLoafHint": {
+        "message": "Naršyklės priskyrimas pagrindinio dokumento prieinamame buferyje, ne įrodyta delsos priežastis. Scenarijų laikas nepridedamas prie kadrų blokavimo laiko."
+    },
+    "loafOwn": {
+        "message": "Savi šaltiniai"
+    },
+    "loafInline": {
+        "message": "Įterptieji scenarijai"
+    },
+    "loafUnknown": {
+        "message": "Nežinomas savininkas"
+    },
+    "loafBlocking": {
+        "message": "Kadrų blokavimas (visi langai)"
+    },
+    "loafEmpty": {
+        "message": "Prieinamame buferyje nėra įrašų"
+    },
+    "loafUnsupported": {
+        "message": "Nepalaikoma"
+    },
+    "loafUnavailable": {
+        "message": "Duomenys neprieinami"
+    },
+    "loafLimited": {
+        "message": "Rodoma iki 20 grupių; jų suma nėra visas bendras laikas."
+    },
+    "loafExcluded": {
+        "message": "Kitų langų arba langui nepriskirti scenarijai neįtraukti į grupes."
     }
 }

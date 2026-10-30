@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Shifts accumulated on this page when the popup opens; no separate measurement after returning through history."
+    },
+    "auditLoaf": {
+        "message": "Scripts in long frames"
+    },
+    "auditLoafHint": {
+        "message": "Browser attribution in the available buffer of the main document, not a proven cause of delays. Script time is not added to frame blocking time."
+    },
+    "loafOwn": {
+        "message": "Own sources"
+    },
+    "loafInline": {
+        "message": "Inline scripts"
+    },
+    "loafUnknown": {
+        "message": "Unknown owner"
+    },
+    "loafBlocking": {
+        "message": "Frame blocking (all windows)"
+    },
+    "loafEmpty": {
+        "message": "No entries in the available buffer"
+    },
+    "loafUnsupported": {
+        "message": "Not supported"
+    },
+    "loafUnavailable": {
+        "message": "Data unavailable"
+    },
+    "loafLimited": {
+        "message": "Up to 20 groups shown; their sum is not a complete total."
+    },
+    "loafExcluded": {
+        "message": "Scripts from other windows or without window attribution are excluded from groups."
     }
 }

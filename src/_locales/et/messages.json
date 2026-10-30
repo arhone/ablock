@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Sellel lehel hüpikakna avamiseni kogunenud nihked; ajaloost naasmise järel eraldi mõõtmist ei tehta."
+    },
+    "auditLoaf": {
+        "message": "Skriptid pikkades kaadrites"
+    },
+    "auditLoafHint": {
+        "message": "Brauseri omistus põhidokumendi saadaolevas puhvris, mitte tõestatud viivituse põhjus. Skriptiaega ei liideta kaadrite blokeerimisajale."
+    },
+    "loafOwn": {
+        "message": "Oma allikad"
+    },
+    "loafInline": {
+        "message": "Sisesed skriptid"
+    },
+    "loafUnknown": {
+        "message": "Tundmatu omanik"
+    },
+    "loafBlocking": {
+        "message": "Kaadrite blokeerimine (kõik aknad)"
+    },
+    "loafEmpty": {
+        "message": "Saadaolevas puhvris pole kirjeid"
+    },
+    "loafUnsupported": {
+        "message": "Pole toetatud"
+    },
+    "loafUnavailable": {
+        "message": "Andmed pole saadaval"
+    },
+    "loafLimited": {
+        "message": "Kuvatakse kuni 20 rühma; nende summa pole täielik koguaeg."
+    },
+    "loafExcluded": {
+        "message": "Teiste akende või akna omistuseta skriptid on rühmadest välja jäetud."
     }
 }

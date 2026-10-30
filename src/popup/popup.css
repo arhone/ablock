@@ -1245,6 +1245,15 @@ footer a:hover {
     column-gap: 6px;
     align-items: center;
 }
+.audit-row[data-key="auditLoaf"] {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.audit-row[data-key="auditLoaf"] b {
+    max-width: 50%;
+    white-space: normal;
+    text-align: end;
+}
 .audit-causes {
     grid-column: 1 / -1;
     margin-block: 4px 6px;

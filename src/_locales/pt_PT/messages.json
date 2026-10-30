@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Deslocamentos acumulados nesta página ao abrir a janela; não há medição separada após voltar pelo histórico."
+    },
+    "auditLoaf": {
+        "message": "Scripts em fotogramas longos"
+    },
+    "auditLoafHint": {
+        "message": "Atribuição do navegador na memória intermédia disponível do documento principal, não uma causa comprovada dos atrasos. O tempo dos scripts não se soma ao bloqueio dos fotogramas."
+    },
+    "loafOwn": {
+        "message": "Fontes próprias"
+    },
+    "loafInline": {
+        "message": "Scripts incorporados"
+    },
+    "loafUnknown": {
+        "message": "Proprietário desconhecido"
+    },
+    "loafBlocking": {
+        "message": "Bloqueio dos fotogramas (todas as janelas)"
+    },
+    "loafEmpty": {
+        "message": "Sem registos na memória intermédia disponível"
+    },
+    "loafUnsupported": {
+        "message": "Não suportado"
+    },
+    "loafUnavailable": {
+        "message": "Dados indisponíveis"
+    },
+    "loafLimited": {
+        "message": "São apresentados até 20 grupos; a soma não é um total completo."
+    },
+    "loafExcluded": {
+        "message": "Os scripts de outras janelas ou sem atribuição de janela são excluídos dos grupos."
     }
 }

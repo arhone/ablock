@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "打开弹窗时当前页面已累积的布局偏移；通过历史记录返回后不会单独测量。"
+    },
+    "auditLoaf": {
+        "message": "长帧中的脚本"
+    },
+    "auditLoafHint": {
+        "message": "浏览器对主文档可用缓冲区的归因，并非延迟原因的证明。脚本时间不与帧阻塞时间相加。"
+    },
+    "loafOwn": {
+        "message": "自有来源"
+    },
+    "loafInline": {
+        "message": "内联脚本"
+    },
+    "loafUnknown": {
+        "message": "所有者未知"
+    },
+    "loafBlocking": {
+        "message": "帧阻塞（所有窗口）"
+    },
+    "loafEmpty": {
+        "message": "可用缓冲区中没有记录"
+    },
+    "loafUnsupported": {
+        "message": "不支持"
+    },
+    "loafUnavailable": {
+        "message": "数据不可用"
+    },
+    "loafLimited": {
+        "message": "最多显示20组；各组之和并非完整总计。"
+    },
+    "loafExcluded": {
+        "message": "其他窗口或未归属于窗口的脚本不计入分组。"
     }
 }

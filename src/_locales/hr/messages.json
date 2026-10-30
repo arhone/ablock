@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Pomaci prikupljeni na ovoj stranici do otvaranja prozora; nema zasebnog mjerenja nakon povratka putem povijesti."
+    },
+    "auditLoaf": {
+        "message": "Skripte u dugim kadrovima"
+    },
+    "auditLoafHint": {
+        "message": "Pripisivanje preglednika u dostupnom međuspremniku glavnog dokumenta, ne dokazan uzrok kašnjenja. Vrijeme skripti ne pribraja se blokiranju kadrova."
+    },
+    "loafOwn": {
+        "message": "Vlastiti izvori"
+    },
+    "loafInline": {
+        "message": "Ugrađene skripte"
+    },
+    "loafUnknown": {
+        "message": "Nepoznat vlasnik"
+    },
+    "loafBlocking": {
+        "message": "Blokiranje kadrova (svi prozori)"
+    },
+    "loafEmpty": {
+        "message": "Nema zapisa u dostupnom međuspremniku"
+    },
+    "loafUnsupported": {
+        "message": "Nije podržano"
+    },
+    "loafUnavailable": {
+        "message": "Podaci nisu dostupni"
+    },
+    "loafLimited": {
+        "message": "Prikazano je do 20 grupa; njihov zbroj nije potpun ukupni iznos."
+    },
+    "loafExcluded": {
+        "message": "Skripte drugih prozora ili bez pripisivanja prozoru isključene su iz grupa."
     }
 }

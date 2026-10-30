@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Déplacements accumulés sur cette page à l’ouverture de la fenêtre ; aucune mesure distincte après un retour via l’historique."
+    },
+    "auditLoaf": {
+        "message": "Scripts dans les images longues"
+    },
+    "auditLoafHint": {
+        "message": "Attribution du navigateur dans le tampon disponible du document principal, sans preuve de causalité. Les durées des scripts ne s’ajoutent pas au blocage des images."
+    },
+    "loafOwn": {
+        "message": "Sources propres"
+    },
+    "loafInline": {
+        "message": "Scripts intégrés"
+    },
+    "loafUnknown": {
+        "message": "Propriétaire inconnu"
+    },
+    "loafBlocking": {
+        "message": "Blocage des images (toutes les fenêtres)"
+    },
+    "loafEmpty": {
+        "message": "Aucune entrée dans le tampon disponible"
+    },
+    "loafUnsupported": {
+        "message": "Non pris en charge"
+    },
+    "loafUnavailable": {
+        "message": "Données indisponibles"
+    },
+    "loafLimited": {
+        "message": "Jusqu’à 20 groupes affichés ; leur somme n’est pas un total complet."
+    },
+    "loafExcluded": {
+        "message": "Les scripts d’autres fenêtres ou sans attribution de fenêtre sont exclus des groupes."
     }
 }

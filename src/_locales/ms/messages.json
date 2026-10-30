@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Anjakan yang terkumpul pada halaman ini ketika tetingkap dibuka; tiada ukuran berasingan selepas kembali melalui sejarah."
+    },
+    "auditLoaf": {
+        "message": "Skrip dalam bingkai panjang"
+    },
+    "auditLoafHint": {
+        "message": "Atribusi pelayar dalam penimbal tersedia dokumen utama, bukan bukti punca kelewatan. Masa skrip tidak ditambah kepada masa penyekatan bingkai."
+    },
+    "loafOwn": {
+        "message": "Sumber sendiri"
+    },
+    "loafInline": {
+        "message": "Skrip sebaris"
+    },
+    "loafUnknown": {
+        "message": "Pemilik tidak diketahui"
+    },
+    "loafBlocking": {
+        "message": "Penyekatan bingkai (semua tetingkap)"
+    },
+    "loafEmpty": {
+        "message": "Tiada rekod dalam penimbal tersedia"
+    },
+    "loafUnsupported": {
+        "message": "Tidak disokong"
+    },
+    "loafUnavailable": {
+        "message": "Data tidak tersedia"
+    },
+    "loafLimited": {
+        "message": "Sehingga 20 kumpulan dipaparkan; jumlahnya bukan jumlah penuh."
+    },
+    "loafExcluded": {
+        "message": "Skrip daripada tetingkap lain atau tanpa atribusi tetingkap dikecualikan daripada kumpulan."
     }
 }

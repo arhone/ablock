@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Spostamenti accumulati su questa pagina all’apertura della finestra; nessuna misurazione separata dopo il ritorno tramite la cronologia."
+    },
+    "auditLoaf": {
+        "message": "Script nei fotogrammi lunghi"
+    },
+    "auditLoafHint": {
+        "message": "Attribuzione del browser nel buffer disponibile del documento principale, non una causa dimostrata dei ritardi. I tempi degli script non si sommano al blocco dei fotogrammi."
+    },
+    "loafOwn": {
+        "message": "Fonti proprie"
+    },
+    "loafInline": {
+        "message": "Script incorporati"
+    },
+    "loafUnknown": {
+        "message": "Proprietario sconosciuto"
+    },
+    "loafBlocking": {
+        "message": "Blocco dei fotogrammi (tutte le finestre)"
+    },
+    "loafEmpty": {
+        "message": "Nessuna voce nel buffer disponibile"
+    },
+    "loafUnsupported": {
+        "message": "Non supportato"
+    },
+    "loafUnavailable": {
+        "message": "Dati non disponibili"
+    },
+    "loafLimited": {
+        "message": "Fino a 20 gruppi mostrati; la loro somma non è un totale completo."
+    },
+    "loafExcluded": {
+        "message": "Gli script di altre finestre o senza attribuzione della finestra sono esclusi dai gruppi."
     }
 }

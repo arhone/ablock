@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "መስኮቱ ሲከፈት በዚህ ገጽ ላይ የተከማቹ መንቀሳቀሶች፤ በታሪክ ተመልሶ ከመጣ በኋላ የተለየ መለኪያ የለም።"
+    },
+    "auditLoaf": {
+        "message": "በረጅም ፍሬሞች ውስጥ ያሉ ስክሪፕቶች"
+    },
+    "auditLoafHint": {
+        "message": "በዋናው ሰነድ የሚገኝ ቋት ውስጥ የአሳሹ ምደባ ነው፤ የመዘግየት መንስኤ ማስረጃ አይደለም። የስክሪፕት ጊዜ ከፍሬም ማገድ ጊዜ ጋር አይደመርም።"
+    },
+    "loafOwn": {
+        "message": "የራሱ ምንጮች"
+    },
+    "loafInline": {
+        "message": "የተካተቱ ስክሪፕቶች"
+    },
+    "loafUnknown": {
+        "message": "ባለቤቱ አይታወቅም"
+    },
+    "loafBlocking": {
+        "message": "የፍሬም ማገድ (ሁሉም መስኮቶች)"
+    },
+    "loafEmpty": {
+        "message": "ባለው ቋት ውስጥ መዝገብ የለም"
+    },
+    "loafUnsupported": {
+        "message": "አይደገፍም"
+    },
+    "loafUnavailable": {
+        "message": "ውሂብ አይገኝም"
+    },
+    "loafLimited": {
+        "message": "እስከ 20 ቡድኖች ይታያሉ፤ ድምራቸው ሙሉ ድምር አይደለም።"
+    },
+    "loafExcluded": {
+        "message": "የሌሎች መስኮቶች ስክሪፕቶች ወይም መስኮታቸው ያልታወቀ ስክሪፕቶች ከቡድኖቹ ተወግደዋል።"
     }
 }

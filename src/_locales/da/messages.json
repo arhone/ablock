@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Forskydninger indsamlet på denne side, når pop op-vinduet åbnes; ingen separat måling efter tilbagevenden via historikken."
+    },
+    "auditLoaf": {
+        "message": "Scripts i lange frames"
+    },
+    "auditLoafHint": {
+        "message": "Browserens tilskrivning i hoveddokumentets tilgængelige buffer, ikke en bevist årsag til forsinkelser. Scripttid lægges ikke til blokeringstiden for frames."
+    },
+    "loafOwn": {
+        "message": "Egne kilder"
+    },
+    "loafInline": {
+        "message": "Indlejrede scripts"
+    },
+    "loafUnknown": {
+        "message": "Ukendt ejer"
+    },
+    "loafBlocking": {
+        "message": "Blokering af frames (alle vinduer)"
+    },
+    "loafEmpty": {
+        "message": "Ingen poster i den tilgængelige buffer"
+    },
+    "loafUnsupported": {
+        "message": "Understøttes ikke"
+    },
+    "loafUnavailable": {
+        "message": "Data utilgængelige"
+    },
+    "loafLimited": {
+        "message": "Op til 20 grupper vises; summen er ikke en fuldstændig total."
+    },
+    "loafExcluded": {
+        "message": "Scripts fra andre vinduer eller uden vinduestilskrivning er udeladt fra grupperne."
     }
 }

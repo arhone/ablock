@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Mihamo iliyokusanywa kwenye ukurasa huu dirisha linapofunguliwa; hakuna kipimo tofauti baada ya kurudi kupitia historia."
+    },
+    "auditLoaf": {
+        "message": "Hati katika fremu ndefu"
+    },
+    "auditLoafHint": {
+        "message": "Uhusishaji wa kivinjari katika bafa inayopatikana ya hati kuu, si uthibitisho wa sababu ya kuchelewa. Muda wa hati haujumlishwi na muda wa kuzuia fremu."
+    },
+    "loafOwn": {
+        "message": "Vyanzo vya tovuti yenyewe"
+    },
+    "loafInline": {
+        "message": "Hati zilizopachikwa"
+    },
+    "loafUnknown": {
+        "message": "Mmiliki hajulikani"
+    },
+    "loafBlocking": {
+        "message": "Kuzuia fremu (madirisha yote)"
+    },
+    "loafEmpty": {
+        "message": "Hakuna rekodi katika bafa inayopatikana"
+    },
+    "loafUnsupported": {
+        "message": "Haitumiki"
+    },
+    "loafUnavailable": {
+        "message": "Data haipatikani"
+    },
+    "loafLimited": {
+        "message": "Hadi vikundi 20 vinaonyeshwa; jumla yake si jumla kamili."
+    },
+    "loafExcluded": {
+        "message": "Hati za madirisha mengine au zisizohusishwa na dirisha zimeondolewa kwenye vikundi."
     }
 }

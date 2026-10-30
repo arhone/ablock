@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Šajā lapā līdz loga atvēršanai uzkrātās nobīdes; pēc atgriešanās caur vēsturi atsevišķs mērījums netiek veikts."
+    },
+    "auditLoaf": {
+        "message": "Skripti garos kadros"
+    },
+    "auditLoafHint": {
+        "message": "Pārlūka attiecinājums galvenā dokumenta pieejamajā buferī, nevis pierādīts aizkaves cēlonis. Skriptu laiku nepieskaita kadru bloķēšanas laikam."
+    },
+    "loafOwn": {
+        "message": "Pašu avoti"
+    },
+    "loafInline": {
+        "message": "Iekļautie skripti"
+    },
+    "loafUnknown": {
+        "message": "Nezināms īpašnieks"
+    },
+    "loafBlocking": {
+        "message": "Kadru bloķēšana (visi logi)"
+    },
+    "loafEmpty": {
+        "message": "Pieejamajā buferī nav ierakstu"
+    },
+    "loafUnsupported": {
+        "message": "Nav atbalstīts"
+    },
+    "loafUnavailable": {
+        "message": "Dati nav pieejami"
+    },
+    "loafLimited": {
+        "message": "Parādītas līdz 20 grupām; to summa nav pilns kopējais laiks."
+    },
+    "loafExcluded": {
+        "message": "Citu logu skripti un skripti bez loga attiecinājuma nav iekļauti grupās."
     }
 }

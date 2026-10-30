@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Tälle sivulle ponnahdusikkunan avaamiseen mennessä kertyneet siirtymät; ei erillistä mittausta historiasta paluun jälkeen."
+    },
+    "auditLoaf": {
+        "message": "Skriptit pitkissä kehyksissä"
+    },
+    "auditLoafHint": {
+        "message": "Selaimen kohdistus pääasiakirjan käytettävissä olevassa puskurissa, ei todistettu viiveen syy. Skriptiaikoja ei lisätä kehysten estoaikaan."
+    },
+    "loafOwn": {
+        "message": "Omat lähteet"
+    },
+    "loafInline": {
+        "message": "Sisäiset skriptit"
+    },
+    "loafUnknown": {
+        "message": "Tuntematon omistaja"
+    },
+    "loafBlocking": {
+        "message": "Kehysten esto (kaikki ikkunat)"
+    },
+    "loafEmpty": {
+        "message": "Ei tietueita käytettävissä olevassa puskurissa"
+    },
+    "loafUnsupported": {
+        "message": "Ei tuettu"
+    },
+    "loafUnavailable": {
+        "message": "Tietoja ei saatavilla"
+    },
+    "loafLimited": {
+        "message": "Enintään 20 ryhmää; niiden summa ei ole täydellinen kokonaisaika."
+    },
+    "loafExcluded": {
+        "message": "Muiden ikkunoiden tai ilman ikkunakohdistusta olevat skriptit on jätetty ryhmistä pois."
     }
 }

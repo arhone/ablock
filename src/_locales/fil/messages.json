@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Mga paglipat na naipon sa pahinang ito sa pagbukas ng popup; walang hiwalay na pagsukat pagkabalik sa pamamagitan ng kasaysayan."
+    },
+    "auditLoaf": {
+        "message": "Mga script sa mahahabang frame"
+    },
+    "auditLoafHint": {
+        "message": "Pag-uugnay ng browser sa magagamit na buffer ng pangunahing dokumento, hindi patunay ng sanhi ng pagkaantala. Hindi idinaragdag ang oras ng script sa oras ng pagharang ng frame."
+    },
+    "loafOwn": {
+        "message": "Sariling mga pinagmulan"
+    },
+    "loafInline": {
+        "message": "Mga inline na script"
+    },
+    "loafUnknown": {
+        "message": "Hindi kilalang may-ari"
+    },
+    "loafBlocking": {
+        "message": "Pagharang ng frame (lahat ng window)"
+    },
+    "loafEmpty": {
+        "message": "Walang tala sa magagamit na buffer"
+    },
+    "loafUnsupported": {
+        "message": "Hindi suportado"
+    },
+    "loafUnavailable": {
+        "message": "Hindi magagamit ang data"
+    },
+    "loafLimited": {
+        "message": "Hanggang 20 grupo ang ipinapakita; hindi kumpletong kabuuan ang suma ng mga ito."
+    },
+    "loafExcluded": {
+        "message": "Hindi kasama sa mga grupo ang mga script mula sa ibang window o walang pag-uugnay sa window."
     }
 }

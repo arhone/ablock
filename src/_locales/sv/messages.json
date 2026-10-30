@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Förskjutningar som samlats på denna sida när popupen öppnas; ingen separat mätning efter återkomst via historiken."
+    },
+    "auditLoaf": {
+        "message": "Skript i långa bildrutor"
+    },
+    "auditLoafHint": {
+        "message": "Webbläsarens tilldelning i huvuddokumentets tillgängliga buffert, ingen bevisad orsak till fördröjning. Skripttid läggs inte till bildrutornas blockeringstid."
+    },
+    "loafOwn": {
+        "message": "Egna källor"
+    },
+    "loafInline": {
+        "message": "Inbäddade skript"
+    },
+    "loafUnknown": {
+        "message": "Okänd ägare"
+    },
+    "loafBlocking": {
+        "message": "Blockering av bildrutor (alla fönster)"
+    },
+    "loafEmpty": {
+        "message": "Inga poster i tillgänglig buffert"
+    },
+    "loafUnsupported": {
+        "message": "Stöds inte"
+    },
+    "loafUnavailable": {
+        "message": "Data saknas"
+    },
+    "loafLimited": {
+        "message": "Högst 20 grupper visas; summan är inte en fullständig totalsumma."
+    },
+    "loafExcluded": {
+        "message": "Skript från andra fönster eller utan fönstertilldelning ingår inte i grupperna."
     }
 }

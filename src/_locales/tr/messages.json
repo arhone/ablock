@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Pencere açılana kadar bu sayfada biriken kaymalar; geçmiş üzerinden dönüldükten sonra ayrı bir ölçüm yapılmaz."
+    },
+    "auditLoaf": {
+        "message": "Uzun karelerdeki betikler"
+    },
+    "auditLoafHint": {
+        "message": "Ana belgenin kullanılabilir arabelleğinde tarayıcı ilişkilendirmesi; gecikmenin kanıtlanmış nedeni değildir. Betik süresi kare engelleme süresine eklenmez."
+    },
+    "loafOwn": {
+        "message": "Kendi kaynakları"
+    },
+    "loafInline": {
+        "message": "Satır içi betikler"
+    },
+    "loafUnknown": {
+        "message": "Bilinmeyen sahip"
+    },
+    "loafBlocking": {
+        "message": "Kare engelleme (tüm pencereler)"
+    },
+    "loafEmpty": {
+        "message": "Kullanılabilir arabellekte kayıt yok"
+    },
+    "loafUnsupported": {
+        "message": "Desteklenmiyor"
+    },
+    "loafUnavailable": {
+        "message": "Veriler kullanılamıyor"
+    },
+    "loafLimited": {
+        "message": "En fazla 20 grup gösterilir; toplamları eksiksiz bir toplam değildir."
+    },
+    "loafExcluded": {
+        "message": "Diğer pencerelerin veya pencere ilişkilendirmesi olmayan betikleri gruplara dahil edilmez."
     }
 }

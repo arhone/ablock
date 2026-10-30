@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Forskyvninger samlet på denne siden når popupen åpnes; ingen egen måling etter retur via historikken."
+    },
+    "auditLoaf": {
+        "message": "Skript i lange bilderammer"
+    },
+    "auditLoafHint": {
+        "message": "Nettleserens tilordning i hoveddokumentets tilgjengelige buffer, ikke en bevist årsak til forsinkelser. Skripttid legges ikke til blokkeringstiden for bilderammer."
+    },
+    "loafOwn": {
+        "message": "Egne kilder"
+    },
+    "loafInline": {
+        "message": "Innebygde skript"
+    },
+    "loafUnknown": {
+        "message": "Ukjent eier"
+    },
+    "loafBlocking": {
+        "message": "Blokkering av bilderammer (alle vinduer)"
+    },
+    "loafEmpty": {
+        "message": "Ingen oppføringer i tilgjengelig buffer"
+    },
+    "loafUnsupported": {
+        "message": "Støttes ikke"
+    },
+    "loafUnavailable": {
+        "message": "Data utilgjengelig"
+    },
+    "loafLimited": {
+        "message": "Opptil 20 grupper vises; summen er ikke en fullstendig total."
+    },
+    "loafExcluded": {
+        "message": "Skript fra andre vinduer eller uten vindustilordning er utelatt fra gruppene."
     }
 }

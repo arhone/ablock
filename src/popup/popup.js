@@ -1249,6 +1249,57 @@ function formatLoadCauses(key, section) {
 }
 
 /**
+ * Атрибуция браузера по владельцам источников, без вывода о причинах задержки.
+ * Суммы относятся только к сохранённым записям self; кадры считаются отдельно.
+ * @param {?Object} section
+ * @param {Array<Object>} catalog полный справочник, не список найденных трекеров
+ * @param {string} documentUrl безопасный адрес снимка
+ * @returns {{value: string, items: Array<Object>, notes: string[], section: ?Object}}
+ */
+function formatLoafCauses(section, catalog = [], documentUrl = '') {
+    const data = section?.data;
+    const groups = new Map();
+    const pageOwner = CompanyOwner.find(documentUrl, catalog, ['sites'])?.company;
+    const page = CompanyOwner.normalize(documentUrl);
+    for (const script of data?.scripts || []) {
+        const address = script.kind === 'url' ? CompanyOwner.normalize(script.url) : null;
+        const owner = address ? CompanyOwner.find(script.url, catalog)?.company : null;
+        const own = address && (address.host === page?.host || (owner && owner === pageOwner));
+        const key = owner || (own ? 'own' : address ? `host:${address.host}` : `kind:${script.kind}`);
+        const label = owner ? owner.name + (own ? ` · ${t('loafOwn')}` : '')
+            : own ? t('loafOwn') : script.kind === 'inline' ? t('loafInline')
+                : t('loafUnknown') + (address ? ` · ${address.host}` : '');
+        let group = groups.get(key);
+        if (!group) {
+            group = {label, duration: 0};
+            groups.set(key, group);
+        }
+        group.duration = group.duration === null || typeof script.duration !== 'number'
+            || !Number.isFinite(script.duration) || script.duration < 0 ? null : group.duration + script.duration;
+    }
+    const sorted = [...groups.values()].sort((a, b) => (b.duration ?? -1) - (a.duration ?? -1));
+    const limited = sorted.length > 20;
+    const partial = section?.status === 'partial' || section?.truncated || limited;
+    const total = sorted.reduce((sum, item) => sum === null || item.duration === null ? null : sum + item.duration, 0);
+    const notes = [t('auditLoafHint'), `${t('loafBlocking')}: ${formatCauseTime(data?.blockingDuration)}`];
+    if (limited) {
+        notes.push(t('loafLimited'));
+    }
+    if (data?.excludedScripts?.count > 0 || section?.reasons?.includes('scripts-excluded')) {
+        notes.push(t('loafExcluded'));
+    }
+    const empty = !data?.availableFrames ? t('loafEmpty') : t('auditDetailsEmpty');
+    return {
+        value: !['ok', 'partial'].includes(section?.status) || !data
+            ? t(section?.status === 'unsupported' ? 'loafUnsupported' : 'loafUnavailable')
+            : partial ? t('auditDetailsPartial') : !data.availableFrames ? empty : sorted.length ? formatCauseTime(total) : '—',
+        items: sorted.slice(0, 20).map(({label, duration}) => ({label, value: formatCauseTime(duration)})),
+        notes: sorted.length ? notes : [...notes, empty],
+        section: limited ? {...section, truncated: true} : section
+    };
+}
+
+/**
  * Разделы под табло оценки: строки по группам оценки (приватность, скорость, безопасность, SEO, доступность)
  * и «Роботы и ИИ» без оценки. Строка — название, значение и цвет; пояснение — при наведении.
  * Замечания — жёлтые и красные строки. Балл группы в заголовке раздела ставит renderScore
@@ -1257,9 +1308,10 @@ function formatLoadCauses(key, section) {
  * @param {boolean} extended
  * @param {Object} info данные страницы (collectPageInfo)
  * @param {Array<{name: string, hosts: string[], state: string}>} companies кто следит
+ * @param {Array<Object>} [catalog] полный справочник владельцев источников
  * @returns {Map<string, {name: string, state: string}>} строки по ключам — для оценки
  */
-function renderAudit(audit, server, extended, info, companies) {
+function renderAudit(audit, server, extended, info, companies, catalog = []) {
     const body = document.getElementById('audit-body');
     // «О сайте» — в разметке, остальное — заново
     for (const el of [...body.children].filter((el) => el.id !== 'about')) {
@@ -1354,6 +1406,11 @@ function renderAudit(audit, server, extended, info, companies) {
     const {vitals, seo, markup, a11y} = audit || {};
     if (audit) {
         section('auditSpeed', 'speed');
+        if (audit.causes?.version === 1) {
+            const loaf = formatLoafCauses(audit.causes.loaf, catalog, audit.causes.context?.documentUrl);
+            const el = row('auditLoaf', loaf.value, 'none');
+            renderAuditCauses(el, loaf.section, loaf.items, loaf.notes);
+        }
         time('auditTtfb', vitals.ttfb, 800, 1800);
         time('auditFcp', vitals.fcp, 1800, 3000);
         time('auditLcp', vitals.lcp, 2500, 4000);
@@ -1623,8 +1680,9 @@ function openAuditGroup(group, open = true) {
  * @param {HTMLElement} row
  * @param {?Object} section раздел causes v1
  * @param {Array<{label: string, value: string, geometry?: Array<{label: string, value: string}>}>} [items] подготовленные подписи и значения
+ * @param {string[]} [notes] пояснения вне списка: не занимают первые пять мест
  */
-function renderAuditCauses(row, section, items = []) {
+function renderAuditCauses(row, section, items = [], notes = []) {
     if (!['ok', 'partial'].includes(section?.status)) {
         return;
     }
@@ -1655,6 +1713,14 @@ function renderAuditCauses(row, section, items = []) {
         const note = document.createElement('p');
         note.textContent = t('auditDetailsPartial');
         panel.append(note);
+    }
+    for (const text of notes) {
+        const note = document.createElement('p');
+        note.textContent = text;
+        panel.append(note);
+    }
+    if (!items.length && notes.length) {
+        return;
     }
     if (!items.length) {
         const empty = document.createElement('p');
@@ -2936,7 +3002,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const [tech, auditInjection] = await Promise.all([techResult, auditResult]);
     const audit = await acceptAudit(tab.id, auditInjection, info);
     renderTech(tech, server);
-    const rows = renderAudit(audit, server, extended, info, companies);
+    const rows = renderAudit(audit, server, extended, info, companies, await loadData('companies').catch(() => []));
     rescore = () => {
         score.result = renderScore(info, companies, audit, rows, server);
     };

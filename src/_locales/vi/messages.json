@@ -1268,5 +1268,38 @@
     },
     "causeClsCapture": {
         "message": "Các dịch chuyển tích lũy trên trang hiện tại khi mở cửa sổ; không có phép đo riêng sau khi quay lại qua lịch sử."
+    },
+    "auditLoaf": {
+        "message": "Tập lệnh trong khung hình dài"
+    },
+    "auditLoafHint": {
+        "message": "Quy thuộc của trình duyệt trong bộ đệm khả dụng của tài liệu chính, không chứng minh nguyên nhân gây trễ. Không cộng thời gian tập lệnh với thời gian chặn khung hình."
+    },
+    "loafOwn": {
+        "message": "Nguồn riêng"
+    },
+    "loafInline": {
+        "message": "Tập lệnh nội tuyến"
+    },
+    "loafUnknown": {
+        "message": "Chưa rõ chủ sở hữu"
+    },
+    "loafBlocking": {
+        "message": "Chặn khung hình (mọi cửa sổ)"
+    },
+    "loafEmpty": {
+        "message": "Không có bản ghi trong bộ đệm khả dụng"
+    },
+    "loafUnsupported": {
+        "message": "Không được hỗ trợ"
+    },
+    "loafUnavailable": {
+        "message": "Không có dữ liệu"
+    },
+    "loafLimited": {
+        "message": "Hiển thị tối đa 20 nhóm; tổng của chúng không phải tổng đầy đủ."
+    },
+    "loafExcluded": {
+        "message": "Tập lệnh của cửa sổ khác hoặc không được quy thuộc cho cửa sổ bị loại khỏi các nhóm."
     }
 }
