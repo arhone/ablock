@@ -862,11 +862,10 @@ function redirectAddress(value) {
  * hops: {from,to,statusCode,timeStamp}, максимум 20; initialUrl/finalUrl безопасные.
  * outcome: pending/completed/error; complete — вся ли HTTP-цепочка наблюдалась.
  * reasons: limit/non-http-redirect/unsafe-url/request-error. Ноль hops — измеренный ноль.
- * document: null либо {documentId,timeOrigin}; только при точном совпадении ID события
- * завершения и InjectionResult главного активного фрейма. Без ID НЕ выводить как историю
- * документа. Потребитель обязан сверить documentId и timeOrigin с результатом своего аудита.
- * Нет webNavigation: браузер может не дать ID главной навигации — это явная недоступность
- * привязки, а не разрешение сопоставлять по хосту, сокращённому URL или времени.
+ * document: всегда null — надёжная привязка к документу недоступна в Chrome/Яндекс.
+ * Для 2б-5 это отдельная последняя HTTP-цепочка вкладки с явной оговоркой,
+ * а не история текущего документа. Времена относятся только к событиям webRequest.
+ * responseStartedAt — timeStamp onResponseStarted принятого финального ответа, иначе null.
  */
 function queueRedirect(kind, details) {
     const epoch = redirectEpoch;
@@ -899,7 +898,7 @@ function queueRedirect(kind, details) {
             chain = {
                 version: 1, generation: crypto.randomUUID(), requestId: details.requestId,
                 initialUrl: redirectAddress(details.url), finalUrl: null,
-                startedAt: details.timeStamp, endedAt: null, outcome: 'pending',
+                startedAt: details.timeStamp, responseStartedAt: null, endedAt: null, outcome: 'pending',
                 complete: true, truncated: false, reasons: [], hops: [], document: null
             };
             if (!chain.initialUrl) {
@@ -966,6 +965,7 @@ function queueRedirect(kind, details) {
                 tab = {host: new URL(details.url).hostname, ip: details.ip || '', headers,
                     blocked: {}, bytes: 0, retiredRedirectRequests: retired.slice(-MAX_RETIRED_REQUESTS)};
                 if (chain) {
+                    chain.responseStartedAt = details.timeStamp;
                     tab.redirects = chain;
                 }
                 s.tabs[details.tabId] = tab;
@@ -981,20 +981,7 @@ function queueRedirect(kind, details) {
             }
         }
         await saveTabs();
-        if (kind === 'completed' && details.documentId && details.documentLifecycle === 'active') {
-            // Ограничиваем ожидание; поздний результат инъекции сам состояние не меняет.
-            const result = await Promise.race([
-                chrome.scripting.executeScript({target: {tabId: details.tabId, frameIds: [0]},
-                    func: () => performance.timeOrigin}).catch(() => []),
-                new Promise((resolve) => setTimeout(() => resolve([]), 400))
-            ]);
-            const main = result.find((entry) => entry.frameId === 0);
-            if (epoch === redirectEpoch && s.tabs[details.tabId]?.redirects === chain
-                && main?.documentId === details.documentId && Number.isFinite(main.result)) {
-                chain.document = {documentId: main.documentId, timeOrigin: main.result};
-                await saveTabs();
-            }
-        }
+
     });
     return redirectQueue;
 }
