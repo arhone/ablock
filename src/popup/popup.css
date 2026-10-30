@@ -1273,6 +1273,13 @@ footer a:hover {
     white-space: normal;
     text-align: end;
 }
+.audit-row[data-key="auditMarketing"] {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.audit-row[data-key="auditMarketing"] span {
+    min-width: 0;
+}
 .audit-causes {
     grid-column: 1 / -1;
     margin-block: 4px 6px;

@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "এই রেকর্ডে কোনো HTTP পুনর্নির্দেশ দেখা যায়নি।"
     },
+    "auditMarketing": {
+        "message": "পাওয়া সেটিংস"
+    },
+    "auditMarketingHint": {
+        "message": "সীমিত চিত্র: সেটিংস চালানো বা তথ্য পাঠানোর প্রমাণ নয়।"
+    },
+    "marketingMarkup": {
+        "message": "মার্কআপে পাওয়া গেছে"
+    },
+    "marketingResource": {
+        "message": "রিসোর্স দেখা গেছে"
+    },
+    "marketingUnknown": {
+        "message": "চালানো হয়েছে কি না অজানা"
+    },
+    "marketingBlocking": {
+        "message": "ডোমেন ব্লক এই ID-র সঙ্গে যুক্ত করা যায় না; সংক্ষিপ্ত URL সঠিক অনুরোধ নিশ্চিত করে না।"
+    },
+    "marketingGtm": {
+        "message": "GTM কন্টেইনারের বিষয়বস্তু অজানা।"
+    },
+    "marketingUnavailable": {
+        "message": "সংগ্রহ অনুপলব্ধ বা নথি বদলেছে।"
+    },
+    "marketingEmpty": {
+        "message": "সেটিংস পাওয়া যায়নি; তবুও ট্র্যাকিং থাকতে পারে।"
+    },
     "auditDetails": {
         "message": "বিস্তারিত"
     },

@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Šajā ierakstā HTTP pāradresācijas netika novērotas."
     },
+    "auditMarketing": {
+        "message": "Atrastie iestatījumi"
+    },
+    "auditMarketingHint": {
+        "message": "Ierobežots momentuzņēmums: iestatījumi nepierāda izpildi vai datu pārsūtīšanu."
+    },
+    "marketingMarkup": {
+        "message": "Atrasts marķējumā"
+    },
+    "marketingResource": {
+        "message": "Resurss novērots"
+    },
+    "marketingUnknown": {
+        "message": "Izpilde nav zināma"
+    },
+    "marketingBlocking": {
+        "message": "Domēna bloķēšanu nevar attiecināt uz šo ID; saīsināts URL neapstiprina precīzu pieprasījumu."
+    },
+    "marketingGtm": {
+        "message": "GTM konteinera saturs nav zināms."
+    },
+    "marketingUnavailable": {
+        "message": "Vākšana nav pieejama vai dokuments mainījies."
+    },
+    "marketingEmpty": {
+        "message": "Iestatījumi nav atrasti; izsekošana joprojām iespējama."
+    },
     "auditDetails": {
         "message": "Sīkāka informācija"
     },

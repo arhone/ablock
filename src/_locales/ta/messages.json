@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "இந்தப் பதிவில் HTTP வழிமாற்றங்கள் காணப்படவில்லை."
     },
+    "auditMarketing": {
+        "message": "கண்டறிந்த அமைப்புகள்"
+    },
+    "auditMarketingHint": {
+        "message": "வரையறுக்கப்பட்ட படம்: அமைப்புகள் இயக்கம் அல்லது தரவு பரிமாற்றத்தை நிரூபிக்காது."
+    },
+    "marketingMarkup": {
+        "message": "குறியீட்டில் கண்டறியப்பட்டது"
+    },
+    "marketingResource": {
+        "message": "வளம் காணப்பட்டது"
+    },
+    "marketingUnknown": {
+        "message": "இயக்கம் தெரியாது"
+    },
+    "marketingBlocking": {
+        "message": "டொமைன் தடுப்பை இந்த ID உடன் இணைக்க முடியாது; சுருக்கப்பட்ட URL துல்லியமான கோரிக்கையை உறுதிப்படுத்தாது."
+    },
+    "marketingGtm": {
+        "message": "GTM கொள்கலனின் உள்ளடக்கம் தெரியாது."
+    },
+    "marketingUnavailable": {
+        "message": "சேகரிக்க முடியவில்லை அல்லது ஆவணம் மாறியது."
+    },
+    "marketingEmpty": {
+        "message": "அமைப்புகள் கிடைக்கவில்லை; இருப்பினும் கண்காணிப்பு இருக்கலாம்."
+    },
     "auditDetails": {
         "message": "விவரங்கள்"
     },

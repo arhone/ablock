@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "לא נצפו הפניות HTTP ברישום זה."
     },
+    "auditMarketing": {
+        "message": "הגדרות שנמצאו"
+    },
+    "auditMarketingHint": {
+        "message": "תמונת מצב מוגבלת: ההגדרות אינן מוכיחות ביצוע או העברת נתונים."
+    },
+    "marketingMarkup": {
+        "message": "נמצא בסימון"
+    },
+    "marketingResource": {
+        "message": "נצפה משאב"
+    },
+    "marketingUnknown": {
+        "message": "הביצוע לא ידוע"
+    },
+    "marketingBlocking": {
+        "message": "חסימת הדומיין אינה מיוחסת למזהה זה; כתובת מקוצרת אינה מאשרת בקשה מדויקת."
+    },
+    "marketingGtm": {
+        "message": "תוכן מכולת GTM אינו ידוע."
+    },
+    "marketingUnavailable": {
+        "message": "האיסוף אינו זמין או שהמסמך השתנה."
+    },
+    "marketingEmpty": {
+        "message": "לא נמצאו הגדרות; עדיין ייתכן מעקב."
+    },
     "auditDetails": {
         "message": "פרטים"
     },

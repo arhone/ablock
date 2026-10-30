@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Aucune redirection HTTP observée dans ce relevé."
     },
+    "auditMarketing": {
+        "message": "Paramètres trouvés"
+    },
+    "auditMarketingHint": {
+        "message": "Instantané limité : les paramètres ne prouvent ni exécution ni transfert de données."
+    },
+    "marketingMarkup": {
+        "message": "Trouvé dans le balisage"
+    },
+    "marketingResource": {
+        "message": "Ressource observée"
+    },
+    "marketingUnknown": {
+        "message": "Exécution inconnue"
+    },
+    "marketingBlocking": {
+        "message": "Le blocage du domaine ne peut être attribué à cet ID ; une URL abrégée ne confirme pas une requête exacte."
+    },
+    "marketingGtm": {
+        "message": "Le contenu du conteneur GTM est inconnu."
+    },
+    "marketingUnavailable": {
+        "message": "Collecte indisponible ou document modifié."
+    },
+    "marketingEmpty": {
+        "message": "Aucun paramètre trouvé ; un suivi reste possible."
+    },
     "auditDetails": {
         "message": "Détails"
     },

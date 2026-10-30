@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "W tym zapisie nie zaobserwowano przekierowań HTTP."
     },
+    "auditMarketing": {
+        "message": "Znalezione ustawienia"
+    },
+    "auditMarketingHint": {
+        "message": "Ograniczony obraz: ustawienia nie dowodzą wykonania ani przesyłania danych."
+    },
+    "marketingMarkup": {
+        "message": "Znaleziono w znacznikach"
+    },
+    "marketingResource": {
+        "message": "Zaobserwowano zasób"
+    },
+    "marketingUnknown": {
+        "message": "Wykonanie nieznane"
+    },
+    "marketingBlocking": {
+        "message": "Blokady domeny nie można przypisać temu ID; skrócony URL nie potwierdza dokładnego żądania."
+    },
+    "marketingGtm": {
+        "message": "Zawartość kontenera GTM jest nieznana."
+    },
+    "marketingUnavailable": {
+        "message": "Zbieranie niedostępne lub dokument się zmienił."
+    },
+    "marketingEmpty": {
+        "message": "Nie znaleziono ustawień; śledzenie nadal jest możliwe."
+    },
     "auditDetails": {
         "message": "Szczegóły"
     },

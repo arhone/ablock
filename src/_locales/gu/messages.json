@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "આ રેકોર્ડમાં HTTP રીડાયરેક્ટ જોવા મળ્યા નથી."
     },
+    "auditMarketing": {
+        "message": "મળેલી સેટિંગ્સ"
+    },
+    "auditMarketingHint": {
+        "message": "મર્યાદિત ઝલક: સેટિંગ્સ અમલ કે ડેટા મોકલ્યાનો પુરાવો નથી."
+    },
+    "marketingMarkup": {
+        "message": "માર્કઅપમાં મળ્યું"
+    },
+    "marketingResource": {
+        "message": "સંસાધન જોવા મળ્યું"
+    },
+    "marketingUnknown": {
+        "message": "અમલ અજ્ઞાત"
+    },
+    "marketingBlocking": {
+        "message": "ડોમેન અવરોધ આ ID સાથે જોડી શકાતો નથી; ટૂંકો URL ચોક્કસ વિનંતીની પુષ્ટિ કરતો નથી."
+    },
+    "marketingGtm": {
+        "message": "GTM કન્ટેનરની સામગ્રી અજ્ઞાત છે."
+    },
+    "marketingUnavailable": {
+        "message": "સંગ્રહ ઉપલબ્ધ નથી અથવા દસ્તાવેજ બદલાયો."
+    },
+    "marketingEmpty": {
+        "message": "સેટિંગ્સ મળી નથી; છતાં ટ્રેકિંગ શક્ય છે."
+    },
     "auditDetails": {
         "message": "વિગતો"
     },

@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Бұл жазбада HTTP бағыттаулары байқалмады."
     },
+    "auditMarketing": {
+        "message": "Табылған параметрлер"
+    },
+    "auditMarketingHint": {
+        "message": "Шектеулі сурет: параметрлер орындалуды не дерек жіберуді дәлелдемейді."
+    },
+    "marketingMarkup": {
+        "message": "Белгілеуден табылды"
+    },
+    "marketingResource": {
+        "message": "Ресурс байқалды"
+    },
+    "marketingUnknown": {
+        "message": "Орындалуы белгісіз"
+    },
+    "marketingBlocking": {
+        "message": "Доменді бұғаттау осы ID-ге телінбейді; қысқа URL нақты сұрауды растамайды."
+    },
+    "marketingGtm": {
+        "message": "GTM контейнерінің мазмұны белгісіз."
+    },
+    "marketingUnavailable": {
+        "message": "Жинау қолжетімсіз немесе құжат өзгерді."
+    },
+    "marketingEmpty": {
+        "message": "Параметрлер табылмады; бақылау бәрібір болуы мүмкін."
+    },
     "auditDetails": {
         "message": "Толығырақ"
     },

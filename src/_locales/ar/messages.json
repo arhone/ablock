@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "لم تُرصد عمليات إعادة توجيه HTTP في هذا السجل."
     },
+    "auditMarketing": {
+        "message": "الإعدادات المكتشفة"
+    },
+    "auditMarketingHint": {
+        "message": "لقطة محدودة: الإعدادات لا تثبت التنفيذ أو نقل البيانات."
+    },
+    "marketingMarkup": {
+        "message": "وُجد في الترميز"
+    },
+    "marketingResource": {
+        "message": "رُصد المورد"
+    },
+    "marketingUnknown": {
+        "message": "التنفيذ غير معروف"
+    },
+    "marketingBlocking": {
+        "message": "لا يُنسب حظر النطاق إلى هذا المعرّف؛ الرابط المختصر لا يؤكد طلبًا محددًا."
+    },
+    "marketingGtm": {
+        "message": "محتوى حاوية GTM غير معروف."
+    },
+    "marketingUnavailable": {
+        "message": "الجمع غير متاح أو تغيّر المستند."
+    },
+    "marketingEmpty": {
+        "message": "لم تُكتشف إعدادات؛ قد يظل التتبع موجودًا."
+    },
     "auditDetails": {
         "message": "التفاصيل"
     },

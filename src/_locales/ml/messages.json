@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "ഈ രേഖയിൽ HTTP തിരിച്ചുവിടലുകൾ കണ്ടില്ല."
     },
+    "auditMarketing": {
+        "message": "കണ്ടെത്തിയ ക്രമീകരണങ്ങൾ"
+    },
+    "auditMarketingHint": {
+        "message": "പരിമിത ദൃശ്യം: ക്രമീകരണങ്ങൾ പ്രവർത്തനമോ ഡാറ്റ കൈമാറ്റമോ തെളിയിക്കുന്നില്ല."
+    },
+    "marketingMarkup": {
+        "message": "മാർക്കപ്പിൽ കണ്ടെത്തി"
+    },
+    "marketingResource": {
+        "message": "റിസോഴ്സ് നിരീക്ഷിച്ചു"
+    },
+    "marketingUnknown": {
+        "message": "പ്രവർത്തനം അജ്ഞാതം"
+    },
+    "marketingBlocking": {
+        "message": "ഡൊമെയ്ൻ തടയൽ ഈ IDയുമായി ബന്ധിപ്പിക്കാനാവില്ല; ചുരുക്കിയ URL കൃത്യമായ അഭ്യർത്ഥന സ്ഥിരീകരിക്കുന്നില്ല."
+    },
+    "marketingGtm": {
+        "message": "GTM കണ്ടെയ്‌നറിന്റെ ഉള്ളടക്കം അജ്ഞാതമാണ്."
+    },
+    "marketingUnavailable": {
+        "message": "ശേഖരണം ലഭ്യമല്ല അല്ലെങ്കിൽ രേഖ മാറി."
+    },
+    "marketingEmpty": {
+        "message": "ക്രമീകരണങ്ങൾ കണ്ടെത്തിയില്ല; എന്നാലും ട്രാക്കിങ് ഉണ്ടായേക്കാം."
+    },
     "auditDetails": {
         "message": "വിശദാംശങ്ങൾ"
     },

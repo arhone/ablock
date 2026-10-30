@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "In diesem Eintrag wurden keine HTTP-Weiterleitungen beobachtet."
     },
+    "auditMarketing": {
+        "message": "Gefundene Einstellungen"
+    },
+    "auditMarketingHint": {
+        "message": "Begrenzte Momentaufnahme: Einstellungen belegen weder Ausführung noch Datenübertragung."
+    },
+    "marketingMarkup": {
+        "message": "Im Markup gefunden"
+    },
+    "marketingResource": {
+        "message": "Ressource beobachtet"
+    },
+    "marketingUnknown": {
+        "message": "Ausführung unbekannt"
+    },
+    "marketingBlocking": {
+        "message": "Eine Domainblockierung lässt sich dieser ID nicht zuordnen; eine gekürzte URL belegt keine genaue Anfrage."
+    },
+    "marketingGtm": {
+        "message": "Der Inhalt des GTM-Containers ist unbekannt."
+    },
+    "marketingUnavailable": {
+        "message": "Erfassung nicht verfügbar oder Dokument gewechselt."
+    },
+    "marketingEmpty": {
+        "message": "Keine Einstellungen gefunden; Tracking ist weiterhin möglich."
+    },
     "auditDetails": {
         "message": "Details"
     },

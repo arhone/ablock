@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "در این رکورد هدایت HTTP مشاهده نشد."
     },
+    "auditMarketing": {
+        "message": "تنظیمات یافت‌شده"
+    },
+    "auditMarketingHint": {
+        "message": "تصویر محدود: تنظیمات اجرای کد یا انتقال داده را ثابت نمی‌کند."
+    },
+    "marketingMarkup": {
+        "message": "در نشانه‌گذاری یافت شد"
+    },
+    "marketingResource": {
+        "message": "منبع مشاهده شد"
+    },
+    "marketingUnknown": {
+        "message": "اجرا نامشخص است"
+    },
+    "marketingBlocking": {
+        "message": "مسدودسازی دامنه به این شناسه نسبت داده نمی‌شود؛ نشانی کوتاه‌شده درخواست دقیق را تأیید نمی‌کند."
+    },
+    "marketingGtm": {
+        "message": "محتوای ظرف GTM نامشخص است."
+    },
+    "marketingUnavailable": {
+        "message": "گردآوری در دسترس نیست یا سند تغییر کرده است."
+    },
+    "marketingEmpty": {
+        "message": "تنظیماتی یافت نشد؛ ردیابی همچنان ممکن است."
+    },
     "auditDetails": {
         "message": "جزئیات"
     },

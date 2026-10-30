@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "У овом запису нису уочена HTTP преусмеравања."
     },
+    "auditMarketing": {
+        "message": "Пронађена подешавања"
+    },
+    "auditMarketingHint": {
+        "message": "Ограничен снимак: подешавања не доказују извршавање или пренос података."
+    },
+    "marketingMarkup": {
+        "message": "Пронађено у ознакама"
+    },
+    "marketingResource": {
+        "message": "Ресурс је уочен"
+    },
+    "marketingUnknown": {
+        "message": "Извршавање је непознато"
+    },
+    "marketingBlocking": {
+        "message": "Блокирање домена се не приписује овом ID; скраћени URL не потврђује тачан захтев."
+    },
+    "marketingGtm": {
+        "message": "Садржај GTM контејнера је непознат."
+    },
+    "marketingUnavailable": {
+        "message": "Прикупљање није доступно или је документ промењен."
+    },
+    "marketingEmpty": {
+        "message": "Нема пронађених подешавања; праћење је ипак могуће."
+    },
     "auditDetails": {
         "message": "Детаљи"
     },

@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "इस रिकॉर्ड में कोई HTTP रीडायरेक्ट नहीं देखा गया।"
     },
+    "auditMarketing": {
+        "message": "मिली सेटिंग"
+    },
+    "auditMarketingHint": {
+        "message": "सीमित झलक: सेटिंग से निष्पादन या डेटा भेजना सिद्ध नहीं होता।"
+    },
+    "marketingMarkup": {
+        "message": "मार्कअप में मिला"
+    },
+    "marketingResource": {
+        "message": "संसाधन देखा गया"
+    },
+    "marketingUnknown": {
+        "message": "निष्पादन अज्ञात"
+    },
+    "marketingBlocking": {
+        "message": "डोमेन की रोक इस ID से नहीं जोड़ी जा सकती; छोटा URL सटीक अनुरोध की पुष्टि नहीं करता।"
+    },
+    "marketingGtm": {
+        "message": "GTM कंटेनर की सामग्री अज्ञात है।"
+    },
+    "marketingUnavailable": {
+        "message": "संग्रह उपलब्ध नहीं या दस्तावेज़ बदल गया।"
+    },
+    "marketingEmpty": {
+        "message": "सेटिंग नहीं मिली; फिर भी ट्रैकिंग हो सकती है।"
+    },
     "auditDetails": {
         "message": "विवरण"
     },

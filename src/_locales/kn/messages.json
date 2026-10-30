@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "ಈ ದಾಖಲೆಯಲ್ಲಿ HTTP ಮರುನಿರ್ದೇಶನಗಳು ಕಂಡುಬಂದಿಲ್ಲ."
     },
+    "auditMarketing": {
+        "message": "ಕಂಡುಬಂದ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+    },
+    "auditMarketingHint": {
+        "message": "ಸೀಮಿತ ಚಿತ್ರ: ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಕಾರ್ಯನಿರ್ವಹಣೆ ಅಥವಾ ಡೇಟಾ ವರ್ಗಾವಣೆಯನ್ನು ಸಾಬೀತುಪಡಿಸುವುದಿಲ್ಲ."
+    },
+    "marketingMarkup": {
+        "message": "ಮಾರ್ಕ್‌ಅಪ್‌ನಲ್ಲಿ ಕಂಡುಬಂದಿದೆ"
+    },
+    "marketingResource": {
+        "message": "ಸಂಪನ್ಮೂಲ ಗಮನಿಸಲಾಗಿದೆ"
+    },
+    "marketingUnknown": {
+        "message": "ಕಾರ್ಯನಿರ್ವಹಣೆ ತಿಳಿದಿಲ್ಲ"
+    },
+    "marketingBlocking": {
+        "message": "ಡೊಮೇನ್ ತಡೆಯನ್ನು ಈ IDಗೆ ಜೋಡಿಸಲಾಗದು; ಚಿಕ್ಕ URL ನಿಖರ ವಿನಂತಿಯನ್ನು ದೃಢೀಕರಿಸುವುದಿಲ್ಲ."
+    },
+    "marketingGtm": {
+        "message": "GTM ಕಂಟೇನರ್ ವಿಷಯ ತಿಳಿದಿಲ್ಲ."
+    },
+    "marketingUnavailable": {
+        "message": "ಸಂಗ್ರಹ ಲಭ್ಯವಿಲ್ಲ ಅಥವಾ ದಸ್ತಾವೇಜು ಬದಲಾಗಿದೆ."
+    },
+    "marketingEmpty": {
+        "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಕಂಡುಬಂದಿಲ್ಲ; ಆದರೂ ಟ್ರ್ಯಾಕಿಂಗ್ ಇರಬಹುದು."
+    },
     "auditDetails": {
         "message": "ವಿವರಗಳು"
     },

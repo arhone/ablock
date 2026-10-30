@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Inga HTTP-omdirigeringar observerades i denna post."
     },
+    "auditMarketing": {
+        "message": "Hittade inställningar"
+    },
+    "auditMarketingHint": {
+        "message": "Begränsad ögonblicksbild: inställningar bevisar inte körning eller dataöverföring."
+    },
+    "marketingMarkup": {
+        "message": "Hittat i uppmärkning"
+    },
+    "marketingResource": {
+        "message": "Resurs observerad"
+    },
+    "marketingUnknown": {
+        "message": "Körning okänd"
+    },
+    "marketingBlocking": {
+        "message": "Domänblockering kan inte kopplas till detta ID; en förkortad URL bekräftar inte en exakt begäran."
+    },
+    "marketingGtm": {
+        "message": "Innehållet i GTM-behållaren är okänt."
+    },
+    "marketingUnavailable": {
+        "message": "Insamling otillgänglig eller dokument ändrat."
+    },
+    "marketingEmpty": {
+        "message": "Inga inställningar hittades; spårning är fortfarande möjlig."
+    },
     "auditDetails": {
         "message": "Detaljer"
     },

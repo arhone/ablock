@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "У цьому записі HTTP-переходів не спостерігалося."
     },
+    "auditMarketing": {
+        "message": "Знайдені налаштування"
+    },
+    "auditMarketingHint": {
+        "message": "Обмежений знімок: налаштування не доводять виконання чи передачу даних."
+    },
+    "marketingMarkup": {
+        "message": "Знайдено в розмітці"
+    },
+    "marketingResource": {
+        "message": "Ресурс спостерігався"
+    },
+    "marketingUnknown": {
+        "message": "Виконання невідоме"
+    },
+    "marketingBlocking": {
+        "message": "Блокування домену не приписується цьому ID; скорочений URL не підтверджує точний запит."
+    },
+    "marketingGtm": {
+        "message": "Вміст контейнера GTM невідомий."
+    },
+    "marketingUnavailable": {
+        "message": "Збір недоступний або документ змінився."
+    },
+    "marketingEmpty": {
+        "message": "Налаштування не знайдено; стеження все одно можливе."
+    },
     "auditDetails": {
         "message": "Подробиці"
     },

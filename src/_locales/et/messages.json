@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Selles kirjes HTTP ümbersuunamisi ei täheldatud."
     },
+    "auditMarketing": {
+        "message": "Leitud seaded"
+    },
+    "auditMarketingHint": {
+        "message": "Piiratud hetktõmmis: seaded ei tõesta käivitamist ega andmeedastust."
+    },
+    "marketingMarkup": {
+        "message": "Leitud märgenditest"
+    },
+    "marketingResource": {
+        "message": "Ressurssi täheldati"
+    },
+    "marketingUnknown": {
+        "message": "Käivitamine teadmata"
+    },
+    "marketingBlocking": {
+        "message": "Domeeni blokeerimist ei saa sellele ID-le omistada; lühendatud URL ei kinnita täpset päringut."
+    },
+    "marketingGtm": {
+        "message": "GTM-konteineri sisu pole teada."
+    },
+    "marketingUnavailable": {
+        "message": "Kogumine pole saadaval või dokument muutus."
+    },
+    "marketingEmpty": {
+        "message": "Seadeid ei leitud; jälgimine on siiski võimalik."
+    },
     "auditDetails": {
         "message": "Üksikasjad"
     },

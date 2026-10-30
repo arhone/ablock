@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "此记录中未观察到 HTTP 重定向。"
     },
+    "auditMarketing": {
+        "message": "发现的设置"
+    },
+    "auditMarketingHint": {
+        "message": "有限快照：设置不能证明执行或数据传输。"
+    },
+    "marketingMarkup": {
+        "message": "在标记中发现"
+    },
+    "marketingResource": {
+        "message": "观察到资源"
+    },
+    "marketingUnknown": {
+        "message": "执行情况未知"
+    },
+    "marketingBlocking": {
+        "message": "域名拦截不能归因于此 ID；缩短的 URL 不能确认具体请求。"
+    },
+    "marketingGtm": {
+        "message": "GTM 容器内容未知。"
+    },
+    "marketingUnavailable": {
+        "message": "无法收集或文档已更改。"
+    },
+    "marketingEmpty": {
+        "message": "未发现设置；仍可能存在跟踪。"
+    },
     "auditDetails": {
         "message": "详情"
     },

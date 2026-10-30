@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "በዚህ መዝገብ HTTP አቅጣጫ ለውጦች አልታዩም።"
     },
+    "auditMarketing": {
+        "message": "የተገኙ ቅንብሮች"
+    },
+    "auditMarketingHint": {
+        "message": "ውስን ቅጽበታዊ እይታ፦ ቅንብሮች መፈጸምን ወይም የውሂብ ማስተላለፍን አያረጋግጡም።"
+    },
+    "marketingMarkup": {
+        "message": "በማርክአፕ ውስጥ ተገኝቷል"
+    },
+    "marketingResource": {
+        "message": "ሀብት ታይቷል"
+    },
+    "marketingUnknown": {
+        "message": "መፈጸሙ አይታወቅም"
+    },
+    "marketingBlocking": {
+        "message": "የጎራ እገዳ ከዚህ ID ጋር አይያያዝም፤ አጭር URL ትክክለኛ ጥያቄን አያረጋግጥም።"
+    },
+    "marketingGtm": {
+        "message": "የGTM መያዣ ይዘት አይታወቅም።"
+    },
+    "marketingUnavailable": {
+        "message": "ስብስቡ አይገኝም ወይም ሰነዱ ተቀይሯል።"
+    },
+    "marketingEmpty": {
+        "message": "ቅንብሮች አልተገኙም፤ ክትትል አሁንም ሊኖር ይችላል።"
+    },
     "auditDetails": {
         "message": "ዝርዝሮች"
     },

@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Walang naobserbahang HTTP redirect sa talang ito."
     },
+    "auditMarketing": {
+        "message": "Mga nakitang setting"
+    },
+    "auditMarketingHint": {
+        "message": "Limitadong snapshot: hindi patunay ng pagpapatakbo o paglilipat ng data ang mga setting."
+    },
+    "marketingMarkup": {
+        "message": "Nakita sa markup"
+    },
+    "marketingResource": {
+        "message": "Naobserbahang resource"
+    },
+    "marketingUnknown": {
+        "message": "Hindi alam ang pagpapatakbo"
+    },
+    "marketingBlocking": {
+        "message": "Hindi maiuugnay sa ID na ito ang pagharang ng domain; hindi patunay ng eksaktong request ang pinaikling URL."
+    },
+    "marketingGtm": {
+        "message": "Hindi alam ang nilalaman ng GTM container."
+    },
+    "marketingUnavailable": {
+        "message": "Hindi makakolekta o nagbago ang dokumento."
+    },
+    "marketingEmpty": {
+        "message": "Walang nakitang setting; posible pa rin ang pagsubaybay."
+    },
     "auditDetails": {
         "message": "Mga detalye"
     },

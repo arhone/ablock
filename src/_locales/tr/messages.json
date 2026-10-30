@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Bu kayıtta HTTP yönlendirmesi gözlemlenmedi."
     },
+    "auditMarketing": {
+        "message": "Bulunan ayarlar"
+    },
+    "auditMarketingHint": {
+        "message": "Sınırlı anlık görüntü: ayarlar yürütmeyi veya veri aktarımını kanıtlamaz."
+    },
+    "marketingMarkup": {
+        "message": "İşaretlemede bulundu"
+    },
+    "marketingResource": {
+        "message": "Kaynak gözlemlendi"
+    },
+    "marketingUnknown": {
+        "message": "Yürütme bilinmiyor"
+    },
+    "marketingBlocking": {
+        "message": "Alan adı engeli bu kimliğe atfedilemez; kısaltılmış URL kesin bir isteği doğrulamaz."
+    },
+    "marketingGtm": {
+        "message": "GTM kapsayıcısının içeriği bilinmiyor."
+    },
+    "marketingUnavailable": {
+        "message": "Toplama kullanılamıyor veya belge değişti."
+    },
+    "marketingEmpty": {
+        "message": "Ayar bulunamadı; izleme yine de mümkün."
+    },
     "auditDetails": {
         "message": "Ayrıntılar"
     },

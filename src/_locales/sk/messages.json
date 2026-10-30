@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "V tomto zázname neboli pozorované HTTP presmerovania."
     },
+    "auditMarketing": {
+        "message": "Nájdené nastavenia"
+    },
+    "auditMarketingHint": {
+        "message": "Obmedzená snímka: nastavenia nedokazujú spustenie ani prenos údajov."
+    },
+    "marketingMarkup": {
+        "message": "Nájdené v značkách"
+    },
+    "marketingResource": {
+        "message": "Zdroj bol pozorovaný"
+    },
+    "marketingUnknown": {
+        "message": "Spustenie neznáme"
+    },
+    "marketingBlocking": {
+        "message": "Blokovanie domény sa nepripisuje tomuto ID; skrátená URL nepotvrdzuje presnú požiadavku."
+    },
+    "marketingGtm": {
+        "message": "Obsah kontajnera GTM nie je známy."
+    },
+    "marketingUnavailable": {
+        "message": "Zber nie je dostupný alebo sa dokument zmenil."
+    },
+    "marketingEmpty": {
+        "message": "Nastavenia sa nenašli; sledovanie je stále možné."
+    },
     "auditDetails": {
         "message": "Podrobnosti"
     },

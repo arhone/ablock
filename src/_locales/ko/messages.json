@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "이 기록에서 HTTP 리디렉션이 관찰되지 않았습니다."
     },
+    "auditMarketing": {
+        "message": "발견된 설정"
+    },
+    "auditMarketingHint": {
+        "message": "제한된 스냅샷: 설정은 실행이나 데이터 전송을 증명하지 않습니다."
+    },
+    "marketingMarkup": {
+        "message": "마크업에서 발견"
+    },
+    "marketingResource": {
+        "message": "리소스 관찰됨"
+    },
+    "marketingUnknown": {
+        "message": "실행 여부 알 수 없음"
+    },
+    "marketingBlocking": {
+        "message": "도메인 차단을 이 ID에 귀속할 수 없으며 축약 URL은 정확한 요청을 확인하지 못합니다."
+    },
+    "marketingGtm": {
+        "message": "GTM 컨테이너 내용은 알 수 없습니다."
+    },
+    "marketingUnavailable": {
+        "message": "수집할 수 없거나 문서가 변경되었습니다."
+    },
+    "marketingEmpty": {
+        "message": "설정을 찾지 못했지만 추적이 있을 수 있습니다."
+    },
     "auditDetails": {
         "message": "세부 정보"
     },

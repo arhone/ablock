@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Tiada ubah hala HTTP diperhatikan dalam rekod ini."
     },
+    "auditMarketing": {
+        "message": "Tetapan ditemui"
+    },
+    "auditMarketingHint": {
+        "message": "Petikan terhad: tetapan tidak membuktikan pelaksanaan atau pemindahan data."
+    },
+    "marketingMarkup": {
+        "message": "Ditemui dalam penanda"
+    },
+    "marketingResource": {
+        "message": "Sumber diperhatikan"
+    },
+    "marketingUnknown": {
+        "message": "Pelaksanaan tidak diketahui"
+    },
+    "marketingBlocking": {
+        "message": "Sekatan domain tidak dikaitkan dengan ID ini; URL ringkas tidak mengesahkan permintaan tepat."
+    },
+    "marketingGtm": {
+        "message": "Kandungan bekas GTM tidak diketahui."
+    },
+    "marketingUnavailable": {
+        "message": "Pengumpulan tidak tersedia atau dokumen berubah."
+    },
+    "marketingEmpty": {
+        "message": "Tiada tetapan ditemui; penjejakan masih mungkin berlaku."
+    },
     "auditDetails": {
         "message": "Butiran"
     },

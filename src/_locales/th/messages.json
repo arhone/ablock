@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "ไม่พบการเปลี่ยนเส้นทาง HTTP ในบันทึกนี้"
     },
+    "auditMarketing": {
+        "message": "การตั้งค่าที่พบ"
+    },
+    "auditMarketingHint": {
+        "message": "ภาพรวมที่จำกัด: การตั้งค่าไม่ยืนยันการทำงานหรือการส่งข้อมูล"
+    },
+    "marketingMarkup": {
+        "message": "พบในมาร์กอัป"
+    },
+    "marketingResource": {
+        "message": "สังเกตพบทรัพยากร"
+    },
+    "marketingUnknown": {
+        "message": "ไม่ทราบการทำงาน"
+    },
+    "marketingBlocking": {
+        "message": "การบล็อกโดเมนไม่อาจผูกกับ ID นี้ และ URL แบบย่อไม่ยืนยันคำขอที่แน่นอน"
+    },
+    "marketingGtm": {
+        "message": "ไม่ทราบเนื้อหาในคอนเทนเนอร์ GTM"
+    },
+    "marketingUnavailable": {
+        "message": "เก็บข้อมูลไม่ได้หรือเอกสารเปลี่ยนแล้ว"
+    },
+    "marketingEmpty": {
+        "message": "ไม่พบการตั้งค่า แต่อาจยังมีการติดตาม"
+    },
     "auditDetails": {
         "message": "รายละเอียด"
     },

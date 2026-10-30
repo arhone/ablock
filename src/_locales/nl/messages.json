@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Geen HTTP-omleidingen waargenomen in deze registratie."
     },
+    "auditMarketing": {
+        "message": "Gevonden instellingen"
+    },
+    "auditMarketingHint": {
+        "message": "Beperkte momentopname: instellingen bewijzen geen uitvoering of gegevensoverdracht."
+    },
+    "marketingMarkup": {
+        "message": "Gevonden in opmaak"
+    },
+    "marketingResource": {
+        "message": "Bron waargenomen"
+    },
+    "marketingUnknown": {
+        "message": "Uitvoering onbekend"
+    },
+    "marketingBlocking": {
+        "message": "Een domeinblokkade is niet aan deze ID toe te schrijven; een verkorte URL bevestigt geen exact verzoek."
+    },
+    "marketingGtm": {
+        "message": "De inhoud van de GTM-container is onbekend."
+    },
+    "marketingUnavailable": {
+        "message": "Verzameling niet beschikbaar of document gewijzigd."
+    },
+    "marketingEmpty": {
+        "message": "Geen instellingen gevonden; tracking blijft mogelijk."
+    },
     "auditDetails": {
         "message": "Details"
     },

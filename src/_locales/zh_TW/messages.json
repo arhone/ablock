@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "此紀錄中未觀察到 HTTP 重新導向。"
     },
+    "auditMarketing": {
+        "message": "找到的設定"
+    },
+    "auditMarketingHint": {
+        "message": "有限快照：設定不能證明執行或資料傳輸。"
+    },
+    "marketingMarkup": {
+        "message": "在標記中找到"
+    },
+    "marketingResource": {
+        "message": "觀察到資源"
+    },
+    "marketingUnknown": {
+        "message": "執行情況未知"
+    },
+    "marketingBlocking": {
+        "message": "網域封鎖不能歸因於此 ID；縮短的 URL 不能確認具體請求。"
+    },
+    "marketingGtm": {
+        "message": "GTM 容器內容未知。"
+    },
+    "marketingUnavailable": {
+        "message": "無法收集或文件已變更。"
+    },
+    "marketingEmpty": {
+        "message": "未找到設定；仍可能存在追蹤。"
+    },
     "auditDetails": {
         "message": "詳細資料"
     },

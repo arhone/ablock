@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "この記録では HTTP リダイレクトは観測されませんでした。"
     },
+    "auditMarketing": {
+        "message": "見つかった設定"
+    },
+    "auditMarketingHint": {
+        "message": "限定的なスナップショットです。設定は実行やデータ転送の証拠ではありません。"
+    },
+    "marketingMarkup": {
+        "message": "マークアップ内で検出"
+    },
+    "marketingResource": {
+        "message": "リソースを観測"
+    },
+    "marketingUnknown": {
+        "message": "実行は不明"
+    },
+    "marketingBlocking": {
+        "message": "ドメインのブロックはこの ID に帰属できません。短縮 URL は正確なリクエストを証明しません。"
+    },
+    "marketingGtm": {
+        "message": "GTM コンテナの内容は不明です。"
+    },
+    "marketingUnavailable": {
+        "message": "収集できないか、ドキュメントが変わりました。"
+    },
+    "marketingEmpty": {
+        "message": "設定は見つかりませんでしたが、追跡の可能性はあります。"
+    },
     "auditDetails": {
         "message": "詳細"
     },

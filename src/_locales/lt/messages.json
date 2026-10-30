@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Šiame įraše HTTP peradresavimų nepastebėta."
     },
+    "auditMarketing": {
+        "message": "Rasti nustatymai"
+    },
+    "auditMarketingHint": {
+        "message": "Ribota momentinė kopija: nustatymai neįrodo vykdymo ar duomenų perdavimo."
+    },
+    "marketingMarkup": {
+        "message": "Rasta žymėjime"
+    },
+    "marketingResource": {
+        "message": "Išteklius pastebėtas"
+    },
+    "marketingUnknown": {
+        "message": "Vykdymas nežinomas"
+    },
+    "marketingBlocking": {
+        "message": "Domeno blokavimo negalima priskirti šiam ID; sutrumpintas URL nepatvirtina tikslios užklausos."
+    },
+    "marketingGtm": {
+        "message": "GTM konteinerio turinys nežinomas."
+    },
+    "marketingUnavailable": {
+        "message": "Rinkimas nepasiekiamas arba dokumentas pasikeitė."
+    },
+    "marketingEmpty": {
+        "message": "Nustatymų nerasta; sekimas vis tiek galimas."
+    },
     "auditDetails": {
         "message": "Išsamiau"
     },

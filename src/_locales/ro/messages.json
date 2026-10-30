@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Nu s-au observat redirecționări HTTP în această înregistrare."
     },
+    "auditMarketing": {
+        "message": "Setări găsite"
+    },
+    "auditMarketingHint": {
+        "message": "Instantaneu limitat: setările nu dovedesc executarea sau transferul de date."
+    },
+    "marketingMarkup": {
+        "message": "Găsit în marcaj"
+    },
+    "marketingResource": {
+        "message": "Resursă observată"
+    },
+    "marketingUnknown": {
+        "message": "Executare necunoscută"
+    },
+    "marketingBlocking": {
+        "message": "Blocarea domeniului nu se atribuie acestui ID; un URL prescurtat nu confirmă o cerere exactă."
+    },
+    "marketingGtm": {
+        "message": "Conținutul containerului GTM este necunoscut."
+    },
+    "marketingUnavailable": {
+        "message": "Colectare indisponibilă sau document schimbat."
+    },
+    "marketingEmpty": {
+        "message": "Nu s-au găsit setări; urmărirea rămâne posibilă."
+    },
     "auditDetails": {
         "message": "Detalii"
     },

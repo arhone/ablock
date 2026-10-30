@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Δεν παρατηρήθηκαν ανακατευθύνσεις HTTP σε αυτή την καταγραφή."
     },
+    "auditMarketing": {
+        "message": "Ρυθμίσεις που βρέθηκαν"
+    },
+    "auditMarketingHint": {
+        "message": "Περιορισμένο στιγμιότυπο: οι ρυθμίσεις δεν αποδεικνύουν εκτέλεση ή μεταφορά δεδομένων."
+    },
+    "marketingMarkup": {
+        "message": "Βρέθηκε στη σήμανση"
+    },
+    "marketingResource": {
+        "message": "Παρατηρήθηκε πόρος"
+    },
+    "marketingUnknown": {
+        "message": "Άγνωστη εκτέλεση"
+    },
+    "marketingBlocking": {
+        "message": "Ο αποκλεισμός τομέα δεν αποδίδεται σε αυτό το ID· ένα συντομευμένο URL δεν επιβεβαιώνει ακριβές αίτημα."
+    },
+    "marketingGtm": {
+        "message": "Το περιεχόμενο του GTM είναι άγνωστο."
+    },
+    "marketingUnavailable": {
+        "message": "Η συλλογή δεν είναι διαθέσιμη ή το έγγραφο άλλαξε."
+    },
+    "marketingEmpty": {
+        "message": "Δεν βρέθηκαν ρυθμίσεις· η παρακολούθηση παραμένει δυνατή."
+    },
     "auditDetails": {
         "message": "Λεπτομέρειες"
     },

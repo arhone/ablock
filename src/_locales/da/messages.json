@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Ingen HTTP-omdirigeringer observeret i denne registrering."
     },
+    "auditMarketing": {
+        "message": "Fundne indstillinger"
+    },
+    "auditMarketingHint": {
+        "message": "Begrænset øjebliksbillede: indstillinger beviser ikke udførelse eller dataoverførsel."
+    },
+    "marketingMarkup": {
+        "message": "Fundet i markup"
+    },
+    "marketingResource": {
+        "message": "Ressource observeret"
+    },
+    "marketingUnknown": {
+        "message": "Udførelse ukendt"
+    },
+    "marketingBlocking": {
+        "message": "Domæneblokering kan ikke tilskrives dette ID; en forkortet URL bekræfter ikke en præcis forespørgsel."
+    },
+    "marketingGtm": {
+        "message": "Indholdet af GTM-containeren er ukendt."
+    },
+    "marketingUnavailable": {
+        "message": "Indsamling utilgængelig eller dokument ændret."
+    },
+    "marketingEmpty": {
+        "message": "Ingen indstillinger fundet; sporing er stadig mulig."
+    },
     "auditDetails": {
         "message": "Detaljer"
     },

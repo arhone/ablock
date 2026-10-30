@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Bu yozuvda HTTP yo‘naltirishlari kuzatilmadi."
     },
+    "auditMarketing": {
+        "message": "Topilgan sozlamalar"
+    },
+    "auditMarketingHint": {
+        "message": "Cheklangan tasvir: sozlamalar bajarilish yoki maʼlumot uzatilishini isbotlamaydi."
+    },
+    "marketingMarkup": {
+        "message": "Belgilashda topildi"
+    },
+    "marketingResource": {
+        "message": "Resurs kuzatildi"
+    },
+    "marketingUnknown": {
+        "message": "Bajarilish nomaʼlum"
+    },
+    "marketingBlocking": {
+        "message": "Domen bloklanishi bu IDga bogʻlanmaydi; qisqartirilgan URL aniq soʻrovni tasdiqlamaydi."
+    },
+    "marketingGtm": {
+        "message": "GTM konteyneri tarkibi nomaʼlum."
+    },
+    "marketingUnavailable": {
+        "message": "Yigʻish mavjud emas yoki hujjat oʻzgargan."
+    },
+    "marketingEmpty": {
+        "message": "Sozlamalar topilmadi; kuzatuv baribir mumkin."
+    },
     "auditDetails": {
         "message": "Tafsilotlar"
     },

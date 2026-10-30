@@ -618,6 +618,39 @@ async function runAudit(tabId) {
 }
 
 /**
+ * Снимок меток в том же главном документе, что и bootstrap, без MAIN world.
+ * @param {number} tabId
+ * @returns {Promise<?chrome.scripting.InjectionResult>}
+ */
+async function runMarketing(tabId) {
+    const [bootstrap] = await chrome.scripting.executeScript({target: {tabId}, world: 'ISOLATED',
+        func: () => performance.timeOrigin});
+    if (!bootstrap?.documentId) {
+        return null;
+    }
+    const [injection] = await chrome.scripting.executeScript({target: {tabId, documentIds: [bootstrap.documentId]},
+        files: ['page/marketing.js'], world: 'ISOLATED'});
+    return injection?.documentId === bootstrap.documentId ? injection : null;
+}
+
+/**
+ * Используем ту же проверку документа, что и для аудита; URL не устанавливает идентичность.
+ * @param {number} tabId
+ * @param {?chrome.scripting.InjectionResult} injection
+ * @param {Object} info
+ * @returns {Promise<?Object>}
+ */
+async function acceptMarketing(tabId, injection, info) {
+    const result = injection?.result;
+    if (result?.version !== 1 || !['partial', 'ok'].includes(result.status)) {
+        return null;
+    }
+    const accepted = await acceptAudit(tabId, injection && {...injection,
+        result: {causes: {version: result.version, context: result.context}}}, info);
+    return accepted ? result : null;
+}
+
+/**
  * Принимаем аудит только для документа исходного снимка и всё ещё открытого документа.
  * Повторная короткая инъекция не читает DOM и не ждёт загрузки. Ошибка доступа — отказ.
  * @param {number} tabId
@@ -1342,6 +1375,33 @@ function formatLoafCauses(section, catalog = [], documentUrl = '') {
 }
 
 /**
+ * Сборщик сохраняет вид свидетельства, а не адрес запроса. Домен блокировки не
+ * связываем с ID: нет ни точного URL, ни подтверждённой принадлежности документу.
+ * @param {?Object} result
+ * @returns {{value: string, section: Object, items: Array<Object>, notes: string[]}}
+ */
+function formatMarketingCauses(result) {
+    const services = {gtm: 'Google Tag Manager', ga4: 'Google Analytics 4', 'google-ads': 'Google Ads',
+        metrika: 'Yandex Metrica', 'top-mail-ru': 'Top.Mail.Ru', vk: 'VK', tiktok: 'TikTok',
+        clarity: 'Microsoft Clarity', hotjar: 'Hotjar'};
+    const valid = result?.version === 1 && ['ok', 'partial'].includes(result.status) && Array.isArray(result.data?.tags);
+    const tags = valid ? result.data.tags.slice(0, 100) : [];
+    const items = tags.filter(item => item && Object.hasOwn(services, item.service)
+        && typeof item.id === 'string' && /^[a-zA-Z0-9_-]{1,80}$/.test(item.id)).map(item => {
+        const evidence = Array.isArray(item.evidence) ? item.evidence : [];
+        return {label: services[item.service], value: [item.id,
+            evidence.some(code => ['script-url', 'inline-call', 'inline-config'].includes(code)) ? t('marketingMarkup') : '',
+            evidence.includes('resource-url') ? t('marketingResource') : '',
+            item.service === 'metrika' && item.settings?.webvisor === true ? 'webvisor: true' : '',
+            t('marketingUnknown')].filter(Boolean).join(' · ')};
+    });
+    return {value: valid ? formatNumber(items.length) : '—',
+        section: {status: 'partial', truncated: Boolean(result?.truncated)}, items,
+        notes: [t('auditMarketingHint'), t('marketingBlocking'), t('marketingGtm'),
+            ...(!valid ? [t('marketingUnavailable')] : !items.length ? [t('marketingEmpty')] : [])]};
+}
+
+/**
  * Разделы под табло оценки: строки по группам оценки (приватность, скорость, безопасность, SEO, доступность)
  * и «Роботы и ИИ» без оценки. Строка — название, значение и цвет; пояснение — при наведении.
  * Замечания — жёлтые и красные строки. Балл группы в заголовке раздела ставит renderScore
@@ -1351,9 +1411,10 @@ function formatLoafCauses(section, catalog = [], documentUrl = '') {
  * @param {Object} info данные страницы (collectPageInfo)
  * @param {Array<{name: string, hosts: string[], state: string}>} companies кто следит
  * @param {Array<Object>} [catalog] полный справочник владельцев источников
+ * @param {?Object} [marketing] принятый снимок настроек того же документа
  * @returns {Map<string, {name: string, state: string}>} строки по ключам — для оценки
  */
-function renderAudit(audit, server, extended, info, companies, catalog = []) {
+function renderAudit(audit, server, extended, info, companies, catalog = [], marketing = null) {
     const body = document.getElementById('audit-body');
     // «О сайте» — в разметке, остальное — заново
     for (const el of [...body.children].filter((el) => el.id !== 'about')) {
@@ -1443,6 +1504,10 @@ function renderAudit(audit, server, extended, info, companies, catalog = []) {
         more: domains ? t('domainsList', info.domains.slice(0, 25).join('\n')
             + (domains > 25 ? '\n' + t('domainsMore', domains - 25) : '')) : ''
     });
+
+    const settings = formatMarketingCauses(marketing);
+    const settingsRow = row('auditMarketing', settings.value, 'none');
+    renderAuditCauses(settingsRow, settings.section, settings.items, settings.notes);
 
     // Пороги — как у Google (web.dev/vitals)
     const {vitals, seo, markup, a11y} = audit || {};
@@ -3108,6 +3173,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const techResult = chrome.scripting.executeScript({target: {tabId: tab.id}, files: ['page/inspect.js'], world: 'MAIN'})
         .then(([{result}]) => result || [])
         .catch(() => []);
+    const marketingResult = runMarketing(tab.id).catch(() => null);
     const auditResult = runAudit(tab.id)
         .catch(() => null);
     // Оценка по группам; пересчитывается, если время загрузки придёт позже
@@ -3124,10 +3190,13 @@ document.addEventListener('DOMContentLoaded', async function () {
     await renderServer(server, extended);
     renderExtra(server);
 
-    const [tech, auditInjection] = await Promise.all([techResult, auditResult]);
-    const audit = await acceptAudit(tab.id, auditInjection, info);
+    const [tech, auditInjection, marketingInjection] = await Promise.all([techResult, auditResult, marketingResult]);
+    const catalog = await loadData('companies').catch(() => []);
+    const [audit, marketing] = await Promise.all([
+        acceptAudit(tab.id, auditInjection, info), acceptMarketing(tab.id, marketingInjection, info)
+    ]);
     renderTech(tech, server);
-    const rows = renderAudit(audit, server, extended, info, companies, await loadData('companies').catch(() => []));
+    const rows = renderAudit(audit, server, extended, info, companies, catalog, marketing);
     renderRedirectCauses(await readTabRedirects(tab.id));
     rescore = () => {
         score.result = renderScore(info, companies, audit, rows, server);

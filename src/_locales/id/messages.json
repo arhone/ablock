@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Tidak ada pengalihan HTTP yang diamati dalam catatan ini."
     },
+    "auditMarketing": {
+        "message": "Setelan ditemukan"
+    },
+    "auditMarketingHint": {
+        "message": "Cuplikan terbatas: setelan tidak membuktikan eksekusi atau transfer data."
+    },
+    "marketingMarkup": {
+        "message": "Ditemukan di markup"
+    },
+    "marketingResource": {
+        "message": "Sumber daya teramati"
+    },
+    "marketingUnknown": {
+        "message": "Eksekusi tidak diketahui"
+    },
+    "marketingBlocking": {
+        "message": "Pemblokiran domain tidak dapat dikaitkan dengan ID ini; URL singkat tidak memastikan permintaan yang tepat."
+    },
+    "marketingGtm": {
+        "message": "Isi kontainer GTM tidak diketahui."
+    },
+    "marketingUnavailable": {
+        "message": "Pengumpulan tidak tersedia atau dokumen berubah."
+    },
+    "marketingEmpty": {
+        "message": "Setelan tidak ditemukan; pelacakan masih mungkin ada."
+    },
     "auditDetails": {
         "message": "Detail"
     },

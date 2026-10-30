@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "В този запис не са наблюдавани HTTP пренасочвания."
     },
+    "auditMarketing": {
+        "message": "Намерени настройки"
+    },
+    "auditMarketingHint": {
+        "message": "Ограничена снимка: настройките не доказват изпълнение или прехвърляне на данни."
+    },
+    "marketingMarkup": {
+        "message": "Намерено в маркирането"
+    },
+    "marketingResource": {
+        "message": "Наблюдаван ресурс"
+    },
+    "marketingUnknown": {
+        "message": "Изпълнението е неизвестно"
+    },
+    "marketingBlocking": {
+        "message": "Блокирането на домейн не се приписва на този ID; съкратен URL не доказва точна заявка."
+    },
+    "marketingGtm": {
+        "message": "Съдържанието на GTM контейнера е неизвестно."
+    },
+    "marketingUnavailable": {
+        "message": "Събирането е недостъпно или документът е сменен."
+    },
+    "marketingEmpty": {
+        "message": "Няма намерени настройки; проследяване все пак е възможно."
+    },
     "auditDetails": {
         "message": "Подробности"
     },

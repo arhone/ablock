@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Không quan sát thấy chuyển hướng HTTP trong bản ghi này."
     },
+    "auditMarketing": {
+        "message": "Cài đặt tìm thấy"
+    },
+    "auditMarketingHint": {
+        "message": "Ảnh chụp có giới hạn: cài đặt không chứng minh việc thực thi hoặc truyền dữ liệu."
+    },
+    "marketingMarkup": {
+        "message": "Tìm thấy trong mã đánh dấu"
+    },
+    "marketingResource": {
+        "message": "Đã quan sát tài nguyên"
+    },
+    "marketingUnknown": {
+        "message": "Chưa rõ việc thực thi"
+    },
+    "marketingBlocking": {
+        "message": "Không thể gán chặn miền cho ID này; URL rút gọn không xác nhận yêu cầu chính xác."
+    },
+    "marketingGtm": {
+        "message": "Chưa rõ nội dung vùng chứa GTM."
+    },
+    "marketingUnavailable": {
+        "message": "Không thể thu thập hoặc tài liệu đã đổi."
+    },
+    "marketingEmpty": {
+        "message": "Không tìm thấy cài đặt; vẫn có thể bị theo dõi."
+    },
     "auditDetails": {
         "message": "Chi tiết"
     },

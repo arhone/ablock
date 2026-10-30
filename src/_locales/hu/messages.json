@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Ebben a bejegyzésben nem volt megfigyelt HTTP-átirányítás."
     },
+    "auditMarketing": {
+        "message": "Talált beállítások"
+    },
+    "auditMarketingHint": {
+        "message": "Korlátozott pillanatkép: a beállítások nem bizonyítják a futtatást vagy adatátvitelt."
+    },
+    "marketingMarkup": {
+        "message": "A jelölőkódban található"
+    },
+    "marketingResource": {
+        "message": "Erőforrás megfigyelve"
+    },
+    "marketingUnknown": {
+        "message": "Futtatás ismeretlen"
+    },
+    "marketingBlocking": {
+        "message": "A tartomány blokkolása nem rendelhető ehhez az azonosítóhoz; a rövidített URL nem igazol pontos kérést."
+    },
+    "marketingGtm": {
+        "message": "A GTM-tároló tartalma ismeretlen."
+    },
+    "marketingUnavailable": {
+        "message": "A gyűjtés nem elérhető vagy a dokumentum megváltozott."
+    },
+    "marketingEmpty": {
+        "message": "Nem találhatók beállítások; követés továbbra is lehetséges."
+    },
     "auditDetails": {
         "message": "Részletek"
     },

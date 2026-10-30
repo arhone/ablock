@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "या नोंदीत HTTP पुनर्निर्देशने दिसली नाहीत."
     },
+    "auditMarketing": {
+        "message": "आढळलेल्या सेटिंग्ज"
+    },
+    "auditMarketingHint": {
+        "message": "मर्यादित झलक: सेटिंग्ज अंमलबजावणी किंवा डेटा पाठवल्याचा पुरावा नाहीत."
+    },
+    "marketingMarkup": {
+        "message": "मार्कअपमध्ये आढळले"
+    },
+    "marketingResource": {
+        "message": "संसाधन दिसले"
+    },
+    "marketingUnknown": {
+        "message": "अंमलबजावणी अज्ञात"
+    },
+    "marketingBlocking": {
+        "message": "डोमेन अवरोध या IDशी जोडता येत नाही; लहान URL अचूक विनंतीची पुष्टी करत नाही."
+    },
+    "marketingGtm": {
+        "message": "GTM कंटेनरमधील सामग्री अज्ञात आहे."
+    },
+    "marketingUnavailable": {
+        "message": "संकलन उपलब्ध नाही किंवा दस्तऐवज बदलला."
+    },
+    "marketingEmpty": {
+        "message": "सेटिंग्ज आढळल्या नाहीत; तरीही मागोवा शक्य आहे."
+    },
     "auditDetails": {
         "message": "तपशील"
     },

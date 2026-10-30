@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Hakuna uelekezaji wa HTTP ulioonekana katika rekodi hii."
     },
+    "auditMarketing": {
+        "message": "Mipangilio iliyopatikana"
+    },
+    "auditMarketingHint": {
+        "message": "Picha ndogo ya hali: mipangilio haithibitishi utekelezaji au uhamishaji wa data."
+    },
+    "marketingMarkup": {
+        "message": "Imepatikana kwenye alama"
+    },
+    "marketingResource": {
+        "message": "Rasilimali imeonekana"
+    },
+    "marketingUnknown": {
+        "message": "Utekelezaji haujulikani"
+    },
+    "marketingBlocking": {
+        "message": "Kuzuia kikoa hakuhusishwi na ID hii; URL iliyofupishwa haithibitishi ombi kamili."
+    },
+    "marketingGtm": {
+        "message": "Yaliyomo kwenye kontena la GTM hayajulikani."
+    },
+    "marketingUnavailable": {
+        "message": "Ukusanyaji haupatikani au hati imebadilika."
+    },
+    "marketingEmpty": {
+        "message": "Hakuna mipangilio iliyopatikana; ufuatiliaji bado unawezekana."
+    },
     "auditDetails": {
         "message": "Maelezo"
     },

@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "No s’han observat redireccions HTTP en aquest registre."
     },
+    "auditMarketing": {
+        "message": "Configuració trobada"
+    },
+    "auditMarketingHint": {
+        "message": "Instantània limitada: la configuració no prova execució ni transferència de dades."
+    },
+    "marketingMarkup": {
+        "message": "Trobat al marcatge"
+    },
+    "marketingResource": {
+        "message": "Recurs observat"
+    },
+    "marketingUnknown": {
+        "message": "Execució desconeguda"
+    },
+    "marketingBlocking": {
+        "message": "El bloqueig del domini no s'atribueix a aquest ID; un URL abreujat no confirma una petició exacta."
+    },
+    "marketingGtm": {
+        "message": "El contingut del contenidor GTM és desconegut."
+    },
+    "marketingUnavailable": {
+        "message": "Recollida no disponible o document canviat."
+    },
+    "marketingEmpty": {
+        "message": "No s'ha trobat configuració; encara hi pot haver seguiment."
+    },
     "auditDetails": {
         "message": "Detalls"
     },

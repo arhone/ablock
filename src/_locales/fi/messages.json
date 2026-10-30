@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "Tässä tallenteessa ei havaittu HTTP-uudelleenohjauksia."
     },
+    "auditMarketing": {
+        "message": "Löydetyt asetukset"
+    },
+    "auditMarketingHint": {
+        "message": "Rajallinen tilannekuva: asetukset eivät todista suoritusta tai tiedonsiirtoa."
+    },
+    "marketingMarkup": {
+        "message": "Löytyi merkinnöistä"
+    },
+    "marketingResource": {
+        "message": "Resurssi havaittu"
+    },
+    "marketingUnknown": {
+        "message": "Suoritus tuntematon"
+    },
+    "marketingBlocking": {
+        "message": "Verkkotunnuksen estoa ei voi yhdistää tähän tunnisteeseen; lyhennetty URL ei vahvista tarkkaa pyyntöä."
+    },
+    "marketingGtm": {
+        "message": "GTM-säilön sisältö on tuntematon."
+    },
+    "marketingUnavailable": {
+        "message": "Keruu ei ole käytettävissä tai asiakirja vaihtui."
+    },
+    "marketingEmpty": {
+        "message": "Asetuksia ei löytynyt; seuranta on silti mahdollista."
+    },
     "auditDetails": {
         "message": "Lisätiedot"
     },

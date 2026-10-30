@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "No HTTP redirects observed in this record."
     },
+    "auditMarketing": {
+        "message": "Found settings"
+    },
+    "auditMarketingHint": {
+        "message": "Limited snapshot; settings do not prove execution or data transfer."
+    },
+    "marketingMarkup": {
+        "message": "Found in markup"
+    },
+    "marketingResource": {
+        "message": "Resource observed"
+    },
+    "marketingUnknown": {
+        "message": "Execution unknown"
+    },
+    "marketingBlocking": {
+        "message": "Domain blocking cannot be attributed to this ID; an abbreviated URL cannot identify an exact request."
+    },
+    "marketingGtm": {
+        "message": "GTM container contents are unknown."
+    },
+    "marketingUnavailable": {
+        "message": "Collection unavailable or document changed."
+    },
+    "marketingEmpty": {
+        "message": "No settings found; tracking may still be present."
+    },
     "auditDetails": {
         "message": "Details"
     },

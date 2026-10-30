@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "ఈ రికార్డులో HTTP మళ్లింపులు గమనించబడలేదు."
     },
+    "auditMarketing": {
+        "message": "కనిపించిన సెట్టింగ్‌లు"
+    },
+    "auditMarketingHint": {
+        "message": "పరిమిత చిత్రం: సెట్టింగ్‌లు అమలు లేదా డేటా బదిలీని నిరూపించవు."
+    },
+    "marketingMarkup": {
+        "message": "మార్కప్‌లో కనిపించింది"
+    },
+    "marketingResource": {
+        "message": "వనరు గమనించబడింది"
+    },
+    "marketingUnknown": {
+        "message": "అమలు తెలియదు"
+    },
+    "marketingBlocking": {
+        "message": "డొమైన్ నిరోధాన్ని ఈ IDకి ఆపాదించలేము; సంక్షిప్త URL ఖచ్చితమైన అభ్యర్థనను నిర్ధారించదు."
+    },
+    "marketingGtm": {
+        "message": "GTM కంటైనర్ విషయాలు తెలియవు."
+    },
+    "marketingUnavailable": {
+        "message": "సేకరణ అందుబాటులో లేదు లేదా పత్రం మారింది."
+    },
+    "marketingEmpty": {
+        "message": "సెట్టింగ్‌లు కనబడలేదు; అయినా ట్రాకింగ్ ఉండవచ్చు."
+    },
     "auditDetails": {
         "message": "వివరాలు"
     },

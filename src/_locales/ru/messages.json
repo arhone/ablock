@@ -1177,6 +1177,33 @@
     "redirectsEmpty": {
         "message": "В этой записи HTTP-переходы не наблюдались."
     },
+    "auditMarketing": {
+        "message": "Найденные настройки"
+    },
+    "auditMarketingHint": {
+        "message": "Ограниченный снимок: настройки не доказывают выполнение или передачу данных."
+    },
+    "marketingMarkup": {
+        "message": "Найдено в разметке"
+    },
+    "marketingResource": {
+        "message": "Ресурс наблюдался"
+    },
+    "marketingUnknown": {
+        "message": "Выполнение неизвестно"
+    },
+    "marketingBlocking": {
+        "message": "Блокировка домена не приписывается этому ID; сокращённый URL не подтверждает точный запрос."
+    },
+    "marketingGtm": {
+        "message": "Содержимое контейнера GTM неизвестно."
+    },
+    "marketingUnavailable": {
+        "message": "Сбор недоступен или документ сменился."
+    },
+    "marketingEmpty": {
+        "message": "Настройки не найдены; слежка всё равно возможна."
+    },
     "auditDetails": {
         "message": "Подробности"
     },
