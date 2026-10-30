@@ -109,28 +109,37 @@
     };
     // Литералы остаются отдельными токенами: содержимое строки никогда не становится кодом.
     // Slash вне комментария и шаблоны неоднозначны без JS-парсера: весь такой скрипт пропускаем.
-    const tokens = (code) => {
+    const tokens = (code, classic) => {
         const list = [];
         let i = 0;
+        let lineStart = true;
         while (i < code.length) {
             if (!budget()) {
                 return [];
             }
             const ch = code[i];
             if (/\s/.test(ch)) {
+                lineStart ||= /[\n\r\u2028\u2029]/.test(ch);
                 i++;
-            } else if (code.startsWith('//', i)) {
-                const end = code.indexOf('\n', i + 2);
-                i = end < 0 ? code.length : end + 1;
+            } else if (!classic && (code.startsWith('<!--', i) || (lineStart && code.startsWith('-->', i)))) {
+                // В module HTML-комментарии — синтаксическая ошибка.
+                return [];
+            } else if (code.startsWith('//', i) || (classic && (code.startsWith('<!--', i)
+                || (lineStart && code.startsWith('-->', i))))) {
+                const end = code.slice(i).search(/[\n\r\u2028\u2029]/);
+                i = end < 0 ? code.length : i + end + 1;
+                lineStart = true;
             } else if (code.startsWith('/*', i)) {
                 const end = code.indexOf('*/', i + 2);
                 if (end < 0) {
                     return [];
                 }
+                lineStart ||= /[\n\r\u2028\u2029]/.test(code.slice(i, end + 2));
                 i = end + 2;
             } else if (ch === '/' || ch === '`' || ch === '\\') {
                 return [];
             } else if (ch === '"' || ch === "'") {
+                lineStart = false;
                 let value = '';
                 let plain = true;
                 i++;
@@ -148,20 +157,22 @@
                 i++;
                 list.push({type: 'string', value: plain ? value : null});
             } else if (/[a-zA-Z_$0-9]/.test(ch)) {
+                lineStart = false;
                 const begin = i++;
                 while (i < code.length && /[a-zA-Z_$0-9]/.test(code[i])) {
                     i++;
                 }
                 list.push({type: 'word', value: code.slice(begin, i)});
             } else {
+                lineStart = false;
                 list.push({type: 'punct', value: ch});
                 i++;
             }
         }
         return list;
     };
-    const inline = (code) => {
-        const list = tokens(code);
+    const inline = (code, classic) => {
+        const list = tokens(code, classic);
         const word = (i, value) => list[i]?.type !== 'string' && list[i]?.value === value;
         const literal = (i) => list[i]?.type === 'string' ? list[i].value
             : list[i]?.type === 'word' && /^[0-9]+$/.test(list[i].value) ? list[i].value : null;
@@ -211,7 +222,107 @@
             }
             return null;
         };
+        // Парные скобки привязывают аргументы IIFE к её собственному телу, а не всему script.
+        const pairs = new Map();
+        const stack = [];
         for (let i = 0; i < list.length && budget(); i++) {
+            if (list[i].type !== 'punct') {
+                continue;
+            }
+            const value = list[i].value;
+            if (['(', '[', '{'].includes(value)) {
+                stack.push(i);
+            } else if ([')', ']', '}'].includes(value)) {
+                const begin = stack.pop();
+                if (list[begin]?.value !== {')': '(', ']': '[', '}': '{'}[value]) {
+                    return;
+                }
+                pairs.set(begin, i);
+            }
+        }
+        if (stack.length) {
+            return;
+        }
+        const iife = (begin) => {
+            if (!match(begin - 1, ['(', 'function', '('])) {
+                return;
+            }
+            const paramsEnd = pairs.get(begin + 1);
+            if (paramsEnd === undefined || !word(paramsEnd + 1, '{')) {
+                return;
+            }
+            const params = [];
+            for (let j = begin + 2; j < paramsEnd; j += 2) {
+                if (list[j]?.type !== 'word' || !/^[a-zA-Z_$][a-zA-Z_$0-9]*$/.test(list[j].value)
+                    || (j + 1 < paramsEnd && !word(j + 1, ','))) {
+                    return;
+                }
+                params.push(list[j].value);
+            }
+            if (new Set(params).size !== params.length) {
+                return;
+            }
+            const body = paramsEnd + 1;
+            const end = pairs.get(body);
+            if (!match(end + 1, [')', '('])) {
+                return;
+            }
+            const argsEnd = pairs.get(end + 2);
+            if (argsEnd === undefined) {
+                return;
+            }
+            const args = [];
+            for (let j = end + 3; j < argsEnd; j += 2) {
+                if (!['word', 'string'].includes(list[j]?.type)
+                    || (j + 1 < argsEnd && !word(j + 1, ','))) {
+                    return;
+                }
+                args.push(j);
+            }
+            // Свидетельства только на верхнем уровне тела. Чужая вложенная функция
+            // (даже невызванная) не подтверждает назначение внешней IIFE.
+            const direct = [];
+            for (let j = body + 1; j < end && budget(); j++) {
+                direct.push(j);
+                if (word(j, '{')) {
+                    j = pairs.get(j);
+                }
+            }
+            const argWord = (index, value) => word(args[index], value);
+            const argString = (index, value) => string(args[index], value);
+            if (params.join(',') === 'w,d,s,l,i' && argWord(0, 'window') && argWord(1, 'document')
+                && argString(2, 'script') && argString(3, 'dataLayer') && args.length === 5
+                && direct.some(j => string(j, 'https://www.googletagmanager.com/gtm.js?id=')
+                    && match(j + 1, ['+', 'i', '+', 'dl']))) {
+                add('gtm', literal(args[4]), 'inline-call');
+            }
+            // Стандартный Clarity: t.src="https://www.clarity.ms/tag/"+i;
+            if (params.join(',') === 'c,l,a,r,i,t,y' && args.length === 5
+                && argWord(0, 'window') && argWord(1, 'document')
+                && argString(2, 'clarity') && argString(3, 'script')
+                && direct.some(j => match(j, ['t', '.', 'src', '='])
+                    && string(j + 4, 'https://www.clarity.ms/tag/') && match(j + 5, ['+', 'i', ';']))) {
+                add('clarity', literal(args[4]), 'inline-call');
+            }
+            // Стандартный Hotjar: h — window этой IIFE, а не произвольный объект.
+            if (params.join(',') === 'h,o,t,j,a,r' && args.length === 4
+                && argWord(0, 'window') && argWord(1, 'document')
+                && argString(2, 'https://static.hotjar.com/c/hotjar-') && argString(3, '.js?sv=')
+                && direct.some(j => match(j, ['r', '.', 'src', '=', 't', '+', 'h', '.', '_hjSettings', '.', 'hjid', '+', 'j']))) {
+                for (const j of direct) {
+                    if (match(j, ['h', '.', '_hjSettings', '='])) {
+                        const config = object(j + 4);
+                        if (config && word(config.end + 1, ';') && config.fields.hjsv === '6') {
+                            add('hotjar', config.fields.hjid, 'inline-config');
+                        }
+                    }
+                }
+            }
+        };
+        for (let i = 0; i < list.length && budget(); i++) {
+            if (word(i, 'function')) {
+                iife(i);
+            }
             // Не принимаем произвольные obj.gtag, объявления функций и new gtag(...).
             if (word(i - 1, '.') || word(i - 1, 'function') || word(i - 1, 'new')) {
                 continue;
@@ -245,14 +356,7 @@
                     add('hotjar', config.fields.hjid, 'inline-config');
                 }
             }
-            // Хвост стандартного GTM-загрузчика + его точное URL-выражение в том же скрипте.
-            if (match(at, ['}', ')', '(', 'window', ',', 'document', ',']) && string(at + 7, 'script')
-                && word(at + 8, ',') && string(at + 9, 'dataLayer') && word(at + 10, ',') && word(at + 12, ')')
-                && list.some((token, j) => token.type === 'string'
-                    && token.value === 'https://www.googletagmanager.com/gtm.js?id='
-                    && match(j + 1, ['+', 'i', '+', 'dl']))) {
-                add('gtm', literal(at + 11), 'inline-call');
-            }
+
         }
     };
     try {
@@ -297,7 +401,7 @@
                     continue;
                 }
                 bytes += code.length * 2;
-                inline(code);
+                inline(code, script.type.toLowerCase() !== 'module');
             } catch {
                 reason('collection-failed');
             }
