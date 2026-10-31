@@ -365,17 +365,6 @@
             result.context.documentUrl = url.origin + url.pathname.slice(0, 512);
         }
         result.context.timeOrigin = Number.isFinite(performance.timeOrigin) ? performance.timeOrigin : null;
-        try {
-            const resources = performance.getEntriesByType('resource');
-            if (resources.length > 2000) {
-                reason('resource-limit', true);
-            }
-            for (let i = 0; i < Math.min(resources.length, 2000) && budget(); i++) {
-                urlTag(resources[i].name, 'resource-url');
-            }
-        } catch {
-            reason('resource-unavailable');
-        }
         const scripts = document.getElementsByTagName('script');
         if (scripts.length > 500) {
             reason('script-limit', true);
@@ -405,6 +394,18 @@
             } catch {
                 reason('collection-failed');
             }
+        }
+        // Скрипты получают бюджет раньше длинного списка ресурсов страницы.
+        try {
+            const resources = performance.getEntriesByType('resource');
+            if (resources.length > 2000) {
+                reason('resource-limit', true);
+            }
+            for (let i = 0; i < Math.min(resources.length, 2000) && budget(); i++) {
+                urlTag(resources[i].name, 'resource-url');
+            }
+        } catch {
+            reason('resource-unavailable');
         }
     } catch {
         result.status = 'unavailable';
