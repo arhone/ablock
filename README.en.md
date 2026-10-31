@@ -10,14 +10,42 @@ An ad blocker for Chrome and Yandex Browser. Check website speed, privacy, secur
 
 ## Features
 
-- Blocks ads, including Google Ads and Yandex Direct, Google Analytics and Yandex Metrica trackers, and known phishing and scam sites.
+- Blocks ads, including Google Ads, Yandex Direct and the Yandex Advertising Network, Google Analytics and Yandex Metrica trackers, and known phishing and scam sites.
 - Removes ads on YouTube, VK and OK. Regional filters follow your browser's languages.
-- Extended mode hides cookie pop-ups and empty ad slots. The element picker hides content you select.
+- Extended mode hides cookie pop-ups and empty ad slots. In this mode, the element picker lets you hide a selected element even when protection is off.
 - Scores sites out of 10 for privacy, speed, security, SEO and accessibility. Includes a Core Web Vitals checker and checks security headers and rules for search engines and AI bots.
 - Identifies technologies and tracking companies; extended mode also shows hosting and the server IP address. Shares reports as images or text, saves private site notes and lets you clear a site's data.
 
 No “acceptable ads”. Turn protection off for an individual site if needed.
 [Full guide: window, scores, permissions and extended mode (Russian)](FEATURES.md).
+
+## Site audit details
+
+Report sections let you expand the available causes of LCP, TTFB and CLS, scripts in long
+animation frames (LoAF), observed HTTP redirects, detected IDs and settings of known services,
+and robots.txt rules for four categories of AI bots. Five entries are shown initially;
+use “Show N more” to see the rest. These details are neutral: they do not affect scores,
+thresholds or the number of findings, and are excluded from shared text and images.
+
+This is a snapshot of the main document and the buffer available to the browser, not a complete
+page history. An element that shifted did not necessarily cause the shift. Script durations
+in long animation frames do not represent total CPU time; blocking duration belongs to the
+frame as a whole. Sources are attributed to owners using a local directory: a shared CDN or
+an unknown address cannot reliably identify the culprit. No CPU costs are attributed to blocked requests.
+
+Extended mode shows the tab's latest observed HTTP redirect chain. Its connection to the
+document being audited is unconfirmed; JavaScript navigation and meta refresh redirects are not included.
+A detected service ID or setting does not prove that code ran, data was sent or that particular
+ID was blocked. GTM container contents are not inspected. AI rules describe the current URL,
+individual user-agent tokens and the `*` group; they do not prove compliance with robots.txt,
+use of data or consent to training.
+
+Unavailable, unknown and incomplete information is marked separately; unknown values are not treated
+as measured zeros. Collection is limited by entry counts and a cooperative processing budget of
+about 20 ms for causes: elapsed time is checked between operations, but an individual browser call
+cannot be interrupted. The 50 ms target for the audit's computation is a measurement guideline,
+not a guaranteed deadline. Time spent waiting for the site's three files is counted separately.
+If the document changes during collection, the outdated audit result is discarded.
 
 ## Privacy
 
@@ -59,9 +87,10 @@ The `src/data/hosting.json` database is compiled from open [RIPE NCC](https://ww
 If ads get through or a site breaks, contact us on [Telegram](https://t.me/ablockinfo) or [open an issue](https://github.com/arhone/ablock/issues).
 Include the page URL and, if possible, the ad request URL from the developer tools Network tab.
 
-## Support
+## Support the project
 
-ABlock is free and has no “acceptable ads”. Support development on [Boosty](https://boosty.to/a.arh/donate).
+ABlock is free and has no “acceptable ads”. If you find it useful, you can support development
+on [Boosty](https://boosty.to/a.arh/donate).
 
 ## License
 
