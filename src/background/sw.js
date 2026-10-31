@@ -795,10 +795,13 @@ async function applyCosmetic(sender, tokens, first) {
  * @param {string} url
  */
 async function clearSite(tabId, url) {
-    const {hostname} = new URL(url);
+    const {hostname, port} = new URL(url);
     const hosts = [hostname, hostname.startsWith('www.') ? hostname.slice(4) : 'www.' + hostname];
     const isIp = /^[\d.]+$|:/.test(hostname);
-    const origins = (isIp ? [hostname] : hosts).flatMap((host) => [`https://${host}`, `http://${host}`]);
+    const origins = (isIp ? [hostname] : hosts).flatMap((host) => {
+        const authority = port ? `${host}:${port}` : host;
+        return [`https://${authority}`, `http://${authority}`];
+    });
     await chrome.browsingData.remove({origins}, {
         cache: true,
         cacheStorage: true,
