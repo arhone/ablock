@@ -159,7 +159,7 @@ function initLanguage() {
         select.value = LOCALES.includes(aBlockLang) ? aBlockLang : '';
     });
     select.addEventListener('change', async () => {
-        await chrome.storage.local.set({aBlockLang: select.value});
+        await chrome.storage.local.set({aBlockLang: select.value}).catch(() => {});
         location.reload();
     });
 }
@@ -220,9 +220,9 @@ function initTheme() {
         applyTheme(dark === systemDark.matches ? null : (dark ? 'dark' : 'light'));
         render();
         if (theme) {
-            chrome.storage.local.set({aBlockTheme: theme});
+            chrome.storage.local.set({aBlockTheme: theme}).catch(() => {});
         } else {
-            chrome.storage.local.remove('aBlockTheme');
+            chrome.storage.local.remove('aBlockTheme').catch(() => {});
         }
     });
 }
@@ -311,13 +311,17 @@ async function setupNote(host) {
         text = input.value.replace(/\s+/g, ' ').trim();
         show();
         // Перечитываем: заметки могли измениться в окне на другой вкладке
-        const {aBlockNotes: notes = {}} = await chrome.storage.local.get('aBlockNotes');
+        const stored = await chrome.storage.local.get('aBlockNotes').catch(() => null);
+        if (!stored) {
+            return;
+        }
+        const {aBlockNotes: notes = {}} = stored;
         if (text) {
             notes[host] = text;
         } else {
             delete notes[host];
         }
-        await chrome.storage.local.set({aBlockNotes: notes});
+        await chrome.storage.local.set({aBlockNotes: notes}).catch(() => {});
     };
 
     add.addEventListener('click', edit);
