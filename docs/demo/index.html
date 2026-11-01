@@ -142,8 +142,7 @@
         const search = document.getElementById('search');
         const overlay = document.getElementById('ad-overlay');
         const background = document.querySelectorAll('body > header, body > main, body > footer');
-        let overlayVisible = false;
-        let overlayCheckInterval = null;
+        let overlayVisible = null;
         function syncOverlayFocus() {
             const style = getComputedStyle(overlay);
             const rect = overlay.getBoundingClientRect();
@@ -151,16 +150,10 @@
             const visible = overlay.isConnected && (overlay.offsetParent !== null || style.position === 'fixed')
                 && rect.width > 0 && rect.height > 0
                 && style.display !== 'none' && style.visibility === 'visible' && Number(style.opacity) > 0;
+            if (visible === overlayVisible) return visible;
             const hadFocus = overlay.contains(document.activeElement);
             const lostFocus = overlayVisible && document.activeElement === document.body;
             overlayVisible = visible;
-            // CSSOM может менять opacity/visibility без уведомлений наблюдателей.
-            if (visible && overlayCheckInterval === null) {
-                overlayCheckInterval = setInterval(syncOverlayFocus, 150);
-            } else if (!visible && overlayCheckInterval !== null) {
-                clearInterval(overlayCheckInterval);
-                overlayCheckInterval = null;
-            }
             for (const element of background) element.inert = visible;
             // Прозрачность сама по себе не исключает кнопки баннера из порядка Tab.
             overlay.inert = !visible;
@@ -193,6 +186,8 @@
             }
         });
         syncOverlayFocus();
+        // CSSOM может скрывать и возвращать баннер без уведомлений наблюдателей.
+        setInterval(syncOverlayFocus, 200);
         overlay.querySelector('.overlay-language').focus({preventScroll: true});
         let language = 'ru';
         function renderVideos() {
