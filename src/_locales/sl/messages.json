@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Skripti drugih oken ali brez pripisa oknu so izključeni iz skupin."
+    },
+    "settingsTitle": {
+        "message": "nastavitve"
+    },
+    "settingsBack": {
+        "message": "Nazaj"
+    },
+    "settingsLang": {
+        "message": "Jezik vmesnika"
+    },
+    "settingsBadge": {
+        "message": "Indikator ikone razširitve"
+    },
+    "settingsBadgeCount": {
+        "message": "Število blokiranih elementov"
+    },
+    "settingsBadgeStatus": {
+        "message": "Stanje zaščite (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "Izključeno"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animacija pri skrivanju z izbirnikom elementov"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animirajte elemente, ko so skriti z izbirnikom."
     }
 }

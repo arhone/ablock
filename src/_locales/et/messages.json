@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Teiste akende või akna omistuseta skriptid on rühmadest välja jäetud."
+    },
+    "settingsTitle": {
+        "message": "Seaded"
+    },
+    "settingsBack": {
+        "message": "Tagasi"
+    },
+    "settingsLang": {
+        "message": "Liidese keel"
+    },
+    "settingsBadge": {
+        "message": "Laienduse ikooni indikaator"
+    },
+    "settingsBadgeCount": {
+        "message": "Blokeeritud üksuste arv"
+    },
+    "settingsBadgeStatus": {
+        "message": "Kaitse olek (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "Väljas"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animatsioon elemendivalijaga peitmisel"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animeerida elemente, kui need on valijaga peidetud."
     }
 }

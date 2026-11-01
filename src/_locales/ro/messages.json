@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Scripturile din alte ferestre sau fără atribuire de fereastră sunt excluse din grupuri."
+    },
+    "settingsTitle": {
+        "message": "Setări"
+    },
+    "settingsBack": {
+        "message": "Înapoi"
+    },
+    "settingsLang": {
+        "message": "Limbajul interfeței"
+    },
+    "settingsBadge": {
+        "message": "Indicator pictogramă extensie"
+    },
+    "settingsBadgeCount": {
+        "message": "Numărul elementelor blocate"
+    },
+    "settingsBadgeStatus": {
+        "message": "Stare de protecție (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "Oprit"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animație la ascunderea cu selectorul de elemente"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animați elementele când sunt ascunse cu selectorul."
     }
 }

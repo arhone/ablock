@@ -191,11 +191,11 @@ async function applyAllowed(allowed) {
     });
 }
 
-// Счётчик на иконке — тональный, как плашки в окне: бледная подложка и цветной текст.
-// Под светлую и тёмную панель браузера свои цвета
+// Индикатор на иконке: тёмный графитовый фон и ярко-изумрудный текст.
+// Оттенок фона зависит от темы панели браузера.
 const BADGE_COLORS = {
-    light: {background: '#d3f1e3', text: '#0a6b4b'},
-    dark: {background: '#1f4a3b', text: '#4be3ad'}
+    light: {background: '#14171d', text: '#34d399'},
+    dark: {background: '#101318', text: '#34d399'}
 };
 
 // Тёмная ли тема браузера: воркер её не видит, сообщают окно и content/cosmetic.js
@@ -223,7 +223,10 @@ async function applyBadgeColors(value) {
  * @param {boolean} status
  */
 async function applyAction(status) {
-    await chrome.declarativeNetRequest.setExtensionActionOptions({displayActionCountAsBadgeText: status});
+    const {aBlockBadgeMode} = await chrome.storage.local.get('aBlockBadgeMode');
+    const mode = ['count', 'status', 'off'].includes(aBlockBadgeMode) ? aBlockBadgeMode : 'count';
+    await chrome.declarativeNetRequest.setExtensionActionOptions({displayActionCountAsBadgeText: mode === 'count' && status});
+    await chrome.action.setBadgeText({text: mode === 'status' && status ? '✓' : ''});
     await applyBadgeColors();
     await chrome.action.setIcon({
         path: {32: status ? '/images/ablock-32.png' : '/images/ablock-32-black.png'}
@@ -329,6 +332,12 @@ chrome.runtime.onInstalled.addListener(async () => {
     }
 });
 chrome.runtime.onStartup.addListener(() => update());
+
+chrome.storage.onChanged.addListener((changes, area) => {
+    if (area === 'local' && changes.aBlockBadgeMode) {
+        enqueue(async () => applyAction((await getSettings()).status));
+    }
+});
 
 // Расширенный режим включили или выключили: скрипты на всех сайтах и слежение за запросами.
 // Разрешение на удаление данных: окно расширения могло закрыться, пока его запрашивало, — удаляем здесь
@@ -513,7 +522,7 @@ async function saveCustom(sender, host, pick) {
             return {ok: false, error: 'inject'};
         }
     }
-    await refreshCustomScript();
+    await refreshCustomScript().catch(console.error);
     return {ok: true, count: entries.length + (exists ? 0 : 1)};
 }
 
@@ -530,13 +539,13 @@ async function applyCustom(sender, host) {
 }
 
 async function removeCustom(data, clear) {
-    if (typeof data?.host !== 'string') {
-        return;
+    if (typeof data?.host !== 'string' || (!clear && !Array.isArray(data.selectors))) {
+        throw new Error('Invalid custom remove');
     }
     const host = data.host.replace(/^www\./, '');
     const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
     const entries = own(aBlockCustom, host) || [];
-    const removed = entries.filter(({s}) => clear || data.selectors?.includes(s));
+    const removed = entries.filter(({s}) => clear || data.selectors.includes(s));
     const remaining = entries.filter((entry) => !removed.includes(entry));
     if (remaining.length) {
         aBlockCustom[host] = remaining;
@@ -544,7 +553,7 @@ async function removeCustom(data, clear) {
         delete aBlockCustom[host];
     }
     await chrome.storage.local.set({aBlockCustom});
-    await refreshCustomScript();
+    await refreshCustomScript().catch(console.error);
     if (Number.isInteger(data.tabId) && data.documentId) {
         for (const {s} of removed) {
             await chrome.scripting.removeCSS(customCSS(data.tabId, data.documentId, s)).catch(() => {});
@@ -563,7 +572,7 @@ async function toggleCustom(data) {
         && (entry.enabled !== false) !== data.enabled);
     aBlockCustom[host] = entries.map((entry) => changed.includes(entry) ? {...entry, enabled: data.enabled} : entry);
     await chrome.storage.local.set({aBlockCustom});
-    await refreshCustomScript();
+    await refreshCustomScript().catch(console.error);
     if (Number.isInteger(data.tabId) && data.documentId) {
         const access = await chrome.permissions.contains(EXTENDED);
         for (const {s} of changed) {

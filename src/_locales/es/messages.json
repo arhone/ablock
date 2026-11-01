@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Se excluyen los scripts de otras ventanas o sin atribución de ventana."
+    },
+    "settingsTitle": {
+        "message": "Configuración"
+    },
+    "settingsBack": {
+        "message": "Atrás"
+    },
+    "settingsLang": {
+        "message": "Idioma de la interfaz"
+    },
+    "settingsBadge": {
+        "message": "Indicador del icono de extensión"
+    },
+    "settingsBadgeCount": {
+        "message": "Recuento de elementos bloqueados"
+    },
+    "settingsBadgeStatus": {
+        "message": "Estado de protección (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "Apagado"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animación al ocultar elementos con el selector"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Anima elementos cuando estén ocultos con el selector."
     }
 }

@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Skrip dari jendela lain atau tanpa atribusi jendela tidak disertakan dalam grup."
+    },
+    "settingsTitle": {
+        "message": "Pengaturan"
+    },
+    "settingsBack": {
+        "message": "Kembali"
+    },
+    "settingsLang": {
+        "message": "Bahasa antarmuka"
+    },
+    "settingsBadge": {
+        "message": "Indikator ikon ekstensi"
+    },
+    "settingsBadgeCount": {
+        "message": "Item yang diblokir dihitung"
+    },
+    "settingsBadgeStatus": {
+        "message": "Status perlindungan (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "Mati"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animasi saat menyembunyikan elemen dengan pemilih elemen"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Menganimasikan elemen saat disembunyikan dengan pemilih."
     }
 }

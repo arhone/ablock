@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Skrip daripada tetingkap lain atau tanpa atribusi tetingkap dikecualikan daripada kumpulan."
+    },
+    "settingsTitle": {
+        "message": "tetapan"
+    },
+    "settingsBack": {
+        "message": "belakang"
+    },
+    "settingsLang": {
+        "message": "Bahasa antara muka"
+    },
+    "settingsBadge": {
+        "message": "Penunjuk ikon sambungan"
+    },
+    "settingsBadgeCount": {
+        "message": "Kiraan item yang disekat"
+    },
+    "settingsBadgeStatus": {
+        "message": "Status perlindungan (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "Mati"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animasi apabila menyembunyikan elemen dengan pemilih elemen"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animasikan elemen apabila ia disembunyikan dengan pemilih."
     }
 }

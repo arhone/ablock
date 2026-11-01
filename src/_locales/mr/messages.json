@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "इतर विंडोच्या किंवा विंडो श्रेयांकन नसलेल्या स्क्रिप्ट गटांतून वगळल्या आहेत."
+    },
+    "settingsTitle": {
+        "message": "सेटिंग्ज"
+    },
+    "settingsBack": {
+        "message": "मागे"
+    },
+    "settingsLang": {
+        "message": "इंटरफेस भाषा"
+    },
+    "settingsBadge": {
+        "message": "विस्तार चिन्ह सूचक"
+    },
+    "settingsBadgeCount": {
+        "message": "अवरोधित आयटम संख्या"
+    },
+    "settingsBadgeStatus": {
+        "message": "संरक्षण स्थिती (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "बंद"
+    },
+    "settingsPickerAnimation": {
+        "message": "घटक पिकरसह लपवताना ॲनिमेशन"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "घटक जेव्हा पिकरने लपवलेले असतात तेव्हा ते ॲनिमेट करा."
     }
 }

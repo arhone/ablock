@@ -1,7 +1,10 @@
+body[data-screen="hidden"] #settings-open {
+    display: none !important;
+}
 /* На отдельном экране остаются общие фон, тема и подвал окна. */
 body[data-screen="hidden"] {
     max-height: 600px;
-    overflow: hidden;
+    overflow-y: auto;
 }
 body[data-screen="hidden"] > :not(#hidden-screen, footer, #defs, script, template) {
     display: none !important;
@@ -68,6 +71,11 @@ body[data-screen="hidden"] > footer {
     background: var(--tint);
     font-size: 24px;
     line-height: 1;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+#hidden-screen .hidden-back:hover {
+    background: color-mix(in srgb, var(--text) 10%, transparent);
+    color: var(--text);
 }
 [dir="rtl"] .hidden-back span {
     display: block;

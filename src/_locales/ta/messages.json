@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "மற்ற சாளரங்களின் அல்லது சாளர ஒதுக்கீடு இல்லாத ஸ்கிரிப்ட்கள் குழுக்களிலிருந்து விலக்கப்பட்டுள்ளன."
+    },
+    "settingsTitle": {
+        "message": "அமைப்புகள்"
+    },
+    "settingsBack": {
+        "message": "மீண்டும்"
+    },
+    "settingsLang": {
+        "message": "இடைமுக மொழி"
+    },
+    "settingsBadge": {
+        "message": "நீட்டிப்பு ஐகான் காட்டி"
+    },
+    "settingsBadgeCount": {
+        "message": "தடுக்கப்பட்ட பொருட்களின் எண்ணிக்கை"
+    },
+    "settingsBadgeStatus": {
+        "message": "பாதுகாப்பு நிலை (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "ஆஃப்"
+    },
+    "settingsPickerAnimation": {
+        "message": "உறுப்பு பிக்கருடன் மறைக்கும்போது அனிமேஷன்"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "கூறுகள் பிக்கருடன் மறைந்திருக்கும் போது உயிரூட்டவும்."
     }
 }

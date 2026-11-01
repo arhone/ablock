@@ -1,0 +1,81 @@
+body[data-screen="settings"] #settings-open {
+    display: none !important;
+}
+body[data-screen="settings"] {
+    max-height: 600px;
+    overflow-y: auto;
+}
+body[data-screen="settings"] > :not(#settings-screen, footer, #defs, script, template) {
+    display: none !important;
+}
+#settings-screen[hidden] {
+    display: none;
+}
+#settings-screen {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.settings-head, .settings-picker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.settings-head h2 {
+    margin: 0;
+    font-size: 15px;
+}
+#settings-back {
+    border: 0;
+    border-radius: 7px;
+    padding: 7px 10px;
+    background: var(--tint);
+    color: inherit;
+    font: inherit;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+#settings-back:hover {
+    background: color-mix(in srgb, var(--text) 10%, transparent);
+    color: var(--text);
+}
+[dir="rtl"] #settings-back span {
+    display: block;
+    transform: scaleX(-1);
+}
+.settings-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.settings-field select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--bg);
+    color: var(--text);
+    font: inherit;
+}
+.settings-picker {
+    justify-content: space-between;
+    cursor: pointer;
+}
+.settings-picker small {
+    display: block;
+    margin-top: 3px;
+    color: var(--muted);
+}
+.settings-picker input {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+    accent-color: var(--on);
+}
+#settings-screen :is(button, select, input):focus-visible {
+    outline: 2px solid var(--on);
+    outline-offset: 2px;
+}

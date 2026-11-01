@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "अन्य विंडो की या बिना विंडो आरोपण वाली स्क्रिप्ट समूहों से बाहर हैं।"
+    },
+    "settingsTitle": {
+        "message": "सेटिंग्स"
+    },
+    "settingsBack": {
+        "message": "वापस"
+    },
+    "settingsLang": {
+        "message": "इंटरफ़ेस भाषा"
+    },
+    "settingsBadge": {
+        "message": "एक्सटेंशन आइकन संकेतक"
+    },
+    "settingsBadgeCount": {
+        "message": "अवरुद्ध आइटमों की गिनती"
+    },
+    "settingsBadgeStatus": {
+        "message": "सुरक्षा स्थिति (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "बंद"
+    },
+    "settingsPickerAnimation": {
+        "message": "तत्व पिकर के साथ छुपते समय एनीमेशन"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "जब तत्व पिकर के साथ छिपे हों तो उन्हें चेतन करें।"
     }
 }

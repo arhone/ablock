@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "اسکریپت‌های پنجره‌های دیگر یا بدون انتساب به پنجره از گروه‌ها حذف شده‌اند."
+    },
+    "settingsTitle": {
+        "message": "تنظیمات"
+    },
+    "settingsBack": {
+        "message": "برگشت"
+    },
+    "settingsLang": {
+        "message": "زبان رابط"
+    },
+    "settingsBadge": {
+        "message": "نشانگر نماد برنامه افزودنی"
+    },
+    "settingsBadgeCount": {
+        "message": "موارد مسدود شده شمارش می شود"
+    },
+    "settingsBadgeStatus": {
+        "message": "وضعیت حفاظت (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "خاموش"
+    },
+    "settingsPickerAnimation": {
+        "message": "انیمیشن هنگام مخفی شدن با انتخابگر عنصر"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "هنگامی که عناصر با انتخابگر پنهان هستند، متحرک شوید."
     }
 }

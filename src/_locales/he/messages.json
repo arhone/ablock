@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "סקריפטים מחלונות אחרים או ללא ייחוס לחלון אינם נכללים בקבוצות."
+    },
+    "settingsTitle": {
+        "message": "הגדרות"
+    },
+    "settingsBack": {
+        "message": "חזרה"
+    },
+    "settingsLang": {
+        "message": "שפת ממשק"
+    },
+    "settingsBadge": {
+        "message": "מחוון סמל הרחבה"
+    },
+    "settingsBadgeCount": {
+        "message": "מספר הפריטים שנחסמו"
+    },
+    "settingsBadgeStatus": {
+        "message": "מצב הגנה (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "כבוי"
+    },
+    "settingsPickerAnimation": {
+        "message": "אנימציה בעת הסתרה עם בורר האלמנטים"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "הנפשת אלמנטים כשהם מוסתרים עם הבוחר."
     }
 }

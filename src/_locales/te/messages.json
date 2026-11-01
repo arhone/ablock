@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "ఇతర విండోల స్క్రిప్ట్‌లు లేదా విండో ఆపాదన లేని స్క్రిప్ట్‌లు సమూహాల నుంచి మినహాయించబడ్డాయి."
+    },
+    "settingsTitle": {
+        "message": "సెట్టింగ్‌లు"
+    },
+    "settingsBack": {
+        "message": "వెనుకకు"
+    },
+    "settingsLang": {
+        "message": "ఇంటర్ఫేస్ భాష"
+    },
+    "settingsBadge": {
+        "message": "పొడిగింపు చిహ్నం సూచిక"
+    },
+    "settingsBadgeCount": {
+        "message": "బ్లాక్ చేయబడిన అంశాల గణన"
+    },
+    "settingsBadgeStatus": {
+        "message": "రక్షణ స్థితి (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "ఆఫ్"
+    },
+    "settingsPickerAnimation": {
+        "message": "ఎలిమెంట్ పికర్‌తో దాచినప్పుడు యానిమేషన్"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "ఎలిమెంట్‌లు పికర్‌తో దాచబడినప్పుడు వాటిని యానిమేట్ చేయండి."
     }
 }

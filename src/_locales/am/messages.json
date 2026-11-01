@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "የሌሎች መስኮቶች ስክሪፕቶች ወይም መስኮታቸው ያልታወቀ ስክሪፕቶች ከቡድኖቹ ተወግደዋል።"
+    },
+    "settingsTitle": {
+        "message": "ቅንብሮች"
+    },
+    "settingsBack": {
+        "message": "ተመለስ"
+    },
+    "settingsLang": {
+        "message": "የበይነገጽ ቋንቋ"
+    },
+    "settingsBadge": {
+        "message": "የቅጥያ አዶ አመልካች"
+    },
+    "settingsBadgeCount": {
+        "message": "የታገዱ እቃዎች ይቆጠራሉ።"
+    },
+    "settingsBadgeStatus": {
+        "message": "የጥበቃ ሁኔታ (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "ጠፍቷል"
+    },
+    "settingsPickerAnimation": {
+        "message": "ከኤለመንት መራጭ ጋር ሲደበቅ አኒሜሽን"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "ንጥረ ነገሮቹን ከቃሚው ጋር ሲደበቁ ያሳምሩ።"
     }
 }

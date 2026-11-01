@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Scripts from other windows or without window attribution are excluded from groups."
+    },
+    "settingsTitle": {
+        "message": "Settings"
+    },
+    "settingsBack": {
+        "message": "Back"
+    },
+    "settingsLang": {
+        "message": "Interface language"
+    },
+    "settingsBadge": {
+        "message": "Extension icon indicator"
+    },
+    "settingsBadgeCount": {
+        "message": "Blocked items count"
+    },
+    "settingsBadgeStatus": {
+        "message": "Protection status (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "Off"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animation when hiding with the element picker"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animate elements when they are hidden with the picker."
     }
 }

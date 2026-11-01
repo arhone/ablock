@@ -526,8 +526,8 @@
             serverTiming: []
         };
         const worker = data.workerStart !== null && data.workerStart > 0;
-        data.browserCache = data.deliveryType === 'cache' || (!worker && data.workerStart === 0
-            && navigation.transferSize === 0 && navigation.decodedBodySize > 0) ? true
+        data.browserCache = !worker && (data.deliveryType === 'cache' || (data.workerStart === 0
+            && navigation.transferSize === 0 && navigation.decodedBodySize > 0)) ? true
             : navigation.transferSize > 0 ? false : null;
         if (worker) {
             reason(section, 'service-worker');
@@ -535,8 +535,8 @@
         if (data.browserCache) {
             reason(section, 'browser-cache', false);
         }
-        if (data.firstInterimResponseStart !== null || (data.finalResponseHeadersStart !== null
-            && data.finalResponseHeadersStart > data.responseStart)) {
+        if (data.finalResponseHeadersStart !== null
+            && data.finalResponseHeadersStart > (data.firstInterimResponseStart ?? data.responseStart)) {
             // Промежуточный ответ не обязательно 103; его код Performance API не сообщает.
             reason(section, 'interim-response', false);
         }

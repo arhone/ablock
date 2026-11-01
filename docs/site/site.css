@@ -124,7 +124,7 @@ footer a:hover { color: var(--text); }
 @media (max-width: 600px) {
     body { font-size: 16px; }
     .wrap { padding: 0 16px; }
-    nav.menu { display: none; }
+    nav.menu { order: 1; flex-basis: 100%; flex-wrap: wrap; gap: 8px 14px; font-size: 13px; padding-top: 8px; border-top: 1px solid var(--border); }
     .lead { font-size: 17px; }
     .btn { width: 100%; justify-content: center; }
     .report img { height: 460px; }

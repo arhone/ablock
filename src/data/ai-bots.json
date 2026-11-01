@@ -376,14 +376,62 @@
             "tokens": [
                 "Diffbot"
             ],
-            "category": "mixed",
+            "category": "search",
             "type": "crawler",
             "historicalTokens": [],
             "unverifiedTokens": [],
-            "source": "https://www.diffbot.com/docs/crawl/",
+            "source": "https://www.diffbot.com/docs/crawl/faq/robots-txt",
             "sourceStatus": "verified",
-            "checkedAt": "2026-10-30",
-            "notes": "Crawl API обходит сайты и извлекает структурированные данные; исключительное назначение для обучения AI не заявлено. Возможен согласованный обход robots.txt."
+            "checkedAt": "2026-11-01",
+            "notes": "Поисковый обходчик для графа знаний Diffbot Knowledge Graph; не используется для обучения языковых моделей."
+        },
+        {
+            "id": "diffbot-user",
+            "name": "Diffbot-User",
+            "operator": "Diffbot",
+            "tokens": [
+                "Diffbot-User"
+            ],
+            "category": "user",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://www.diffbot.com/docs/crawl/faq/robots-txt",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-11-01",
+            "notes": "Обходчик контента по прямому запросу пользователя в продуктах Diffbot."
+        },
+        {
+            "id": "duckassistbot",
+            "name": "DuckAssistBot",
+            "operator": "DuckDuckGo",
+            "tokens": [
+                "DuckAssistBot"
+            ],
+            "category": "search",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-11-01",
+            "notes": "Бот DuckDuckGo для поиска и сканирования веб-страниц для генерации ответов DuckAssist (AI)."
+        },
+        {
+            "id": "mistralai-user",
+            "name": "MistralAI-User",
+            "operator": "Mistral AI",
+            "tokens": [
+                "MistralAI-User"
+            ],
+            "category": "user",
+            "type": "crawler",
+            "historicalTokens": [],
+            "unverifiedTokens": [],
+            "source": "https://docs.mistral.ai/robots",
+            "sourceStatus": "verified",
+            "checkedAt": "2026-11-01",
+            "notes": "Обходчик веб-поиска по прямому запросу пользователя на платформе Mistral AI (Le Chat)."
         },
         {
             "id": "yandex-additional",

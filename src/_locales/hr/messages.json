@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Skripte drugih prozora ili bez pripisivanja prozoru isključene su iz grupa."
+    },
+    "settingsTitle": {
+        "message": "postavke"
+    },
+    "settingsBack": {
+        "message": "natrag"
+    },
+    "settingsLang": {
+        "message": "Jezik sučelja"
+    },
+    "settingsBadge": {
+        "message": "Indikator ikone proširenja"
+    },
+    "settingsBadgeCount": {
+        "message": "Broj blokiranih stavki"
+    },
+    "settingsBadgeStatus": {
+        "message": "Status zaštite (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "Isključeno"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animacija prilikom skrivanja pomoću birača elementa"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animirajte elemente kada su skriveni pomoću birača."
     }
 }

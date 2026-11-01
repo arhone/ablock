@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Скрипты других окон или без атрибуции окна исключены из групп."
+    },
+    "settingsTitle": {
+        "message": "Настройки"
+    },
+    "settingsBack": {
+        "message": "Назад"
+    },
+    "settingsLang": {
+        "message": "Язык интерфейса"
+    },
+    "settingsBadge": {
+        "message": "Индикатор на значке"
+    },
+    "settingsBadgeCount": {
+        "message": "Счётчик заблокированного"
+    },
+    "settingsBadgeStatus": {
+        "message": "Статус защиты (✓)"
+    },
+    "settingsBadgeOff": {
+        "message": "Отключён"
+    },
+    "settingsPickerAnimation": {
+        "message": "Анимация при скрытии пипеткой"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Показывать анимацию при скрытии элементов пипеткой."
     }
 }

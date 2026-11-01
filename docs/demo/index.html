@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0f0f0f">
+    <link rel="icon" href="data:,">
+    <title>onlyadhub — Рай потребителя рекламы</title>
+    <style>
+        :root { color-scheme: dark; --orange: #ff9900; --muted: #999; }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: #0f0f0f; color: #f5f5f5; font-family: Arial, Helvetica, sans-serif; }
+        button, input, select { font: inherit; }
+        button, select { cursor: pointer; }
+        :focus-visible { outline: 2px solid var(--orange); outline-offset: 5px; }
+        .brand { display: inline-flex; align-items: center; gap: 4px; color: white; font-size: 32px; font-weight: 800; letter-spacing: -1.8px; white-space: nowrap; }
+        .brand span { padding: 2px 7px 4px; border-radius: 5px; background: var(--orange); color: #080808; }
+        .header { display: flex; align-items: center; justify-content: space-between; gap: 36px; padding: 22px 4%; border-bottom: 1px solid #292929; }
+        .search { display: flex; align-items: center; width: min(560px, 50%); border: 1px solid #393939; border-radius: 6px; background: #1b1b1b; }
+        .search svg { width: 20px; height: 20px; margin: 0 15px; color: #aaa; flex-shrink: 0; }
+        .search input { width: 100%; min-width: 0; padding: 13px 12px 13px 0; border: 0; background: transparent; color: white; }
+        .language { padding: 9px; border: 1px solid #555; border-radius: 5px; background: #191919; color: #eee; font-size: 13px; }
+        main { max-width: 1600px; margin: auto; padding: 30px 4% 44px; }
+        .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+        h1 { margin: 0; font-size: 23px; }
+        .section-heading p { margin: 0; color: var(--muted); font-size: 13px; }
+        .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; }
+        .preview { position: relative; display: grid; place-items: center; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid #ffffff14; border-radius: 7px; background: radial-gradient(ellipse at 65% 35%, var(--tint), #191919 90%); }
+        .preview::before { content: ''; position: absolute; width: 65%; aspect-ratio: 1; border: 1px solid #ffffff18; border-radius: 50%; transform: translate(25%, 10%); }
+        .product { width: 70%; height: 90%; filter: drop-shadow(0 12px 8px #0006); }
+        .offer { position: absolute; top: 12px; left: 12px; max-width: 75%; padding: 5px 8px; border-radius: 3px; background: var(--orange); color: #111; font-size: 13px; font-weight: 800; transform: rotate(-4deg); }
+        .play { position: absolute; top: 50%; left: 50%; display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #ffffff70; border-radius: 50%; background: #0008; transform: translate(-50%, -50%); }
+        .play svg { width: 18px; height: 18px; margin-left: 3px; }
+        .quality, .duration { position: absolute; bottom: 8px; padding: 3px 5px; border-radius: 3px; background: #000c; font-size: 11px; font-weight: bold; }
+        .quality { left: 8px; color: var(--orange); }
+        .duration { right: 8px; }
+        .card h2 { margin: 12px 0 7px; font-size: 15px; line-height: 1.4; }
+        .card p { margin: 4px 0; color: var(--muted); font-size: 12px; line-height: 1.4; }
+        footer { padding: 22px 4%; border-top: 1px solid #292929; color: #888; font-size: 12px; text-align: center; }
+        footer a { color: var(--orange); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        #ad-overlay { position: fixed; inset: 0; z-index: 999999; overflow: auto; padding: 48px 20px; background: #000c; }
+        .overlay-language { position: absolute; top: 20px; right: 4%; }
+        .modal { width: min(100%, 610px); margin: max(24px, calc((100dvh - 570px) / 2)) auto 0; padding: 38px 44px 28px; border: 1px solid white; border-radius: 12px; background: #141414; box-shadow: 0 24px 100px #000b; text-align: center; }
+        .modal .brand { font-size: 43px; }
+        .eyebrow { margin: 25px 0 12px; color: var(--orange); font-size: 11px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; }
+        .modal h2 { margin: 0 0 18px; font-size: 29px; line-height: 1.15; }
+        .intro { margin: 0 auto; color: #bcbcbc; font-size: 15px; line-height: 1.65; }
+        .question { margin: 25px 0 18px; font-size: 18px; font-weight: 700; line-height: 1.4; }
+        .yes { width: 100%; padding: 14px 28px; border: 0; border-radius: 5px; background: var(--orange); color: #101010; font-size: 18px; font-weight: 800; }
+        .yes:hover { background: #ffad33; }
+        .disclaimer { margin: 23px 0 0; padding-top: 20px; border-top: 1px solid #383838; color: #999; font-size: 11px; line-height: 1.6; }
+        .disclaimer a { color: var(--orange); text-decoration: none; }
+        .disclaimer a:hover { text-decoration: underline; }
+        .empty { color: #aaa; }
+        [hidden] { display: none !important; }
+        @media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (max-width: 760px) {
+            .header { flex-wrap: wrap; gap: 16px; }
+            .search { order: 3; width: 100%; }
+            .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 12px; }
+            .section-heading { align-items: flex-start; flex-direction: column; gap: 8px; }
+            .modal { padding: 28px 22px 24px; }
+            .modal .brand { font-size: 36px; }
+            .modal h2 { font-size: 25px; }
+            .offer { top: 8px; left: 8px; font-size: 10px; }
+        }
+        @media (max-width: 380px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="brand" role="img" aria-label="onlyadhub">onlyad<span>hub</span></div>
+        <label class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 5 5"></path></svg>
+            <input id="search" type="search" placeholder="Поиск рекламных видео..." aria-label="Поиск рекламных видео">
+        </label>
+        <select class="language" aria-label="Язык / Language"><option value="ru">RU</option><option value="en">EN</option></select>
+    </header>
+    <main>
+        <div class="section-heading"><h1 data-text="heading">Реклама, которую вы заслужили</h1><p data-text="subheading">Только реклама. Ничего лишнего.</p></div>
+        <div id="videos" class="grid"></div>
+        <p id="empty" class="empty" data-text="empty" hidden>Реклама не найдена. Даже мы удивлены.</p>
+    </main>
+    <footer><span data-text="footer">Демонстрация инструмента скрытия для</span> <a href="https://ablock.arh.one/">ablock.arh.one</a></footer>
+    <div id="ad-overlay" role="dialog" aria-modal="true" aria-labelledby="welcome">
+        <select class="language overlay-language" aria-label="Язык / Language"><option value="ru">RU</option><option value="en">EN</option></select>
+        <section class="modal" aria-labelledby="welcome">
+            <div class="brand" role="img" aria-label="onlyadhub">onlyad<span>hub</span></div>
+            <p class="eyebrow" data-text="eyebrow">Ваше внимание — наша страсть</p>
+            <h2 id="welcome" data-text="welcome">Добро пожаловать в рай потребителя рекламы</h2>
+            <p class="intro" data-text="intro">Здесь каждый ролик что-нибудь продаёт. Никакого контента между рекламой — только выгодные предложения и скидки, которые нельзя упустить. Вы ещё ничего не купили? Мы уже приготовили следующую рекламу.</p>
+            <p class="question" data-text="question">Хотите ли вы посмотреть ещё рекламу прямо сейчас?</p>
+            <button class="yes" type="button" data-text="yes">Да</button>
+            <p class="disclaimer"><span data-text="disclaimer">Внимание: данный сайт является вымышленным и создан исключительно для демонстрации инструмента скрытия элементов (пипетки).</span> <span data-text="footer">Демонстрация инструмента скрытия для</span> <a href="https://ablock.arh.one/">ablock.arh.one</a></p>
+        </section>
+    </div>
+    <script>
+        'use strict';
+        const copy = {
+            ru: {
+                title: 'onlyadhub — Рай потребителя рекламы', heading: 'Реклама, которую вы заслужили',
+                subheading: 'Только реклама. Ничего лишнего.', search: 'Поиск рекламных видео...',
+                empty: 'Реклама не найдена. Даже мы удивлены.', footer: 'Демонстрация инструмента скрытия для',
+                eyebrow: 'Ваше внимание — наша страсть', welcome: 'Добро пожаловать в рай потребителя рекламы',
+                intro: 'Здесь каждый ролик что-нибудь продаёт. Никакого контента между рекламой — только выгодные предложения и скидки, которые нельзя упустить. Вы ещё ничего не купили? Мы уже приготовили следующую рекламу.',
+                question: 'Хотите ли вы посмотреть ещё рекламу прямо сейчас?', yes: 'Да',
+                disclaimer: 'Внимание: данный сайт является вымышленным и создан исключительно для демонстрации инструмента скрытия элементов (пипетки).',
+                views: 'тыс. просмотров',
+                titles: ['Купи утюг: скидка 99%', 'Чудо-кастрюля варит сама', 'Кредит 0% на вторую микроволновку', 'Супер-пылесос: всосёт даже проблемы', 'Бесплатно и без регистрации', 'Диван, с которого не хочется вставать', 'Ещё одни часы. Теперь точно последние', 'Тостер с искусственным аппетитом', 'Кроссовки, которые бегут за вас', 'Кофе: проснись и купи ещё', 'Лампа для светлого будущего', 'Коробка-сюрприз: внутри другая коробка'],
+                offers: ['−99%', 'ВАРИТ САМА', '0% КРЕДИТ', 'СУПЕРСИЛА', 'БЕСПЛАТНО', 'ВАШ КОМФОРТ', 'ТОЛЬКО СЕГОДНЯ', 'УМНЫЙ ТОСТ', 'БЕГИ ПОКУПАТЬ', 'ЕЩЁ ЧАШЕЧКУ', 'СВЕТЛАЯ ИДЕЯ', 'СЮРПРИЗ!'],
+                authors: ['Утюг ТВ', 'Кастрюля мечты', 'Банк покупок', 'Чисто маркетинг', 'Подарок вам', 'Диванный эксперт', 'Время покупать', 'Хлеб и зрелища', 'Магазин движения', 'Кофейный отдел', 'Светлый магазин', 'Коробочный клуб']
+            },
+            en: {
+                title: 'onlyadhub — Ad lover’s paradise', heading: 'The ads you deserve',
+                subheading: 'All ads. All the time.', search: 'Search advertising videos...',
+                empty: 'No ads found. Even we are surprised.', footer: 'Element hiding demo for',
+                eyebrow: 'Your attention is our passion', welcome: 'Welcome to an ad lover’s paradise',
+                intro: 'Every video here sells something. No content between ads — just irresistible offers and discounts you cannot miss. Haven’t bought anything yet? We already have your next ad ready.',
+                question: 'Would you like to watch even more ads right now?', yes: 'Yes',
+                disclaimer: 'Notice: this fictional website was created solely to demonstrate the element hiding tool (eyedropper).',
+                views: 'K views',
+                titles: ['Buy an iron: 99% off', 'The miracle pot that cooks itself', '0% credit for your second microwave', 'Super vacuum: sucks up your problems', 'Free, no registration required', 'A sofa you will never want to leave', 'One more watch. Definitely the last one', 'A toaster with artificial appetite', 'Sneakers that run for you', 'Coffee: wake up and buy more', 'A lamp for a brighter future', 'Mystery box: another box inside'],
+                offers: ['−99%', 'COOKS ITSELF', '0% CREDIT', 'SUPERPOWER', 'FREE', 'GET COMFY', 'TODAY ONLY', 'SMART TOAST', 'RUN TO BUY', 'ONE MORE CUP', 'BRIGHT IDEA', 'SURPRISE!'],
+                authors: ['Iron TV', 'Dream Pot', 'Shopping Bank', 'Clean Marketing', 'A Gift for You', 'Sofa Expert', 'Time to Buy', 'Bread & Circuses', 'Motion Store', 'Coffee Department', 'Bright Store', 'Box Club']
+            }
+        };
+        // All artwork is local SVG geometry; there are no images or network calls.
+        const drawings = [
+            '<path d="M60 99h145l-20-32H99l-22 18Zm39-32 10-17h55l20 17"/><path d="M77 85h108"/>',
+            '<path d="M80 63h100v43H80zM72 63h116M107 52h46M128 52v-7M80 75H65v14h15M180 75h15v14h-15M110 35v-9m20 9v-9m20 9v-9"/>',
+            '<rect x="64" y="48" width="132" height="67" rx="6"/><rect x="74" y="58" width="91" height="47" rx="3"/><path d="M178 62h7m-7 12h7m-7 12h7"/><circle cx="181" cy="100" r="4"/>',
+            '<path d="m110 98 26-59h21v56h-15V43m-32 55H84v13h68V98zM157 68c40 0 38 44 15 38"/>',
+            '<path d="M80 64h100v50H80zM74 51h112v20H74zM130 51v63M130 51c-50 0-29-37 0 0 29-37 50 0 0 0"/>',
+            '<path d="M73 82V58q0-10 10-10h94q10 0 10 10v24M80 79h100v24H80zM80 73H65v32h130V73h-15M78 105v9m104-9v9M130 50v29"/>',
+            '<path d="M114 49V28h32v21m-32 52v22h32v-22"/><circle cx="130" cy="75" r="29"/><path d="M130 56v21l13 8"/>',
+            '<rect x="78" y="60" width="104" height="52" rx="10"/><path d="M91 60V43q0-10 10-10h21q8 0 8 10v17m0 0V43q0-10 10-10h17q8 0 8 10v17M94 82h42m-42 12h42"/><circle cx="164" cy="87" r="8"/>',
+            '<path d="m79 49 31 18 15 23 49 9 15 15H68l-5-17 16-48ZM99 77l15-7m-7 17 16-7m-2 17 14-7"/>',
+            '<path d="M87 53h73v39q0 23-36 23T87 92Zm73 8h13q25 0 0 28h-13M78 121h97M107 38V23m20 15V23m20 15V23"/>',
+            '<path d="m104 35-25 48h102l-25-48ZM130 83v34m-25 0h50M130 35V23"/>',
+            '<path d="m71 59 59-26 59 26v57H71Zm0 0 59 27 59-27M130 86v30M100 46l58 27"/>'
+        ];
+        const tints = ['#775327', '#465d4c', '#53556b', '#365b64', '#704a64', '#6c4935', '#4d576b', '#685b42', '#3c655c', '#694d3e', '#766730', '#5b4969'];
+        const grid = document.getElementById('videos');
+        const search = document.getElementById('search');
+        const overlay = document.getElementById('ad-overlay');
+        const background = document.querySelectorAll('body > header, body > main, body > footer');
+        let overlayVisible = null;
+        function syncOverlayFocus() {
+            const style = getComputedStyle(overlay);
+            const rect = overlay.getBoundingClientRect();
+            // У position: fixed offsetParent бывает null и у видимого баннера.
+            const visible = overlay.isConnected && (overlay.offsetParent !== null || style.position === 'fixed')
+                && rect.width > 0 && rect.height > 0
+                && style.display !== 'none' && style.visibility === 'visible' && Number(style.opacity) > 0;
+            if (visible === overlayVisible) return visible;
+            const wasVisible = overlayVisible;
+            const hadFocus = overlay.contains(document.activeElement);
+            const lostFocus = overlayVisible && document.activeElement === document.body;
+            overlayVisible = visible;
+            for (const element of background) element.inert = visible;
+            // Прозрачность сама по себе не исключает кнопки баннера из порядка Tab.
+            overlay.inert = !visible;
+            overlay.setAttribute('aria-modal', String(visible));
+            if (!visible && (hadFocus || lostFocus)) search.focus({preventScroll: true});
+            if (wasVisible === false && visible && !overlay.contains(document.activeElement)) {
+                overlay.querySelector('.yes').focus({preventScroll: true});
+            }
+            return visible;
+        }
+        // Пипетка может скрыть баннер правилом CSS во внедрённом элементе style.
+        new MutationObserver(syncOverlayFocus).observe(document.documentElement, {
+            subtree: true, childList: true, characterData: true,
+            attributes: true, attributeFilter: ['style', 'class', 'hidden']
+        });
+        // CSSOM / chrome.scripting.insertCSS не создают DOM-мутаций.
+        new ResizeObserver(syncOverlayFocus).observe(overlay);
+        new IntersectionObserver(syncOverlayFocus).observe(overlay);
+        // visibility и opacity могут измениться без смены размеров или пересечения.
+        for (const type of ['pointerdown', 'mousemove', 'touchstart']) {
+            window.addEventListener(type, syncOverlayFocus, {capture: true, passive: true});
+        }
+        document.addEventListener('keydown', event => {
+            if (event.key !== 'Tab' || !syncOverlayFocus()) return;
+            const controls = [...overlay.querySelectorAll('select, button')]
+                .filter(element => !element.disabled && element.checkVisibility());
+            const first = controls[0];
+            const last = controls[controls.length - 1];
+            if (!overlay.contains(document.activeElement)
+                || (event.shiftKey ? document.activeElement === first : document.activeElement === last)) {
+                event.preventDefault();
+                (event.shiftKey ? last : first)?.focus();
+            }
+        });
+        syncOverlayFocus();
+        // CSSOM может скрывать и возвращать баннер без уведомлений наблюдателей.
+        setInterval(syncOverlayFocus, 200);
+        overlay.querySelector('.overlay-language').focus({preventScroll: true});
+        let language = 'ru';
+        function renderVideos() {
+            const text = copy[language];
+            grid.replaceChildren();
+            text.titles.forEach((title, index) => {
+                const card = document.createElement('article');
+                card.className = 'card';
+                card.innerHTML = `<div class="preview" style="--tint: ${tints[index]}">
+                    <svg class="product" viewBox="0 0 260 150" fill="none" stroke="#f6e8cc" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">${drawings[index]}</svg>
+                    <span class="offer">${text.offers[index]}</span>
+                    <span class="play" aria-hidden="true"><svg viewBox="0 0 20 20" fill="white"><path d="m4 2 13 8-13 8Z"/></svg></span>
+                    <span class="quality">HD</span><span class="duration">${index % 2 ? '1:15' : '0:30'}</span>
+                    </div><h2>${title}</h2><p>${text.authors[index]}</p><p>${[128, 42, 316, 87, 999, 64, 203, 55, 178, 91, 37, 404][index]} ${text.views}</p>`;
+                grid.append(card);
+            });
+            filterVideos();
+        }
+        function filterVideos() {
+            const query = search.value.trim().toLocaleLowerCase(language);
+            let visible = 0;
+            for (const card of grid.children) {
+                card.hidden = !card.textContent.toLocaleLowerCase(language).includes(query);
+                if (!card.hidden) visible++;
+            }
+            document.getElementById('empty').hidden = visible > 0;
+        }
+        function setLanguage(value) {
+            language = value;
+            document.documentElement.lang = language;
+            document.title = copy[language].title;
+            document.querySelectorAll('[data-text]').forEach(element => {
+                element.textContent = copy[language][element.dataset.text];
+            });
+            search.placeholder = copy[language].search;
+            search.setAttribute('aria-label', copy[language].search);
+            document.querySelectorAll('.language').forEach(select => { select.value = language; });
+            renderVideos();
+        }
+        document.querySelectorAll('.language').forEach(select => {
+            select.addEventListener('change', () => setLanguage(select.value));
+        });
+        search.addEventListener('input', filterVideos);
+        // Saying yes keeps the ad wall in place. Hide #ad-overlay with ABlock.
+        document.querySelector('.yes').addEventListener('click', () => { search.value = ''; renderVideos(); });
+        renderVideos();
+    </script>
+</body>
+</html>
