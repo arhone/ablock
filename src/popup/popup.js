@@ -2628,6 +2628,23 @@ function showDone(button, key) {
 }
 
 /**
+ * Спиннер вместо значка на время действия; размеры задаёт исходная кнопка
+ * @param {HTMLButtonElement} button
+ * @param {boolean} loading
+ */
+function setLoading(button, loading) {
+    button.disabled = loading;
+    button.classList.toggle('loading', loading);
+    if (loading) {
+        button.setAttribute('aria-busy', 'true');
+        button.append(scoreRing(24, 2, 7.5));
+    } else {
+        button.removeAttribute('aria-busy');
+        button.querySelector('.ring')?.remove();
+    }
+}
+
+/**
  * Соцсети языка окна в меню «Поделиться» — значки из шаблона #networks по порядку NETWORKS_BY_LANG.
  * Ссылка пересобирается перед любым её использованием (нажатие, средняя кнопка, контекстное меню, фокус):
  * текст к этому времени мог измениться — оценку пересчитывают, когда страница догрузилась
@@ -2685,17 +2702,27 @@ function setupReport(host, score) {
 
     const copyImage = document.getElementById('share-image');
     copyImage.addEventListener('click', async () => {
-        // Буфер — сразу в обработчике нажатия, пока браузер разрешает; картинка дорисуется
-        await navigator.clipboard.write([new ClipboardItem({'image/png': getImage()})]);
+        setLoading(copyImage, true);
+        try {
+            // Буфер — сразу в обработчике нажатия, пока браузер разрешает; картинка дорисуется
+            await navigator.clipboard.write([new ClipboardItem({'image/png': getImage()})]);
+        } finally {
+            setLoading(copyImage, false);
+        }
         showDone(copyImage, 'copied');
     });
 
     const save = document.getElementById('share-save');
     save.addEventListener('click', async () => {
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(await getImage());
-        link.download = fileName;
-        link.click();
+        setLoading(save, true);
+        try {
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(await getImage());
+            link.download = fileName;
+            link.click();
+        } finally {
+            setLoading(save, false);
+        }
         showDone(save, 'reportDone');
     });
 
@@ -2754,13 +2781,13 @@ function setupClear(tab) {
         // закрыться, пока открыт запрос, поэтому sw.js доделает удаление сам, когда разрешение появится
         const clear = {tabId: tab.id, url: tab.url};
         if (await chrome.permissions.contains({permissions: ['browsingData']})) {
-            button.disabled = true;
+            setLoading(button, true);
             await chrome.runtime.sendMessage({clear});
             return;
         }
         await chrome.storage.session.set({aBlockClear: {...clear, time: Date.now()}});
         if (await chrome.permissions.request({permissions: ['browsingData']})) {
-            button.disabled = true;
+            setLoading(button, true);
         } else {
             await chrome.storage.session.remove('aBlockClear');
         }
