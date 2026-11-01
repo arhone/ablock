@@ -143,6 +143,7 @@
         const overlay = document.getElementById('ad-overlay');
         const background = document.querySelectorAll('body > header, body > main, body > footer');
         let overlayVisible = false;
+        let overlayCheckInterval = null;
         function syncOverlayFocus() {
             const style = getComputedStyle(overlay);
             const rect = overlay.getBoundingClientRect();
@@ -153,6 +154,13 @@
             const hadFocus = overlay.contains(document.activeElement);
             const lostFocus = overlayVisible && document.activeElement === document.body;
             overlayVisible = visible;
+            // CSSOM может менять opacity/visibility без уведомлений наблюдателей.
+            if (visible && overlayCheckInterval === null) {
+                overlayCheckInterval = setInterval(syncOverlayFocus, 150);
+            } else if (!visible && overlayCheckInterval !== null) {
+                clearInterval(overlayCheckInterval);
+                overlayCheckInterval = null;
+            }
             for (const element of background) element.inert = visible;
             // Прозрачность сама по себе не исключает кнопки баннера из порядка Tab.
             overlay.inert = !visible;
