@@ -1083,7 +1083,7 @@ footer {
     align-self: stretch;
     display: flex;
     justify-content: space-between;
-    margin-top: 4px;
+    margin-top: auto;
     padding: 10px 0;
     border-top: 1px solid var(--border);
 }

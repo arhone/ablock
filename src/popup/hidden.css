@@ -4,7 +4,7 @@ body[data-screen="hidden"] #settings-open {
 /* На отдельном экране остаются общие фон, тема и подвал окна. */
 body[data-screen="hidden"] {
     max-height: 600px;
-    overflow: hidden;
+    overflow-y: auto;
 }
 body[data-screen="hidden"] > :not(#hidden-screen, footer, #defs, script, template) {
     display: none !important;

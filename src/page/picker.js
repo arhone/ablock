@@ -329,8 +329,9 @@
         frames.replaceChildren();
         frames.append(snapshot);
         const animations = [snapshot.animate([{opacity: 1, transform: 'scale(1)'},
-            {opacity: 0, transform: 'scale(.96)'}], {duration: 320, easing: 'ease-out', fill: 'forwards'})];
-        for (let i = 0; i < 24; i++) {
+            {opacity: 0, transform: 'scale(.96)'}], {duration: 480, easing: 'ease-out', fill: 'forwards'})];
+        const count = Math.min(120, Math.max(48, Math.round(rect.width * rect.height / 1000)));
+        for (let i = 0; i < count; i++) {
             const particle = node('div');
             const x = rect.left + rect.width * Math.random();
             const y = rect.top + rect.height * Math.random();
@@ -338,15 +339,15 @@
             particle.style.cssText = `position:fixed;left:${x}px;top:${y}px;width:${size}px;height:${size}px;border-radius:50%;background:${color};pointer-events:none;`;
             frames.append(particle);
             const dx = (Math.random() - .5) * 90;
-            const dy = (Math.random() - .5) * 70 - 20;
+            const dy = (Math.random() - .5) * 60 - 40;
             animations.push(particle.animate([{opacity: .85, transform: 'translate(0, 0) scale(1)'},
                 {opacity: 0, transform: `translate(${dx}px, ${dy}px) scale(.25)`}],
-            {duration: 320, easing: 'ease-out', fill: 'forwards'}));
+            {duration: 600 + Math.random() * 150, delay: Math.random() * 100, easing: 'ease-out', fill: 'forwards'}));
         }
         let timeout;
         try {
             await Promise.race([Promise.all(animations.map((animation) => animation.finished)),
-                new Promise((resolve) => { timeout = setTimeout(resolve, 500); })]);
+                new Promise((resolve) => { timeout = setTimeout(resolve, 1000); })]);
         } finally {
             clearTimeout(timeout);
             animations.forEach((animation) => animation.cancel());
