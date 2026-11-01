@@ -151,6 +151,7 @@
                 && rect.width > 0 && rect.height > 0
                 && style.display !== 'none' && style.visibility === 'visible' && Number(style.opacity) > 0;
             if (visible === overlayVisible) return visible;
+            const wasVisible = overlayVisible;
             const hadFocus = overlay.contains(document.activeElement);
             const lostFocus = overlayVisible && document.activeElement === document.body;
             overlayVisible = visible;
@@ -159,6 +160,9 @@
             overlay.inert = !visible;
             overlay.setAttribute('aria-modal', String(visible));
             if (!visible && (hadFocus || lostFocus)) search.focus({preventScroll: true});
+            if (wasVisible === false && visible && !overlay.contains(document.activeElement)) {
+                overlay.querySelector('.yes').focus({preventScroll: true});
+            }
             return visible;
         }
         // Пипетка может скрыть баннер правилом CSS во внедрённом элементе style.
