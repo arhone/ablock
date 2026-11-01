@@ -513,7 +513,7 @@ async function saveCustom(sender, host, pick) {
             return {ok: false, error: 'inject'};
         }
     }
-    await refreshCustomScript();
+    await refreshCustomScript().catch(console.error);
     return {ok: true, count: entries.length + (exists ? 0 : 1)};
 }
 
@@ -530,13 +530,13 @@ async function applyCustom(sender, host) {
 }
 
 async function removeCustom(data, clear) {
-    if (typeof data?.host !== 'string') {
-        return;
+    if (typeof data?.host !== 'string' || (!clear && !Array.isArray(data.selectors))) {
+        throw new Error('Invalid custom remove');
     }
     const host = data.host.replace(/^www\./, '');
     const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
     const entries = own(aBlockCustom, host) || [];
-    const removed = entries.filter(({s}) => clear || data.selectors?.includes(s));
+    const removed = entries.filter(({s}) => clear || data.selectors.includes(s));
     const remaining = entries.filter((entry) => !removed.includes(entry));
     if (remaining.length) {
         aBlockCustom[host] = remaining;
@@ -544,7 +544,7 @@ async function removeCustom(data, clear) {
         delete aBlockCustom[host];
     }
     await chrome.storage.local.set({aBlockCustom});
-    await refreshCustomScript();
+    await refreshCustomScript().catch(console.error);
     if (Number.isInteger(data.tabId) && data.documentId) {
         for (const {s} of removed) {
             await chrome.scripting.removeCSS(customCSS(data.tabId, data.documentId, s)).catch(() => {});
@@ -563,7 +563,7 @@ async function toggleCustom(data) {
         && (entry.enabled !== false) !== data.enabled);
     aBlockCustom[host] = entries.map((entry) => changed.includes(entry) ? {...entry, enabled: data.enabled} : entry);
     await chrome.storage.local.set({aBlockCustom});
-    await refreshCustomScript();
+    await refreshCustomScript().catch(console.error);
     if (Number.isInteger(data.tabId) && data.documentId) {
         const access = await chrome.permissions.contains(EXTENDED);
         for (const {s} of changed) {
