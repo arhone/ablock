@@ -1400,7 +1400,7 @@
         "message": "Más ablakok vagy ablakhoz nem rendelt szkriptek nem szerepelnek a csoportokban."
     },
     "settingsTitle": {
-        "message": "Beállítások elemre"
+        "message": "Beállítások"
     },
     "settingsBack": {
         "message": "Vissza"
@@ -1412,7 +1412,7 @@
         "message": "Kiterjesztés ikon jelző"
     },
     "settingsBadgeCount": {
-        "message": "A blokkolt elemek számítanak"
+        "message": "Blokkolt elemek száma"
     },
     "settingsBadgeStatus": {
         "message": "Védelmi állapot (✓)"

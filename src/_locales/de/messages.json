@@ -1412,7 +1412,7 @@
         "message": "Erweiterungssymbolanzeige"
     },
     "settingsBadgeCount": {
-        "message": "Gesperrte Artikel zählen"
+        "message": "Anzahl blockierter Elemente"
     },
     "settingsBadgeStatus": {
         "message": "Schutzstatus (✓)"

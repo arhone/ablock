@@ -1412,13 +1412,13 @@
         "message": "Индикатор иконе проширења"
     },
     "settingsBadgeCount": {
-        "message": "Блокиране ставке се рачунају"
+        "message": "Број блокираних елемената"
     },
     "settingsBadgeStatus": {
         "message": "Статус заштите (✓)"
     },
     "settingsBadgeOff": {
-        "message": "Офф"
+        "message": "Искључено"
     },
     "settingsPickerAnimation": {
         "message": "Анимација при скривању помоћу бирача елемената"

@@ -34,7 +34,7 @@
         "message": "Apagado"
     },
     "settingsPickerAnimation": {
-        "message": "Animación al esconderse con el selector de elementos."
+        "message": "Animación al ocultar elementos con el selector"
     },
     "settingsPickerAnimationHint": {
         "message": "Anima elementos cuando estén ocultos con el selector."

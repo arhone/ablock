@@ -1412,7 +1412,7 @@
         "message": "Indicador d'icona d'extensió"
     },
     "settingsBadgeCount": {
-        "message": "Els articles bloquejats compten"
+        "message": "Nombre d’elements bloquejats"
     },
     "settingsBadgeStatus": {
         "message": "Estat de protecció (✓)"

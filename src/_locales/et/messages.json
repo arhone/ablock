@@ -1412,7 +1412,7 @@
         "message": "Laienduse ikooni indikaator"
     },
     "settingsBadgeCount": {
-        "message": "Blokeeritud üksused loetakse"
+        "message": "Blokeeritud üksuste arv"
     },
     "settingsBadgeStatus": {
         "message": "Kaitse olek (✓)"

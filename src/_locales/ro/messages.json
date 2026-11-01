@@ -1412,7 +1412,7 @@
         "message": "Indicator pictogramă extensie"
     },
     "settingsBadgeCount": {
-        "message": "Contează articolele blocate"
+        "message": "Numărul elementelor blocate"
     },
     "settingsBadgeStatus": {
         "message": "Stare de protecție (✓)"

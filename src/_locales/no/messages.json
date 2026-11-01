@@ -1412,7 +1412,7 @@
         "message": "Utvidelsesikonindikator"
     },
     "settingsBadgeCount": {
-        "message": "Blokkerte varer teller"
+        "message": "Antall blokkerte elementer"
     },
     "settingsBadgeStatus": {
         "message": "Beskyttelsesstatus (✓)"
@@ -1421,7 +1421,7 @@
         "message": "Av"
     },
     "settingsPickerAnimation": {
-        "message": "Animasjon når du skjuler deg med elementvelgeren"
+        "message": "Animasjon når elementer skjules med elementvelgeren"
     },
     "settingsPickerAnimationHint": {
         "message": "Animer elementer når de er skjult med velgeren."

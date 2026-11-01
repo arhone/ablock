@@ -1412,7 +1412,7 @@
         "message": "Tilläggsikonindikator"
     },
     "settingsBadgeCount": {
-        "message": "Blockerade objekt räknas"
+        "message": "Antal blockerade objekt"
     },
     "settingsBadgeStatus": {
         "message": "Skyddsstatus (✓)"
@@ -1421,7 +1421,7 @@
         "message": "Av"
     },
     "settingsPickerAnimation": {
-        "message": "Animation när du gömmer dig med elementväljaren"
+        "message": "Animering när element döljs med elementväljaren"
     },
     "settingsPickerAnimationHint": {
         "message": "Animera element när de är dolda med väljaren."

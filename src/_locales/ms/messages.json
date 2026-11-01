@@ -1421,7 +1421,7 @@
         "message": "Mati"
     },
     "settingsPickerAnimation": {
-        "message": "Animasi apabila bersembunyi dengan pemilih elemen"
+        "message": "Animasi apabila menyembunyikan elemen dengan pemilih elemen"
     },
     "settingsPickerAnimationHint": {
         "message": "Animasikan elemen apabila ia disembunyikan dengan pemilih."

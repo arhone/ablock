@@ -1412,7 +1412,7 @@
         "message": "Indikator for udvidelsesikon"
     },
     "settingsBadgeCount": {
-        "message": "Blokerede varer tæller"
+        "message": "Antal blokerede elementer"
     },
     "settingsBadgeStatus": {
         "message": "Beskyttelsesstatus (✓)"
@@ -1421,7 +1421,7 @@
         "message": "Fra"
     },
     "settingsPickerAnimation": {
-        "message": "Animation, når du gemmer dig med elementvælgeren"
+        "message": "Animation ved skjulning af elementer med elementvælgeren"
     },
     "settingsPickerAnimationHint": {
         "message": "Animer elementer, når de er skjult med vælgeren."

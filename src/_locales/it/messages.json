@@ -1412,7 +1412,7 @@
         "message": "Indicatore dell'icona dell'estensione"
     },
     "settingsBadgeCount": {
-        "message": "Contano gli elementi bloccati"
+        "message": "Numero di elementi bloccati"
     },
     "settingsBadgeStatus": {
         "message": "Stato della protezione (✓)"
@@ -1421,7 +1421,7 @@
         "message": "Spento"
     },
     "settingsPickerAnimation": {
-        "message": "Animazione quando ci si nasconde con il selettore di elementi"
+        "message": "Animazione quando si nascondono elementi con il selettore"
     },
     "settingsPickerAnimationHint": {
         "message": "Anima gli elementi quando sono nascosti con il selettore."
