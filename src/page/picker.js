@@ -12,7 +12,8 @@
     const strings = cfg.strings;
     const animationEnabled = Boolean(globalThis.aBlockPickerConfig?.animation ?? true);
     const previousFocus = document.activeElement;
-    const host = document.createElement('div');
+    // Косметические правила сайтов могут скрывать div с inline !important (например, на dzen.ru).
+    const host = document.createElement('ablock-picker');
     // Стили хоста задаём с приоритетом: правила сайта не должны менять слой выбора.
     host.style.cssText = 'all:initial!important;position:fixed!important;inset:0!important;z-index:2147483647!important;display:block!important;pointer-events:auto!important;';
     const root = host.attachShadow({mode: 'closed'});
