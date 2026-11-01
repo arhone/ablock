@@ -224,7 +224,7 @@ async function applyBadgeColors(value) {
  */
 async function applyAction({status, allowed}) {
     const {aBlockBadgeMode} = await chrome.storage.local.get('aBlockBadgeMode');
-    const mode = ['count', 'status', 'off'].includes(aBlockBadgeMode) ? aBlockBadgeMode : 'count';
+    const mode = ['count', 'status', 'off'].includes(aBlockBadgeMode) ? aBlockBadgeMode : 'status';
     await chrome.declarativeNetRequest.setExtensionActionOptions({displayActionCountAsBadgeText: mode === 'count' && status});
     await chrome.action.setBadgeText({text: mode === 'status' && status ? '✓' : ''});
     await applyBadgeColors();
@@ -234,8 +234,11 @@ async function applyAction({status, allowed}) {
     const tabs = await chrome.tabs.query({});
     await Promise.allSettled(tabs.filter((tab) => tab.id !== undefined)
         .map((tab) => tab.url ? applyTabAction(tab.id, tab.url, {status, allowed}, mode) : Promise.allSettled([
-            chrome.action.setBadgeText({tabId: tab.id, text: null}),
-            chrome.action.setIcon({tabId: tab.id, path: null})
+            Promise.resolve().then(() => chrome.action.setBadgeText({tabId: tab.id, text: null})),
+            Promise.resolve().then(() => chrome.action.setIcon({
+                tabId: tab.id,
+                path: {32: status ? '/images/ablock-32.png' : '/images/ablock-32-black.png'}
+            }))
         ])));
 }
 
@@ -259,7 +262,7 @@ function updateTabAction(tabId, url) {
     return enqueue(async () => {
         const settings = await getSettings();
         const {aBlockBadgeMode} = await chrome.storage.local.get('aBlockBadgeMode');
-        const mode = ['count', 'status', 'off'].includes(aBlockBadgeMode) ? aBlockBadgeMode : 'count';
+        const mode = ['count', 'status', 'off'].includes(aBlockBadgeMode) ? aBlockBadgeMode : 'status';
         await applyTabAction(tabId, url, settings, mode);
     });
 }
