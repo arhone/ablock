@@ -1415,7 +1415,7 @@
         "message": "Liczba zablokowanych elementów"
     },
     "settingsBadgeStatus": {
-        "message": "Stan ochrony (WŁ.)"
+        "message": "Stan ochrony (✓)"
     },
     "settingsBadgeOff": {
         "message": "Wyłączone"

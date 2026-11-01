@@ -1415,7 +1415,7 @@
         "message": "Engellenen öğelerin sayısı"
     },
     "settingsBadgeStatus": {
-        "message": "Koruma durumu (AÇIK)"
+        "message": "Koruma durumu (✓)"
     },
     "settingsBadgeOff": {
         "message": "Kapalı"

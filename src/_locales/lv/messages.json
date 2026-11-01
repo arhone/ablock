@@ -1415,7 +1415,7 @@
         "message": "Bloķēto vienumu skaits"
     },
     "settingsBadgeStatus": {
-        "message": "Aizsardzības statuss (IESLĒGTS)"
+        "message": "Aizsardzības statuss (✓)"
     },
     "settingsBadgeOff": {
         "message": "Izslēgts"

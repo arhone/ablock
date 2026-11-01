@@ -14,7 +14,16 @@ globalThis.initSettings = function () {
     const close = () => {
         screen.hidden = true;
         delete document.body.dataset.screen;
-        previousFocus.focus();
+        if (previousFocus?.isConnected && previousFocus.getClientRects().length &&
+            getComputedStyle(previousFocus).visibility === 'visible') {
+            previousFocus.focus();
+        } else {
+            const oldTabIndex = document.body.getAttribute('tabindex');
+            document.body.setAttribute('tabindex', '-1');
+            document.body.focus();
+            if (oldTabIndex === null) document.body.removeAttribute('tabindex');
+            else document.body.setAttribute('tabindex', oldTabIndex);
+        }
     };
     openButton.addEventListener('click', open);
     back.addEventListener('click', close);
@@ -27,11 +36,16 @@ globalThis.initSettings = function () {
     chrome.storage.local.get(['aBlockBadgeMode', 'aBlockPickerAnimation']).then((stored) => {
         badge.value = ['count', 'status', 'off'].includes(stored.aBlockBadgeMode) ? stored.aBlockBadgeMode : 'count';
         animation.checked = stored.aBlockPickerAnimation ?? true;
-    }).catch(console.error);
+    }).catch((error) => {
+        console.error(error);
+        badge.value = 'count';
+        animation.checked = true;
+    });
     badge.addEventListener('change', () => chrome.storage.local.set({aBlockBadgeMode: badge.value}).catch(console.error));
     animation.addEventListener('change', () => chrome.storage.local.set({aBlockPickerAnimation: animation.checked}).catch(console.error));
     if (sessionStorage.getItem('aBlockOpenSettings')) {
         sessionStorage.removeItem('aBlockOpenSettings');
         open();
+        requestAnimationFrame(() => back.focus());
     }
 };

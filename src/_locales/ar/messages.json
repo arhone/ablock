@@ -1415,7 +1415,7 @@
         "message": "عدد العناصر المحظورة"
     },
     "settingsBadgeStatus": {
-        "message": "حالة الحماية (تشغيل)"
+        "message": "حالة الحماية (✓)"
     },
     "settingsBadgeOff": {
         "message": "إيقاف"

@@ -1415,7 +1415,7 @@
         "message": "Blokkerte varer teller"
     },
     "settingsBadgeStatus": {
-        "message": "Beskyttelsesstatus (PÅ)"
+        "message": "Beskyttelsesstatus (✓)"
     },
     "settingsBadgeOff": {
         "message": "Av"

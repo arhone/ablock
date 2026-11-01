@@ -1415,7 +1415,7 @@
         "message": "被阻止的項目計數"
     },
     "settingsBadgeStatus": {
-        "message": "保護狀態（ON）"
+        "message": "保護狀態 (✓)"
     },
     "settingsBadgeOff": {
         "message": "關閉"

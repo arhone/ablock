@@ -1415,7 +1415,7 @@
         "message": "Бұғатталған элементтер саны"
     },
     "settingsBadgeStatus": {
-        "message": "Қорғау күйі (ҚОСУ)"
+        "message": "Қорғау күйі (✓)"
     },
     "settingsBadgeOff": {
         "message": "Өшірулі"

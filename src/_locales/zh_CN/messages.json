@@ -1415,7 +1415,7 @@
         "message": "被阻止的项目计数"
     },
     "settingsBadgeStatus": {
-        "message": "保护状态（ON）"
+        "message": "保护状态 (✓)"
     },
     "settingsBadgeOff": {
         "message": "关闭"

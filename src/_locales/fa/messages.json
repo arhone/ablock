@@ -1415,7 +1415,7 @@
         "message": "موارد مسدود شده شمارش می شود"
     },
     "settingsBadgeStatus": {
-        "message": "وضعیت حفاظت (روشن)"
+        "message": "وضعیت حفاظت (✓)"
     },
     "settingsBadgeOff": {
         "message": "خاموش"

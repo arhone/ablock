@@ -1,3 +1,6 @@
+body[data-screen="hidden"] #settings-open {
+    display: none !important;
+}
 /* На отдельном экране остаются общие фон, тема и подвал окна. */
 body[data-screen="hidden"] {
     max-height: 600px;

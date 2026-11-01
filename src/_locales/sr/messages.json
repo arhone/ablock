@@ -1415,7 +1415,7 @@
         "message": "Блокиране ставке се рачунају"
     },
     "settingsBadgeStatus": {
-        "message": "Статус заштите (УКЉУЧЕНО)"
+        "message": "Статус заштите (✓)"
     },
     "settingsBadgeOff": {
         "message": "Офф"

@@ -1415,7 +1415,7 @@
         "message": "Item yang diblokir dihitung"
     },
     "settingsBadgeStatus": {
-        "message": "Status perlindungan (AKTIF)"
+        "message": "Status perlindungan (✓)"
     },
     "settingsBadgeOff": {
         "message": "Mati"

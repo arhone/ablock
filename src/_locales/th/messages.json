@@ -1415,7 +1415,7 @@
         "message": "นับรายการที่ถูกบล็อก"
     },
     "settingsBadgeStatus": {
-        "message": "สถานะการป้องกัน (เปิด)"
+        "message": "สถานะการป้องกัน (✓)"
     },
     "settingsBadgeOff": {
         "message": "ปิด"

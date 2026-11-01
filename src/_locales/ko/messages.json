@@ -1415,7 +1415,7 @@
         "message": "차단된 항목 수"
     },
     "settingsBadgeStatus": {
-        "message": "보호 상태(✓)"
+        "message": "보호 상태 (✓)"
     },
     "settingsBadgeOff": {
         "message": "끄기"

@@ -1415,7 +1415,7 @@
         "message": "अवरुद्ध आइटमों की गिनती"
     },
     "settingsBadgeStatus": {
-        "message": "सुरक्षा स्थिति (चालू)"
+        "message": "सुरक्षा स्थिति (✓)"
     },
     "settingsBadgeOff": {
         "message": "बंद"

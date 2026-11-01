@@ -1415,7 +1415,7 @@
         "message": "פריטים חסומים סופרים"
     },
     "settingsBadgeStatus": {
-        "message": "מצב הגנה (מופעל)"
+        "message": "מצב הגנה (✓)"
     },
     "settingsBadgeOff": {
         "message": "כבוי"

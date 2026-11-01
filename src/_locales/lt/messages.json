@@ -1415,7 +1415,7 @@
         "message": "Užblokuoti elementai skaičiuojami"
     },
     "settingsBadgeStatus": {
-        "message": "Apsaugos būsena (ĮJUNGTA)"
+        "message": "Apsaugos būsena (✓)"
     },
     "settingsBadgeOff": {
         "message": "Išjungta"

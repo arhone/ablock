@@ -1415,7 +1415,7 @@
         "message": "অবরুদ্ধ আইটেম গণনা"
     },
     "settingsBadgeStatus": {
-        "message": "সুরক্ষা স্থিতি (চালু)"
+        "message": "সুরক্ষা স্থিতি (✓)"
     },
     "settingsBadgeOff": {
         "message": "বন্ধ"

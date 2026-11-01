@@ -1415,7 +1415,7 @@
         "message": "Gesperrte Artikel zählen"
     },
     "settingsBadgeStatus": {
-        "message": "Schutzstatus (EIN)"
+        "message": "Schutzstatus (✓)"
     },
     "settingsBadgeOff": {
         "message": "Aus"

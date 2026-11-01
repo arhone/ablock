@@ -1415,7 +1415,7 @@
         "message": "Số mục bị chặn"
     },
     "settingsBadgeStatus": {
-        "message": "Trạng thái bảo vệ (BẬT)"
+        "message": "Trạng thái bảo vệ (✓)"
     },
     "settingsBadgeOff": {
         "message": "Tắt"

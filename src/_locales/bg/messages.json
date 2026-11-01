@@ -1415,7 +1415,7 @@
         "message": "Брой блокирани елементи"
     },
     "settingsBadgeStatus": {
-        "message": "Състояние на защита (ВКЛ.)"
+        "message": "Състояние на защита (✓)"
     },
     "settingsBadgeOff": {
         "message": "Изкл"

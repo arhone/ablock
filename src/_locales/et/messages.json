@@ -1415,7 +1415,7 @@
         "message": "Blokeeritud üksused loetakse"
     },
     "settingsBadgeStatus": {
-        "message": "Kaitse olek (SEES)"
+        "message": "Kaitse olek (✓)"
     },
     "settingsBadgeOff": {
         "message": "Väljas"

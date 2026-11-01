@@ -1,3 +1,6 @@
+body[data-screen="settings"] #settings-open {
+    display: none !important;
+}
 body[data-screen="settings"] {
     max-height: 600px;
     overflow-y: auto;

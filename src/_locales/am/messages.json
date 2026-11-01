@@ -1415,7 +1415,7 @@
         "message": "የታገዱ እቃዎች ይቆጠራሉ።"
     },
     "settingsBadgeStatus": {
-        "message": "የጥበቃ ሁኔታ (ኦን)"
+        "message": "የጥበቃ ሁኔታ (✓)"
     },
     "settingsBadgeOff": {
         "message": "ጠፍቷል"

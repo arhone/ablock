@@ -1415,7 +1415,7 @@
         "message": "தடுக்கப்பட்ட பொருட்களின் எண்ணிக்கை"
     },
     "settingsBadgeStatus": {
-        "message": "பாதுகாப்பு நிலை (ஆன்)"
+        "message": "பாதுகாப்பு நிலை (✓)"
     },
     "settingsBadgeOff": {
         "message": "ஆஃப்"

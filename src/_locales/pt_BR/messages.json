@@ -1415,7 +1415,7 @@
         "message": "Contagem de itens bloqueados"
     },
     "settingsBadgeStatus": {
-        "message": "Status de proteção (LIGADO)"
+        "message": "Status de proteção (✓)"
     },
     "settingsBadgeOff": {
         "message": "Desligado"

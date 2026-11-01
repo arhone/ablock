@@ -1415,7 +1415,7 @@
         "message": "अवरोधित आयटम संख्या"
     },
     "settingsBadgeStatus": {
-        "message": "संरक्षण स्थिती (चालू)"
+        "message": "संरक्षण स्थिती (✓)"
     },
     "settingsBadgeOff": {
         "message": "बंद"

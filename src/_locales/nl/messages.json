@@ -1415,7 +1415,7 @@
         "message": "Geblokkeerde items tellen mee"
     },
     "settingsBadgeStatus": {
-        "message": "Beveiligingsstatus (AAN)"
+        "message": "Beveiligingsstatus (✓)"
     },
     "settingsBadgeOff": {
         "message": "Uit"

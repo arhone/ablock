@@ -1415,7 +1415,7 @@
         "message": "A blokkolt elemek számítanak"
     },
     "settingsBadgeStatus": {
-        "message": "Védelmi állapot (BE)"
+        "message": "Védelmi állapot (✓)"
     },
     "settingsBadgeOff": {
         "message": "Ki"

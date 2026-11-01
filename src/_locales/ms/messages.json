@@ -1415,7 +1415,7 @@
         "message": "Kiraan item yang disekat"
     },
     "settingsBadgeStatus": {
-        "message": "Status perlindungan (HIDUP)"
+        "message": "Status perlindungan (✓)"
     },
     "settingsBadgeOff": {
         "message": "Mati"

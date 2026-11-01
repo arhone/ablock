@@ -1415,7 +1415,7 @@
         "message": "തടഞ്ഞ ഇനങ്ങളുടെ എണ്ണം"
     },
     "settingsBadgeStatus": {
-        "message": "സംരക്ഷണ നില (ഓൺ)"
+        "message": "സംരക്ഷണ നില (✓)"
     },
     "settingsBadgeOff": {
         "message": "ഓഫ്"

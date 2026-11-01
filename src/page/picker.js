@@ -10,6 +10,7 @@
     const core = globalThis.aBlockPickerCore;
     if (!cfg?.strings || !core) return;
     const strings = cfg.strings;
+    const animationEnabled = Boolean(globalThis.aBlockPickerConfig?.animation ?? true);
     const previousFocus = document.activeElement;
     const host = document.createElement('div');
     // Стили хоста задаём с приоритетом: правила сайта не должны менять слой выбора.
@@ -311,6 +312,47 @@
         if (event.key === 'Enter' || event.key === ' ') block(event);
         else event.stopPropagation();
     }
+    function makeSnapshot(el) {
+        const rect = el.getBoundingClientRect();
+        const style = getComputedStyle(el);
+        const snapshot = node('div');
+        snapshot.textContent = el.textContent.trim().slice(0, 200);
+        snapshot.style.cssText = `position:fixed;left:${rect.left}px;top:${rect.top}px;width:${rect.width}px;height:${rect.height}px;overflow:hidden;pointer-events:none;`;
+        for (const property of ['background', 'border', 'border-radius', 'color', 'font', 'padding', 'text-align']) {
+            snapshot.style.setProperty(property, style.getPropertyValue(property));
+        }
+        // Не повторяем загрузку изображений и других ресурсов страницы.
+        snapshot.style.backgroundImage = 'none';
+        return {snapshot, rect, color: style.backgroundColor === 'rgba(0, 0, 0, 0)' ? style.color : style.backgroundColor};
+    }
+    async function disintegrate({snapshot, rect, color}) {
+        frames.replaceChildren();
+        frames.append(snapshot);
+        const animations = [snapshot.animate([{opacity: 1, transform: 'scale(1)'},
+            {opacity: 0, transform: 'scale(.96)'}], {duration: 320, easing: 'ease-out', fill: 'forwards'})];
+        for (let i = 0; i < 24; i++) {
+            const particle = node('div');
+            const x = rect.left + rect.width * Math.random();
+            const y = rect.top + rect.height * Math.random();
+            const size = 3 + Math.random() * 5;
+            particle.style.cssText = `position:fixed;left:${x}px;top:${y}px;width:${size}px;height:${size}px;border-radius:50%;background:${color};pointer-events:none;`;
+            frames.append(particle);
+            const dx = (Math.random() - .5) * 90;
+            const dy = (Math.random() - .5) * 70 - 20;
+            animations.push(particle.animate([{opacity: .85, transform: 'translate(0, 0) scale(1)'},
+                {opacity: 0, transform: `translate(${dx}px, ${dy}px) scale(.25)`}],
+            {duration: 320, easing: 'ease-out', fill: 'forwards'}));
+        }
+        let timeout;
+        try {
+            await Promise.race([Promise.all(animations.map((animation) => animation.finished)),
+                new Promise((resolve) => { timeout = setTimeout(resolve, 500); })]);
+        } finally {
+            clearTimeout(timeout);
+            animations.forEach((animation) => animation.cancel());
+            frames.replaceChildren();
+        }
+    }
     async function save() {
         if (busy || !selected?.isConnected) return;
         const next = core.build(selected);
@@ -318,9 +360,15 @@
         update(next);
         if (!next.s) return;
         const pick = {s: next.s, ...core.describe(selected)};
+        const snapshot = animationEnabled && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+            ? makeSnapshot(selected) : null;
         let response;
         try { response = await chrome.runtime.sendMessage({pick}); } catch { response = null; }
         if (ended) return;
+        if (response?.ok && snapshot) {
+            try { await disintegrate(snapshot); } catch (error) { console.error(error); }
+            if (ended) return;
+        }
         busy = false;
         if (response?.ok || response?.error === 'limit') {
             const rect = panel.getBoundingClientRect();
