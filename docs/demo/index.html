@@ -80,7 +80,7 @@
         <p id="empty" class="empty" data-text="empty" hidden>Реклама не найдена. Даже мы удивлены.</p>
     </main>
     <footer data-text="footer">onlyadhub · Вымышленные товары. Настоящая любовь к рекламе.</footer>
-    <div id="ad-overlay">
+    <div id="ad-overlay" role="dialog" aria-modal="true" aria-labelledby="welcome">
         <select class="language overlay-language" aria-label="Язык / Language"><option value="ru">RU</option><option value="en">EN</option></select>
         <section class="modal" aria-labelledby="welcome">
             <div class="brand" role="img" aria-label="onlyadhub">onlyad<span>hub</span></div>
@@ -140,6 +140,39 @@
         const tints = ['#775327', '#465d4c', '#53556b', '#365b64', '#704a64', '#6c4935', '#4d576b', '#685b42', '#3c655c', '#694d3e', '#766730', '#5b4969'];
         const grid = document.getElementById('videos');
         const search = document.getElementById('search');
+        const overlay = document.getElementById('ad-overlay');
+        const background = document.querySelectorAll('body > header, body > main, body > footer');
+        function syncOverlayFocus() {
+            const style = getComputedStyle(overlay);
+            const visible = overlay.isConnected && overlay.getClientRects().length > 0
+                && style.display !== 'none' && style.visibility === 'visible' && Number(style.opacity) > 0;
+            const hadFocus = overlay.contains(document.activeElement);
+            for (const element of background) element.inert = visible;
+            // Прозрачность сама по себе не исключает кнопки баннера из порядка Tab.
+            overlay.inert = !visible;
+            overlay.setAttribute('aria-modal', String(visible));
+            if (!visible && hadFocus) search.focus({preventScroll: true});
+            return visible;
+        }
+        // Пипетка может скрыть баннер правилом CSS во внедрённом элементе style.
+        new MutationObserver(syncOverlayFocus).observe(document.documentElement, {
+            subtree: true, childList: true, characterData: true,
+            attributes: true, attributeFilter: ['style', 'class', 'hidden']
+        });
+        document.addEventListener('keydown', event => {
+            if (event.key !== 'Tab' || !syncOverlayFocus()) return;
+            const controls = [...overlay.querySelectorAll('select, button')]
+                .filter(element => !element.disabled && element.checkVisibility());
+            const first = controls[0];
+            const last = controls[controls.length - 1];
+            if (!overlay.contains(document.activeElement)
+                || (event.shiftKey ? document.activeElement === first : document.activeElement === last)) {
+                event.preventDefault();
+                (event.shiftKey ? last : first)?.focus();
+            }
+        });
+        syncOverlayFocus();
+        overlay.querySelector('.overlay-language').focus({preventScroll: true});
         let language = 'ru';
         function renderVideos() {
             const text = copy[language];
