@@ -8,4 +8,5 @@ dist/
 # Агенты: рабочие файлы, не в git
 .agents/workers/
 .agents/tasks/
+.agents/worktree/
 /.playwright-mcp/

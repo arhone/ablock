@@ -43,10 +43,11 @@ CLAUDE.md                           ← строка @AGENTS.md (нет файл
     <роль>/<имя>/CONTEXT.md         ← orchestrator/templates/CONTEXT.md
     <роль>/<имя>/files/
   tasks/                            (не в git) задачи
+  worktree/                         (не в git) git worktree активных задач (.agents/worktree/<slug>)
   local/                            (не в git) входящие от автора, черновики
 ```
 
-**`.gitignore`.** Нужны `.agents/workers/`, `.agents/tasks/`, `.agents/local/`. Каждую проверить `git check-ignore -q <путь>/x`; не игнорируется — дописать в конец файла под комментарием `# Агенты: рабочие файлы, не в git`. Существующие строки не трогать. Проверить, что `.agents/docs` и `.agents/skills` при этом **не** игнорируются (иначе — сказать автору).
+**`.gitignore`.** Нужны `.agents/workers/`, `.agents/tasks/`, `.agents/worktree/`, `.agents/local/`. Каждую проверить `git check-ignore -q <путь>/x`; не игнорируется — дописать в конец файла под комментарием `# Агенты: рабочие файлы, не в git`. Существующие строки не трогать. Проверить, что `.agents/docs` и `.agents/skills` при этом **не** игнорируются (иначе — сказать автору).
 
 **Скилл оркестратора.** Скопировать папку `orchestrator/` в `.agents/skills/orchestrator/`, `SKILL.template.md` → `SKILL.md`. Если там уже есть — показать автору разницу и спросить, заменять ли (в проектной копии могут быть его правки).
 
