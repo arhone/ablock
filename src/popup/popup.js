@@ -3059,6 +3059,9 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     const [tab] = await chrome.tabs.query({active: true, currentWindow: true});
     const isSite = /^https?:/.test(tab?.url || '');
+    const refreshAction = () => tab?.id !== undefined && tab.url
+        ? chrome.runtime.sendMessage({actionTab: {id: tab.id, url: tab.url}}).catch(() => {}) : Promise.resolve();
+    await refreshAction();
 
     // Защита на этом сайте: отключена для него самого или для домена, в который он входит
     const host = isSite ? new URL(tab.url).hostname.replace(/^www\./, '') : '';
@@ -3130,6 +3133,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         allowedEntry = enabled ? undefined : allowedEntry || host;
         site.checked = enabled;
         render();
+        await refreshAction();
         await reloadSite();
     }
     site.addEventListener('change', () => setSite(site.checked));

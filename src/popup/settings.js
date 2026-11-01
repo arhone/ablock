@@ -34,11 +34,11 @@ globalThis.initSettings = function () {
         }
     });
     chrome.storage.local.get(['aBlockBadgeMode', 'aBlockPickerAnimation']).then((stored) => {
-        badge.value = ['count', 'status', 'off'].includes(stored.aBlockBadgeMode) ? stored.aBlockBadgeMode : 'count';
+        badge.value = ['count', 'status', 'off'].includes(stored.aBlockBadgeMode) ? stored.aBlockBadgeMode : 'status';
         animation.checked = stored.aBlockPickerAnimation ?? true;
     }).catch((error) => {
         console.error(error);
-        badge.value = 'count';
+        badge.value = 'status';
         animation.checked = true;
     });
     badge.addEventListener('change', () => chrome.storage.local.set({aBlockBadgeMode: badge.value}).catch(console.error));

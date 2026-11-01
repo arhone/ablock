@@ -220,16 +220,50 @@ async function applyBadgeColors(value) {
 
 /**
  * Счётчик заблокированного и иконка
- * @param {boolean} status
+ * @param {{status: boolean, allowed: string[]}} settings
  */
-async function applyAction(status) {
+async function applyAction({status, allowed}) {
     const {aBlockBadgeMode} = await chrome.storage.local.get('aBlockBadgeMode');
-    const mode = ['count', 'status', 'off'].includes(aBlockBadgeMode) ? aBlockBadgeMode : 'count';
+    const mode = ['count', 'status', 'off'].includes(aBlockBadgeMode) ? aBlockBadgeMode : 'status';
     await chrome.declarativeNetRequest.setExtensionActionOptions({displayActionCountAsBadgeText: mode === 'count' && status});
     await chrome.action.setBadgeText({text: mode === 'status' && status ? '✓' : ''});
     await applyBadgeColors();
     await chrome.action.setIcon({
         path: {32: status ? '/images/ablock-32.png' : '/images/ablock-32-black.png'}
+    });
+    const tabs = await chrome.tabs.query({});
+    await Promise.allSettled(tabs.filter((tab) => tab.id !== undefined)
+        .map((tab) => tab.url ? applyTabAction(tab.id, tab.url, {status, allowed}, mode) : Promise.allSettled([
+            Promise.resolve().then(() => chrome.action.setBadgeText({tabId: tab.id, text: null})),
+            Promise.resolve().then(() => chrome.action.setIcon({
+                tabId: tab.id,
+                path: {32: status ? '/images/ablock-32.png' : '/images/ablock-32-black.png'}
+            }))
+        ])));
+}
+
+/** Обновляет значок вкладки, не перекрывая штатный счётчик на защищённых сайтах. */
+async function applyTabAction(tabId, url, {status, allowed}, mode) {
+    let host;
+    try {
+        const parsed = new URL(url);
+        host = /^https?:$/.test(parsed.protocol) ? parsed.hostname.replace(/^www\./, '') : '';
+    } catch {
+        host = '';
+    }
+    const active = status && !allowed.some((entry) => host && (host === entry || host.endsWith('.' + entry)));
+    await Promise.allSettled([
+        chrome.action.setBadgeText({tabId, text: active ? (mode === 'status' ? '✓' : null) : ''}),
+        chrome.action.setIcon({tabId, path: {32: active ? '/images/ablock-32.png' : '/images/ablock-32-black.png'}})
+    ]);
+}
+
+function updateTabAction(tabId, url) {
+    return enqueue(async () => {
+        const settings = await getSettings();
+        const {aBlockBadgeMode} = await chrome.storage.local.get('aBlockBadgeMode');
+        const mode = ['count', 'status', 'off'].includes(aBlockBadgeMode) ? aBlockBadgeMode : 'status';
+        await applyTabAction(tabId, url, settings, mode);
     });
 }
 
@@ -298,7 +332,7 @@ async function applySettings(settings) {
         // Без расширенного режима переключателя в окне нет — сервисы баннеров блокируются всегда
         applyRulesets(status, cookies || !extended),
         applyContentScripts(settings, extended),
-        applyAction(status)
+        applyAction(settings)
     ]);
     for (const result of results) {
         if (result.status === 'rejected') {
@@ -335,7 +369,14 @@ chrome.runtime.onStartup.addListener(() => update());
 
 chrome.storage.onChanged.addListener((changes, area) => {
     if (area === 'local' && changes.aBlockBadgeMode) {
-        enqueue(async () => applyAction((await getSettings()).status));
+        enqueue(async () => applyAction(await getSettings()));
+    }
+});
+
+chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
+    const url = change.url || (change.status === 'loading' ? tab.url : '');
+    if (url) {
+        updateTabAction(tabId, url);
     }
 });
 
@@ -370,6 +411,9 @@ chrome.permissions.onRemoved.addListener(() => {
 
 // Сообщения сайтов — косметика и пипетка; настройки и данные вкладок — только из окна расширения
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (sender.tab?.id !== undefined && sender.frameId === 0 && sender.url) {
+        updateTabAction(sender.tab.id, sender.url);
+    }
     if (request?.pick || request?.custom === true) {
         const host = customSenderHost(sender);
         if (!host) {
@@ -396,6 +440,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
     if (sender.id !== chrome.runtime.id || !sender.url?.startsWith(chrome.runtime.getURL(''))) {
         return;
+    }
+    if (typeof request?.actionTab?.id === 'number' && typeof request.actionTab.url === 'string') {
+        updateTabAction(request.actionTab.id, request.actionTab.url).then(() => sendResponse(true));
+        return true;
     }
     if (request?.customToggle) {
         enqueue(() => toggleCustom(request.customToggle).then(() => true, () => false)).then(sendResponse);
