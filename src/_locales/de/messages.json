@@ -242,7 +242,7 @@
         "message": "ohne Komprimierung"
     },
     "compressionNone": {
-        "message": "Ohne Komprimierung"
+        "message": "Unkomprimiert"
     },
     "compressionMultipleInline": {
         "message": "mehrere Verfahren"
