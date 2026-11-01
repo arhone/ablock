@@ -38,6 +38,8 @@
         .card h2 { margin: 12px 0 7px; font-size: 15px; line-height: 1.4; }
         .card p { margin: 4px 0; color: var(--muted); font-size: 12px; line-height: 1.4; }
         footer { padding: 22px 4%; border-top: 1px solid #292929; color: #888; font-size: 12px; text-align: center; }
+        footer a { color: var(--orange); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
         #ad-overlay { position: fixed; inset: 0; z-index: 999999; overflow: auto; padding: 48px 20px; background: #000c; }
         .overlay-language { position: absolute; top: 20px; right: 4%; }
         .modal { width: min(100%, 610px); margin: max(24px, calc((100dvh - 570px) / 2)) auto 0; padding: 38px 44px 28px; border: 1px solid white; border-radius: 12px; background: #141414; box-shadow: 0 24px 100px #000b; text-align: center; }
@@ -49,6 +51,8 @@
         .yes { width: 100%; padding: 14px 28px; border: 0; border-radius: 5px; background: var(--orange); color: #101010; font-size: 18px; font-weight: 800; }
         .yes:hover { background: #ffad33; }
         .disclaimer { margin: 23px 0 0; padding-top: 20px; border-top: 1px solid #383838; color: #999; font-size: 11px; line-height: 1.6; }
+        .disclaimer a { color: var(--orange); text-decoration: none; }
+        .disclaimer a:hover { text-decoration: underline; }
         .empty { color: #aaa; }
         [hidden] { display: none !important; }
         @media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
@@ -79,7 +83,7 @@
         <div id="videos" class="grid"></div>
         <p id="empty" class="empty" data-text="empty" hidden>Реклама не найдена. Даже мы удивлены.</p>
     </main>
-    <footer data-text="footer">onlyadhub · Вымышленные товары. Настоящая любовь к рекламе.</footer>
+    <footer><span data-text="footer">Демонстрация инструмента скрытия для</span> <a href="https://ablock.arh.one/">ablock.arh.one</a></footer>
     <div id="ad-overlay" role="dialog" aria-modal="true" aria-labelledby="welcome">
         <select class="language overlay-language" aria-label="Язык / Language"><option value="ru">RU</option><option value="en">EN</option></select>
         <section class="modal" aria-labelledby="welcome">
@@ -89,7 +93,7 @@
             <p class="intro" data-text="intro">Здесь каждый ролик что-нибудь продаёт. Никакого контента между рекламой — только выгодные предложения и скидки, которые нельзя упустить. Вы ещё ничего не купили? Мы уже приготовили следующую рекламу.</p>
             <p class="question" data-text="question">Хотите ли вы посмотреть ещё рекламу прямо сейчас?</p>
             <button class="yes" type="button" data-text="yes">Да</button>
-            <p class="disclaimer" data-text="disclaimer">Внимание: данный сайт является вымышленным и создан исключительно для демонстрации инструмента скрытия элементов (пипетки).</p>
+            <p class="disclaimer"><span data-text="disclaimer">Внимание: данный сайт является вымышленным и создан исключительно для демонстрации инструмента скрытия элементов (пипетки).</span> <span data-text="footer">Демонстрация инструмента скрытия для</span> <a href="https://ablock.arh.one/">ablock.arh.one</a></p>
         </section>
     </div>
     <script>
@@ -98,7 +102,7 @@
             ru: {
                 title: 'onlyadhub — Рай потребителя рекламы', heading: 'Реклама, которую вы заслужили',
                 subheading: 'Только реклама. Ничего лишнего.', search: 'Поиск рекламных видео...',
-                empty: 'Реклама не найдена. Даже мы удивлены.', footer: 'onlyadhub · Вымышленные товары. Настоящая любовь к рекламе.',
+                empty: 'Реклама не найдена. Даже мы удивлены.', footer: 'Демонстрация инструмента скрытия для',
                 eyebrow: 'Ваше внимание — наша страсть', welcome: 'Добро пожаловать в рай потребителя рекламы',
                 intro: 'Здесь каждый ролик что-нибудь продаёт. Никакого контента между рекламой — только выгодные предложения и скидки, которые нельзя упустить. Вы ещё ничего не купили? Мы уже приготовили следующую рекламу.',
                 question: 'Хотите ли вы посмотреть ещё рекламу прямо сейчас?', yes: 'Да',
@@ -111,7 +115,7 @@
             en: {
                 title: 'onlyadhub — Ad lover’s paradise', heading: 'The ads you deserve',
                 subheading: 'All ads. All the time.', search: 'Search advertising videos...',
-                empty: 'No ads found. Even we are surprised.', footer: 'onlyadhub · Imaginary products. Real love for ads.',
+                empty: 'No ads found. Even we are surprised.', footer: 'Element hiding demo for',
                 eyebrow: 'Your attention is our passion', welcome: 'Welcome to an ad lover’s paradise',
                 intro: 'Every video here sells something. No content between ads — just irresistible offers and discounts you cannot miss. Haven’t bought anything yet? We already have your next ad ready.',
                 question: 'Would you like to watch even more ads right now?', yes: 'Yes',
