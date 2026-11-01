@@ -1107,7 +1107,7 @@ footer a:hover {
 .icon-link svg:where(:not([fill="none"])) {
     fill: currentColor;
 }
-/* Тема окна: луна в светлой (включить тёмную), солнце в тёмной */
+/* Настройки и тема окна: единые размеры, обводка и состояния кнопок */
 #theme,
 #settings-open {
     display: flex;
@@ -1128,7 +1128,8 @@ footer a:hover {
 .loading > svg:not(.ring) {
     display: none;
 }
-#theme svg {
+#theme svg,
+#settings-open svg {
     width: 16px;
     height: 16px;
     fill: none;
