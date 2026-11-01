@@ -1415,7 +1415,7 @@
         "message": "Bilang ng mga naka-block na item"
     },
     "settingsBadgeStatus": {
-        "message": "Status ng proteksyon (ON)"
+        "message": "Status ng proteksyon (✓)"
     },
     "settingsBadgeOff": {
         "message": "Naka-off"

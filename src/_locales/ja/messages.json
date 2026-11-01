@@ -1415,7 +1415,7 @@
         "message": "ブロックされたアイテム数"
     },
     "settingsBadgeStatus": {
-        "message": "保護状態(ON)"
+        "message": "保護状態(✓)"
     },
     "settingsBadgeOff": {
         "message": "オフ"

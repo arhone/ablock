@@ -1415,7 +1415,7 @@
         "message": "Contano gli elementi bloccati"
     },
     "settingsBadgeStatus": {
-        "message": "Stato della protezione (ON)"
+        "message": "Stato della protezione (✓)"
     },
     "settingsBadgeOff": {
         "message": "Spento"

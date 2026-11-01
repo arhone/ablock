@@ -1415,7 +1415,7 @@
         "message": "Счётчик заблокированного"
     },
     "settingsBadgeStatus": {
-        "message": "Статус защиты (ON)"
+        "message": "Статус защиты (✓)"
     },
     "settingsBadgeOff": {
         "message": "Отключён"

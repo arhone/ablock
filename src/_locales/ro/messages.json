@@ -1415,7 +1415,7 @@
         "message": "Contează articolele blocate"
     },
     "settingsBadgeStatus": {
-        "message": "Stare de protecție (ON)"
+        "message": "Stare de protecție (✓)"
     },
     "settingsBadgeOff": {
         "message": "Oprit"

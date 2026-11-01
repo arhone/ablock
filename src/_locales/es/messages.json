@@ -1415,7 +1415,7 @@
         "message": "Recuento de elementos bloqueados"
     },
     "settingsBadgeStatus": {
-        "message": "Estado de protección (ON)"
+        "message": "Estado de protección (✓)"
     },
     "settingsBadgeOff": {
         "message": "Apagado"

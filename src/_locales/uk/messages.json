@@ -1415,7 +1415,7 @@
         "message": "Кількість заблокованих елементів"
     },
     "settingsBadgeStatus": {
-        "message": "Статус захисту (ON)"
+        "message": "Статус захисту (✓)"
     },
     "settingsBadgeOff": {
         "message": "Вимкнено"

@@ -1415,7 +1415,7 @@
         "message": "Els articles bloquejats compten"
     },
     "settingsBadgeStatus": {
-        "message": "Estat de protecció (ON)"
+        "message": "Estat de protecció (✓)"
     },
     "settingsBadgeOff": {
         "message": "Apagat"

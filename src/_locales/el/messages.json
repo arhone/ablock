@@ -1415,7 +1415,7 @@
         "message": "Τα αποκλεισμένα στοιχεία μετράνε"
     },
     "settingsBadgeStatus": {
-        "message": "Κατάσταση προστασίας (ON)"
+        "message": "Κατάσταση προστασίας (✓)"
     },
     "settingsBadgeOff": {
         "message": "Απενεργοποίηση"

@@ -226,7 +226,7 @@ async function applyAction(status) {
     const {aBlockBadgeMode} = await chrome.storage.local.get('aBlockBadgeMode');
     const mode = ['count', 'status', 'off'].includes(aBlockBadgeMode) ? aBlockBadgeMode : 'count';
     await chrome.declarativeNetRequest.setExtensionActionOptions({displayActionCountAsBadgeText: mode === 'count' && status});
-    await chrome.action.setBadgeText({text: mode === 'status' && status ? 'ON' : ''});
+    await chrome.action.setBadgeText({text: mode === 'status' && status ? '✓' : ''});
     await applyBadgeColors();
     await chrome.action.setIcon({
         path: {32: status ? '/images/ablock-32.png' : '/images/ablock-32-black.png'}

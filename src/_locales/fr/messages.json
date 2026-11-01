@@ -1415,7 +1415,7 @@
         "message": "Nombre d'éléments bloqués"
     },
     "settingsBadgeStatus": {
-        "message": "État de protection (ON)"
+        "message": "État de protection (✓)"
     },
     "settingsBadgeOff": {
         "message": "Désactivé"

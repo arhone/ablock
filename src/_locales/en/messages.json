@@ -1415,7 +1415,7 @@
         "message": "Blocked items count"
     },
     "settingsBadgeStatus": {
-        "message": "Protection status (ON)"
+        "message": "Protection status (✓)"
     },
     "settingsBadgeOff": {
         "message": "Off"

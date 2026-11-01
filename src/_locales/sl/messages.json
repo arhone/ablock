@@ -1415,7 +1415,7 @@
         "message": "Število blokiranih elementov"
     },
     "settingsBadgeStatus": {
-        "message": "Stanje zaščite (ON)"
+        "message": "Stanje zaščite (✓)"
     },
     "settingsBadgeOff": {
         "message": "Izključeno"

@@ -1415,7 +1415,7 @@
         "message": "Broj blokiranih stavki"
     },
     "settingsBadgeStatus": {
-        "message": "Status zaštite (ON)"
+        "message": "Status zaštite (✓)"
     },
     "settingsBadgeOff": {
         "message": "Isključeno"

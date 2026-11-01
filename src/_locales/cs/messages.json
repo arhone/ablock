@@ -1415,7 +1415,7 @@
         "message": "Počet blokovaných položek"
     },
     "settingsBadgeStatus": {
-        "message": "Stav ochrany (ON)"
+        "message": "Stav ochrany (✓)"
     },
     "settingsBadgeOff": {
         "message": "Vypnuto"

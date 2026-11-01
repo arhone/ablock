@@ -1415,7 +1415,7 @@
         "message": "Blockerade objekt räknas"
     },
     "settingsBadgeStatus": {
-        "message": "Skyddsstatus (ON)"
+        "message": "Skyddsstatus (✓)"
     },
     "settingsBadgeOff": {
         "message": "Av"

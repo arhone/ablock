@@ -1415,7 +1415,7 @@
         "message": "Estetyt kohteet lasketaan"
     },
     "settingsBadgeStatus": {
-        "message": "Suojaustila (ON)"
+        "message": "Suojaustila (✓)"
     },
     "settingsBadgeOff": {
         "message": "Pois päältä"
