@@ -323,20 +323,22 @@
         }
         // Не повторяем загрузку изображений и других ресурсов страницы.
         snapshot.style.backgroundImage = 'none';
-        return {snapshot, rect, color: style.backgroundColor === 'rgba(0, 0, 0, 0)' ? style.color : style.backgroundColor};
+        return {snapshot, rect};
     }
-    async function disintegrate({snapshot, rect, color}) {
+    async function disintegrate({snapshot, rect}) {
         frames.replaceChildren();
         frames.append(snapshot);
         const animations = [snapshot.animate([{opacity: 1, transform: 'scale(1)'},
             {opacity: 0, transform: 'scale(.96)'}], {duration: 480, easing: 'ease-out', fill: 'forwards'})];
         const count = Math.min(120, Math.max(48, Math.round(rect.width * rect.height / 1000)));
+        const colors = ['#34d399', '#10b981', '#6ee7b7'];
         for (let i = 0; i < count; i++) {
             const particle = node('div');
             const x = rect.left + rect.width * Math.random();
             const y = rect.top + rect.height * Math.random();
             const size = 3 + Math.random() * 5;
-            particle.style.cssText = `position:fixed;left:${x}px;top:${y}px;width:${size}px;height:${size}px;border-radius:50%;background:${color};pointer-events:none;`;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            particle.style.cssText = `position:fixed;left:${x}px;top:${y}px;width:${size}px;height:${size}px;border-radius:50%;background:${color};box-shadow:0 0 4px rgba(52, 211, 153, 0.6);pointer-events:none;`;
             frames.append(particle);
             const dx = (Math.random() - .5) * 90;
             const dy = (Math.random() - .5) * 60 - 40;
