@@ -36,6 +36,11 @@ body[data-screen="settings"] > :not(#settings-screen, footer, #defs, script, tem
     font-size: 24px;
     line-height: 1;
     cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+#settings-back:hover {
+    background: color-mix(in srgb, var(--text) 10%, transparent);
+    color: var(--text);
 }
 [dir="rtl"] #settings-back span {
     display: block;
