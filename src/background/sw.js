@@ -232,8 +232,11 @@ async function applyAction({status, allowed}) {
         path: {32: status ? '/images/ablock-32.png' : '/images/ablock-32-black.png'}
     });
     const tabs = await chrome.tabs.query({});
-    await Promise.all(tabs.filter((tab) => tab.url && tab.id !== undefined)
-        .map((tab) => applyTabAction(tab.id, tab.url, {status, allowed}, mode)));
+    await Promise.allSettled(tabs.filter((tab) => tab.id !== undefined)
+        .map((tab) => tab.url ? applyTabAction(tab.id, tab.url, {status, allowed}, mode) : Promise.allSettled([
+            chrome.action.setBadgeText({tabId: tab.id, text: null}),
+            chrome.action.setIcon({tabId: tab.id, path: null})
+        ])));
 }
 
 /** Обновляет значок вкладки, не перекрывая штатный счётчик на защищённых сайтах. */
@@ -246,7 +249,7 @@ async function applyTabAction(tabId, url, {status, allowed}, mode) {
         host = '';
     }
     const active = status && !allowed.some((entry) => host && (host === entry || host.endsWith('.' + entry)));
-    await Promise.all([
+    await Promise.allSettled([
         chrome.action.setBadgeText({tabId, text: active ? (mode === 'status' ? '✓' : null) : ''}),
         chrome.action.setIcon({tabId, path: {32: active ? '/images/ablock-32.png' : '/images/ablock-32-black.png'}})
     ]);
