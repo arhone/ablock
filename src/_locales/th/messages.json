@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "สคริปต์จากหน้าต่างอื่นหรือที่ไม่ได้ระบุหน้าต่างจะไม่รวมในกลุ่ม"
+    },
+    "settingsTitle": {
+        "message": "การตั้งค่า"
+    },
+    "settingsBack": {
+        "message": "กลับ"
+    },
+    "settingsLang": {
+        "message": "ภาษาอินเทอร์เฟซ"
+    },
+    "settingsBadge": {
+        "message": "ตัวบ่งชี้ไอคอนส่วนขยาย"
+    },
+    "settingsBadgeCount": {
+        "message": "นับรายการที่ถูกบล็อก"
+    },
+    "settingsBadgeStatus": {
+        "message": "สถานะการป้องกัน (เปิด)"
+    },
+    "settingsBadgeOff": {
+        "message": "ปิด"
+    },
+    "settingsPickerAnimation": {
+        "message": "ภาพเคลื่อนไหวเมื่อซ่อนด้วยเครื่องมือเลือกองค์ประกอบ"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "ทำให้องค์ประกอบเคลื่อนไหวเมื่อองค์ประกอบเหล่านั้นถูกซ่อนด้วยเครื่องมือเลือก"
     }
 }

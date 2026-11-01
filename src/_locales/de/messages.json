@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Skripte anderer Fenster oder ohne Fensterzuordnung sind aus den Gruppen ausgeschlossen."
+    },
+    "settingsTitle": {
+        "message": "Einstellungen"
+    },
+    "settingsBack": {
+        "message": "Zurück"
+    },
+    "settingsLang": {
+        "message": "Schnittstellensprache"
+    },
+    "settingsBadge": {
+        "message": "Erweiterungssymbolanzeige"
+    },
+    "settingsBadgeCount": {
+        "message": "Gesperrte Artikel zählen"
+    },
+    "settingsBadgeStatus": {
+        "message": "Schutzstatus (EIN)"
+    },
+    "settingsBadgeOff": {
+        "message": "Aus"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animation beim Ausblenden mit der Elementauswahl"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animieren Sie Elemente, wenn sie ausgeblendet sind, mit der Auswahl."
     }
 }

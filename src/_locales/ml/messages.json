@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "മറ്റ് വിൻഡോകളുടെ അല്ലെങ്കിൽ വിൻഡോ ആട്രിബ്യൂഷൻ ഇല്ലാത്ത സ്ക്രിപ്റ്റുകൾ ഗ്രൂപ്പുകളിൽ നിന്ന് ഒഴിവാക്കിയിരിക്കുന്നു."
+    },
+    "settingsTitle": {
+        "message": "ക്രമീകരണങ്ങൾ"
+    },
+    "settingsBack": {
+        "message": "തിരികെ"
+    },
+    "settingsLang": {
+        "message": "ഇൻ്റർഫേസ് ഭാഷ"
+    },
+    "settingsBadge": {
+        "message": "വിപുലീകരണ ഐക്കൺ സൂചകം"
+    },
+    "settingsBadgeCount": {
+        "message": "തടഞ്ഞ ഇനങ്ങളുടെ എണ്ണം"
+    },
+    "settingsBadgeStatus": {
+        "message": "സംരക്ഷണ നില (ഓൺ)"
+    },
+    "settingsBadgeOff": {
+        "message": "ഓഫ്"
+    },
+    "settingsPickerAnimation": {
+        "message": "എലമെൻ്റ് പിക്കർ ഉപയോഗിച്ച് മറയ്ക്കുമ്പോൾ ആനിമേഷൻ"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "പിക്കർ ഉപയോഗിച്ച് ഘടകങ്ങൾ മറച്ചിരിക്കുമ്പോൾ അവയെ ആനിമേറ്റ് ചെയ്യുക."
     }
 }

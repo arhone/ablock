@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Más ablakok vagy ablakhoz nem rendelt szkriptek nem szerepelnek a csoportokban."
+    },
+    "settingsTitle": {
+        "message": "Beállítások elemre"
+    },
+    "settingsBack": {
+        "message": "Vissza"
+    },
+    "settingsLang": {
+        "message": "Interfész nyelve"
+    },
+    "settingsBadge": {
+        "message": "Kiterjesztés ikon jelző"
+    },
+    "settingsBadgeCount": {
+        "message": "A blokkolt elemek számítanak"
+    },
+    "settingsBadgeStatus": {
+        "message": "Védelmi állapot (BE)"
+    },
+    "settingsBadgeOff": {
+        "message": "Ki"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animáció elrejtéskor az elemválasztóval"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animálja az elemeket, ha el vannak rejtve a választóval."
     }
 }

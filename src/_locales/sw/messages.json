@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Hati za madirisha mengine au zisizohusishwa na dirisha zimeondolewa kwenye vikundi."
+    },
+    "settingsTitle": {
+        "message": "Mipangilio"
+    },
+    "settingsBack": {
+        "message": "Nyuma"
+    },
+    "settingsLang": {
+        "message": "Lugha ya kiolesura"
+    },
+    "settingsBadge": {
+        "message": "Kiashiria cha ikoni ya kiendelezi"
+    },
+    "settingsBadgeCount": {
+        "message": "Idadi ya vitu vilivyozuiwa"
+    },
+    "settingsBadgeStatus": {
+        "message": "Hali ya ulinzi (IMEWASHWA)"
+    },
+    "settingsBadgeOff": {
+        "message": "Imezimwa"
+    },
+    "settingsPickerAnimation": {
+        "message": "Uhuishaji unapojificha na kiteua kipengele"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Huisha vipengele vinapofichwa na kiteua."
     }
 }

@@ -160,6 +160,7 @@ function initLanguage() {
     });
     select.addEventListener('change', async () => {
         await chrome.storage.local.set({aBlockLang: select.value}).catch(() => {});
+        sessionStorage.setItem('aBlockOpenSettings', '1');
         location.reload();
     });
 }
@@ -2999,7 +3000,8 @@ async function setupPicker(tab, host) {
             'pickCancel', 'pickMatches', 'pickMatchesAll', 'pickDone', 'pickDoneList', 'pickLimit',
             'kindImage', 'kindVideo', 'kindFrame', 'kindBanner', 'kindDialog', 'kindBlock', 'pickQuote'];
         // Подстановки выполняет панель на странице, поэтому передаём шаблоны с $1.
-        const cfg = {strings: Object.fromEntries(keys.map((key) => [key, t(key, '$1')])),
+        const {aBlockPickerAnimation} = await chrome.storage.local.get('aBlockPickerAnimation').catch(() => ({}));
+        const cfg = {animation: aBlockPickerAnimation ?? true, strings: Object.fromEntries(keys.map((key) => [key, t(key, '$1')])),
             dir: document.documentElement.dir === 'rtl' ? 'rtl' : 'ltr'};
         try {
             await chrome.scripting.executeScript({target: {tabId: tab.id},
@@ -3039,6 +3041,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     await loadLocale();
     translatePage();
     initLanguage();
+    globalThis.initSettings();
     initTheme();
     setupTips();
 

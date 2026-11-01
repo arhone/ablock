@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Citu logu skripti un skripti bez loga attiecinājuma nav iekļauti grupās."
+    },
+    "settingsTitle": {
+        "message": "Iestatījumi"
+    },
+    "settingsBack": {
+        "message": "Atpakaļ"
+    },
+    "settingsLang": {
+        "message": "Interfeisa valoda"
+    },
+    "settingsBadge": {
+        "message": "Paplašinājuma ikonas indikators"
+    },
+    "settingsBadgeCount": {
+        "message": "Bloķēto vienumu skaits"
+    },
+    "settingsBadgeStatus": {
+        "message": "Aizsardzības statuss (IESLĒGTS)"
+    },
+    "settingsBadgeOff": {
+        "message": "Izslēgts"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animācija, kad slēpjas ar elementu atlasītāju"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animējiet elementus, kad tie ir paslēpti ar atlasītāju."
     }
 }

@@ -11,5 +11,32 @@
     },
     "auditZoomHint": {
         "message": "Impide a las personas con baja visión ampliar la página en el celular"
+    },
+    "settingsTitle": {
+        "message": "Configuración"
+    },
+    "settingsBack": {
+        "message": "Atrás"
+    },
+    "settingsLang": {
+        "message": "Idioma de la interfaz"
+    },
+    "settingsBadge": {
+        "message": "Indicador del icono de extensión"
+    },
+    "settingsBadgeCount": {
+        "message": "Recuento de elementos bloqueados"
+    },
+    "settingsBadgeStatus": {
+        "message": "Estado de protección (ON)"
+    },
+    "settingsBadgeOff": {
+        "message": "Apagado"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animación al esconderse con el selector de elementos."
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Anima elementos cuando estén ocultos con el selector."
     }
 }

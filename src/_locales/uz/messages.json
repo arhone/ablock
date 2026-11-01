@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Boshqa oynalarning yoki oynaga atributsiyasi yo‘q skriptlar guruhlardan chiqarilgan."
+    },
+    "settingsTitle": {
+        "message": "Sozlamalar"
+    },
+    "settingsBack": {
+        "message": "Orqaga"
+    },
+    "settingsLang": {
+        "message": "Interfeys tili"
+    },
+    "settingsBadge": {
+        "message": "Kengaytma belgisi ko'rsatkichi"
+    },
+    "settingsBadgeCount": {
+        "message": "Bloklangan elementlar soni"
+    },
+    "settingsBadgeStatus": {
+        "message": "Himoya holati (yoqilgan)"
+    },
+    "settingsBadgeOff": {
+        "message": "Oʻchirilgan"
+    },
+    "settingsPickerAnimation": {
+        "message": "Element tanlash vositasi bilan yashirishda animatsiya"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Elementlar tanlovchi bilan yashiringanida ularni jonlantiring."
     }
 }

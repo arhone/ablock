@@ -223,7 +223,10 @@ async function applyBadgeColors(value) {
  * @param {boolean} status
  */
 async function applyAction(status) {
-    await chrome.declarativeNetRequest.setExtensionActionOptions({displayActionCountAsBadgeText: status});
+    const {aBlockBadgeMode} = await chrome.storage.local.get('aBlockBadgeMode');
+    const mode = ['count', 'status', 'off'].includes(aBlockBadgeMode) ? aBlockBadgeMode : 'count';
+    await chrome.declarativeNetRequest.setExtensionActionOptions({displayActionCountAsBadgeText: mode === 'count' && status});
+    await chrome.action.setBadgeText({text: mode === 'status' && status ? 'ON' : ''});
     await applyBadgeColors();
     await chrome.action.setIcon({
         path: {32: status ? '/images/ablock-32.png' : '/images/ablock-32-black.png'}
@@ -329,6 +332,12 @@ chrome.runtime.onInstalled.addListener(async () => {
     }
 });
 chrome.runtime.onStartup.addListener(() => update());
+
+chrome.storage.onChanged.addListener((changes, area) => {
+    if (area === 'local' && changes.aBlockBadgeMode) {
+        enqueue(async () => applyAction((await getSettings()).status));
+    }
+});
 
 // Расширенный режим включили или выключили: скрипты на всех сайтах и слежение за запросами.
 // Разрешение на удаление данных: окно расширения могло закрыться, пока его запрашивало, — удаляем здесь

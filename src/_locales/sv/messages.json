@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Skript från andra fönster eller utan fönstertilldelning ingår inte i grupperna."
+    },
+    "settingsTitle": {
+        "message": "Inställningar"
+    },
+    "settingsBack": {
+        "message": "Tillbaka"
+    },
+    "settingsLang": {
+        "message": "Gränssnittsspråk"
+    },
+    "settingsBadge": {
+        "message": "Tilläggsikonindikator"
+    },
+    "settingsBadgeCount": {
+        "message": "Blockerade objekt räknas"
+    },
+    "settingsBadgeStatus": {
+        "message": "Skyddsstatus (ON)"
+    },
+    "settingsBadgeOff": {
+        "message": "Av"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animation när du gömmer dig med elementväljaren"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animera element när de är dolda med väljaren."
     }
 }

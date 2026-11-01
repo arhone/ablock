@@ -2,5 +2,32 @@
     "locale": {
         "message": "en-GB",
         "description": "BCP 47 code for number and date formatting; do not translate"
+    },
+    "settingsTitle": {
+        "message": "Settings"
+    },
+    "settingsBack": {
+        "message": "Back"
+    },
+    "settingsLang": {
+        "message": "Interface language"
+    },
+    "settingsBadge": {
+        "message": "Extension icon indicator"
+    },
+    "settingsBadgeCount": {
+        "message": "Blocked items count"
+    },
+    "settingsBadgeStatus": {
+        "message": "Protection status (ON)"
+    },
+    "settingsBadgeOff": {
+        "message": "Off"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animation when hiding with the element picker"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animate elements when they are hidden with the picker."
     }
 }

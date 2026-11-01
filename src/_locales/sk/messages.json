@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Skripty iných okien alebo bez priradenia okna sú zo skupín vylúčené."
+    },
+    "settingsTitle": {
+        "message": "Nastavenia"
+    },
+    "settingsBack": {
+        "message": "Späť"
+    },
+    "settingsLang": {
+        "message": "Jazyk rozhrania"
+    },
+    "settingsBadge": {
+        "message": "Indikátor ikony rozšírenia"
+    },
+    "settingsBadgeCount": {
+        "message": "Počet blokovaných položiek"
+    },
+    "settingsBadgeStatus": {
+        "message": "Stav ochrany (ZAPNUTÉ)"
+    },
+    "settingsBadgeOff": {
+        "message": "Vypnuté"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animácia pri skrývaní pomocou výberu prvkov"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animujte prvky, keď sú skryté pomocou nástroja na výber."
     }
 }

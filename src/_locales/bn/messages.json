@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "অন্য উইন্ডোর বা উইন্ডো আরোপণহীন স্ক্রিপ্ট দল থেকে বাদ দেওয়া হয়েছে।"
+    },
+    "settingsTitle": {
+        "message": "সেটিংস"
+    },
+    "settingsBack": {
+        "message": "ফিরে"
+    },
+    "settingsLang": {
+        "message": "ইন্টারফেস ভাষা"
+    },
+    "settingsBadge": {
+        "message": "এক্সটেনশন আইকন সূচক"
+    },
+    "settingsBadgeCount": {
+        "message": "অবরুদ্ধ আইটেম গণনা"
+    },
+    "settingsBadgeStatus": {
+        "message": "সুরক্ষা স্থিতি (চালু)"
+    },
+    "settingsBadgeOff": {
+        "message": "বন্ধ"
+    },
+    "settingsPickerAnimation": {
+        "message": "এলিমেন্ট পিকারের সাথে লুকিয়ে থাকার সময় অ্যানিমেশন"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "উপাদানগুলিকে অ্যানিমেট করুন যখন সেগুলি পিকারের সাথে লুকানো থাকে৷"
     }
 }

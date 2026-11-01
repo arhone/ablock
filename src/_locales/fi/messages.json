@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Muiden ikkunoiden tai ilman ikkunakohdistusta olevat skriptit on jätetty ryhmistä pois."
+    },
+    "settingsTitle": {
+        "message": "Asetukset"
+    },
+    "settingsBack": {
+        "message": "Takaisin"
+    },
+    "settingsLang": {
+        "message": "Käyttöliittymän kieli"
+    },
+    "settingsBadge": {
+        "message": "Laajennuskuvakkeen ilmaisin"
+    },
+    "settingsBadgeCount": {
+        "message": "Estetyt kohteet lasketaan"
+    },
+    "settingsBadgeStatus": {
+        "message": "Suojaustila (ON)"
+    },
+    "settingsBadgeOff": {
+        "message": "Pois päältä"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animaatio piilotettaessa elementtivalitsimella"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animoi elementtejä, kun ne ovat piilossa poimijalla."
     }
 }

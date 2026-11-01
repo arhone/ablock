@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Σενάρια άλλων παραθύρων ή χωρίς απόδοση παραθύρου εξαιρούνται από τις ομάδες."
+    },
+    "settingsTitle": {
+        "message": "Ρυθμίσεις"
+    },
+    "settingsBack": {
+        "message": "Πίσω"
+    },
+    "settingsLang": {
+        "message": "Γλώσσα διεπαφής"
+    },
+    "settingsBadge": {
+        "message": "Ένδειξη εικονιδίου επέκτασης"
+    },
+    "settingsBadgeCount": {
+        "message": "Τα αποκλεισμένα στοιχεία μετράνε"
+    },
+    "settingsBadgeStatus": {
+        "message": "Κατάσταση προστασίας (ON)"
+    },
+    "settingsBadgeOff": {
+        "message": "Απενεργοποίηση"
+    },
+    "settingsPickerAnimation": {
+        "message": "Κινούμενα σχέδια κατά την απόκρυψη με τον επιλογέα στοιχείων"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Ζωντανέψτε στοιχεία όταν είναι κρυμμένα με το εργαλείο επιλογής."
     }
 }

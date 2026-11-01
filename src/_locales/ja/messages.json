@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "他のウィンドウのスクリプトやウィンドウへの帰属が不明なスクリプトはグループから除外されています。"
+    },
+    "settingsTitle": {
+        "message": "設定"
+    },
+    "settingsBack": {
+        "message": "戻る"
+    },
+    "settingsLang": {
+        "message": "インターフェース言語"
+    },
+    "settingsBadge": {
+        "message": "拡張機能アイコンインジケーター"
+    },
+    "settingsBadgeCount": {
+        "message": "ブロックされたアイテム数"
+    },
+    "settingsBadgeStatus": {
+        "message": "保護状態(ON)"
+    },
+    "settingsBadgeOff": {
+        "message": "オフ"
+    },
+    "settingsPickerAnimation": {
+        "message": "要素ピッカーで非表示にするときのアニメーション"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "ピッカーで要素が非表示になっているときに要素をアニメーション化します。"
     }
 }

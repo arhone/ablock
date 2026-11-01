@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Kitų langų arba langui nepriskirti scenarijai neįtraukti į grupes."
+    },
+    "settingsTitle": {
+        "message": "Nustatymai"
+    },
+    "settingsBack": {
+        "message": "Atgal"
+    },
+    "settingsLang": {
+        "message": "Sąsajos kalba"
+    },
+    "settingsBadge": {
+        "message": "Plėtinio piktogramos indikatorius"
+    },
+    "settingsBadgeCount": {
+        "message": "Užblokuoti elementai skaičiuojami"
+    },
+    "settingsBadgeStatus": {
+        "message": "Apsaugos būsena (ĮJUNGTA)"
+    },
+    "settingsBadgeOff": {
+        "message": "Išjungta"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animacija slepiant elementų rinkikliu"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animuokite elementus, kai jie yra paslėpti su rinkikliu."
     }
 }

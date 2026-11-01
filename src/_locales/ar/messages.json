@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "تُستبعد من المجموعات برامج النوافذ الأخرى أو البرامج التي لم تُنسب إلى نافذة."
+    },
+    "settingsTitle": {
+        "message": "الإعدادات"
+    },
+    "settingsBack": {
+        "message": "العودة"
+    },
+    "settingsLang": {
+        "message": "لغة الواجهة"
+    },
+    "settingsBadge": {
+        "message": "مؤشر أيقونة التمديد"
+    },
+    "settingsBadgeCount": {
+        "message": "عدد العناصر المحظورة"
+    },
+    "settingsBadgeStatus": {
+        "message": "حالة الحماية (تشغيل)"
+    },
+    "settingsBadgeOff": {
+        "message": "إيقاف"
+    },
+    "settingsPickerAnimation": {
+        "message": "الرسوم المتحركة عند الاختباء باستخدام منتقي العناصر"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "قم بتحريك العناصر عندما تكون مخفية باستخدام المنتقي."
     }
 }

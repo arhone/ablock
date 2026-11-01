@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Skrypty innych okien lub bez przypisania okna wykluczono z grup."
+    },
+    "settingsTitle": {
+        "message": "Ustawienia"
+    },
+    "settingsBack": {
+        "message": "Powrót"
+    },
+    "settingsLang": {
+        "message": "Język interfejsu"
+    },
+    "settingsBadge": {
+        "message": "Wskaźnik ikony rozszerzenia"
+    },
+    "settingsBadgeCount": {
+        "message": "Liczba zablokowanych elementów"
+    },
+    "settingsBadgeStatus": {
+        "message": "Stan ochrony (WŁ.)"
+    },
+    "settingsBadgeOff": {
+        "message": "Wyłączone"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animacja podczas ukrywania za pomocą selektora elementów"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animuj elementy, gdy są ukryte za pomocą selektora."
     }
 }

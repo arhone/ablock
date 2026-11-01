@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Diğer pencerelerin veya pencere ilişkilendirmesi olmayan betikleri gruplara dahil edilmez."
+    },
+    "settingsTitle": {
+        "message": "Ayarlar"
+    },
+    "settingsBack": {
+        "message": "Geri"
+    },
+    "settingsLang": {
+        "message": "Arayüz dili"
+    },
+    "settingsBadge": {
+        "message": "Uzantı simgesi göstergesi"
+    },
+    "settingsBadgeCount": {
+        "message": "Engellenen öğelerin sayısı"
+    },
+    "settingsBadgeStatus": {
+        "message": "Koruma durumu (AÇIK)"
+    },
+    "settingsBadgeOff": {
+        "message": "Kapalı"
+    },
+    "settingsPickerAnimation": {
+        "message": "Öğe seçiciyle gizlenirken animasyon"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Öğeleri gizlendiklerinde seçiciyle canlandırın."
     }
 }

@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "其他視窗或未歸屬於視窗的指令碼不計入分組。"
+    },
+    "settingsTitle": {
+        "message": "設定"
+    },
+    "settingsBack": {
+        "message": "返回"
+    },
+    "settingsLang": {
+        "message": "介面語言"
+    },
+    "settingsBadge": {
+        "message": "擴充圖示指示器"
+    },
+    "settingsBadgeCount": {
+        "message": "被阻止的項目計數"
+    },
+    "settingsBadgeStatus": {
+        "message": "保護狀態（ON）"
+    },
+    "settingsBadgeOff": {
+        "message": "關閉"
+    },
+    "settingsPickerAnimation": {
+        "message": "使用元素選擇器隱藏時的動畫"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "當元素被選擇器隱藏時，對元素進行動畫處理。"
     }
 }

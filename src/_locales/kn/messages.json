@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "ಇತರ ಕಿಟಕಿಗಳ ಅಥವಾ ಕಿಟಕಿ ಆರೋಪಣೆಯಿಲ್ಲದ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳನ್ನು ಗುಂಪುಗಳಿಂದ ಹೊರಗಿಡಲಾಗಿದೆ."
+    },
+    "settingsTitle": {
+        "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+    },
+    "settingsBack": {
+        "message": "ಹಿಂದೆ"
+    },
+    "settingsLang": {
+        "message": "ಇಂಟರ್ಫೇಸ್ ಭಾಷೆ"
+    },
+    "settingsBadge": {
+        "message": "ವಿಸ್ತರಣೆ ಐಕಾನ್ ಸೂಚಕ"
+    },
+    "settingsBadgeCount": {
+        "message": "ನಿರ್ಬಂಧಿಸಲಾದ ಐಟಂಗಳ ಎಣಿಕೆ"
+    },
+    "settingsBadgeStatus": {
+        "message": "ರಕ್ಷಣೆ ಸ್ಥಿತಿ (ಆನ್)"
+    },
+    "settingsBadgeOff": {
+        "message": "ಆಫ್"
+    },
+    "settingsPickerAnimation": {
+        "message": "ಎಲಿಮೆಂಟ್ ಪಿಕ್ಕರ್‌ನೊಂದಿಗೆ ಮರೆಮಾಡುವಾಗ ಅನಿಮೇಷನ್"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "ಅಂಶಗಳನ್ನು ಪಿಕ್ಕರ್‌ನೊಂದಿಗೆ ಮರೆಮಾಡಿದಾಗ ಅನಿಮೇಟ್ ಮಾಡಿ."
     }
 }

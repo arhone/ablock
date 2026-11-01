@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Skript fra andre vinduer eller uten vindustilordning er utelatt fra gruppene."
+    },
+    "settingsTitle": {
+        "message": "Innstillinger"
+    },
+    "settingsBack": {
+        "message": "Tilbake"
+    },
+    "settingsLang": {
+        "message": "Grensesnittspråk"
+    },
+    "settingsBadge": {
+        "message": "Utvidelsesikonindikator"
+    },
+    "settingsBadgeCount": {
+        "message": "Blokkerte varer teller"
+    },
+    "settingsBadgeStatus": {
+        "message": "Beskyttelsesstatus (PÅ)"
+    },
+    "settingsBadgeOff": {
+        "message": "Av"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animasjon når du skjuler deg med elementvelgeren"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animer elementer når de er skjult med velgeren."
     }
 }

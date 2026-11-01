@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Скрипти інших вікон або без атрибуції вікна виключені з груп."
+    },
+    "settingsTitle": {
+        "message": "Налаштування"
+    },
+    "settingsBack": {
+        "message": "Назад"
+    },
+    "settingsLang": {
+        "message": "Мова інтерфейсу"
+    },
+    "settingsBadge": {
+        "message": "Індикатор значка розширення"
+    },
+    "settingsBadgeCount": {
+        "message": "Кількість заблокованих елементів"
+    },
+    "settingsBadgeStatus": {
+        "message": "Статус захисту (ON)"
+    },
+    "settingsBadgeOff": {
+        "message": "Вимкнено"
+    },
+    "settingsPickerAnimation": {
+        "message": "Анімація під час приховування за допомогою засобу вибору елемента"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Анімуйте елементи, коли вони приховані за допомогою засобу вибору."
     }
 }

@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Hindi kasama sa mga grupo ang mga script mula sa ibang window o walang pag-uugnay sa window."
+    },
+    "settingsTitle": {
+        "message": "Mga setting"
+    },
+    "settingsBack": {
+        "message": "Bumalik"
+    },
+    "settingsLang": {
+        "message": "Wika ng interface"
+    },
+    "settingsBadge": {
+        "message": "Tagapahiwatig ng icon ng extension"
+    },
+    "settingsBadgeCount": {
+        "message": "Bilang ng mga naka-block na item"
+    },
+    "settingsBadgeStatus": {
+        "message": "Status ng proteksyon (ON)"
+    },
+    "settingsBadgeOff": {
+        "message": "Naka-off"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animation kapag nagtatago gamit ang tagapili ng elemento"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "I-animate ang mga elemento kapag nakatago ang mga ito kasama ng picker."
     }
 }

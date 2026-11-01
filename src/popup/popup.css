@@ -1107,27 +1107,9 @@ footer a:hover {
 .icon-link svg:where(:not([fill="none"])) {
     fill: currentColor;
 }
-/* Язык окна: значок глобуса, поверх него прозрачный select */
-.lang {
-    position: relative;
-    display: flex;
-    align-items: center;
-    color: var(--muted);
-    transition: color 0.15s ease;
-}
-.lang:hover,
-.lang:has(:focus-visible) {
-    color: var(--text);
-}
-.lang svg {
-    width: 16px;
-    height: 16px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.3;
-}
 /* Тема окна: луна в светлой (включить тёмную), солнце в тёмной */
-#theme {
+#theme,
+#settings-open {
     display: flex;
     align-items: center;
     padding: 0;
@@ -1138,7 +1120,9 @@ footer a:hover {
     transition: color 0.15s ease;
 }
 #theme:hover,
-#theme:focus-visible {
+#theme:focus-visible,
+#settings-open:hover,
+#settings-open:focus-visible {
     color: var(--text);
 }
 .loading > svg:not(.ring) {
@@ -1166,17 +1150,6 @@ footer a:hover {
     position: absolute;
     width: 0;
     height: 0;
-}
-#lang {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-#lang option {
-    background: var(--bg);
-    color: var(--text);
 }
 #donate::before {
     content: "♥ " / "";

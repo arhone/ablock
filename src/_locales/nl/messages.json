@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Scripts uit andere vensters of zonder venstertoewijzing zijn uitgesloten van de groepen."
+    },
+    "settingsTitle": {
+        "message": "Instellingen"
+    },
+    "settingsBack": {
+        "message": "Terug"
+    },
+    "settingsLang": {
+        "message": "Interfacetaal"
+    },
+    "settingsBadge": {
+        "message": "Extensiepictogramindicator"
+    },
+    "settingsBadgeCount": {
+        "message": "Geblokkeerde items tellen mee"
+    },
+    "settingsBadgeStatus": {
+        "message": "Beveiligingsstatus (AAN)"
+    },
+    "settingsBadgeOff": {
+        "message": "Uit"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animatie bij verbergen met de elementkiezer"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animeer elementen wanneer ze verborgen zijn met de kiezer."
     }
 }

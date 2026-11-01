@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Les scripts d’autres fenêtres ou sans attribution de fenêtre sont exclus des groupes."
+    },
+    "settingsTitle": {
+        "message": "Paramètres"
+    },
+    "settingsBack": {
+        "message": "Retour"
+    },
+    "settingsLang": {
+        "message": "Langue de l'interface"
+    },
+    "settingsBadge": {
+        "message": "Indicateur d'icône d'extension"
+    },
+    "settingsBadgeCount": {
+        "message": "Nombre d'éléments bloqués"
+    },
+    "settingsBadgeStatus": {
+        "message": "État de protection (ON)"
+    },
+    "settingsBadgeOff": {
+        "message": "Désactivé"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animation lors du masquage avec le sélecteur d'éléments"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Animez les éléments lorsqu’ils sont masqués avec le sélecteur."
     }
 }

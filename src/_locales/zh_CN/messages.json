@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "其他窗口或未归属于窗口的脚本不计入分组。"
+    },
+    "settingsTitle": {
+        "message": "设置"
+    },
+    "settingsBack": {
+        "message": "返回"
+    },
+    "settingsLang": {
+        "message": "界面语言"
+    },
+    "settingsBadge": {
+        "message": "扩展图标指示器"
+    },
+    "settingsBadgeCount": {
+        "message": "被阻止的项目计数"
+    },
+    "settingsBadgeStatus": {
+        "message": "保护状态（ON）"
+    },
+    "settingsBadgeOff": {
+        "message": "关闭"
+    },
+    "settingsPickerAnimation": {
+        "message": "使用元素选择器隐藏时的动画"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "当元素被选择器隐藏时，对元素进行动画处理。"
     }
 }

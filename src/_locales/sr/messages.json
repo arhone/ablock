@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Скрипте других прозора или без приписивања прозору искључене су из група."
+    },
+    "settingsTitle": {
+        "message": "Подешавања"
+    },
+    "settingsBack": {
+        "message": "Назад"
+    },
+    "settingsLang": {
+        "message": "Језик интерфејса"
+    },
+    "settingsBadge": {
+        "message": "Индикатор иконе проширења"
+    },
+    "settingsBadgeCount": {
+        "message": "Блокиране ставке се рачунају"
+    },
+    "settingsBadgeStatus": {
+        "message": "Статус заштите (УКЉУЧЕНО)"
+    },
+    "settingsBadgeOff": {
+        "message": "Офф"
+    },
+    "settingsPickerAnimation": {
+        "message": "Анимација при скривању помоћу бирача елемената"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Анимирајте елементе када су сакривени помоћу бирача."
     }
 }

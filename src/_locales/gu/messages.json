@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "અન્ય વિન્ડોની અથવા વિન્ડો આરોપણ વગરની સ્ક્રિપ્ટ જૂથોમાંથી બાકાત છે."
+    },
+    "settingsTitle": {
+        "message": "સેટિંગ્સ"
+    },
+    "settingsBack": {
+        "message": "પાછળ"
+    },
+    "settingsLang": {
+        "message": "ઇન્ટરફેસ ભાષા"
+    },
+    "settingsBadge": {
+        "message": "એક્સ્ટેંશન આયકન સૂચક"
+    },
+    "settingsBadgeCount": {
+        "message": "અવરોધિત વસ્તુઓની ગણતરી"
+    },
+    "settingsBadgeStatus": {
+        "message": "સુરક્ષા સ્થિતિ (ચાલુ)"
+    },
+    "settingsBadgeOff": {
+        "message": "બંધ"
+    },
+    "settingsPickerAnimation": {
+        "message": "એલિમેન્ટ પીકર સાથે છુપાવતી વખતે એનિમેશન"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "જ્યારે તત્વો પીકર સાથે છુપાયેલા હોય ત્યારે એનિમેટ કરો."
     }
 }

@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Басқа терезелердің немесе терезеге атрибуциясы жоқ скрипттер топтардан шығарылған."
+    },
+    "settingsTitle": {
+        "message": "Параметрлер"
+    },
+    "settingsBack": {
+        "message": "Артқа"
+    },
+    "settingsLang": {
+        "message": "Интерфейс тілі"
+    },
+    "settingsBadge": {
+        "message": "Кеңейтім белгішесі индикаторы"
+    },
+    "settingsBadgeCount": {
+        "message": "Бұғатталған элементтер саны"
+    },
+    "settingsBadgeStatus": {
+        "message": "Қорғау күйі (ҚОСУ)"
+    },
+    "settingsBadgeOff": {
+        "message": "Өшірулі"
+    },
+    "settingsPickerAnimation": {
+        "message": "Элемент таңдау құралымен жасыру кезіндегі анимация"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Таңдауышпен жасырылған элементтерді жандандырыңыз."
     }
 }

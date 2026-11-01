@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Tập lệnh của cửa sổ khác hoặc không được quy thuộc cho cửa sổ bị loại khỏi các nhóm."
+    },
+    "settingsTitle": {
+        "message": "Cài đặt"
+    },
+    "settingsBack": {
+        "message": "Quay lại"
+    },
+    "settingsLang": {
+        "message": "Ngôn ngữ giao diện"
+    },
+    "settingsBadge": {
+        "message": "Chỉ báo biểu tượng tiện ích mở rộng"
+    },
+    "settingsBadgeCount": {
+        "message": "Số mục bị chặn"
+    },
+    "settingsBadgeStatus": {
+        "message": "Trạng thái bảo vệ (BẬT)"
+    },
+    "settingsBadgeOff": {
+        "message": "Tắt"
+    },
+    "settingsPickerAnimation": {
+        "message": "Hoạt ảnh khi ẩn bằng bộ chọn phần tử"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Tạo hiệu ứng cho các phần tử khi chúng bị ẩn bằng bộ chọn."
     }
 }

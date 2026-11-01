@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Els scripts d’altres finestres o sense atribució de finestra s’exclouen dels grups."
+    },
+    "settingsTitle": {
+        "message": "Configuració"
+    },
+    "settingsBack": {
+        "message": "Enrere"
+    },
+    "settingsLang": {
+        "message": "Llenguatge de la interfície"
+    },
+    "settingsBadge": {
+        "message": "Indicador d'icona d'extensió"
+    },
+    "settingsBadgeCount": {
+        "message": "Els articles bloquejats compten"
+    },
+    "settingsBadgeStatus": {
+        "message": "Estat de protecció (ON)"
+    },
+    "settingsBadgeOff": {
+        "message": "Apagat"
+    },
+    "settingsPickerAnimation": {
+        "message": "Animació quan s'amaga amb el selector d'elements"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Anima els elements quan estan ocults amb el selector."
     }
 }

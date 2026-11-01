@@ -1398,5 +1398,32 @@
     },
     "loafExcluded": {
         "message": "Скриптовете от други прозорци или без атрибуция на прозорец са изключени от групите."
+    },
+    "settingsTitle": {
+        "message": "Настройки"
+    },
+    "settingsBack": {
+        "message": "Назад"
+    },
+    "settingsLang": {
+        "message": "Език на интерфейса"
+    },
+    "settingsBadge": {
+        "message": "Индикатор за икона на разширение"
+    },
+    "settingsBadgeCount": {
+        "message": "Брой блокирани елементи"
+    },
+    "settingsBadgeStatus": {
+        "message": "Състояние на защита (ВКЛ.)"
+    },
+    "settingsBadgeOff": {
+        "message": "Изкл"
+    },
+    "settingsPickerAnimation": {
+        "message": "Анимация при скриване с инструмента за избор на елемент"
+    },
+    "settingsPickerAnimationHint": {
+        "message": "Анимирайте елементи, когато са скрити с инструмента за избор."
     }
 }
