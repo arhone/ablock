@@ -142,16 +142,22 @@
         const search = document.getElementById('search');
         const overlay = document.getElementById('ad-overlay');
         const background = document.querySelectorAll('body > header, body > main, body > footer');
+        let overlayVisible = false;
         function syncOverlayFocus() {
             const style = getComputedStyle(overlay);
-            const visible = overlay.isConnected && overlay.getClientRects().length > 0
+            const rect = overlay.getBoundingClientRect();
+            // У position: fixed offsetParent бывает null и у видимого баннера.
+            const visible = overlay.isConnected && (overlay.offsetParent !== null || style.position === 'fixed')
+                && rect.width > 0 && rect.height > 0
                 && style.display !== 'none' && style.visibility === 'visible' && Number(style.opacity) > 0;
             const hadFocus = overlay.contains(document.activeElement);
+            const lostFocus = overlayVisible && document.activeElement === document.body;
+            overlayVisible = visible;
             for (const element of background) element.inert = visible;
             // Прозрачность сама по себе не исключает кнопки баннера из порядка Tab.
             overlay.inert = !visible;
             overlay.setAttribute('aria-modal', String(visible));
-            if (!visible && hadFocus) search.focus({preventScroll: true});
+            if (!visible && (hadFocus || lostFocus)) search.focus({preventScroll: true});
             return visible;
         }
         // Пипетка может скрыть баннер правилом CSS во внедрённом элементе style.
@@ -159,6 +165,13 @@
             subtree: true, childList: true, characterData: true,
             attributes: true, attributeFilter: ['style', 'class', 'hidden']
         });
+        // CSSOM / chrome.scripting.insertCSS не создают DOM-мутаций.
+        new ResizeObserver(syncOverlayFocus).observe(overlay);
+        new IntersectionObserver(syncOverlayFocus).observe(overlay);
+        // visibility и opacity могут измениться без смены размеров или пересечения.
+        for (const type of ['pointerdown', 'mousemove', 'touchstart']) {
+            window.addEventListener(type, syncOverlayFocus, {capture: true, passive: true});
+        }
         document.addEventListener('keydown', event => {
             if (event.key !== 'Tab' || !syncOverlayFocus()) return;
             const controls = [...overlay.querySelectorAll('select, button')]
