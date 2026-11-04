@@ -491,7 +491,7 @@ function handleExtensionMessage(request, sendResponse) {
         void enqueue(async () => {
             const settings = await getSettings();
             const allowed = settings.allowed.filter((host) => host !== site);
-            await applySettings({...settings, allowed: enabled ? allowed : [...allowed, site].sort((a, b) => a.localeCompare(b))});
+            await applySettings({...settings, allowed: enabled ? allowed : [...allowed, site].sort((a, b) => Number(a > b) - Number(a < b))});
         }).then(() => sendResponse(true), () => sendResponse(false));
         return true;
     }
