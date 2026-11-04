@@ -73,6 +73,7 @@ try {
     const call = (method, params) => send(method, params, sessionId);
     await call('Page.enable');
     await call('Network.enable');
+    // NOSONAR(S5332): локальный headless-Chrome, протокол http блокируется намеренно
     await call('Network.setBlockedURLs', {urls: ['http' + '://*', 'https://*']});
     await call('Emulation.setEmulatedMedia', {features: [{name: 'prefers-color-scheme', value: 'light'}]});
     for (const {input, width, height, out, name, formats} of jobs) {

@@ -326,9 +326,10 @@
         snapshot.style.backgroundImage = 'none';
         return {snapshot, rect};
     }
-    // Криптостойкий аналог Math.random() — SonarQube S2245.
+    const randomBuffer = new Uint32Array(1);
+    // Криптостойкий генератор случайных чисел для анимации распада.
     function secureRandom() {
-        return crypto.getRandomValues(new Uint32Array(1))[0] / 0x100000000;
+        return crypto.getRandomValues(randomBuffer)[0] / 0x100000000;
     }
     async function disintegrate({snapshot, rect}) {
         frames.replaceChildren();
