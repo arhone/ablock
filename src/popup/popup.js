@@ -3567,6 +3567,7 @@ function renderStats(stats) {
         formatSize(stats?.bytes || 0).replaceAll(' ', '\u00a0')).replace(/≈\s*/g, '≈\u00a0');
     document.getElementById('stats-text').title = t('statsTitle',
         new Date(stats?.since || Date.now()).toLocaleDateString(LANG));
+    document.getElementById('stats-text').tabIndex = 0; // Пояснение — и с клавиатуры (setupTips)
 }
 
 /**
