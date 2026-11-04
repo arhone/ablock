@@ -6,8 +6,8 @@
  *
  * Запуск: node tools/update-hosting.js
  */
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const SOURCE = 'https://stat.ripe.net/data/announced-prefixes/data.json?resource=AS';
 const OUTPUT = path.join(__dirname, '..', 'src', 'data', 'hosting.json');
@@ -68,23 +68,23 @@ const PROVIDERS = [
 /**
  * Префиксы, анонсируемые автономной системой
  * @param {number} asn
+ * @param {number} attempt
  * @returns {Promise<string[]>}
  */
-async function prefixes(asn) {
-    for (let attempt = 1; ; attempt++) {
-        try {
-            const response = await fetch(SOURCE + asn, {signal: AbortSignal.timeout(60000)});
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}`);
-            }
-            const {data} = await response.json();
-            return data.prefixes.map((p) => p.prefix);
-        } catch (e) {
-            if (attempt === 3) {
-                throw new Error(`AS${asn}: ${e.message}`);
-            }
-            await new Promise((r) => setTimeout(r, 3000 * attempt));
+async function prefixes(asn, attempt = 1) {
+    try {
+        const response = await fetch(SOURCE + asn, {signal: AbortSignal.timeout(60000)});
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
         }
+        const {data} = await response.json();
+        return data.prefixes.map((p) => p.prefix);
+    } catch (e) {
+        if (attempt >= 3) {
+            throw new Error(`AS${asn}: ${e.message}`);
+        }
+        await new Promise((r) => setTimeout(r, 3000 * attempt));
+        return prefixes(asn, attempt + 1);
     }
 }
 
@@ -102,9 +102,9 @@ function toRange(cidr) {
         const [head, tail = ''] = ip.split('::');
         const left = head ? head.split(':') : [];
         const right = tail ? tail.split(':') : [];
-        const groups = [...left, ...Array(8 - left.length - right.length).fill('0'), ...right];
+        const groups = [...left, ...new Array(8 - left.length - right.length).fill('0'), ...right];
         for (const group of groups) {
-            start = (start << 16n) + BigInt(parseInt(group || '0', 16));
+            start = (start << 16n) + BigInt(Number.parseInt(group || '0', 16));
         }
     } else {
         for (const part of ip.split('.')) {
@@ -122,10 +122,10 @@ function toRange(cidr) {
  * @returns {bigint[][]}
  */
 function merge(ranges) {
-    ranges.sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0));
+    ranges.sort((a, b) => Number(a[0] > b[0]) - Number(a[0] < b[0]));
     const result = [];
     for (const range of ranges) {
-        const last = result[result.length - 1];
+        const last = result.at(-1);
         if (last && range[0] <= last[1] + 1n) {
             last[1] = range[1] > last[1] ? range[1] : last[1];
         } else {
@@ -139,13 +139,9 @@ async function main() {
     // Диапазоны: IPv4 — числами, IPv6 — 32 hex-цифрами (без BigInt в JSON)
     const v4 = [];
     const v6 = [];
+    const loaded = await Promise.all(PROVIDERS.map((provider) => Promise.all(provider.asn.map((asn) => prefixes(asn)))));
     for (const [index, provider] of PROVIDERS.entries()) {
-        const list = new Set();
-        for (const asn of provider.asn) {
-            for (const prefix of await prefixes(asn)) {
-                list.add(prefix);
-            }
-        }
+        const list = new Set(loaded[index].flat());
         const ranges4 = merge([...list].filter((p) => !p.includes(':')).map(toRange));
         const ranges6 = merge([...list].filter((p) => p.includes(':')).map(toRange));
         v4.push(...ranges4.map(([a, b]) => [Number(a), Number(b), index]));

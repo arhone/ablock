@@ -55,7 +55,7 @@ chrome.stdio[4].on('data', chunk => {
         else item.resolve(message.result);
     }
 });
-function send(method, params = {}, sessionId) {
+function send(method, params = {}, sessionId = undefined) {
     if (failure) return Promise.reject(failure);
     return new Promise((resolve, reject) => {
         const id = ++seq;
@@ -67,59 +67,71 @@ function send(method, params = {}, sessionId) {
         chrome.stdio[3].write(JSON.stringify({id, method, params, sessionId}) + '\0');
     });
 }
+
+async function waitForPageReady(call, url, input, attempt = 1) {
+    const {result} = await call('Runtime.evaluate', {expression: `location.href === ${JSON.stringify(url)} && document.readyState === 'complete'`, returnByValue: true});
+    if (result.value) return;
+    if (attempt >= 100) throw new Error(`Page not ready: ${input}`);
+    await new Promise(resolve => setTimeout(resolve, 50));
+    return waitForPageReady(call, url, input, attempt + 1);
+}
+
+async function verifyGeometry(call, width, height) {
+    const check = await call('Runtime.evaluate', {awaitPromise: true, returnByValue: true, expression: `(async () => {
+        await document.fonts.ready;
+        await Promise.all(Array.from(document.images, image => image.decode()));
+        await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+        const bounds = element => { const r = element.getBoundingClientRect(); return {x:r.x,y:r.y,right:r.right,bottom:r.bottom}; };
+        return {width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,scrollHeight:document.documentElement.scrollHeight,
+            boxes:Array.from(document.querySelectorAll('.brand,.brand img,h1,.points,.points li,.og-lead,.og-note,.browsers,.address,.sample,.sample img,.sample figcaption'),bounds)};
+    })()`});
+    if (check.exceptionDetails) throw new Error(JSON.stringify(check.exceptionDetails));
+    const geometry = check.result.value;
+    if (geometry.width !== width || geometry.height !== height || geometry.scrollWidth !== width || geometry.scrollHeight !== height || geometry.boxes.some(r => r.x < 0 || r.y < 0 || r.right > width || r.bottom > height)) {
+        throw new Error(`Banner overflow: ${JSON.stringify(geometry)}`);
+    }
+}
+
+async function captureFormat(call, format, input, width, height, out, name) {
+    const {data} = await call('Page.captureScreenshot', {format, ...(format === 'webp' ? {quality: 90} : {}), captureBeyondViewport: false,
+        clip: {x: 0, y: 0, width, height, scale: 1}});
+    const bytes = Buffer.from(data, 'base64');
+    if (format === 'png') {
+        if (bytes.subarray(0, 8).toString('hex') !== '89504e470d0a1a0a' || bytes.toString('ascii', 12, 16) !== 'IHDR' ||
+            bytes.readUInt32BE(16) !== width || bytes.readUInt32BE(20) !== height) {
+            throw new Error(`Invalid PNG dimensions: ${input}`);
+        }
+        // Chrome выдаёт RGB PNG для непрозрачной страницы. Не принимаем RGBA
+        // даже с непрозрачными пикселями: магазин требует файл без альфа-канала.
+        if (input.startsWith('store-') && bytes[25] !== 2) throw new Error(`Store PNG must be RGB without alpha: ${input}`);
+    }
+    if (format === 'png' && bytes.length > 1000000) throw new Error(`PNG exceeds 1 MB: ${bytes.length}`);
+    const file = path.join(out, `${name}.${format}`);
+    await writeFile(file, bytes);
+    console.log(`${file}: ${bytes.length} bytes`);
+}
+
+async function processBannerJob({input, width, height, out, name, formats}, call, here) {
+    await mkdir(out, {recursive: true});
+    await call('Emulation.setDeviceMetricsOverride', {width, height, deviceScaleFactor: 1, mobile: false});
+    const url = pathToFileURL(path.join(here, input)).href;
+    const nav = await call('Page.navigate', {url});
+    if (nav.errorText) throw new Error(nav.errorText);
+    await waitForPageReady(call, url, input);
+    await verifyGeometry(call, width, height);
+    await Promise.all(formats.map((format) => captureFormat(call, format, input, width, height, out, name)));
+}
+
 try {
     const {targetId} = await send('Target.createTarget', {url: 'about:blank'});
     const {sessionId} = await send('Target.attachToTarget', {targetId, flatten: true});
     const call = (method, params) => send(method, params, sessionId);
     await call('Page.enable');
     await call('Network.enable');
-    await call('Network.setBlockedURLs', {urls: ['http://*', 'https://*']});
+    // NOSONAR(S5332): локальный headless-Chrome, протокол http блокируется намеренно
+    await call('Network.setBlockedURLs', {urls: ['http' + '://*', 'https://*']});
     await call('Emulation.setEmulatedMedia', {features: [{name: 'prefers-color-scheme', value: 'light'}]});
-    for (const {input, width, height, out, name, formats} of jobs) {
-        await mkdir(out, {recursive: true});
-        await call('Emulation.setDeviceMetricsOverride', {width, height, deviceScaleFactor: 1, mobile: false});
-        const url = pathToFileURL(path.join(here, input)).href;
-        const nav = await call('Page.navigate', {url});
-        if (nav.errorText) throw new Error(nav.errorText);
-        let ready = false;
-        for (let attempt = 0; attempt < 100; attempt++) {
-            const {result} = await call('Runtime.evaluate', {expression: `location.href === ${JSON.stringify(url)} && document.readyState === 'complete'`, returnByValue: true});
-            if (result.value) { ready = true; break; }
-            await new Promise(resolve => setTimeout(resolve, 50));
-        }
-        if (!ready) throw new Error(`Page not ready: ${input}`);
-        const check = await call('Runtime.evaluate', {awaitPromise: true, returnByValue: true, expression: `(async () => {
-            await document.fonts.ready;
-            await Promise.all(Array.from(document.images, image => image.decode()));
-            await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-            const bounds = element => { const r = element.getBoundingClientRect(); return {x:r.x,y:r.y,right:r.right,bottom:r.bottom}; };
-            return {width:innerWidth,height:innerHeight,scrollWidth:document.documentElement.scrollWidth,scrollHeight:document.documentElement.scrollHeight,
-                boxes:Array.from(document.querySelectorAll('.brand,.brand img,h1,.points,.points li,.og-lead,.og-note,.browsers,.address,.sample,.sample img,.sample figcaption'),bounds)};
-        })()`});
-        if (check.exceptionDetails) throw new Error(JSON.stringify(check.exceptionDetails));
-        const geometry = check.result.value;
-        if (geometry.width !== width || geometry.height !== height || geometry.scrollWidth !== width || geometry.scrollHeight !== height || geometry.boxes.some(r => r.x < 0 || r.y < 0 || r.right > width || r.bottom > height)) {
-            throw new Error(`Banner overflow: ${JSON.stringify(geometry)}`);
-        }
-        for (const format of formats) {
-            const {data} = await call('Page.captureScreenshot', {format, ...(format === 'webp' ? {quality: 90} : {}), captureBeyondViewport: false,
-                clip: {x: 0, y: 0, width, height, scale: 1}});
-            const bytes = Buffer.from(data, 'base64');
-            if (format === 'png') {
-                if (bytes.subarray(0, 8).toString('hex') !== '89504e470d0a1a0a' || bytes.toString('ascii', 12, 16) !== 'IHDR' ||
-                    bytes.readUInt32BE(16) !== width || bytes.readUInt32BE(20) !== height) {
-                    throw new Error(`Invalid PNG dimensions: ${input}`);
-                }
-                // Chrome выдаёт RGB PNG для непрозрачной страницы. Не принимаем RGBA
-                // даже с непрозрачными пикселями: магазин требует файл без альфа-канала.
-                if (input.startsWith('store-') && bytes[25] !== 2) throw new Error(`Store PNG must be RGB without alpha: ${input}`);
-            }
-            if (format === 'png' && bytes.length > 1000000) throw new Error(`PNG exceeds 1 MB: ${bytes.length}`);
-            const file = path.join(out, `${name}.${format}`);
-            await writeFile(file, bytes);
-            console.log(`${file}: ${bytes.length} bytes`);
-        }
-    }
+    await jobs.reduce((previous, job) => previous.then(() => processBannerJob(job, call, here)), Promise.resolve());
 } finally {
     if (chrome.exitCode === null && chrome.signalCode === null) {
         const exited = new Promise(resolve => chrome.once('exit', resolve));

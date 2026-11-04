@@ -48,11 +48,11 @@ body {
     color: var(--text);
     font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
-a { color: var(--on-text); }
+a { color: var(--on-text); overflow-wrap: anywhere; }
 a:focus-visible, .btn:focus-visible { outline: 3px solid var(--on-text); outline-offset: 3px; }
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
-header.top { display: flex; align-items: center; gap: 24px; padding: 18px 0; }
+header.top { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding: 18px 0; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 20px; color: var(--text); text-decoration: none; }
 .brand img { width: 32px; height: 32px; }
 nav.menu { display: flex; gap: 22px; margin-left: auto; font-size: 15px; }
@@ -73,7 +73,7 @@ h1 em { font-style: normal; color: var(--on-text); }
 .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 12px; background: var(--btn); color: var(--btn-text); font-weight: 700; text-decoration: none; font-size: 17px; }
 .btn:hover { filter: brightness(1.08); }
 .btn-note { font-size: 14px; color: var(--muted); }
-.report { position: relative; }
+.report { position: relative; margin: 0; }
 .report img { display: block; width: 100%; max-width: 360px; height: 560px; object-fit: cover; object-position: top; border-radius: 18px; box-shadow: 0 30px 60px -20px rgba(10, 20, 40, 0.45), 0 0 0 1px var(--border); margin-left: auto; }
 .report::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 120px; border-radius: 0 0 18px 18px; background: linear-gradient(transparent, var(--bg)); max-width: 360px; margin-left: auto; }
 .report figcaption { position: absolute; left: -40px; top: 320px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; font-size: 14px; box-shadow: 0 10px 30px -10px rgba(10, 20, 40, 0.35); max-width: 200px; }
@@ -138,13 +138,11 @@ footer a:hover { color: var(--text); }
 
 /* Shared layout for localized pages. */
 .hero-grid > *, .two > *, .privacy > * { min-width: 0; }
-.report { margin: 0; }
 .privacy .sub { margin: 0; }
 .final .sub { margin: 0 auto 28px; }
 .prose { max-width: 760px; padding-top: 40px; padding-bottom: 72px; }
 .prose h1 { font-size: clamp(32px, 5vw, 44px); }
 .prose p { max-width: 42em; }
-a { overflow-wrap: anywhere; }
 @media (max-width: 600px) {
     .eyebrow { border-radius: 12px; }
     .btn { padding-left: 16px; padding-right: 16px; }
@@ -160,7 +158,6 @@ a { overflow-wrap: anywhere; }
 .privacy-nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 28px 0; }
 
 /* Выбор языка доступен без JavaScript на каждой странице. */
-header.top { flex-wrap: wrap; }
 .language { position: relative; margin-inline-start: auto; font-size: 14px; }
 .language summary { cursor: pointer; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); }
 .language summary:focus-visible, .language-suggestion button:focus-visible { outline: 3px solid var(--on-text); outline-offset: 3px; }

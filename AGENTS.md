@@ -17,3 +17,11 @@
 - Новых разрешений не добавлять, `src/manifest.json` без автора не менять.
 - Списки фильтров и `src/content/cookies.css` — чужие (GPL, CC BY-SA): атрибуцию не убирать.
 - Поддерживаются только Chrome и Яндекс Браузер. В промо — без Meta (Facebook, Instagram).
+
+## Статический анализ (SonarQube)
+
+- При запросе на проверку кода через SonarQube использовать официальный образ сканера:
+  `docker run --rm --network host --env-file .env -v "$PWD:/usr/src" sonarsource/sonar-scanner-cli -Dsonar.branch.name="$(git branch --show-current)"`
+- Для инкрементальной проверки файлов задачи сканировать только изменённые файлы через `-Dsonar.inclusions="$CHANGED"`, где `CHANGED=$(git diff --name-only --diff-filter=d <база>...HEAD | paste -sd, -)`.
+- Обязательно указывать текущую основную рабочую ветку проекта в `-Dsonar.branch.name` (а не имя временной ветки worktree `work/*` и не фиксированный `main`).
+

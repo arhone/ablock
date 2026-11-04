@@ -40,7 +40,7 @@
         footer { padding: 22px 4%; border-top: 1px solid #292929; color: #888; font-size: 12px; text-align: center; }
         footer a { color: var(--orange); text-decoration: none; }
         footer a:hover { text-decoration: underline; }
-        #ad-overlay { position: fixed; inset: 0; z-index: 999999; overflow: auto; padding: 48px 20px; background: #000c; }
+        #ad-overlay { position: fixed; inset: 0; z-index: 999999; overflow: auto; width: auto; height: auto; max-width: none; max-height: none; margin: 0; padding: 48px 20px; border: 0; background: #000c; color: #f5f5f5; }
         .overlay-language { position: absolute; top: 20px; right: 4%; }
         .modal { width: min(100%, 610px); margin: max(24px, calc((100dvh - 570px) / 2)) auto 0; padding: 38px 44px 28px; border: 1px solid white; border-radius: 12px; background: #141414; box-shadow: 0 24px 100px #000b; text-align: center; }
         .modal .brand { font-size: 43px; }
@@ -71,7 +71,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="brand" role="img" aria-label="onlyadhub">onlyad<span>hub</span></div>
+        <div class="brand">onlyad<span>hub</span></div>
         <label class="search">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 5 5"></path></svg>
             <input id="search" type="search" placeholder="Поиск рекламных видео..." aria-label="Поиск рекламных видео">
@@ -84,10 +84,10 @@
         <p id="empty" class="empty" data-text="empty" hidden>Реклама не найдена. Даже мы удивлены.</p>
     </main>
     <footer><span data-text="footer">Демонстрация инструмента скрытия для</span> <a href="https://ablock.arh.one/">ablock.arh.one</a></footer>
-    <div id="ad-overlay" role="dialog" aria-modal="true" aria-labelledby="welcome">
+    <dialog id="ad-overlay" open aria-modal="true" aria-labelledby="welcome">
         <select class="language overlay-language" aria-label="Язык / Language"><option value="ru">RU</option><option value="en">EN</option></select>
         <section class="modal" aria-labelledby="welcome">
-            <div class="brand" role="img" aria-label="onlyadhub">onlyad<span>hub</span></div>
+            <div class="brand">onlyad<span>hub</span></div>
             <p class="eyebrow" data-text="eyebrow">Ваше внимание — наша страсть</p>
             <h2 id="welcome" data-text="welcome">Добро пожаловать в рай потребителя рекламы</h2>
             <p class="intro" data-text="intro">Здесь каждый ролик что-нибудь продаёт. Никакого контента между рекламой — только выгодные предложения и скидки, которые нельзя упустить. Вы ещё ничего не купили? Мы уже приготовили следующую рекламу.</p>
@@ -95,7 +95,7 @@
             <button class="yes" type="button" data-text="yes">Да</button>
             <p class="disclaimer"><span data-text="disclaimer">Внимание: данный сайт является вымышленным и создан исключительно для демонстрации инструмента скрытия элементов (пипетки).</span> <span data-text="footer">Демонстрация инструмента скрытия для</span> <a href="https://ablock.arh.one/">ablock.arh.one</a></p>
         </section>
-    </div>
+    </dialog>
     <script>
         'use strict';
         const copy = {
