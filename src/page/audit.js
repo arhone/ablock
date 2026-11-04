@@ -772,7 +772,7 @@
         }
         const applicable = data.kind === 'text' ? ['ttfb', 'elementRenderDelay'] : Object.keys(data.phases);
         if (applicable.every((key) => data.phases[key] !== null)) {
-            data.longestPhase = applicable.reduce((a, b) => data.phases[a] >= data.phases[b] ? a : b);
+            data.longestPhase = applicable.reduce((a, b) => data.phases[a] >= data.phases[b] ? a : b, applicable[0]);
         }
         return section;
     };
@@ -1097,4 +1097,7 @@
                 .slice(0, 3)
         }
     };
-})();
+})().catch((e) => {
+    console.error(e);
+    return null;
+});

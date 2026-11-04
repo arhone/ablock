@@ -15,7 +15,7 @@
         let closed = false;
         let changed = false;
         let busy = false;
-        let deletion = Promise.resolve();
+        let deletion = Promise.resolve(false);
         let confirmTimer = null;
         let current = null;
         let desired = null;
@@ -169,7 +169,7 @@
             if (event.key === 'Escape') {
                 event.preventDefault();
                 event.stopImmediatePropagation();
-                close();
+                void close();
             }
         };
         dispose = close;
@@ -285,10 +285,10 @@
                     }
                     updateSelection();
                 });
-                row.addEventListener('pointerenter', () => { hovered = item; highlight(item); });
-                row.addEventListener('pointerleave', () => { hovered = null; highlight(focused); });
-                row.addEventListener('focusin', () => { focused = item; highlight(item); });
-                row.addEventListener('focusout', () => { focused = null; highlight(hovered); });
+                row.addEventListener('pointerenter', () => { hovered = item; void highlight(item); });
+                row.addEventListener('pointerleave', () => { hovered = null; void highlight(focused); });
+                row.addEventListener('focusin', () => { focused = item; void highlight(item); });
+                row.addEventListener('focusout', () => { focused = null; void highlight(hovered); });
                 list.append(row);
             }
             updateSelection();
@@ -380,7 +380,7 @@
         remove.addEventListener('click', () => erase(false));
         clear.addEventListener('click', () => {
             if (confirmTimer) {
-                erase(true);
+                void erase(true);
                 return;
             }
             confirmTimer = setTimeout(disarm, 4000);

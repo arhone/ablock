@@ -323,7 +323,7 @@ async function applySettings(settings) {
     const extended = await chrome.permissions.contains(EXTENDED);
     // Набор косметических фильтров зависит от настройки cookie: соберётся заново при следующем запросе
     cosmetic = null;
-    if (state) {
+    if (state !== null) {
         (await state).status = status;
     }
     const results = await Promise.allSettled([
@@ -358,25 +358,25 @@ function update(changes = {}) {
 }
 
 chrome.runtime.onInstalled.addListener(async () => {
-    update();
+    void update();
     // Дата установки — для одноразовых просьб оценить и поддержать. У обновившихся отсчёт идёт с обновления
     const {aBlockInstalled} = await chrome.storage.local.get('aBlockInstalled');
     if (!aBlockInstalled) {
         await chrome.storage.local.set({aBlockInstalled: Date.now()});
     }
 });
-chrome.runtime.onStartup.addListener(() => update());
+chrome.runtime.onStartup.addListener(() => { void update(); });
 
 chrome.storage.onChanged.addListener((changes, area) => {
     if (area === 'local' && changes.aBlockBadgeMode) {
-        enqueue(async () => applyAction(await getSettings()));
+        void enqueue(async () => applyAction(await getSettings()));
     }
 });
 
 chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
     const url = change.url || (change.status === 'loading' ? tab.url : '');
     if (url) {
-        updateTabAction(tabId, url);
+        void updateTabAction(tabId, url);
     }
 });
 
@@ -384,7 +384,7 @@ chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
 // Разрешение на удаление данных: окно расширения могло закрыться, пока его запрашивало, — удаляем здесь
 chrome.permissions.onAdded.addListener(async (permissions) => {
     listenRequests();
-    update();
+    void update();
     if (permissions.permissions?.includes('browsingData')) {
         const {aBlockClear} = await chrome.storage.session.get('aBlockClear');
         await chrome.storage.session.remove('aBlockClear');
@@ -406,13 +406,13 @@ chrome.permissions.onRemoved.addListener(() => {
         }
         await saveTabs();
     });
-    update();
+    void update();
 });
 
 // Сообщения сайтов — косметика и пипетка; настройки и данные вкладок — только из окна расширения
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (sender.tab?.id !== undefined && sender.frameId === 0 && sender.url) {
-        updateTabAction(sender.tab.id, sender.url);
+        void updateTabAction(sender.tab.id, sender.url);
     }
     if (request?.pick || request?.custom === true) {
         const host = customSenderHost(sender);
@@ -442,38 +442,38 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         return;
     }
     if (typeof request?.actionTab?.id === 'number' && typeof request.actionTab.url === 'string') {
-        updateTabAction(request.actionTab.id, request.actionTab.url).then(() => sendResponse(true));
+        updateTabAction(request.actionTab.id, request.actionTab.url).then(() => sendResponse(true)).catch(console.error);
         return true;
     }
     if (request?.customToggle) {
-        enqueue(() => toggleCustom(request.customToggle).then(() => true, () => false)).then(sendResponse);
+        void enqueue(() => toggleCustom(request.customToggle).then(() => true, () => false)).then(sendResponse).catch(console.error);
         return true;
     }
     if (request?.customRemove || request?.customClear) {
         const data = request.customRemove || request.customClear;
-        enqueue(() => removeCustom(data, !!request.customClear).then(() => true, () => false)).then(sendResponse);
+        void enqueue(() => removeCustom(data, !!request.customClear).then(() => true, () => false)).then(sendResponse).catch(console.error);
         return true;
     }
     if (typeof request?.status === 'boolean') {
-        update({status: request.status}).then(() => sendResponse(true));
+        void update({status: request.status}).then(() => sendResponse(true)).catch(console.error);
         return true;
     }
     if (typeof request?.dark === 'boolean') {
-        applyBadgeColors(request.dark).then(() => sendResponse(true));
+        void applyBadgeColors(request.dark).then(() => sendResponse(true)).catch(console.error);
         return true;
     }
     if (typeof request?.cookies === 'boolean') {
-        update({cookies: request.cookies}).then(() => sendResponse(true));
+        void update({cookies: request.cookies}).then(() => sendResponse(true)).catch(console.error);
         return true;
     }
     // Защита на одном сайте: {site: 'example.com', enabled: false}
     if (typeof request?.site === 'string' && typeof request.enabled === 'boolean') {
         const {site, enabled} = request;
-        enqueue(async () => {
+        void enqueue(async () => {
             const settings = await getSettings();
             const allowed = settings.allowed.filter((host) => host !== site);
-            await applySettings({...settings, allowed: enabled ? allowed : [...allowed, site].sort()});
-        }).then(() => sendResponse(true));
+            await applySettings({...settings, allowed: enabled ? allowed : [...allowed, site].sort((a, b) => a.localeCompare(b))});
+        }).then(() => sendResponse(true)).catch(console.error);
         return true;
     }
     if (typeof request?.clear?.tabId === 'number') {
@@ -664,14 +664,14 @@ chrome.runtime.onConnect.addListener((port) => {
         }
     };
     port.onMessage.addListener((item) => {
-        enqueue(async () => {
+        void enqueue(async () => {
             current = null;
             if (Number.isInteger(item?.tabId) && typeof item.documentId === 'string' && validCustomSelector(item.s)) {
                 current = {tabId: item.tabId, documentId: item.documentId, s: item.s, hidden: item.hidden === true};
             }
         });
     });
-    port.onDisconnect.addListener(() => enqueue(restore));
+    port.onDisconnect.addListener(() => void enqueue(restore));
 });
 
 /*

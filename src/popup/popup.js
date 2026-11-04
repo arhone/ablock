@@ -470,7 +470,7 @@ function collectPageInfo() {
         ready: navigation?.domContentLoadedEventEnd > 0 ? navigation.domContentLoadedEventEnd - navigation.startTime : null,
         age: performance.now(),
         timeOrigin: performance.timeOrigin,
-        domains: [...domains].sort(),
+        domains: [...domains].sort((a, b) => a.localeCompare(b)),
         requests: [...requests].slice(0, 3000),
         weight: {
             bytes: known + estimated,
@@ -535,7 +535,8 @@ function fitBadges() {
     const width = (badge) => badge.offsetWidth - (badge.style.whiteSpace === 'normal' ? 0.5 : 0);
     const left = new Set(badges);
     while (overflows() && left.size) {
-        const widest = [...left].reduce((a, b) => (width(b) > width(a) ? b : a));
+        const items = [...left];
+        const widest = items.reduce((a, b) => (width(b) > width(a) ? b : a), items[0]);
         const size = parseFloat(getComputedStyle(widest).fontSize);
         const wraps = widest.style.whiteSpace === 'normal';
         if (size > 9.5) {
@@ -744,7 +745,7 @@ async function renderSite(tab, server, onLoadTime) {
         let done = false;
         const listener = (id, change) => {
             if (id === tab.id && change.status === 'complete') {
-                refresh();
+                void refresh();
             }
         };
         const stop = () => {
@@ -984,7 +985,7 @@ async function findCompanies(info, server, status) {
     for (const company of companies) {
         const hosts = [...new Set(keys
             .filter((key) => company.domains.some((d) => matchesDomain(key, d)))
-            .map((key) => key.split('/')[0]))].sort();
+            .map((key) => key.split('/')[0]))].sort((a, b) => a.localeCompare(b));
         if (hosts.length) {
             const state = !status ? 'bad' : !server ? 'warn' : hosts.every((h) => blockedHosts.has(h)) ? 'good' : 'bad';
             found.push({name: company.name, hosts, state});
@@ -3026,7 +3027,7 @@ async function setupPicker(tab, host) {
     });
     chrome.storage.onChanged.addListener((changes, area) => {
         if (area === 'local' && changes.aBlockCustom) {
-            refresh();
+            void refresh();
         }
     });
     chrome.permissions.onAdded.addListener(refresh);
@@ -3084,7 +3085,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const siteRow = document.getElementById('site-row');
     const site = document.getElementById('site');
     if (host) {
-        setupNote(host);
+        void setupNote(host);
     }
     siteRow.hidden = !host || /^[\d.]+$|:|^\[/.test(host);
     site.checked = !allowedEntry;
@@ -3176,7 +3177,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             return;
         }
         if (status && allowedEntry) {
-            setSite(true);
+            await setSite(true);
             return;
         }
         setProtectionBusy(true);
@@ -3189,7 +3190,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         status = !status;
         render();
         if (isSite) {
-            renderBlocked(tab, info, active(), server);
+            await renderBlocked(tab, info, active(), server);
             await reloadSite();
         } else {
             setProtectionBusy(false);

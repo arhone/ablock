@@ -235,7 +235,11 @@ body.loading {
     max-width: 100%;
     margin: 0;
     padding: 2px 8px;
+    border: none;
     border-radius: 6px;
+    background: none;
+    font: inherit;
+    outline: none;
     color: var(--muted);
     font-style: italic;
     text-align: center;

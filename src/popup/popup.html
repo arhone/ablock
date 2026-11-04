@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title data-i18n="extName"></title>
     <meta charset="utf-8">
@@ -32,8 +32,8 @@
             <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.5 2.5l3 3L6 13H3v-3z M8.5 4.5l3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
         </button>
     </div>
-    <p id="note" hidden tabindex="0" role="button" data-i18n-title="noteTitle"></p>
-    <textarea id="note-input" hidden rows="2" maxlength="200" data-i18n-placeholder="notePlaceholder" data-i18n-title="noteTitle"></textarea>
+    <button type="button" id="note" hidden data-i18n-title="noteTitle"></button>
+    <textarea id="note-input" hidden rows="2" maxlength="200" aria-label="Note" data-i18n-placeholder="notePlaceholder" data-i18n-title="noteTitle"></textarea>
     <section id="score" hidden>
         <div id="score-head">
             <button id="score-more" type="button" aria-expanded="false" aria-controls="score-body">
