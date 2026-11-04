@@ -3,6 +3,20 @@
 ## Линтеры
 `npm run lint` (ESLint для `src/` и `tools/`, Stylelint для `src/**/*.css`), Node.js 20.19+. JSON — `tools/pack.sh` проверяет перед упаковкой; отдельный файл — `node -e 'JSON.parse(require("fs").readFileSync(process.argv[1]))' <файл>`.
 
+## Статический анализ (SonarQube)
+Команда запуска сканера через Docker:
+```bash
+docker run --rm --network host --env-file .env -v "$PWD:/usr/src" sonarsource/sonar-scanner-cli -Dsonar.branch.name="$(git branch --show-current)"
+```
+Для инкрементальной проверки файлов задачи сканировать только изменённые файлы:
+```bash
+CHANGED=$(git diff --name-only --diff-filter=d <база>...HEAD | paste -sd, -)
+docker run --rm --network host --env-file <REPO>/.env -v "$PWD:/usr/src" sonarsource/sonar-scanner-cli -Dsonar.branch.name="$MAIN_BRANCH" -Dsonar.inclusions="$CHANGED"
+```
+Обязательно указывать текущую основную рабочую ветку проекта в `-Dsonar.branch.name` (а не имя временной ветки worktree `work/*` и не фиксированный `main`).
+Дашборд и отчёты: `http://127.0.0.1:19090/dashboard?id=arhone-ablock`.
+Обязательный гейт перед слиянием (`merged`) или шаг проверки для тестировщика/безопасника.
+
 ## Окно в headless Chrome
 - Chrome 137+ не грузит расширение флагом `--load-extension` — только через CDP pipe (`--remote-debugging-pipe`) и `Extensions.loadUnpacked` с путём к папке.
 - Расширение просит часть прав по запросу (optional) и получает доступ к вкладке по клику (activeTab). В headless клика нет, поэтому для стенда — копия `src/` с этими правами в обязательных и `declarativeNetRequestFeedback` (иначе «Реклама —»). Сам `src/manifest.json` не менять.

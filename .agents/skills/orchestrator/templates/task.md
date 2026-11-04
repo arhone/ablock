@@ -1,5 +1,6 @@
 ---
 id: {{ID}}
+issue: {{ISSUE}}
 title: {{TITLE}}
 status: idea
 owner:
