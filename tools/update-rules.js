@@ -13,8 +13,8 @@
  * Запуск: node tools/update-rules.js
  * Только проверка собственных правил, без скачивания: node tools/update-rules.js --check
  */
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const SOURCE = 'https://raw.githubusercontent.com/uBlockOrigin/uBOL-home/main/chromium/rulesets';
 // Пути ниже — от папки расширения
@@ -54,7 +54,7 @@ const COSMETIC_OUTPUT = 'rules/cosmetic';
 
 // Только блокировка: исключения (allow) из списков не берём, никакой рекламе поблажек нет.
 // redirect и modifyHeaders требуют доступа ко всем сайтам.
-const ACTIONS = ['block'];
+const ACTIONS = new Set(['block']);
 
 // Условия, которые старые версии Chrome не понимают и могут проигнорировать, расширив правило
 const UNSUPPORTED_CONDITIONS = ['responseHeaders', 'excludedResponseHeaders', 'topDomains', 'excludedTopDomains'];
@@ -87,7 +87,7 @@ async function download(url) {
  * @returns {boolean}
  */
 function isSupported(rule) {
-    return ACTIONS.includes(rule.action.type)
+    return ACTIONS.has(rule.action.type)
         && !UNSUPPORTED_CONDITIONS.some((key) => key in rule.condition);
 }
 
@@ -103,9 +103,29 @@ function findChrome() {
         '/usr/bin/chromium',
         '/usr/bin/chromium-browser',
         '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-        'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
+        String.raw`C:\Program Files\Google\Chrome\Application\chrome.exe`
     ];
     return candidates.find((p) => p && fs.existsSync(p)) || null;
+}
+
+/**
+ * Ждёт появления service worker расширения в Chrome
+ * @param {(method: string, params?: Object, sessionId?: string) => Promise<*>} send
+ * @param {string} extensionId
+ * @param {number} attempt
+ * @returns {Promise<Object>}
+ */
+async function waitForWorker(send, extensionId, attempt = 1) {
+    await new Promise((r) => setTimeout(r, 100));
+    const {targetInfos} = await send('Target.getTargets');
+    const worker = targetInfos.find((t) => t.type === 'service_worker' && t.url.includes(extensionId));
+    if (worker) {
+        return worker;
+    }
+    if (attempt >= 50) {
+        throw new Error('Service worker проверки не запустился');
+    }
+    return waitForWorker(send, extensionId, attempt + 1);
 }
 
 /**
@@ -121,8 +141,8 @@ async function checkRegexes(conditions) {
         return conditions.map(() => false);
     }
 
-    const {spawn} = require('child_process');
-    const os = require('os');
+    const {spawn} = require('node:child_process');
+    const os = require('node:os');
     const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'ablock-'));
     const extension = path.join(tmp, 'extension');
     fs.mkdirSync(extension);
@@ -154,7 +174,7 @@ async function checkRegexes(conditions) {
             pending.delete(message.id);
         }
     });
-    const send = (method, params = {}, sessionId) => new Promise((resolve, reject) => {
+    const send = (method, params = {}, sessionId = undefined) => new Promise((resolve, reject) => {
         const id = ++lastId;
         pending.set(id, (m) => m.error ? reject(new Error(`${method}: ${m.error.message}`)) : resolve(m.result));
         browser.stdio[3].write(JSON.stringify({id, method, params, sessionId}) + '\0');
@@ -162,15 +182,7 @@ async function checkRegexes(conditions) {
 
     try {
         const {id: extensionId} = await send('Extensions.loadUnpacked', {path: extension});
-        let worker;
-        for (let i = 0; i < 50 && !worker; i++) {
-            await new Promise((r) => setTimeout(r, 100));
-            const {targetInfos} = await send('Target.getTargets');
-            worker = targetInfos.find((t) => t.type === 'service_worker' && t.url.includes(extensionId));
-        }
-        if (!worker) {
-            throw new Error('Service worker проверки не запустился');
-        }
+        const worker = await waitForWorker(send, extensionId);
         const {sessionId} = await send('Target.attachToTarget', {targetId: worker.targetId, flatten: true});
         const items = conditions.map((c) => ({regex: c.regexFilter, isCaseSensitive: !!c.isUrlFilterCaseSensitive}));
         const {result, exceptionDetails} = await send('Runtime.evaluate', {
@@ -241,16 +253,28 @@ function coveredBy(domain, domains) {
 }
 
 /**
+ * Упорядочивает поля объекта по именам, чтобы одинаковые правила давали одинаковый ключ
+ * @param {*} value
+ * @returns {*}
+ */
+function sortKeys(value) {
+    if (!value || typeof value !== 'object' || Array.isArray(value)) {
+        return value;
+    }
+    const entries = Object.keys(value)
+        .sort((a, b) => Number(a > b) - Number(a < b))
+        .map((k) => [k, sortKeys(value[k])]);
+    return Object.fromEntries(entries);
+}
+
+/**
  * Ключ правила для поиска повторов: действие и условие с упорядоченными полями.
  * Приоритет не учитывается: в списках только блокировка, и неважно, какое из одинаковых правил сработает.
  * @param {Object} rule
  * @returns {string}
  */
 function ruleKey(rule) {
-    const sort = (value) => value && typeof value === 'object' && !Array.isArray(value)
-        ? Object.fromEntries(Object.keys(value).sort((a, b) => (a < b ? -1 : a > b ? 1 : 0)).map((k) => [k, sort(value[k])]))
-        : value;
-    return JSON.stringify([sort(rule.action), sort(rule.condition)]);
+    return JSON.stringify([sortKeys(rule.action), sortKeys(rule.condition)]);
 }
 
 /**
@@ -342,6 +366,38 @@ async function loadRegions() {
 }
 
 /**
+ * Собственное правило, которое уже есть в основных списках
+ * @param {Object} rule
+ * @param {string} where
+ * @param {Map<string, string>} keys
+ * @param {Map<string, string>} domains
+ * @returns {string[]} описания найденного
+ */
+function checkRedundantRule(rule, where, keys, domains) {
+    const found = [];
+    if (rule.action.type !== 'block') {
+        return found;
+    }
+    if (isDomainBlock(rule)) {
+        for (const domain of rule.condition.requestDomains) {
+            const list = coveredBy(domain, domains);
+            if (list) {
+                found.push(`${where}: ${domain} — уже в ${list}`);
+            }
+        }
+        return found;
+    }
+    const same = keys.get(ruleKey(rule));
+    // ||домен/путь: домен может быть заблокирован целиком
+    const host = rule.condition.urlFilter?.match(/^\|\|([a-z0-9.-]+)/i)?.[1];
+    const list = same || (host && coveredBy(host.toLowerCase(), domains));
+    if (list) {
+        found.push(`${where}: ${rule.condition.urlFilter || rule.condition.regexFilter} — уже в ${list}`);
+    }
+    return found;
+}
+
+/**
  * Собственные правила, которые уже есть в основных списках.
  * Список про cookie и региональные не в счёт: они бывают выключены, и тогда собственное правило нужно
  * @param {Object<string, Object[]>} lists id → правила
@@ -366,26 +422,7 @@ function findRedundant(lists, own) {
     const found = [];
     for (const resource of own) {
         for (const rule of JSON.parse(fs.readFileSync(path.join(ROOT, resource.path), 'utf8'))) {
-            const where = `${resource.path} #${rule.id}`;
-            if (rule.action.type !== 'block') {
-                continue;
-            }
-            if (isDomainBlock(rule)) {
-                for (const domain of rule.condition.requestDomains) {
-                    const list = coveredBy(domain, domains);
-                    if (list) {
-                        found.push(`${where}: ${domain} — уже в ${list}`);
-                    }
-                }
-                continue;
-            }
-            const same = keys.get(ruleKey(rule));
-            // ||домен/путь: домен может быть заблокирован целиком
-            const host = rule.condition.urlFilter?.match(/^\|\|([a-z0-9.-]+)/i)?.[1];
-            const list = same || (host && coveredBy(host.toLowerCase(), domains));
-            if (list) {
-                found.push(`${where}: ${rule.condition.urlFilter || rule.condition.regexFilter} — уже в ${list}`);
-            }
+            found.push(...checkRedundantRule(rule, `${resource.path} #${rule.id}`, keys, domains));
         }
     }
     return found;
@@ -414,7 +451,7 @@ function reportRedundant(lists, own) {
  * @returns {*}
  */
 function scriptConstant(source, name) {
-    const match = source.match(new RegExp(`const ${name} = (?:new Map\\()?(?:/\\* \\d+ \\*/)?(.*?)\\)?;\\n`));
+    const match = new RegExp(String.raw`const ${name} = (?:new Map\()?(?:/\* \d+ \*/)?(.*?)\)?;\n`).exec(source);
     if (!match) {
         throw new Error(`нет ${name}`);
     }
@@ -429,8 +466,37 @@ function scriptConstant(source, name) {
  * @returns {?string} '#id' или '.class'
  */
 function leadingToken(selector) {
-    const match = selector.match(/^[#.][\w\u00a0-\uffff-]+(?=[^\w\u00a0-\uffff\\-]|$)/);
+    const match = /^[#.][\w\u00a0-\uffff-]+(?=[^\w\u00a0-\uffff\\-]|$)/.exec(selector);
     return match ? match[0] : null;
+}
+
+/**
+ * Разбирает generic-скрипт uBOL: общие селекторы, селекторы по классу/id и исключения сайтов
+ * @param {string} source
+ * @param {Object} result
+ */
+function parseGenericScript(source, result) {
+    const lowly = scriptConstant(source, 'lowlyGeneric');
+    const high = scriptConstant(source, 'highlyGeneric');
+    const exceptions = scriptConstant(source, 'exceptions');
+    const hostnames = scriptConstant(source, 'hostnames');
+    result.high = high ? high.split(',\n') : [];
+    for (const [, selectors] of lowly) {
+        for (const selector of selectors.split(',\n')) {
+            const token = leadingToken(selector);
+            if (token) {
+                if (!result.generic[token]) {
+                    result.generic[token] = [];
+                }
+                result.generic[token].push(selector);
+            } else {
+                result.high.push(selector);
+            }
+        }
+    }
+    hostnames.forEach((host, i) => {
+        result.exceptions[host] = exceptions[i].split('\n');
+    });
 }
 
 /**
@@ -456,25 +522,7 @@ async function downloadCosmetic(id) {
     }
     const result = {high: [], generic: {}, exceptions: {}, specific: [], hosts: {}, regexes: []};
     if (genericResponse.ok) {
-        const source = await genericResponse.text();
-        const lowly = scriptConstant(source, 'lowlyGeneric');
-        const high = scriptConstant(source, 'highlyGeneric');
-        const exceptions = scriptConstant(source, 'exceptions');
-        const hostnames = scriptConstant(source, 'hostnames');
-        result.high = high ? high.split(',\n') : [];
-        for (const [, selectors] of lowly) {
-            for (const selector of selectors.split(',\n')) {
-                const token = leadingToken(selector);
-                if (token) {
-                    (result.generic[token] ??= []).push(selector);
-                } else {
-                    result.high.push(selector);
-                }
-            }
-        }
-        hostnames.forEach((host, i) => {
-            result.exceptions[host] = exceptions[i].split('\n');
-        });
+        parseGenericScript(await genericResponse.text(), result);
     }
     if (specificResponse.ok) {
         const {selectors, selectorLists, selectorListRefs, hostnames, regexes} = await specificResponse.json();
@@ -510,6 +558,35 @@ async function downloadCosmetic(id) {
 }
 
 /**
+ * Скачивает косметические фильтры одного набора. Не скачались — остаётся прежняя версия
+ * @param {string} id
+ * @param {string} dir
+ * @returns {Promise<boolean>} есть ли файл набора
+ */
+async function syncCosmeticFile(id, dir) {
+    const file = path.join(dir, `${id}.json`);
+    try {
+        const data = await downloadCosmetic(id);
+        if (!data) {
+            fs.rmSync(file, {force: true});
+            return false;
+        }
+        fs.writeFileSync(file, JSON.stringify(data) + '\n');
+        const generic = Object.values(data.generic).flat().length;
+        console.log(`${(COSMETIC_OUTPUT + '/' + id).padEnd(32)} общих ${data.high.length + generic}, ` +
+            `для сайтов ${data.specific.length} (сайтов ${Object.keys(data.hosts).length})`);
+        return true;
+    } catch (e) {
+        if (!fs.existsSync(file)) {
+            console.warn(`${COSMETIC_OUTPUT}/${id}: не скачался (${e.message}), пропущен`);
+            return false;
+        }
+        console.warn(`${COSMETIC_OUTPUT}/${id}: не скачался (${e.message}), остаётся прежняя версия`);
+        return true;
+    }
+}
+
+/**
  * Скачивает косметические фильтры наборов. Не скачались — остаётся прежняя версия
  * @param {string[]} ids
  * @returns {Promise<string[]>} наборы, для которых есть файл
@@ -517,28 +594,8 @@ async function downloadCosmetic(id) {
 async function updateCosmetic(ids) {
     const dir = path.join(ROOT, COSMETIC_OUTPUT);
     fs.mkdirSync(dir, {recursive: true});
-    const available = [];
-    for (const id of ids) {
-        const file = path.join(dir, `${id}.json`);
-        try {
-            const data = await downloadCosmetic(id);
-            if (!data) {
-                fs.rmSync(file, {force: true});
-                continue;
-            }
-            fs.writeFileSync(file, JSON.stringify(data) + '\n');
-            const generic = Object.values(data.generic).flat().length;
-            console.log(`${(COSMETIC_OUTPUT + '/' + id).padEnd(32)} общих ${data.high.length + generic}, ` +
-                `для сайтов ${data.specific.length} (сайтов ${Object.keys(data.hosts).length})`);
-        } catch (e) {
-            if (!fs.existsSync(file)) {
-                console.warn(`${COSMETIC_OUTPUT}/${id}: не скачался (${e.message}), пропущен`);
-                continue;
-            }
-            console.warn(`${COSMETIC_OUTPUT}/${id}: не скачался (${e.message}), остаётся прежняя версия`);
-        }
-        available.push(id);
-    }
+    const synced = await Promise.all(ids.map((id) => syncCosmeticFile(id, dir)));
+    const available = ids.filter((id, index) => synced[index]);
     for (const file of fs.readdirSync(dir)) {
         if (!available.includes(file.slice(0, -5))) {
             fs.rmSync(path.join(dir, file));
@@ -566,96 +623,117 @@ function count(sets) {
     return {rules: rules.length, regex: rules.filter((r) => r.condition.regexFilter).length};
 }
 
-async function main() {
-    const manifestPath = path.join(ROOT, 'manifest.json');
-    const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-    const own = ownRulesets(manifest);
-
-    if (process.argv.includes('--check')) {
-        const lists = {};
-        for (const id of Object.keys(LISTS)) {
-            lists[id] = readList(id) || [];
+/**
+ * Скачивает набор правил и оставляет подходящие. Не скачался — берётся прежняя версия
+ * @param {string} id
+ * @param {Object<string, Object>} regions
+ * @param {string[]} stale наборы, оставшиеся с прежней версией
+ * @returns {Promise<?{downloaded: number, rules: Object[]}>} null — набора нет и прежней версии тоже
+ */
+async function fetchRuleset(id, regions, stale) {
+    try {
+        const [plain, regex] = await Promise.all([
+            download(`${SOURCE}/main/${id}.json`),
+            download(`${SOURCE}/regex/${id}.json`)
+        ]);
+        if (!plain.length) {
+            throw new Error('набор пуст или не найден');
         }
-        reportRedundant(lists, own);
-        return;
+        const all = [...plain, ...regex];
+        return {downloaded: all.length, rules: all.filter(isSupported)};
+    } catch (e) {
+        const previous = readList(id);
+        if (!previous && id in LISTS) {
+            throw new Error(`${id}: ${e.message}, прежней версии нет`);
+        }
+        if (!previous) {
+            console.warn(`${id}: не скачался (${e.message}), пропущен`);
+            delete regions[id];
+            return null;
+        }
+        console.warn(`${id}: не скачался (${e.message}), остаётся прежняя версия`);
+        stale.push(id);
+        return {downloaded: previous.length, rules: previous};
     }
+}
 
-    fs.mkdirSync(path.join(ROOT, OUTPUT), {recursive: true});
-    const regions = await loadRegions();
-    const titles = {...LISTS, ...Object.fromEntries(Object.entries(regions).map(([id, r]) => [id, r.name]))};
-
-    // Скачиваем наборы и отбираем подходящие правила. Не скачался — берём прежнюю версию.
-    // Региональный набор без прежней версии пропускаем: без него расширение работает
-    const lists = {};
+/**
+ * Скачивает наборы и отбирает подходящие правила. Не скачался — берётся прежняя версия.
+ * Региональный набор без прежней версии пропускается: без него расширение работает
+ * @param {Object<string, string>} titles
+ * @param {Object<string, Object>} regions
+ * @returns {Promise<{lists: Object<string, {downloaded: number, rules: Object[]}>, stale: string[]}>}
+ */
+async function downloadAllRulesets(titles, regions) {
+    const ids = Object.keys(titles);
     const stale = [];
-    for (const id of Object.keys(titles)) {
-        try {
-            const [plain, regex] = await Promise.all([
-                download(`${SOURCE}/main/${id}.json`),
-                download(`${SOURCE}/regex/${id}.json`)
-            ]);
-            if (!plain.length) {
-                throw new Error('набор пуст или не найден');
-            }
-            const all = [...plain, ...regex];
-            lists[id] = {downloaded: all.length, rules: all.filter(isSupported)};
-        } catch (e) {
-            const previous = readList(id);
-            if (!previous && id in LISTS) {
-                throw new Error(`${id}: ${e.message}, прежней версии нет`);
-            }
-            if (!previous) {
-                console.warn(`${id}: не скачался (${e.message}), пропущен`);
-                delete regions[id];
-                continue;
-            }
-            console.warn(`${id}: не скачался (${e.message}), остаётся прежняя версия`);
-            stale.push(id);
-            lists[id] = {downloaded: previous.length, rules: previous};
+    const loaded = await Promise.all(ids.map((id) => fetchRuleset(id, regions, stale)));
+    const lists = {};
+    loaded.forEach((list, index) => {
+        if (list) {
+            lists[ids[index]] = list;
         }
-    }
+    });
     if (stale.length === Object.keys(lists).length) {
         throw new Error('Ни один список не скачался, ничего не изменено');
     }
+    return {lists, stale};
+}
 
-    // CSS-селекторы: заголовок с лицензией GPLv3 сохраняем как есть
-    for (const [id, file] of Object.entries(COSMETIC)) {
-        try {
-            const response = await fetch(`${COSMETIC_SOURCE}/${id}.css`);
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}`);
-            }
-            const css = await response.text();
-            if (!css.includes('display: none')) {
-                throw new Error('неожиданное содержимое');
-            }
-            fs.writeFileSync(path.join(ROOT, file), css);
-            console.log(`${file.padEnd(16)} ${String(css.split(',\n').length).padStart(6)} селекторов`);
-        } catch (e) {
-            if (!fs.existsSync(path.join(ROOT, file))) {
-                throw new Error(`${id}.css: ${e.message}, прежней версии нет`);
-            }
-            console.warn(`${file}: не скачался (${e.message}), остаётся прежняя версия`);
+/**
+ * Скачивает CSS набора. Не скачался — остаётся прежняя версия. Заголовок с лицензией GPLv3 сохраняем как есть
+ * @param {string} id
+ * @param {string} file
+ */
+async function fetchCosmeticCss(id, file) {
+    try {
+        const response = await fetch(`${COSMETIC_SOURCE}/${id}.css`);
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
         }
+        const css = await response.text();
+        if (!css.includes('display: none')) {
+            throw new Error('неожиданное содержимое');
+        }
+        fs.writeFileSync(path.join(ROOT, file), css);
+        console.log(`${file.padEnd(16)} ${String(css.split(',\n').length).padStart(6)} селекторов`);
+    } catch (e) {
+        if (!fs.existsSync(path.join(ROOT, file))) {
+            throw new Error(`${id}.css: ${e.message}, прежней версии нет`);
+        }
+        console.warn(`${file}: не скачался (${e.message}), остаётся прежняя версия`);
     }
+}
 
-    // Проверяем все regex-правила одним запуском Chrome
-    const regexRules = Object.values(lists).flatMap((list) => list.rules.filter((r) => r.condition.regexFilter));
-    const supported = await checkRegexes(regexRules.map((r) => r.condition));
-    const rejected = new Set(regexRules.filter((r, i) => !supported[i]));
+/**
+ * Скачивает CSS-селекторы для окон про cookie
+ * @returns {Promise<void>}
+ */
+async function downloadAllCss() {
+    await Promise.all(Object.entries(COSMETIC).map(([id, file]) => fetchCosmeticCss(id, file)));
+}
 
-    for (const list of Object.values(lists)) {
-        list.rules = list.rules.filter((r) => !rejected.has(r));
+/**
+ * Проверка собственных правил по уже скачанным наборам
+ * @param {{path: string}[]} own
+ */
+function reportFromFiles(own) {
+    const lists = {};
+    for (const id of Object.keys(LISTS)) {
+        lists[id] = readList(id) || [];
     }
-    dedupe(lists, [COOKIE_LIST, ...Object.keys(regions)]);
+    reportRedundant(lists, own);
+}
 
-    const output = {};
-    for (const id of Object.keys(lists)) {
-        output[id] = lists[id].rules.map((rule, i) => ({...rule, id: i + 1}));
-    }
-
-    // Лимиты проверяем до записи, чтобы не оставить расширение с неподходящими файлами.
-    // Всегда включены собственные наборы, основные списки и список про cookie
+/**
+ * Количество правил и лимиты Chrome. Проверяются до записи, чтобы не оставить расширение
+ * с неподходящими файлами. Всегда включены собственные наборы, основные списки и список про cookie
+ * @param {Object<string, Object[]>} output
+ * @param {{path: string}[]} own
+ * @param {Object<string, Object>} regions
+ * @returns {{base: {rules: number, regex: number}, regions: Object}}
+ */
+function buildIndex(output, own, regions) {
     const ownRules = own.map((resource) => JSON.parse(fs.readFileSync(path.join(ROOT, resource.path), 'utf8')));
     const base = count([...ownRules, ...Object.keys(LISTS).map((id) => output[id])]);
     if (base.regex > MAX_REGEX_RULES) {
@@ -673,22 +751,74 @@ async function main() {
         }
         index.regions[id] = {name, url, lang, ...size};
     }
+    return index;
+}
 
+/**
+ * Записывает наборы правил и сообщает, что в них
+ * @param {Object<string, string>} titles
+ * @param {Object<string, Object[]>} output
+ * @param {Object<string, {duplicates: number}>} lists
+ * @param {string[]} stale
+ */
+function writeLists(titles, output, lists, stale) {
     for (const [id, title] of Object.entries(titles).filter(([id]) => output[id])) {
         fs.writeFileSync(listPath(id), JSON.stringify(output[id]) + '\n');
         const note = stale.includes(id) ? '  [прежняя версия]' : '';
         console.log(`${id.padEnd(18)} ${String(output[id].length).padStart(6)} правил (повторов убрано ${lists[id].duplicates})  ${title}${note}`);
     }
-    index.cosmetic = await updateCosmetic(Object.keys(titles).filter((id) => output[id]));
-    fs.writeFileSync(path.join(ROOT, INDEX), JSON.stringify(index, null, 4) + '\n');
+}
 
-    // Наборы, которых больше нет у uBOL
+/**
+ * Удаляет наборы, которых больше нет у uBOL
+ * @param {Object<string, Object[]>} output
+ */
+function removeObsolete(output) {
     for (const file of fs.readdirSync(path.join(ROOT, OUTPUT))) {
         if (file.endsWith('.json') && !output[file.slice(0, -5)]) {
             fs.rmSync(path.join(ROOT, OUTPUT, file));
             console.log(`${file}: набора больше нет, удалён`);
         }
     }
+}
+
+async function main() {
+    const manifestPath = path.join(ROOT, 'manifest.json');
+    const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+    const own = ownRulesets(manifest);
+
+    if (process.argv.includes('--check')) {
+        reportFromFiles(own);
+        return;
+    }
+
+    fs.mkdirSync(path.join(ROOT, OUTPUT), {recursive: true});
+    const regions = await loadRegions();
+    const titles = {...LISTS, ...Object.fromEntries(Object.entries(regions).map(([id, r]) => [id, r.name]))};
+
+    const {lists, stale} = await downloadAllRulesets(titles, regions);
+    await downloadAllCss();
+
+    // Проверяем все regex-правила одним запуском Chrome
+    const regexRules = Object.values(lists).flatMap((list) => list.rules.filter((r) => r.condition.regexFilter));
+    const supported = await checkRegexes(regexRules.map((r) => r.condition));
+    const rejected = new Set(regexRules.filter((r, i) => !supported[i]));
+
+    for (const list of Object.values(lists)) {
+        list.rules = list.rules.filter((r) => !rejected.has(r));
+    }
+    dedupe(lists, [COOKIE_LIST, ...Object.keys(regions)]);
+
+    const output = {};
+    for (const id of Object.keys(lists)) {
+        output[id] = lists[id].rules.map((rule, i) => ({...rule, id: i + 1}));
+    }
+
+    const index = buildIndex(output, own, regions);
+    writeLists(titles, output, lists, stale);
+    index.cosmetic = await updateCosmetic(Object.keys(titles).filter((id) => output[id]));
+    fs.writeFileSync(path.join(ROOT, INDEX), JSON.stringify(index, null, 4) + '\n');
+    removeObsolete(output);
 
     // Прописываем наборы в манифест после собственных, региональные — выключенными
     manifest.declarative_net_request.rule_resources = [
@@ -699,7 +829,7 @@ async function main() {
     fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 4) + '\n');
 
     const regional = count(Object.keys(regions).map((id) => output[id]));
-    console.log(`Всегда включены: ${base.rules} правил, из них regex: ${base.regex}; ` +
+    console.log(`Всегда включены: ${index.base.rules} правил, из них regex: ${index.base.regex}; ` +
         `в региональных наборах: ${regional.rules}, regex: ${regional.regex} ` +
         `(неподдерживаемых regex отброшено: ${rejected.size})`);
 
