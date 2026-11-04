@@ -1,6 +1,6 @@
 /* global CompanyOwner */
 // Наборы правил с трекерами и окнами про cookie, остальные считаем рекламой
-const TRACKER_RULESETS = ['trackers', 'easyprivacy', 'rus-1'];
+const TRACKER_RULESETS = new Set(['trackers', 'easyprivacy', 'rus-1']);
 const COOKIE_RULESET = 'annoyances-cookies';
 
 // Расширенный режим: доступ ко всем сайтам (см. sw.js)
@@ -178,7 +178,8 @@ let theme = null;
  */
 function applyTheme(value) {
     theme = value === 'light' || value === 'dark' ? value : null;
-    darkRule.media.mediaText = theme ? (theme === 'dark' ? 'all' : 'not all') : darkCondition;
+    const media = {dark: 'all', light: 'not all'};
+    darkRule.media.mediaText = media[theme] ?? darkCondition;
     // Полосы прокрутки, списки и галочки — в цвет темы
     document.documentElement.style.colorScheme = theme || '';
 }
@@ -218,7 +219,8 @@ function initTheme() {
     });
     button.addEventListener('click', () => {
         const dark = !isDark();
-        applyTheme(dark === systemDark.matches ? null : (dark ? 'dark' : 'light'));
+        const name = dark ? 'dark' : 'light';
+        applyTheme(dark === systemDark.matches ? null : name);
         render();
         if (theme) {
             chrome.storage.local.set({aBlockTheme: theme}).catch(() => {});
@@ -269,6 +271,9 @@ function translatePage() {
     }
     for (const el of document.querySelectorAll('[data-i18n-placeholder]')) {
         el.placeholder = t(el.dataset.i18nPlaceholder);
+    }
+    for (const el of document.querySelectorAll('[data-i18n-aria-label]')) {
+        el.setAttribute('aria-label', t(el.dataset.i18nAriaLabel));
     }
     setBadge('blocked', t('ads', '—'), 'none', '');
     setBadge('trackers', t('trackers', '—'), 'none', '');
@@ -349,7 +354,8 @@ async function setupNote(host) {
 }
 
 /**
- * Выполняется на странице: протокол, время загрузки, сторонние домены, вес, сжатие
+ * Выполняется на странице: протокол, время загрузки, сторонние домены, вес, сжатие.
+ * Всё внутри функции: её пересылают в страницу целиком, вспомогательные функции модуля там недоступны
  * @returns {Object}
  */
 function collectPageInfo() {
@@ -360,11 +366,14 @@ function collectPageInfo() {
     const isIp = /^[\d.]+$|:/.test(location.hostname);
     const secondLevel = labels.length > 2 && /^[a-z]{2}$/.test(labels.at(-1))
         && /^(co|com|net|org|gov|edu|ac|or|ne|go|gob|nic|msk|spb)$/.test(labels.at(-2));
-    const base = isIp ? location.hostname : labels.slice(secondLevel ? -3 : -2).join('.');
+    const base = isIp ? location.hostname : labels.slice(-2 - Number(secondLevel)).join('.');
     const isOwn = (host) => host === base || host.endsWith('.' + base);
 
     // Средний размер файла по типу, байт: сторонние сайты обычно скрывают размер от страницы
     const AVERAGE_SIZE = {script: 25000, css: 12000, font: 30000, img: 15000, media: 300000, xhr: 3000, frame: 40000, other: 5000};
+    // Файлы, которые уже сжаты сами по себе, — расширения без точки, в нижнем регистре
+    const BINARY_EXTENSIONS = new Set(['glb', 'bin', 'wasm', 'zip', 'gz', 'br', 'zst', 'pdf', 'png', 'jpg', 'jpeg', 'gif',
+        'webp', 'avif', 'ico', 'woff', 'woff2', 'ttf', 'otf', 'mp3', 'mp4', 'webm', 'ogg', 'm4s', 'ts']);
     const kindOf = (entry, path) => {
         if (/\.(woff2?|ttf|otf)$/i.test(path)) {
             return 'font';
@@ -386,6 +395,9 @@ function collectPageInfo() {
             xmlhttprequest: 'xhr', fetch: 'xhr', beacon: 'xhr', iframe: 'frame'
         }[entry.initiatorType] || 'other';
     };
+    const extensionOf = (path) => path.split('.').pop().toLowerCase();
+    const isText = (entry, path) => !BINARY_EXTENSIONS.has(extensionOf(path))
+        && (/\.(svg|json|xml|txt|html?)$/i.test(path) || ['script', 'css', 'xhr'].includes(kindOf(entry, path)));
 
     const domains = new Set();
     // Все адреса (домен + начало пути) — по ним окно узнаёт, кто следит.
@@ -398,15 +410,23 @@ function collectPageInfo() {
     // (github.githubassets.com); картинки, видео и шрифты сжаты сами по себе
     const encodings = {};
     const plain = new Set();
-    const isText = (entry, path) => !/\.(glb|bin|wasm|zip|gz|br|zst|pdf|png|jpe?g|gif|webp|avif|ico|woff2?|ttf|otf|mp[34]|webm|ogg|m4s|ts)$/i.test(path)
-        && (/\.(svg|json|xml|txt|html?)$/i.test(path) || ['script', 'css', 'xhr'].includes(kindOf(entry, path)));
-    for (const entry of resources) {
-        let url;
-        try {
-            url = new URL(entry.name);
-        } catch {
-            continue; // Адрес не разбирается (data:, blob:) — пропускаем
+    const countEncoding = (entry, url) => {
+        // Мелкие файлы серверы обычно не сжимают — и правильно; из кэша сжатие не видно
+        if (!(entry.encodedBodySize > 0 && entry.decodedBodySize >= 1500
+            && entry.transferSize > 0 && isText(entry, url.pathname) && 'contentEncoding' in entry)) {
+            return;
         }
+        const name = entry.contentEncoding && entry.contentEncoding !== 'identity' ? entry.contentEncoding : '';
+        // Тип сжатия чужого файла браузер может не назвать — тогда смотрим, меньше ли он передан
+        if (name || entry.encodedBodySize >= entry.decodedBodySize) {
+            encodings[name] = (encodings[name] || 0) + 1;
+        }
+        if (!name && entry.encodedBodySize >= entry.decodedBodySize) {
+            const file = url.pathname.split('/').pop() || url.pathname;
+            plain.add(isOwn(url.hostname) ? file : `${url.hostname}/${file}`);
+        }
+    };
+    const countEntry = (entry, url) => {
         if (url.hostname && !isOwn(url.hostname)) {
             domains.add(url.hostname);
         }
@@ -420,19 +440,16 @@ function collectPageInfo() {
             unknown++;
             estimated += AVERAGE_SIZE[kindOf(entry, url.pathname)];
         }
-        // Мелкие файлы серверы обычно не сжимают — и правильно; из кэша сжатие не видно
-        if (entry.encodedBodySize > 0 && entry.decodedBodySize >= 1500
-            && entry.transferSize > 0 && isText(entry, url.pathname) && 'contentEncoding' in entry) {
-            const name = entry.contentEncoding && entry.contentEncoding !== 'identity' ? entry.contentEncoding : '';
-            // Тип сжатия чужого файла браузер может не назвать — тогда смотрим, меньше ли он передан
-            if (name || entry.encodedBodySize >= entry.decodedBodySize) {
-                encodings[name] = (encodings[name] || 0) + 1;
-            }
-            if (!name && entry.encodedBodySize >= entry.decodedBodySize) {
-                const file = url.pathname.split('/').pop() || url.pathname;
-                plain.add(isOwn(url.hostname) ? file : `${url.hostname}/${file}`);
-            }
+        countEncoding(entry, url);
+    };
+    for (const entry of resources) {
+        let url;
+        try {
+            url = new URL(entry.name);
+        } catch {
+            continue; // Адрес не разбирается (data:, blob:) — пропускаем
         }
+        countEntry(entry, url);
     }
     for (const el of document.querySelectorAll('script[src], img[src], iframe[src]')) {
         try {
@@ -448,12 +465,9 @@ function collectPageInfo() {
     // Смешанный контент: страница по HTTPS подгружает файлы по HTTP. Скрипты, стили и фреймы (активный)
     // браузер блокирует — страница ломается; картинки и медиа (пассивный) Chrome сам переводит на HTTPS
     const https = location.protocol === 'https:';
-    const mixed = https
-        ? document.querySelectorAll('script[src^="http:"], iframe[src^="http:"], link[rel="stylesheet"][href^="http:"]').length
-        : 0;
-    const mixedPassive = https
-        ? document.querySelectorAll('img[src^="http:"], video[src^="http:"], audio[src^="http:"], source[src^="http:"]').length
-        : 0;
+    const countMixed = (selector) => (https ? document.querySelectorAll(selector).length : 0);
+    const mixed = countMixed('script[src^="http:"], iframe[src^="http:"], link[rel="stylesheet"][href^="http:"]');
+    const mixedPassive = countMixed('img[src^="http:"], video[src^="http:"], audio[src^="http:"], source[src^="http:"]');
 
     return {
         protocol: navigation?.nextHopProtocol || '',
@@ -537,7 +551,7 @@ function fitBadges() {
     while (overflows() && left.size) {
         const items = [...left];
         const widest = items.reduce((a, b) => (width(b) > width(a) ? b : a), items[0]);
-        const size = parseFloat(getComputedStyle(widest).fontSize);
+        const size = Number.parseFloat(getComputedStyle(widest).fontSize);
         const wraps = widest.style.whiteSpace === 'normal';
         if (size > 9.5) {
             widest.style.fontSize = `${size - 0.5}px`;
@@ -694,6 +708,198 @@ async function acceptAudit(tabId, injection, info) {
 }
 
 /**
+ * Сжатие главного документа: Brotli и Zstandard — хорошо, остальное — внимание
+ * @param {string} encoding
+ * @returns {string} good | warn
+ */
+function compressionGrade(encoding) {
+    return encoding === 'br' || encoding === 'zstd' ? 'good' : 'warn';
+}
+
+/**
+ * Значок протокола; HTTP/3 — если сервер его объявил, а страница пришла по старому протоколу
+ * @param {Object} info
+ * @param {?Object} server
+ */
+function renderProtocol(info, server) {
+    const protocols = {
+        'h3': ['HTTP/3', 'good', t('protocolH3')],
+        'h2': ['HTTP/2', 'good', t('protocolH2')],
+        'http/1.1': ['HTTP/1.1', 'bad', t('protocolOld', 'HTTP/1.1')],
+        'http/1.0': ['HTTP/1.0', 'bad', t('protocolOld', 'HTTP/1.0')]
+    };
+    const [protocol, protocolState, protocolTitle] = protocols[info.protocol]
+        || ['HTTP/?', 'none', t('protocolUnknown')];
+    // Сервер умеет HTTP/3, но эта страница пришла по старому протоколу — обычно при первом заходе
+    info.h3 = info.protocol === 'h3';
+    if (!info.h3 && protocols[info.protocol]
+        && (info.h3Files > 0 || /\bh3\b|h3=/.test(server?.headers['alt-svc'] || ''))) {
+        info.h3 = true;
+        setBadge('protocol', 'HTTP/3', 'good', t('protocolH3Later', protocol));
+    } else {
+        setBadge('protocol', protocol, protocolState, protocolTitle);
+    }
+}
+
+/**
+ * Окно открыли до конца загрузки: время покажем, когда страница загрузится, а если она не загрузится
+ * никогда (счётчик или реклама грузятся бесконечно) — время готовности документа через 10 секунд
+ * @param {chrome.tabs.Tab} tab
+ * @param {Object} info
+ * @param {Function} [onLoadTime]
+ */
+function watchLoadTime(tab, info, onLoadTime) {
+    let timer = 0;
+    let attempts = 0;
+    // Ответ на более ранний замер может прийти позже нового — показываем только последний
+    let seq = 0;
+    let done = false;
+    const listener = (id, change) => {
+        if (id === tab.id && change.status === 'complete') {
+            refresh().catch(console.error);
+        }
+    };
+    const stop = () => {
+        done = true;
+        clearTimeout(timer);
+        chrome.tabs.onUpdated.removeListener(listener);
+    };
+    const refresh = async () => {
+        clearTimeout(timer);
+        const n = ++seq;
+        let result;
+        try {
+            [{result}] = await chrome.scripting.executeScript({target: {tabId: tab.id}, func: collectPageInfo});
+        } catch {
+            stop(); // Вкладку закрыли или перешли на страницу, недоступную расширению
+            return;
+        }
+        if (done || n !== seq) {
+            return;
+        }
+        renderSpeed(result);
+        if (result.loadTime !== null) {
+            stop();
+            info.loadTime = result.loadTime;
+            onLoadTime?.();
+        } else if (++attempts < 8) {
+            // Ещё грузится (complete мог и не прийти): замер тяжёлый, поэтому всё реже и не больше 8 попыток
+            timer = setTimeout(refresh, Math.max(10000 - result.age, 1000 * attempts) + 100);
+        }
+    };
+    chrome.tabs.onUpdated.addListener(listener);
+    timer = setTimeout(refresh, Math.max(10000 - info.age, 1000) + 100);
+}
+
+/**
+ * Сторонние домены: без владельца самого сайта и его CDN; значок и подсказка со списком
+ * @param {chrome.tabs.Tab} tab
+ * @param {Object} info
+ */
+async function renderDomains(tab, info) {
+    // Сайты и CDN той же компании (githubassets.com у github.com, userapi.com у vk.com) — не сторонние
+    const host = new URL(tab.url).hostname;
+    const owner = (await loadData('companies')).find((company) => CompanyOwner.find(host, [company], ['sites']));
+    if (owner) {
+        info.domains = info.domains.filter((domain) => !owner.sites.some((d) => matchesDomain(domain, d)));
+    }
+    const count = info.domains.length;
+    const list = info.domains.slice(0, 25).join('\n') + (count > 25 ? '\n' + t('domainsMore', count - 25) : '');
+    setBadge('domains', t('domains', count), gradeBy(count, 5, 15),
+        count ? t('domainsList', list) : t('domainsNone'));
+}
+
+/**
+ * Значок веса; основу подсказки запоминаем — строку о заблокированном добавляет renderBlocked
+ * @param {Object} info
+ */
+function renderWeight(info) {
+    // Вес: если размер многих файлов оценён, а не известен точно — «≈»
+    const {bytes, estimated, files, unknown, truncated} = info.weight;
+    const approximate = truncated || estimated > bytes * 0.2;
+    // Цвет — по тому же округлённому числу, что на значке: «2 МБ» не должно быть жёлтым
+    const megabytes = Math.round(bytes / 2 ** 20 * 10) / 10;
+    const weightTitle = [t('weightTitle'), approximate ? t('weightEstimated', files - unknown, files) : '']
+        .filter(Boolean).join('\n');
+    setBadge('weight', (approximate ? '≈\u00a0' : '') + formatSize(bytes), gradeBy(megabytes, 2, 5), weightTitle);
+    document.getElementById('weight').dataset.base = weightTitle;
+}
+
+// Названия способов сжатия как их пишет браузер; «multiple» — файл сжат несколькими способами подряд
+const COMPRESSION_NAMES = {br: 'Brotli', zstd: 'Zstandard', gzip: 'gzip', deflate: 'Deflate', dcb: 'Brotli', dcz: 'Zstandard'};
+
+/**
+ * Строки подсказки сжатия: «Brotli — 14, gzip — 5, без сжатия — 2» и примеры файлов без сжатия
+ * @param {Object<string, number>} encodedFiles число текстовых файлов по способу сжатия
+ * @param {string[]} plain файлы без сжатия
+ * @returns {string[]}
+ */
+function compressionFileLines(encodedFiles, plain) {
+    const compressionName = (key) => {
+        if (!key) {
+            return t('compressionNoneInline');
+        }
+        // «multiple» — так браузер пишет про файл, сжатый несколькими способами подряд
+        return key === 'multiple' ? t('compressionMultipleInline') : COMPRESSION_NAMES[key] || key;
+    };
+    const counts = {};
+    for (const [key, count] of Object.entries(encodedFiles)) {
+        const name = compressionName(key);
+        counts[name] = (counts[name] || 0) + count;
+    }
+    return [
+        t('compressionFiles', Object.entries(counts).sort((a, b) => b[1] - a[1])
+            .map(([name, count]) => `${name} — ${formatNumber(count)}`).join(', ')),
+        plain.length ? t('compressionPlain', plain.join(', ')) : ''
+    ];
+}
+
+/**
+ * Способ сжатия главного документа: из браузера, а если он не назвал или написал «multiple» — из заголовка ответа
+ * (в расширенном режиме). Повторы склеены через запятую («gzip, br»): сжатия применены по порядку, последнее —
+ * то, в котором пришёл документ. Пустые значения пропускаем, регистр не важен («BR» — тоже Brotli)
+ * @param {Object} info
+ * @param {?Object} server
+ * @returns {string}
+ */
+function documentEncoding(info, server) {
+    return ((info.encoding.name !== 'multiple' && info.encoding.name)
+        || (server?.headers['content-encoding'] || '').split(',').map((s) => s.trim()).findLast(Boolean)
+        || info.encoding.name).toLowerCase();
+}
+
+/**
+ * Сжатие главного документа и текстовых файлов: значок и подсказка с перечнем
+ * @param {Object} info
+ * @param {?Object} server
+ */
+function renderCompression(info, server) {
+    const {encoded, decoded, files: encodedFiles, plain} = info.encoding;
+    const total = Object.values(encodedFiles).reduce((sum, count) => sum + count, 0);
+    info.plainShare = total >= 3 ? (encodedFiles[''] || 0) / total : 0;
+    const filesLines = total ? compressionFileLines(encodedFiles, plain) : [];
+    const encoding = documentEncoding(info, server);
+    info.compressed = null;
+    if (encoding && encoding !== 'identity') {
+        // «multiple» без заголовка (не расширенный режим): сжатие есть, но каким способом пришёл документ,
+        // неизвестно — нейтрально, не хвалим и не ругаем
+        const multiple = encoding === 'multiple';
+        const name = multiple ? t('compressionMultiple') : COMPRESSION_NAMES[encoding] || encoding;
+        info.compressed = true;
+        setBadge('compression', name, multiple ? 'none' : compressionGrade(encoding), [
+            t('compressionOn', multiple ? t('compressionMultipleInline') : name)
+            + (decoded > encoded && encoded > 0 ? ` (${t('compressionRatio', formatSize(decoded), formatSize(encoded))})` : ''),
+            ...filesLines
+        ].filter(Boolean).join('\n'));
+    } else if (decoded > 2000) {
+        info.compressed = false;
+        setBadge('compression', t('compressionNone'), 'bad', [t('compressionOff'), ...filesLines].filter(Boolean).join('\n'));
+    } else {
+        setBadge('compression', '—', 'none', [t('compressionUnknown'), ...filesLines].filter(Boolean).join('\n'));
+    }
+}
+
+/**
  * Значки сайта: HTTPS, протокол, скорость, сторонние домены, вес, сжатие
  * @param {chrome.tabs.Tab} tab
  * @param {?Object} server данные расширенного режима
@@ -715,139 +921,27 @@ async function renderSite(tab, server, onLoadTime) {
     }
     info.documentId = documentId;
     info.https = https;
-
-    const protocols = {
-        'h3': ['HTTP/3', 'good', t('protocolH3')],
-        'h2': ['HTTP/2', 'good', t('protocolH2')],
-        'http/1.1': ['HTTP/1.1', 'bad', t('protocolOld', 'HTTP/1.1')],
-        'http/1.0': ['HTTP/1.0', 'bad', t('protocolOld', 'HTTP/1.0')]
-    };
-    const [protocol, protocolState, protocolTitle] = protocols[info.protocol]
-        || ['HTTP/?', 'none', t('protocolUnknown')];
-    // Сервер умеет HTTP/3, но эта страница пришла по старому протоколу — обычно при первом заходе
-    info.h3 = info.protocol === 'h3';
-    if (!info.h3 && protocols[info.protocol]
-        && (info.h3Files > 0 || /\bh3\b|h3=/.test(server?.headers['alt-svc'] || ''))) {
-        info.h3 = true;
-        setBadge('protocol', 'HTTP/3', 'good', t('protocolH3Later', protocol));
-    } else {
-        setBadge('protocol', protocol, protocolState, protocolTitle);
-    }
-
+    renderProtocol(info, server);
     renderSpeed(info);
     if (info.loadTime === null) {
-        // Окно открыли до конца загрузки: время покажем, когда страница загрузится, а если она не загрузится
-        // никогда (счётчик или реклама грузятся бесконечно) — время готовности документа через 10 секунд
-        let timer = 0;
-        let attempts = 0;
-        // Ответ на более ранний замер может прийти позже нового — показываем только последний
-        let seq = 0;
-        let done = false;
-        const listener = (id, change) => {
-            if (id === tab.id && change.status === 'complete') {
-                refresh().catch(console.error);
-            }
-        };
-        const stop = () => {
-            done = true;
-            clearTimeout(timer);
-            chrome.tabs.onUpdated.removeListener(listener);
-        };
-        const refresh = async () => {
-            clearTimeout(timer);
-            const n = ++seq;
-            let result;
-            try {
-                [{result}] = await chrome.scripting.executeScript({target: {tabId: tab.id}, func: collectPageInfo});
-            } catch {
-                stop(); // Вкладку закрыли или перешли на страницу, недоступную расширению
-                return;
-            }
-            if (done || n !== seq) {
-                return;
-            }
-            renderSpeed(result);
-            if (result.loadTime !== null) {
-                stop();
-                info.loadTime = result.loadTime;
-                onLoadTime?.();
-            } else if (++attempts < 8) {
-                // Ещё грузится (complete мог и не прийти): замер тяжёлый, поэтому всё реже и не больше 8 попыток
-                timer = setTimeout(refresh, Math.max(10000 - result.age, 1000 * attempts) + 100);
-            }
-        };
-        chrome.tabs.onUpdated.addListener(listener);
-        timer = setTimeout(refresh, Math.max(10000 - info.age, 1000) + 100);
+        watchLoadTime(tab, info, onLoadTime);
     }
-
-    // Сайты и CDN той же компании (githubassets.com у github.com, userapi.com у vk.com) — не сторонние
-    const host = new URL(tab.url).hostname;
-    const owner = (await loadData('companies')).find((company) => CompanyOwner.find(host, [company], ['sites']));
-    if (owner) {
-        info.domains = info.domains.filter((domain) => !owner.sites.some((d) => matchesDomain(domain, d)));
-    }
-    const count = info.domains.length;
-    const list = info.domains.slice(0, 25).join('\n') + (count > 25 ? '\n' + t('domainsMore', count - 25) : '');
-    setBadge('domains', t('domains', count), count <= 5 ? 'good' : count <= 15 ? 'warn' : 'bad',
-        count ? t('domainsList', list) : t('domainsNone'));
-
-    // Вес: если размер многих файлов оценён, а не известен точно — «≈»
-    const {bytes, estimated, files, unknown, truncated} = info.weight;
-    const approximate = truncated || estimated > bytes * 0.2;
-    // Цвет — по тому же округлённому числу, что на значке: «2 МБ» не должно быть жёлтым
-    const megabytes = Math.round(bytes / 2 ** 20 * 10) / 10;
-    const weightTitle = [t('weightTitle'), approximate ? t('weightEstimated', files - unknown, files) : '']
-        .filter(Boolean).join('\n');
-    setBadge('weight', (approximate ? '≈\u00a0' : '') + formatSize(bytes),
-        megabytes <= 2 ? 'good' : megabytes <= 5 ? 'warn' : 'bad', weightTitle);
-    // Строку о заблокированном добавляет renderBlocked — при каждом нажатии на щит заново от этой основы
-    document.getElementById('weight').dataset.base = weightTitle;
-
-    // Сжатие главного документа
-    const NAMES = {br: 'Brotli', zstd: 'Zstandard', gzip: 'gzip', deflate: 'Deflate', dcb: 'Brotli', dcz: 'Zstandard'};
-    const {encoded, decoded, files: encodedFiles, plain} = info.encoding;
-
-    // Текстовые файлы: «Brotli — 14, gzip — 5, без сжатия — 2»
-    const counts = {};
-    for (const [key, count] of Object.entries(encodedFiles)) {
-        // «multiple» — так браузер пишет про файл, сжатый несколькими способами подряд
-        const name = !key ? t('compressionNoneInline')
-            : key === 'multiple' ? t('compressionMultipleInline') : NAMES[key] || key;
-        counts[name] = (counts[name] || 0) + count;
-    }
-    const total = Object.values(encodedFiles).reduce((sum, count) => sum + count, 0);
-    info.plainShare = total >= 3 ? (encodedFiles[''] || 0) / total : 0;
-    const filesLines = total ? [
-        t('compressionFiles', Object.entries(counts).sort((a, b) => b[1] - a[1])
-            .map(([name, count]) => `${name} — ${formatNumber(count)}`).join(', ')),
-        plain.length ? t('compressionPlain', plain.join(', ')) : ''
-    ] : [];
-    // Из заголовка — если браузер не назвал сжатие или при нескольких написал «multiple». Повторы склеены
-    // через запятую («gzip, br»): сжатия применены по порядку, последнее — то, в котором пришёл документ.
-    // Пустые значения пропускаем, регистр не важен («BR» — тоже Brotli)
-    const encoding = ((info.encoding.name !== 'multiple' && info.encoding.name)
-        || (server?.headers['content-encoding'] || '').split(',').map((s) => s.trim()).filter(Boolean).at(-1)
-        || info.encoding.name).toLowerCase();
-    info.compressed = null;
-    if (encoding && encoding !== 'identity') {
-        // «multiple» без заголовка (не расширенный режим): сжатие есть, но каким способом пришёл документ,
-        // неизвестно — нейтрально, не хвалим и не ругаем
-        const multiple = encoding === 'multiple';
-        const name = multiple ? t('compressionMultiple') : NAMES[encoding] || encoding;
-        info.compressed = true;
-        setBadge('compression', name, multiple ? 'none' : encoding === 'br' || encoding === 'zstd' ? 'good' : 'warn', [
-            t('compressionOn', multiple ? t('compressionMultipleInline') : name)
-            + (decoded > encoded && encoded > 0 ? ` (${t('compressionRatio', formatSize(decoded), formatSize(encoded))})` : ''),
-            ...filesLines
-        ].filter(Boolean).join('\n'));
-    } else if (decoded > 2000) {
-        info.compressed = false;
-        setBadge('compression', t('compressionNone'), 'bad', [t('compressionOff'), ...filesLines].filter(Boolean).join('\n'));
-    } else {
-        setBadge('compression', '—', 'none', [t('compressionUnknown'), ...filesLines].filter(Boolean).join('\n'));
-    }
-
+    await renderDomains(tab, info);
+    renderWeight(info);
+    renderCompression(info, server);
     return info;
+}
+
+/**
+ * Цвет времени загрузки: до 2 секунд — хорошо, до 5 — внимание
+ * @param {number} seconds
+ * @returns {string}
+ */
+function speedGrade(seconds) {
+    if (seconds < 2) {
+        return 'good';
+    }
+    return seconds < 5 ? 'warn' : 'bad';
 }
 
 /**
@@ -864,7 +958,7 @@ function renderSpeed({loadTime, ready, age}) {
     }
     const seconds = time / 1000;
     const formatted = formatNumber(seconds, {minimumFractionDigits: 1, maximumFractionDigits: 1});
-    setBadge('speed', t('seconds', formatted), seconds < 2 ? 'good' : seconds < 5 ? 'warn' : 'bad',
+    setBadge('speed', t('seconds', formatted), speedGrade(seconds),
         t(loadTime === null ? 'loadingTitle' : 'loadTime'));
     return true;
 }
@@ -895,13 +989,13 @@ async function blockedDomainTitles(server) {
         const total = (company) => company.hosts.reduce((sum, host) => sum + hosts.get(host), 0);
         companies.sort((a, b) => total(b) - total(a) || a.name.localeCompare(b.name));
         const lines = companies.slice(0, 8).map((company) => {
-            const list = company.hosts.sort((a, b) => hosts.get(b) - hosts.get(a) || a.localeCompare(b));
+            const list = [...company.hosts];
+            list.sort((a, b) => hosts.get(b) - hosts.get(a) || a.localeCompare(b));
             return `${company.name}: ` + list.slice(0, 3).join(', ')
                 + (list.length > 3 ? ` (${t('blockedDomainsMore', formatNumber(list.length - 3))})` : '');
         });
-        return [domains, lines.length ? [t('blockedCompaniesTitle'), ...lines,
-            companies.length > 8 ? t('blockedDomainsMore', formatNumber(companies.length - 8)) : '', partial
-        ].filter(Boolean).join('\n') : ''];
+        const companyMore = companies.length > 8 ? t('blockedDomainsMore', formatNumber(companies.length - 8)) : '';
+        return [domains, lines.length ? [t('blockedCompaniesTitle'), ...lines, companyMore, partial].filter(Boolean).join('\n') : ''];
     } catch {
         return [domains, '']; // Сбой справочника не скрывает наблюдаемые домены и прежние счётчики.
     }
@@ -941,7 +1035,7 @@ async function renderBlocked(tab, info, status, server) {
     }
 
     const [adDomains, trackerDomains] = await blockedDomainTitles(server);
-    const trackers = matched.filter((m) => TRACKER_RULESETS.includes(m.rule.rulesetId)).length;
+    const trackers = matched.filter((m) => TRACKER_RULESETS.has(m.rule.rulesetId)).length;
     const cookies = matched.filter((m) => m.rule.rulesetId === COOKIE_RULESET).length;
     const ads = matched.length - trackers - cookies;
     setBadge('blocked', t('ads', formatNumber(ads + cookies)), 'good', [
@@ -968,6 +1062,23 @@ function matchesDomain(key, pattern) {
 }
 
 /**
+ * Состояние компании в строке «Трекеры»: без вкладки — плохо, без расширенного режима — внимание
+ * @param {boolean} status
+ * @param {?Object} server
+ * @param {boolean} allBlocked все адреса компании заблокированы
+ * @returns {string}
+ */
+function companyState(status, server, allBlocked) {
+    if (!status) {
+        return 'bad';
+    }
+    if (!server) {
+        return 'warn';
+    }
+    return allBlocked ? 'good' : 'bad';
+}
+
+/**
  * Кто следит: компании по сторонним адресам страницы. Состояние — как у метки: загружено (или защита выключена) —
  * bad, без расширенного режима не видно, заблокировано ли, — warn, всё заблокировано — good
  * @param {Object} info
@@ -987,7 +1098,7 @@ async function findCompanies(info, server, status) {
             .filter((key) => company.domains.some((d) => matchesDomain(key, d)))
             .map((key) => key.split('/')[0]))].sort((a, b) => a.localeCompare(b));
         if (hosts.length) {
-            const state = !status ? 'bad' : !server ? 'warn' : hosts.every((h) => blockedHosts.has(h)) ? 'good' : 'bad';
+            const state = companyState(status, server, hosts.every((h) => blockedHosts.has(h)));
             found.push({name: company.name, hosts, state});
         }
     }
@@ -1006,7 +1117,7 @@ function ipKey(ip) {
     }
     let address = ip.replace(/^\[|\]$/g, '');
     // IPv4 в хвосте IPv6 (::ffff:1.2.3.4) → две группы
-    const v4 = /(\d+)\.(\d+)\.(\d+)\.(\d+)$/.exec(address);
+    const v4 = /(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/.exec(address);
     if (v4) {
         const [a, b, c, d] = v4.slice(1).map(Number);
         address = address.slice(0, v4.index) + ((a << 8) | b).toString(16) + ':' + ((c << 8) | d).toString(16);
@@ -1015,7 +1126,7 @@ function ipKey(ip) {
     const left = head ? head.split(':') : [];
     const right = tail ? tail.split(':') : [];
     const groups = address.includes('::')
-        ? [...left, ...Array(8 - left.length - right.length).fill('0'), ...right]
+        ? [...left, ...new Array(8 - left.length - right.length).fill('0'), ...right]
         : left;
     return groups.map((g) => g.padStart(4, '0')).join('');
 }
@@ -1238,8 +1349,10 @@ function formatClsCauses(section) {
         table: 'causeClsTable'
     };
     const elementName = (tag) => {
-        const key = /^h[1-6]$/.test(tag) ? 'causeClsHeading'
-            : Object.hasOwn(tagKeys, tag) ? tagKeys[tag] : null;
+        if (/^h[1-6]$/.test(tag)) {
+            return t('causeClsHeading');
+        }
+        const key = Object.hasOwn(tagKeys, tag) ? tagKeys[tag] : null;
         return key ? t(key) : tag || t('causeClsUnavailable');
     };
     if (data.session) {
@@ -1284,17 +1397,19 @@ function formatLoadCauses(key, section) {
         redirect: 'causeRedirect', dns: 'causeDns', connection: 'causeConnection', tls: 'causeTls',
         requestWait: 'causeRequestWait', unaccounted: 'causeUnaccounted'
     };
-    if (key === 'lcp') {
-        add('causeElement', [data.element?.tag, data.kind === 'text' ? t('causeText')
-            : data.kind === 'image' ? t('kindImage') : ''].filter(Boolean).join(' · ') || '—');
-    }
-    for (const [name, label] of Object.entries(phases)) {
-        if (key === 'lcp' && data.kind === 'text' && ['resourceLoadDelay', 'resourceLoadDuration'].includes(name)) {
-            continue; // У текстового LCP нет фазы загрузки картинки, нули не придумываем.
+    const addPhases = () => {
+        for (const [name, label] of Object.entries(phases)) {
+            if (key === 'lcp' && data.kind === 'text' && ['resourceLoadDelay', 'resourceLoadDuration'].includes(name)) {
+                continue; // У текстового LCP нет фазы загрузки картинки, нули не придумываем.
+            }
+            add(label, time(data.phases?.[name]));
         }
-        add(label, time(data.phases?.[name]));
-    }
-    if (key === 'lcp') {
+    };
+    const addLcp = () => {
+        const kinds = new Map([['text', 'causeText'], ['image', 'kindImage']]);
+        const kind = kinds.has(data.kind) ? t(kinds.get(data.kind)) : '';
+        add('causeElement', [data.element?.tag, kind].filter(Boolean).join(' · ') || '—');
+        addPhases();
         if (data.longestPhase && phases[data.longestPhase]) {
             add('causeLongest', t(phases[data.longestPhase]));
         }
@@ -1305,9 +1420,11 @@ function formatLoadCauses(key, section) {
             const attributes = data.attributes || {};
             add('causeImageHints', [attributes.loading && `loading=${attributes.loading}`,
                 attributes.fetchPriority && `fetchpriority=${attributes.fetchPriority}`].filter(Boolean).join('; ') || '—');
-            add('causePreload', data.preload === true ? t('auditYes') : data.preload === false ? t('auditNo') : '—');
+            add('causePreload', booleanLabel(data.preload));
         }
-    } else {
+    };
+    const addTtfb = () => {
+        addPhases();
         if (data.browserCache === true) {
             add('auditCache', t('auditCacheBrowser'));
         }
@@ -1323,12 +1440,77 @@ function formatLoadCauses(key, section) {
         for (const entry of data.serverTiming || []) {
             add('causeServerTiming', [entry.name, time(entry.duration), entry.description].filter(Boolean).join(' · '));
         }
+    };
+    if (key === 'lcp') {
+        addLcp();
+    } else {
+        addTtfb();
     }
     if (section.reasons.some((code) => ['prerender', 'history-navigation'].includes(code))) {
         add('auditDetails', t('causeSpecialNavigation'));
     }
     add('auditDetails', t('causeScope'));
     return items;
+}
+
+/**
+ * Да/нет для факта браузера; неизвестное значение — прочерк
+ * @param {*} value
+ * @returns {string}
+ */
+function booleanLabel(value) {
+    if (typeof value !== 'boolean') {
+        return '—';
+    }
+    return t(value ? 'auditYes' : 'auditNo');
+}
+
+/**
+ * Источник скрипта для группы: компания из справочника, свой адрес, чужой домен или встроенный/неизвестный
+ * @param {Object} script
+ * @param {Array<Object>} catalog
+ * @param {?Object} page адрес снимка
+ * @param {?Object} pageOwner компания сайта
+ * @returns {{key: string, label: string}}
+ */
+function loafSource(script, catalog, page, pageOwner) {
+    const address = script.kind === 'url' ? CompanyOwner.normalize(script.url) : null;
+    const owner = address ? CompanyOwner.find(script.url, catalog)?.company : null;
+    // Источники одной компании могут быть собственными и сторонними: суммы разделяем.
+    const own = Boolean(address && (address.host === page?.host || (owner && owner === pageOwner)));
+    if (owner) {
+        return {key: `company:${catalog.indexOf(owner)}:${own}`, label: owner.name + (own ? ` · ${t('loafOwn')}` : '')};
+    }
+    if (own) {
+        return {key: 'own', label: t('loafOwn')};
+    }
+    if (address) {
+        return {key: `host:${address.host}`, label: t('loafUnknown') + ` · ${address.host}`};
+    }
+    return {key: `kind:${script.kind}`, label: script.kind === 'inline' ? t('loafInline') : t('loafUnknown')};
+}
+
+/**
+ * Значение строки «Скрипты»: что известно о сборе. При пустом сборе — пояснение, а не прочерк
+ * @param {?Object} section
+ * @param {?Object} data
+ * @param {boolean} partial
+ * @param {Array<{duration: ?number}>} sorted
+ * @param {?number} total
+ * @param {string} empty
+ * @returns {string}
+ */
+function loafValue(section, data, partial, sorted, total, empty) {
+    if (!['ok', 'partial'].includes(section?.status) || !data) {
+        return t(section?.status === 'unsupported' ? 'loafUnsupported' : 'loafUnavailable');
+    }
+    if (partial) {
+        return t('auditDetailsPartial');
+    }
+    if (!data.availableFrames) {
+        return empty;
+    }
+    return sorted.length ? formatCauseTime(total) : '—';
 }
 
 /**
@@ -1345,15 +1527,7 @@ function formatLoafCauses(section, catalog = [], documentUrl = '') {
     const pageOwner = CompanyOwner.find(documentUrl, catalog, ['sites'])?.company;
     const page = CompanyOwner.normalize(documentUrl);
     for (const script of data?.scripts || []) {
-        const address = script.kind === 'url' ? CompanyOwner.normalize(script.url) : null;
-        const owner = address ? CompanyOwner.find(script.url, catalog)?.company : null;
-        const own = address && (address.host === page?.host || (owner && owner === pageOwner));
-        // Источники одной компании могут быть собственными и сторонними: суммы разделяем.
-        const key = owner ? `company:${catalog.indexOf(owner)}:${Boolean(own)}`
-            : own ? 'own' : address ? `host:${address.host}` : `kind:${script.kind}`;
-        const label = owner ? owner.name + (own ? ` · ${t('loafOwn')}` : '')
-            : own ? t('loafOwn') : script.kind === 'inline' ? t('loafInline')
-                : t('loafUnknown') + (address ? ` · ${address.host}` : '');
+        const {key, label} = loafSource(script, catalog, page, pageOwner);
         let group = groups.get(key);
         if (!group) {
             group = {label, duration: 0};
@@ -1375,9 +1549,7 @@ function formatLoafCauses(section, catalog = [], documentUrl = '') {
     }
     const empty = !data?.availableFrames ? t('loafEmpty') : t('auditDetailsEmpty');
     return {
-        value: !['ok', 'partial'].includes(section?.status) || !data
-            ? t(section?.status === 'unsupported' ? 'loafUnsupported' : 'loafUnavailable')
-            : partial ? t('auditDetailsPartial') : !data.availableFrames ? empty : sorted.length ? formatCauseTime(total) : '—',
+        value: loafValue(section, data, partial, sorted, total, empty),
         items: sorted.slice(0, 20).map(({label, duration}) => ({label, value: formatCauseTime(duration)})),
         notes: sorted.length ? notes : [...notes, empty],
         section: limited ? {...section, truncated: true} : section
@@ -1407,8 +1579,20 @@ function formatMarketingCauses(result) {
     });
     return {value: valid ? formatNumber(items.length) : '—',
         section: {status: 'partial', truncated: Boolean(result?.truncated)}, items,
-        notes: [t('auditMarketingHint'), t('marketingBlocking'), t('marketingGtm'),
-            ...(!valid ? [t('marketingUnavailable')] : !items.length ? [t('marketingEmpty')] : [])]};
+        notes: [t('auditMarketingHint'), t('marketingBlocking'), t('marketingGtm'), ...marketingProblem(valid, items)]};
+}
+
+/**
+ * Пояснение, если настройки маркетинга не прочитались или на странице их нет
+ * @param {boolean} valid
+ * @param {Array<Object>} items
+ * @returns {string[]}
+ */
+function marketingProblem(valid, items) {
+    if (!valid) {
+        return [t('marketingUnavailable')];
+    }
+    return items.length ? [] : [t('marketingEmpty')];
 }
 
 /**
@@ -1447,30 +1631,29 @@ function formatAiCauses(section, bots, category) {
 }
 
 /**
- * Разделы под табло оценки: строки по группам оценки (приватность, скорость, безопасность, SEO, доступность)
- * и «Роботы и ИИ» без оценки. Строка — название, значение и цвет; пояснение — при наведении.
- * Замечания — жёлтые и красные строки. Балл группы в заголовке раздела ставит renderScore
- * @param {?Object} audit результат page/audit.js
- * @param {?Object} server данные расширенного режима
- * @param {boolean} extended
- * @param {Object} info данные страницы (collectPageInfo)
- * @param {Array<{name: string, hosts: string[], state: string}>} companies кто следит
- * @param {Array<Object>} [catalog] полный справочник владельцев источников
- * @param {?Object} [marketing] принятый снимок настроек того же документа
- * @param {Array<Object>} [aiBots] локальный каталог ИИ
- * @returns {Map<string, {name: string, state: string}>} строки по ключам — для оценки
+ * Цвет по порогам: до good — хорошо, до poor — внимание, дальше — плохо
+ * @param {number} value
+ * @param {number} good
+ * @param {number} poor
+ * @returns {string}
  */
-function renderAudit(audit, server, extended, info, companies, catalog = [], marketing = null, aiBots = []) {
-    const body = document.getElementById('audit-body');
-    // «О сайте» — в разметке, остальное — заново
-    for (const el of [...body.children].filter((el) => el.id !== 'about')) {
-        el.remove();
+function gradeBy(value, good, poor) {
+    if (value <= good) {
+        return 'good';
     }
-    const rows = new Map();
-    const grade = (value, good, poor) => (value <= good ? 'good' : value <= poor ? 'warn' : 'bad');
-    const yes = t('auditYes');
-    const no = t('auditNo');
+    return value <= poor ? 'warn' : 'bad';
+}
 
+/**
+ * Таблица разделов аудита: раздел — группа оценки (балл в заголовке), строка — название, значение и цвет.
+ * Пояснение — при наведении; замечания — жёлтые и красные строки
+ * @param {HTMLElement} body
+ * @param {?Object} audit
+ * @returns {{rows: Map<string, {name: string, state: string}>, yes: string, no: string, yn: Function,
+ *     section: Function, row: Function, time: Function}}
+ */
+function auditTable(body, audit) {
+    const rows = new Map();
     let group = null;
     // scored — группа оценки: в заголовке будет её балл
     const section = (key, scored) => {
@@ -1488,6 +1671,7 @@ function renderAudit(audit, server, extended, info, companies, catalog = [], mar
         }
         group.append(title);
         body.append(group);
+        return group;
     };
     // key — строки auditKey (название) и auditKeyHint (пояснение) в переводах; name и hint — свои, more — ещё
     // строки подсказки, которые не нужны в пояснениях картинки отчёта
@@ -1522,106 +1706,300 @@ function renderAudit(audit, server, extended, info, companies, catalog = [], mar
         rows.set(key, {name, state});
         return el;
     };
-    const time = (key, ms, good, poor) => row(key, ms === null ? '—' : formatTime(ms), ms === null ? 'none' : grade(ms, good, poor));
+    const time = (key, ms, good, poor) => row(key, ms === null ? '—' : formatTime(ms), ms === null ? 'none' : gradeBy(ms, good, poor));
+    const yes = t('auditYes');
+    const no = t('auditNo');
+    return {rows, yes, no, yn: (flag) => (flag ? yes : no), section, row, time};
+}
 
-    // Приватность: компании из справочника и сторонние домены — с теми же цветами, что у меток
+/**
+ * Состояние строки «Трекеры»: плохо, если загружена компания, которую не блокируем
+ * @param {Array<{state: string}>} companies
+ * @param {string[]} names
+ * @returns {string}
+ */
+function trackingState(companies, names) {
+    if (companies.some((company) => company.state === 'bad')) {
+        return 'bad';
+    }
+    return names.length ? 'warn' : 'good';
+}
+
+/**
+ * Подсказка «Трекеры»: компании по состояниям — загружены, найдены, заблокированы
+ * @param {Array<{name: string, hosts: string[], state: string}>} companies
+ * @param {string[]} names
+ * @returns {string}
+ */
+function trackingMore(companies, names) {
+    if (!names.length) {
+        return t('companiesNoneTitle');
+    }
+    return ['bad', 'warn', 'good'].map((state) => companies.filter((company) => company.state === state))
+        .filter((list) => list.length)
+        .map((list) => t({bad: 'companyLoaded', warn: 'companyFound', good: 'companyBlocked'}[list[0].state],
+            list.map((company) => `${company.name}: ${company.hosts.join(', ')}`).join('\n')))
+        .join('\n');
+}
+
+/**
+ * Раздел «Приватность»: компании из справочника, сторонние домены и настройки маркетинга
+ * @param {Object} table таблица разделов (auditTable)
+ * @param {Object} ctx данные окна (renderAudit)
+ */
+function renderPrivacySection({section, row, no}, {companies, info, marketing}) {
     section('auditPrivacy', 'privacy');
+    // Компании из справочника и сторонние домены — с теми же цветами, что у меток
     const names = companies.map((company) => company.name);
-    const tracking = row('auditTracking', names.length ? names.slice(0, 3).join(', ')
-        + (names.length > 3 ? ` +${formatNumber(names.length - 3)}` : '') : no,
-    companies.some((company) => company.state === 'bad') ? 'bad' : names.length ? 'warn' : 'good', true, {
-        name: t('scoreTrackers'),
-        more: names.length
-            ? ['bad', 'warn', 'good'].map((state) => companies.filter((company) => company.state === state))
-                .filter((list) => list.length)
-                .map((list) => t({bad: 'companyLoaded', warn: 'companyFound', good: 'companyBlocked'}[list[0].state],
-                    list.map((company) => `${company.name}: ${company.hosts.join(', ')}`).join('\n')))
-                .join('\n')
-            : t('companiesNoneTitle')
-    });
+    const more = names.length > 3 ? ` +${formatNumber(names.length - 3)}` : '';
+    const tracking = row('auditTracking', names.length ? names.slice(0, 3).join(', ') + more : no,
+        trackingState(companies, names), true, {name: t('scoreTrackers'), more: trackingMore(companies, names)});
     // В тексте и на картинке отчёта — все компании, а не первые три
     tracking.dataset.names = names.join(', ');
     if (names.length > 3) {
         tracking.dataset.note = `${t('scoreTrackers')}: ${tracking.dataset.names}`;
     }
     const domains = info.domains.length;
-    row('auditDomains', formatNumber(domains), domains <= 5 ? 'good' : domains <= 15 ? 'warn' : 'bad', true, {
+    const domainsMore = domains > 25 ? '\n' + t('domainsMore', domains - 25) : '';
+    row('auditDomains', formatNumber(domains), gradeBy(domains, 5, 15), true, {
         name: t('scoreDomains'),
-        more: domains ? t('domainsList', info.domains.slice(0, 25).join('\n')
-            + (domains > 25 ? '\n' + t('domainsMore', domains - 25) : '')) : ''
+        more: domains ? t('domainsList', info.domains.slice(0, 25).join('\n') + domainsMore) : ''
     });
 
     const settings = formatMarketingCauses(marketing);
     const settingsRow = row('auditMarketing', settings.value, 'none');
     renderAuditCauses(settingsRow, settings.section, settings.items, settings.notes);
+}
 
+/**
+ * Строка «Вёрстка» и картинки: формат и размер — с учётом ответа сервера, если он есть
+ * @param {Object} table таблица разделов
+ * @param {Object} markup разметка из page/audit.js
+ * @param {?Object} server
+ */
+function renderImageRow({row}, markup, server) {
+    // Формат картинок: в расширенном режиме — настоящий тип из ответа сервера (imagor и CDN отдают WebP
+    // и по адресу name.jpg); без него — что сообщит браузер, а для чужих картинок — по расширению
+    const types = server?.images || {};
+    const raster = ['image/jpeg', 'image/png', 'image/gif', 'image/webp', 'image/avif'];
+    const known = raster.reduce((sum, type) => sum + (types[type] || 0), 0);
+    const [modern, typed, sure] = known >= 3
+        ? [(types['image/webp'] || 0) + (types['image/avif'] || 0), known, true]
+        : [markup.modern, markup.typed, markup.guessed === 0];
+    if (typed >= 3) {
+        row('auditModern', t('auditModernValue', formatNumber(modern), formatNumber(typed)),
+            modern / typed >= 0.5 ? 'good' : 'warn', sure);
+    }
+}
+
+/**
+ * Строка «Кэш»: браузера (видно всегда) или сервера и CDN (по заголовкам, в расширенном режиме). Не замечание
+ * @param {Object} table таблица разделов
+ * @param {Object} vitals показатели page/audit.js
+ * @param {?Object} server
+ */
+function renderCacheRow({row}, vitals, server) {
+    const CACHE_HEADERS = [['cf-cache-status', 'Cloudflare'], ['x-cache-status', 'nginx'], ['x-proxy-cache', 'nginx'],
+        ['x-fastcgi-cache', 'nginx'], ['x-srcache-fetch-status', 'nginx'], ['x-cache', '']];
+    const [cacheHeader, cacheSource] = CACHE_HEADERS.find(([header]) => server?.headers[header]) || [];
+    if (vitals.browserCache) {
+        row('auditCache', t('auditCacheBrowser'), 'none');
+    } else if (cacheHeader) {
+        // Повторы склеены через запятую (два X-Cache, у Fastly с щитом — «MISS, HIT» одной строкой): каждое
+        // значение — свой уровень кэша, последнее — ближайший к посетителю. По нему и подпись, и цвет
+        const value = server.headers[cacheHeader].split(',').map((s) => s.trim()).findLast(Boolean) ?? '';
+        const hit = /\bhit\b/i.test(value);
+        row('auditCache', (/\b(hit|miss|expired|stale|bypass|dynamic|updating|revalidated)\b/i.exec(value)?.[1] || value)
+            .toUpperCase() + (cacheSource ? ` · ${cacheSource}` : ''), hit ? 'good' : 'none');
+    }
+}
+
+/**
+ * Раздел «Скорость»: вехи загрузки, отклик, блокировка, кэш и вёрстка
+ * @param {Object} table таблица разделов
+ * @param {Object} audit результат page/audit.js
+ * @param {Object} ctx данные окна (server, catalog)
+ */
+function renderSpeedSection(table, audit, {server, catalog}) {
+    const {section, row, time, yes, no} = table;
+    const {vitals, markup} = audit;
+    section('auditSpeed', 'speed');
+    if (audit.causes?.version === 1) {
+        const loaf = formatLoafCauses(audit.causes.loaf, catalog, audit.causes.context?.documentUrl);
+        const el = row('auditLoaf', loaf.value, 'none');
+        renderAuditCauses(el, loaf.section, loaf.items, loaf.notes);
+    }
     // Пороги — как у Google (web.dev/vitals)
-    const {vitals, seo, markup, a11y} = audit || {};
-    if (audit) {
-        section('auditSpeed', 'speed');
-        if (audit.causes?.version === 1) {
-            const loaf = formatLoafCauses(audit.causes.loaf, catalog, audit.causes.context?.documentUrl);
-            const el = row('auditLoaf', loaf.value, 'none');
-            renderAuditCauses(el, loaf.section, loaf.items, loaf.notes);
-        }
-        time('auditTtfb', vitals.ttfb, 800, 1800);
-        time('auditFcp', vitals.fcp, 1800, 3000);
-        time('auditLcp', vitals.lcp, 2500, 4000);
-        row('auditCls', vitals.cls === null ? '—' : formatNumber(vitals.cls, {maximumFractionDigits: 2}),
-            vitals.cls === null ? 'none' : grade(vitals.cls, 0.1, 0.25));
-        // Действия были, но все быстрее 104 мс — браузер их не сохранил: точного числа нет, но это хорошо.
-        // Браузер отбросил часть событий — INP не знаем: «—» и в пояснении, что данные неполные
-        let inpRow;
-        if (vitals.inpPartial) {
-            inpRow = row('auditInp', '—', 'none');
-            inpRow.title = inpRow.dataset.hint = `${inpRow.dataset.hint}\n${t('auditInpPartial')}`;
-        } else if (vitals.inpFast) {
-            inpRow = row('auditInp', t('auditInpFast', formatTime(100)), 'good');
-        } else if (vitals.inp === null) {
-            row('auditInp', t('auditNoInput'), 'none');
-        } else {
-            inpRow = time('auditInp', vitals.inp, 200, 500);
-        }
-        // Перцентиль отбросил медленные действия или данные неполные — самое медленное известное называем
-        // в пояснении (и в картинке «Поделиться»), если оно на вид не совпадает с показанным значением
-        const slowest = vitals.inpMax === null ? '' : formatTime(vitals.inpMax);
-        if (inpRow && slowest && (vitals.inpPartial || (vitals.inpFast ? vitals.inpMax >= 100 : slowest !== formatTime(vitals.inp)))) {
-            inpRow.title = inpRow.dataset.hint = `${inpRow.dataset.hint}\n${t('auditInpSlowest', slowest)}`;
-        }
-        row('auditBlocking', formatNumber(vitals.blocking), vitals.blockingScripts || vitals.blocking > 15 ? 'warn' : 'good');
-        // Кэш: браузера (видно всегда) или сервера и CDN (по заголовкам, в расширенном режиме). Не замечание
-        const CACHE_HEADERS = [['cf-cache-status', 'Cloudflare'], ['x-cache-status', 'nginx'], ['x-proxy-cache', 'nginx'],
-            ['x-fastcgi-cache', 'nginx'], ['x-srcache-fetch-status', 'nginx'], ['x-cache', '']];
-        const [cacheHeader, cacheSource] = CACHE_HEADERS.find(([header]) => server?.headers[header]) || [];
-        if (vitals.browserCache) {
-            row('auditCache', t('auditCacheBrowser'), 'none');
-        } else if (cacheHeader) {
-            // Повторы склеены через запятую (два X-Cache, у Fastly с щитом — «MISS, HIT» одной строкой): каждое
-            // значение — свой уровень кэша, последнее — ближайший к посетителю. По нему и подпись, и цвет
-            const value = server.headers[cacheHeader].split(',').map((s) => s.trim()).filter(Boolean).at(-1) ?? '';
-            const hit = /\bhit\b/i.test(value);
-            row('auditCache', (/\b(hit|miss|expired|stale|bypass|dynamic|updating|revalidated)\b/i.exec(value)?.[1] || value)
-                .toUpperCase() + (cacheSource ? ` · ${cacheSource}` : ''), hit ? 'good' : 'none');
-        }
-        // Вёрстка — тоже про скорость: картинки без размеров сдвигают страницу, большие и старых форматов — тяжелее
-        row('auditDoctype', markup.quirks ? no : yes, markup.quirks ? 'bad' : 'good');
-        row('auditNoSize', formatNumber(markup.noSize), markup.noSize ? 'warn' : 'good');
-        row('auditLarge', formatNumber(markup.large), markup.large ? 'warn' : 'good');
-        // Формат картинок: в расширенном режиме — настоящий тип из ответа сервера (imagor и CDN отдают WebP
-        // и по адресу name.jpg); без него — что сообщит браузер, а для чужих картинок — по расширению
-        const types = server?.images || {};
-        const raster = ['image/jpeg', 'image/png', 'image/gif', 'image/webp', 'image/avif'];
-        const known = raster.reduce((sum, type) => sum + (types[type] || 0), 0);
-        const [modern, typed, sure] = known >= 3
-            ? [(types['image/webp'] || 0) + (types['image/avif'] || 0), known, true]
-            : [markup.modern, markup.typed, markup.guessed === 0];
-        if (typed >= 3) {
-            row('auditModern', t('auditModernValue', formatNumber(modern), formatNumber(typed)),
-                modern / typed >= 0.5 ? 'good' : 'warn', sure);
+    time('auditTtfb', vitals.ttfb, 800, 1800);
+    time('auditFcp', vitals.fcp, 1800, 3000);
+    time('auditLcp', vitals.lcp, 2500, 4000);
+    row('auditCls', vitals.cls === null ? '—' : formatNumber(vitals.cls, {maximumFractionDigits: 2}),
+        vitals.cls === null ? 'none' : gradeBy(vitals.cls, 0.1, 0.25));
+    renderInpRow(table, vitals);
+    row('auditBlocking', formatNumber(vitals.blocking), vitals.blockingScripts || vitals.blocking > 15 ? 'warn' : 'good');
+    renderCacheRow(table, vitals, server);
+    // Вёрстка — тоже про скорость: картинки без размеров сдвигают страницу, большие и старых форматов — тяжелее
+    row('auditDoctype', markup.quirks ? no : yes, markup.quirks ? 'bad' : 'good');
+    row('auditNoSize', formatNumber(markup.noSize), markup.noSize ? 'warn' : 'good');
+    row('auditLarge', formatNumber(markup.large), markup.large ? 'warn' : 'good');
+    renderImageRow(table, markup, server);
+}
+
+/**
+ * Строка «Отклик» (INP): когда данных нет, неполны или действий было мало — с пояснением
+ * @param {Object} table таблица разделов
+ * @param {Object} vitals показатели page/audit.js
+ */
+function renderInpRow({row, time}, vitals) {
+    // Действия были, но все быстрее 104 мс — браузер их не сохранил: точного числа нет, но это хорошо.
+    // Браузер отбросил часть событий — INP не знаем: «—» и в пояснении, что данные неполные
+    let inpRow;
+    if (vitals.inpPartial) {
+        inpRow = row('auditInp', '—', 'none');
+        inpRow.title = inpRow.dataset.hint = `${inpRow.dataset.hint}\n${t('auditInpPartial')}`;
+    } else if (vitals.inpFast) {
+        inpRow = row('auditInp', t('auditInpFast', formatTime(100)), 'good');
+    } else if (vitals.inp === null) {
+        row('auditInp', t('auditNoInput'), 'none');
+    } else {
+        inpRow = time('auditInp', vitals.inp, 200, 500);
+    }
+    // Перцентиль отбросил медленные действия или данные неполные — самое медленное известное называем
+    // в пояснении (и в картинке «Поделиться»), если оно на вид не совпадает с показанным значением
+    const slowest = vitals.inpMax === null ? '' : formatTime(vitals.inpMax);
+    if (inpRow && slowest && (vitals.inpPartial || (vitals.inpFast ? vitals.inpMax >= 100 : slowest !== formatTime(vitals.inp)))) {
+        inpRow.title = inpRow.dataset.hint = `${inpRow.dataset.hint}\n${t('auditInpSlowest', slowest)}`;
+    }
+}
+
+/**
+ * Состояние смешанного контента: активный — плохо, пассивный — внимание
+ * @param {Object} info
+ * @returns {string}
+ */
+function mixedState(info) {
+    if (info.mixed) {
+        return 'bad';
+    }
+    return info.mixedPassive ? 'warn' : 'good';
+}
+
+/**
+ * Число ресурсов со смешанным контентом в значке и строке раздела
+ * @param {Object} info
+ * @returns {string}
+ */
+function mixedText(info) {
+    return [info.mixed ? t('mixed', info.mixed) : '', info.mixedPassive ? t('mixedPassive', info.mixedPassive) : '']
+        .filter(Boolean).join(', ');
+}
+
+/**
+ * Пояснение строки смешанного контента: активный и пассивный раздельно
+ * @param {Object} info
+ * @returns {string}
+ */
+function mixedHint(info) {
+    return [info.mixed ? t('mixedTitle', info.mixed) : '', info.mixedPassive ? t('mixedPassiveTitle', info.mixedPassive) : '']
+        .filter(Boolean).join('\n');
+}
+
+/**
+ * Строки HTTPS, смешанного контента и HSTS
+ * @param {Object} table таблица разделов
+ * @param {Object} info данные страницы (collectPageInfo)
+ * @param {?Object} server
+ */
+function renderTransportRows({row, yn, no}, info, server) {
+    row('auditHttps', yn(info.https), info.https ? 'good' : 'bad', true,
+        {name: t('scoreHttps'), hint: t(info.https ? 'httpsOn' : 'httpsOff')});
+    // Смешанный контент: скрипты, стили и фреймы браузер блокирует — красным, картинки и медиа переводит
+    // на HTTPS сам — жёлтым
+    if (info.https) {
+        row('auditMixed', mixedText(info) || no, mixedState(info), true, {name: t('scoreMixed'), hint: mixedHint(info)});
+        if (server?.ip) {
+            const hsts = 'strict-transport-security' in server.headers;
+            row('auditHsts', yn(hsts), hsts ? 'good' : 'bad', true, {name: 'HSTS', hint: t(hsts ? 'hstsOn' : 'hstsOff')});
         }
     }
+}
 
-    section('auditSecurity', 'security');
+/**
+ * Оценка политик CSP: есть ли они, не ограничивают ли скрипты (loose) и слабы ли (weak)
+ * @param {string[]} policies каждая политика отдельно
+ * @returns {{csp: boolean, loose: boolean, weak: boolean}}
+ */
+function cspAssessment(policies) {
+    const csp = policies.length > 0;
+    // 'unsafe-inline' без nonce и hash разрешает любой встроенный скрипт — от XSS такая политика не спасает.
+    // Для элементов и атрибутов своя цепочка: script-src-elem/-attr → script-src → default-src.
+    // Набор слаб, если задан хотя бы в одной политике и слаб во всех, где задан.
+    // Строгие ограничения элементов не перекрывают слабые ограничения атрибутов и наоборот.
+    const directive = (policy, name) => new RegExp(String.raw`(?:^|;)\s*${name}(?![\w-])([^;]*)`, 'i').exec(policy)?.[1];
+    const sources = ['script-src-elem', 'script-src-attr'].map((name) => policies
+        .map((policy) => directive(policy, name) ?? directive(policy, 'script-src') ?? directive(policy, 'default-src'))
+        .filter((value) => value !== undefined));
+    const weak = sources.some((values) => values.length > 0 && values.every((value) => /'unsafe-inline'/i.test(value)
+        && !/(?:^|\s)'(?:nonce|sha(?:256|384|512))-[a-z0-9+/_-]+={0,2}'(?:\s|$)|'strict-dynamic'/i.test(value)));
+    // CSP только с frame-ancestors или upgrade-insecure-requests есть, но от XSS не защищает
+    const loose = csp && sources.every((values) => values.length === 0);
+    return {csp, loose, weak};
+}
+
+/**
+ * Значение строки CSP: нет политики, нет ограничений скриптов или слабая политика — пояснение
+ * @param {{csp: boolean, loose: boolean, weak: boolean}} assessment
+ * @param {string} yes
+ * @param {string} no
+ * @returns {string}
+ */
+function cspLabel({csp, loose, weak}, yes, no) {
+    if (!csp) {
+        return no;
+    }
+    if (loose) {
+        return t('auditCspNoScripts');
+    }
+    return weak ? t('auditCspWeak') : yes;
+}
+
+/**
+ * Строки заголовков безопасности: CSP, nosniff, фрейм, рефереры и версии ПО
+ * @param {Object} table таблица разделов
+ * @param {Object} server данные расширенного режима
+ * @param {?Object} audit результат page/audit.js
+ */
+function renderHeaderRows({row, yes, no}, server, audit) {
+    const headers = server.headers;
+    // Каждый заголовок CSP (повторы склеены через запятую) и каждый <meta> — отдельная политика, браузер применяет все
+    const policies = [...(headers['content-security-policy'] || '').split(','), ...(audit?.security.csp || [])]
+        .filter((policy) => policy.trim());
+    const {csp, loose, weak} = cspAssessment(policies);
+    row('auditCsp', cspLabel({csp, loose, weak}, yes, no), !csp || loose || weak ? 'warn' : 'good');
+    const nosniff = /nosniff/i.test(headers['x-content-type-options'] || '');
+    row('auditNosniff', nosniff ? yes : no, nosniff ? 'good' : 'warn');
+    // frame-ancestors в <meta> браузер игнорирует — только из заголовка
+    const frame = 'x-frame-options' in headers || /frame-ancestors/i.test(headers['content-security-policy'] || '');
+    row('auditFrame', frame ? yes : no, frame ? 'good' : 'warn');
+    row('auditReferrer', 'referrer-policy' in headers ? yes : no, 'referrer-policy' in headers ? 'good' : 'none');
+    row('auditPermissions', 'permissions-policy' in headers ? yes : no, 'permissions-policy' in headers ? 'good' : 'none');
+    row('auditCoop', 'cross-origin-opener-policy' in headers ? yes : no, 'cross-origin-opener-policy' in headers ? 'good' : 'none');
+    // Версии ПО в заголовках: не уязвимость, но подсказка атакующему
+    const versions = ['server', 'x-powered-by', 'x-powered-cms']
+        .map((header) => headers[header] || '')
+        .filter((value) => /\d\.\d/.test(value));
+    row('auditVersions', versions.length ? versions.join(', ') : t('auditHidden'), versions.length ? 'warn' : 'good');
+}
+
+/**
+ * Раздел «Безопасность»: HTTPS, смешанный контент, HSTS и заголовки; без заголовков сервера — пояснение
+ * @param {Object} table таблица разделов
+ * @param {?Object} audit результат page/audit.js
+ * @param {Object} ctx данные окна (server, info, extended)
+ */
+function renderSecuritySection(table, audit, {server, info, extended}) {
+    const {section, row, yn} = table;
+    const group = section('auditSecurity', 'security');
     if (!server) {
         // Заголовки сервера видны только в расширенном режиме — балл по неполным данным
         const note = document.createElement('p');
@@ -1629,125 +2007,173 @@ function renderAudit(audit, server, extended, info, companies, catalog = [], mar
         note.textContent = t('scoreUnsure');
         group.append(note);
     }
-    row('auditHttps', info.https ? yes : no, info.https ? 'good' : 'bad', true,
-        {name: t('scoreHttps'), hint: t(info.https ? 'httpsOn' : 'httpsOff')});
-    // Смешанный контент: скрипты, стили и фреймы браузер блокирует — красным, картинки и медиа переводит
-    // на HTTPS сам — жёлтым
-    if (info.https) {
-        row('auditMixed', [info.mixed ? t('mixed', info.mixed) : '', info.mixedPassive ? t('mixedPassive', info.mixedPassive) : '']
-            .filter(Boolean).join(', ') || no, info.mixed ? 'bad' : info.mixedPassive ? 'warn' : 'good', true, {
-            name: t('scoreMixed'),
-            hint: [info.mixed ? t('mixedTitle', info.mixed) : '', info.mixedPassive ? t('mixedPassiveTitle', info.mixedPassive) : '']
-                .filter(Boolean).join('\n')
-        });
-        if (server?.ip) {
-            const hsts = 'strict-transport-security' in server.headers;
-            row('auditHsts', hsts ? yes : no, hsts ? 'good' : 'bad', true, {name: 'HSTS', hint: t(hsts ? 'hstsOn' : 'hstsOff')});
-        }
-    }
+    renderTransportRows(table, info, server);
     if (!server) {
         row('auditCustom:CSP, X-Frame-Options, Permissions-Policy…', t(extended ? 'serverReload' : 'serverExtended'), 'none');
     } else {
-        const headers = server.headers;
-        // Каждый заголовок CSP (повторы склеены через запятую) и каждый <meta> — отдельная политика, браузер применяет все
-        const policies = [...(headers['content-security-policy'] || '').split(','), ...(audit?.security.csp || [])]
-            .filter((policy) => policy.trim());
-        const csp = policies.length > 0;
-        // 'unsafe-inline' без nonce и hash разрешает любой встроенный скрипт — от XSS такая политика не спасает.
-        // Для элементов и атрибутов своя цепочка: script-src-elem/-attr → script-src → default-src.
-        // Набор слаб, если задан хотя бы в одной политике и слаб во всех, где задан.
-        // Строгие ограничения элементов не перекрывают слабые ограничения атрибутов и наоборот.
-        const directive = (policy, name) => new RegExp(`(?:^|;)\\s*${name}(?![\\w-])([^;]*)`, 'i').exec(policy)?.[1];
-        const sources = ['script-src-elem', 'script-src-attr'].map((name) => policies
-            .map((policy) => directive(policy, name) ?? directive(policy, 'script-src') ?? directive(policy, 'default-src'))
-            .filter((value) => value !== undefined));
-        const weak = sources.some((values) => values.length > 0 && values.every((value) => /'unsafe-inline'/i.test(value)
-            && !/(?:^|\s)'(?:nonce|sha(?:256|384|512))-[a-z0-9+/_-]+={0,2}'(?:\s|$)|'strict-dynamic'/i.test(value)));
-        // CSP только с frame-ancestors или upgrade-insecure-requests есть, но от XSS не защищает
-        const loose = csp && sources.every((values) => values.length === 0);
-        row('auditCsp', !csp ? no : loose ? t('auditCspNoScripts') : weak ? t('auditCspWeak') : yes,
-            !csp || loose || weak ? 'warn' : 'good');
-        const nosniff = /nosniff/i.test(headers['x-content-type-options'] || '');
-        row('auditNosniff', nosniff ? yes : no, nosniff ? 'good' : 'warn');
-        // frame-ancestors в <meta> браузер игнорирует — только из заголовка
-        const frame = 'x-frame-options' in headers || /frame-ancestors/i.test(headers['content-security-policy'] || '');
-        row('auditFrame', frame ? yes : no, frame ? 'good' : 'warn');
-        row('auditReferrer', 'referrer-policy' in headers ? yes : no, 'referrer-policy' in headers ? 'good' : 'none');
-        row('auditPermissions', 'permissions-policy' in headers ? yes : no, 'permissions-policy' in headers ? 'good' : 'none');
-        row('auditCoop', 'cross-origin-opener-policy' in headers ? yes : no, 'cross-origin-opener-policy' in headers ? 'good' : 'none');
-        // Версии ПО в заголовках: не уязвимость, но подсказка атакующему
-        const versions = ['server', 'x-powered-by', 'x-powered-cms']
-            .map((header) => headers[header] || '')
-            .filter((value) => /\d+\.\d+/.test(value));
-        row('auditVersions', versions.length ? versions.join(', ') : t('auditHidden'), versions.length ? 'warn' : 'good');
+        renderHeaderRows(table, server, audit);
     }
-    const unchecked = audit?.unchecked || {};
     if (audit) {
         const security = audit.security;
+        const unchecked = audit.unchecked || {};
         // Угадано по названию cookie — найденные показываем нейтрально, без замечания
-        row('auditSession', security.sessionCookies.length ? security.sessionCookies.join(', ') : no,
+        row('auditSession', security.sessionCookies.length ? security.sessionCookies.join(', ') : table.no,
             security.sessionCookies.length ? 'none' : 'good', !security.sessionCookies.length);
-        row('auditSecurityTxt', unchecked.securityTxt ? '—' : security.securityTxt ? yes : no, security.securityTxt ? 'good' : 'none');
+        row('auditSecurityTxt', unchecked.securityTxt ? '—' : yn(security.securityTxt), security.securityTxt ? 'good' : 'none');
     }
+}
 
+/**
+ * Состояние HTTP-кода страницы: ошибка — плохо, перенаправление — внимание
+ * @param {number} status
+ * @returns {string}
+ */
+function httpStatusState(status) {
+    if (status >= 400) {
+        return 'bad';
+    }
+    return status >= 300 ? 'warn' : 'good';
+}
+
+/**
+ * Состояние длины заголовка или описания: пусто — missing, вне рекомендованной — none, иначе хорошо
+ * @param {number} value
+ * @param {number} min
+ * @param {number} max
+ * @param {string} missing
+ * @returns {string}
+ */
+function lengthState(value, min, max, missing) {
+    if (!value) {
+        return missing;
+    }
+    return value < min || value > max ? 'none' : 'good';
+}
+
+/**
+ * Состояние числа заголовков H1: ноль — внимание, один — хорошо, больше — нейтрально
+ * @param {number} count
+ * @returns {string}
+ */
+function h1State(count) {
+    if (count === 0) {
+        return 'warn';
+    }
+    return count === 1 ? 'good' : 'none';
+}
+
+/**
+ * Раздел «SEO»: статус, индексация, заголовок, описание, H1, канонический адрес, Open Graph, viewport
+ * @param {Object} table таблица разделов
+ * @param {Object} audit результат page/audit.js
+ * @param {Object} ctx данные окна (server)
+ */
+function renderSeoSection({section, row, yes, no, yn}, audit, {server}) {
+    const {seo} = audit;
+    section('auditSeo', 'seo');
+    if (seo.status) {
+        row('auditStatus', String(seo.status), httpStatusState(seo.status));
+    }
+    // Запрет индексации — грубая ошибка SEO, поэтому здесь, а не в «Роботах и ИИ».
+    // X-Robots-Tag: «noindex», «googlebot: noindex», но не «max-image-preview:none»
+    const noindex = seo.noindex || (server?.headers['x-robots-tag'] || '').split(',')
+        .some((value) => /^\s*(?:(?!max-|unavailable_after)[\w-]+\s*:\s*)?(noindex|none)\s*$/i.test(value));
+    const denied = [noindex ? 'noindex' : '', seo.robots?.blocked ? 'robots.txt' : ''].filter(Boolean).join(', ');
+    row('auditNoindex', denied || no, denied ? 'bad' : 'good');
+    // Длина вне рекомендованной — не замечание: Google режет по ширине в пикселях, а описание часто пишет сам
+    row('auditTitle', seo.title ? t('auditLength', formatNumber(seo.title)) : no, lengthState(seo.title, 10, 70, 'bad'));
+    row('auditDescription', seo.description ? t('auditLength', formatNumber(seo.description)) : no,
+        lengthState(seo.description, 50, 170, 'warn'));
+    row('auditH1', formatNumber(seo.h1), h1State(seo.h1));
+    // Указана другая страница или другой сайт — бывает законно (зеркала, AMP, фильтры, перепечатки), не замечание
+    row('auditCanonical', {same: yes, page: t('auditOtherPage'), other: t('auditOtherSite'), '': no}[seo.canonical],
+        seo.canonical === 'same' ? 'good' : 'none');
+    let og = no;
+    if (seo.ogTitle && seo.ogImage) {
+        og = yes;
+    } else if (seo.ogTitle) {
+        og = t('auditNoImage');
+    }
+    row('auditOg', og, seo.ogTitle && seo.ogImage ? 'good' : 'warn');
+    row('auditViewport', yn(seo.viewport), seo.viewport ? 'good' : 'warn');
+}
+
+/**
+ * Раздел «Доступность»: язык, масштабирование, подписи и имена
+ * @param {Object} table таблица разделов
+ * @param {Object} audit результат page/audit.js
+ */
+function renderA11ySection({section, row, yes, no}, {a11y, seo}) {
+    section('auditA11y', 'a11y');
+    row('auditLang', a11y.lang || no, a11y.lang ? 'good' : 'warn');
+    if (seo.viewport) {
+        row('auditZoom', seo.zoomOff ? yes : no, seo.zoomOff ? 'bad' : 'good');
+    }
+    row('auditAlt', formatNumber(a11y.alt), a11y.alt ? 'warn' : 'good');
+    row('auditLabels', formatNumber(a11y.labels), a11y.labels ? 'warn' : 'good');
+    row('auditNames', formatNumber(a11y.names), a11y.names ? 'warn' : 'good');
+    row('auditMain', a11y.main ? yes : no, a11y.main ? 'good' : 'warn');
+}
+
+/**
+ * Раздел «Роботы и ИИ» без оценки: robots.txt, карта сайта, правила для ИИ-ботов, llms.txt.
+ * Закрыть сайт от ИИ-ботов или открыть — не хорошо и не плохо
+ * @param {Object} table таблица разделов
+ * @param {Object} audit результат page/audit.js
+ * @param {Object} ctx данные окна (aiBots)
+ */
+function renderBotsSection({section, row, yes, no, yn}, audit, {aiBots}) {
+    const {seo} = audit;
+    const unchecked = audit.unchecked || {};
+    section('auditBots');
+    const robots = seo.robots;
+    // Сайт не ответил вовремя: файла может и не быть, но замечанием это не считаем
+    if (unchecked.robots) {
+        row('auditRobots', '—', 'none');
+    } else {
+        row('auditRobots', robots ? yes : no, robots ? 'good' : 'warn');
+    }
+    if (robots) {
+        row('auditSitemap', robots.sitemap ? yes : no, robots.sitemap ? 'good' : 'none');
+    }
+    for (const [category, key] of [['training', 'auditAiTraining'], ['search', 'auditAiSearch'],
+        ['user', 'auditAiUser'], ['mixed', 'auditAiMixed']]) {
+        const ai = formatAiCauses(audit.causes?.version === 1 ? audit.causes.robotsAi : null, aiBots, category);
+        const el = row(key, ai.value, 'none', true, {hint: t('auditAiHint')});
+        renderAuditCauses(el, ai.section, ai.items, ai.notes);
+    }
+    // Google llms.txt не использует — есть файл или нет, только для сведения
+    row('auditLlms', unchecked.llms ? '—' : yn(seo.llms), 'none');
+}
+
+/**
+ * Разделы под табло оценки: строки по группам оценки (приватность, скорость, безопасность, SEO, доступность)
+ * и «Роботы и ИИ» без оценки. Строка — название, значение и цвет; пояснение — при наведении.
+ * Замечания — жёлтые и красные строки. Балл группы в заголовке раздела ставит renderScore
+ * @param {?Object} audit результат page/audit.js
+ * @param {Object} ctx данные окна: server, extended, info, companies (кто следит), catalog (полный справочник
+ *     владельцев источников), marketing (принятый снимок настроек того же документа), aiBots (локальный каталог ИИ)
+ * @returns {Map<string, {name: string, state: string}>} строки по ключам — для оценки
+ */
+function renderAudit(audit, ctx) {
+    const body = document.getElementById('audit-body');
+    // «О сайте» — в разметке, остальное — заново
+    for (const el of [...body.children].filter((el) => el.id !== 'about')) {
+        el.remove();
+    }
+    const table = auditTable(body, audit);
+    renderPrivacySection(table, ctx);
     if (audit) {
-        section('auditSeo', 'seo');
-        if (seo.status) {
-            row('auditStatus', String(seo.status), seo.status >= 400 ? 'bad' : seo.status >= 300 ? 'warn' : 'good');
-        }
-        // Запрет индексации — грубая ошибка SEO, поэтому здесь, а не в «Роботах и ИИ».
-        // X-Robots-Tag: «noindex», «googlebot: noindex», но не «max-image-preview:none»
-        const noindex = seo.noindex || (server?.headers['x-robots-tag'] || '').split(',')
-            .some((value) => /^\s*(?:(?!max-|unavailable_after)[\w-]+\s*:\s*)?(noindex|none)\s*$/i.test(value));
-        const denied = [noindex ? 'noindex' : '', seo.robots?.blocked ? 'robots.txt' : ''].filter(Boolean).join(', ');
-        row('auditNoindex', denied || no, denied ? 'bad' : 'good');
-        // Длина вне рекомендованной — не замечание: Google режет по ширине в пикселях, а описание часто пишет сам
-        row('auditTitle', seo.title ? t('auditLength', formatNumber(seo.title)) : no,
-            !seo.title ? 'bad' : seo.title < 10 || seo.title > 70 ? 'none' : 'good');
-        row('auditDescription', seo.description ? t('auditLength', formatNumber(seo.description)) : no,
-            !seo.description ? 'warn' : seo.description < 50 || seo.description > 170 ? 'none' : 'good');
-        row('auditH1', formatNumber(seo.h1), seo.h1 === 0 ? 'warn' : seo.h1 === 1 ? 'good' : 'none');
-        // Указана другая страница или другой сайт — бывает законно (зеркала, AMP, фильтры, перепечатки), не замечание
-        row('auditCanonical', {same: yes, page: t('auditOtherPage'), other: t('auditOtherSite'), '': no}[seo.canonical],
-            seo.canonical === 'same' ? 'good' : 'none');
-        row('auditOg', seo.ogTitle && seo.ogImage ? yes : seo.ogTitle ? t('auditNoImage') : no,
-            seo.ogTitle && seo.ogImage ? 'good' : 'warn');
-        row('auditViewport', seo.viewport ? yes : no, seo.viewport ? 'good' : 'warn');
-
-        section('auditA11y', 'a11y');
-        row('auditLang', a11y.lang || no, a11y.lang ? 'good' : 'warn');
-        if (seo.viewport) {
-            row('auditZoom', seo.zoomOff ? yes : no, seo.zoomOff ? 'bad' : 'good');
-        }
-        row('auditAlt', formatNumber(a11y.alt), a11y.alt ? 'warn' : 'good');
-        row('auditLabels', formatNumber(a11y.labels), a11y.labels ? 'warn' : 'good');
-        row('auditNames', formatNumber(a11y.names), a11y.names ? 'warn' : 'good');
-        row('auditMain', a11y.main ? yes : no, a11y.main ? 'good' : 'warn');
-
-        // Роботы и ИИ: то, о чём часто не знают — robots.txt, карта сайта, правила для нейросетей, llms.txt.
-        // Без оценки: закрыть сайт от ИИ-ботов или открыть — не хорошо и не плохо
-        section('auditBots');
-        const robots = seo.robots;
-        // Сайт не ответил вовремя: файла может и не быть, но замечанием это не считаем
-        if (unchecked.robots) {
-            row('auditRobots', '—', 'none');
-        } else {
-            row('auditRobots', robots ? yes : no, robots ? 'good' : 'warn');
-        }
-        if (robots) {
-            row('auditSitemap', robots.sitemap ? yes : no, robots.sitemap ? 'good' : 'none');
-        }
-        for (const [category, key] of [['training', 'auditAiTraining'], ['search', 'auditAiSearch'],
-            ['user', 'auditAiUser'], ['mixed', 'auditAiMixed']]) {
-            const ai = formatAiCauses(audit.causes?.version === 1 ? audit.causes.robotsAi : null, aiBots, category);
-            const el = row(key, ai.value, 'none', true, {hint: t('auditAiHint')});
-            renderAuditCauses(el, ai.section, ai.items, ai.notes);
-        }
-        // Google llms.txt не использует — есть файл или нет, только для сведения
-        row('auditLlms', unchecked.llms ? '—' : seo.llms ? yes : no, 'none');
+        renderSpeedSection(table, audit, ctx);
+    }
+    renderSecuritySection(table, audit, ctx);
+    if (audit) {
+        renderSeoSection(table, audit, ctx);
+        renderA11ySection(table, audit);
+        renderBotsSection(table, audit, ctx);
     }
     setupAuditGroups();
-    return rows;
+    return table.rows;
 }
 
 /**
@@ -1763,6 +2189,26 @@ async function readTabRedirects(tabId) {
     }
     const response = await chrome.runtime.sendMessage({tabInfo: tabId}).catch(() => null);
     return await chrome.permissions.contains(EXTENDED).catch(() => false) ? response : basic;
+}
+
+/**
+ * Ключ строки перенаправлений: ошибка и ожидание — свои, иначе — по полноте и числу переходов
+ * @param {string} outcome
+ * @param {boolean} partial
+ * @param {boolean} hasHops
+ * @returns {string}
+ */
+function redirectsKey(outcome, partial, hasHops) {
+    if (outcome === 'error') {
+        return 'redirectsError';
+    }
+    if (outcome === 'pending') {
+        return 'redirectsPending';
+    }
+    if (partial) {
+        return 'auditDetailsPartial';
+    }
+    return hasHops ? 'redirectsCompleted' : 'redirectsEmpty';
 }
 
 /**
@@ -1803,8 +2249,7 @@ function formatRedirectCauses(response) {
         value: `${address(hop.from)} → ${address(hop.to)}`
     }));
     return {
-        value: t(chain.outcome === 'error' ? 'redirectsError' : chain.outcome === 'pending' ? 'redirectsPending'
-            : partial ? 'auditDetailsPartial' : hops.length ? 'redirectsCompleted' : 'redirectsEmpty'),
+        value: t(redirectsKey(chain.outcome, partial, hops.length > 0)),
         section: {status: partial ? 'partial' : 'ok', truncated: !!chain.truncated}, items
     };
 }
@@ -2026,7 +2471,215 @@ const SCORE_GROUPS = [['privacy', 'auditPrivacy', 3], ['speed', 'auditSpeed', 2]
  * @returns {string}
  */
 function scoreState(score) {
-    return score >= 7.5 ? 'good' : score >= 5 ? 'warn' : 'bad';
+    if (score >= 7.5) {
+        return 'good';
+    }
+    return score >= 5 ? 'warn' : 'bad';
+}
+
+/**
+ * Ступень по порогам: первое значение, не превышающее предел, даёт свой балл
+ * @param {number} value
+ * @param {number[]} limits
+ * @param {number[]} points
+ * @returns {number}
+ */
+function scoreStep(value, limits, points) {
+    return points[limits.findIndex((limit) => value <= limit)] ?? points.at(-1);
+}
+
+/**
+ * Строка как показатель: зелёная — 1, жёлтая — 0,5, красная — 0; нейтральной или отсутствующей нет
+ * @param {Map<string, {name: string, state: string}>} rows
+ * @param {string} key
+ * @param {number} weight
+ * @returns {Array}
+ */
+function scoreRow(rows, key, weight) {
+    return [rows.get(key)?.name, {good: 1, warn: 0.5, bad: 0}[rows.get(key)?.state], weight];
+}
+
+/**
+ * Сколько найдено (картинки без alt, поля без подписи): одно — ещё не беда, много — хуже
+ * @param {Map<string, {name: string, state: string}>} rows
+ * @param {string} key
+ * @param {number|undefined} value
+ * @param {number} weight
+ * @returns {Array}
+ */
+function scoreCount(rows, key, value, weight) {
+    return [rows.get(key)?.name, rows.has(key) ? scoreStep(value, [0, 3, 10], [1, 0.7, 0.5, 0.3]) : undefined, weight];
+}
+
+/**
+ * Показатели приватности: компании и сторонние домены
+ * @param {Object} info
+ * @param {Array<Object>} companies
+ * @returns {Array}
+ */
+function privacyParts(info, companies) {
+    return [
+        [t('scoreTrackers'), scoreStep(companies.length, [0, 1, 2, 4, 7], [1, 0.8, 0.65, 0.45, 0.25, 0.1]), 3],
+        // Вес меньше: сторонние домены во многом те же трекеры
+        [t('scoreDomains'), scoreStep(info.domains.length, [5, 15, 30], [1, 0.6, 0.35, 0.15]), 1]
+    ];
+}
+
+/**
+ * Балл скорости: по отрисовке главного блока (LCP), как у Google; если её нет — по полной загрузке
+ * @param {Object} info
+ * @param {?Object} vitals
+ * @returns {number|undefined}
+ */
+function speedPoints(info, vitals) {
+    if (vitals?.lcp != null) {
+        return scoreStep(vitals.lcp / 1000, [1.5, 2.5, 4, 6], [1, 0.85, 0.5, 0.25, 0.1]);
+    }
+    if (info.loadTime === null) {
+        return undefined;
+    }
+    return scoreStep(info.loadTime / 1000, [1, 2, 3, 5], [1, 0.85, 0.65, 0.4, 0.15]);
+}
+
+/**
+ * Балл отклика: только если действия были и он известен
+ * @param {?Object} vitals
+ * @returns {number|undefined}
+ */
+function inpPoints(vitals) {
+    if (vitals?.inpFast) {
+        return 1;
+    }
+    if (vitals?.inp != null && !vitals.inpPartial) {
+        return scoreStep(vitals.inp, [200, 500], [1, 0.5, 0.1]);
+    }
+    return undefined;
+}
+
+/**
+ * Показатели скорости: вехи, вес, протокол, сжатие и строки раздела
+ * @param {Object} info
+ * @param {?Object} audit
+ * @param {Map<string, {name: string, state: string}>} rows
+ * @returns {Array}
+ */
+function speedParts(info, audit, rows) {
+    const vitals = audit?.vitals;
+    return [
+        [t('scoreSpeed'), speedPoints(info, vitals), 2],
+        [t('scoreCls'), vitals?.cls != null ? scoreStep(vitals.cls, [0.1, 0.25], [1, 0.5, 0.1]) : undefined, 1],
+        // Отклик — только если действия были и он известен
+        [t('auditInp'), inpPoints(vitals), 1],
+        // Пороги как у метки веса: до 2 МБ — от 8 баллов, до 5 — от 5, больше — меньше 5
+        [t('scoreWeight'), scoreStep(Math.round(info.weight.bytes / 2 ** 20 * 10) / 10, [1, 2, 3, 5, 8], [1, 0.9, 0.7, 0.55, 0.3, 0.1]), 1.5],
+        // HTTP/2 — норма (Lighthouse ругается только на HTTP/1.x), HTTP/3 — небольшой плюс
+        [t('scoreProtocol'), info.h3 ? 1 : {'h2': 0.9, 'http/1.1': 0.3, 'http/1.0': 0.2}[info.protocol], 1],
+        [t('scoreCompression'), compressionScore(info), 0.5],
+        scoreRow(rows, 'auditTtfb', 0.5),
+        scoreRow(rows, 'auditFcp', 0.5),
+        scoreRow(rows, 'auditBlocking', 0.5),
+        scoreRow(rows, 'auditDoctype', 0.5),
+        scoreRow(rows, 'auditNoSize', 0.25),
+        scoreRow(rows, 'auditLarge', 0.25),
+        scoreRow(rows, 'auditModern', 0.25)
+    ];
+}
+
+/**
+ * Балл смешанного контента: пассивный браузер переводит на HTTPS сам — штраф мягче
+ * @param {Object} info
+ * @returns {number|undefined}
+ */
+function mixedPoints(info) {
+    if (!info.https) {
+        return undefined;
+    }
+    if (info.mixed) {
+        return 0.2;
+    }
+    return info.mixedPassive ? 0.7 : 1;
+}
+
+/**
+ * Балл HSTS: есть — полный, нет — частичный; без проверки заголовков — не учитываем
+ * @param {Map<string, {name: string, state: string}>} rows
+ * @returns {number|undefined}
+ */
+function hstsPoints(rows) {
+    if (!rows.has('auditHsts')) {
+        return undefined;
+    }
+    return rows.get('auditHsts').state === 'good' ? 1 : 0.3;
+}
+
+/**
+ * Показатели безопасности: HTTPS, смешанный контент, HSTS и заголовки
+ * @param {Object} info
+ * @param {Map<string, {name: string, state: string}>} rows
+ * @returns {Array}
+ */
+function securityParts(info, rows) {
+    return [
+        [t('scoreHttps'), info.https ? 1 : 0, 3],
+        [t('scoreMixed'), mixedPoints(info), 1],
+        [t('scoreHsts'), hstsPoints(rows), 1],
+        scoreRow(rows, 'auditCsp', 1),
+        scoreRow(rows, 'auditNosniff', 0.5),
+        scoreRow(rows, 'auditFrame', 0.5),
+        scoreRow(rows, 'auditVersions', 0.5)
+    ];
+}
+
+/**
+ * Показатели SEO: грубые ошибки весят больше — страница закрыта от поисковиков или без заголовка
+ * @param {Map<string, {name: string, state: string}>} rows
+ * @returns {Array}
+ */
+function seoParts(rows) {
+    return [
+        scoreRow(rows, 'auditStatus', 1),
+        scoreRow(rows, 'auditNoindex', 3),
+        scoreRow(rows, 'auditTitle', 3),
+        scoreRow(rows, 'auditDescription', 1),
+        scoreRow(rows, 'auditH1', 0.5),
+        scoreRow(rows, 'auditOg', 0.5),
+        scoreRow(rows, 'auditViewport', 1)
+    ];
+}
+
+/**
+ * Показатели доступности: запрет масштабирования — самое грубое, слабовидящий не может увеличить страницу
+ * @param {?Object} a11y
+ * @param {Map<string, {name: string, state: string}>} rows
+ * @returns {Array}
+ */
+function a11yParts(a11y, rows) {
+    return [
+        scoreRow(rows, 'auditLang', 1),
+        scoreRow(rows, 'auditZoom', 3),
+        scoreCount(rows, 'auditAlt', a11y?.alt, 1),
+        scoreCount(rows, 'auditLabels', a11y?.labels, 1),
+        scoreCount(rows, 'auditNames', a11y?.names, 1),
+        scoreRow(rows, 'auditMain', 0.5)
+    ];
+}
+
+/**
+ * Группа считается по неполным данным: безопасность без заголовков сервера (без расширенного режима),
+ * скорость — если страница не дала выполнить аудит (метрик Google нет, остались вес, протокол и время загрузки)
+ * @param {string} id
+ * @param {?Object} server
+ * @param {?Object} audit
+ * @returns {boolean}
+ */
+function scoreSure(id, server, audit) {
+    if (id === 'security') {
+        return Boolean(server);
+    }
+    if (id === 'speed') {
+        return Boolean(audit);
+    }
+    return true;
 }
 
 /**
@@ -2040,69 +2693,12 @@ function scoreState(score) {
  * @returns {{total: number, groups: Array<{id: string, name: string, score: ?number, sure: boolean, parts: Array<[string, number]>}>}}
  */
 function scoreSite(info, companies, audit, rows, server) {
-    const step = (value, limits, points) => points[limits.findIndex((limit) => value <= limit)] ?? points[points.length - 1];
-    // Строка как показатель: зелёная — 1, жёлтая — 0,5, красная — 0; нейтральной или отсутствующей нет
-    const row = (key, weight) => [rows.get(key)?.name, {good: 1, warn: 0.5, bad: 0}[rows.get(key)?.state], weight];
-    // Сколько найдено (картинки без alt, поля без подписи): одно — ещё не беда, много — хуже
-    const count = (key, value, weight) => [rows.get(key)?.name, rows.has(key) ? step(value, [0, 3, 10], [1, 0.7, 0.5, 0.3]) : undefined, weight];
-    const vitals = audit?.vitals;
-    const a11y = audit?.a11y;
     const parts = {
-        privacy: [
-            [t('scoreTrackers'), step(companies.length, [0, 1, 2, 4, 7], [1, 0.8, 0.65, 0.45, 0.25, 0.1]), 3],
-            // Вес меньше: сторонние домены во многом те же трекеры
-            [t('scoreDomains'), step(info.domains.length, [5, 15, 30], [1, 0.6, 0.35, 0.15]), 1]
-        ],
-        speed: [
-            // Скорость — по отрисовке главного блока (LCP), как у Google; если её нет — по полной загрузке
-            [t('scoreSpeed'), vitals?.lcp != null ? step(vitals.lcp / 1000, [1.5, 2.5, 4, 6], [1, 0.85, 0.5, 0.25, 0.1])
-                : info.loadTime === null ? undefined : step(info.loadTime / 1000, [1, 2, 3, 5], [1, 0.85, 0.65, 0.4, 0.15]), 2],
-            [t('scoreCls'), vitals?.cls != null ? step(vitals.cls, [0.1, 0.25], [1, 0.5, 0.1]) : undefined, 1],
-            // Отклик — только если действия были и он известен
-            [t('auditInp'), vitals?.inpFast ? 1 : vitals?.inp != null && !vitals.inpPartial
-                ? step(vitals.inp, [200, 500], [1, 0.5, 0.1]) : undefined, 1],
-            // Пороги как у метки веса: до 2 МБ — от 8 баллов, до 5 — от 5, больше — меньше 5
-            [t('scoreWeight'), step(Math.round(info.weight.bytes / 2 ** 20 * 10) / 10, [1, 2, 3, 5, 8], [1, 0.9, 0.7, 0.55, 0.3, 0.1]), 1.5],
-            // HTTP/2 — норма (Lighthouse ругается только на HTTP/1.x), HTTP/3 — небольшой плюс
-            [t('scoreProtocol'), info.h3 ? 1 : {'h2': 0.9, 'http/1.1': 0.3, 'http/1.0': 0.2}[info.protocol], 1],
-            [t('scoreCompression'), compressionScore(info), 0.5],
-            row('auditTtfb', 0.5),
-            row('auditFcp', 0.5),
-            row('auditBlocking', 0.5),
-            row('auditDoctype', 0.5),
-            row('auditNoSize', 0.25),
-            row('auditLarge', 0.25),
-            row('auditModern', 0.25)
-        ],
-        security: [
-            [t('scoreHttps'), info.https ? 1 : 0, 3],
-            // Пассивный смешанный контент браузер переводит на HTTPS сам — штраф мягче. Без HTTPS его не бывает
-            [t('scoreMixed'), !info.https ? undefined : info.mixed ? 0.2 : info.mixedPassive ? 0.7 : 1, 1],
-            [t('scoreHsts'), rows.has('auditHsts') ? (rows.get('auditHsts').state === 'good' ? 1 : 0.3) : undefined, 1],
-            row('auditCsp', 1),
-            row('auditNosniff', 0.5),
-            row('auditFrame', 0.5),
-            row('auditVersions', 0.5)
-        ],
-        // Грубые ошибки весят больше: страница закрыта от поисковиков или без заголовка
-        seo: [
-            row('auditStatus', 1),
-            row('auditNoindex', 3),
-            row('auditTitle', 3),
-            row('auditDescription', 1),
-            row('auditH1', 0.5),
-            row('auditOg', 0.5),
-            row('auditViewport', 1)
-        ],
-        // Запрет масштабирования — самое грубое: слабовидящий не может увеличить страницу
-        a11y: [
-            row('auditLang', 1),
-            row('auditZoom', 3),
-            count('auditAlt', a11y?.alt, 1),
-            count('auditLabels', a11y?.labels, 1),
-            count('auditNames', a11y?.names, 1),
-            row('auditMain', 0.5)
-        ]
+        privacy: privacyParts(info, companies),
+        speed: speedParts(info, audit, rows),
+        security: securityParts(info, rows),
+        seo: seoParts(rows),
+        a11y: a11yParts(audit?.a11y, rows)
     };
 
     const groups = SCORE_GROUPS.map(([id, key, weight]) => {
@@ -2115,9 +2711,7 @@ function scoreSite(info, companies, audit, rows, server) {
             weight,
             exact: weights ? (sum / weights) * 10 : null,
             score: weights ? Math.round((sum / weights) * 100) / 10 : null,
-            // По неполным данным: безопасность без заголовков сервера (без расширенного режима), скорость — если
-            // страница не дала выполнить аудит (метрик Google нет, остались вес, протокол и время загрузки)
-            sure: id === 'security' ? Boolean(server) : id === 'speed' ? Boolean(audit) : true,
+            sure: scoreSure(id, server, audit),
             parts: known.map(([name, value]) => [name, Math.round(value * 10)])
         };
     });
@@ -2151,41 +2745,26 @@ function scoreRing(size, stroke, score) {
 }
 
 /**
- * Оценка в окне: полоса (10 делений и число), табло (общая и группы) и баллы в заголовках разделов
- * @param {Object} info
- * @param {Array<{name: string}>} companies
- * @param {?Object} audit
- * @param {Map<string, {name: string, state: string}>} rows
- * @param {?Object} server
- * @returns {{total: number, groups: Array<Object>}}
+ * Балл с одним знаком после запятой
+ * @param {number} value
+ * @returns {string}
  */
-function renderScore(info, companies, audit, rows, server) {
-    const result = scoreSite(info, companies, audit, rows, server);
-    const {total, groups} = result;
-    const format = (value) => formatNumber(value, {minimumFractionDigits: 1, maximumFractionDigits: 1});
-    const formatted = format(total);
+function formatScoreValue(value) {
+    return formatNumber(value, {minimumFractionDigits: 1, maximumFractionDigits: 1});
+}
 
-    const el = document.getElementById('score');
-    el.dataset.state = scoreState(total);
-    document.getElementById('score-value').textContent = formatted;
-    for (const [i, segment] of [...document.querySelectorAll('#meter i')].entries()) {
-        segment.classList.toggle('on', i < Math.round(total));
-    }
-    // Из чего сложилась общая: группы и потолок без HTTPS
-    const totalTitle = [
-        t('scoreTitle', formatted),
-        ...groups.filter((group) => group.score !== null)
-            .map((group) => `${group.name}: ${format(group.score)}${group.sure ? '' : '?'}`),
-        info.https ? '' : t('scoreCapHttps')
-    ].filter(Boolean).join('\n');
-    document.getElementById('score-more').title = totalTitle;
-
-    // Табло: круг общей и строки групп с пятью делениями (деление — 2 балла, половина — 1)
-    const board = document.getElementById('board');
+/**
+ * Круг общей оценки в табло
+ * @param {number} total
+ * @param {string} formatted
+ * @param {string} title
+ * @returns {HTMLDivElement}
+ */
+function scoreTotalElement(total, formatted, title) {
     const ring = document.createElement('div');
     ring.className = 'board-total';
     ring.dataset.state = scoreState(total);
-    ring.title = totalTitle;
+    ring.title = title;
     ring.tabIndex = 0;
     const dial = document.createElement('span');
     dial.className = 'dial';
@@ -2200,85 +2779,184 @@ function renderScore(info, companies, audit, rows, server) {
     caption.className = 'caption';
     caption.textContent = t('scoreLabel');
     ring.append(dial, caption);
+    return ring;
+}
 
+/**
+ * Пометка «?» для группы по неполным данным: пояснение зависит от группы
+ * @param {{id: string, sure: boolean}} group
+ * @returns {string}
+ */
+function scoreUnsureText(group) {
+    if (group.sure) {
+        return '';
+    }
+    return t(group.id === 'speed' ? 'scoreSpeedUnsure' : 'scoreUnsure');
+}
+
+/**
+ * Подсказка строки группы: балл, показатели и пояснения
+ * @param {Object} group
+ * @param {Object} info
+ * @param {string} value балл строкой
+ * @returns {string}
+ */
+function scoreRowTitle(group, info, value) {
+    if (group.score === null) {
+        return '';
+    }
+    return [
+        `${group.name}. ${t('scoreTitle', value + (group.sure ? '' : '?'))}`,
+        ...group.parts.map(([name, points]) => `${name}: ${formatNumber(points)}`),
+        scoreUnsureText(group),
+        group.id === 'speed' && info.loadTime === null ? t('loadingTitle') : ''
+    ].filter(Boolean).join('\n');
+}
+
+/**
+ * Класс деления шкалы группы: полное — от 2 баллов, половинка — на нечётном
+ * @param {number} points
+ * @param {number} i номер деления
+ * @returns {string}
+ */
+function segmentClass(points, i) {
+    if (points >= i * 2 + 2) {
+        return ' on';
+    }
+    return points === i * 2 + 1 ? ' half' : '';
+}
+
+/**
+ * Строка группы в табло: название, пять делений и балл. Если раздел на странице есть —
+ * кнопка перехода к нему; иначе пояснение доступно с клавиатуры
+ * @param {Object} group
+ * @param {Object} info
+ * @returns {HTMLDivElement}
+ */
+function scoreRowElement(group, info) {
+    const item = document.createElement('div');
+    item.className = 'board-row';
+    item.dataset.state = group.score === null ? 'none' : scoreState(group.score);
+    if (!group.sure) {
+        item.dataset.sure = 'false';
+    }
+    const value = group.score === null ? '—' : formatScoreValue(group.score);
+    item.title = scoreRowTitle(group, info, value);
+    const label = document.createElement('span');
+    label.className = 'label';
+    label.textContent = group.name;
+    const meter = document.createElement('span');
+    meter.className = 'five';
+    const points = Math.round(group.score ?? 0);
+    for (let i = 0; i < 5; i++) {
+        const segment = document.createElement('span');
+        segment.className = 'seg' + segmentClass(points, i);
+        meter.append(segment);
+    }
+    const num = document.createElement('span');
+    num.className = 'num';
+    num.textContent = value;
+    item.append(label, meter, num);
+
+    const section = document.querySelector(`.audit-group[data-group="${group.id}"]`);
+    if (section) {
+        const jump = document.createElement('button');
+        jump.type = 'button';
+        jump.className = 'board-jump';
+        jump.setAttribute('aria-label', item.title || group.name);
+        jump.setAttribute('aria-controls', section.querySelector('.group-body').id);
+        jump.addEventListener('click', () => {
+            openAuditGroup(section);
+            section.querySelector('.group-toggle').focus();
+            section.scrollIntoView({block: 'nearest'});
+        });
+        item.append(jump);
+    } else if (item.title) {
+        // Без аудита раздела может не быть: пояснение балла остаётся доступно с клавиатуры.
+        item.tabIndex = 0;
+    }
+    return item;
+}
+
+/**
+ * Балл в заголовке раздела аудита и число замечаний; закрытая группа всё ещё находится в DOM
+ * @param {HTMLElement} section
+ * @param {Object} group
+ * @param {HTMLElement} item строка табло
+ */
+function decorateSectionTitle(section, group, item) {
+    const title = section.querySelector('.group-toggle');
+    if (!title) {
+        return;
+    }
+    const value = group.score === null ? '—' : formatScoreValue(group.score);
+    title.querySelector('.ring')?.remove();
+    title.querySelector('.h-num')?.remove();
+    title.querySelector('.h-issues')?.remove();
+    delete title.dataset.sure;
+    title.dataset.state = item.dataset.state;
+    if (!group.sure) {
+        title.dataset.sure = 'false';
+    }
+    title.prepend(scoreRing(18, 2.5, group.score));
+    const h = document.createElement('span');
+    h.className = 'h-num';
+    const v = document.createElement('span');
+    v.className = 'h-value';
+    v.textContent = value;
+    const small = document.createElement('small');
+    small.textContent = t('scoreOutOf');
+    // Отступ — в CSS: «из 10» отдельно, а «/10» (финский, эстонский, венгерский…) — вплотную, как дробь
+    small.className = /^\/\S/.test(small.textContent) ? 'of tight' : 'of';
+    h.append(v, small);
+    title.append(h);
+    const issues = section.querySelectorAll('.audit-row:is([data-state="bad"], [data-state="warn"])').length;
+    const note = document.createElement('span');
+    note.className = 'h-issues';
+    note.textContent = t('auditGroupIssues', formatNumber(issues));
+    title.append(note);
+}
+
+/**
+ * Оценка в окне: полоса (10 делений и число), табло (общая и группы) и баллы в заголовках разделов
+ * @param {Object} info
+ * @param {Array<{name: string}>} companies
+ * @param {?Object} audit
+ * @param {Map<string, {name: string, state: string}>} rows
+ * @param {?Object} server
+ * @returns {{total: number, groups: Array<Object>}}
+ */
+function renderScore(info, companies, audit, rows, server) {
+    const result = scoreSite(info, companies, audit, rows, server);
+    const {total, groups} = result;
+    const formatted = formatScoreValue(total);
+
+    const el = document.getElementById('score');
+    el.dataset.state = scoreState(total);
+    document.getElementById('score-value').textContent = formatted;
+    for (const [i, segment] of [...document.querySelectorAll('#meter i')].entries()) {
+        segment.classList.toggle('on', i < Math.round(total));
+    }
+    // Из чего сложилась общая: группы и потолок без HTTPS
+    const totalTitle = [
+        t('scoreTitle', formatted),
+        ...groups.filter((group) => group.score !== null)
+            .map((group) => `${group.name}: ${formatScoreValue(group.score)}${group.sure ? '' : '?'}`),
+        info.https ? '' : t('scoreCapHttps')
+    ].filter(Boolean).join('\n');
+    document.getElementById('score-more').title = totalTitle;
+
+    // Табло: круг общей и строки групп с пятью делениями (деление — 2 балла, половина — 1)
+    const board = document.getElementById('board');
+    const ring = scoreTotalElement(total, formatted, totalTitle);
     const list = document.createElement('div');
     list.className = 'board-rows';
     for (const group of groups) {
-        const item = document.createElement('div');
-        item.className = 'board-row';
-        item.dataset.state = group.score === null ? 'none' : scoreState(group.score);
-        if (!group.sure) {
-            item.dataset.sure = 'false';
-        }
-        const value = group.score === null ? '—' : format(group.score);
-        item.title = group.score === null ? '' : [
-            `${group.name}. ${t('scoreTitle', value + (group.sure ? '' : '?'))}`,
-            ...group.parts.map(([name, points]) => `${name}: ${formatNumber(points)}`),
-            group.sure ? '' : t(group.id === 'speed' ? 'scoreSpeedUnsure' : 'scoreUnsure'),
-            group.id === 'speed' && info.loadTime === null ? t('loadingTitle') : ''
-        ].filter(Boolean).join('\n');
-        const label = document.createElement('span');
-        label.className = 'label';
-        label.textContent = group.name;
-        const meter = document.createElement('span');
-        meter.className = 'five';
-        const points = Math.round(group.score ?? 0);
-        for (let i = 0; i < 5; i++) {
-            const segment = document.createElement('span');
-            segment.className = 'seg' + (points >= i * 2 + 2 ? ' on' : points === i * 2 + 1 ? ' half' : '');
-            meter.append(segment);
-        }
-        const num = document.createElement('span');
-        num.className = 'num';
-        num.textContent = value;
-        item.append(label, meter, num);
+        const item = scoreRowElement(group, info);
         list.append(item);
-
-        // Балл в заголовке раздела; закрытая группа всё ещё находится в DOM.
         const section = document.querySelector(`.audit-group[data-group="${group.id}"]`);
-        const title = section?.querySelector('.group-toggle');
         if (section) {
-            const jump = document.createElement('button');
-            jump.type = 'button';
-            jump.className = 'board-jump';
-            jump.setAttribute('aria-label', item.title || group.name);
-            jump.setAttribute('aria-controls', section.querySelector('.group-body').id);
-            jump.addEventListener('click', () => {
-                openAuditGroup(section);
-                section.querySelector('.group-toggle').focus();
-                section.scrollIntoView({block: 'nearest'});
-            });
-            item.append(jump);
-        } else if (item.title) {
-            // Без аудита раздела может не быть: пояснение балла остаётся доступно с клавиатуры.
-            item.tabIndex = 0;
-        }
-        if (title) {
-            title.querySelector('.ring')?.remove();
-            title.querySelector('.h-num')?.remove();
-            title.querySelector('.h-issues')?.remove();
-            delete title.dataset.sure;
-            title.dataset.state = item.dataset.state;
-            if (!group.sure) {
-                title.dataset.sure = 'false';
-            }
-            title.prepend(scoreRing(18, 2.5, group.score));
-            const h = document.createElement('span');
-            h.className = 'h-num';
-            const v = document.createElement('span');
-            v.className = 'h-value';
-            v.textContent = value;
-            const small = document.createElement('small');
-            small.textContent = t('scoreOutOf');
-            // Отступ — в CSS: «из 10» отдельно, а «/10» (финский, эстонский, венгерский…) — вплотную, как дробь
-            small.className = /^\/\S/.test(small.textContent) ? 'of tight' : 'of';
-            h.append(v, small);
-            title.append(h);
-            const issues = section.querySelectorAll('.audit-row:is([data-state="bad"], [data-state="warn"])').length;
-            const note = document.createElement('span');
-            note.className = 'h-issues';
-            note.textContent = t('auditGroupIssues', formatNumber(issues));
-            title.append(note);
+            decorateSectionTitle(section, group, item);
         }
     }
     const focusedGroup = board.contains(document.activeElement) ? document.activeElement.getAttribute('aria-controls') : null;
@@ -2439,6 +3117,76 @@ async function toDataUrl(src) {
 }
 
 /**
+ * Элемент с текстом
+ * @param {string} tag
+ * @param {string} className
+ * @param {string} [text]
+ * @returns {HTMLElement}
+ */
+function makeEl(tag, className, text) {
+    const el = document.createElement(tag);
+    el.className = className;
+    if (text) {
+        el.textContent = text;
+    }
+    return el;
+}
+
+/**
+ * Замечания для картинки: проблемы протокола и сжатия, затем строки разделов с замечаниями
+ * @param {HTMLElement} panel копия панели значков
+ * @returns {HTMLUListElement}
+ */
+function reportNotes(panel) {
+    const notes = makeEl('ul', 'sheet-notes');
+    // HTTPS, HSTS и смешанный контент — строками раздела «Безопасность» ниже
+    const problems = [...panel.querySelectorAll(':is(#protocol, #compression)[data-state="bad"]')];
+    // Пояснение, открытое нажатием, временно хранится в data-tip (setupTips)
+    for (const text of new Set(problems.map((el) => (el.title || el.dataset.tip || '').split('\n')[0]).filter(Boolean))) {
+        notes.append(makeEl('li', '', text));
+    }
+    // Замечания из разделов оценки: название и значение жирным, дальше пояснение
+    for (const el of document.querySelectorAll('#audit-body .audit-row:is([data-state="bad"], [data-state="warn"])')) {
+        const li = makeEl('li', '');
+        // Значение может само кончаться точкой («186 симв.») — вторую не ставим
+        const dot = /[.!?…]$/.test(el.dataset.note) ? ' ' : '. ';
+        li.append(makeEl('b', '', el.dataset.note), el.dataset.hint ? dot + el.dataset.hint : '');
+        notes.append(li);
+    }
+    return notes;
+}
+
+/**
+ * Пояснение «?» для меток и баллов по косвенным признакам
+ * @param {boolean} guess есть метка по косвенным признакам
+ * @param {boolean} unsure есть балл по неполным данным
+ * @returns {string}
+ */
+function sureLegend(guess, unsure) {
+    if (guess && unsure) {
+        return t('reportLegendQuestion');
+    }
+    if (guess) {
+        return t('reportLegendGuess');
+    }
+    return unsure ? t('reportLegendUnsure') : '';
+}
+
+/**
+ * Легенда картинки: «?» и «≈», если они есть
+ * @param {HTMLElement} details копия раздела «О сайте»
+ * @param {HTMLElement} board копия табло
+ * @param {HTMLElement} panel копия панели значков
+ * @returns {string}
+ */
+function reportLegend(details, board, panel) {
+    const guess = Boolean(details.querySelector('[data-sure="false"]'));
+    const unsure = Boolean(board.querySelector('[data-sure="false"]'));
+    const estimate = /≈/.test(panel.textContent) ? t('reportLegendEstimate') : '';
+    return [sureLegend(guess, unsure), estimate].filter(Boolean).join(' · ');
+}
+
+/**
  * Картинка с отчётом о сайте: домен, дата, значки, табло оценки по группам, сервер и движок, замечания.
  * Подсказки на картинке не видны — пояснения к проблемам выписываются списком.
  * Рисуется через SVG foreignObject: стили окна те же, сторонние библиотеки не нужны
@@ -2446,24 +3194,15 @@ async function toDataUrl(src) {
  * @returns {Promise<Blob>}
  */
 async function renderReport(host) {
-    const make = (tag, className, text) => {
-        const el = document.createElement(tag);
-        el.className = className;
-        if (text) {
-            el.textContent = text;
-        }
-        return el;
-    };
-
-    const sheet = make('div', 'sheet');
-    const head = make('div', 'sheet-head');
-    head.append(make('b', '', host),
-        make('span', '', new Date().toLocaleString(LANG, {dateStyle: 'medium', timeStyle: 'short'})));
+    const sheet = makeEl('div', 'sheet');
+    const head = makeEl('div', 'sheet-head');
+    head.append(makeEl('b', '', host),
+        makeEl('span', '', new Date().toLocaleString(LANG, {dateStyle: 'medium', timeStyle: 'short'})));
 
     const panel = document.getElementById('panel').cloneNode(true);
-    for (const img of panel.querySelectorAll('img')) {
+    await Promise.all([...panel.querySelectorAll('img')].map(async (img) => {
         img.src = await toDataUrl(img.src);
-    }
+    }));
     // Табло — сразу раскрытое: свёрнутой полосы на картинке нет
     const board = document.getElementById('board').cloneNode(true);
     board.removeAttribute('id');
@@ -2473,31 +3212,12 @@ async function renderReport(host) {
     const copy = details.querySelector('#server .icon-button');
     copy?.replaceWith(chip(copy.dataset.ip, 'none', ''));
 
-    // Пояснения к тому, что можно улучшить (в окне они в подсказках)
-    const notes = make('ul', 'sheet-notes');
-    // HTTPS, HSTS и смешанный контент — строками раздела «Безопасность» ниже
-    const problems = [...panel.querySelectorAll(':is(#protocol, #compression)[data-state="bad"]')];
-    // Пояснение, открытое нажатием, временно хранится в data-tip (setupTips)
-    for (const text of new Set(problems.map((el) => (el.title || el.dataset.tip || '').split('\n')[0]).filter(Boolean))) {
-        notes.append(make('li', '', text));
-    }
-    // Замечания из разделов оценки: название и значение жирным, дальше пояснение
-    for (const el of document.querySelectorAll('#audit-body .audit-row:is([data-state="bad"], [data-state="warn"])')) {
-        const li = make('li', '');
-        // Значение может само кончаться точкой («186 симв.») — вторую не ставим
-        const dot = /[.!?…]$/.test(el.dataset.note) ? ' ' : '. ';
-        li.append(make('b', '', el.dataset.note), el.dataset.hint ? dot + el.dataset.hint : '');
-        notes.append(li);
-    }
-
+    const notes = reportNotes(panel);
     // «?» — и у меток, определённых по косвенным признакам, и у баллов по неполным данным: одно пояснение на знак
-    const guess = Boolean(details.querySelector('[data-sure="false"]'));
-    const unsure = Boolean(board.querySelector('[data-sure="false"]'));
-    const legendText = [guess && unsure ? t('reportLegendQuestion') : guess ? t('reportLegendGuess') : unsure ? t('reportLegendUnsure') : '',
-        /≈/.test(panel.textContent) ? t('reportLegendEstimate') : ''].filter(Boolean).join(' · ');
-    const legend = legendText ? make('div', 'sheet-legend', legendText) : null;
-    const foot = make('div', 'sheet-foot');
-    foot.append(make('span', '', 'ABlock'), make('span', '', 'https://ablock.arh.one'));
+    const legendText = reportLegend(details, board, panel);
+    const legend = legendText ? makeEl('div', 'sheet-legend', legendText) : null;
+    const foot = makeEl('div', 'sheet-foot');
+    foot.append(makeEl('span', '', 'ABlock'), makeEl('span', '', 'https://ablock.arh.one'));
 
     sheet.append(head, panel, board, details);
     if (notes.childElementCount) {
@@ -2517,9 +3237,10 @@ async function renderReport(host) {
     sheet.removeAttribute('style');
 
     // Тема та же, что у окна
+    const darkMedia = isDark() ? 'all' : 'not all';
     const style = document.createElement('style');
     style.textContent = [...document.styleSheets[0].cssRules].map((rule) => rule === darkRule
-        ? `@media ${isDark() ? 'all' : 'not all'} {${[...rule.cssRules].map((inner) => inner.cssText).join('\n')}}`
+        ? `@media ${darkMedia} {${[...rule.cssRules].map((inner) => inner.cssText).join('\n')}}`
         : rule.cssText).join('\n')
         // Картинка не грузит файлы: маску сот фона — внутрь
         .replace(/url\("?cells\.svg"?\)/g, `url("${await toDataUrl('cells.svg')}")`);
@@ -2542,6 +3263,83 @@ async function renderReport(host) {
     return new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
 }
 
+// Подписи значков, у которых в тексте одно число: добавляем, что это
+const REPORT_LABELS = {speed: 'scoreSpeed', weight: 'scoreWeight'};
+// Значки состояний в тексте отчёта
+const REPORT_MARKS = {good: '✅', warn: '⚠️', bad: '❌'};
+
+/**
+ * Текст значка или строки: метка и «?», если определено по косвенным признакам
+ * @param {HTMLElement} el
+ * @returns {string}
+ */
+function reportItemText(el) {
+    const label = REPORT_LABELS[el.id];
+    return (label ? t(label) + ' ' : '') + el.textContent + (el.dataset.sure === 'false' ? '?' : '');
+}
+
+/**
+ * Итоги по состояниям: значки и строки HSTS и смешанного контента — «HSTS: нет»
+ * @returns {Object<string, [string, string[]]>}
+ */
+function reportSummary() {
+    const items = [...document.querySelectorAll('#https, #protocol, #speed, #weight, #domains, #compression, #extra .chip')];
+    const rows = [...document.querySelectorAll('.audit-row:is([data-key="auditHsts"], [data-key="auditMixed"])')];
+    const summary = {};
+    for (const [state, mark] of Object.entries(REPORT_MARKS)) {
+        const list = [...items.filter((el) => el.dataset.state === state).map(reportItemText),
+            ...rows.filter((el) => el.dataset.state === state).map((el) => el.dataset.note)];
+        if (list.length) {
+            summary[state] = [mark, list];
+        }
+    }
+    return summary;
+}
+
+/**
+ * Дописывает строку с «…» из первых пунктов списка, если целиком она не влезает
+ * @param {string} text
+ * @param {string} mark
+ * @param {string[]} list
+ * @param {number} limit
+ * @returns {string}
+ */
+function fitPartialLine(text, mark, list, limit) {
+    for (let count = list.length - 1; count > 0; count--) {
+        const part = `${mark} ${list.slice(0, count).join(', ')}, …`;
+        if (text.length + 1 + part.length <= limit) {
+            return text + '\n' + part;
+        }
+    }
+    return text;
+}
+
+/**
+ * Короткий текст для X: не больше 280 знаков вместе со ссылкой — оценка, баллы групп и итоги по значкам
+ * @param {string[]} lines оценка и баллы групп
+ * @param {Object} summary итоги (reportSummary)
+ * @returns {string}
+ */
+function shortReportText(lines, summary) {
+    // Не влезает — обрезается с конца, поэтому проблемы раньше хорошего: ❌, ⚠️, затем ✅. Строку, которая
+    // не влезла целиком, сокращаем по пунктам с «…», чтобы длинный список проблем не пропал совсем
+    const LIMIT = 230;
+    let text = lines.join('\n');
+    if (text.length > LIMIT) {
+        return lines[0];
+    }
+    for (const [mark, list] of [summary.bad, summary.warn, summary.good].filter(Boolean)) {
+        const line = `${mark} ${list.join(', ')}`;
+        if (text.length + 1 + line.length <= LIMIT) {
+            text += '\n' + line;
+            continue;
+        }
+        text = fitPartialLine(text, mark, list, LIMIT);
+        break;
+    }
+    return text;
+}
+
 /**
  * Отчёт о сайте текстом — для Telegram, VK и буфера обмена.
  * Ссылки «поделиться» передают только текст: картинку туда без своего сервера не отправить
@@ -2550,12 +3348,7 @@ async function renderReport(host) {
  * @returns {string}
  */
 function reportText(host, short = false) {
-    // У скорости и веса в значке одно число — добавляем, что это
-    const labels = {speed: 'scoreSpeed', weight: 'scoreWeight'};
-    const text = (el) => (labels[el.id] ? t(labels[el.id]) + ' ' : '') + el.textContent
-        + (el.dataset.sure === 'false' ? '?' : '');
-    const marks = {good: '✅', warn: '⚠️', bad: '❌'};
-    const items = [...document.querySelectorAll('#https, #protocol, #speed, #weight, #domains, #compression, #extra .chip')];
+    const summary = reportSummary();
     const lines = [t('reportShareHead', host, document.getElementById('score-value').textContent)];
     // Баллы групп: «Приватность 3,9 · Скорость 6,2 · Безопасность 8,0? …»
     const groups = [...document.querySelectorAll('#board .board-row')]
@@ -2564,52 +3357,18 @@ function reportText(host, short = false) {
     if (groups.length) {
         lines.push(groups.join(' · '));
     }
-    // HSTS и смешанный контент — строки раздела «Безопасность»: «HSTS: нет»
-    const rows = [...document.querySelectorAll('.audit-row:is([data-key="auditHsts"], [data-key="auditMixed"])')];
-    const summary = {};
-    for (const [state, mark] of Object.entries(marks)) {
-        const list = [...items.filter((el) => el.dataset.state === state).map(text),
-            ...rows.filter((el) => el.dataset.state === state).map((el) => el.dataset.note)];
-        if (list.length) {
-            summary[state] = [mark, list];
-        }
-    }
     if (short) {
-        // X: не больше 280 знаков вместе со ссылкой — оценка, баллы групп и итоги по значкам. Не влезает — обрезается
-        // с конца, поэтому проблемы раньше хорошего: ❌, ⚠️, затем ✅. Строку, которая не влезла целиком,
-        // сокращаем по пунктам с «…», чтобы длинный список проблем не пропал совсем
-        const LIMIT = 230;
-        let text = lines.join('\n');
-        if (text.length > LIMIT) {
-            return lines[0];
-        }
-        for (const [mark, list] of [summary.bad, summary.warn, summary.good].filter(Boolean)) {
-            const line = `${mark} ${list.join(', ')}`;
-            if (text.length + 1 + line.length <= LIMIT) {
-                text += '\n' + line;
-                continue;
-            }
-            for (let count = list.length - 1; count > 0; count--) {
-                const part = `${mark} ${list.slice(0, count).join(', ')}, …`;
-                if (text.length + 1 + part.length <= LIMIT) {
-                    text += '\n' + part;
-                    break;
-                }
-            }
-            break;
-        }
-        return text;
+        return shortReportText(lines, summary);
     }
     lines.push(...[summary.good, summary.warn, summary.bad].filter(Boolean).map(([mark, list]) => `${mark} ${list.join(', ')}`));
     for (const [label, id] of [['serverLabel', 'server'], ['techLabel', 'tech']]) {
-        const list = [...document.querySelectorAll(`#${id} .chip`)].map(text);
+        const list = [...document.querySelectorAll(`#${id} .chip`)].map(reportItemText);
         if (list.length) {
             lines.push(`${t(label)}: ${list.join(', ')}`);
         }
     }
     const companies = document.querySelector('.audit-row[data-key="auditTracking"]')?.dataset.names;
-    lines.push(`${t('companiesLabel')}: ${companies || t('companiesNone')}`);
-    lines.push('', t('reportShareFoot'));
+    lines.push(`${t('companiesLabel')}: ${companies || t('companiesNone')}`, '', t('reportShareFoot'));
     return lines.join('\n');
 }
 
@@ -2805,7 +3564,7 @@ function renderStats(stats) {
     const requests = stats?.requests || 0;
     document.getElementById('stats-text').textContent = t('stats',
         formatNumber(requests, requests >= 1e6 ? {notation: 'compact', maximumFractionDigits: 1} : {}),
-        formatSize(stats?.bytes || 0).replace(/ /g, '\u00a0')).replace(/≈\s*/g, '≈\u00a0');
+        formatSize(stats?.bytes || 0).replaceAll(' ', '\u00a0')).replace(/≈\s*/g, '≈\u00a0');
     document.getElementById('stats-text').title = t('statsTitle',
         new Date(stats?.since || Date.now()).toLocaleDateString(LANG));
 }
@@ -2873,7 +3632,7 @@ async function renderNotices(extended, stats) {
         ['stats', () => extended]
     ];
     // Главная кнопка карточки — куда перевести фокус, если закрыли предыдущую
-    const focusTarget = {rate: 'rate-button', ask: 'ask-button', extended: 'extended-button', stats: 'stats-text'};
+    const focusTarget = {rate: 'rate-button', ask: 'ask-button', extended: 'extended-button', stats: 'stats-rate'};
     const show = () => {
         const [shown] = cards.find(([, when]) => when()) || [];
         for (const [id] of cards) {
@@ -3022,7 +3781,11 @@ async function setupPicker(tab, host) {
             if (changed && !total) {
                 announce('pickCleared');
             }
-            (total ? countButton : extended ? button : document.getElementById('button')).focus();
+            let focusTarget = countButton;
+            if (!total) {
+                focusTarget = extended ? button : document.getElementById('button');
+            }
+            focusTarget.focus();
         }});
     });
     chrome.storage.onChanged.addListener((changes, area) => {
@@ -3072,11 +3835,19 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     let renderPicker = () => {};
 
+    // Ключ строки статуса: выключено, выключено только на этом сайте или включено
+    function statusKey() {
+        if (!status) {
+            return 'statusOff';
+        }
+        return allowedEntry ? 'statusSiteOff' : 'statusOn';
+    }
+
     // Отображает статус
     function render() {
         bg.dataset.status = String(active());
         label.dataset.status = String(active());
-        label.textContent = t(!status ? 'statusOff' : allowedEntry ? 'statusSiteOff' : 'statusOn');
+        label.textContent = t(statusKey());
         renderPicker();
     }
     render();
@@ -3259,8 +4030,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         acceptAudit(tab.id, auditInjection, info), acceptMarketing(tab.id, marketingInjection, info)
     ]);
     renderTech(tech, server);
-    const rows = renderAudit(audit, server, extended, info, companies, catalog, marketing,
-        auditInjection?.aiBots || []);
+    const rows = renderAudit(audit, {server, extended, info, companies, catalog, marketing,
+        aiBots: auditInjection?.aiBots || []});
     renderRedirectCauses(await readTabRedirects(tab.id));
     rescore = () => {
         score.result = renderScore(info, companies, audit, rows, server);

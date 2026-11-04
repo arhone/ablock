@@ -33,7 +33,7 @@
         </button>
     </div>
     <button type="button" id="note" hidden data-i18n-title="noteTitle"></button>
-    <label for="note-input" class="visually-hidden" data-i18n="noteTitle"></label>
+    <label for="note-input" class="visually-hidden" data-i18n="noteTitle">Note for this site</label>
     <textarea id="note-input" hidden rows="2" maxlength="200" data-i18n-placeholder="notePlaceholder" data-i18n-title="noteTitle"></textarea>
     <section id="score" hidden>
         <div id="score-head">
@@ -48,7 +48,7 @@
             <div class="board" id="board"></div>
             <div id="audit-body">
                 <div class="audit-group" id="about">
-                    <h3 data-i18n="auditAbout" data-i18n-aria-label="auditAbout"></h3>
+                    <h3 data-i18n="auditAbout">About the site</h3>
                     <dl id="details">
                         <dt data-i18n="serverLabel"></dt>
                         <dd id="server"></dd>
@@ -91,14 +91,14 @@
     <div id="notices">
         <div class="card notice" id="rate" hidden>
             <span data-i18n="rateText"></span>
-            <a class="action" id="rate-button" target="_blank" data-i18n="rateButton" data-i18n-aria-label="rateButton"></a>
+            <a class="action" id="rate-button" target="_blank" data-i18n="rateButton">Rate</a>
             <button class="tool close" id="rate-close" type="button" data-i18n-title="askClose">
                 <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg>
             </button>
         </div>
         <div class="card notice" id="ask" hidden>
             <span id="ask-text"></span>
-            <a class="action" id="ask-button" target="_blank" data-i18n="donate" data-i18n-aria-label="donate" data-i18n-title="donateTitle"></a>
+            <a class="action" id="ask-button" target="_blank" data-i18n="donate" data-i18n-title="donateTitle">Donate</a>
             <button class="tool close" id="ask-close" type="button" data-i18n-title="askClose">
                 <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg>
             </button>
@@ -108,8 +108,8 @@
             <button class="action" id="extended-button" type="button" data-i18n="extendedButton"></button>
         </div>
         <div class="card notice" id="stats" hidden>
-            <span id="stats-text" tabindex="0"></span>
-            <a class="tool" id="stats-rate" target="_blank" data-i18n-aria-label="statsRate" data-i18n-title="statsRate">
+            <span id="stats-text"></span>
+            <a class="tool" id="stats-rate" target="_blank" aria-label="Rate ABlock in the Chrome Web Store" data-i18n-aria-label="statsRate" data-i18n-title="statsRate">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10v10H4.5a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1zm0 0 4-6.5a2 2 0 0 1 3.4 1.8L13.5 10h5a2 2 0 0 1 2 2.3l-1.2 6A2 2 0 0 1 17.3 20H7"/></svg>
             </a>
             <button class="tool" id="stats-share" type="button" aria-expanded="false" aria-controls="stats-menu" data-i18n-title="statsShare">
@@ -130,15 +130,15 @@
     </div>
     <label class="card" id="site-row" hidden data-i18n-title="siteTitle">
         <input type="checkbox" id="site">
-        <span id="site-text"></span>
+        <span id="site-text">Block on $HOST$</span>
     </label>
     <label class="card" id="cookies-row" data-i18n-title="cookiesTitle" hidden>
         <input type="checkbox" id="cookies">
-        <span data-i18n="cookiesLabel"></span>
+        <span data-i18n="cookiesLabel">Hide cookie consent pop-ups</span>
     </label>
     <label class="card" id="incognito-row" data-i18n-title="incognitoTitle" hidden>
         <input type="checkbox" id="incognito">
-        <span data-i18n="incognitoLabel"></span>
+        <span data-i18n="incognitoLabel">Work in Incognito mode</span>
     </label>
     <div class="card" id="pick-row" hidden>
         <div id="pick-copy">
@@ -218,13 +218,13 @@
     <section id="settings-screen" hidden>
         <div class="settings-head">
             <button id="settings-back" type="button" data-i18n-title="settingsBack"><span>‹</span></button>
-            <h2 data-i18n="settingsTitle" data-i18n-aria-label="settingsTitle"></h2>
+            <h2 data-i18n="settingsTitle">Settings</h2>
         </div>
-        <label class="settings-field" for="lang"><span data-i18n="settingsLang"></span><select id="lang"></select></label>
-        <label class="settings-field" for="badge-mode"><span data-i18n="settingsBadge"></span>
+        <label class="settings-field" for="lang"><span data-i18n="settingsLang">Interface language</span><select id="lang"></select></label>
+        <label class="settings-field" for="badge-mode"><span data-i18n="settingsBadge">Extension icon indicator</span>
             <select id="badge-mode"><option value="count" data-i18n="settingsBadgeCount"></option><option value="status" data-i18n="settingsBadgeStatus"></option><option value="off" data-i18n="settingsBadgeOff"></option></select>
         </label>
-        <label class="settings-picker"><span><span data-i18n="settingsPickerAnimation"></span><small data-i18n="settingsPickerAnimationHint"></small></span><input type="checkbox" id="picker-animation" checked></label>
+        <label class="settings-picker"><span><span data-i18n="settingsPickerAnimation">Animation when hiding with the element picker</span><small data-i18n="settingsPickerAnimationHint">Animate elements when they are hidden with the picker.</small></span><input type="checkbox" id="picker-animation" checked></label>
     </section>
     <footer>
         <button id="settings-open" type="button" data-i18n-title="settingsTitle">
@@ -234,11 +234,11 @@
             <svg class="moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 9.6A5.75 5.75 0 0 1 6.4 2.5a5.75 5.75 0 1 0 7.1 7.1z"/></svg>
             <svg class="sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.9"/><path d="M8 1.5v1.6M8 12.9v1.6M1.5 8h1.6M12.9 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M3.4 12.6l1.1-1.1M11.5 4.5l1.1-1.1"/></svg>
         </button>
-        <a id="donate" target="_blank" hidden data-i18n="donate" data-i18n-aria-label="donate" data-i18n-title="donateTitle"></a>
-        <a class="icon-link" href="https://t.me/ablockinfo" target="_blank" data-i18n-aria-label="telegram" data-i18n-title="telegram">
+        <a id="donate" target="_blank" hidden data-i18n="donate" data-i18n-title="donateTitle">Donate</a>
+        <a class="icon-link" href="https://t.me/ablockinfo" target="_blank" aria-label="Telegram group" data-i18n-aria-label="telegram" data-i18n-title="telegram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
         </a>
-        <a class="icon-link" href="https://github.com/arhone/ablock" target="_blank" data-i18n-aria-label="github" data-i18n-title="github">
+        <a class="icon-link" href="https://github.com/arhone/ablock" target="_blank" aria-label="Contribute on GitHub" data-i18n-aria-label="github" data-i18n-title="github">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1-.3-2-1-2 4-.5 6-2 6-6 0-1-.4-2-1-3 .3-1 .3-3-.2-4-2 0-3 1-4 2a12 12 0 0 0-6 0C7 4 6 3 4 3c-.5 1-.5 3-.2 4C3 8 3 9 3 10c0 4 2 5.5 6 6-.6.5-1 1-1 2v4"/></svg>
         </a>
     </footer>
