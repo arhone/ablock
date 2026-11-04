@@ -447,12 +447,18 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         return true;
     }
     if (request?.customToggle) {
-        void enqueue(() => toggleCustom(request.customToggle)).then(sendResponse, () => sendResponse(false));
+        void enqueue(async () => {
+            await toggleCustom(request.customToggle);
+            return true;
+        }).then(sendResponse, () => sendResponse(false));
         return true;
     }
     if (request?.customRemove || request?.customClear) {
         const data = request.customRemove || request.customClear;
-        void enqueue(() => removeCustom(data, !!request.customClear)).then(sendResponse, () => sendResponse(false));
+        void enqueue(async () => {
+            await removeCustom(data, !!request.customClear);
+            return true;
+        }).then(sendResponse, () => sendResponse(false));
         return true;
     }
     if (typeof request?.status === 'boolean') {
