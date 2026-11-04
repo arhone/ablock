@@ -344,8 +344,9 @@ async function applySettings(settings) {
 // Последовательное применение, чтобы быстрые переключения не пересекались
 let queue = Promise.resolve();
 function enqueue(task) {
-    queue = queue.then(task).catch(console.error);
-    return queue;
+    const run = queue.then(task);
+    queue = run.catch(console.error);
+    return run;
 }
 
 /**
@@ -358,18 +359,18 @@ function update(changes = {}) {
 }
 
 chrome.runtime.onInstalled.addListener(async () => {
-    void update();
+    void update().catch(console.error);
     // Дата установки — для одноразовых просьб оценить и поддержать. У обновившихся отсчёт идёт с обновления
     const {aBlockInstalled} = await chrome.storage.local.get('aBlockInstalled');
     if (!aBlockInstalled) {
         await chrome.storage.local.set({aBlockInstalled: Date.now()});
     }
 });
-chrome.runtime.onStartup.addListener(() => { void update(); });
+chrome.runtime.onStartup.addListener(() => { void update().catch(console.error); });
 
 chrome.storage.onChanged.addListener((changes, area) => {
     if (area === 'local' && changes.aBlockBadgeMode) {
-        void enqueue(async () => applyAction(await getSettings()));
+        void enqueue(async () => applyAction(await getSettings())).catch(console.error);
     }
 });
 
@@ -384,7 +385,7 @@ chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
 // Разрешение на удаление данных: окно расширения могло закрыться, пока его запрашивало, — удаляем здесь
 chrome.permissions.onAdded.addListener(async (permissions) => {
     listenRequests();
-    void update();
+    void update().catch(console.error);
     if (permissions.permissions?.includes('browsingData')) {
         const {aBlockClear} = await chrome.storage.session.get('aBlockClear');
         await chrome.storage.session.remove('aBlockClear');
@@ -406,7 +407,7 @@ chrome.permissions.onRemoved.addListener(() => {
         }
         await saveTabs();
     });
-    void update();
+    void update().catch(console.error);
 });
 
 // Сообщения сайтов — косметика и пипетка; настройки и данные вкладок — только из окна расширения
@@ -446,12 +447,12 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         return true;
     }
     if (request?.customToggle) {
-        void enqueue(() => toggleCustom(request.customToggle).then(() => true, () => false)).then(sendResponse, () => sendResponse(false));
+        void enqueue(() => toggleCustom(request.customToggle)).then(sendResponse, () => sendResponse(false));
         return true;
     }
     if (request?.customRemove || request?.customClear) {
         const data = request.customRemove || request.customClear;
-        void enqueue(() => removeCustom(data, !!request.customClear).then(() => true, () => false)).then(sendResponse, () => sendResponse(false));
+        void enqueue(() => removeCustom(data, !!request.customClear)).then(sendResponse, () => sendResponse(false));
         return true;
     }
     if (typeof request?.status === 'boolean') {
@@ -669,9 +670,9 @@ chrome.runtime.onConnect.addListener((port) => {
             if (Number.isInteger(item?.tabId) && typeof item.documentId === 'string' && validCustomSelector(item.s)) {
                 current = {tabId: item.tabId, documentId: item.documentId, s: item.s, hidden: item.hidden === true};
             }
-        });
+        }).catch(console.error);
     });
-    port.onDisconnect.addListener(() => void enqueue(restore));
+    port.onDisconnect.addListener(() => { void enqueue(restore).catch(console.error); });
 });
 
 /*
