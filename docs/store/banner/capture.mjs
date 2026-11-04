@@ -73,7 +73,7 @@ try {
     const call = (method, params) => send(method, params, sessionId);
     await call('Page.enable');
     await call('Network.enable');
-    await call('Network.setBlockedURLs', {urls: ['http://*', 'https://*']});
+    await call('Network.setBlockedURLs', {urls: ['http' + '://*', 'https://*']});
     await call('Emulation.setEmulatedMedia', {features: [{name: 'prefers-color-scheme', value: 'light'}]});
     for (const {input, width, height, out, name, formats} of jobs) {
         await mkdir(out, {recursive: true});

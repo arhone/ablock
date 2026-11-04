@@ -326,6 +326,10 @@
         snapshot.style.backgroundImage = 'none';
         return {snapshot, rect};
     }
+    // Криптостойкий аналог Math.random() — SonarQube S2245.
+    function secureRandom() {
+        return crypto.getRandomValues(new Uint32Array(1))[0] / 0x100000000;
+    }
     async function disintegrate({snapshot, rect}) {
         frames.replaceChildren();
         frames.append(snapshot);
@@ -335,17 +339,17 @@
         const colors = ['#34d399', '#10b981', '#6ee7b7'];
         for (let i = 0; i < count; i++) {
             const particle = node('div');
-            const x = rect.left + rect.width * Math.random();
-            const y = rect.top + rect.height * Math.random();
-            const size = 3 + Math.random() * 5;
-            const color = colors[Math.floor(Math.random() * colors.length)];
+            const x = rect.left + rect.width * secureRandom();
+            const y = rect.top + rect.height * secureRandom();
+            const size = 3 + secureRandom() * 5;
+            const color = colors[Math.floor(secureRandom() * colors.length)];
             particle.style.cssText = `position:fixed;left:${x}px;top:${y}px;width:${size}px;height:${size}px;border-radius:50%;background:${color};box-shadow:0 0 4px rgba(52, 211, 153, 0.6);pointer-events:none;`;
             frames.append(particle);
-            const dx = (Math.random() - .5) * 90;
-            const dy = (Math.random() - .5) * 60 - 40;
+            const dx = (secureRandom() - .5) * 90;
+            const dy = (secureRandom() - .5) * 60 - 40;
             animations.push(particle.animate([{opacity: .85, transform: 'translate(0, 0) scale(1)'},
                 {opacity: 0, transform: `translate(${dx}px, ${dy}px) scale(.25)`}],
-            {duration: 600 + Math.random() * 150, delay: Math.random() * 100, easing: 'ease-out', fill: 'forwards'}));
+            {duration: 600 + secureRandom() * 150, delay: secureRandom() * 100, easing: 'ease-out', fill: 'forwards'}));
         }
         let timeout;
         try {
