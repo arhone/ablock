@@ -30,13 +30,13 @@
     const patterns = {
         gtm: /^GTM-[A-Z0-9]{1,32}$/,
         ga4: /^G-[A-Z0-9]{1,32}$/,
-        'google-ads': /^AW-[1-9][0-9]{0,19}$/,
-        metrika: /^[1-9][0-9]{0,19}$/,
-        'top-mail-ru': /^[1-9][0-9]{0,19}$/,
-        vk: /^VK-RTRG-[A-Za-z0-9_-]{1,64}$/,
+        'google-ads': /^AW-[1-9]\d{0,19}$/,
+        metrika: /^[1-9]\d{0,19}$/,
+        'top-mail-ru': /^[1-9]\d{0,19}$/,
+        vk: /^VK-RTRG-[\w-]{1,64}$/,
         tiktok: /^[A-Z0-9]{8,32}$/,
         clarity: /^[a-z0-9]{1,32}$/,
-        hotjar: /^[1-9][0-9]{0,19}$/
+        hotjar: /^[1-9]\d{0,19}$/
     };
     const found = new Map();
     const add = (service, id, evidence, webvisor = null) => {
@@ -65,6 +65,55 @@
         add('ga4', id, evidence);
         add('google-ads', id, evidence);
     };
+    // Обработчик адреса по хосту: путь и параметры адреса известны только внутри обработчика
+    const urlHandlers = new Map();
+    const onHosts = (hosts, handler) => {
+        for (const host of hosts) {
+            urlHandlers.set(host, handler);
+        }
+    };
+    onHosts(['www.googletagmanager.com'], (url, path, evidence) => {
+        if (path === '/gtm.js') {
+            add('gtm', url.searchParams.get('id'), evidence);
+        } else if (path === '/gtag/js') {
+            google(url.searchParams.get('id'), evidence);
+        }
+    });
+    onHosts(['www.google-analytics.com', 'region1.google-analytics.com'], (url, path, evidence) => {
+        if (path === '/g/collect') {
+            add('ga4', url.searchParams.get('tid'), evidence);
+        }
+    });
+    onHosts(['www.googleadservices.com', 'googleads.g.doubleclick.net'], (url, path, evidence) => {
+        const match = /^\/pagead\/(?:viewthrough)?conversion\/([1-9]\d{0,19})\/?$/.exec(path);
+        if (match) {
+            add('google-ads', 'AW-' + match[1], evidence);
+        }
+    });
+    onHosts(['mc.yandex.ru', 'mc.yandex.com'], (url, path, evidence) => {
+        add('metrika', /^\/watch\/([1-9]\d{0,19})$/.exec(path)?.[1], evidence);
+    });
+    onHosts(['top-fwz1.mail.ru'], (url, path, evidence) => {
+        if (path === '/counter') {
+            add('top-mail-ru', url.searchParams.get('id'), evidence);
+        }
+    });
+    onHosts(['vk.com'], (url, path, evidence) => {
+        if (path === '/rtrg') {
+            add('vk', url.searchParams.get('p'), evidence);
+        }
+    });
+    onHosts(['analytics.tiktok.com'], (url, path, evidence) => {
+        if (path === '/i18n/pixel/events.js') {
+            add('tiktok', url.searchParams.get('sdkid'), evidence);
+        }
+    });
+    onHosts(['www.clarity.ms'], (url, path, evidence) => {
+        add('clarity', /^\/tag\/([a-z0-9]{1,32})$/.exec(path)?.[1], evidence);
+    });
+    onHosts(['static.hotjar.com'], (url, path, evidence) => {
+        add('hotjar', /^\/c\/hotjar-([1-9]\d{0,19})\.js$/.exec(path)?.[1], evidence);
+    });
     const urlTag = (value, evidence) => {
         if (typeof value !== 'string' || value.length > 8192) {
             return;
@@ -78,151 +127,171 @@
         if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password) {
             return;
         }
-        const host = url.hostname;
-        const path = url.pathname;
-        if (host === 'www.googletagmanager.com') {
-            if (path === '/gtm.js') {
-                add('gtm', url.searchParams.get('id'), evidence);
-            } else if (path === '/gtag/js') {
-                google(url.searchParams.get('id'), evidence);
-            }
-        } else if (['www.google-analytics.com', 'region1.google-analytics.com'].includes(host) && path === '/g/collect') {
-            add('ga4', url.searchParams.get('tid'), evidence);
-        } else if (['www.googleadservices.com', 'googleads.g.doubleclick.net'].includes(host)) {
-            const match = /^\/pagead\/(?:viewthrough)?conversion\/([1-9][0-9]{0,19})\/?$/.exec(path);
-            if (match) {
-                add('google-ads', 'AW-' + match[1], evidence);
-            }
-        } else if (['mc.yandex.ru', 'mc.yandex.com'].includes(host)) {
-            add('metrika', /^\/watch\/([1-9][0-9]{0,19})$/.exec(path)?.[1], evidence);
-        } else if (host === 'top-fwz1.mail.ru' && path === '/counter') {
-            add('top-mail-ru', url.searchParams.get('id'), evidence);
-        } else if (host === 'vk.com' && path === '/rtrg') {
-            add('vk', url.searchParams.get('p'), evidence);
-        } else if (host === 'analytics.tiktok.com' && path === '/i18n/pixel/events.js') {
-            add('tiktok', url.searchParams.get('sdkid'), evidence);
-        } else if (host === 'www.clarity.ms') {
-            add('clarity', /^\/tag\/([a-z0-9]{1,32})$/.exec(path)?.[1], evidence);
-        } else if (host === 'static.hotjar.com') {
-            add('hotjar', /^\/c\/hotjar-([1-9][0-9]{0,19})\.js$/.exec(path)?.[1], evidence);
+        urlHandlers.get(url.hostname)?.(url, url.pathname, evidence);
+    };
+    const LINE_BREAK = /[\n\r\u2028\u2029]/;
+    // Пробелы и комментарии: true — пропущено, null — это не они, false — код не разобрать без JS-парсера
+    const skipTrivia = (code, classic, state) => {
+        const i = state.i;
+        if (/\s/.test(code[i])) {
+            state.lineStart ||= LINE_BREAK.test(code[i]);
+            state.i++;
+            return true;
         }
+        const htmlOpen = code.startsWith('<!--', i);
+        const htmlClose = state.lineStart && code.startsWith('-->', i);
+        // В module HTML-комментарии — синтаксическая ошибка.
+        if (!classic && (htmlOpen || htmlClose)) {
+            return false;
+        }
+        if (code.startsWith('//', i) || (classic && (htmlOpen || htmlClose))) {
+            const end = code.slice(i).search(LINE_BREAK);
+            state.i = end < 0 ? code.length : i + end + 1;
+            state.lineStart = true;
+            return true;
+        }
+        if (code.startsWith('/*', i)) {
+            const end = code.indexOf('*/', i + 2);
+            if (end < 0) {
+                return false;
+            }
+            state.lineStart ||= LINE_BREAK.test(code.slice(i, end + 2));
+            state.i = end + 2;
+            return true;
+        }
+        return null;
+    };
+    // Строка: значение без экранирования, либо null; false — строка не закрыта
+    const scanString = (code, state, list) => {
+        const quote = code[state.i];
+        state.lineStart = false;
+        let value = '';
+        let plain = true;
+        state.i++;
+        while (state.i < code.length && code[state.i] !== quote) {
+            if (code[state.i] === '\\') {
+                plain = false;
+                state.i += 2;
+            } else {
+                value += code[state.i++];
+            }
+        }
+        if (state.i >= code.length) {
+            return false;
+        }
+        state.i++;
+        list.push({type: 'string', value: plain ? value : null});
+        return true;
+    };
+    const scanWord = (code, state, list) => {
+        state.lineStart = false;
+        const begin = state.i++;
+        while (state.i < code.length && /[\w$]/.test(code[state.i])) {
+            state.i++;
+        }
+        list.push({type: 'word', value: code.slice(begin, state.i)});
     };
     // Литералы остаются отдельными токенами: содержимое строки никогда не становится кодом.
     // Slash вне комментария и шаблоны неоднозначны без JS-парсера: весь такой скрипт пропускаем.
+    // Один фрагмент кода; false — код не разобрать без JS-парсера
+    const scanToken = (code, classic, state, list) => {
+        const trivia = skipTrivia(code, classic, state);
+        if (trivia !== null) {
+            return trivia;
+        }
+        const ch = code[state.i];
+        if (ch === '/' || ch === '`' || ch === '\\') {
+            return false;
+        }
+        if (ch === '"' || ch === "'") {
+            return scanString(code, state, list);
+        }
+        if (/[\w$]/.test(ch)) {
+            scanWord(code, state, list);
+            return true;
+        }
+        state.lineStart = false;
+        list.push({type: 'punct', value: ch});
+        state.i++;
+        return true;
+    };
     const tokens = (code, classic) => {
         const list = [];
-        let i = 0;
-        let lineStart = true;
-        while (i < code.length) {
-            if (!budget()) {
+        const state = {i: 0, lineStart: true};
+        while (state.i < code.length) {
+            if (!budget() || !scanToken(code, classic, state, list)) {
                 return [];
-            }
-            const ch = code[i];
-            if (/\s/.test(ch)) {
-                lineStart ||= /[\n\r\u2028\u2029]/.test(ch);
-                i++;
-            } else if (!classic && (code.startsWith('<!--', i) || (lineStart && code.startsWith('-->', i)))) {
-                // В module HTML-комментарии — синтаксическая ошибка.
-                return [];
-            } else if (code.startsWith('//', i) || (classic && (code.startsWith('<!--', i)
-                || (lineStart && code.startsWith('-->', i))))) {
-                const end = code.slice(i).search(/[\n\r\u2028\u2029]/);
-                i = end < 0 ? code.length : i + end + 1;
-                lineStart = true;
-            } else if (code.startsWith('/*', i)) {
-                const end = code.indexOf('*/', i + 2);
-                if (end < 0) {
-                    return [];
-                }
-                lineStart ||= /[\n\r\u2028\u2029]/.test(code.slice(i, end + 2));
-                i = end + 2;
-            } else if (ch === '/' || ch === '`' || ch === '\\') {
-                return [];
-            } else if (ch === '"' || ch === "'") {
-                lineStart = false;
-                let value = '';
-                let plain = true;
-                i++;
-                while (i < code.length && code[i] !== ch) {
-                    if (code[i] === '\\') {
-                        plain = false;
-                        i += 2;
-                    } else {
-                        value += code[i++];
-                    }
-                }
-                if (i >= code.length) {
-                    return [];
-                }
-                i++;
-                list.push({type: 'string', value: plain ? value : null});
-            } else if (/[a-zA-Z_$0-9]/.test(ch)) {
-                lineStart = false;
-                const begin = i++;
-                while (i < code.length && /[a-zA-Z_$0-9]/.test(code[i])) {
-                    i++;
-                }
-                list.push({type: 'word', value: code.slice(begin, i)});
-            } else {
-                lineStart = false;
-                list.push({type: 'punct', value: ch});
-                i++;
             }
         }
         return list;
     };
-    const inline = (code, classic) => {
-        const list = tokens(code, classic);
-        const word = (i, value) => list[i]?.type !== 'string' && list[i]?.value === value;
-        const literal = (i) => list[i]?.type === 'string' ? list[i].value
-            : list[i]?.type === 'word' && /^[0-9]+$/.test(list[i].value) ? list[i].value : null;
-        const string = (i, value) => list[i]?.type === 'string' && list[i].value === value;
-        const match = (i, values) => values.every((value, j) => word(i + j, value));
-        // Только собственные литеральные поля верхнего уровня; выражения не вычисляем.
-        const object = (begin) => {
-            const fields = Object.create(null);
-            if (!word(begin, '{')) {
+    const wordAt = (list, i, value) => list[i]?.type !== 'string' && list[i]?.value === value;
+    const stringAt = (list, i, value) => list[i]?.type === 'string' && list[i].value === value;
+    const literalAt = (list, i) => {
+        if (list[i]?.type === 'string') {
+            return list[i].value;
+        }
+        return list[i]?.type === 'word' && /^\d+$/.test(list[i].value) ? list[i].value : null;
+    };
+    const matchAt = (list, i, values) => values.every((value, j) => wordAt(list, i + j, value));
+    const boolAt = (list, i) => {
+        if (wordAt(list, i, 'true')) {
+            return true;
+        }
+        return wordAt(list, i, 'false') ? false : null;
+    };
+    // Конец значения поля: запятая или закрывающая скобка объекта на верхнем уровне; null — скобки не сходятся
+    const valueEnd = (list, begin) => {
+        const stack = [];
+        let i = begin;
+        while (i < list.length && budget()) {
+            if (!stack.length && (wordAt(list, i, ',') || wordAt(list, i, '}'))) {
+                break;
+            }
+            if (list[i].type === 'punct') {
+                const value = list[i].value;
+                if (['(', '[', '{'].includes(value)) {
+                    stack.push(value);
+                } else if ([')', ']', '}'].includes(value) && stack.pop() !== {')': '(', ']': '[', '}': '{'}[value]) {
+                    return null;
+                }
+            }
+            i++;
+        }
+        return i;
+    };
+    // Только собственные литеральные поля верхнего уровня; выражения не вычисляем.
+    const objectAt = (list, begin) => {
+        const fields = Object.create(null);
+        if (!wordAt(list, begin, '{')) {
+            return null;
+        }
+        let i = begin + 1;
+        while (i < list.length && budget()) {
+            if (wordAt(list, i, '}')) {
+                return {fields, end: i};
+            }
+            const key = list[i]?.value;
+            if (!['word', 'string'].includes(list[i]?.type) || !wordAt(list, i + 1, ':')
+                || Object.hasOwn(fields, key)) {
                 return null;
             }
-            let i = begin + 1;
-            while (i < list.length && budget()) {
-                if (word(i, '}')) {
-                    return {fields, end: i};
-                }
-                const key = list[i]?.value;
-                if (!['word', 'string'].includes(list[i]?.type) || !word(i + 1, ':')
-                    || Object.hasOwn(fields, key)) {
-                    return null;
-                }
-                const beginValue = i + 2;
-                i = beginValue;
-                const stack = [];
-                while (i < list.length && budget()) {
-                    if (!stack.length && (word(i, ',') || word(i, '}'))) {
-                        break;
-                    }
-                    if (list[i].type === 'punct') {
-                        const value = list[i].value;
-                        if (['(', '[', '{'].includes(value)) {
-                            stack.push(value);
-                        } else if ([')', ']', '}'].includes(value)
-                            && stack.pop() !== {')': '(', ']': '[', '}': '{'}[value]) {
-                            return null;
-                        }
-                    }
-                    i++;
-                }
-                fields[key] = i === beginValue + 1 ? literal(beginValue)
-                    ?? (word(beginValue, 'true') ? true : word(beginValue, 'false') ? false : null) : null;
-                if (word(i, ',')) {
-                    i++;
-                } else if (!word(i, '}')) {
-                    return null;
-                }
+            const beginValue = i + 2;
+            i = valueEnd(list, beginValue);
+            if (i === null) {
+                return null;
             }
-            return null;
-        };
-        // Парные скобки привязывают аргументы IIFE к её собственному телу, а не всему script.
+            fields[key] = i === beginValue + 1 ? literalAt(list, beginValue) ?? boolAt(list, beginValue) : null;
+            if (wordAt(list, i, ',')) {
+                i++;
+            } else if (!wordAt(list, i, '}')) {
+                return null;
+            }
+        }
+        return null;
+    };
+    // Парные скобки привязывают аргументы IIFE к её собственному телу, а не всему script.
+    const pairsOf = (list) => {
         const pairs = new Map();
         const stack = [];
         for (let i = 0; i < list.length && budget(); i++) {
@@ -235,167 +304,216 @@
             } else if ([')', ']', '}'].includes(value)) {
                 const begin = stack.pop();
                 if (list[begin]?.value !== {')': '(', ']': '[', '}': '{'}[value]) {
-                    return;
+                    return null;
                 }
                 pairs.set(begin, i);
             }
         }
-        if (stack.length) {
-            return;
+        return stack.length ? null : pairs;
+    };
+    const paramList = (list, from, to) => {
+        const params = [];
+        for (let j = from; j < to; j += 2) {
+            if (list[j]?.type !== 'word' || !/^[a-zA-Z_$][\w$]*$/.test(list[j].value)
+                || (j + 1 < to && !wordAt(list, j + 1, ','))) {
+                return null;
+            }
+            params.push(list[j].value);
         }
-        const iife = (begin) => {
-            if (!match(begin - 1, ['(', 'function', '('])) {
-                return;
+        return new Set(params).size === params.length ? params : null;
+    };
+    const argList = (list, from, to) => {
+        const args = [];
+        for (let j = from; j < to; j += 2) {
+            if (!['word', 'string'].includes(list[j]?.type) || (j + 1 < to && !wordAt(list, j + 1, ','))) {
+                return null;
             }
-            const paramsEnd = pairs.get(begin + 1);
-            if (paramsEnd === undefined || !word(paramsEnd + 1, '{')) {
-                return;
+            args.push(j);
+        }
+        return args;
+    };
+    // Свидетельства только на верхнем уровне тела. Чужая вложенная функция
+    // (даже невызванная) не подтверждает назначение внешней IIFE.
+    const topLevelTokens = (list, pairs, begin, end) => {
+        const direct = [];
+        let j = begin + 1;
+        while (j < end && budget()) {
+            direct.push(j);
+            if (wordAt(list, j, '{')) {
+                j = pairs.get(j);
             }
-            const params = [];
-            for (let j = begin + 2; j < paramsEnd; j += 2) {
-                if (list[j]?.type !== 'word' || !/^[a-zA-Z_$][a-zA-Z_$0-9]*$/.test(list[j].value)
-                    || (j + 1 < paramsEnd && !word(j + 1, ','))) {
-                    return;
-                }
-                params.push(list[j].value);
-            }
-            if (new Set(params).size !== params.length) {
-                return;
-            }
-            const body = paramsEnd + 1;
-            const end = pairs.get(body);
-            if (!match(end + 1, [')', '('])) {
-                return;
-            }
-            const argsEnd = pairs.get(end + 2);
-            if (argsEnd === undefined) {
-                return;
-            }
-            const args = [];
-            for (let j = end + 3; j < argsEnd; j += 2) {
-                if (!['word', 'string'].includes(list[j]?.type)
-                    || (j + 1 < argsEnd && !word(j + 1, ','))) {
-                    return;
-                }
-                args.push(j);
-            }
-            // Свидетельства только на верхнем уровне тела. Чужая вложенная функция
-            // (даже невызванная) не подтверждает назначение внешней IIFE.
-            const direct = [];
-            for (let j = body + 1; j < end && budget(); j++) {
-                direct.push(j);
-                if (word(j, '{')) {
-                    j = pairs.get(j);
-                }
-            }
-            const argWord = (index, value) => word(args[index], value);
-            const argString = (index, value) => string(args[index], value);
-            if (params.join(',') === 'w,d,s,l,i' && argWord(0, 'window') && argWord(1, 'document')
-                && argString(2, 'script') && argString(3, 'dataLayer') && args.length === 5
-                && direct.some(j => string(j, 'https://www.googletagmanager.com/gtm.js?id=')
-                    && match(j + 1, ['+', 'i', '+', 'dl']))) {
-                add('gtm', literal(args[4]), 'inline-call');
-            }
-            // Стандартный Clarity: t.src="https://www.clarity.ms/tag/"+i;
-            if (params.join(',') === 'c,l,a,r,i,t,y' && args.length === 5
-                && argWord(0, 'window') && argWord(1, 'document')
-                && argString(2, 'clarity') && argString(3, 'script')
-                && direct.some(j => match(j, ['t', '.', 'src', '='])
-                    && string(j + 4, 'https://www.clarity.ms/tag/') && match(j + 5, ['+', 'i', ';']))) {
-                add('clarity', literal(args[4]), 'inline-call');
-            }
-            // Стандартный Hotjar: h — window этой IIFE, а не произвольный объект.
-            if (params.join(',') === 'h,o,t,j,a,r' && args.length === 4
-                && argWord(0, 'window') && argWord(1, 'document')
-                && argString(2, 'https://static.hotjar.com/c/hotjar-') && argString(3, '.js?sv=')
-                && direct.some(j => match(j, ['r', '.', 'src', '=', 't', '+', 'h', '.', '_hjSettings', '.', 'hjid', '+', 'j']))) {
-                for (const j of direct) {
-                    if (match(j, ['h', '.', '_hjSettings', '='])) {
-                        const config = object(j + 4);
-                        if (config && word(config.end + 1, ';') && config.fields.hjsv === '6') {
-                            add('hotjar', config.fields.hjid, 'inline-config');
-                        }
+            j++;
+        }
+        return direct;
+    };
+    const argsOf = (list, args) => ({
+        word: (index, value) => wordAt(list, args[index], value),
+        string: (index, value) => stringAt(list, args[index], value),
+        literal: (index) => literalAt(list, args[index])
+    });
+    // Стандартный GTM: сниппет вставляет gtm.js?id=…+i+dl
+    const gtmCall = (list, signature, args, direct) => {
+        const arg = argsOf(list, args);
+        if (signature === 'w,d,s,l,i' && arg.word(0, 'window') && arg.word(1, 'document')
+            && arg.string(2, 'script') && arg.string(3, 'dataLayer') && args.length === 5
+            && direct.some((j) => stringAt(list, j, 'https://www.googletagmanager.com/gtm.js?id=')
+                && matchAt(list, j + 1, ['+', 'i', '+', 'dl']))) {
+            add('gtm', arg.literal(4), 'inline-call');
+        }
+    };
+    // Стандартный Clarity: t.src="https://www.clarity.ms/tag/"+i;
+    const clarityCall = (list, signature, args, direct) => {
+        const arg = argsOf(list, args);
+        if (signature === 'c,l,a,r,i,t,y' && args.length === 5
+            && arg.word(0, 'window') && arg.word(1, 'document')
+            && arg.string(2, 'clarity') && arg.string(3, 'script')
+            && direct.some((j) => matchAt(list, j, ['t', '.', 'src', '='])
+                && stringAt(list, j + 4, 'https://www.clarity.ms/tag/') && matchAt(list, j + 5, ['+', 'i', ';']))) {
+            add('clarity', arg.literal(4), 'inline-call');
+        }
+    };
+    // Стандартный Hotjar: h — window этой IIFE, а не произвольный объект.
+    const hotjarCall = (list, signature, args, direct) => {
+        const arg = argsOf(list, args);
+        if (signature === 'h,o,t,j,a,r' && args.length === 4
+            && arg.word(0, 'window') && arg.word(1, 'document')
+            && arg.string(2, 'https://static.hotjar.com/c/hotjar-') && arg.string(3, '.js?sv=')
+            && direct.some((j) => matchAt(list, j, ['r', '.', 'src', '=', 't', '+', 'h', '.', '_hjSettings', '.', 'hjid', '+', 'j']))) {
+            for (const j of direct) {
+                if (matchAt(list, j, ['h', '.', '_hjSettings', '='])) {
+                    const config = objectAt(list, j + 4);
+                    if (config && wordAt(list, config.end + 1, ';') && config.fields.hjsv === '6') {
+                        add('hotjar', config.fields.hjid, 'inline-config');
                     }
                 }
             }
-        };
-        for (let i = 0; i < list.length && budget(); i++) {
-            if (word(i, 'function')) {
-                iife(i);
-            }
-            // Не принимаем произвольные obj.gtag, объявления функций и new gtag(...).
-            if (word(i - 1, '.') || word(i - 1, 'function') || word(i - 1, 'new')) {
-                continue;
-            }
-            let at = i;
-            if (match(at, ['window', '.'])) {
-                at += 2;
-            }
-            if (match(at, ['gtag', '(']) && string(at + 2, 'config') && word(at + 3, ',')
-                && [',', ')'].some(value => word(at + 5, value))) {
-                google(literal(at + 4), 'inline-call');
-            } else if (match(at, ['ym', '(']) && word(at + 3, ',') && string(at + 4, 'init') && word(at + 5, ',')) {
-                const config = object(at + 6);
-                if (config && word(config.end + 1, ')')) {
-                    add('metrika', literal(at + 2), 'inline-call', config.fields.webvisor);
-                }
-            } else if (match(at, ['ttq', '.', 'load', '(']) && [',', ')'].some(value => word(at + 5, value))) {
-                add('tiktok', literal(at + 4), 'inline-call');
-            } else if (match(at, ['clarity', '(']) && string(at + 2, 'init') && word(at + 3, ',') && word(at + 5, ')')) {
-                add('clarity', literal(at + 4), 'inline-call');
-            } else if (match(at, ['VK', '.', 'Retargeting', '.', 'Init', '(']) && word(at + 7, ')')) {
-                add('vk', literal(at + 6), 'inline-call');
-            } else if (match(at, ['_tmr', '.', 'push', '('])) {
-                const config = object(at + 4);
-                if (config && word(config.end + 1, ')') && config.fields.type === 'pageView') {
-                    add('top-mail-ru', config.fields.id, 'inline-config');
-                }
-            } else if (match(at, ['_hjSettings', '='])) {
-                const config = object(at + 2);
-                if (config && [';', ')', ','].some(value => word(config.end + 1, value))) {
-                    add('hotjar', config.fields.hjid, 'inline-config');
-                }
-            }
-
         }
     };
-    try {
-        const url = new URL(location.href);
-        if (['http:', 'https:'].includes(url.protocol)) {
-            result.context.documentUrl = url.origin + url.pathname.slice(0, 512);
+    const iifeAt = (list, pairs, begin) => {
+        if (!matchAt(list, begin - 1, ['(', 'function', '('])) {
+            return;
         }
-        result.context.timeOrigin = Number.isFinite(performance.timeOrigin) ? performance.timeOrigin : null;
+        const paramsEnd = pairs.get(begin + 1);
+        if (paramsEnd === undefined || !wordAt(list, paramsEnd + 1, '{')) {
+            return;
+        }
+        const params = paramList(list, begin + 2, paramsEnd);
+        if (!params) {
+            return;
+        }
+        const body = paramsEnd + 1;
+        const end = pairs.get(body);
+        if (!matchAt(list, end + 1, [')', '('])) {
+            return;
+        }
+        const argsEnd = pairs.get(end + 2);
+        if (argsEnd === undefined) {
+            return;
+        }
+        const args = argList(list, end + 3, argsEnd);
+        if (!args) {
+            return;
+        }
+        const direct = topLevelTokens(list, pairs, body, end);
+        const signature = params.join(',');
+        gtmCall(list, signature, args, direct);
+        clarityCall(list, signature, args, direct);
+        hotjarCall(list, signature, args, direct);
+    };
+    // Вызовы и присваивания на верхнем уровне: gtag, Яндекс.Метрика, TikTok, Clarity, VK
+    const tagCall = (list, at) => {
+        if (matchAt(list, at, ['gtag', '(']) && stringAt(list, at + 2, 'config') && wordAt(list, at + 3, ',')
+            && [',', ')'].some((value) => wordAt(list, at + 5, value))) {
+            google(literalAt(list, at + 4), 'inline-call');
+        } else if (matchAt(list, at, ['ym', '(']) && wordAt(list, at + 3, ',') && stringAt(list, at + 4, 'init')
+            && wordAt(list, at + 5, ',')) {
+            const config = objectAt(list, at + 6);
+            if (config && wordAt(list, config.end + 1, ')')) {
+                add('metrika', literalAt(list, at + 2), 'inline-call', config.fields.webvisor);
+            }
+        } else if (matchAt(list, at, ['ttq', '.', 'load', '(']) && [',', ')'].some((value) => wordAt(list, at + 5, value))) {
+            add('tiktok', literalAt(list, at + 4), 'inline-call');
+        }
+    };
+    const widgetCall = (list, at) => {
+        if (matchAt(list, at, ['clarity', '(']) && stringAt(list, at + 2, 'init') && wordAt(list, at + 3, ',')
+            && wordAt(list, at + 5, ')')) {
+            add('clarity', literalAt(list, at + 4), 'inline-call');
+        } else if (matchAt(list, at, ['VK', '.', 'Retargeting', '.', 'Init', '(']) && wordAt(list, at + 7, ')')) {
+            add('vk', literalAt(list, at + 6), 'inline-call');
+        }
+    };
+    // Настройки в вызовах: _tmr.push({...}) и _hjSettings = {...}
+    const configCall = (list, at) => {
+        if (matchAt(list, at, ['_tmr', '.', 'push', '('])) {
+            const config = objectAt(list, at + 4);
+            if (config && wordAt(list, config.end + 1, ')') && config.fields.type === 'pageView') {
+                add('top-mail-ru', config.fields.id, 'inline-config');
+            }
+        } else if (matchAt(list, at, ['_hjSettings', '='])) {
+            const config = objectAt(list, at + 2);
+            if (config && [';', ')', ','].some((value) => wordAt(list, config.end + 1, value))) {
+                add('hotjar', config.fields.hjid, 'inline-config');
+            }
+        }
+    };
+    // Не принимаем произвольные obj.gtag, объявления функций и new gtag(...).
+    const inline = (code, classic) => {
+        const list = tokens(code, classic);
+        const pairs = pairsOf(list);
+        if (!pairs) {
+            return;
+        }
+        for (let i = 0; i < list.length && budget(); i++) {
+            if (wordAt(list, i, 'function')) {
+                iifeAt(list, pairs, i);
+            }
+            if (wordAt(list, i - 1, '.') || wordAt(list, i - 1, 'function') || wordAt(list, i - 1, 'new')) {
+                continue;
+            }
+            const at = matchAt(list, i, ['window', '.']) ? i + 2 : i;
+            tagCall(list, at);
+            widgetCall(list, at);
+            configCall(list, at);
+        }
+    };
+    // Скрипт на странице: адрес — из src, встроенный код — токенами, не исполняем
+    const scanScript = (script, usage) => {
+        if (script.namespaceURI !== 'http://www.w3.org/1999/xhtml') {
+            return;
+        }
+        if (script.hasAttribute('src')) {
+            urlTag(script.src, 'script-url');
+            return;
+        }
+        if (script.type && !['text/javascript', 'application/javascript', 'module'].includes(script.type.toLowerCase())) {
+            return;
+        }
+        // UTF-16 × 2 — верхняя оценка объёма; не кодируем и не копируем весь большой скрипт.
+        const code = script.textContent;
+        if (code.length * 2 > 204800 - usage.bytes) {
+            reason('inline-limit', true);
+            return;
+        }
+        usage.bytes += code.length * 2;
+        inline(code, script.type.toLowerCase() !== 'module');
+    };
+    const collectScripts = () => {
         const scripts = document.getElementsByTagName('script');
         if (scripts.length > 500) {
             reason('script-limit', true);
         }
-        let bytes = 0;
+        const usage = {bytes: 0};
         for (let i = 0; i < Math.min(scripts.length, 500) && budget(); i++) {
             try {
-                const script = scripts[i];
-                if (script.namespaceURI !== 'http://www.w3.org/1999/xhtml') {
-                    continue;
-                }
-                if (script.hasAttribute('src')) {
-                    urlTag(script.src, 'script-url');
-                    continue;
-                }
-                if (script.type && !['text/javascript', 'application/javascript', 'module'].includes(script.type.toLowerCase())) {
-                    continue;
-                }
-                // UTF-16 × 2 — верхняя оценка объёма; не кодируем и не копируем весь большой скрипт.
-                const code = script.textContent;
-                if (code.length * 2 > 204800 - bytes) {
-                    reason('inline-limit', true);
-                    continue;
-                }
-                bytes += code.length * 2;
-                inline(code, script.type.toLowerCase() !== 'module');
+                scanScript(scripts[i], usage);
             } catch {
                 reason('collection-failed');
             }
         }
-        // Скрипты получают бюджет раньше длинного списка ресурсов страницы.
+    };
+    // Скрипты получают бюджет раньше длинного списка ресурсов страницы.
+    const collectResources = () => {
         try {
             const resources = performance.getEntriesByType('resource');
             if (resources.length > 2000) {
@@ -407,6 +525,15 @@
         } catch {
             reason('resource-unavailable');
         }
+    };
+    try {
+        const url = new URL(location.href);
+        if (['http:', 'https:'].includes(url.protocol)) {
+            result.context.documentUrl = url.origin + url.pathname.slice(0, 512);
+        }
+        result.context.timeOrigin = Number.isFinite(performance.timeOrigin) ? performance.timeOrigin : null;
+        collectScripts();
+        collectResources();
     } catch {
         result.status = 'unavailable';
         reason('collection-failed');

@@ -227,12 +227,12 @@
         summary(description, info, true);
         if (info.t) {
             const quote = node('div', 'quote');
-            const text = node('bdi', '', (strings.pickQuote || '').replace(/\$TEXT\$|\$1/g, () => info.t));
+            const text = node('bdi', '', (strings.pickQuote || '').replaceAll(/\$TEXT\$|\$1/g, () => info.t));
             quote.append(text);
             description.append(quote);
         }
         const count = result.count;
-        matches.textContent = (strings[count > 1 ? 'pickMatchesAll' : 'pickMatches'] || '').replace(/\$COUNT\$|\$1/g, () => String(count));
+        matches.textContent = (strings[count > 1 ? 'pickMatchesAll' : 'pickMatches'] || '').replaceAll(/\$COUNT\$|\$1/g, () => String(count));
         matches.classList.toggle('many', count > 1);
         wider.disabled = busy || level === chain.length - 1;
         narrower.disabled = busy || level === 0;
@@ -289,24 +289,29 @@
     function click(event) {
         if (!inPanel(event)) block(event);
     }
+    function cycleFocus(event) {
+        const buttons = [...panel.querySelectorAll('button')].filter((el) => !el.disabled);
+        if (!buttons.length) return;
+        const index = buttons.indexOf(root.activeElement);
+        let next = (index + 1) % buttons.length;
+        if (event.shiftKey) next = index <= 0 ? buttons.length - 1 : index - 1;
+        block(event);
+        buttons[next].focus({preventScroll: true});
+    }
+    function activateKey(event) {
+        // Сами активируем кнопку: клавиши не должны управлять страницей под панелью.
+        block(event);
+        if (!event.isTrusted) return;
+        pressed.add(event.key);
+        const active = root.activeElement;
+        if (!event.repeat && active?.localName === 'button') active.click();
+    }
     function key(event) {
         if (event.key === 'Escape') { block(event); stop(); }
-        else if (event.key === 'Tab') {
-            const buttons = [...panel.querySelectorAll('button')].filter((el) => !el.disabled);
-            if (!buttons.length) return;
-            const index = buttons.indexOf(root.activeElement);
-            const next = event.shiftKey ? (index <= 0 ? buttons.length - 1 : index - 1) : (index + 1) % buttons.length;
-            block(event);
-            buttons[next].focus({preventScroll: true});
-        } else if (!inPanel(event)) block(event);
-        else if (event.key === 'Enter' || event.key === ' ') {
-            // Сами активируем кнопку: клавиши не должны управлять страницей под панелью.
-            block(event);
-            if (!event.isTrusted) return;
-            pressed.add(event.key);
-            const active = root.activeElement;
-            if (!event.repeat && active?.localName === 'button') active.click();
-        } else event.stopPropagation();
+        else if (event.key === 'Tab') cycleFocus(event);
+        else if (!inPanel(event)) block(event);
+        else if (event.key === 'Enter' || event.key === ' ') activateKey(event);
+        else event.stopPropagation();
     }
     function keyup(event) {
         pressed.delete(event.key);
@@ -362,6 +367,35 @@
             frames.replaceChildren();
         }
     }
+    function snapshotFor(el) {
+        return animationEnabled && !window.matchMedia('(prefers-reduced-motion: reduce)').matches ? makeSnapshot(el) : null;
+    }
+    async function send(pick) {
+        try { return await chrome.runtime.sendMessage({pick}); } catch { return null; }
+    }
+    async function animate(snapshot) {
+        try { await disintegrate(snapshot); } catch (error) { console.error(error); }
+    }
+    function showToast(response) {
+        const rect = panel.getBoundingClientRect();
+        const above = rect.top < innerHeight / 2;
+        detach();
+        restoreFocus();
+        shade.hidden = true;
+        frames.replaceChildren();
+        panel.classList.add('toast');
+        panel.setAttribute('role', 'status');
+        panel.setAttribute('aria-live', 'polite');
+        panel.replaceChildren(node('span', '', response.ok ? strings.pickDone : strings.pickLimit));
+        if (response.ok) panel.append(document.createTextNode(' · '), node('span', 'esc', strings.pickDoneList));
+        panel.style.top = above ? '12px' : 'auto';
+        panel.style.bottom = above ? 'auto' : '12px';
+        // В тосте нет действий: страница снова получает указатель и клавиатуру.
+        host.style.setProperty('pointer-events', 'none', 'important');
+        surface.style.pointerEvents = 'none';
+        listen(window, 'pagehide', stop);
+        timer = setTimeout(stop, 2500);
+    }
     async function save() {
         if (busy || !selected?.isConnected) return;
         const next = core.build(selected);
@@ -369,35 +403,16 @@
         update(next);
         if (!next.s) return;
         const pick = {s: next.s, ...core.describe(selected)};
-        const snapshot = animationEnabled && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
-            ? makeSnapshot(selected) : null;
-        let response;
-        try { response = await chrome.runtime.sendMessage({pick}); } catch { response = null; }
+        const snapshot = snapshotFor(selected);
+        const response = await send(pick);
         if (ended) return;
         if (response?.ok && snapshot) {
-            try { await disintegrate(snapshot); } catch (error) { console.error(error); }
+            await animate(snapshot);
             if (ended) return;
         }
         busy = false;
         if (response?.ok || response?.error === 'limit') {
-            const rect = panel.getBoundingClientRect();
-            const above = rect.top < innerHeight / 2;
-            detach();
-            restoreFocus();
-            shade.hidden = true;
-            frames.replaceChildren();
-            panel.classList.add('toast');
-            panel.setAttribute('role', 'status');
-            panel.setAttribute('aria-live', 'polite');
-            panel.replaceChildren(node('span', '', response.ok ? strings.pickDone : strings.pickLimit));
-            if (response.ok) panel.append(document.createTextNode(' · '), node('span', 'esc', strings.pickDoneList));
-            panel.style.top = above ? '12px' : 'auto';
-            panel.style.bottom = above ? 'auto' : '12px';
-            // В тосте нет действий: страница снова получает указатель и клавиатуру.
-            host.style.setProperty('pointer-events', 'none', 'important');
-            surface.style.pointerEvents = 'none';
-            listen(window, 'pagehide', stop);
-            timer = setTimeout(stop, 2500);
+            showToast(response);
         } else {
             update();
             hide.focus({preventScroll: true});

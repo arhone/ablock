@@ -143,20 +143,14 @@ async function applyContentScripts({status, cookies, allowed}, extended) {
 /** Хосты с включёнными скрытиями: вызывается и внутри очереди изменений. */
 async function customMatches(extended) {
     const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
-    const matches = [];
-    if (extended) {
-        for (const host of Object.keys(aBlockCustom)) {
-            if (!aBlockCustom[host]?.some((entry) => entry.enabled !== false)) {
-                continue;
-            }
-            for (const pattern of siteOrigins(host)) {
-                if (await chrome.permissions.contains({origins: [pattern]})) {
-                    matches.push(pattern);
-                }
-            }
-        }
+    if (!extended) {
+        return [];
     }
-    return matches;
+    const patterns = Object.keys(aBlockCustom)
+        .filter((host) => aBlockCustom[host]?.some((entry) => entry.enabled !== false))
+        .flatMap((host) => siteOrigins(host));
+    const granted = await Promise.all(patterns.map((pattern) => chrome.permissions.contains({origins: [pattern]})));
+    return patterns.filter((_, i) => granted[i]);
 }
 
 /** Без вложенного enqueue: подтверждение изменения ждёт регистрации custom.js. */
@@ -252,8 +246,12 @@ async function applyTabAction(tabId, url, {status, allowed}, mode) {
         host = '';
     }
     const active = status && !allowed.some((entry) => host && (host === entry || host.endsWith('.' + entry)));
+    let text = '';
+    if (active) {
+        text = mode === 'status' ? '✓' : null;
+    }
     await Promise.allSettled([
-        chrome.action.setBadgeText({tabId, text: active ? (mode === 'status' ? '✓' : null) : ''}),
+        chrome.action.setBadgeText({tabId, text}),
         chrome.action.setIcon({tabId, path: {32: active ? '/images/ablock-32.png' : '/images/ablock-32-black.png'}})
     ]);
 }
@@ -416,32 +414,46 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         void updateTabAction(sender.tab.id, sender.url).catch(console.error);
     }
     if (request?.pick || request?.custom === true) {
-        const host = customSenderHost(sender);
-        if (!host) {
-            return;
-        }
-        enqueue(async () => {
-            if (request.pick) {
-                return saveCustom(sender, host, request.pick).catch(() => ({ok: false, error: 'inject'}));
-            }
-            return applyCustom(sender, host);
-        }).then(sendResponse, () => sendResponse({ok: false, error: 'inject'}));
-        return true;
+        return handleCustomMessage(request, sender, sendResponse);
     }
-    // Классы и id элементов страницы от content/cosmetic.js
     if (Array.isArray(request?.cosmetic)) {
-        if (typeof request.dark === 'boolean') {
-            applyBadgeColors(request.dark).catch(console.error);
-        }
-        applyCosmetic(sender, request.cosmetic, request.first === true).then(sendResponse, (e) => {
-            console.error(e);
-            sendResponse(0);
-        });
-        return true;
+        return handleCosmeticMessage(request, sender, sendResponse);
     }
     if (sender.id !== chrome.runtime.id || !sender.url?.startsWith(chrome.runtime.getURL(''))) {
         return;
     }
+    return handleExtensionMessage(request, sendResponse);
+});
+
+/** Выбор и скрытие на сайте: принимаем только от главного документа */
+function handleCustomMessage(request, sender, sendResponse) {
+    const host = customSenderHost(sender);
+    if (!host) {
+        return;
+    }
+    enqueue(async () => {
+        if (request.pick) {
+            return saveCustom(sender, host, request.pick).catch(() => ({ok: false, error: 'inject'}));
+        }
+        return applyCustom(sender, host);
+    }).then(sendResponse, () => sendResponse({ok: false, error: 'inject'}));
+    return true;
+}
+
+/** Классы и id элементов страницы от content/cosmetic.js */
+function handleCosmeticMessage(request, sender, sendResponse) {
+    if (typeof request.dark === 'boolean') {
+        applyBadgeColors(request.dark).catch(console.error);
+    }
+    applyCosmetic(sender, request.cosmetic, request.first === true).then(sendResponse, (e) => {
+        console.error(e);
+        sendResponse(0);
+    });
+    return true;
+}
+
+/** Сообщения окна расширения */
+function handleExtensionMessage(request, sendResponse) {
     if (typeof request?.actionTab?.id === 'number' && typeof request.actionTab.url === 'string') {
         void updateTabAction(request.actionTab.id, request.actionTab.url).then(() => sendResponse(true), () => sendResponse(false));
         return true;
@@ -479,7 +491,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         void enqueue(async () => {
             const settings = await getSettings();
             const allowed = settings.allowed.filter((host) => host !== site);
-            await applySettings({...settings, allowed: enabled ? allowed : [...allowed, site].sort((a, b) => (a < b ? -1 : a > b ? 1 : 0))});
+            await applySettings({...settings, allowed: enabled ? allowed : [...allowed, site].sort((a, b) => a.localeCompare(b))});
         }).then(() => sendResponse(true), () => sendResponse(false));
         return true;
     }
@@ -488,16 +500,28 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         return true;
     }
     if (typeof request?.tabInfo === 'number') {
-        redirectQueue.catch(console.error).then(async () => {
-            const s = await load();
-            const extended = await chrome.permissions.contains(EXTENDED);
-            const tab = s.tabs[request.tabInfo] || null;
-            sendResponse({tab: tab && !extended ? {...tab, redirects: undefined, pendingRedirects: undefined, retiredRedirectRequests: undefined, retiredRedirectFilter: undefined} : tab, stats: s.stats,
-                redirectsStatus: extended ? (tab?.redirects ? 'observed' : 'not-observed') : 'permission-required'});
-        }).catch(() => sendResponse(null));
+        sendTabInfo(request.tabInfo, sendResponse);
         return true;
     }
-});
+}
+
+/** Данные вкладки и статистика для окна расширения, после очереди переходов */
+function sendTabInfo(tabId, sendResponse) {
+    redirectQueue.catch(console.error).then(async () => {
+        const s = await load();
+        const extended = await chrome.permissions.contains(EXTENDED);
+        const tab = s.tabs[tabId] || null;
+        sendResponse({tab: tab && !extended ? {...tab, redirects: undefined, pendingRedirects: undefined, retiredRedirectRequests: undefined, retiredRedirectFilter: undefined} : tab, stats: s.stats,
+            redirectsStatus: redirectsStatus(extended, tab)});
+    }).catch(() => sendResponse(null));
+}
+
+function redirectsStatus(extended, tab) {
+    if (!extended) {
+        return 'permission-required';
+    }
+    return tab?.redirects ? 'observed' : 'not-observed';
+}
 
 /** Доступ к своему хосту и варианту с www, без поддоменов */
 function siteOrigins(host) {
@@ -547,33 +571,11 @@ async function saveCustom(sender, host, pick) {
     } catch {
         return {ok: false, error: 'inject'};
     }
-    if (!exists) {
-        const k = ['image', 'video', 'frame', 'banner', 'dialog', 'block'].includes(pick.k) ? pick.k : 'block';
-        const size = (n) => Number.isFinite(n) ? Math.max(0, Math.round(n)) : 0;
-        const entry = {s: pick.s, k, t: typeof pick.t === 'string' ? pick.t.slice(0, 60) : '',
-            w: size(pick.w), h: size(pick.h), d: Date.now()};
-        if (typeof pick.src === 'string') {
-            try {
-                entry.src = new URL(`https://${pick.src}`).hostname;
-            } catch {
-                // Некорректный источник не сохраняем
-            }
-        }
-        aBlockCustom[host] = [...entries, entry];
-        try {
-            await chrome.storage.local.set({aBlockCustom});
-        } catch {
-            // Запись не сохранилась: возвращаем элемент на страницу
-            await chrome.scripting.removeCSS(customCSS(sender.tab.id, sender.documentId, pick.s)).catch(() => {});
-            return {ok: false, error: 'inject'};
-        }
-    }
-    if (exists && entries.find(({s}) => s === pick.s).enabled === false) {
-        try {
-            aBlockCustom[host] = entries.map((entry) => entry.s === pick.s ? {...entry, enabled: true} : entry);
-            await chrome.storage.local.set({aBlockCustom});
-        } catch {
-            await chrome.scripting.removeCSS(customCSS(sender.tab.id, sender.documentId, pick.s)).catch(() => {});
+    const changed = !exists || entries.find(({s}) => s === pick.s).enabled === false;
+    if (changed) {
+        const updated = entries.map((entry) => entry.s === pick.s ? {...entry, enabled: true} : entry);
+        aBlockCustom[host] = exists ? updated : [...entries, customEntry(pick)];
+        if (!await persistCustom(sender, pick, aBlockCustom)) {
             return {ok: false, error: 'inject'};
         }
     }
@@ -581,16 +583,40 @@ async function saveCustom(sender, host, pick) {
     return {ok: true, count: entries.length + (exists ? 0 : 1)};
 }
 
+/** Новая запись выбора: размеры — целые, источник — только хост */
+function customEntry(pick) {
+    const k = ['image', 'video', 'frame', 'banner', 'dialog', 'block'].includes(pick.k) ? pick.k : 'block';
+    const size = (n) => Number.isFinite(n) ? Math.max(0, Math.round(n)) : 0;
+    const entry = {s: pick.s, k, t: typeof pick.t === 'string' ? pick.t.slice(0, 60) : '',
+        w: size(pick.w), h: size(pick.h), d: Date.now()};
+    if (typeof pick.src === 'string') {
+        try {
+            entry.src = new URL(`https://${pick.src}`).hostname;
+        } catch {
+            // Некорректный источник не сохраняем
+        }
+    }
+    return entry;
+}
+
+/** Запись не сохранилась: возвращаем элемент на страницу */
+async function persistCustom(sender, pick, aBlockCustom) {
+    try {
+        await chrome.storage.local.set({aBlockCustom});
+        return true;
+    } catch {
+        await chrome.scripting.removeCSS(customCSS(sender.tab.id, sender.documentId, pick.s)).catch(() => {});
+        return false;
+    }
+}
+
 async function applyCustom(sender, host) {
     if (!await chrome.permissions.contains(EXTENDED)) {
         return;
     }
     const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
-    for (const {s, enabled} of own(aBlockCustom, host) || []) {
-        if (enabled !== false && validCustomSelector(s)) {
-            await chrome.scripting.insertCSS(customCSS(sender.tab.id, sender.documentId, s)).catch(() => {});
-        }
-    }
+    const active = (own(aBlockCustom, host) || []).filter(({s, enabled}) => enabled !== false && validCustomSelector(s));
+    await Promise.all(active.map(({s}) => chrome.scripting.insertCSS(customCSS(sender.tab.id, sender.documentId, s)).catch(() => {})));
 }
 
 async function removeCustom(data, clear) {
@@ -610,15 +636,13 @@ async function removeCustom(data, clear) {
     await chrome.storage.local.set({aBlockCustom});
     await refreshCustomScript().catch(console.error);
     if (Number.isInteger(data.tabId) && data.documentId) {
-        for (const {s} of removed) {
-            await chrome.scripting.removeCSS(customCSS(data.tabId, data.documentId, s)).catch(() => {});
-        }
+        await Promise.all(removed.map(({s}) => chrome.scripting.removeCSS(customCSS(data.tabId, data.documentId, s)).catch(() => {})));
     }
 }
 
 async function toggleCustom(data) {
     if (typeof data?.host !== 'string' || typeof data.enabled !== 'boolean' || !Array.isArray(data.selectors)) {
-        throw new Error('Invalid custom toggle');
+        throw new TypeError('Invalid custom toggle');
     }
     const host = data.host.replace(/^www\./, '');
     const {aBlockCustom = {}} = await chrome.storage.local.get('aBlockCustom');
@@ -629,14 +653,11 @@ async function toggleCustom(data) {
     await chrome.storage.local.set({aBlockCustom});
     await refreshCustomScript().catch(console.error);
     if (Number.isInteger(data.tabId) && data.documentId) {
-        const access = await chrome.permissions.contains(EXTENDED);
-        for (const {s} of changed) {
-            if (data.enabled && access) {
-                await chrome.scripting.insertCSS(customCSS(data.tabId, data.documentId, s)).catch(() => {});
-            } else {
-                await chrome.scripting.removeCSS(customCSS(data.tabId, data.documentId, s)).catch(() => {});
-            }
-        }
+        const insert = data.enabled && await chrome.permissions.contains(EXTENDED);
+        await Promise.all(changed.map(({s}) => {
+            const css = customCSS(data.tabId, data.documentId, s);
+            return (insert ? chrome.scripting.insertCSS(css) : chrome.scripting.removeCSS(css)).catch(() => {});
+        }));
     }
 }
 
@@ -764,40 +785,17 @@ function cosmeticKeys(hostname) {
 }
 
 /**
- * Подбирает селекторы к классам и id страницы и вставляет их в документ, приславший сообщение.
- * В первом сообщении документа — ещё фильтры для этого сайта и общие для всех сайтов
- * @param {chrome.runtime.MessageSender} sender
- * @param {string[]} tokens '#id' и '.class'
- * @param {boolean} first
- * @returns {Promise<number>} сколько селекторов вставлено
+ * Исключения и фильтры сайта из всех наборов: исключения — селекторы, которые списки не применяют на этом сайте
+ * @returns {{exceptions: Set<string>, specific: Array}}
  */
-async function applyCosmetic(sender, tokens, first) {
-    const tabId = sender.tab?.id;
-    if (tabId === undefined || tabId < 0 || !sender.documentId) {
-        return 0;
-    }
-    const origin = sender.origin && sender.origin !== 'null' ? sender.origin : sender.url;
-    const {hostname} = new URL(origin);
-    if (!hostname) {
-        return 0;
-    }
-    const sets = await loadCosmetic();
-    const keys = cosmeticKeys(hostname);
-
-    // Исключения: селекторы, которые списки не применяют на этом сайте
+function cosmeticFilters(sets, keys, hostname, first) {
     const exceptions = new Set();
     const specific = [];
     for (const set of sets) {
         for (const key of keys) {
             own(set.exceptions, key)?.forEach((selector) => exceptions.add(selector));
         }
-        const items = keys.flatMap((key) => own(set.hosts, key) || []);
-        for (const [part, regex, list] of set.regexes) {
-            if (hostname.includes(part) && new RegExp(regex).test(hostname)) {
-                items.push(...list);
-            }
-        }
-        for (const i of items) {
+        for (const i of cosmeticItems(set, keys, hostname)) {
             if (i < 0) {
                 const entry = set.specific[~i];
                 exceptions.add(Array.isArray(entry) ? entry[0] : entry);
@@ -806,7 +804,25 @@ async function applyCosmetic(sender, tokens, first) {
             }
         }
     }
+    return {exceptions, specific};
+}
 
+/** Номера фильтров набора, относящихся к сайту: по ключам и по регулярным выражениям */
+function cosmeticItems(set, keys, hostname) {
+    const items = keys.flatMap((key) => own(set.hosts, key) || []);
+    for (const [part, regex, list] of set.regexes) {
+        if (hostname.includes(part) && new RegExp(regex).test(hostname)) {
+            items.push(...list);
+        }
+    }
+    return items;
+}
+
+/**
+ * Скрываемые селекторы и селекторы со стилем: фильтры сайта, общие для всех сайтов и подходящие классы и id
+ * @returns {{hide: Set<string>, styles: Map<string, string>}}
+ */
+function cosmeticSelectors(sets, tokens, first, specific) {
     const hide = new Set();
     const styles = new Map();
     for (const entry of specific) {
@@ -826,6 +842,31 @@ async function applyCosmetic(sender, tokens, first) {
             }
         }
     }
+    return {hide, styles};
+}
+
+/**
+ * Подбирает селекторы к классам и id страницы и вставляет их в документ, приславший сообщение.
+ * В первом сообщении документа — ещё фильтры для этого сайта и общие для всех сайтов
+ * @param {chrome.runtime.MessageSender} sender
+ * @param {string[]} tokens '#id' и '.class'
+ * @param {boolean} first
+ * @returns {Promise<number>} сколько селекторов вставлено
+ */
+async function applyCosmetic(sender, tokens, first) {
+    const tabId = sender.tab?.id;
+    if (tabId === undefined || tabId < 0 || !sender.documentId) {
+        return 0;
+    }
+    const origin = sender.origin && sender.origin !== 'null' ? sender.origin : sender.url;
+    const {hostname} = new URL(origin);
+    if (!hostname) {
+        return 0;
+    }
+    const sets = await loadCosmetic();
+    const keys = cosmeticKeys(hostname);
+    const {exceptions, specific} = cosmeticFilters(sets, keys, hostname, first);
+    const {hide, styles} = cosmeticSelectors(sets, tokens, first, specific);
 
     // Каждый селектор — отдельным правилом: неизвестный браузеру селектор не отменит остальные
     const rules = [];
@@ -885,13 +926,13 @@ async function clearSite(tabId, url) {
  */
 
 // Заголовки ответа, нужные окну (сервер, движок, HSTS, HTTP/3)
-const HEADERS = ['server', 'x-powered-by', 'x-powered-cms', 'x-generator', 'x-drupal-cache', 'x-shopify-stage',
+const HEADERS = new Set(['server', 'x-powered-by', 'x-powered-cms', 'x-generator', 'x-drupal-cache', 'x-shopify-stage',
     'x-wix-request-id', 'x-vercel-id', 'x-nf-request-id', 'x-varnish', 'via',
     'strict-transport-security', 'alt-svc', 'content-encoding', 'x-robots-tag',
     'content-security-policy', 'x-content-type-options', 'x-frame-options', 'referrer-policy',
     'permissions-policy', 'cross-origin-opener-policy',
     // Кэш сервера и CDN: HIT — страница из кэша, MISS — собрана заново
-    'x-cache-status', 'x-cache', 'cf-cache-status', 'x-proxy-cache', 'x-fastcgi-cache', 'x-srcache-fetch-status', 'age'];
+    'x-cache-status', 'x-cache', 'cf-cache-status', 'x-proxy-cache', 'x-fastcgi-cache', 'x-srcache-fetch-status', 'age']);
 
 // Средний размер заблокированного запроса по типу, байт. Точный размер узнать нельзя:
 // запрос не состоялся, поэтому экономия — оценка
@@ -987,9 +1028,7 @@ function queueRedirect(kind, details) {
     const epoch = redirectEpoch;
     redirectQueue = redirectQueue.catch(console.error).then(async () => {
         const s = await load();
-        if (epoch !== redirectEpoch || !await chrome.permissions.contains(EXTENDED)
-            || epoch !== redirectEpoch || details.tabId < 0 || details.frameId !== 0
-            || isPrerender(details) || details.documentLifecycle === 'cached') {
+        if (!await redirectRecordable(details, epoch)) {
             return;
         }
         let tab = s.tabs[details.tabId];
@@ -1012,113 +1051,151 @@ function queueRedirect(kind, details) {
             if (chain?.requestId === details.requestId || chain?.startedAt > details.timeStamp) {
                 return;
             }
-            tab ??= {blocked: {}, bytes: 0};
-            tab.blocked ??= {};
-            tab.bytes ??= 0;
-            const retired = tab.retiredRedirectRequests || [];
-            if (chain) {
-                retired.push(chain.requestId);
-            }
-            tab.retiredRedirectRequests = retired.slice(-MAX_RETIRED_REQUESTS);
-            chain = {
-                version: 1, generation: crypto.randomUUID(), requestId: details.requestId,
-                initialUrl: redirectAddress(details.url), finalUrl: null,
-                startedAt: details.timeStamp, responseStartedAt: null, endedAt: null, outcome: 'pending',
-                complete: true, truncated: false, reasons: [], hops: [], document: null
-            };
-            if (!chain.initialUrl) {
-                chain.complete = false;
-                chain.reasons.push('unsafe-url');
-            }
-            tab.pendingRedirects = chain;
-            s.tabs[details.tabId] = tab;
-        } else {
-            if (kind === 'headers') {
-                // Заголовки собираем независимо от start и списка вытесненных ID.
-                // Вытесненный запрос при этом не получает право менять цепочки.
-                if (isRetired || !chain || chain.requestId !== details.requestId) {
-                    chain = null;
-                }
-            } else if (!chain || chain.requestId !== details.requestId || chain.outcome !== 'pending') {
-                return;
-            }
-            if (kind === 'redirect') {
-                // Внутренние переходы браузера (например, HSTS) не выдаём за HTTP-ответ.
-                if (details.statusCode < 300 || details.statusCode > 399
-                    || details.statusLine?.includes('Internal Redirect')) {
-                    chain.complete = false;
-                    if (!chain.reasons.includes('non-http-redirect')) {
-                        chain.reasons.push('non-http-redirect');
-                    }
-                } else if (chain.hops.length < MAX_REDIRECTS) {
-                    const from = redirectAddress(details.url);
-                    const to = redirectAddress(details.redirectUrl);
-                    chain.hops.push({from, to, statusCode: details.statusCode, timeStamp: details.timeStamp});
-                    if (!from || !to) {
-                        chain.complete = false;
-                        if (!chain.reasons.includes('unsafe-url')) {
-                            chain.reasons.push('unsafe-url');
-                        }
-                    }
-                } else {
-                    chain.complete = false;
-                    chain.truncated = true;
-                    if (!chain.reasons.includes('limit')) {
-                        chain.reasons.push('limit');
-                    }
-                }
-            } else if (kind === 'headers') {
-                const attachment = details.responseHeaders?.some(({name, value}) =>
-                    name.toLowerCase() === 'content-disposition' && /^attachment(?:\s*;|\s*$)/i.test(value || ''));
-                if (details.statusCode === 204 || details.statusCode === 205 || attachment) {
-                    return;
-                }
-                const headers = {};
-                for (const {name, value} of details.responseHeaders || []) {
-                    const key = name.toLowerCase();
-                    if (HEADERS.includes(key)) {
-                        headers[key] = key in headers ? `${headers[key]}, ${value}` : value;
-                    }
-                }
-                const retired = tab?.retiredRedirectRequests || [];
-                if (!chain && !isRetired) {
-                    for (const previous of [tab?.redirects, tab?.pendingRedirects]) {
-                        if (previous && !retired.includes(previous.requestId)) {
-                            retired.push(previous.requestId);
-                        }
-                    }
-                }
-                const previousTab = tab;
-                tab = {host: new URL(details.url).hostname, ip: details.ip || '', headers,
-                    responseStartedAt: details.timeStamp, blocked: {}, bytes: 0, retiredRedirectRequests: retired.slice(-MAX_RETIRED_REQUESTS)};
-                if (isRetired) {
-                    if (previousTab.redirects) {
-                        tab.redirects = previousTab.redirects;
-                    }
-                    if (previousTab.pendingRedirects) {
-                        tab.pendingRedirects = previousTab.pendingRedirects;
-                    }
-                }
-                if (chain) {
-                    chain.responseStartedAt = details.timeStamp;
-                    tab.redirects = chain;
-                }
-                s.tabs[details.tabId] = tab;
-            } else {
-                chain.finalUrl = redirectAddress(details.url);
-                chain.endedAt = details.timeStamp;
-                chain.outcome = kind === 'completed' ? 'completed' : 'error';
-                chain.statusCode = details.statusCode ?? null;
-                if (kind === 'error') {
-                    chain.complete = false;
-                    chain.reasons.push('request-error');
-                }
-            }
+            startRedirectChain(s, details, tab, chain);
+        } else if (!advanceRedirectChain(s, details, kind, tab, chain, isRetired)) {
+            return;
         }
         await saveTabs();
-
     });
     return redirectQueue;
+}
+
+/** Продолжение текущей цепочки: false — записывать нечего (ответ не заменяет документ или цепочка чужая) */
+function advanceRedirectChain(s, details, kind, tab, chain, isRetired) {
+    if (kind === 'headers') {
+        // Заголовки собираем независимо от start и списка вытесненных ID.
+        // Вытесненный запрос при этом не получает право менять цепочки.
+        if (isRetired || !chain || chain.requestId !== details.requestId) {
+            chain = null;
+        }
+    } else if (!chain || chain.requestId !== details.requestId || chain.outcome !== 'pending') {
+        return false;
+    }
+    if (kind === 'redirect') {
+        recordRedirectHop(chain, details);
+        return true;
+    }
+    if (kind === 'headers') {
+        return storeResponseHeaders(s, details, tab, chain, isRetired);
+    }
+    finishRedirectChain(chain, kind, details);
+    return true;
+}
+
+/** Право записывать переход: актуальная эпоха, главный кадр настоящей вкладки и доступ к сайтам */
+async function redirectRecordable(details, epoch) {
+    return epoch === redirectEpoch && await chrome.permissions.contains(EXTENDED)
+        && epoch === redirectEpoch && details.tabId >= 0 && details.frameId === 0
+        && !isPrerender(details) && details.documentLifecycle !== 'cached';
+}
+
+/** Новая цепочка переходов главного документа вкладки (до принятия ответа — в pendingRedirects) */
+function startRedirectChain(s, details, tab, chain) {
+    tab ??= {blocked: {}, bytes: 0};
+    tab.blocked ??= {};
+    tab.bytes ??= 0;
+    const retired = tab.retiredRedirectRequests || [];
+    if (chain) {
+        retired.push(chain.requestId);
+    }
+    tab.retiredRedirectRequests = retired.slice(-MAX_RETIRED_REQUESTS);
+    const next = {
+        version: 1, generation: crypto.randomUUID(), requestId: details.requestId,
+        initialUrl: redirectAddress(details.url), finalUrl: null,
+        startedAt: details.timeStamp, responseStartedAt: null, endedAt: null, outcome: 'pending',
+        complete: true, truncated: false, reasons: [], hops: [], document: null
+    };
+    if (!next.initialUrl) {
+        next.complete = false;
+        next.reasons.push('unsafe-url');
+    }
+    tab.pendingRedirects = next;
+    s.tabs[details.tabId] = tab;
+}
+
+function addRedirectReason(chain, code) {
+    if (!chain.reasons.includes(code)) {
+        chain.reasons.push(code);
+    }
+}
+
+/** Промежуточный HTTP-переход: внутренние переходы браузера не выдаём за HTTP-ответ */
+function recordRedirectHop(chain, details) {
+    if (details.statusCode < 300 || details.statusCode > 399
+        || details.statusLine?.includes('Internal Redirect')) {
+        chain.complete = false;
+        addRedirectReason(chain, 'non-http-redirect');
+    } else if (chain.hops.length < MAX_REDIRECTS) {
+        const from = redirectAddress(details.url);
+        const to = redirectAddress(details.redirectUrl);
+        chain.hops.push({from, to, statusCode: details.statusCode, timeStamp: details.timeStamp});
+        if (!from || !to) {
+            chain.complete = false;
+            addRedirectReason(chain, 'unsafe-url');
+        }
+    } else {
+        chain.complete = false;
+        chain.truncated = true;
+        addRedirectReason(chain, 'limit');
+    }
+}
+
+/** Заголовки ответа главного документа: false — ответ не заменяет документ (204/205, attachment) */
+function storeResponseHeaders(s, details, tab, chain, isRetired) {
+    const attachment = details.responseHeaders?.some(({name, value}) =>
+        name.toLowerCase() === 'content-disposition' && /^attachment(?:\s*;|\s*$)/i.test(value || ''));
+    if (details.statusCode === 204 || details.statusCode === 205 || attachment) {
+        return false;
+    }
+    const retired = tab?.retiredRedirectRequests || [];
+    if (!chain && !isRetired) {
+        for (const previous of [tab?.redirects, tab?.pendingRedirects]) {
+            if (previous && !retired.includes(previous.requestId)) {
+                retired.push(previous.requestId);
+            }
+        }
+    }
+    const previousTab = tab;
+    const next = {host: new URL(details.url).hostname, ip: details.ip || '', headers: serverHeaders(details.responseHeaders),
+        responseStartedAt: details.timeStamp, blocked: {}, bytes: 0, retiredRedirectRequests: retired.slice(-MAX_RETIRED_REQUESTS)};
+    if (isRetired) {
+        if (previousTab.redirects) {
+            next.redirects = previousTab.redirects;
+        }
+        if (previousTab.pendingRedirects) {
+            next.pendingRedirects = previousTab.pendingRedirects;
+        }
+    }
+    if (chain) {
+        chain.responseStartedAt = details.timeStamp;
+        next.redirects = chain;
+    }
+    s.tabs[details.tabId] = next;
+    return true;
+}
+
+/** Нужные окну заголовки ответа; повторы склеиваются через запятую */
+function serverHeaders(responseHeaders) {
+    const headers = {};
+    for (const {name, value} of responseHeaders || []) {
+        const key = name.toLowerCase();
+        if (HEADERS.has(key)) {
+            headers[key] = key in headers ? `${headers[key]}, ${value}` : value;
+        }
+    }
+    return headers;
+}
+
+/** Конец HTTP-цепочки: завершена или с ошибкой запроса */
+function finishRedirectChain(chain, kind, details) {
+    chain.finalUrl = redirectAddress(details.url);
+    chain.endedAt = details.timeStamp;
+    chain.outcome = kind === 'completed' ? 'completed' : 'error';
+    chain.statusCode = details.statusCode ?? null;
+    if (kind === 'error') {
+        chain.complete = false;
+        chain.reasons.push('request-error');
+    }
 }
 
 /**
