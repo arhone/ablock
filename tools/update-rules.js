@@ -248,7 +248,7 @@ function coveredBy(domain, domains) {
  */
 function ruleKey(rule) {
     const sort = (value) => value && typeof value === 'object' && !Array.isArray(value)
-        ? Object.fromEntries(Object.keys(value).sort((a, b) => a.localeCompare(b)).map((k) => [k, sort(value[k])]))
+        ? Object.fromEntries(Object.keys(value).sort((a, b) => (a < b ? -1 : a > b ? 1 : 0)).map((k) => [k, sort(value[k])]))
         : value;
     return JSON.stringify([sort(rule.action), sort(rule.condition)]);
 }

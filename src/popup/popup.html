@@ -33,7 +33,8 @@
         </button>
     </div>
     <button type="button" id="note" hidden data-i18n-title="noteTitle"></button>
-    <textarea id="note-input" hidden rows="2" maxlength="200" aria-label="Note" data-i18n-placeholder="notePlaceholder" data-i18n-title="noteTitle"></textarea>
+    <label for="note-input" class="visually-hidden" data-i18n="noteTitle"></label>
+    <textarea id="note-input" hidden rows="2" maxlength="200" data-i18n-placeholder="notePlaceholder" data-i18n-title="noteTitle"></textarea>
     <section id="score" hidden>
         <div id="score-head">
             <button id="score-more" type="button" aria-expanded="false" aria-controls="score-body">

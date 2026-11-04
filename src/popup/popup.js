@@ -745,7 +745,7 @@ async function renderSite(tab, server, onLoadTime) {
         let done = false;
         const listener = (id, change) => {
             if (id === tab.id && change.status === 'complete') {
-                void refresh();
+                refresh().catch(console.error);
             }
         };
         const stop = () => {
@@ -3027,7 +3027,7 @@ async function setupPicker(tab, host) {
     });
     chrome.storage.onChanged.addListener((changes, area) => {
         if (area === 'local' && changes.aBlockCustom) {
-            void refresh();
+            refresh().catch(console.error);
         }
     });
     chrome.permissions.onAdded.addListener(refresh);
@@ -3085,7 +3085,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const siteRow = document.getElementById('site-row');
     const site = document.getElementById('site');
     if (host) {
-        void setupNote(host);
+        setupNote(host).catch(console.error);
     }
     siteRow.hidden = !host || /^[\d.]+$|:|^\[/.test(host);
     site.checked = !allowedEntry;
@@ -3177,7 +3177,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             return;
         }
         if (status && allowedEntry) {
-            await setSite(true);
+            await setSite(true).catch(console.error);
             return;
         }
         setProtectionBusy(true);
@@ -3190,7 +3190,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         status = !status;
         render();
         if (isSite) {
-            await renderBlocked(tab, info, active(), server);
+            await renderBlocked(tab, info, active(), server).catch(console.error);
             await reloadSite();
         } else {
             setProtectionBusy(false);

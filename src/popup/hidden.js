@@ -169,7 +169,7 @@
             if (event.key === 'Escape') {
                 event.preventDefault();
                 event.stopImmediatePropagation();
-                void close();
+                close().catch(console.error);
             }
         };
         dispose = close;
@@ -285,10 +285,10 @@
                     }
                     updateSelection();
                 });
-                row.addEventListener('pointerenter', () => { hovered = item; void highlight(item); });
-                row.addEventListener('pointerleave', () => { hovered = null; void highlight(focused); });
-                row.addEventListener('focusin', () => { focused = item; void highlight(item); });
-                row.addEventListener('focusout', () => { focused = null; void highlight(hovered); });
+                row.addEventListener('pointerenter', () => { hovered = item; highlight(item).catch(console.error); });
+                row.addEventListener('pointerleave', () => { hovered = null; highlight(focused).catch(console.error); });
+                row.addEventListener('focusin', () => { focused = item; highlight(item).catch(console.error); });
+                row.addEventListener('focusout', () => { focused = null; highlight(hovered).catch(console.error); });
                 list.append(row);
             }
             updateSelection();
@@ -380,7 +380,7 @@
         remove.addEventListener('click', () => erase(false));
         clear.addEventListener('click', () => {
             if (confirmTimer) {
-                void erase(true);
+                void erase(true).catch(console.error);
                 return;
             }
             confirmTimer = setTimeout(disarm, 4000);

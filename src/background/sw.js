@@ -376,7 +376,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
 chrome.tabs.onUpdated.addListener((tabId, change, tab) => {
     const url = change.url || (change.status === 'loading' ? tab.url : '');
     if (url) {
-        void updateTabAction(tabId, url);
+        void updateTabAction(tabId, url).catch(console.error);
     }
 });
 
@@ -412,7 +412,7 @@ chrome.permissions.onRemoved.addListener(() => {
 // Сообщения сайтов — косметика и пипетка; настройки и данные вкладок — только из окна расширения
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (sender.tab?.id !== undefined && sender.frameId === 0 && sender.url) {
-        void updateTabAction(sender.tab.id, sender.url);
+        void updateTabAction(sender.tab.id, sender.url).catch(console.error);
     }
     if (request?.pick || request?.custom === true) {
         const host = customSenderHost(sender);
@@ -442,28 +442,28 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         return;
     }
     if (typeof request?.actionTab?.id === 'number' && typeof request.actionTab.url === 'string') {
-        updateTabAction(request.actionTab.id, request.actionTab.url).then(() => sendResponse(true)).catch(console.error);
+        void updateTabAction(request.actionTab.id, request.actionTab.url).then(() => sendResponse(true), () => sendResponse(false));
         return true;
     }
     if (request?.customToggle) {
-        void enqueue(() => toggleCustom(request.customToggle).then(() => true, () => false)).then(sendResponse).catch(console.error);
+        void enqueue(() => toggleCustom(request.customToggle).then(() => true, () => false)).then(sendResponse, () => sendResponse(false));
         return true;
     }
     if (request?.customRemove || request?.customClear) {
         const data = request.customRemove || request.customClear;
-        void enqueue(() => removeCustom(data, !!request.customClear).then(() => true, () => false)).then(sendResponse).catch(console.error);
+        void enqueue(() => removeCustom(data, !!request.customClear).then(() => true, () => false)).then(sendResponse, () => sendResponse(false));
         return true;
     }
     if (typeof request?.status === 'boolean') {
-        void update({status: request.status}).then(() => sendResponse(true)).catch(console.error);
+        void update({status: request.status}).then(() => sendResponse(true), () => sendResponse(false));
         return true;
     }
     if (typeof request?.dark === 'boolean') {
-        void applyBadgeColors(request.dark).then(() => sendResponse(true)).catch(console.error);
+        void applyBadgeColors(request.dark).then(() => sendResponse(true), () => sendResponse(false));
         return true;
     }
     if (typeof request?.cookies === 'boolean') {
-        void update({cookies: request.cookies}).then(() => sendResponse(true)).catch(console.error);
+        void update({cookies: request.cookies}).then(() => sendResponse(true), () => sendResponse(false));
         return true;
     }
     // Защита на одном сайте: {site: 'example.com', enabled: false}
@@ -472,8 +472,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         void enqueue(async () => {
             const settings = await getSettings();
             const allowed = settings.allowed.filter((host) => host !== site);
-            await applySettings({...settings, allowed: enabled ? allowed : [...allowed, site].sort((a, b) => a.localeCompare(b))});
-        }).then(() => sendResponse(true)).catch(console.error);
+            await applySettings({...settings, allowed: enabled ? allowed : [...allowed, site].sort((a, b) => (a < b ? -1 : a > b ? 1 : 0))});
+        }).then(() => sendResponse(true), () => sendResponse(false));
         return true;
     }
     if (typeof request?.clear?.tabId === 'number') {
