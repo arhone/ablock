@@ -118,7 +118,7 @@
                 }
                 await restore();
                 const next = desired;
-                if (closed || !next || !next.count || !documentId) {
+                if (closed || !next?.count || !documentId) {
                     if (!closed) {
                         setHint(next?.count === 0 ? 'hiddenMissingHint' : defaultHint);
                     }

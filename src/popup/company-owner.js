@@ -40,17 +40,13 @@ const CompanyOwner = (() => {
         let rank = [-1, -1, -1];
         for (const company of companies) {
             for (const basis of ['domains', 'sites']) {
-                if (!bases.includes(basis)) {
-                    continue;
-                }
-                for (const pattern of company[basis] || []) {
+                for (const pattern of bases.includes(basis) ? company[basis] || [] : []) {
                     const rule = normalize(pattern);
                     if (!rule || !matches(value, pattern)) {
                         continue;
                     }
                     const next = [rule.host.length, rule.path.length, basis === 'domains' ? 1 : 0];
-                    const different = next.findIndex((n, i) => n !== rank[i]);
-                    if (different >= 0 && next[different] > rank[different]) {
+                    if (isBetter(next, rank)) {
                         best = {company, basis, pattern};
                         rank = next;
                     }
@@ -58,6 +54,12 @@ const CompanyOwner = (() => {
             }
         }
         return best;
+    }
+
+    /** Тройка узости: длина хоста, длина пути, приоритет basis. Больше первых разных — лучше. */
+    function isBetter(next, rank) {
+        const different = next.findIndex((n, i) => n !== rank[i]);
+        return different >= 0 && next[different] > rank[different];
     }
 
     return {normalize, matches, find};
